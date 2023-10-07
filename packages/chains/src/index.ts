@@ -1,4 +1,6 @@
 export enum ChainId {
+  KLAYTN = 8217,
+  KLAYTN_TESTNET = 1001,
   ETHEREUM = 1,
   GOERLI = 5,
   BSC = 56,

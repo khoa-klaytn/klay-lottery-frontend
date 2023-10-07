@@ -1,6 +1,7 @@
 import { ChainId } from '@pancakeswap/chains'
 import memoize from 'lodash/memoize'
 import {
+  klaytn as klaytn_,
   bsc as bsc_,
   bscTestnet,
   goerli,
@@ -19,6 +20,8 @@ import {
 } from 'wagmi/chains'
 
 export const CHAIN_QUERY_NAME = {
+  [ChainId.KLAYTN]: 'klaytn',
+  [ChainId.KLAYTN_TESTNET]: 'klaytnTestnet',
   [ChainId.ETHEREUM]: 'eth',
   [ChainId.GOERLI]: 'goerli',
   [ChainId.BSC]: 'bsc',
@@ -49,6 +52,68 @@ export const getChainId = memoize((chainName: string) => {
   if (!chainName) return undefined
   return CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] ? +CHAIN_QUERY_NAME_TO_ID[chainName.toLowerCase()] : undefined
 })
+
+export const klaytn = {
+  ...klaytn_,
+  nativeCurrency: {
+    ...klaytn_.nativeCurrency,
+    name: 'KLAY',
+  },
+  rpcUrls: {
+    ...klaytn_.rpcUrls,
+    public: {
+      ...klaytn_.rpcUrls.public,
+      http: ['https://public-en-cypress.klaytn.net'],
+    },
+    default: {
+      ...klaytn_.rpcUrls.default,
+      http: ['https://public-en-cypress.klaytn.net'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Klaytnscope',
+      url: 'https://scope.klaytn.com',
+    },
+  },
+  // contracts: {
+  //   multicall3: {
+  //     address: '0xcA11bde05977b3631167028862bE2a173976CA11',
+  //     blockCreated: 0,
+  //   }
+  // }
+} as const satisfies Chain
+
+export const klaytnTestnet = {
+  id: ChainId.KLAYTN_TESTNET,
+  name: 'Klaytn Testnet',
+  network: 'klaytn-testnet',
+  nativeCurrency: {
+    ...klaytn.nativeCurrency,
+    symbol: 'tKLAY',
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://public-en-baobab.klaytn.net'],
+    },
+    public: {
+      http: ['https://public-en-baobab.klaytn.net'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Klaytnscope',
+      url: 'https://baobab.scope.klaytn.com',
+    },
+  },
+  // contracts: {
+  //   multicall3: {
+  //     address: "0xca11bde05977b3631167028862be2a173976ca11",
+  //     blockCreated: 0,
+  //   },
+  // },
+  testnet: true,
+} as const satisfies Chain
 
 const bsc = {
   ...bsc_,
@@ -192,6 +257,8 @@ export const L2_CHAIN_IDS: ChainId[] = [
 ]
 
 export const CHAINS = [
+  klaytn,
+  klaytnTestnet,
   bsc,
   mainnet,
   bscTestnet,

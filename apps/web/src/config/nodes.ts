@@ -11,7 +11,7 @@ import {
   base,
 } from 'wagmi/chains'
 import { getNodeRealUrlV2 } from 'utils/nodeReal'
-import { opbnbTestnet, linea, opbnb } from './chains'
+import { opbnbTestnet, linea, opbnb, klaytn, klaytnTestnet } from './chains'
 
 const POLYGON_ZKEVM_NODES = [
   'https://f2562de09abc5efbd21eefa083ff5326.zkevm-rpc.com/',
@@ -25,6 +25,8 @@ const ARBITRUM_NODES = [
 ]
 
 export const SERVER_NODES = {
+  [ChainId.KLAYTN]: klaytn.rpcUrls.public.http,
+  [ChainId.KLAYTN_TESTNET]: klaytnTestnet.rpcUrls.public.http,
   [ChainId.BSC]: [
     process.env.NEXT_PUBLIC_NODE_PRODUCTION || '',
     'https://bsc-dataseed1.defibit.io',
@@ -67,6 +69,8 @@ export const SERVER_NODES = {
 } satisfies Record<ChainId, readonly string[]>
 
 export const PUBLIC_NODES = {
+  [ChainId.KLAYTN]: klaytn.rpcUrls.public.http,
+  [ChainId.KLAYTN_TESTNET]: klaytnTestnet.rpcUrls.public.http,
   [ChainId.BSC]: [
     process.env.NEXT_PUBLIC_NODE_PRODUCTION || '',
     getNodeRealUrlV2(ChainId.BSC, process.env.NEXT_PUBLIC_NODE_REAL_API_ETH) || '',
