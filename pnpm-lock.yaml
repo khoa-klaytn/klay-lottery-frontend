@@ -238,236 +238,6 @@ importers:
         specifier: 2.13.0
         version: 2.13.0
 
-  apps/aptos:
-    dependencies:
-      '@ethersproject/bignumber':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/keccak256':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@pancakeswap/aptos-swap-sdk':
-        specifier: workspace:*
-        version: link:../../packages/aptos-swap-sdk
-      '@pancakeswap/awgmi':
-        specifier: workspace:*
-        version: link:../../packages/awgmi
-      '@pancakeswap/farms':
-        specifier: workspace:*
-        version: link:../../packages/farms
-      '@pancakeswap/hooks':
-        specifier: workspace:*
-        version: link:../../packages/hooks
-      '@pancakeswap/localization':
-        specifier: workspace:*
-        version: link:../../packages/localization
-      '@pancakeswap/swap-sdk-core':
-        specifier: workspace:*
-        version: link:../../packages/swap-sdk-core
-      '@pancakeswap/token-lists':
-        specifier: workspace:*
-        version: link:../../packages/token-lists
-      '@pancakeswap/tokens':
-        specifier: workspace:*
-        version: link:../../packages/tokens
-      '@pancakeswap/ui-wallets':
-        specifier: workspace:*
-        version: link:../../packages/ui-wallets
-      '@pancakeswap/uikit':
-        specifier: workspace:*
-        version: link:../../packages/uikit
-      '@pancakeswap/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
-      '@pancakeswap/widgets-internal':
-        specifier: workspace:*
-        version: link:../../packages/widgets-internal
-      '@reduxjs/toolkit':
-        specifier: ^1.9.1
-        version: 1.9.1(react-redux@8.0.5)(react@18.2.0)
-      '@tanstack/react-query':
-        specifier: ^4.28.0
-        version: 4.28.0(react-dom@18.2.0)(react@18.2.0)
-      '@vanilla-extract/css':
-        specifier: ^1.13.0
-        version: 1.13.0
-      '@vanilla-extract/next-plugin':
-        specifier: ^2.3.0
-        version: 2.3.0(@types/node@18.0.4)(next@13.4.2)(webpack@5.88.2)
-      '@vanilla-extract/recipes':
-        specifier: ^0.5.0
-        version: 0.5.0(@vanilla-extract/css@1.13.0)
-      aptos:
-        specifier: ^1.3.16
-        version: 1.3.16
-      bignumber.js:
-        specifier: ^9.0.0
-        version: 9.1.1
-      date-fns:
-        specifier: ^2.29.3
-        version: 2.29.3
-      jotai:
-        specifier: ^2.2.2
-        version: 2.2.2(react@18.2.0)
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
-      next:
-        specifier: 13.4.2
-        version: 13.4.2(@babel/core@7.22.17)(react-dom@18.2.0)(react@18.2.0)
-      next-axiom:
-        specifier: ^0.16.0
-        version: 0.16.0(next@13.4.2)
-      next-seo:
-        specifier: ^5.15.0
-        version: 5.15.0(next@13.4.2)(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: ^0.2.1
-        version: 0.2.1(next@13.4.2)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-window:
-        specifier: ^1.8.7
-        version: 1.8.7(react-dom@18.2.0)(react@18.2.0)
-      styled-components:
-        specifier: ^6.0.7
-        version: 6.0.7(babel-plugin-styled-components@1.13.3)(react-dom@18.2.0)(react@18.2.0)
-      swiper:
-        specifier: ^10.3.1
-        version: 10.3.1
-      swr:
-        specifier: ^2.1.5
-        version: 2.1.5(react@18.2.0)
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
-    devDependencies:
-      '@next/bundle-analyzer':
-        specifier: 13.0.7
-        version: 13.0.7
-      '@next/eslint-plugin-next':
-        specifier: 13.4.2
-        version: 13.4.2
-      '@pancakeswap/next-config':
-        specifier: workspace:*
-        version: link:../../packages/next-config
-      '@pancakeswap/tsconfig':
-        specifier: workspace:*
-        version: link:../../packages/tsconfig
-      '@types/lodash':
-        specifier: ^4.14.168
-        version: 4.14.186
-      '@types/node':
-        specifier: 18.0.4
-        version: 18.0.4
-      '@types/react':
-        specifier: ^18.2.21
-        version: 18.2.21
-      '@types/react-dom':
-        specifier: ^18.0.6
-        version: 18.2.1
-      '@vanilla-extract/vite-plugin':
-        specifier: ^3.8.0
-        version: 3.8.0(@types/node@18.0.4)(vite@4.4.9)
-      '@vitejs/plugin-react':
-        specifier: 4.0.0
-        version: 4.0.0(vite@4.4.9)
-      eslint:
-        specifier: ^8.32.0
-        version: 8.32.0
-      vite-tsconfig-paths:
-        specifier: ^4.0.3
-        version: 4.0.3(typescript@5.1.3)(vite@4.4.9)
-
-  apps/blog:
-    dependencies:
-      '@pancakeswap/hooks':
-        specifier: workspace:*
-        version: link:../../packages/hooks
-      '@pancakeswap/localization':
-        specifier: workspace:*
-        version: link:../../packages/localization
-      '@pancakeswap/uikit':
-        specifier: workspace:*
-        version: link:../../packages/uikit
-      '@pancakeswap/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
-      '@vanilla-extract/next-plugin':
-        specifier: ^2.3.0
-        version: 2.3.0(@types/node@18.0.4)(next@13.4.2)(webpack@5.88.2)
-      next:
-        specifier: 13.4.2
-        version: 13.4.2(@babel/core@7.22.17)(react-dom@18.2.0)(react@18.2.0)
-      next-axiom:
-        specifier: ^0.16.0
-        version: 0.16.0(next@13.4.2)
-      next-seo:
-        specifier: ^5.15.0
-        version: 5.15.0(next@13.4.2)(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: ^0.2.1
-        version: 0.2.1(next@13.4.2)(react-dom@18.2.0)(react@18.2.0)
-      qs:
-        specifier: ^6.0.0
-        version: 6.5.3
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-wrap-balancer:
-        specifier: ^0.4.0
-        version: 0.4.0(react@18.2.0)
-      styled-components:
-        specifier: ^6.0.7
-        version: 6.0.7(babel-plugin-styled-components@1.13.3)(react-dom@18.2.0)(react@18.2.0)
-      swiper:
-        specifier: ^10.3.1
-        version: 10.3.1
-      swr:
-        specifier: ^2.1.5
-        version: 2.1.5(react@18.2.0)
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
-      zod:
-        specifier: ^3.21.4
-        version: 3.21.4
-    devDependencies:
-      '@next/eslint-plugin-next':
-        specifier: 13.4.2
-        version: 13.4.2
-      '@pancakeswap/next-config':
-        specifier: workspace:*
-        version: link:../../packages/next-config
-      '@pancakeswap/tsconfig':
-        specifier: workspace:*
-        version: link:../../packages/tsconfig
-      '@types/node':
-        specifier: 18.0.4
-        version: 18.0.4
-      '@types/qs':
-        specifier: ^6.0.0
-        version: 6.9.7
-      '@types/react':
-        specifier: ^18.2.21
-        version: 18.2.21
-      '@types/react-dom':
-        specifier: ^18.0.6
-        version: 18.2.1
-      '@types/styled-system':
-        specifier: ^5.1.17
-        version: 5.1.17
-      eslint:
-        specifier: ^8.32.0
-        version: 8.32.0
-
   apps/bridge:
     dependencies:
       '@0xsquid/widget':
@@ -7751,6 +7521,7 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    dev: false
 
   /@next/env@13.4.2:
     resolution: {integrity: sha512-Wqvo7lDeS0KGwtwg9TT9wKQ8raelmUxt+TQKWvG/xKfcmDXNOtCuaszcfCF8JzlBG1q0VhpI6CKaRMbVPMDWgw==}
@@ -7914,6 +7685,7 @@ packages:
 
   /@polka/url@1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: false
 
   /@popperjs/core@2.11.2:
     resolution: {integrity: sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==}
@@ -11419,6 +11191,7 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: false
 
   /@vanilla-extract/integration@6.2.1(@types/node@18.16.2):
     resolution: {integrity: sha512-+xYJz07G7TFAMZGrOqArOsURG+xcYvqctujEkANjw2McCBvGEK505RxQqOuNiA9Mi9hgGdNp2JedSa94f3eoLg==}
@@ -11513,27 +11286,6 @@ packages:
       postcss: 8.4.21
       postcss-load-config: 3.1.4(postcss@8.4.21)
       vite: 4.4.9(@types/node@13.13.52)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - ts-node
-    dev: true
-
-  /@vanilla-extract/vite-plugin@3.8.0(@types/node@18.0.4)(vite@4.4.9):
-    resolution: {integrity: sha512-HBCecR4eTbweo7wQPq9g/HBvxUi6Cua8O4Xk6t1by4W/imgEsHbRCCa9SowzZwg8lub7uJHBAdzWWpqY+LdH0w==}
-    peerDependencies:
-      vite: ^2.2.3 || ^3.0.0 || ^4.0.3
-    dependencies:
-      '@vanilla-extract/integration': 6.2.1(@types/node@18.0.4)
-      outdent: 0.8.0
-      postcss: 8.4.21
-      postcss-load-config: 3.1.4(postcss@8.4.21)
-      vite: 4.4.9(@types/node@18.0.4)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -11647,7 +11399,7 @@ packages:
       '@babel/plugin-transform-react-jsx-self': 7.21.0(@babel/core@7.21.4)
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.21.4)
       react-refresh: 0.14.0
-      vite: 4.4.9(@types/node@18.0.4)
+      vite: 4.4.9(@types/node@13.13.52)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -21220,6 +20972,7 @@ packages:
   /mrmime@1.0.0:
     resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
     engines: {node: '>=10'}
+    dev: false
 
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
@@ -21734,6 +21487,7 @@ packages:
 
   /opener@1.5.2:
     resolution: {integrity: sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==}
+    dev: false
 
   /optionator@0.8.3:
     resolution: {integrity: sha512-+IW9pACdk3XWmmTXG8m3upGUJst5XRGzxMRjXzAuJ1XnIFNvfhjjIuYkDvysnPQ7qzqVzLt78BCruntqRhWQbA==}
@@ -23055,14 +22809,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-wrap-balancer@0.4.0(react@18.2.0):
-    resolution: {integrity: sha512-MUsROihHd7bFHCo9kCOifKDYBEZPgKTyGvfa8RcwRQKtT2cL7Um9Cc8A7GvuT8t3np7LAGsEkzdEyJdKrr5lVQ==}
-    peerDependencies:
-      react: ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
-
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -23921,6 +23667,7 @@ packages:
       '@polka/url': 1.0.0-next.21
       mrmime: 1.0.0
       totalist: 1.1.0
+    dev: false
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -25111,6 +24858,7 @@ packages:
   /totalist@1.1.0:
     resolution: {integrity: sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==}
     engines: {node: '>=6'}
+    dev: false
 
   /tough-cookie@2.5.0:
     resolution: {integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==}
@@ -26034,6 +25782,7 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: false
 
   /vite-node@0.28.5(@types/node@18.16.2):
     resolution: {integrity: sha512-LmXb9saMGlrMZbXTvOveJKwMTBTNUH66c8rJnQ0ZPNX+myPEol64+szRzXtV5ORb0Hb/91yq+/D3oERoyAt6LA==}
@@ -26144,7 +25893,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       globrex: 0.1.2
       tsconfck: 2.0.2(typescript@5.1.3)
-      vite: 4.4.9(@types/node@18.0.4)
+      vite: 4.4.9(@types/node@13.13.52)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -26213,6 +25962,7 @@ packages:
       rollup: 3.29.1
     optionalDependencies:
       fsevents: 2.3.3
+    dev: false
 
   /vite@4.3.1(@types/node@18.16.2):
     resolution: {integrity: sha512-EPmfPLAI79Z/RofuMvkIS0Yr091T2ReUoXQqc5ppBX/sjFRhHKiPPF/R46cTdoci/XgeQpB23diiJxq5w30vdg==}
@@ -26276,42 +26026,6 @@ packages:
         optional: true
     dependencies:
       '@types/node': 13.13.52
-      esbuild: 0.18.20
-      postcss: 8.4.29
-      rollup: 3.29.1
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: true
-
-  /vite@4.4.9(@types/node@18.0.4):
-    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 18.0.4
       esbuild: 0.18.20
       postcss: 8.4.29
       rollup: 3.29.1
@@ -26676,6 +26390,7 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    dev: false
 
   /webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
