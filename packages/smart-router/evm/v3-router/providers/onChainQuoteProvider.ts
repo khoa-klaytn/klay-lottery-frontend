@@ -17,6 +17,8 @@ import { BATCH_MULTICALL_CONFIGS } from '../../constants/multicall'
 const DEFAULT_BATCH_RETRIES = 2
 
 const SUCCESS_RATE_CONFIG = {
+  [ChainId.KLAYTN]: 0.1,
+  [ChainId.KLAYTN_TESTNET]: 0.1,
   [ChainId.BSC_TESTNET]: 0.1,
   [ChainId.BSC]: 0.1,
   [ChainId.ETHEREUM]: 0.1,

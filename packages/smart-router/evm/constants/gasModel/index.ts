@@ -18,9 +18,13 @@ import {
   opBnbTokens,
   opBnbTestnetTokens,
   scrollSepoliaTokens,
+  klaytnTokens,
+  klaytnTestnetTokens,
 } from '@pancakeswap/tokens'
 
 export const usdGasTokensByChain = {
+  [ChainId.KLAYTN]: [klaytnTokens.usdc],
+  [ChainId.KLAYTN_TESTNET]: [klaytnTestnetTokens.usdc],
   [ChainId.ETHEREUM]: [ethereumTokens.usdt],
   [ChainId.GOERLI]: [goerliTestnetTokens.usdc],
   [ChainId.BSC]: [bscTokens.busd],

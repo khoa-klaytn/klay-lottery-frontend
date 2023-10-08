@@ -11,6 +11,8 @@ export const FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
 const FACTORY_ADDRESS_ETH = '0x1097053Fd2ea711dad45caCcc45EfF7548fCB362'
 
 export const FACTORY_ADDRESS_MAP = {
+  [ChainId.KLAYTN]: FACTORY_ADDRESS,
+  [ChainId.KLAYTN_TESTNET]: FACTORY_ADDRESS,
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
@@ -34,6 +36,8 @@ export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d07814
 
 const INIT_CODE_HASH_ETH = '0x57224589c67f3f30a6b0d7a1b54cf3153ab84563bc609ef41dfb34f8b2974d2d'
 export const INIT_CODE_HASH_MAP = {
+  [ChainId.KLAYTN]: INIT_CODE_HASH,
+  [ChainId.KLAYTN_TESTNET]: INIT_CODE_HASH,
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
@@ -54,6 +58,22 @@ export const INIT_CODE_HASH_MAP = {
 } as const satisfies Record<ChainId, Hash>
 
 export const WETH9 = {
+  [ChainId.KLAYTN]: new ERC20Token(
+    ChainId.KLAYTN,
+    '0x19aac5f612f524b754ca7e7c41cbfa2e981a4432',
+    18,
+    'WKLAY',
+    'Wrapped Klay',
+    'https://klaytn.foundation'
+  ),
+  [ChainId.KLAYTN_TESTNET]: new ERC20Token(
+    ChainId.KLAYTN_TESTNET,
+    '0x043c471bEe060e00A56CcD02c0Ca286808a5A436',
+    18,
+    'WKLAY',
+    'Wrapped Klay',
+    'https://klaytn.foundation'
+  ),
   [ChainId.ETHEREUM]: new ERC20Token(
     ChainId.ETHEREUM,
     '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
@@ -236,6 +256,8 @@ export const WBNB = {
 }
 
 export const WNATIVE = {
+  [ChainId.KLAYTN]: WETH9[ChainId.KLAYTN],
+  [ChainId.KLAYTN_TESTNET]: WETH9[ChainId.KLAYTN_TESTNET],
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
@@ -255,6 +277,11 @@ export const WNATIVE = {
   [ChainId.SCROLL_SEPOLIA]: WETH9[ChainId.SCROLL_SEPOLIA],
 } satisfies Record<ChainId, ERC20Token>
 
+const KLAY = {
+  name: 'KLAY',
+  symbol: 'KLAY',
+  decimals: 18,
+} as const
 const ETHER = { name: 'Ether', symbol: 'ETH', decimals: 18 } as const
 const BNB = {
   name: 'Binance Chain Native Token',
@@ -263,6 +290,11 @@ const BNB = {
 } as const
 
 export const NATIVE = {
+  [ChainId.KLAYTN]: KLAY,
+  [ChainId.KLAYTN_TESTNET]: {
+    ...KLAY,
+    symbol: 'tKLAY',
+  },
   [ChainId.ETHEREUM]: ETHER,
   [ChainId.GOERLI]: { name: 'Goerli Ether', symbol: 'GOR', decimals: 18 },
   [ChainId.BSC]: BNB,

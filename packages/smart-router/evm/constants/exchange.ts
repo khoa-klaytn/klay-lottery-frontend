@@ -87,6 +87,8 @@ export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
+  [ChainId.KLAYTN]: [WNATIVE[ChainId.KLAYTN], USDC[ChainId.KLAYTN], USDT[ChainId.KLAYTN], BUSD[ChainId.KLAYTN]],
+  [ChainId.KLAYTN_TESTNET]: [WNATIVE[ChainId.KLAYTN_TESTNET], USDC[ChainId.KLAYTN_TESTNET]],
   [ChainId.ETHEREUM]: [WNATIVE[ChainId.ETHEREUM], USDC[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.GOERLI]: [WNATIVE[ChainId.GOERLI], USDC[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [

@@ -19,6 +19,42 @@ export const CAKE_TESTNET = new ERC20Token(
   'https://pancakeswap.finance/',
 )
 
+export const USDC_KLAYTN = new ERC20Token(
+  ChainId.KLAYTN,
+  '0x754288077d0ff82af7a5317c7cb8c444d421d103',
+  6,
+  'oUSDC',
+  'Orbit Bridge Klaytn USD Coin',
+  'https://bridge.orbitchain.io',
+)
+
+export const USDT_KLAYTN = new ERC20Token(
+  ChainId.KLAYTN,
+  '0xcee8faf64bb97a73bb51e115aa89c17ffa8dd167',
+  6,
+  'oUSDT',
+  'Orbit Bridge Klaytn USD Tether',
+  'https://bridge.orbitchain.io',
+)
+
+export const BUSD_KLAYTN = new ERC20Token(
+  ChainId.KLAYTN,
+  '0x210bc03f49052169d5588a52c317f71cf2078b85',
+  18,
+  'oBUSD',
+  'Orbit Bridge Klaytn BUSD Token',
+  'https://www.binance.com/en/busd',
+)
+
+export const USDC_KLAYTN_TESTNET = new ERC20Token(
+  ChainId.KLAYTN_TESTNET,
+  '0x74a6e5d679624877b3f617167c1934c5bfeacf5c',
+  6,
+  'oUSDC',
+  'Orbit Bridge Klaytn USD Coin',
+  'https://bridge.orbitchain.io',
+)
+
 export const USDC_BSC = new ERC20Token(
   ChainId.BSC,
   '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
@@ -108,6 +144,7 @@ export const BUSD_GOERLI = new ERC20Token(
 )
 
 export const BUSD = {
+  [ChainId.KLAYTN]: BUSD_KLAYTN,
   [ChainId.ETHEREUM]: BUSD_ETH,
   [ChainId.GOERLI]: BUSD_GOERLI,
   [ChainId.BSC]: BUSD_BSC,
@@ -223,6 +260,8 @@ export const CAKE = {
 }
 
 export const USDC = {
+  [ChainId.KLAYTN]: USDC_KLAYTN,
+  [ChainId.KLAYTN_TESTNET]: USDC_KLAYTN_TESTNET,
   [ChainId.BSC]: USDC_BSC,
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
@@ -289,6 +328,7 @@ export const USDC = {
 }
 
 export const USDT = {
+  [ChainId.KLAYTN]: USDT_KLAYTN,
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
@@ -345,6 +385,8 @@ export const WBTC_ETH = new ERC20Token(
 )
 
 export const STABLE_COIN = {
+  [ChainId.KLAYTN]: USDC_KLAYTN,
+  [ChainId.KLAYTN_TESTNET]: USDC_KLAYTN_TESTNET,
   [ChainId.ETHEREUM]: USDT[ChainId.ETHEREUM],
   [ChainId.GOERLI]: USDC[ChainId.GOERLI],
   [ChainId.BSC]: USDT[ChainId.BSC],

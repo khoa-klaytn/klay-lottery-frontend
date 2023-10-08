@@ -12,6 +12,8 @@ export const BETTER_TRADE_LESS_HOPS_THRESHOLD = new Percent(50n, BIPS_BASE)
 // @see https://github.com/DefiLlama/defillama-server/blob/master/common/chainToCoingeckoId.ts
 // @see https://github.com/DefiLlama/chainlist/blob/main/constants/chainIds.json
 export const CHAIN_ID_TO_CHAIN_NAME = {
+  [ChainId.KLAYTN]: 'klaytn',
+  [ChainId.KLAYTN_TESTNET]: 'klaytn_testnet',
   [ChainId.BSC]: 'bsc',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.GOERLI]: '',
