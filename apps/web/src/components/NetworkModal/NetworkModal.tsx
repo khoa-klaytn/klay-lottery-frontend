@@ -5,7 +5,7 @@ import { ChainId } from '@pancakeswap/chains'
 import { useMemo } from 'react'
 import { useNetwork } from 'wagmi'
 import { atom, useAtom } from 'jotai'
-import { SUPPORT_ONLY_BSC } from 'config/constants/supportChains'
+import { SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 import dynamic from 'next/dynamic'
 
 export const hideWrongNetworkModalAtom = atom(false)
@@ -22,13 +22,13 @@ const UnsupportedNetworkModal = dynamic(
   { ssr: false },
 )
 
-export const NetworkModal = ({ pageSupportedChains = SUPPORT_ONLY_BSC }: { pageSupportedChains?: number[] }) => {
+export const NetworkModal = ({ pageSupportedChains = SUPPORT_ONLY_KLAYTN }: { pageSupportedChains?: number[] }) => {
   const { chainId, chain, isWrongNetwork } = useActiveWeb3React()
   const { chains } = useNetwork()
   const [dismissWrongNetwork, setDismissWrongNetwork] = useAtom(hideWrongNetworkModalAtom)
 
-  const isBNBOnlyPage = useMemo(() => {
-    return pageSupportedChains?.length === 1 && pageSupportedChains[0] === ChainId.BSC
+  const isKlaytnOnlyPage = useMemo(() => {
+    return pageSupportedChains?.length === 1 && pageSupportedChains[0] === ChainId.KLAYTN
   }, [pageSupportedChains])
 
   const isPageNotSupported = useMemo(
@@ -37,7 +37,7 @@ export const NetworkModal = ({ pageSupportedChains = SUPPORT_ONLY_BSC }: { pageS
   )
   if (pageSupportedChains?.length === 0) return null // open to all chains
 
-  if (isPageNotSupported && isBNBOnlyPage) {
+  if (isPageNotSupported && isKlaytnOnlyPage) {
     return (
       <ModalV2 isOpen closeOnOverlayClick={false}>
         <PageNetworkSupportModal />

@@ -1,6 +1,6 @@
 import { ChainId } from '@pancakeswap/chains'
 
-export const SUPPORT_ONLY_BSC = [ChainId.BSC]
+export const SUPPORT_ONLY_KLAYTN = [ChainId.KLAYTN, ChainId.KLAYTN_TESTNET]
 export const SUPPORT_FARMS = [
   ChainId.BSC,
   ChainId.BSC_TESTNET,

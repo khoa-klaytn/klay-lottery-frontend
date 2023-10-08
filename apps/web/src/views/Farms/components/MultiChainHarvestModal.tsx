@@ -71,8 +71,8 @@ const MultiChainHarvestModal: React.FC<MultiChainHarvestModalProp> = ({
   const displayBalance = earnings.toFixed(5, BigNumber.ROUND_DOWN)
 
   const isTestnet = farmFetcher.isTestnet(chainId)
-  const network = isTestnet ? ChainId.BSC_TESTNET : ChainId.BSC
-  const isBscNetwork = useMemo(() => chainId === network, [chainId, network])
+  const network = isTestnet ? ChainId.KLAYTN_TESTNET : ChainId.KLAYTN
+  const isKlaytnNetwork = useMemo(() => chainId === network, [chainId, network])
 
   const handleCancel = useCallback(() => {
     onDismiss?.()
@@ -103,7 +103,7 @@ const MultiChainHarvestModal: React.FC<MultiChainHarvestModalProp> = ({
 
   return (
     <Modal
-      title={isBscNetwork ? t('Harvest now!') : t('Switch chain to harvest')}
+      title={isKlaytnNetwork ? t('Harvest now!') : t('Switch chain to harvest')}
       style={{ maxWidth: '340px' }}
       onDismiss={handleCancel}
     >
@@ -122,15 +122,15 @@ const MultiChainHarvestModal: React.FC<MultiChainHarvestModalProp> = ({
             {lpSymbol}
           </Text>
         </Flex>
-        {!isBscNetwork && (
+        {!isKlaytnNetwork && (
           <Message mb="16px" variant="warning" icon={false} p="8px 12px">
             <MessageText>
               <FlexGap gap="12px">
                 <FlexGap gap="6px">
                   <ChainLogo chainId={chainId} /> <ArrowForwardIcon color="#D67E0A" />
-                  <ChainLogo chainId={ChainId.BSC} />
+                  <ChainLogo chainId={ChainId.KLAYTN} />
                 </FlexGap>
-                <span>{t('Harvest on BNB Smart Chain')}</span>
+                <span>{t('Harvest on Klaytn')}</span>
               </FlexGap>
             </MessageText>
           </Message>
@@ -157,7 +157,7 @@ const MultiChainHarvestModal: React.FC<MultiChainHarvestModalProp> = ({
               fontSize="12px"
               color="textSubtle"
             />
-            {isBscNetwork ? (
+            {isKlaytnNetwork ? (
               <Button
                 width="100%"
                 variant="secondary"
@@ -169,7 +169,7 @@ const MultiChainHarvestModal: React.FC<MultiChainHarvestModalProp> = ({
               </Button>
             ) : (
               <Button width="100%" variant="secondary" onClick={handleSwitchNetwork}>
-                {t('Switch to BNB Smart Chain')}
+                {t('Switch to Klaytn')}
               </Button>
             )}
           </Box>

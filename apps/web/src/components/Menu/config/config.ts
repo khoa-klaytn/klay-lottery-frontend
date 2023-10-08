@@ -17,7 +17,7 @@ import {
   LIQUID_STAKING_SUPPORTED_CHAINS,
   SUPPORT_BUY_CRYPTO,
   SUPPORT_FARMS,
-  SUPPORT_ONLY_BSC,
+  SUPPORT_ONLY_KLAYTN,
 } from 'config/constants/supportChains'
 import { getPerpetualUrl } from 'utils/getPerpetualUrl'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
@@ -80,7 +80,7 @@ const config: (
         {
           label: `${t('Limit')} (V2)`,
           href: '/limit-orders',
-          supportChainIds: SUPPORT_ONLY_BSC,
+          supportChainIds: SUPPORT_ONLY_KLAYTN,
           image: '/images/decorations/3d-coin.png',
         },
         {
@@ -214,13 +214,13 @@ const config: (
         {
           label: t('IFO'),
           href: '/ifo',
-          supportChainIds: SUPPORT_ONLY_BSC,
+          supportChainIds: SUPPORT_ONLY_KLAYTN,
           image: '/images/ifos/ifo-bunny.png',
         },
         {
           label: t('NFT'),
           href: `${nftsBaseUrl}`,
-          supportChainIds: SUPPORT_ONLY_BSC,
+          supportChainIds: SUPPORT_ONLY_KLAYTN,
           image: '/images/decorations/nft.png',
         },
         {
@@ -230,7 +230,7 @@ const config: (
         {
           label: t('Voting'),
           href: '/voting',
-          supportChainIds: SUPPORT_ONLY_BSC,
+          supportChainIds: SUPPORT_ONLY_KLAYTN,
           image: '/images/voting/voting-bunny.png',
         },
         {
@@ -239,7 +239,7 @@ const config: (
         {
           label: t('Leaderboard'),
           href: '/teams',
-          supportChainIds: SUPPORT_ONLY_BSC,
+          supportChainIds: SUPPORT_ONLY_KLAYTN,
           image: '/images/decorations/leaderboard.png',
         },
         {
