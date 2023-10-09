@@ -1,18 +1,18 @@
 import { LotteryStatus, LotteryTicket } from 'config/constants/types'
-import { lotteryV2ABI } from 'config/abi/lotteryV2'
-import { getLotteryV2Address } from 'utils/addressHelpers'
+import { klayLotteryABI } from 'config/abi/klayLottery'
+import { getKlayLotteryAddress } from 'utils/addressHelpers'
 import { LotteryResponse } from 'state/types'
-import { getLotteryV2Contract } from 'utils/contractHelpers'
+import { getKlayLotteryContract } from 'utils/contractHelpers'
 import { bigIntToSerializedBigNumber } from '@pancakeswap/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
 import { publicClient } from 'utils/wagmi'
 import { ChainId } from '@pancakeswap/chains'
 import { ContractFunctionResult } from 'viem'
 
-const lotteryContract = getLotteryV2Contract()
+const lotteryContract = getKlayLotteryContract()
 
 const processViewLotterySuccessResponse = (
-  response: ContractFunctionResult<typeof lotteryV2ABI, 'viewLottery'>,
+  response: ContractFunctionResult<typeof klayLotteryABI, 'viewLottery'>,
   lotteryId: string,
 ): LotteryResponse => {
   const {
@@ -87,9 +87,9 @@ export const fetchMultipleLotteries = async (lotteryIds: string[]): Promise<Lott
   const calls = lotteryIds.map(
     (id) =>
       ({
-        abi: lotteryV2ABI,
+        abi: klayLotteryABI,
         functionName: 'viewLottery',
-        address: getLotteryV2Address(),
+        address: getKlayLotteryAddress(),
         args: [BigInt(id)],
       } as const),
   )
@@ -117,8 +117,8 @@ export const fetchCurrentLotteryIdAndMaxBuy = async () => {
     const calls = (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map(
       (method) =>
         ({
-          abi: lotteryV2ABI,
-          address: getLotteryV2Address(),
+          abi: klayLotteryABI,
+          address: getKlayLotteryAddress(),
           functionName: method,
         } as const),
     )

@@ -1,13 +1,13 @@
-import { lotteryV2ABI } from 'config/abi/lotteryV2'
+import { klayLotteryABI } from 'config/abi/klayLottery'
 import { TICKET_LIMIT_PER_REQUEST } from 'config/constants/lottery'
 import { LotteryTicket } from 'config/constants/types'
-import { getLotteryV2Contract } from 'utils/contractHelpers'
+import { getKlayLotteryContract } from 'utils/contractHelpers'
 import { ContractFunctionResult, Address } from 'viem'
 
-const lotteryContract = getLotteryV2Contract()
+const lotteryContract = getKlayLotteryContract()
 
 export const processRawTicketsResponse = (
-  ticketsResponse: ContractFunctionResult<typeof lotteryV2ABI, 'viewUserInfoForLotteryId'>,
+  ticketsResponse: ContractFunctionResult<typeof klayLotteryABI, 'viewUserInfoForLotteryId'>,
 ): LotteryTicket[] => {
   const [ticketIds, ticketNumbers, ticketStatuses] = ticketsResponse
 

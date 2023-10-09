@@ -22,7 +22,7 @@ import {
   getCrossFarmingProxyContract,
   getFarmAuctionContract,
   getIfoCreditAddressContract,
-  getLotteryV2Contract,
+  getKlayLotteryContract,
   getMasterChefContract,
   getMasterChefV3Contract,
   getNftMarketContract,
@@ -106,9 +106,9 @@ export const useProfileContract = () => {
   return useMemo(() => getProfileContract(signer ?? undefined), [signer])
 }
 
-export const useLotteryV2Contract = () => {
+export const useKlayLotteryContract = () => {
   const { data: signer } = useWalletClient()
-  return useMemo(() => getLotteryV2Contract(signer ?? undefined), [signer])
+  return useMemo(() => getKlayLotteryContract(signer ?? undefined), [signer])
 }
 
 export const useMasterchef = () => {

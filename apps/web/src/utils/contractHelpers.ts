@@ -11,7 +11,7 @@ import {
   getCrossFarmingReceiverAddress,
   getCrossFarmingSenderAddress,
   getFarmAuctionAddress,
-  getLotteryV2Address,
+  getKlayLotteryAddress,
   getMasterChefV2Address,
   getMasterChefV3Address,
   getNftMarketAddress,
@@ -66,7 +66,7 @@ import { bunnyFactoryABI } from 'config/abi/bunnyFactory'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import { crossFarmingReceiverABI } from 'config/abi/crossFarmingReceiver'
 import { farmAuctionABI } from 'config/abi/farmAuction'
-import { lotteryV2ABI } from 'config/abi/lotteryV2'
+import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
 import { masterChefV2ABI } from 'config/abi/masterchefV2'
 import { nftMarketABI } from 'config/abi/nftMarket'
@@ -149,8 +149,8 @@ export const getProfileContract = (signer?: WalletClient) => {
 export const getBunnyFactoryContract = (signer?: WalletClient) => {
   return getContract({ abi: bunnyFactoryABI, address: getBunnyFactoryAddress(), signer })
 }
-export const getLotteryV2Contract = (signer?: WalletClient) => {
-  return getContract({ abi: lotteryV2ABI, address: getLotteryV2Address(), signer })
+export const getKlayLotteryContract = (signer?: WalletClient) => {
+  return getContract({ abi: klayLotteryABI, address: getKlayLotteryAddress(), signer })
 }
 
 export const getTradingCompetitionContractEaster = (signer?: WalletClient) => {

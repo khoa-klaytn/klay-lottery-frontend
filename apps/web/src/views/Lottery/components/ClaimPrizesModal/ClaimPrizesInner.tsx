@@ -4,7 +4,7 @@ import { useAccount } from 'wagmi'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import useCatchTxError from 'hooks/useCatchTxError'
-import { useLotteryV2Contract } from 'hooks/useContract'
+import { useKlayLotteryContract } from 'hooks/useContract'
 import { useState } from 'react'
 import { useAppDispatch } from 'state'
 import { useCakePrice } from 'hooks/useCakePrice'
@@ -33,7 +33,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
       roundsToClaim[activeClaimIndex].ticketsWithUnclaimedRewards.length / maxNumberTicketsPerBuyOrClaim.toNumber(),
     ),
   )
-  const lotteryContract = useLotteryV2Contract()
+  const lotteryContract = useKlayLotteryContract()
   const activeClaimData = roundsToClaim[activeClaimIndex]
 
   const cakePriceBusd = useCakePrice()

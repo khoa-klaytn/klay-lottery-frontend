@@ -17,9 +17,9 @@ export default {
     [ChainId.BSC_TESTNET]: '0xD3af5Fe61DBaF8f73149bfcFa9FB653ff096029A',
     [ChainId.BSC]: '0x6Ab8463a4185b80905E05A9ff80A2d6b714B9e95',
   },
-  lotteryV2: {
-    [ChainId.BSC_TESTNET]: '0x5790c3534F30437641541a0FA04C992799602998',
-    [ChainId.BSC]: '0x5aF6D33DE2ccEC94efb1bDF8f92Bd58085432d2c',
+  klayLottery: {
+    [ChainId.KLAYTN_TESTNET]: '0x131B405B0a671460106054c6c7339827b7090Fe9',
+    [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {
     [ChainId.ETHEREUM]: '0xcA11bde05977b3631167028862bE2a173976CA11',

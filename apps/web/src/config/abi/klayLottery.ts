@@ -1,4 +1,4 @@
-export const lotteryV2ABI = [
+export const klayLotteryABI = [
   {
     inputs: [
       { internalType: 'address', name: '_cakeTokenAddress', type: 'address' },

@@ -3,9 +3,9 @@ import { LotteryStatus, LotteryTicket, LotteryTicketClaimData } from 'config/con
 import { LotteryUserGraphEntity, LotteryRoundGraphEntity } from 'state/types'
 import { publicClient } from 'utils/wagmi'
 import { ChainId } from '@pancakeswap/chains'
-import { lotteryV2ABI } from 'config/abi/lotteryV2'
+import { klayLotteryABI } from 'config/abi/klayLottery'
 import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
-import { getLotteryV2Address } from 'utils/addressHelpers'
+import { getKlayLotteryAddress } from 'utils/addressHelpers'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
 import { MAX_LOTTERIES_REQUEST_SIZE } from './getLotteriesData'
@@ -16,7 +16,7 @@ interface RoundDataAndUserTickets {
   finalNumber: string
 }
 
-const lotteryAddress = getLotteryV2Address()
+const lotteryAddress = getKlayLotteryAddress()
 
 const fetchCakeRewardsForTickets = async (
   winningTickets: LotteryTicket[],
@@ -24,7 +24,7 @@ const fetchCakeRewardsForTickets = async (
   const calls = winningTickets.map((winningTicket) => {
     const { roundId, id, rewardBracket } = winningTicket
     return {
-      abi: lotteryV2ABI,
+      abi: klayLotteryABI,
       functionName: 'viewRewardsForTicketId',
       address: lotteryAddress,
       args: [BigInt(roundId), BigInt(id), rewardBracket],
