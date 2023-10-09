@@ -32,21 +32,19 @@ export function Admin({ disabled }: { disabled: boolean }) {
     const parsedEndTime = Math.ceil(new Date(endTime).getTime() / 1000)
     const parsedPriceTicket = parseEther(priceTicket)
 
-    const res = await callWithGasPrice(
-      lotteryContract,
-      'startLottery',
-      [
-        BigInt(parsedEndTime),
-        BigInt(parsedPriceTicket),
-        BigInt(discountDivisor),
-        [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
-        BigInt(winnersPortion),
-        BigInt(burnPortion),
-      ],
-      {
-        gasLimit: 2000000,
-      },
-    )
+    const res = await callWithGasPrice(lotteryContract, 'startLottery', [
+      BigInt(parsedEndTime),
+      BigInt(parsedPriceTicket),
+      BigInt(discountDivisor),
+      [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
+      BigInt(winnersPortion),
+      BigInt(burnPortion),
+    ])
+    console.log(res)
+  }
+
+  async function reset() {
+    const res = await callWithGasPrice(lotteryContract, 'reset', [])
     console.log(res)
   }
 
@@ -170,6 +168,9 @@ export function Admin({ disabled }: { disabled: boolean }) {
       </fieldset>
       <Button type="submit" disabled={disabled}>
         Start Lottery
+      </Button>
+      <Button type="reset" onClick={reset}>
+        Reset
       </Button>
     </form>
   )
