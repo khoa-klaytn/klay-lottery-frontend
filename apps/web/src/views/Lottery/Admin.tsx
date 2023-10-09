@@ -1,4 +1,4 @@
-import { Button, Input, InputGroup } from '@pancakeswap/uikit'
+import { Button, Input } from '@pancakeswap/uikit'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useState } from 'react'
@@ -52,45 +52,122 @@ export function Admin({ disabled }: { disabled: boolean }) {
 
   return (
     <form onSubmit={startLottery}>
-      <Input type="datetime" name="endTime" value={endTime} onInput={(ev) => setEndTime(ev.currentTarget.value)} />
-      <Input
-        type="number"
-        name="priceTicket"
-        value={priceTicket}
-        onInput={(ev) => setPriceTicket(ev.currentTarget.value)}
-      />
-      <Input
-        type="number"
-        name="discountDivisor"
-        value={discountDivisor}
-        onInput={(ev) => setDiscountDivisor(ev.currentTarget.value)}
-      />
-      <InputGroup>
-        <>
-          <Input type="number" name="reward1" value={reward1} onInput={(ev) => setReward1(ev.currentTarget.value)} />
-          <Input type="number" name="reward2" value={reward2} onInput={(ev) => setReward2(ev.currentTarget.value)} />
-          <Input type="number" name="reward3" value={reward3} onInput={(ev) => setReward3(ev.currentTarget.value)} />
-          <Input type="number" name="reward4" value={reward4} onInput={(ev) => setReward4(ev.currentTarget.value)} />
-          <Input type="number" name="reward5" value={reward5} onInput={(ev) => setReward5(ev.currentTarget.value)} />
-          <Input type="number" name="reward6" value={reward6} onInput={(ev) => setReward6(ev.currentTarget.value)} />
-        </>
-      </InputGroup>
-      <InputGroup>
-        <>
+      <label>
+        endTime
+        <Input
+          type="datetime"
+          name="endTime"
+          id="endTime"
+          value={endTime}
+          onInput={(ev) => setEndTime(ev.currentTarget.value)}
+        />
+      </label>
+      <label>
+        priceTicket
+        <Input
+          type="number"
+          name="priceTicket"
+          id="priceTicket"
+          value={priceTicket}
+          onInput={(ev) => setPriceTicket(ev.currentTarget.value)}
+        />
+      </label>
+      <label>
+        discountDivisor
+        <Input
+          type="number"
+          name="discountDivisor"
+          id="discountDivisor"
+          value={discountDivisor}
+          onInput={(ev) => setDiscountDivisor(ev.currentTarget.value)}
+        />
+      </label>
+      <fieldset>
+        <header>Rewards Breakdown</header>
+        <label>
+          1
+          <Input
+            type="number"
+            name="reward1"
+            id="reward1"
+            value={reward1}
+            onInput={(ev) => setReward1(ev.currentTarget.value)}
+          />
+        </label>
+        <label>
+          2
+          <Input
+            type="number"
+            name="reward2"
+            id="reward2"
+            value={reward2}
+            onInput={(ev) => setReward2(ev.currentTarget.value)}
+          />
+        </label>
+        <label>
+          3
+          <Input
+            type="number"
+            name="reward3"
+            id="reward3"
+            value={reward3}
+            onInput={(ev) => setReward3(ev.currentTarget.value)}
+          />
+        </label>
+        <label>
+          4
+          <Input
+            type="number"
+            name="reward4"
+            id="reward4"
+            value={reward4}
+            onInput={(ev) => setReward4(ev.currentTarget.value)}
+          />
+        </label>
+        <label>
+          5
+          <Input
+            type="number"
+            name="reward5"
+            id="reward5"
+            value={reward5}
+            onInput={(ev) => setReward5(ev.currentTarget.value)}
+          />
+        </label>
+        <label>
+          6
+          <Input
+            type="number"
+            name="reward6"
+            id="reward6"
+            value={reward6}
+            onInput={(ev) => setReward6(ev.currentTarget.value)}
+          />
+        </label>{' '}
+      </fieldset>
+      <fieldset>
+        <header>Portions</header>
+        <label>
+          winnersPortion
           <Input
             type="number"
             name="winnersPortion"
+            id="winnersPortion"
             value={winnersPortion}
             onInput={(ev) => setWinnersPortion(ev.currentTarget.value)}
           />
+        </label>
+        <label>
+          burnPortion
           <Input
             type="number"
             name="burnPortion"
+            id="burnPortion"
             value={burnPortion}
             onInput={(ev) => setBurnPortion(ev.currentTarget.value)}
           />
-        </>
-      </InputGroup>
+        </label>{' '}
+      </fieldset>
       <Button type="submit" disabled={disabled}>
         Start Lottery
       </Button>
