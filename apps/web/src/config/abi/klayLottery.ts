@@ -816,6 +816,19 @@ export const klayLotteryABI = [
     type: 'function',
   },
   {
+    inputs: [],
+    name: 'viewMaxNumberTicketsPerBuyOrClaim',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
     inputs: [
       {
         internalType: 'uint256[]',

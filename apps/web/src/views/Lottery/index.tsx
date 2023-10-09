@@ -24,6 +24,7 @@ import AllHistoryCard from './components/AllHistoryCard'
 import CheckPrizesSection from './components/CheckPrizesSection'
 import HowToPlay from './components/HowToPlay'
 import useShowMoreUserHistory from './hooks/useShowMoreUserRounds'
+import { Admin } from './Admin'
 
 const LotteryPage = styled.div`
   min-height: calc(100vh - 64px);
@@ -35,7 +36,7 @@ const Lottery = () => {
   const { t } = useTranslation()
   const { isDark, theme } = useTheme()
   const {
-    currentRound: { status, endTime },
+    currentRound: { lotteryId, status, endTime },
   } = useLottery()
   const [historyTabMenuIndex, setHistoryTabMenuIndex] = useState(0)
   const endTimeAsInt = parseInt(endTime, 10)
@@ -45,6 +46,7 @@ const Lottery = () => {
   return (
     <>
       <LotteryPage>
+        <Admin disabled={status !== LotteryStatus.CLAIMABLE && lotteryId !== '0'} />
         <PageSection background={TITLE_BG} index={1} hasCurvedDivider={false}>
           <Hero />
         </PageSection>

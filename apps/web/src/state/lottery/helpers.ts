@@ -82,6 +82,7 @@ const processViewLotteryErrorResponse = (lotteryId: string): LotteryResponse => 
 export const fetchLottery = async (lotteryId: string): Promise<LotteryResponse> => {
   try {
     const lotteryData = await lotteryContract.read.viewLottery([BigInt(lotteryId)])
+    console.log('lotteryData', lotteryData)
     return processViewLotterySuccessResponse(lotteryData, lotteryId)
   } catch (error) {
     return processViewLotteryErrorResponse(lotteryId)
@@ -116,9 +117,11 @@ export const fetchCurrentLotteryId = async (): Promise<bigint> => {
 export const fetchCurrentLotteryIdAndMaxBuy = async () => {
   try {
     const address = getKlayLotteryAddress()
-    const client = publicClient({ chainId: ChainId.KLAYTN })
+    const client = publicClient({
+      chainId: process.env.NODE_ENV === 'production' ? ChainId.KLAYTN : ChainId.KLAYTN_TESTNET,
+    })
     const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
-      (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
+      (['viewCurrentLotteryId', 'viewMaxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
         client.readContract({
           abi: klayLotteryABI,
           address,
@@ -128,7 +131,7 @@ export const fetchCurrentLotteryIdAndMaxBuy = async () => {
     )
 
     return {
-      currentLotteryId: currentLotteryId ? currentLotteryId.toString() : null,
+      currentLotteryId: typeof currentLotteryId === 'bigint' ? currentLotteryId.toString() : null,
       maxNumberTicketsPerBuyOrClaim: maxNumberTicketsPerBuyOrClaim ? maxNumberTicketsPerBuyOrClaim.toString() : null,
     }
   } catch (error) {

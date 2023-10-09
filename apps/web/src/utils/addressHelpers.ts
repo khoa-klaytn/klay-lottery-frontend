@@ -7,7 +7,11 @@ export interface Addresses {
 }
 
 export const getAddressFromMap = (address: Addresses, chainId?: number): `0x${string}` => {
-  return address[chainId] ? address[chainId] : address[ChainId.BSC]
+  return address[chainId]
+    ? address[chainId]
+    : process.env.NODE_ENV === 'development'
+    ? address[ChainId.KLAYTN_TESTNET]
+    : address[ChainId.KLAYTN]
 }
 
 export const getAddressFromMapNoFallback = (address: Addresses, chainId?: number): `0x${string}` | null => {
