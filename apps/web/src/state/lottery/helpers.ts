@@ -19,19 +19,22 @@ const processViewLotterySuccessResponse = (
     status,
     startTime,
     endTime,
-    priceTicketInCake,
+    priceTicket,
     discountDivisor,
-    treasuryFee,
+    winnersPortion,
+    burnPortion,
     firstTicketId,
-    amountCollectedInCake,
+    amountCollected,
     finalNumber,
-    cakePerBracket,
+    rewardPerUserPerBracket,
     countWinnersPerBracket,
     rewardsBreakdown,
   } = response
 
   const statusKey = Object.keys(LotteryStatus)[status]
-  const serializedCakePerBracket = cakePerBracket.map((cakeInBracket) => bigIntToSerializedBigNumber(cakeInBracket))
+  const serializedRewardPerUserPerBracket = rewardPerUserPerBracket.map((klayInBracket) =>
+    bigIntToSerializedBigNumber(klayInBracket),
+  )
   const serializedCountWinnersPerBracket = countWinnersPerBracket.map((winnersInBracket) =>
     bigIntToSerializedBigNumber(winnersInBracket),
   )
@@ -43,13 +46,14 @@ const processViewLotterySuccessResponse = (
     status: LotteryStatus[statusKey],
     startTime: startTime?.toString(),
     endTime: endTime?.toString(),
-    priceTicketInCake: bigIntToSerializedBigNumber(priceTicketInCake),
+    priceTicket: bigIntToSerializedBigNumber(priceTicket),
     discountDivisor: discountDivisor?.toString(),
-    treasuryFee: treasuryFee?.toString(),
+    winnersPortion: winnersPortion?.toString(),
+    burnPortion: burnPortion?.toString(),
     firstTicketId: firstTicketId?.toString(),
-    amountCollectedInCake: bigIntToSerializedBigNumber(amountCollectedInCake),
+    amountCollected: bigIntToSerializedBigNumber(amountCollected),
     finalNumber,
-    cakePerBracket: serializedCakePerBracket,
+    rewardPerUserPerBracket: serializedRewardPerUserPerBracket,
     countWinnersPerBracket: serializedCountWinnersPerBracket,
     rewardsBreakdown: serializedRewardsBreakdown,
   }
@@ -62,13 +66,14 @@ const processViewLotteryErrorResponse = (lotteryId: string): LotteryResponse => 
     status: LotteryStatus.PENDING,
     startTime: '',
     endTime: '',
-    priceTicketInCake: '',
+    priceTicket: '',
     discountDivisor: '',
-    treasuryFee: '',
+    winnersPortion: '',
+    burnPortion: '',
     firstTicketId: '',
-    amountCollectedInCake: '',
+    amountCollected: '',
     finalNumber: null,
-    cakePerBracket: [],
+    rewardPerUserPerBracket: [],
     countWinnersPerBracket: [],
     rewardsBreakdown: [],
   }
@@ -94,13 +99,9 @@ export const fetchMultipleLotteries = async (lotteryIds: string[]): Promise<Lott
       } as const),
   )
   try {
-    const client = publicClient({ chainId: ChainId.BSC })
-    const multicallRes = await client.multicall({
-      contracts: calls,
-    })
-    const processedResponses = multicallRes.map((res, index) =>
-      processViewLotterySuccessResponse(res.result, lotteryIds[index]),
-    )
+    const client = publicClient({ chainId: ChainId.KLAYTN })
+    const res = await Promise.all(calls.map((call) => client.readContract(call)))
+    const processedResponses = res.map((result, index) => processViewLotterySuccessResponse(result, lotteryIds[index]))
     return processedResponses
   } catch (error) {
     console.error(error)
@@ -114,20 +115,17 @@ export const fetchCurrentLotteryId = async (): Promise<bigint> => {
 
 export const fetchCurrentLotteryIdAndMaxBuy = async () => {
   try {
-    const calls = (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map(
-      (method) =>
-        ({
+    const address = getKlayLotteryAddress()
+    const client = publicClient({ chainId: ChainId.KLAYTN })
+    const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
+      (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
+        client.readContract({
           abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
+          address,
           functionName: method,
-        } as const),
+        }),
+      ),
     )
-
-    const client = publicClient({ chainId: ChainId.BSC })
-    const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await client.multicall({
-      contracts: calls,
-      allowFailure: false,
-    })
 
     return {
       currentLotteryId: currentLotteryId ? currentLotteryId.toString() : null,

@@ -37,7 +37,7 @@ const LotteryCardContent = () => {
 
   const cakePrizesText = t('%cakePrizeInUsd% in CAKE prizes this round', { cakePrizeInUsd: cakePriceBusd.toString() })
   const [pretext, prizesThisRound] = cakePrizesText.split(cakePriceBusd.toString())
-  const amountCollectedInCake = currentLottery ? parseFloat(currentLottery.amountCollectedInCake) : null
+  const amountCollectedInCake = currentLottery ? parseFloat(currentLottery.amountCollected) : null
   const currentLotteryPrize = amountCollectedInCake ? cakePriceBusd.times(amountCollectedInCake) : null
 
   useEffect(() => {
