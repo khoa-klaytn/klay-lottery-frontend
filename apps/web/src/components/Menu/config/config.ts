@@ -9,12 +9,7 @@ import {
   MoreIcon,
   PancakeProtectorIcon,
 } from '@pancakeswap/uikit'
-import {
-  FIXED_STAKING_SUPPORTED_CHAINS,
-  LIQUID_STAKING_SUPPORTED_CHAINS,
-  SUPPORT_FARMS,
-  SUPPORT_ONLY_KLAYTN,
-} from 'config/constants/supportChains'
+import { FIXED_STAKING_SUPPORTED_CHAINS, SUPPORT_FARMS, SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
@@ -50,11 +45,6 @@ const config: (
       image: '/images/decorations/pe2.png',
       supportChainIds: SUPPORT_FARMS,
       items: [
-        {
-          label: t('Liquid Staking'),
-          href: '/liquid-staking',
-          supportChainIds: LIQUID_STAKING_SUPPORTED_CHAINS,
-        },
         {
           label: t('Simple Staking'),
           href: '/simple-staking',
