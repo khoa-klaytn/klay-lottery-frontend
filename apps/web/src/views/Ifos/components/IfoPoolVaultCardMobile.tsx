@@ -1,5 +1,4 @@
 import { styled } from 'styled-components'
-import { useAccount } from 'wagmi'
 import {
   Box,
   Card,
@@ -12,13 +11,12 @@ import {
 } from '@pancakeswap/uikit'
 import { Pool } from '@pancakeswap/widgets-internal'
 
-import { useVaultPoolByKey, useIfoCredit } from 'state/pools/hooks'
+import { useIfoCredit } from 'state/pools/hooks'
 import { useTranslation } from '@pancakeswap/localization'
 import { vaultPoolConfig } from 'config/constants/pools'
 import { VaultKey } from 'state/types'
 import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
 import { useConfig } from 'views/Ifos/contexts/IfoContext'
-import { CakeVaultDetail } from 'views/Pools/components/CakeVaultCard'
 import { Token } from '@pancakeswap/sdk'
 
 const StyledCardMobile = styled(Card)`
@@ -39,20 +37,9 @@ interface IfoPoolVaultCardMobileProps {
 
 const IfoPoolVaultCardMobile: React.FC<React.PropsWithChildren<IfoPoolVaultCardMobileProps>> = ({ pool }) => {
   const { t } = useTranslation()
-  const { address: account } = useAccount()
   const credit = useIfoCredit()
   const { isExpanded, setIsExpanded } = useConfig()
   const cakeAsNumberBalance = getBalanceNumber(credit)
-
-  const vaultPool = useVaultPoolByKey(pool?.vaultKey || VaultKey.CakeVault)
-
-  const {
-    userData: { userShares, isLoading: isVaultUserDataLoading },
-    fees: { performanceFeeAsDecimal },
-  } = vaultPool
-
-  const accountHasSharesStaked = userShares && userShares.gt(0)
-  const isLoading = !pool?.userData || isVaultUserDataLoading
 
   if (!pool) {
     return null
@@ -82,17 +69,6 @@ const IfoPoolVaultCardMobile: React.FC<React.PropsWithChildren<IfoPoolVaultCardM
           <ExpandableButton expanded={isExpanded} onClick={() => setIsExpanded((prev) => !prev)} />
         </Flex>
       </CardHeader>
-      {isExpanded && (
-        <CakeVaultDetail
-          showICake
-          isLoading={isLoading}
-          account={account}
-          pool={pool}
-          vaultPool={vaultPool}
-          accountHasSharesStaked={accountHasSharesStaked}
-          performanceFeeAsDecimal={performanceFeeAsDecimal}
-        />
-      )}
     </StyledCardMobile>
   )
 }

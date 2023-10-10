@@ -2,7 +2,6 @@ import { useMemo } from 'react'
 import { Flex, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { Pool } from '@pancakeswap/widgets-internal'
 
-import CakeVaultCard from 'views/Pools/components/CakeVaultCard'
 import { usePoolsWithVault } from 'state/pools/hooks'
 import { Token } from '@pancakeswap/sdk'
 import IfoPoolVaultCardMobile from './IfoPoolVaultCardMobile'
@@ -19,11 +18,7 @@ const IfoPoolVaultCard = () => {
 
   return (
     <Flex width="100%" maxWidth={400} alignItems="center" flexDirection="column">
-      {isSmallerThanXl ? (
-        <IfoPoolVaultCardMobile pool={cakePool} />
-      ) : (
-        <CakeVaultCard pool={cakePool} showSkeleton={false} showStakedOnly={false} showICake />
-      )}
+      {isSmallerThanXl ? <IfoPoolVaultCardMobile pool={cakePool} /> : <></>}
       <IfoVesting pool={cakePool} />
     </Flex>
   )

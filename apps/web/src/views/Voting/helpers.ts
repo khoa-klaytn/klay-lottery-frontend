@@ -1,6 +1,5 @@
 import { createPublicClient, http } from 'viem'
 import { bscTokens } from '@pancakeswap/tokens'
-import BigNumber from 'bignumber.js'
 import { SNAPSHOT_HUB_API } from 'config/constants/endpoints'
 import fromPairs from 'lodash/fromPairs'
 import groupBy from 'lodash/groupBy'
@@ -9,7 +8,6 @@ import { bsc } from 'viem/chains'
 import { cakeVaultV2ABI } from '@pancakeswap/pools'
 import { Address } from 'wagmi'
 import { getCakeVaultAddress } from 'utils/addressHelpers'
-import { convertSharesToCake } from 'views/Pools/helpers'
 import { ADMINS, PANCAKE_SPACE, SNAPSHOT_VERSION } from './config'
 import { getScores } from './getScores'
 import * as strategies from './strategies'
@@ -128,34 +126,24 @@ export const getVotingPower = async (
     const cakeVaultAddress = getCakeVaultAddress()
     const version = blockNumber >= VOTING_POWER_BLOCK.v1 ? 'v1' : 'v0'
 
-    const [
-      pricePerShare,
-      [
-        shares,
-        _lastDepositedTime,
-        _cakeAtLastUserAction,
-        _lastUserActionTime,
-        _lockStartTime,
-        lockEndTime,
-        userBoostedShare,
-      ],
-    ] = await nodeRealProvider.multicall({
-      contracts: [
-        {
-          address: cakeVaultAddress,
-          abi: cakeVaultV2ABI,
-          functionName: 'getPricePerFullShare',
-        },
-        {
-          address: cakeVaultAddress,
-          abi: cakeVaultV2ABI,
-          functionName: 'userInfo',
-          args: [account],
-        },
-      ],
-      blockNumber,
-      allowFailure: false,
-    })
+    const [, [, _lastDepositedTime, _cakeAtLastUserAction, _lastUserActionTime, _lockStartTime, lockEndTime, ,]] =
+      await nodeRealProvider.multicall({
+        contracts: [
+          {
+            address: cakeVaultAddress,
+            abi: cakeVaultV2ABI,
+            functionName: 'getPricePerFullShare',
+          },
+          {
+            address: cakeVaultAddress,
+            abi: cakeVaultV2ABI,
+            functionName: 'userInfo',
+            args: [account],
+          },
+        ],
+        blockNumber,
+        allowFailure: false,
+      })
 
     const [cakeBalance, cakeBnbLpBalance, cakePoolBalance, cakeVaultBalance, poolsBalance, total, ifoPoolBalance] =
       await getScores(
@@ -174,14 +162,6 @@ export const getVotingPower = async (
         Number(blockNumber),
       )
 
-    const lockedCakeBalance = convertSharesToCake(
-      new BigNumber(shares.toString()),
-      new BigNumber(pricePerShare.toString()),
-      18,
-      3,
-      new BigNumber(userBoostedShare.toString()),
-    )?.cakeAsNumberBalance
-
     const versionOne =
       version === 'v0'
         ? {
@@ -198,7 +178,6 @@ export const getVotingPower = async (
       cakePoolBalance: cakePoolBalance[account] ? cakePoolBalance[account] : 0,
       cakeBnbLpBalance: cakeBnbLpBalance[account] ? cakeBnbLpBalance[account] : 0,
       cakeVaultBalance: cakeVaultBalance[account] ? cakeVaultBalance[account] : 0,
-      lockedCakeBalance: Number.isFinite(lockedCakeBalance) ? lockedCakeBalance : 0,
       lockedEndTime: lockEndTime ? +lockEndTime.toString() : 0,
     }
   }

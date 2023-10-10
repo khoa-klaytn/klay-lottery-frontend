@@ -29,8 +29,7 @@ import useTokenBalance from 'hooks/useTokenBalance'
 import { useProfile } from 'state/profile/hooks'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
-import { useIfoCredit, useIfoCeiling } from 'state/pools/hooks'
-import { getICakeWeekDisplay } from 'views/Pools/helpers'
+import { useIfoCredit } from 'state/pools/hooks'
 import { useCakePrice } from 'hooks/useCakePrice'
 
 interface TypeProps {
@@ -65,21 +64,11 @@ const InlineLink = styled(Link)`
 const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
   const { t } = useTranslation()
   const credit = useIfoCredit()
-  const ceiling = useIfoCeiling()
   const cakePrice = useCakePrice()
   const creditDollarValue = cakePrice.multipliedBy(getBalanceNumber(credit)).toNumber()
-  const weeksDisplay = getICakeWeekDisplay(ceiling)
 
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <Box>
-      <Text>
-        {t(
-          'The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.',
-          {
-            weeks: weeksDisplay,
-          },
-        )}
-      </Text>
       <InlineLink external href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering/icake">
         {t('Learn more about iCAKE')}
       </InlineLink>
