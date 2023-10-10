@@ -6,11 +6,9 @@ import GalxePedictBanner from '../GalxePedictBanner'
 import GalxeSyndicateBanner from '../GalxeSyndicateBanner'
 import { GalxeTraverseBanner } from '../GalxeTraverseBanner'
 import IFOBanner from '../IFOBanner'
-import LiquidStakingBanner from '../LiquidStakingBanner'
 import { OpBnbBanner } from '../OpBnbBanner'
 import PerpetualBanner from '../PerpetualBanner'
 import TradingRewardBanner from '../TradingRewardBanner'
-import UserBanner from '../UserBanner'
 import useIsRenderCompetitionBanner from './useIsRenderCompetitionBanner'
 import useIsRenderIfoBanner from './useIsRenderIFOBanner'
 
@@ -51,7 +49,6 @@ export const useMultipleBannerConfig = () => {
     const SHUFFLE_BANNERS: IBannerConfig[] = [
       { shouldRender: true, banner: <GalxeTraverseBanner /> },
       { shouldRender: true, banner: <TradingRewardBanner /> },
-      { shouldRender: true, banner: <LiquidStakingBanner /> },
       {
         shouldRender: isRenderCompetitionBanner,
         banner: <CompetitionBanner />,

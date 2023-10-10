@@ -19,7 +19,6 @@ import tradePerpetual from '../../images/trade-perpetual.png'
 import tradeBuy from '../../images/trade-buy-crypto.png'
 import earnFarm from '../../images/earn-farm.png'
 import earnPools from '../../images/earn-pools.png'
-import earnLiquidStaking from '../../images/earn-liquidity-staking.png'
 import gamePrediction from '../../images/game-prediction.png'
 import gamePancakeProtectors from '../../images/game-pancake-protectors.png'
 import gameLottery from '../../images/game-lottery.png'
@@ -34,7 +33,6 @@ import tradePerpetualPurple from '../../images/trade-perpetual-purple.png'
 import tradeBuyPurple from '../../images/trade-buy-crypto-purple.png'
 import earnFarmPurple from '../../images/earn-farm-purple.png'
 import earnPoolsPurple from '../../images/earn-pools-purple.png'
-import earnLiquidStakingPurple from '../../images/earn-liquidity-staking-purple.png'
 import gamePredictionPurple from '../../images/game-prediction-purple.png'
 import gamePancakeProtectorsPurple from '../../images/game-pancake-protectors-purple.png'
 import gameLotteryPurple from '../../images/game-lottery-purple.png'
@@ -250,14 +248,6 @@ const useEarnBlockData = () => {
         image: earnPools,
         defaultImage: earnPoolsPurple,
         path: '/pools',
-      },
-      {
-        title: t('Liquid Staking'),
-        description: t('Earn rewards while retaining asset flexibility'),
-        ctaTitle: t('Add Now'),
-        image: earnLiquidStaking,
-        defaultImage: earnLiquidStakingPurple,
-        path: '/liquid-staking',
       },
     ]
   }, [t])
