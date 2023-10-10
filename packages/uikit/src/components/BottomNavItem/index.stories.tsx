@@ -1,7 +1,6 @@
 import React from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserRouter } from "react-router-dom";
-import { PancakeProtectorIcon } from "../Svg";
 import { Flex } from "../Box";
 import BottomNavItem from "./BottomNavItem";
 import { BottomNavItemProps } from "./types";
@@ -23,8 +22,7 @@ const Template: React.FC<React.PropsWithChildren<BottomNavItemProps>> = ({ ...ar
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Game",
-  href: "https://protectors.pancakeswap.finance",
-  icon: PancakeProtectorIcon,
+  label: "Lottery",
+  href: "/lottery",
   isActive: false,
 };

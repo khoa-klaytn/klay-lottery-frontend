@@ -6,12 +6,10 @@ import { styled } from 'styled-components'
 import { useMemo } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import gameNftBunny from '../../images/game-nft-bunny.png'
-import gamePancakeProtectors from '../../images/game-pancake-protectors.png'
 import gameLottery from '../../images/game-lottery.png'
 import nftMarketplace from '../../images/nft-marketplace.png'
 import GradientLogo from '../GradientLogoSvg'
 
-import gamePancakeProtectorsPurple from '../../images/game-pancake-protectors-purple.png'
 import gameLotteryPurple from '../../images/game-lottery-purple.png'
 import nftMarketplacePurple from '../../images/nft-marketplace-purple.png'
 
@@ -140,14 +138,6 @@ const useNftGameBlockData = () => {
   const { t } = useTranslation()
   return useMemo(() => {
     return [
-      {
-        title: t('Pancake Protectors'),
-        description: t('Immersive PvP & PvE tower-defense GameFi'),
-        ctaTitle: t('Play Now'),
-        image: gamePancakeProtectors,
-        defaultImage: gamePancakeProtectorsPurple,
-        path: 'https://protectors.pancakeswap.finance/',
-      },
       {
         title: t('Lottery'),
         description: t('Enter for a chance to win CAKE prize pools'),

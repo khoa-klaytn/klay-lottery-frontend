@@ -1,11 +1,5 @@
 import { ContextApi } from '@pancakeswap/localization'
-import {
-  DropdownMenuItemType,
-  DropdownMenuItems,
-  MenuItemsType,
-  MoreIcon,
-  PancakeProtectorIcon,
-} from '@pancakeswap/uikit'
+import { DropdownMenuItemType, DropdownMenuItems, MenuItemsType, MoreIcon } from '@pancakeswap/uikit'
 import { SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
@@ -35,22 +29,10 @@ const config: (
 ) => ConfigMenuItemsType[] = (t, isDark, languageCode, chainId) =>
   [
     {
-      label: t('Game'),
-      icon: PancakeProtectorIcon,
+      label: t('Lottery'),
       hideSubNav: true,
-      href: 'https://protectors.pancakeswap.finance',
-      items: [
-        {
-          label: t('Lottery'),
-          href: '/lottery',
-          image: '/images/decorations/lottery.png',
-        },
-        {
-          label: t('Pancake Protectors'),
-          href: 'https://protectors.pancakeswap.finance',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-      ],
+      href: '/lottery',
+      items: [],
     },
     {
       label: '',
