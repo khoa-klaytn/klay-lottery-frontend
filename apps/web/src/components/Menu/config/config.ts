@@ -1,6 +1,5 @@
 import { ContextApi } from '@pancakeswap/localization'
 import {
-  BirthdayIcon,
   DropdownMenuItemType,
   DropdownMenuItems,
   MenuItemsType,
@@ -59,54 +58,6 @@ const config: (
         {
           label: t('Pancake Protectors'),
           href: 'https://protectors.pancakeswap.finance',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-      ],
-    },
-    {
-      label: t('Birthday'),
-      icon: BirthdayIcon,
-      hideSubNav: true,
-      items: [
-        {
-          label: t('Uranus Communities'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-1-uranus-communities-unite-with-your-local-de-fi-heroes',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Mercury Mysteries'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-2-mercury-mysteries-the-enigma-of-multichain-swaps',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Venus Protectors'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-3-venus-protector-pancake-protectors-birthday-nft',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Uranus Unity Rain'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-1-uranus-unity-rain-showering-cake-rewards-on-telegram',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Mars Lottery Paradise'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-4-mars-mystique-lottery-paradise',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Jupiter Predictors'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-5-jupiter-predictors-predicting-crypto-movements',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Saturn Syndicate'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-planet-6-saturn-syndicate-perpetual-trading-galore',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Uranus Memories'),
-          href: 'https://blog.pancakeswap.finance/articles/pancake-swap-s-de-fi-galaxy-tour-uranus-memories-share-your-favorite-memory-and-product-on-pancake-swap',
-          status: { text: t('New'), color: 'success' },
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
       ],
