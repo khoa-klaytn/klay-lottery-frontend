@@ -3,7 +3,6 @@ import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import farmsReducer from './farms'
 import { updateVersion } from './global/actions'
 import lotteryReducer from './lottery'
 import poolsReducer from './pools'
@@ -26,7 +25,6 @@ const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
     global: globalReducer,
-    farms: farmsReducer,
     pools: poolsReducer,
     lottery: lotteryReducer,
     pottery: potteryReducer,

@@ -5,10 +5,8 @@ import { useAppDispatch } from 'state'
 import { useFastRefreshEffect, useSlowRefreshEffect } from 'hooks/useRefreshEffect'
 import { FAST_INTERVAL } from 'config/constants'
 import useSWRImmutable from 'swr/immutable'
-import { getFarmConfig } from '@pancakeswap/farms/constants'
 import { Pool } from '@pancakeswap/widgets-internal'
 import { Token } from '@pancakeswap/sdk'
-import { getLivePoolsConfig } from '@pancakeswap/pools'
 
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useAccountActiveChain from 'hooks/useAccountActiveChain'
@@ -29,7 +27,6 @@ import {
   setInitialPoolConfig,
 } from '.'
 import { VaultKey } from '../types'
-import { fetchFarmsPublicDataAsync } from '../farms'
 import {
   makePoolWithUserDataLoadingSelector,
   makeVaultPoolByKey,
@@ -39,40 +36,12 @@ import {
   makeVaultPoolWithKeySelector,
 } from './selectors'
 
-// Only fetch farms for live pools
-const getActiveFarms = async (chainId: number) => {
-  const farmsConfig = (await getFarmConfig(chainId)) || []
-  const livePools = getLivePoolsConfig(chainId) || []
-  const lPoolAddresses = livePools
-    .filter(({ sousId }) => sousId !== 0)
-    .map(({ earningToken, stakingToken }) => {
-      if (earningToken.symbol === 'CAKE') {
-        return stakingToken.address
-      }
-      return earningToken.address
-    })
-
-  return farmsConfig
-    .filter(
-      ({ token, pid, quoteToken }) =>
-        pid !== 0 &&
-        ((token.symbol === 'CAKE' && quoteToken.symbol === 'WBNB') ||
-          (token.symbol === 'BUSD' && quoteToken.symbol === 'WBNB') ||
-          (token.symbol === 'USDT' && quoteToken.symbol === 'BUSD') ||
-          lPoolAddresses.find((poolAddress) => poolAddress === token.address)),
-    )
-    .map((farm) => farm.pid)
-}
-
 export const useFetchPublicPoolsData = () => {
   const dispatch = useAppDispatch()
   const { chainId } = useActiveChainId()
 
   useSlowRefreshEffect(() => {
     const fetchPoolsDataWithFarms = async () => {
-      const activeFarms = await getActiveFarms(chainId)
-      await dispatch(fetchFarmsPublicDataAsync({ pids: activeFarms, chainId }))
-
       batch(() => {
         dispatch(fetchPoolsPublicDataAsync(chainId))
         dispatch(fetchPoolsStakingLimitsAsync(chainId))

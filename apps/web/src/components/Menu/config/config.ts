@@ -52,11 +52,6 @@ const config: (
       supportChainIds: SUPPORT_FARMS,
       items: [
         {
-          label: t('Farms'),
-          href: '/farms',
-          supportChainIds: SUPPORT_FARMS,
-        },
-        {
           label: t('Pools'),
           href: '/pools',
           supportChainIds: POOL_SUPPORTED_CHAINS,

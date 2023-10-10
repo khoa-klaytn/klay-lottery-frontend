@@ -13,7 +13,6 @@ import TradingRewardBanner from '../TradingRewardBanner'
 import UserBanner from '../UserBanner'
 import useIsRenderCompetitionBanner from './useIsRenderCompetitionBanner'
 import useIsRenderIfoBanner from './useIsRenderIFOBanner'
-import useIsRenderUserBanner from './useIsRenderUserBanner'
 
 interface IBannerConfig {
   shouldRender: boolean
@@ -36,14 +35,9 @@ interface IBannerConfig {
 export const useMultipleBannerConfig = () => {
   const isRenderIFOBanner = useIsRenderIfoBanner()
   const isRenderCompetitionBanner = useIsRenderCompetitionBanner()
-  const isRenderUserBanner = useIsRenderUserBanner()
 
   return useMemo(() => {
     const NO_SHUFFLE_BANNERS: IBannerConfig[] = [
-      {
-        shouldRender: isRenderUserBanner.shouldRender && !isRenderUserBanner.isEarningsBusdZero,
-        banner: <UserBanner />,
-      },
       { shouldRender: true, banner: <GalxeSyndicateBanner /> },
       { shouldRender: true, banner: <GalxePedictBanner /> },
       { shouldRender: true, banner: <OpBnbBanner /> },
@@ -67,16 +61,8 @@ export const useMultipleBannerConfig = () => {
         banner: <PerpetualBanner />,
       },
     ]
-    return [
-      ...NO_SHUFFLE_BANNERS,
-      ...shuffle(SHUFFLE_BANNERS),
-      {
-        // be the last one if harvest value is zero
-        shouldRender: isRenderUserBanner.shouldRender && isRenderUserBanner.isEarningsBusdZero,
-        banner: <UserBanner />,
-      },
-    ]
+    return [...NO_SHUFFLE_BANNERS, ...shuffle(SHUFFLE_BANNERS)]
       .filter((bannerConfig: IBannerConfig) => bannerConfig.shouldRender)
       .map((bannerConfig: IBannerConfig) => bannerConfig.banner)
-  }, [isRenderIFOBanner, isRenderCompetitionBanner, isRenderUserBanner])
+  }, [isRenderIFOBanner, isRenderCompetitionBanner])
 }
