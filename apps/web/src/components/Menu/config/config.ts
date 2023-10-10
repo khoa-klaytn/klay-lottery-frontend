@@ -54,12 +54,6 @@ const config: (
       showItemsOnMobile: false,
       items: [
         {
-          label: `${t('Limit')} (V2)`,
-          href: '/limit-orders',
-          supportChainIds: SUPPORT_ONLY_KLAYTN,
-          image: '/images/decorations/3d-coin.png',
-        },
-        {
           label: t('Buy Crypto'),
           href: '/buy-crypto',
           supportChainIds: SUPPORT_BUY_CRYPTO,
