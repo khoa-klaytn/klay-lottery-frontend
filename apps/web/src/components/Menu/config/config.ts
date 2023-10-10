@@ -9,7 +9,7 @@ import {
   MoreIcon,
   PancakeProtectorIcon,
 } from '@pancakeswap/uikit'
-import { FIXED_STAKING_SUPPORTED_CHAINS, SUPPORT_FARMS, SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
+import { SUPPORT_FARMS, SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
@@ -44,13 +44,7 @@ const config: (
       fillIcon: EarnFillIcon,
       image: '/images/decorations/pe2.png',
       supportChainIds: SUPPORT_FARMS,
-      items: [
-        {
-          label: t('Simple Staking'),
-          href: '/simple-staking',
-          supportChainIds: FIXED_STAKING_SUPPORTED_CHAINS,
-        },
-      ].map((item) => addMenuItemSupported(item, chainId)),
+      items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
       label: t('Game'),
