@@ -82,9 +82,6 @@ export const getNftSaleAddress = () => {
 export const getPancakeSquadAddress = () => {
   return getAddressFromMap(addresses.pancakeSquad)
 }
-export const getPotteryDrawAddress = () => {
-  return getAddressFromMap(addresses.potteryDraw)
-}
 
 export const getZapAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.zap, chainId)

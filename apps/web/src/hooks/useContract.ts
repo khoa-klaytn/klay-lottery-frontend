@@ -28,8 +28,6 @@ import {
   getNftSaleContract,
   getNonBscVaultContract,
   getPointCenterIfoContract,
-  getPotteryDrawContract,
-  getPotteryVaultContract,
   getProfileContract,
   getSidContract,
   getStableSwapNativeHelperContract,
@@ -255,16 +253,6 @@ export function usePairContract(pairAddress?: Address) {
 export function useMulticallContract() {
   const { chainId } = useActiveChainId()
   return useContract(getMulticallAddress(chainId), multicallABI)
-}
-
-export const usePotterytVaultContract = (address: Address) => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getPotteryVaultContract(address, signer ?? undefined), [address, signer])
-}
-
-export const usePotterytDrawContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getPotteryDrawContract(signer ?? undefined), [signer])
 }
 
 export function useZapContract() {

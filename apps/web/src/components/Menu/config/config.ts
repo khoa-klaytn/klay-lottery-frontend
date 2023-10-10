@@ -46,11 +46,6 @@ const config: (
           image: '/images/decorations/lottery.png',
         },
         {
-          label: t('Pottery (BETA)'),
-          href: '/pottery',
-          image: '/images/decorations/lottery.png',
-        },
-        {
           label: t('Pancake Protectors'),
           href: 'https://protectors.pancakeswap.finance',
           type: DropdownMenuItemType.EXTERNAL_LINK,

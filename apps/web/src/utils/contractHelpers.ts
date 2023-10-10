@@ -20,7 +20,6 @@ import {
   getPancakeProfileAddress,
   getPancakeSquadAddress,
   getPointCenterIfoAddress,
-  getPotteryDrawAddress,
   getStableSwapNativeHelperAddress,
   getTradingCompetitionAddressEaster,
   getTradingCompetitionAddressFanToken,
@@ -68,8 +67,6 @@ import { masterChefV2ABI } from 'config/abi/masterchefV2'
 import { nftMarketABI } from 'config/abi/nftMarket'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { pancakeSquadABI } from 'config/abi/pancakeSquad'
-import { potteryDrawABI } from 'config/abi/potteryDrawAbi'
-import { potteryVaultABI } from 'config/abi/potteryVaultAbi'
 import { tradingCompetitionEasterABI } from 'config/abi/tradingCompetitionEaster'
 import { tradingCompetitionFanTokenABI } from 'config/abi/tradingCompetitionFanToken'
 import { tradingCompetitionMoDABI } from 'config/abi/tradingCompetitionMoD'
@@ -207,14 +204,6 @@ export const getNftSaleContract = (signer?: WalletClient) => {
 }
 export const getPancakeSquadContract = (signer?: WalletClient) => {
   return getContract({ abi: pancakeSquadABI, address: getPancakeSquadAddress(), signer })
-}
-
-export const getPotteryVaultContract = (address: Address, walletClient?: WalletClient) => {
-  return getContract({ abi: potteryVaultABI, address, signer: walletClient })
-}
-
-export const getPotteryDrawContract = (walletClient?: WalletClient) => {
-  return getContract({ abi: potteryDrawABI, address: getPotteryDrawAddress(), signer: walletClient })
 }
 
 export const getIfoCreditAddressContract = (signer?: WalletClient) => {

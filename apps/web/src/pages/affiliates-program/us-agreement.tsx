@@ -374,7 +374,7 @@ const UsAgreement = () => {
         <Text as="p">
           (ii) Initial Farm Offering (“<strong>IFO</strong>”) of any project;
         </Text>
-        <Text as="p">(iii) Any Farms, Pools, Lottery, Pottery, NFT product or service.</Text>
+        <Text as="p">(iii) Any Farms, Pools, Lottery, NFT product or service.</Text>
 
         <Text as="h3">17. Marks</Text>
         <Text as="p">

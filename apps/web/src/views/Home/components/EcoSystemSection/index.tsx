@@ -8,13 +8,11 @@ import Image, { StaticImageData } from 'next/image'
 import gameNftBunny from '../../images/game-nft-bunny.png'
 import gamePancakeProtectors from '../../images/game-pancake-protectors.png'
 import gameLottery from '../../images/game-lottery.png'
-import gamePottery from '../../images/game-pottery.png'
 import nftMarketplace from '../../images/nft-marketplace.png'
 import GradientLogo from '../GradientLogoSvg'
 
 import gamePancakeProtectorsPurple from '../../images/game-pancake-protectors-purple.png'
 import gameLotteryPurple from '../../images/game-lottery-purple.png'
-import gamePotteryPurple from '../../images/game-pottery-purple.png'
 import nftMarketplacePurple from '../../images/nft-marketplace-purple.png'
 
 export const CardWrapper = styled.div`
@@ -157,14 +155,6 @@ const useNftGameBlockData = () => {
         image: gameLottery,
         defaultImage: gameLotteryPurple,
         path: '/lottery',
-      },
-      {
-        title: t('Pottery'),
-        description: t('Stake CAKE, acquire pottery tickets, win prizes'),
-        ctaTitle: t('Try Now'),
-        image: gamePottery,
-        defaultImage: gamePotteryPurple,
-        path: '/pottery',
       },
       {
         title: t('NFT Marketplace'),
