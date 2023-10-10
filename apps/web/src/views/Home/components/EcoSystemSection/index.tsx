@@ -1,24 +1,11 @@
-import { Flex, Text, Box, ChevronRightIcon, useMatchBreakpoints, useModal } from '@pancakeswap/uikit'
-import { useUserNotUsCitizenAcknowledgement, IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
+import { Flex, Text, Box, ChevronRightIcon, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useRouter } from 'next/router'
 import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 import { useMemo } from 'react'
-import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
-import { getPerpetualUrl } from 'utils/getPerpetualUrl'
-import { useActiveChainId } from 'hooks/useActiveChainId'
 import Image, { StaticImageData } from 'next/image'
-import tradeBunny from '../../images/trade-bunny.png'
-import earnNftBunny from '../../images/earn-bunny.png'
 import gameNftBunny from '../../images/game-nft-bunny.png'
-import tradeSwap from '../../images/trade-swap.png'
-import tradeLiquidity from '../../images/trade-liquidity.png'
-import tradeBridge from '../../images/trade-bridge.png'
-import tradePerpetual from '../../images/trade-perpetual.png'
-import tradeBuy from '../../images/trade-buy-crypto.png'
-import earnFarm from '../../images/earn-farm.png'
-import earnPools from '../../images/earn-pools.png'
 import gamePrediction from '../../images/game-prediction.png'
 import gamePancakeProtectors from '../../images/game-pancake-protectors.png'
 import gameLottery from '../../images/game-lottery.png'
@@ -26,13 +13,6 @@ import gamePottery from '../../images/game-pottery.png'
 import nftMarketplace from '../../images/nft-marketplace.png'
 import GradientLogo from '../GradientLogoSvg'
 
-import tradeSwapPurple from '../../images/trade-swap-purple.png'
-import tradeLiquidityPurple from '../../images/trade-liquidity-purple.png'
-import tradeBridgePurple from '../../images/trade-bridge-purple.png'
-import tradePerpetualPurple from '../../images/trade-perpetual-purple.png'
-import tradeBuyPurple from '../../images/trade-buy-crypto-purple.png'
-import earnFarmPurple from '../../images/earn-farm-purple.png'
-import earnPoolsPurple from '../../images/earn-pools-purple.png'
 import gamePredictionPurple from '../../images/game-prediction-purple.png'
 import gamePancakeProtectorsPurple from '../../images/game-pancake-protectors-purple.png'
 import gameLotteryPurple from '../../images/game-lottery-purple.png'
@@ -160,99 +140,6 @@ export const Title = styled.div`
   color: ${({ theme }) => theme.colors.secondary};
 `
 
-const useTradeBlockData = () => {
-  const {
-    t,
-    currentLanguage: { code },
-  } = useTranslation()
-  const { isDark } = useTheme()
-  const { chainId } = useActiveChainId()
-  const { push } = useRouter()
-  const perpetualUrl = useMemo(() => getPerpetualUrl({ chainId, languageCode: code, isDark }), [chainId, code, isDark])
-  const [onUSCitizenModalPresent] = useModal(
-    <USCitizenConfirmModal title={t('PancakeSwap Perpetuals')} id={IdType.PERPETUALS} />,
-    false,
-    false,
-    'usCitizenConfirmModal',
-  )
-  const [userNotUsCitizenAcknowledgement] = useUserNotUsCitizenAcknowledgement(IdType.PERPETUALS)
-
-  return useMemo(() => {
-    return [
-      {
-        title: t('Swap'),
-        description: t('Trade crypto instantly across multiple chains'),
-        ctaTitle: t('Trade Now'),
-        image: tradeSwap,
-        defaultImage: tradeSwapPurple,
-        path: '/swap',
-      },
-      {
-        title: t('Liquidity'),
-        description: t('Fund liquidity pools, earn trading fees'),
-        ctaTitle: t('Add Now'),
-        image: tradeLiquidity,
-        defaultImage: tradeLiquidityPurple,
-        path: '/liquidity',
-      },
-      {
-        title: t('Bridge'),
-        description: t('Seamlessly transfer assets across chains'),
-        ctaTitle: t('Bridge Now'),
-        image: tradeBridge,
-        defaultImage: tradeBridgePurple,
-        path: 'https://bridge.pancakeswap.finance/',
-      },
-      {
-        title: t('Perpetual'),
-        description: t('Trade endlessly without expiration dates'),
-        ctaTitle: t('Trade Now'),
-        image: tradePerpetual,
-        defaultImage: tradePerpetualPurple,
-        onClick: () => {
-          if (!userNotUsCitizenAcknowledgement) {
-            onUSCitizenModalPresent()
-          } else {
-            push(perpetualUrl)
-          }
-        },
-      },
-      {
-        title: t('Buy Crypto'),
-        description: t('Buy crypto with your preferred currency and payment method'),
-        ctaTitle: t('Buy Now'),
-        image: tradeBuy,
-        defaultImage: tradeBuyPurple,
-        path: '/buy-crypto',
-      },
-    ]
-  }, [t, push, perpetualUrl, onUSCitizenModalPresent, userNotUsCitizenAcknowledgement])
-}
-
-const useEarnBlockData = () => {
-  const { t } = useTranslation()
-  return useMemo(() => {
-    return [
-      {
-        title: t('Farm'),
-        description: t('Stake LP tokens, harvest CAKE'),
-        ctaTitle: t('Stake Now'),
-        image: earnFarm,
-        defaultImage: earnFarmPurple,
-        path: '/farms',
-      },
-      {
-        title: t('Pools'),
-        description: t('Stake CAKE, earn various rewards'),
-        ctaTitle: t('Stake Now'),
-        image: earnPools,
-        defaultImage: earnPoolsPurple,
-        path: '/pools',
-      },
-    ]
-  }, [t])
-}
-
 const useNftGameBlockData = () => {
   const { t } = useTranslation()
   return useMemo(() => {
@@ -345,8 +232,6 @@ const FeatureBox: React.FC<{
 const EcoSystemSection: React.FC = () => {
   const { t } = useTranslation()
   const { theme } = useTheme()
-  const tradeBlockData = useTradeBlockData()
-  const earnBlockData = useEarnBlockData()
   const nftGameBlockData = useNftGameBlockData()
   const { isMobile, isMd } = useMatchBreakpoints()
 
@@ -382,75 +267,6 @@ const EcoSystemSection: React.FC = () => {
         >
           <Image
             style={{ marginLeft: isMobile ? -32 : -72 }}
-            src={tradeBunny}
-            alt="tradeBunny"
-            width={340}
-            height={340}
-            placeholder="blur"
-          />
-          <Flex flexDirection="column">
-            <Title>{t('Trade')}</Title>
-            <FeatureBoxesWrapper>
-              {tradeBlockData.map((item) => (
-                <FeatureBox
-                  key={`${item.title}Block`}
-                  className="type-a"
-                  title={item.title}
-                  description={item.description}
-                  defaultImage={item.defaultImage}
-                  image={item.image}
-                  width={100 / tradeBlockData.length}
-                  ctaTitle={item.ctaTitle}
-                  path={item.path}
-                  onClick={item.onClick}
-                />
-              ))}
-            </FeatureBoxesWrapper>
-          </Flex>
-        </Flex>
-      </CardWrapper>
-      <CardWrapper>
-        <Flex
-          style={{ gap: 32 }}
-          flexDirection={isMobile || isMd ? 'column' : 'row-reverse'}
-          alignItems={isMobile || isMd ? undefined : 'center'}
-        >
-          <Image
-            style={{ marginRight: isMobile || isMd ? 'auto' : -72, marginLeft: isMobile || isMd ? 0 : 'auto' }}
-            src={earnNftBunny}
-            alt="earnNftBunny"
-            width={296}
-            height={360}
-            placeholder="blur"
-          />
-          <Flex flexDirection="column">
-            <Title>{t('Earn')}</Title>
-            <FeatureBoxesWrapper>
-              {earnBlockData.map((item) => (
-                <FeatureBox
-                  className="type-b"
-                  key={`${item.title}Block`}
-                  title={item.title}
-                  description={item.description}
-                  image={item.image}
-                  defaultImage={item.defaultImage}
-                  width={100 / tradeBlockData.length}
-                  ctaTitle={item.ctaTitle}
-                  path={item.path}
-                />
-              ))}
-            </FeatureBoxesWrapper>
-          </Flex>
-        </Flex>
-      </CardWrapper>
-      <CardWrapper>
-        <Flex
-          style={{ gap: 32 }}
-          flexDirection={isMobile || isMd ? 'column' : 'row'}
-          alignItems={isMobile || isMd ? undefined : 'center'}
-        >
-          <Image
-            style={{ marginLeft: isMobile ? -32 : -72 }}
             src={gameNftBunny}
             alt="gameNftBunny"
             width={344}
@@ -468,7 +284,7 @@ const EcoSystemSection: React.FC = () => {
                   description={item.description}
                   defaultImage={item.defaultImage}
                   image={item.image}
-                  width={100 / tradeBlockData.length}
+                  width={100}
                   ctaTitle={item.ctaTitle}
                   path={item.path}
                 />
