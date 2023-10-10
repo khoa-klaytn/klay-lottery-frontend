@@ -15,7 +15,6 @@ import {
 import {
   FIXED_STAKING_SUPPORTED_CHAINS,
   LIQUID_STAKING_SUPPORTED_CHAINS,
-  SUPPORT_BUY_CRYPTO,
   SUPPORT_FARMS,
   SUPPORT_ONLY_KLAYTN,
 } from 'config/constants/supportChains'
@@ -53,11 +52,6 @@ const config: (
       href: '/swap',
       showItemsOnMobile: false,
       items: [
-        {
-          label: t('Buy Crypto'),
-          href: '/buy-crypto',
-          supportChainIds: SUPPORT_BUY_CRYPTO,
-        },
         {
           label: t('Trading Reward'),
           href: '/trading-reward',
