@@ -1,7 +1,7 @@
 import noop from "lodash/noop";
 import { LinkStatus } from "./types";
 import { MenuItemsType } from "../../components/MenuItems/types";
-import { EarnIcon, EarnFillIcon, TrophyIcon, TrophyFillIcon, MoreIcon, DropdownMenuItems } from "../../components";
+import { TrophyIcon, TrophyFillIcon, MoreIcon, DropdownMenuItems } from "../../components";
 import { DropdownMenuItemType } from "../../components/DropdownMenu/types";
 
 export const status: { NEW: LinkStatus; SOON: LinkStatus; LIVE: LinkStatus } = {
@@ -20,26 +20,6 @@ export const status: { NEW: LinkStatus; SOON: LinkStatus; LIVE: LinkStatus } = {
 };
 
 export const links: MenuItemsType[] = [
-  {
-    label: "Earn",
-    href: "/earn",
-    icon: EarnIcon,
-    fillIcon: EarnFillIcon,
-    items: [
-      {
-        label: "Earn",
-        href: "/earn",
-      },
-      {
-        label: "Yield Farms",
-        href: "/farms",
-      },
-      {
-        label: "Syrup pools",
-        href: "/pools",
-      },
-    ],
-  },
   {
     label: "Win",
     href: "/",

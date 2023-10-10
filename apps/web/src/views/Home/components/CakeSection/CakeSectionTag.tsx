@@ -1,6 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
 import {
-  EarnIcon,
   GovernanceIcon,
   InsertChartOutlinedIcon,
   NftIcon,
@@ -36,7 +35,6 @@ export const useEcosystemTagData = () => {
   return useMemo(() => {
     return [
       { icon: <PoolIcon />, text: t('Staking') },
-      { icon: <EarnIcon />, text: t('Farming') },
       { icon: <NftIcon />, text: t('NFT') },
       {
         icon: <InsertChartOutlinedIcon />,

@@ -1,16 +1,8 @@
 import ItemsMock from "../DropdownMenu/mock";
 import { MenuItemsType } from "../MenuItems/types";
-import { EarnFillIcon, EarnIcon, NftFillIcon, NftIcon, MoreIcon, TrophyIcon, TrophyFillIcon } from "../Svg";
+import { NftFillIcon, NftIcon, MoreIcon, TrophyIcon, TrophyFillIcon } from "../Svg";
 
 const MenuItemsMock: MenuItemsType[] = [
-  {
-    label: "Earn",
-    href: "/earn",
-    icon: EarnIcon,
-    fillIcon: EarnFillIcon,
-    items: ItemsMock,
-    showItemsOnMobile: true,
-  },
   {
     label: "Gagnez des jetons",
     href: "/win",

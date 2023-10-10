@@ -3,13 +3,11 @@ import {
   BirthdayIcon,
   DropdownMenuItemType,
   DropdownMenuItems,
-  EarnFillIcon,
-  EarnIcon,
   MenuItemsType,
   MoreIcon,
   PancakeProtectorIcon,
 } from '@pancakeswap/uikit'
-import { SUPPORT_FARMS, SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
+import { SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
@@ -37,15 +35,6 @@ const config: (
   chainId?: number,
 ) => ConfigMenuItemsType[] = (t, isDark, languageCode, chainId) =>
   [
-    {
-      label: t('Earn'),
-      href: '/farms',
-      icon: EarnIcon,
-      fillIcon: EarnFillIcon,
-      image: '/images/decorations/pe2.png',
-      supportChainIds: SUPPORT_FARMS,
-      items: [].map((item) => addMenuItemSupported(item, chainId)),
-    },
     {
       label: t('Game'),
       icon: PancakeProtectorIcon,
