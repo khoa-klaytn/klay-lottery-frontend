@@ -7,7 +7,6 @@ import {
   Flex,
   HelpIcon,
   Modal,
-  Skeleton,
   Text,
   Ticket,
   useToast,
@@ -18,12 +17,10 @@ import BigNumber from 'bignumber.js'
 import ApproveConfirmButtons, { ButtonArrangement } from 'components/ApproveConfirmButtons'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { ToastDescriptionWithTx } from 'components/Toast'
-import { FetchStatus } from 'config/constants/types'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import useTheme from 'hooks/useTheme'
-import useTokenBalance from 'hooks/useTokenBalance'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAppDispatch } from 'state'
 import { useCakePrice } from 'hooks/useCakePrice'
@@ -85,18 +82,14 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const [buyingStage, setBuyingStage] = useState<BuyingStage>(BuyingStage.BUY)
   const [maxPossibleTicketPurchase, setMaxPossibleTicketPurchase] = useState(BIG_ZERO)
   const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
-  const [userNotEnoughCake, setUserNotEnoughCake] = useState(false)
+  const [insufficientBalance, setInsufficientBalance] = useState(false)
   const lotteryContract = useKlayLotteryContract()
   const { toastSuccess } = useToast()
-  const { balance: userCake, fetchStatus } = useTokenBalance(bscTokens.cake.address)
-  // balance from useTokenBalance causes rerenders in effects as a new BigNumber is instantiated on each render, hence memoising it using the stringified value below.
-  const stringifiedUserCake = userCake.toJSON()
-  const memoisedUserCake = useMemo(() => new BigNumber(stringifiedUserCake), [stringifiedUserCake])
-
+  const [balance, setBalance] = useState(0n)
+  const bnBalance = useMemo(() => new BigNumber(balance.toString()), [balance])
   const cakePriceBusd = useCakePrice()
   const dispatch = useAppDispatch()
-  const hasFetchedBalance = fetchStatus === FetchStatus.Fetched
-  const userCakeDisplayBalance = getFullDisplayBalance(userCake, 18, 3)
+  const displayBalance = getFullDisplayBalance(bnBalance, 18, 3)
 
   const TooltipComponent = () => (
     <>
@@ -148,23 +141,33 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const validateInput = useCallback(
     (inputNumber: BigNumber) => {
       const limitedNumberTickets = limitNumberByMaxTicketsPerBuy(inputNumber)
-      const cakeCostAfterDiscount = getTicketCostAfterDiscount(limitedNumberTickets)
+      const costAfterDiscount = getTicketCostAfterDiscount(limitedNumberTickets)
 
-      if (cakeCostAfterDiscount.gt(userCake)) {
-        setUserNotEnoughCake(true)
+      if (costAfterDiscount.gt(bnBalance)) {
+        setInsufficientBalance(true)
       } else if (limitedNumberTickets.eq(maxNumberTicketsPerBuyOrClaim)) {
         setMaxTicketPurchaseExceeded(true)
       } else {
-        setUserNotEnoughCake(false)
+        setInsufficientBalance(false)
         setMaxTicketPurchaseExceeded(false)
       }
     },
-    [limitNumberByMaxTicketsPerBuy, getTicketCostAfterDiscount, maxNumberTicketsPerBuyOrClaim, userCake],
+    [bnBalance, limitNumberByMaxTicketsPerBuy, getTicketCostAfterDiscount, maxNumberTicketsPerBuyOrClaim],
   )
 
   useEffect(() => {
+    const getBalance = async () => {
+      const newBalance = await publicClient.getBalance({ address: account })
+      setBalance(newBalance)
+    }
+    if (account) {
+      getBalance()
+    }
+  }, [account, publicClient])
+
+  useEffect(() => {
     const getMaxPossiblePurchase = () => {
-      const maxBalancePurchase = memoisedUserCake.div(priceTicket)
+      const maxBalancePurchase = bnBalance.div(priceTicket)
       const limitedMaxPurchase = limitNumberByMaxTicketsPerBuy(maxBalancePurchase)
       let maxPurchase = limitedMaxPurchase
 
@@ -181,23 +184,22 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         maxPurchase = limitedMaxPurchase.plus(secondTicketDiscountBuy)
       }
 
-      if (hasFetchedBalance && maxPurchase.lt(1)) {
-        setUserNotEnoughCake(true)
+      if (maxPurchase.lt(1)) {
+        setInsufficientBalance(true)
       } else {
-        setUserNotEnoughCake(false)
+        setInsufficientBalance(false)
       }
 
       setMaxPossibleTicketPurchase(maxPurchase)
     }
     getMaxPossiblePurchase()
   }, [
+    bnBalance,
     maxNumberTicketsPerBuyOrClaim,
     priceTicket,
-    memoisedUserCake,
     limitNumberByMaxTicketsPerBuy,
     getTicketCostAfterDiscount,
     getMaxTicketBuyWithDiscount,
-    hasFetchedBalance,
   ])
 
   useEffect(() => {
@@ -233,7 +235,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
 
   const handleNumberButtonClick = (number: number) => {
     setTicketsToBuy(number.toFixed())
-    setUserNotEnoughCake(false)
+    setInsufficientBalance(false)
     setMaxTicketPurchaseExceeded(false)
   }
 
@@ -264,7 +266,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   })
 
   const getErrorMessage = () => {
-    if (userNotEnoughCake) return t('Insufficient balance')
+    if (insufficientBalance) return t('Insufficient balance')
     return t('The maximum number of tickets you can buy in one transaction is %maxTickets%', {
       maxTickets: maxNumberTicketsPerBuyOrClaim.toString(),
     })
@@ -281,11 +283,11 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const disableBuying = useMemo(
     () =>
       isConfirming ||
-      userNotEnoughCake ||
+      insufficientBalance ||
       !ticketsToBuy ||
       new BigNumber(ticketsToBuy).lte(0) ||
       getTicketsForPurchase().length !== parseInt(ticketsToBuy, 10),
-    [isConfirming, userNotEnoughCake, ticketsToBuy, getTicketsForPurchase],
+    [isConfirming, insufficientBalance, ticketsToBuy, getTicketsForPurchase],
   )
 
   const isApproveDisabled = isApproved || disableBuying
@@ -318,7 +320,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         </Flex>
       </Flex>
       <BalanceInput
-        isWarning={account && (userNotEnoughCake || maxTicketPurchaseExceeded)}
+        isWarning={account && (insufficientBalance || maxTicketPurchaseExceeded)}
         placeholder="0"
         value={ticketsToBuy}
         onUserInput={handleInputChange}
@@ -329,7 +331,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
       />
       <Flex alignItems="center" justifyContent="flex-end" mt="4px" mb="12px">
         <Flex justifyContent="flex-end" flexDirection="column">
-          {account && (userNotEnoughCake || maxTicketPurchaseExceeded) && (
+          {account && (insufficientBalance || maxTicketPurchaseExceeded) && (
             <Text fontSize="12px" color="failure">
               {getErrorMessage()}
             </Text>
@@ -339,46 +341,38 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
               <Text fontSize="12px" color="textSubtle" mr="4px">
                 {symbol} {t('Balance')}:
               </Text>
-              {hasFetchedBalance ? (
-                <Text fontSize="12px" color="textSubtle">
-                  {userCakeDisplayBalance}
-                </Text>
-              ) : (
-                <Skeleton width={50} height={12} />
-              )}
+              <Text fontSize="12px" color="textSubtle">
+                {displayBalance}
+              </Text>
             </Flex>
           )}
         </Flex>
       </Flex>
 
-      {account && !hasFetchedBalance ? (
-        <Skeleton width="100%" height={20} mt="8px" mb="24px" />
-      ) : (
-        <ShortcutButtonsWrapper isVisible={account && hasFetchedBalance && oneHundredPercentOfBalance >= 1}>
-          {tenPercentOfBalance >= 1 && (
-            <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(tenPercentOfBalance)}>
-              {hasFetchedBalance ? tenPercentOfBalance : ``}
-            </NumTicketsToBuyButton>
-          )}
-          {twentyFivePercentOfBalance >= 1 && (
-            <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(twentyFivePercentOfBalance)}>
-              {hasFetchedBalance ? twentyFivePercentOfBalance : ``}
-            </NumTicketsToBuyButton>
-          )}
-          {fiftyPercentOfBalance >= 1 && (
-            <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(fiftyPercentOfBalance)}>
-              {hasFetchedBalance ? fiftyPercentOfBalance : ``}
-            </NumTicketsToBuyButton>
-          )}
-          {oneHundredPercentOfBalance >= 1 && (
-            <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(oneHundredPercentOfBalance)}>
-              <Text small color="currentColor" textTransform="uppercase">
-                {t('Max')}
-              </Text>
-            </NumTicketsToBuyButton>
-          )}
-        </ShortcutButtonsWrapper>
-      )}
+      <ShortcutButtonsWrapper isVisible={account && oneHundredPercentOfBalance >= 1}>
+        {tenPercentOfBalance >= 1 && (
+          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(tenPercentOfBalance)}>
+            {tenPercentOfBalance}
+          </NumTicketsToBuyButton>
+        )}
+        {twentyFivePercentOfBalance >= 1 && (
+          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(twentyFivePercentOfBalance)}>
+            {twentyFivePercentOfBalance}
+          </NumTicketsToBuyButton>
+        )}
+        {fiftyPercentOfBalance >= 1 && (
+          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(fiftyPercentOfBalance)}>
+            {fiftyPercentOfBalance}
+          </NumTicketsToBuyButton>
+        )}
+        {oneHundredPercentOfBalance >= 1 && (
+          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(oneHundredPercentOfBalance)}>
+            <Text small color="currentColor" textTransform="uppercase">
+              {t('Max')}
+            </Text>
+          </NumTicketsToBuyButton>
+        )}
+      </ShortcutButtonsWrapper>
       <Flex flexDirection="column">
         <Flex mb="8px" justifyContent="space-between">
           <Text color="textSubtle" fontSize="14px">
