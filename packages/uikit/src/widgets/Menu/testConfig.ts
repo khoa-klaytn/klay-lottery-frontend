@@ -31,11 +31,6 @@ export const links: MenuItemsType[] = [
         href: "/",
       },
       {
-        label: "Predictions",
-        href: "/",
-        status: status.LIVE,
-      },
-      {
         label: "Lottery",
         href: "/",
       },

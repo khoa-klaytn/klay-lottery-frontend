@@ -36,9 +36,6 @@ export const getPancakeBunniesAddress = () => {
 export const getBunnyFactoryAddress = () => {
   return getAddressFromMap(addresses.bunnyFactory)
 }
-export const getPredictionsV1Address = () => {
-  return getAddressFromMap(addresses.predictionsV1)
-}
 export const getPointCenterIfoAddress = () => {
   return getAddressFromMap(addresses.pointCenterIfo)
 }

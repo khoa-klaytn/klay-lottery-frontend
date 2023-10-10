@@ -174,13 +174,6 @@ const campaigns: Campaign[] = [
     badge: 'syrup-soaker.svg',
   },
   {
-    id: '514010001',
-    type: 'participation',
-    title: 'Clairvoyant',
-    description: 'Played a round of Prediction before round 12,120',
-    badge: 'clairvoyant.svg',
-  },
-  {
     id: '515010001',
     type: 'participation',
     title: 'Lottie',

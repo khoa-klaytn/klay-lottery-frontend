@@ -21,7 +21,6 @@ export const config = {
     '/add',
     '/ifo',
     '/remove',
-    '/prediction',
     '/find',
     '/limit-orders',
     '/lottery',

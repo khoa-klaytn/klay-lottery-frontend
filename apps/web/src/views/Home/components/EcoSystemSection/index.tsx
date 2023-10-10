@@ -6,14 +6,12 @@ import { styled } from 'styled-components'
 import { useMemo } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import gameNftBunny from '../../images/game-nft-bunny.png'
-import gamePrediction from '../../images/game-prediction.png'
 import gamePancakeProtectors from '../../images/game-pancake-protectors.png'
 import gameLottery from '../../images/game-lottery.png'
 import gamePottery from '../../images/game-pottery.png'
 import nftMarketplace from '../../images/nft-marketplace.png'
 import GradientLogo from '../GradientLogoSvg'
 
-import gamePredictionPurple from '../../images/game-prediction-purple.png'
 import gamePancakeProtectorsPurple from '../../images/game-pancake-protectors-purple.png'
 import gameLotteryPurple from '../../images/game-lottery-purple.png'
 import gamePotteryPurple from '../../images/game-pottery-purple.png'
@@ -144,14 +142,6 @@ const useNftGameBlockData = () => {
   const { t } = useTranslation()
   return useMemo(() => {
     return [
-      {
-        title: t('Prediction'),
-        description: t('Forecast token prices within minutes'),
-        ctaTitle: t('Try Now'),
-        image: gamePrediction,
-        defaultImage: gamePredictionPurple,
-        path: '/prediction',
-      },
       {
         title: t('Pancake Protectors'),
         description: t('Immersive PvP & PvE tower-defense GameFi'),

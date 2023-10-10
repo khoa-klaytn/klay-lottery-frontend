@@ -21,7 +21,6 @@ import {
   getPancakeSquadAddress,
   getPointCenterIfoAddress,
   getPotteryDrawAddress,
-  getPredictionsV1Address,
   getStableSwapNativeHelperAddress,
   getTradingCompetitionAddressEaster,
   getTradingCompetitionAddressFanToken,
@@ -38,13 +37,11 @@ import {
 } from 'utils/addressHelpers'
 
 // ABI
-import { cakePredictionsABI } from 'config/abi/cakePredictions'
 import { crossFarmingProxyABI } from 'config/abi/crossFarmingProxy'
 import { crossFarmingSenderABI } from 'config/abi/crossFarmingSender'
 import { nftSaleABI } from 'config/abi/nftSale'
 import { nonBscVaultABI } from 'config/abi/nonBscVault'
 import { pointCenterIfoABI } from 'config/abi/pointCenterIfo'
-import { predictionsV1ABI } from 'config/abi/predictionsV1'
 import { stableSwapNativeHelperABI } from 'config/abi/stableSwapNativeHelper'
 
 import {
@@ -73,7 +70,6 @@ import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { pancakeSquadABI } from 'config/abi/pancakeSquad'
 import { potteryDrawABI } from 'config/abi/potteryDrawAbi'
 import { potteryVaultABI } from 'config/abi/potteryVaultAbi'
-import { predictionsV2ABI } from 'config/abi/predictionsV2'
 import { tradingCompetitionEasterABI } from 'config/abi/tradingCompetitionEaster'
 import { tradingCompetitionFanTokenABI } from 'config/abi/tradingCompetitionFanToken'
 import { tradingCompetitionMoDABI } from 'config/abi/tradingCompetitionMoD'
@@ -193,18 +189,6 @@ export const getCakeFlexibleSideVaultV2Contract = (signer?: WalletClient, chainI
     signer,
     chainId,
   })
-}
-
-export const getPredictionsV2Contract = (address: Address, signer?: WalletClient) => {
-  return getContract({ abi: predictionsV2ABI, address, signer })
-}
-
-export const getPredictionsV1Contract = (signer?: WalletClient) => {
-  return getContract({ abi: predictionsV1ABI, address: getPredictionsV1Address(), signer })
-}
-
-export const getCakePredictionsContract = (address: Address, signer?: WalletClient) => {
-  return getContract({ abi: cakePredictionsABI, address, signer })
 }
 
 export const getChainlinkOracleContract = (address: Address, signer?: WalletClient, chainId?: number) => {

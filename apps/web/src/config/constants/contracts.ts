@@ -89,14 +89,6 @@ export default {
     [ChainId.BSC]: '0x615e896A8C2CA8470A2e9dc2E9552998f8658Ea0',
     [ChainId.BSC_TESTNET]: '0x1088Fb24053F03802F673b84d16AE1A7023E400b',
   },
-  predictionsBNB: {
-    [ChainId.BSC]: '0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  predictionsCAKE: {
-    [ChainId.BSC]: '0x0E3A8078EDD2021dadcdE733C6b4a86E51EE8f07',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
   chainlinkOracleBNB: {
     [ChainId.BSC]: '0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE',
     [ChainId.BSC_TESTNET]: '0x',
@@ -105,16 +97,8 @@ export default {
     [ChainId.BSC]: '0xB6064eD41d4f67e353768aA239cA86f4F73665a1',
     [ChainId.BSC_TESTNET]: '0x',
   },
-  predictionsV1: {
-    [ChainId.BSC]: '0x516ffd7D1e0Ca40b1879935B2De87cb20Fc1124b',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
   bunnySpecialCakeVault: {
     [ChainId.BSC]: '0x5B4a770Abe7Eafb2601CA4dF9d73EA99363E60a4',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  bunnySpecialPrediction: {
-    [ChainId.BSC]: '0x342c99e9aC24157657095eC69CB04b73257e7A9C',
     [ChainId.BSC_TESTNET]: '0x',
   },
   bunnySpecialLottery: {

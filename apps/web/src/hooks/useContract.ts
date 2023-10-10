@@ -7,7 +7,7 @@ import { useActiveChainId } from 'hooks/useActiveChainId'
 
 import addresses from 'config/constants/contracts'
 import { useMemo } from 'react'
-import { getMulticallAddress, getPredictionsV1Address, getZapAddress } from 'utils/addressHelpers'
+import { getMulticallAddress, getZapAddress } from 'utils/addressHelpers'
 import {
   getBCakeFarmBoosterContract,
   getBCakeFarmBoosterProxyFactoryContract,
@@ -15,7 +15,6 @@ import {
   getBCakeProxyContract,
   getBunnyFactoryContract,
   getCakeFlexibleSideVaultV2Contract,
-  getCakePredictionsContract,
   getCakeVaultV2Contract,
   getChainlinkOracleContract,
   getContract,
@@ -31,8 +30,6 @@ import {
   getPointCenterIfoContract,
   getPotteryDrawContract,
   getPotteryVaultContract,
-  getPredictionsV1Contract,
-  getPredictionsV2Contract,
   getProfileContract,
   getSidContract,
   getStableSwapNativeHelperContract,
@@ -182,18 +179,6 @@ export const useCakeVaultContract = () => {
 
 export const useIfoCreditAddressContract = () => {
   return useMemo(() => getIfoCreditAddressContract(), [])
-}
-
-export const usePredictionsContract = (address: Address, tokenSymbol: string) => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => {
-    if (address === getPredictionsV1Address()) {
-      return getPredictionsV1Contract(signer ?? undefined)
-    }
-    const getPredContract = tokenSymbol === 'CAKE' ? getCakePredictionsContract : getPredictionsV2Contract
-
-    return getPredContract(address, signer ?? undefined)
-  }, [address, tokenSymbol, signer])
 }
 
 export const useChainlinkOracleContract = (address) => {

@@ -41,11 +41,6 @@ const config: (
       href: 'https://protectors.pancakeswap.finance',
       items: [
         {
-          label: t('Prediction (BETA)'),
-          href: '/prediction',
-          image: '/images/decorations/prediction.png',
-        },
-        {
           label: t('Lottery'),
           href: '/lottery',
           image: '/images/decorations/lottery.png',

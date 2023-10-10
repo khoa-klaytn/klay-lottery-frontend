@@ -31,18 +31,9 @@ export const updateUserFarmStakedOnly = createAction<{ userFarmStakedOnly: FarmS
 export const updateUserPoolStakedOnly = createAction<{ userPoolStakedOnly: boolean }>('user/updateUserPoolStakedOnly')
 export const updateUserPoolsViewMode = createAction<{ userPoolsViewMode: ViewMode }>('user/updateUserPoolsViewMode')
 export const updateUserFarmsViewMode = createAction<{ userFarmsViewMode: ViewMode }>('user/updateUserFarmsViewMode')
-export const updateUserPredictionAcceptedRisk = createAction<{ userAcceptedRisk: boolean }>(
-  'user/updateUserPredictionAcceptedRisk',
-)
+
 export const updateUserLimitOrderAcceptedWarning = createAction<{ userAcceptedRisk: boolean }>(
   'user/userLimitOrderAcceptedWarning',
-)
-
-export const updateUserPredictionChartDisclaimerShow = createAction<{ userShowDisclaimer: boolean }>(
-  'user/updateUserPredictionChartDisclaimerShow',
-)
-export const updateUserPredictionChainlinkChartDisclaimerShow = createAction<{ userShowDisclaimer: boolean }>(
-  'user/updateUserPredictionChainlinkChartDisclaimerShow',
 )
 
 export const updateUserUsernameVisibility = createAction<{ userUsernameVisibility: boolean }>(

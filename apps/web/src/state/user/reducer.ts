@@ -19,9 +19,6 @@ import {
   updateUserPoolStakedOnly,
   updateUserPoolsViewMode,
   ViewMode,
-  updateUserPredictionAcceptedRisk,
-  updateUserPredictionChartDisclaimerShow,
-  updateUserPredictionChainlinkChartDisclaimerShow,
   updateUserUsernameVisibility,
   setIsExchangeChartDisplayed,
   setSubgraphHealthIndicatorDisplayed,
@@ -56,10 +53,7 @@ export interface UserState {
   userPoolStakedOnly: boolean
   userPoolsViewMode: ViewMode
   userFarmsViewMode: ViewMode
-  userPredictionAcceptedRisk: boolean
   userLimitOrderAcceptedWarning: boolean
-  userPredictionChartDisclaimerShow: boolean
-  userPredictionChainlinkChartDisclaimerShow: boolean
   userUsernameVisibility: boolean
   gasPrice: string
   watchlistTokens: string[]
@@ -81,10 +75,7 @@ export const initialState: UserState = {
   userPoolStakedOnly: false,
   userPoolsViewMode: ViewMode.TABLE,
   userFarmsViewMode: ViewMode.TABLE,
-  userPredictionAcceptedRisk: false,
   userLimitOrderAcceptedWarning: false,
-  userPredictionChartDisclaimerShow: true,
-  userPredictionChainlinkChartDisclaimerShow: true,
   userUsernameVisibility: false,
   gasPrice: GAS_PRICE_GWEI.rpcDefault,
   watchlistTokens: [],
@@ -156,17 +147,8 @@ export default createReducer(initialState, (builder) =>
     .addCase(updateUserFarmsViewMode, (state, { payload: { userFarmsViewMode } }) => {
       state.userFarmsViewMode = userFarmsViewMode
     })
-    .addCase(updateUserPredictionAcceptedRisk, (state, { payload: { userAcceptedRisk } }) => {
-      state.userPredictionAcceptedRisk = userAcceptedRisk
-    })
     .addCase(updateUserLimitOrderAcceptedWarning, (state, { payload: { userAcceptedRisk } }) => {
       state.userLimitOrderAcceptedWarning = userAcceptedRisk
-    })
-    .addCase(updateUserPredictionChartDisclaimerShow, (state, { payload: { userShowDisclaimer } }) => {
-      state.userPredictionChartDisclaimerShow = userShowDisclaimer
-    })
-    .addCase(updateUserPredictionChainlinkChartDisclaimerShow, (state, { payload: { userShowDisclaimer } }) => {
-      state.userPredictionChainlinkChartDisclaimerShow = userShowDisclaimer
     })
     .addCase(updateUserUsernameVisibility, (state, { payload: { userUsernameVisibility } }) => {
       state.userUsernameVisibility = userUsernameVisibility

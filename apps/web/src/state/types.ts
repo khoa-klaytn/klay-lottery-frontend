@@ -1,17 +1,9 @@
 import { parseEther } from 'viem'
 import { SerializedFarmsState } from '@pancakeswap/farms'
-import { Token } from '@pancakeswap/sdk'
 import { SerializedPoolWithInfo } from '@pancakeswap/pools'
 import { Address } from 'wagmi'
 import BigNumber from 'bignumber.js'
-import {
-  CampaignType,
-  TFetchStatus,
-  LotteryStatus,
-  LotteryTicket,
-  Team,
-  TranslatableText,
-} from 'config/constants/types'
+import { CampaignType, LotteryStatus, LotteryTicket, Team, TranslatableText } from 'config/constants/types'
 import { NftToken } from './nftMarket/types'
 
 export enum GAS_PRICE {
@@ -174,203 +166,6 @@ export interface Achievement {
   points: number
 }
 
-// Predictions
-
-export enum BetPosition {
-  BULL = 'Bull',
-  BEAR = 'Bear',
-  HOUSE = 'House',
-}
-
-export enum PredictionStatus {
-  INITIAL = 'initial',
-  LIVE = 'live',
-  PAUSED = 'paused',
-  ERROR = 'error',
-}
-
-export enum PredictionSupportedSymbol {
-  BNB = 'BNB',
-  CAKE = 'CAKE',
-}
-
-export enum PredictionsChartView {
-  TradingView = 'TradingView',
-  Chainlink = 'Chainlink Oracle',
-}
-
-export interface Round {
-  id: string
-  epoch: number
-  position: BetPosition
-  failed: boolean
-  startAt: number
-  startBlock: number
-  startHash: string
-  lockAt: number
-  lockBlock: number
-  lockHash: string
-  lockPrice: number
-  lockRoundId: string
-  closeAt: number
-  closeBlock: number
-  closeHash: string
-  closePrice: number
-  closeRoundId: string
-  totalBets: number
-  totalAmount: number
-  bullBets: number
-  bullAmount: number
-  bearBets: number
-  bearAmount: number
-  bets?: Bet[]
-}
-
-export interface Market {
-  paused: boolean
-  epoch: number
-}
-
-export interface Bet {
-  id?: string
-  hash?: string
-  amount: number
-  position: BetPosition
-  claimed: boolean
-  claimedAt: number
-  claimedBlock: number
-  claimedHash: string
-  claimedBNB: number
-  claimedNetBNB: number
-  createdAt: number
-  updatedAt: number
-  user?: PredictionUser
-  round?: Round
-}
-
-export interface PredictionUser {
-  id: string
-  createdAt: number
-  updatedAt: number
-  block: number
-  totalBets: number
-  totalBetsBull: number
-  totalBetsBear: number
-  totalBNB: number
-  totalBNBBull: number
-  totalBNBBear: number
-  totalBetsClaimed: number
-  totalBNBClaimed: number
-  winRate: number
-  averageBNB: number
-  netBNB: number
-  bets?: Bet[]
-}
-
-export enum HistoryFilter {
-  ALL = 'all',
-  COLLECTED = 'collected',
-  UNCOLLECTED = 'uncollected',
-}
-
-export interface LedgerData {
-  [key: string]: {
-    [key: string]: ReduxNodeLedger
-  }
-}
-
-export interface RoundData {
-  [key: string]: ReduxNodeRound
-}
-
-export interface ReduxNodeLedger {
-  position: BetPosition
-  amount: string
-  claimed: boolean
-}
-
-export interface NodeLedger {
-  position: BetPosition
-  amount: bigint
-  claimed: boolean
-}
-
-export interface ReduxNodeRound {
-  epoch: number
-  startTimestamp: number | null
-  lockTimestamp: number | null
-  closeTimestamp: number | null
-  lockPrice: string | null
-  closePrice: string | null
-  totalAmount: string
-  bullAmount: string
-  bearAmount: string
-  rewardBaseCalAmount: string
-  rewardAmount: string
-  oracleCalled: boolean
-  lockOracleId: string | null
-  closeOracleId: string | null
-}
-
-export interface NodeRound {
-  epoch: number
-  startTimestamp: number | null
-  lockTimestamp: number | null
-  closeTimestamp: number | null
-  lockPrice: bigint | null
-  closePrice: bigint | null
-  totalAmount: bigint | null
-  bullAmount: bigint | null
-  bearAmount: bigint | null
-  rewardBaseCalAmount: bigint | null
-  rewardAmount: bigint | null
-  oracleCalled: boolean
-  closeOracleId: string | null
-  lockOracleId: string | null
-}
-
-export type LeaderboardFilterTimePeriod = '1d' | '7d' | '1m' | 'all'
-
-export interface LeaderboardFilter {
-  address?: null | string
-  orderBy?: string
-  timePeriod?: LeaderboardFilterTimePeriod
-}
-
-export interface PredictionsState {
-  status: PredictionStatus
-  isLoading: boolean
-  isHistoryPaneOpen: boolean
-  chartView: PredictionsChartView
-  isChartPaneOpen: boolean
-  isFetchingHistory: boolean
-  historyFilter: HistoryFilter
-  currentEpoch: number
-  intervalSeconds: number
-  minBetAmount: string
-  bufferSeconds: number
-  history: Bet[]
-  totalHistory: number
-  currentHistoryPage: number
-  hasHistoryLoaded: boolean
-  rounds?: RoundData
-  ledgers?: LedgerData
-  claimableStatuses: {
-    [key: string]: boolean
-  }
-  leaderboard: {
-    selectedAddress: null | string
-    loadingState: TFetchStatus
-    filters: LeaderboardFilter
-    skip: number
-    hasMoreResults: boolean
-    addressResults: {
-      [key: string]: null | PredictionUser
-    }
-    results: PredictionUser[]
-  }
-}
-
 // Voting
 
 /* eslint-disable camelcase */
@@ -503,14 +298,6 @@ export interface UserRound {
   tickets?: LotteryTicket[]
 }
 
-export interface PredictionConfig {
-  address: Address
-  api: string
-  chainlinkOracleAddress: Address
-  displayedDecimals: number
-  token: Token
-}
-
 // Pottery
 export interface PotteryState {
   lastVaultAddress: Address
@@ -601,7 +388,6 @@ export interface State {
   farms: SerializedFarmsState
   farmsV1: SerializedFarmsState
   pools: PoolsState
-  predictions: PredictionsState
   lottery: LotteryState
   pottery: PotteryState
 }

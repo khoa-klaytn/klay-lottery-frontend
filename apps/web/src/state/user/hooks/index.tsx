@@ -29,9 +29,6 @@ import {
   updateUserPoolsViewMode,
   ViewMode,
   updateUserFarmsViewMode,
-  updateUserPredictionChartDisclaimerShow,
-  updateUserPredictionChainlinkChartDisclaimerShow,
-  updateUserPredictionAcceptedRisk,
   updateUserUsernameVisibility,
   setIsExchangeChartDisplayed,
   setSubgraphHealthIndicatorDisplayed,
@@ -141,22 +138,6 @@ export function useUserFarmsViewMode(): [ViewMode, (viewMode: ViewMode) => void]
   return [userFarmsViewMode, setUserFarmsViewMode]
 }
 
-export function useUserPredictionAcceptedRisk(): [boolean, (acceptedRisk: boolean) => void] {
-  const dispatch = useAppDispatch()
-  const userPredictionAcceptedRisk = useSelector<AppState, AppState['user']['userPredictionAcceptedRisk']>((state) => {
-    return state.user.userPredictionAcceptedRisk
-  })
-
-  const setUserPredictionAcceptedRisk = useCallback(
-    (acceptedRisk: boolean) => {
-      dispatch(updateUserPredictionAcceptedRisk({ userAcceptedRisk: acceptedRisk }))
-    },
-    [dispatch],
-  )
-
-  return [userPredictionAcceptedRisk, setUserPredictionAcceptedRisk]
-}
-
 export function useUserLimitOrderAcceptedWarning(): [boolean, (acceptedRisk: boolean) => void] {
   const dispatch = useAppDispatch()
   const userLimitOrderAcceptedWarning = useSelector<AppState, AppState['user']['userLimitOrderAcceptedWarning']>(
@@ -173,44 +154,6 @@ export function useUserLimitOrderAcceptedWarning(): [boolean, (acceptedRisk: boo
   )
 
   return [userLimitOrderAcceptedWarning, setUserLimitOrderAcceptedWarning]
-}
-
-export function useUserPredictionChartDisclaimerShow(): [boolean, (showDisclaimer: boolean) => void] {
-  const dispatch = useAppDispatch()
-  const userPredictionChartDisclaimerShow = useSelector<
-    AppState,
-    AppState['user']['userPredictionChartDisclaimerShow']
-  >((state) => {
-    return state.user.userPredictionChartDisclaimerShow
-  })
-
-  const setPredictionUserChartDisclaimerShow = useCallback(
-    (showDisclaimer: boolean) => {
-      dispatch(updateUserPredictionChartDisclaimerShow({ userShowDisclaimer: showDisclaimer }))
-    },
-    [dispatch],
-  )
-
-  return [userPredictionChartDisclaimerShow, setPredictionUserChartDisclaimerShow]
-}
-
-export function useUserPredictionChainlinkChartDisclaimerShow(): [boolean, (showDisclaimer: boolean) => void] {
-  const dispatch = useAppDispatch()
-  const userPredictionChainlinkChartDisclaimerShow = useSelector<
-    AppState,
-    AppState['user']['userPredictionChainlinkChartDisclaimerShow']
-  >((state) => {
-    return state.user.userPredictionChainlinkChartDisclaimerShow
-  })
-
-  const setPredictionUserChainlinkChartDisclaimerShow = useCallback(
-    (showDisclaimer: boolean) => {
-      dispatch(updateUserPredictionChainlinkChartDisclaimerShow({ userShowDisclaimer: showDisclaimer }))
-    },
-    [dispatch],
-  )
-
-  return [userPredictionChainlinkChartDisclaimerShow, setPredictionUserChainlinkChartDisclaimerShow]
 }
 
 export function useUserUsernameVisibility(): [boolean, (usernameVisibility: boolean) => void] {

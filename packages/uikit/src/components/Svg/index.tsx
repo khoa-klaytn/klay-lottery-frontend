@@ -100,7 +100,6 @@ export { default as PencilIcon } from "./Icons/Pencil";
 export { default as PlayCircleOutlineIcon } from "./Icons/PlayCircleOutline";
 export { default as PocketWatchIcon } from "./Icons/PocketWatch";
 export { default as PoolIcon } from "./Icons/Pool";
-export { default as PredictionsIcon } from "./Icons/Predictions";
 export { default as PresentCheckIcon } from "./Icons/PresentCheck";
 export { default as PresentNoneIcon } from "./Icons/PresentNone";
 export { default as PresentWonIcon } from "./Icons/PresentWon";

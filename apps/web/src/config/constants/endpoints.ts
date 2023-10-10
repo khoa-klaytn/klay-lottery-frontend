@@ -1,8 +1,6 @@
 import { ChainId } from '@pancakeswap/chains'
 
 export const GRAPH_API_PROFILE = 'https://api.thegraph.com/subgraphs/name/pancakeswap/profile'
-export const GRAPH_API_PREDICTION_BNB = 'https://api.thegraph.com/subgraphs/name/pancakeswap/prediction-v2'
-export const GRAPH_API_PREDICTION_CAKE = 'https://api.thegraph.com/subgraphs/name/pancakeswap/prediction-cake'
 
 export const GRAPH_API_LOTTERY = 'https://api.thegraph.com/subgraphs/name/pancakeswap/lottery'
 export const SNAPSHOT_BASE_URL = process.env.NEXT_PUBLIC_SNAPSHOT_BASE_URL
@@ -14,10 +12,6 @@ export const GRAPH_API_POTTERY = 'https://api.thegraph.com/subgraphs/name/pancak
 export const ONRAMP_API_BASE_URL = 'https://pcs-on-ramp-api.com'
 export const TRANSAK_API_BASE_URL = 'https://api-stg.transak.com/api/v1'
 export const MOONPAY_BASE_URL = 'https://api.moonpay.com'
-/**
- * V1 will be deprecated but is still used to claim old rounds
- */
-export const GRAPH_API_PREDICTION_V1 = 'https://api.thegraph.com/subgraphs/name/pancakeswap/prediction'
 
 export const INFO_CLIENT = 'https://proxy-worker-api.pancakeswap.com/bsc-exchange'
 export const V3_BSC_INFO_CLIENT = `https://open-platform.nodereal.io/${
