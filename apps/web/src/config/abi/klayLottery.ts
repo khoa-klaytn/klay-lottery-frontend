@@ -712,19 +712,6 @@ export const klayLotteryABI = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'viewCurrentLotteryId',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [
       {
         internalType: 'uint256',
@@ -810,19 +797,6 @@ export const klayLotteryABI = [
         internalType: 'struct KlayLottery.Lottery',
         name: '',
         type: 'tuple',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'viewMaxNumberTicketsPerBuyOrClaim',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
       },
     ],
     stateMutability: 'view',

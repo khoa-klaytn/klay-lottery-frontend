@@ -2,16 +2,9 @@ import { LotteryStatus, LotteryTicket } from 'config/constants/types'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { getKlayLotteryAddress } from 'utils/addressHelpers'
 import { LotteryResponse } from 'state/types'
-import { getKlayLotteryContract } from 'utils/contractHelpers'
 import { bigIntToSerializedBigNumber } from '@pancakeswap/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
-import { publicClient } from 'utils/wagmi'
-import { ChainId } from '@pancakeswap/chains'
 import { ContractFunctionResult, PublicClient } from 'viem'
-
-const chainId = process.env.NODE_ENV === 'production' ? ChainId.KLAYTN : ChainId.KLAYTN_TESTNET
-
-const lotteryContract = getKlayLotteryContract()
 
 const processViewLotterySuccessResponse = (
   response: ContractFunctionResult<typeof klayLotteryABI, 'viewLottery'>,
@@ -123,7 +116,7 @@ export const fetchCurrentLotteryId = async (client: PublicClient): Promise<bigin
   return client.readContract({
     abi: klayLotteryABI,
     address: getKlayLotteryAddress(),
-    functionName: 'viewCurrentLotteryId',
+    functionName: 'currentLotteryId',
   })
 }
 
@@ -131,7 +124,7 @@ export const fetchCurrentLotteryIdAndMaxBuy = async (client: PublicClient) => {
   try {
     const address = getKlayLotteryAddress()
     const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
-      (['viewCurrentLotteryId', 'viewMaxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
+      (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
         client.readContract({
           abi: klayLotteryABI,
           address,
