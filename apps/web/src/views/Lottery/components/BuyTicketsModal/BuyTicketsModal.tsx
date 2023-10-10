@@ -1,5 +1,4 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { bscTokens } from '@pancakeswap/tokens'
 import {
   ArrowForwardIcon,
   BalanceInput,
@@ -14,7 +13,6 @@ import {
 } from '@pancakeswap/uikit'
 import { useAccount, usePublicClient } from 'wagmi'
 import BigNumber from 'bignumber.js'
-import ApproveConfirmButtons, { ButtonArrangement } from 'components/ApproveConfirmButtons'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
@@ -32,6 +30,7 @@ import { BIG_ZERO, BIG_ONE_HUNDRED } from '@pancakeswap/utils/bigNumber'
 import { getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
+import { klayLotteryABI } from 'config/abi/klayLottery'
 import EditNumbersModal from './EditNumbersModal'
 import NumTicketsToBuyButton from './NumTicketsToBuyButton'
 import { useTicketsReducer } from './useTicketsReducer'
@@ -244,19 +243,18 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     userCurrentTickets,
   )
 
-  const { isApproving, isApproved, isConfirming, handleApprove, handleConfirm } = useApproveConfirmTransaction({
-    token: bscTokens.cake,
+  const { isConfirming, handleConfirm } = useApproveConfirmTransaction({
     spender: lotteryContract.address,
     minAmount: parseEther(totalCost as `${number}`),
-    onApproveSuccess: async ({ receipt }) => {
-      toastSuccess(
-        t('Contract enabled - you can now purchase tickets'),
-        <ToastDescriptionWithTx txHash={receipt.transactionHash} />,
-      )
-    },
-    onConfirm: () => {
+    onConfirm: async () => {
       const ticketsForPurchase = getTicketsForPurchase()
-      return callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase])
+      const value = await publicClient.readContract({
+        abi: klayLotteryABI,
+        address: lotteryContract.address,
+        functionName: 'calculateCurrentTotalPriceForBulkTickets',
+        args: [BigInt(ticketsForPurchase.length)],
+      })
+      return callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], { value })
     },
     onSuccess: async ({ receipt }) => {
       onDismiss?.()
@@ -289,8 +287,6 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
       getTicketsForPurchase().length !== parseInt(ticketsToBuy, 10),
     [isConfirming, insufficientBalance, ticketsToBuy, getTicketsForPurchase],
   )
-
-  const isApproveDisabled = isApproved || disableBuying
 
   if (buyingStage === BuyingStage.EDIT) {
     return (
@@ -409,37 +405,20 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
 
         {account ? (
           <>
-            <ApproveConfirmButtons
-              isApproveDisabled={isApproveDisabled}
-              isApproving={isApproving}
-              isConfirmDisabled={disableBuying}
-              isConfirming={isConfirming}
-              onApprove={handleApprove}
-              onConfirm={handleConfirm}
-              buttonArrangement={ButtonArrangement.SEQUENTIAL}
-              confirmLabel={t('Buy Instantly')}
-              confirmId="lotteryBuyInstant"
-            />
-            {isApproved && (
-              <Button
-                variant="secondary"
-                mt="8px"
-                endIcon={
-                  <ArrowForwardIcon
-                    ml="2px"
-                    color={disableBuying ? 'disabled' : 'primary'}
-                    height="24px"
-                    width="24px"
-                  />
-                }
-                disabled={disableBuying}
-                onClick={() => {
-                  setBuyingStage(BuyingStage.EDIT)
-                }}
-              >
-                {t('View/Edit Numbers')}
-              </Button>
-            )}
+            <Button onClick={handleConfirm}>Buy Instantly</Button>
+            <Button
+              variant="secondary"
+              mt="8px"
+              endIcon={
+                <ArrowForwardIcon ml="2px" color={disableBuying ? 'disabled' : 'primary'} height="24px" width="24px" />
+              }
+              disabled={disableBuying}
+              onClick={() => {
+                setBuyingStage(BuyingStage.EDIT)
+              }}
+            >
+              {t('View/Edit Numbers')}
+            </Button>
           </>
         ) : (
           <ConnectWalletButton />
