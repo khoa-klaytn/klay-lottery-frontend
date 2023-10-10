@@ -1,12 +1,18 @@
 import { Button, Input } from '@pancakeswap/uikit'
+import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useState } from 'react'
+import { useLottery } from 'state/lottery/hooks'
 import { parseEther } from 'viem'
 
-export function Admin({ disabled }: { disabled: boolean }) {
+export function Admin() {
   const { callWithGasPrice } = useCallWithGasPrice()
   const lotteryContract = useKlayLotteryContract()
+  const {
+    currentRound: { lotteryId, status },
+  } = useLottery()
+  const disabled = status !== LotteryStatus.CLAIMABLE && lotteryId !== '0'
   const [endTime, setEndTime] = useState(() => {
     const now = new Date()
     const month = `${now.getMonth() + 1}`.padStart(2, '0')

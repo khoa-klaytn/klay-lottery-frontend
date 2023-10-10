@@ -36,7 +36,7 @@ const Lottery = () => {
   const { t } = useTranslation()
   const { isDark, theme } = useTheme()
   const {
-    currentRound: { lotteryId, status, endTime },
+    currentRound: { status, endTime },
   } = useLottery()
   const [historyTabMenuIndex, setHistoryTabMenuIndex] = useState(0)
   const endTimeAsInt = parseInt(endTime, 10)
@@ -46,7 +46,7 @@ const Lottery = () => {
   return (
     <>
       <LotteryPage>
-        <Admin disabled={status !== LotteryStatus.CLAIMABLE && lotteryId !== '0'} />
+        <Admin />
         <PageSection background={TITLE_BG} index={1} hasCurvedDivider={false}>
           <Hero />
         </PageSection>
