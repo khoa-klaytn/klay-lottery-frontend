@@ -55,10 +55,6 @@ const config: (
       showItemsOnMobile: false,
       items: [
         {
-          label: t('Liquidity'),
-          href: '/liquidity',
-        },
-        {
           label: t('Perpetual'),
           href: getPerpetualUrl({
             chainId,
