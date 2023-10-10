@@ -1,5 +1,4 @@
 import { ContextApi } from '@pancakeswap/localization'
-import { SUPPORTED_CHAIN_IDS as POOL_SUPPORTED_CHAINS } from '@pancakeswap/pools'
 import {
   BirthdayIcon,
   DropdownMenuItemType,
@@ -51,11 +50,6 @@ const config: (
       image: '/images/decorations/pe2.png',
       supportChainIds: SUPPORT_FARMS,
       items: [
-        {
-          label: t('Pools'),
-          href: '/pools',
-          supportChainIds: POOL_SUPPORTED_CHAINS,
-        },
         {
           label: t('Liquid Staking'),
           href: '/liquid-staking',

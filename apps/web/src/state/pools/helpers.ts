@@ -10,7 +10,6 @@ import { deserializeToken } from '@pancakeswap/token-lists'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { DeserializedPool } from '@pancakeswap/pools'
 import { isAddress } from 'utils'
-import { convertSharesToCake } from 'views/Pools/helpers'
 import { Token } from '@pancakeswap/sdk'
 
 type UserData =
@@ -112,13 +111,6 @@ export const transformVault = (vaultKey: VaultKey, vault: SerializedCakeVault): 
       ? new BigNumber(currentPerformanceFeeAsString)
       : BIG_ZERO
 
-    const balance = convertSharesToCake(
-      userShares,
-      pricePerFullShare,
-      undefined,
-      undefined,
-      currentOverdueFee.plus(currentPerformanceFee).plus(userBoostedShare),
-    )
     userDataExtra = {
       lockEndTime,
       lockStartTime,
@@ -127,14 +119,8 @@ export const transformVault = (vaultKey: VaultKey, vault: SerializedCakeVault): 
       userBoostedShare,
       currentOverdueFee,
       currentPerformanceFee,
-      balance,
     }
     publicDataExtra = { totalLockedAmount, totalCakeInVault }
-  } else {
-    const balance = convertSharesToCake(userShares, pricePerFullShare)
-    const { cakeAsBigNumber } = convertSharesToCake(totalShares, pricePerFullShare)
-    userDataExtra = { balance }
-    publicDataExtra = { totalCakeInVault: cakeAsBigNumber }
   }
 
   const performanceFeeAsDecimal = performanceFee && performanceFee / 100

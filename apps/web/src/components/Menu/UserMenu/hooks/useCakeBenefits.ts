@@ -10,8 +10,6 @@ import { getVaultPosition, VaultPosition } from 'utils/cakePool'
 import { getCakeVaultAddress } from 'utils/addressHelpers'
 import { getActivePools } from 'utils/calls'
 import { cakeVaultV2ABI } from '@pancakeswap/pools'
-import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
-import { convertSharesToCake } from 'views/Pools/helpers'
 import { getScores } from 'views/Voting/getScores'
 import { PANCAKE_SPACE } from 'views/Voting/config'
 import { cakePoolBalanceStrategy, createTotalStrategy } from 'views/Voting/strategies'
@@ -29,7 +27,7 @@ const useCakeBenefits = () => {
   const currentBscBlock = useChainCurrentBlock(ChainId.BSC)
 
   const { data, status } = useSWR(account && currentBscBlock && ['cakeBenefits', account], async () => {
-    const [userInfo, currentPerformanceFee, currentOverdueFee, sharePrice] = await bscClient.multicall({
+    const [userInfo] = await bscClient.multicall({
       contracts: [
         {
           address: cakeVaultAddress,
@@ -70,25 +68,12 @@ const useCakeBenefits = () => {
       lockedAmount: userInfo[8],
     }
 
-    const currentPerformanceFeeAsBigNumber = new BigNumber(currentPerformanceFee.toString())
-    const currentOverdueFeeAsBigNumber = new BigNumber(currentOverdueFee.toString())
-    const sharePriceAsBigNumber = sharePrice ? new BigNumber(sharePrice.toString()) : BIG_ZERO
-    const userBoostedSharesAsBignumber = new BigNumber(userContractResponse.userBoostedShare.toString())
     const userSharesAsBignumber = new BigNumber(userContractResponse.shares.toString())
     const lockPosition = getVaultPosition({
       userShares: userSharesAsBignumber,
       locked: userContractResponse.locked,
       lockEndTime: userContractResponse.lockEndTime.toString(),
     })
-    const lockedCake = [VaultPosition.None, VaultPosition.Flexible].includes(lockPosition)
-      ? '0.00'
-      : convertSharesToCake(
-          userSharesAsBignumber,
-          sharePriceAsBigNumber,
-          undefined,
-          undefined,
-          currentOverdueFeeAsBigNumber.plus(currentPerformanceFeeAsBigNumber).plus(userBoostedSharesAsBignumber),
-        ).cakeAsNumberBalance.toLocaleString('en', { maximumFractionDigits: 3 })
 
     let iCake = ''
     let vCake = { vaultScore: '0', totalScore: '0' }
@@ -115,7 +100,6 @@ const useCakeBenefits = () => {
     }
 
     return {
-      lockedCake,
       lockPosition,
       lockedEndTime: new Date(parseInt(userContractResponse.lockEndTime.toString()) * 1000).toLocaleString(locale, {
         month: 'short',
