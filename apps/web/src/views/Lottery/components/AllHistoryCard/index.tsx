@@ -6,6 +6,7 @@ import { useAppDispatch } from 'state'
 import { useLottery } from 'state/lottery/hooks'
 import { fetchLottery } from 'state/lottery/helpers'
 import { LotteryStatus } from 'config/constants/types'
+import { usePublicClient } from 'wagmi'
 import RoundSwitcher from './RoundSwitcher'
 import { getDrawnDate, processLotteryResponse } from '../../helpers'
 import PreviousRoundCardBody from '../PreviousRoundCard/Body'
@@ -26,6 +27,7 @@ const StyledCardHeader = styled(CardHeader)`
 `
 
 const AllHistoryCard = () => {
+  const publicClient = usePublicClient()
   const {
     t,
     currentLanguage: { locale },
@@ -57,7 +59,7 @@ const AllHistoryCard = () => {
     setSelectedLotteryNodeData(null)
 
     const fetchLotteryData = async () => {
-      const lotteryData = await fetchLottery(selectedRoundId)
+      const lotteryData = await fetchLottery(publicClient, selectedRoundId)
       const processedLotteryData = processLotteryResponse(lotteryData)
       setSelectedLotteryNodeData(processedLotteryData)
     }
@@ -70,7 +72,7 @@ const AllHistoryCard = () => {
     }, 1000)
 
     return () => clearInterval(timer.current)
-  }, [selectedRoundId, currentLotteryId, numRoundsFetched, dispatch])
+  }, [publicClient, selectedRoundId, currentLotteryId, numRoundsFetched, dispatch])
 
   const handleInputChange = useCallback(
     (event) => {

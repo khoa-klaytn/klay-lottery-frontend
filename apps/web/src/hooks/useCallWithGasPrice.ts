@@ -1,6 +1,5 @@
 import { useCallback } from 'react'
 import { useGasPrice } from 'state/user/hooks'
-import { publicClient } from 'utils/wagmi'
 import {
   Abi,
   Account,
@@ -12,15 +11,13 @@ import {
   WriteContractParameters,
 } from 'viem'
 import { EstimateContractGasParameters } from 'viem/dist/types/actions/public/estimateContractGas'
-import { useWalletClient } from 'wagmi'
+import { usePublicClient, useWalletClient } from 'wagmi'
 import { SendTransactionResult } from 'wagmi/actions'
 import { calculateGasMargin } from 'utils'
-import { useActiveChainId } from './useActiveChainId'
-import { usePublicClient } from './usePublicClient'
 
 export function useCallWithGasPrice() {
   const gasPrice = useGasPrice()
-  const client = usePublicClient()
+  const publicClient = usePublicClient()
   const { data: walletClient } = useWalletClient()
 
   // const callWithGasPrice = useCallback(
@@ -77,7 +74,7 @@ export function useCallWithGasPrice() {
       const { gas: gas_, ...overrides_ } = overrides || {}
       let gas = gas_
       if (!gas) {
-        gas = await client.estimateContractGas({
+        gas = await publicClient.estimateContractGas({
           abi: contract.abi,
           address: contract.address,
           account: walletClient.account,
@@ -106,7 +103,7 @@ export function useCallWithGasPrice() {
         hash,
       }
     },
-    [client, gasPrice, walletClient],
+    [publicClient, gasPrice, walletClient],
   )
 
   return { callWithGasPrice: callWithGasPriceWithSimulate }

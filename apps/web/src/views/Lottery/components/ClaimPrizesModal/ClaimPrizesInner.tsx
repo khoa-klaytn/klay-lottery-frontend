@@ -1,6 +1,6 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { AutoRenewIcon, Button, Flex, PresentWonIcon, Text, useToast, Balance } from '@pancakeswap/uikit'
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import useCatchTxError from 'hooks/useCatchTxError'
@@ -13,7 +13,6 @@ import { useLottery } from 'state/lottery/hooks'
 import { useGasPrice } from 'state/user/hooks'
 import { callWithEstimateGas } from 'utils/calls'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
-import { usePublicClient } from 'hooks/usePublicClient'
 
 interface ClaimInnerProps {
   roundsToClaim: LotteryTicketClaimData[]
@@ -21,7 +20,7 @@ interface ClaimInnerProps {
 }
 
 const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = ({ onSuccess, roundsToClaim }) => {
-  const client = usePublicClient()
+  const publicClient = usePublicClient()
   const { address: account } = useAccount()
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -65,7 +64,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     if (roundsToClaim.length > activeClaimIndex + 1) {
       // If there are still rounds to claim, move onto the next claim
       setActiveClaimIndex(activeClaimIndex + 1)
-      dispatch(fetchUserLotteries({ client, account, currentLotteryId }))
+      dispatch(fetchUserLotteries({ publicClient, account, currentLotteryId }))
     } else {
       onSuccess()
     }

@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import { getNftSaleAddress } from 'utils/addressHelpers'
 import { getPancakeSquadContract } from 'utils/contractHelpers'
 import { nftSaleABI } from 'config/abi/nftSale'
-import { publicClient } from 'utils/wagmi'
-import { ChainId } from '@pancakeswap/chains'
+import { usePublicClient } from 'wagmi'
 
 const useUserInfos = ({ account, refreshCounter, setCallback }) => {
+  const publicClient = usePublicClient()
   useEffect(() => {
     const fetchUserInfos = async () => {
       try {
@@ -25,19 +25,17 @@ const useUserInfos = ({ account, refreshCounter, setCallback }) => {
               } as const),
           )
 
-          const client = publicClient({ chainId: ChainId.BSC })
-
           const [
             currentCanClaimForGen0,
             currentNumberTicketsForGen0,
             currentNumberTicketsUsedForGen0,
             currentNumberTicketsOfUser,
-          ] = await client.multicall({
+          ] = await publicClient.multicall({
             contracts: calls,
             allowFailure: false,
           })
 
-          const currentTicketsOfUser = await client.readContract({
+          const currentTicketsOfUser = await publicClient.readContract({
             abi: nftSaleABI,
             address: nftSaleAddress,
             functionName: 'ticketsOfUserBySize',
@@ -62,7 +60,7 @@ const useUserInfos = ({ account, refreshCounter, setCallback }) => {
     if (nftSaleABI.length > 0) {
       fetchUserInfos()
     }
-  }, [account, refreshCounter, setCallback])
+  }, [publicClient, account, refreshCounter, setCallback])
 }
 
 export default useUserInfos

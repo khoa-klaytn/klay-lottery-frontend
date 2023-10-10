@@ -1,4 +1,4 @@
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import { getAchievements } from 'state/achievements/helpers'
 import { useTranslation } from '@pancakeswap/localization'
 import { FetchStatus } from 'config/constants/types'
@@ -22,9 +22,10 @@ export const useProfileForAddress = (
   isValidating: boolean
   refresh: KeyedMutator<GetProfileResponse>
 } => {
+  const publicClient = usePublicClient()
   const { data, status, mutate, isValidating } = useSWR(
     address ? [address, 'profile'] : null,
-    () => getProfile(address),
+    () => getProfile(publicClient, address),
     fetchConfiguration,
   )
 
@@ -61,10 +62,15 @@ export const useProfile = (): {
   isLoading: boolean
   refresh: KeyedMutator<GetProfileResponse>
 } => {
+  const publicClient = usePublicClient()
   const { address: account } = useAccount()
-  const { data, status, mutate } = useSWRImmutable(account ? [account, 'profile'] : null, () => getProfile(account), {
-    use: [localStorageMiddleware],
-  })
+  const { data, status, mutate } = useSWRImmutable(
+    account ? [account, 'profile'] : null,
+    () => getProfile(publicClient, account),
+    {
+      use: [localStorageMiddleware],
+    },
+  )
 
   const { profile, hasRegistered } = data ?? ({ profile: null, hasRegistered: false } as GetProfileResponse)
 

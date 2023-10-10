@@ -13,7 +13,7 @@ import {
   useToast,
   useTooltip,
 } from '@pancakeswap/uikit'
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import ApproveConfirmButtons, { ButtonArrangement } from 'components/ApproveConfirmButtons'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -33,7 +33,6 @@ import { parseEther } from 'viem'
 import { styled } from 'styled-components'
 import { BIG_ZERO, BIG_ONE_HUNDRED } from '@pancakeswap/utils/bigNumber'
 import { getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
-import { usePublicClient } from 'hooks/usePublicClient'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
 import EditNumbersModal from './EditNumbersModal'
@@ -63,7 +62,7 @@ enum BuyingStage {
 }
 
 const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> = ({ onDismiss }) => {
-  const client = usePublicClient()
+  const publicClient = usePublicClient()
   const { chainId } = useActiveChainId()
   const symbol = SHORT_SYMBOL[chainId]
   const { address: account } = useAccount()
@@ -259,7 +258,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     },
     onSuccess: async ({ receipt }) => {
       onDismiss?.()
-      dispatch(fetchUserTicketsAndLotteries({ client, account, currentLotteryId }))
+      dispatch(fetchUserTicketsAndLotteries({ publicClient, account, currentLotteryId }))
       toastSuccess(t('Lottery tickets purchased!'), <ToastDescriptionWithTx txHash={receipt.transactionHash} />)
     },
   })

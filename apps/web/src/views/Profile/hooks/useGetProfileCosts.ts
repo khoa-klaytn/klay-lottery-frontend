@@ -1,13 +1,13 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { ChainId } from '@pancakeswap/chains'
 import { useToast } from '@pancakeswap/uikit'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useEffect, useState } from 'react'
 import { getPancakeProfileAddress } from 'utils/addressHelpers'
-import { publicClient } from 'utils/wagmi'
+import { usePublicClient } from 'wagmi'
 
 const useGetProfileCosts = () => {
+  const publicClient = usePublicClient()
   const { t } = useTranslation()
   const [isLoading, setIsLoading] = useState(true)
   const [costs, setCosts] = useState({
@@ -23,9 +23,7 @@ const useGetProfileCosts = () => {
       try {
         const pancakeProfileAddress = getPancakeProfileAddress()
 
-        const [numberCakeToReactivate, numberCakeToRegister, numberCakeToUpdate] = await publicClient({
-          chainId: ChainId.BSC,
-        }).multicall({
+        const [numberCakeToReactivate, numberCakeToRegister, numberCakeToUpdate] = await publicClient.multicall({
           allowFailure: false,
           contracts: [
             {
@@ -58,7 +56,7 @@ const useGetProfileCosts = () => {
     }
 
     fetchCosts()
-  }, [setCosts, toastError, t, chainId])
+  }, [publicClient, setCosts, toastError, t, chainId])
 
   return { costs, isLoading }
 }

@@ -1,5 +1,4 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { ChainId } from '@pancakeswap/chains'
 import {
   AutoRenewIcon,
   Button,
@@ -20,10 +19,9 @@ import { useProfile } from 'state/profile/hooks'
 import { styled } from 'styled-components'
 import { getPancakeProfileAddress } from 'utils/addressHelpers'
 import { getErc721Contract, getProfileContract } from 'utils/contractHelpers'
-import { publicClient } from 'utils/wagmi'
 import { ContractFunctionResult } from 'viem'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
-import { useAccount, useWalletClient } from 'wagmi'
+import { useAccount, usePublicClient, useWalletClient } from 'wagmi'
 import { useNftsForAddress } from '../Nft/market/hooks/useNftsForAddress'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'
 import NextStepButton from './NextStepButton'
@@ -38,6 +36,7 @@ const NftWrapper = styled.div`
 `
 
 const ProfilePicture: React.FC = () => {
+  const publicClient = usePublicClient()
   const { address: account } = useAccount()
   const [isApproved, setIsApproved] = useState(false)
   const [isProfileNftsLoading, setIsProfileNftsLoading] = useState(true)
@@ -60,7 +59,7 @@ const ProfilePicture: React.FC = () => {
         if (nftsByCollection.length > 0) {
           const profileContract = getProfileContract()
           const nftRole = await profileContract.read.NFT_ROLE()
-          const collectionRoles = (await publicClient({ chainId: ChainId.BSC }).multicall({
+          const collectionRoles = (await publicClient.multicall({
             contracts: nftsByCollection.map((collectionAddress) => {
               return {
                 abi: pancakeProfileABI,
@@ -89,7 +88,7 @@ const ProfilePicture: React.FC = () => {
       setIsProfileNftsLoading(true)
       fetchUserPancakeCollectibles()
     }
-  }, [nfts, isUserNftLoading])
+  }, [publicClient, nfts, isUserNftLoading])
 
   const { t } = useTranslation()
   const { toastSuccess } = useToast()

@@ -1,4 +1,4 @@
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import useSWR from 'swr'
 import { useIfoCreditAddressContract } from 'hooks/useContract'
@@ -13,11 +13,9 @@ import { cakeVaultV2ABI } from '@pancakeswap/pools'
 import { getScores } from 'views/Voting/getScores'
 import { PANCAKE_SPACE } from 'views/Voting/config'
 import { cakePoolBalanceStrategy, createTotalStrategy } from 'views/Voting/strategies'
-import { publicClient } from 'utils/wagmi'
-
-const bscClient = publicClient({ chainId: ChainId.BSC })
 
 const useCakeBenefits = () => {
+  const publicClient = usePublicClient()
   const { address: account } = useAccount()
   const {
     currentLanguage: { locale },
@@ -27,7 +25,7 @@ const useCakeBenefits = () => {
   const currentBscBlock = useChainCurrentBlock(ChainId.BSC)
 
   const { data, status } = useSWR(account && currentBscBlock && ['cakeBenefits', account], async () => {
-    const [userInfo] = await bscClient.multicall({
+    const [userInfo] = await publicClient.multicall({
       contracts: [
         {
           address: cakeVaultAddress,

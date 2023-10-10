@@ -2,10 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import { useAppDispatch } from 'state'
 import { useLottery } from 'state/lottery/hooks'
 import { fetchCurrentLottery, setLotteryIsTransitioning } from 'state/lottery'
-import { usePublicClient } from 'hooks/usePublicClient'
+import { usePublicClient } from 'wagmi'
 
 const useNextEventCountdown = (nextEventTime: number): number => {
-  const client = usePublicClient()
+  const publicClient = usePublicClient()
   const dispatch = useAppDispatch()
   const [secondsRemaining, setSecondsRemaining] = useState(null)
   const timer = useRef(null)
@@ -23,14 +23,14 @@ const useNextEventCountdown = (nextEventTime: number): number => {
         if (prevSecondsRemaining <= 1) {
           clearInterval(timer.current)
           dispatch(setLotteryIsTransitioning({ isTransitioning: true }))
-          dispatch(fetchCurrentLottery({ client, currentLotteryId }))
+          dispatch(fetchCurrentLottery({ publicClient, currentLotteryId }))
         }
         return prevSecondsRemaining - 1
       })
     }, 1000)
 
     return () => clearInterval(timer.current)
-  }, [client, setSecondsRemaining, nextEventTime, currentLotteryId, timer, dispatch])
+  }, [publicClient, setSecondsRemaining, nextEventTime, currentLotteryId, timer, dispatch])
 
   return secondsRemaining
 }
