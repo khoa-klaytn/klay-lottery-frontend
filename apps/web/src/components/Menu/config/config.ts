@@ -9,8 +9,6 @@ import {
   MenuItemsType,
   MoreIcon,
   PancakeProtectorIcon,
-  SwapFillIcon,
-  SwapIcon,
 } from '@pancakeswap/uikit'
 import {
   FIXED_STAKING_SUPPORTED_CHAINS,
@@ -45,20 +43,6 @@ const config: (
   chainId?: number,
 ) => ConfigMenuItemsType[] = (t, isDark, languageCode, chainId) =>
   [
-    {
-      label: t('Trade'),
-      icon: SwapIcon,
-      fillIcon: SwapFillIcon,
-      href: '/swap',
-      showItemsOnMobile: false,
-      items: [
-        {
-          label: t('Trading Reward'),
-          href: '/trading-reward',
-          hideSubNav: true,
-        },
-      ].map((item) => addMenuItemSupported(item, chainId)),
-    },
     {
       label: t('Earn'),
       href: '/farms',
