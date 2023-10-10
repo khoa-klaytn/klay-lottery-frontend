@@ -7,8 +7,8 @@ import random from 'lodash/random'
 const generateTicketNumbers = (
   numberOfTickets: number,
   userCurrentTickets?: LotteryTicket[] | null,
-  minNumber = 1000000,
-  maxNumber = 1999999,
+  minNumber = 0,
+  maxNumber = 999999,
 ): number[] => {
   // Populate array with existing tickets (if they have them) to ensure no duplicates when generating new numbers
   const existingTicketNumbers =
