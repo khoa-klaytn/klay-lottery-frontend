@@ -13,7 +13,7 @@ import {
   useModal,
 } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import { fetchLottery } from 'state/lottery/helpers'
 import { getWinningTickets } from 'state/lottery/fetchUnclaimedUserRewards'
@@ -53,6 +53,7 @@ const TicketSkeleton = () => {
 }
 
 const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: string }>> = ({ roundId }) => {
+  const publicClient = usePublicClient()
   const [lotteryInfo, setLotteryInfo] = useState<LotteryRound>(null)
   const [allUserTickets, setAllUserTickets] = useState<LotteryTicket[]>(null)
   const [userWinningTickets, setUserWinningTickets] = useState<{
@@ -105,11 +106,11 @@ const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: str
 
     const fetchData = async () => {
       const [userTickets, lotteryData] = await Promise.all([
-        fetchUserTicketsForOneRound(account, roundId),
-        fetchLottery(roundId),
+        fetchUserTicketsForOneRound(publicClient, account, roundId),
+        fetchLottery(publicClient, roundId),
       ])
       const processedLotteryData = processLotteryResponse(lotteryData)
-      const winningTickets = await getWinningTickets({
+      const winningTickets = await getWinningTickets(publicClient, {
         roundId,
         userTickets,
         finalNumber: processedLotteryData.finalNumber.toString(),
@@ -137,7 +138,7 @@ const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: str
     }
 
     fetchData()
-  }, [roundId, account])
+  }, [publicClient, roundId, account])
 
   const getFooter = () => {
     if (userWinningTickets?.ticketsWithUnclaimedRewards?.length > 0) {

@@ -130,7 +130,7 @@ const getUserLotteryData = async (
   currentLotteryId: string,
 ): Promise<LotteryUserGraphEntity> => {
   const idsForTicketsNodeCall = getRoundIdsArray(currentLotteryId)
-  const roundDataAndUserTickets = await fetchUserTicketsForMultipleRounds(idsForTicketsNodeCall, account)
+  const roundDataAndUserTickets = await fetchUserTicketsForMultipleRounds(client, idsForTicketsNodeCall, account)
   const userRoundsNodeData = roundDataAndUserTickets.filter((round) => round.userTickets.length > 0)
   const idsForLotteriesNodeCall = userRoundsNodeData.map((round) => round.roundId)
   const [lotteriesNodeData, graphResponse] = await Promise.all([

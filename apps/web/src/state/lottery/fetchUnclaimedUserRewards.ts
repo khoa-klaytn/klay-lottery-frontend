@@ -151,7 +151,7 @@ const fetchUnclaimedUserRewards = async (
 
   if (roundsToCheck.length > 0) {
     const idsToCheck = roundsToCheck.map((round) => round.lotteryId)
-    const userTicketData = await fetchUserTicketsForMultipleRounds(idsToCheck, account)
+    const userTicketData = await fetchUserTicketsForMultipleRounds(client, idsToCheck, account)
     const roundsWithTickets = userTicketData.filter((roundData) => roundData?.userTickets?.length > 0)
 
     const roundDataAndWinningTickets = roundsWithTickets.map((roundData) => {
