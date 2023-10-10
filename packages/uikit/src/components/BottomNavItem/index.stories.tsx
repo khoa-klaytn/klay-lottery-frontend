@@ -1,10 +1,10 @@
 import React from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserRouter } from "react-router-dom";
+import { PancakeProtectorIcon } from "../Svg";
 import { Flex } from "../Box";
 import BottomNavItem from "./BottomNavItem";
 import { BottomNavItemProps } from "./types";
-import { SwapIcon, SwapFillIcon } from "../Svg";
 
 export default {
   title: "Components/Menu/BottomNavItem",
@@ -23,9 +23,8 @@ const Template: React.FC<React.PropsWithChildren<BottomNavItemProps>> = ({ ...ar
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Trade",
-  href: "/",
-  icon: SwapIcon,
-  fillIcon: SwapFillIcon,
+  label: "Game",
+  href: "https://protectors.pancakeswap.finance",
+  icon: PancakeProtectorIcon,
   isActive: false,
 };

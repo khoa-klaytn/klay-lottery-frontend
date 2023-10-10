@@ -6,7 +6,6 @@ import {
   NftIcon,
   PoolIcon,
   StoreIcon,
-  SwapIcon,
   Text,
   TrophyIcon,
 } from '@pancakeswap/uikit'
@@ -38,7 +37,6 @@ export const useEcosystemTagData = () => {
     return [
       { icon: <PoolIcon />, text: t('Staking') },
       { icon: <EarnIcon />, text: t('Farming') },
-      { icon: <SwapIcon />, text: t('Trade') },
       { icon: <NftIcon />, text: t('NFT') },
       {
         icon: <InsertChartOutlinedIcon />,
