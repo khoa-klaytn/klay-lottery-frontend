@@ -19,7 +19,6 @@ import {
   SUPPORT_FARMS,
   SUPPORT_ONLY_KLAYTN,
 } from 'config/constants/supportChains'
-import { getPerpetualUrl } from 'utils/getPerpetualUrl'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
@@ -54,21 +53,6 @@ const config: (
       href: '/swap',
       showItemsOnMobile: false,
       items: [
-        {
-          label: t('Perpetual'),
-          href: getPerpetualUrl({
-            chainId,
-            languageCode,
-            isDark,
-          }),
-          confirmModalId: 'usCitizenConfirmModal',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
-        {
-          label: t('Bridge'),
-          href: 'https://bridge.pancakeswap.finance/',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
         {
           label: `${t('Limit')} (V2)`,
           href: '/limit-orders',
