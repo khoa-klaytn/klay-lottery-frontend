@@ -8,6 +8,7 @@ import { fetchLottery, fetchCurrentLotteryId } from 'state/lottery/helpers'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
 import { SLOW_INTERVAL } from 'config/constants'
 import useSWRImmutable from 'swr/immutable'
+import { usePublicClient } from 'hooks/usePublicClient'
 
 const StyledLink = styled(NextLinkFromReactRouter)`
   width: 100%;
@@ -20,6 +21,7 @@ const StyledBalance = styled(Balance)`
 `
 
 const LotteryCardContent = () => {
+  const client = usePublicClient()
   const { t } = useTranslation()
   const { observerRef, isIntersecting } = useIntersectionObserver()
   const [loadData, setLoadData] = useState(false)
@@ -29,7 +31,7 @@ const LotteryCardContent = () => {
   })
   const { data: currentLottery } = useSWRImmutable(
     currentLotteryId ? ['currentLottery'] : null,
-    async () => fetchLottery(currentLotteryId?.toString() ?? ''),
+    async () => fetchLottery(client, currentLotteryId?.toString() ?? ''),
     {
       refreshInterval: SLOW_INTERVAL,
     },
@@ -37,8 +39,8 @@ const LotteryCardContent = () => {
 
   const cakePrizesText = t('%cakePrizeInUsd% in CAKE prizes this round', { cakePrizeInUsd: cakePriceBusd.toString() })
   const [pretext, prizesThisRound] = cakePrizesText.split(cakePriceBusd.toString())
-  const amountCollectedInCake = currentLottery ? parseFloat(currentLottery.amountCollected) : null
-  const currentLotteryPrize = amountCollectedInCake ? cakePriceBusd.times(amountCollectedInCake) : null
+  const amountCollected = currentLottery ? parseFloat(currentLottery.amountCollected) : null
+  const currentLotteryPrize = amountCollected ? cakePriceBusd.times(amountCollected) : null
 
   useEffect(() => {
     if (isIntersecting) {

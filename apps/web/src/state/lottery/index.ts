@@ -2,6 +2,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { LotteryTicket, LotteryStatus } from 'config/constants/types'
 import { LotteryState, LotteryRoundGraphEntity, LotteryUserGraphEntity, LotteryResponse } from 'state/types'
+import { PublicClient } from 'viem'
 import { fetchLottery, fetchCurrentLotteryIdAndMaxBuy } from './helpers'
 import getLotteriesData from './getLotteriesData'
 import getUserLotteryData, { getGraphLotteryUser } from './getUserLotteryData'
@@ -41,24 +42,27 @@ const initialState: LotteryState = {
   userLotteryData: { account: '', totalCake: '', totalTickets: '', rounds: [] },
 }
 
-export const fetchCurrentLottery = createAsyncThunk<LotteryResponse, { currentLotteryId: string }>(
-  'lottery/fetchCurrentLottery',
-  async ({ currentLotteryId }) => {
-    const lotteryInfo = await fetchLottery(currentLotteryId)
-    return lotteryInfo
+export const fetchCurrentLottery = createAsyncThunk<
+  LotteryResponse,
+  { client: PublicClient; currentLotteryId: string }
+>('lottery/fetchCurrentLottery', async ({ client, currentLotteryId }) => {
+  const lotteryInfo = await fetchLottery(client, currentLotteryId)
+  return lotteryInfo
+})
+
+export const fetchCurrentLotteryId = createAsyncThunk<PublicLotteryData, { client: PublicClient }>(
+  'lottery/fetchCurrentLotteryId',
+  async ({ client }) => {
+    const currentIdAndMaxBuy = await fetchCurrentLotteryIdAndMaxBuy(client)
+    return currentIdAndMaxBuy
   },
 )
 
-export const fetchCurrentLotteryId = createAsyncThunk<PublicLotteryData>('lottery/fetchCurrentLotteryId', async () => {
-  const currentIdAndMaxBuy = await fetchCurrentLotteryIdAndMaxBuy()
-  return currentIdAndMaxBuy
-})
-
 export const fetchUserTicketsAndLotteries = createAsyncThunk<
   { userTickets: LotteryTicket[]; userLotteries: LotteryUserGraphEntity },
-  { account: string; currentLotteryId: string }
->('lottery/fetchUserTicketsAndLotteries', async ({ account, currentLotteryId }) => {
-  const userLotteriesRes = await getUserLotteryData(account, currentLotteryId)
+  { client: PublicClient; account: string; currentLotteryId: string }
+>('lottery/fetchUserTicketsAndLotteries', async ({ client, account, currentLotteryId }) => {
+  const userLotteriesRes = await getUserLotteryData(client, account, currentLotteryId)
   const userParticipationInCurrentRound = userLotteriesRes.rounds?.find((round) => round.lotteryId === currentLotteryId)
   const userTickets = userParticipationInCurrentRound?.tickets
 
@@ -70,19 +74,19 @@ export const fetchUserTicketsAndLotteries = createAsyncThunk<
   return { userTickets, userLotteries: userLotteriesRes }
 })
 
-export const fetchPublicLotteries = createAsyncThunk<LotteryRoundGraphEntity[], { currentLotteryId: string }>(
-  'lottery/fetchPublicLotteries',
-  async ({ currentLotteryId }) => {
-    const lotteries = await getLotteriesData(currentLotteryId)
-    return lotteries
-  },
-)
+export const fetchPublicLotteries = createAsyncThunk<
+  LotteryRoundGraphEntity[],
+  { client: PublicClient; currentLotteryId: string }
+>('lottery/fetchPublicLotteries', async ({ client, currentLotteryId }) => {
+  const lotteries = await getLotteriesData(client, currentLotteryId)
+  return lotteries
+})
 
 export const fetchUserLotteries = createAsyncThunk<
   LotteryUserGraphEntity,
-  { account: string; currentLotteryId: string }
->('lottery/fetchUserLotteries', async ({ account, currentLotteryId }) => {
-  const userLotteries = await getUserLotteryData(account, currentLotteryId)
+  { client: PublicClient; account: string; currentLotteryId: string }
+>('lottery/fetchUserLotteries', async ({ client, account, currentLotteryId }) => {
+  const userLotteries = await getUserLotteryData(client, account, currentLotteryId)
   return userLotteries
 })
 

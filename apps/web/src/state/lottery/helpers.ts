@@ -7,7 +7,9 @@ import { bigIntToSerializedBigNumber } from '@pancakeswap/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
 import { publicClient } from 'utils/wagmi'
 import { ChainId } from '@pancakeswap/chains'
-import { ContractFunctionResult } from 'viem'
+import { ContractFunctionResult, PublicClient } from 'viem'
+
+const chainId = process.env.NODE_ENV === 'production' ? ChainId.KLAYTN : ChainId.KLAYTN_TESTNET
 
 const lotteryContract = getKlayLotteryContract()
 
@@ -79,9 +81,14 @@ const processViewLotteryErrorResponse = (lotteryId: string): LotteryResponse => 
   }
 }
 
-export const fetchLottery = async (lotteryId: string): Promise<LotteryResponse> => {
+export const fetchLottery = async (client: PublicClient, lotteryId: string): Promise<LotteryResponse> => {
   try {
-    const lotteryData = await lotteryContract.read.viewLottery([BigInt(lotteryId)])
+    const lotteryData = await client.readContract({
+      abi: klayLotteryABI,
+      functionName: 'viewLottery',
+      address: getKlayLotteryAddress(),
+      args: [BigInt(lotteryId)],
+    })
     console.log('lotteryData', lotteryData)
     return processViewLotterySuccessResponse(lotteryData, lotteryId)
   } catch (error) {
@@ -89,7 +96,10 @@ export const fetchLottery = async (lotteryId: string): Promise<LotteryResponse> 
   }
 }
 
-export const fetchMultipleLotteries = async (lotteryIds: string[]): Promise<LotteryResponse[]> => {
+export const fetchMultipleLotteries = async (
+  client: PublicClient,
+  lotteryIds: string[],
+): Promise<LotteryResponse[]> => {
   const calls = lotteryIds.map(
     (id) =>
       ({
@@ -100,7 +110,6 @@ export const fetchMultipleLotteries = async (lotteryIds: string[]): Promise<Lott
       } as const),
   )
   try {
-    const client = publicClient({ chainId: ChainId.KLAYTN })
     const res = await Promise.all(calls.map((call) => client.readContract(call)))
     const processedResponses = res.map((result, index) => processViewLotterySuccessResponse(result, lotteryIds[index]))
     return processedResponses
@@ -110,16 +119,17 @@ export const fetchMultipleLotteries = async (lotteryIds: string[]): Promise<Lott
   }
 }
 
-export const fetchCurrentLotteryId = async (): Promise<bigint> => {
-  return lotteryContract.read.currentLotteryId()
+export const fetchCurrentLotteryId = async (client: PublicClient): Promise<bigint> => {
+  return client.readContract({
+    abi: klayLotteryABI,
+    address: getKlayLotteryAddress(),
+    functionName: 'viewCurrentLotteryId',
+  })
 }
 
-export const fetchCurrentLotteryIdAndMaxBuy = async () => {
+export const fetchCurrentLotteryIdAndMaxBuy = async (client: PublicClient) => {
   try {
     const address = getKlayLotteryAddress()
-    const client = publicClient({
-      chainId: process.env.NODE_ENV === 'production' ? ChainId.KLAYTN : ChainId.KLAYTN_TESTNET,
-    })
     const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
       (['viewCurrentLotteryId', 'viewMaxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
         client.readContract({

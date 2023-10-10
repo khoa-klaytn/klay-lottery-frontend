@@ -2,6 +2,7 @@ import { request, gql } from 'graphql-request'
 import { GRAPH_API_LOTTERY } from 'config/constants/endpoints'
 import { LotteryTicket } from 'config/constants/types'
 import { LotteryUserGraphEntity, LotteryResponse, UserRound } from 'state/types'
+import { PublicClient } from 'viem'
 import { getRoundIdsArray, fetchMultipleLotteries, hasRoundBeenClaimed } from './helpers'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
 
@@ -123,13 +124,17 @@ export const getGraphLotteryUser = async (
   return user
 }
 
-const getUserLotteryData = async (account: string, currentLotteryId: string): Promise<LotteryUserGraphEntity> => {
+const getUserLotteryData = async (
+  client: PublicClient,
+  account: string,
+  currentLotteryId: string,
+): Promise<LotteryUserGraphEntity> => {
   const idsForTicketsNodeCall = getRoundIdsArray(currentLotteryId)
   const roundDataAndUserTickets = await fetchUserTicketsForMultipleRounds(idsForTicketsNodeCall, account)
   const userRoundsNodeData = roundDataAndUserTickets.filter((round) => round.userTickets.length > 0)
   const idsForLotteriesNodeCall = userRoundsNodeData.map((round) => round.roundId)
   const [lotteriesNodeData, graphResponse] = await Promise.all([
-    fetchMultipleLotteries(idsForLotteriesNodeCall),
+    fetchMultipleLotteries(client, idsForLotteriesNodeCall),
     getGraphLotteryUser(account),
   ])
   const mergedRoundData = applyNodeDataToUserGraphResponse(userRoundsNodeData, graphResponse.rounds, lotteriesNodeData)

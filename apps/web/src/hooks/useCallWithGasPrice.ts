@@ -16,10 +16,11 @@ import { useWalletClient } from 'wagmi'
 import { SendTransactionResult } from 'wagmi/actions'
 import { calculateGasMargin } from 'utils'
 import { useActiveChainId } from './useActiveChainId'
+import { usePublicClient } from './usePublicClient'
 
 export function useCallWithGasPrice() {
   const gasPrice = useGasPrice()
-  const { chainId } = useActiveChainId()
+  const client = usePublicClient()
   const { data: walletClient } = useWalletClient()
 
   // const callWithGasPrice = useCallback(
@@ -76,7 +77,7 @@ export function useCallWithGasPrice() {
       const { gas: gas_, ...overrides_ } = overrides || {}
       let gas = gas_
       if (!gas) {
-        gas = await publicClient({ chainId }).estimateContractGas({
+        gas = await client.estimateContractGas({
           abi: contract.abi,
           address: contract.address,
           account: walletClient.account,
@@ -105,7 +106,7 @@ export function useCallWithGasPrice() {
         hash,
       }
     },
-    [chainId, gasPrice, walletClient],
+    [client, gasPrice, walletClient],
   )
 
   return { callWithGasPrice: callWithGasPriceWithSimulate }

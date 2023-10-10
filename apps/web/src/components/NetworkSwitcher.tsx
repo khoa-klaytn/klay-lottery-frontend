@@ -25,6 +25,7 @@ import { useRouter } from 'next/router'
 import { chains } from 'utils/wagmi'
 import { ASSET_CDN } from 'config/constants/endpoints'
 
+import { SHORT_SYMBOL } from 'config/chains'
 import { ChainLogo } from './Logo/ChainLogo'
 
 const NetworkSelect = ({ switchNetwork, chainId }) => {
@@ -114,28 +115,6 @@ const WrongNetworkSelect = ({ switchNetwork, chainId }) => {
     </>
   )
 }
-
-const SHORT_SYMBOL = {
-  [ChainId.KLAYTN]: 'KLAY',
-  [ChainId.KLAYTN_TESTNET]: 'tKLAY',
-  [ChainId.ETHEREUM]: 'ETH',
-  [ChainId.BSC]: 'BNB',
-  [ChainId.BSC_TESTNET]: 'tBNB',
-  [ChainId.GOERLI]: 'GOR',
-  [ChainId.ARBITRUM_ONE]: 'ARB',
-  [ChainId.ARBITRUM_GOERLI]: 'tARB',
-  [ChainId.POLYGON_ZKEVM]: 'Polygon zkEVM',
-  [ChainId.POLYGON_ZKEVM_TESTNET]: 'tZkEVM',
-  [ChainId.ZKSYNC]: 'zkSync',
-  [ChainId.ZKSYNC_TESTNET]: 'tZkSync',
-  [ChainId.LINEA]: 'Linea',
-  [ChainId.LINEA_TESTNET]: 'tLinea',
-  [ChainId.OPBNB]: 'opBNB',
-  [ChainId.OPBNB_TESTNET]: 'tOpBNB',
-  [ChainId.BASE]: 'Base',
-  [ChainId.BASE_TESTNET]: 'tBase',
-  [ChainId.SCROLL_SEPOLIA]: 'tScroll',
-} as const satisfies Record<ChainId, string>
 
 export const NetworkSwitcher = () => {
   const { t } = useTranslation()

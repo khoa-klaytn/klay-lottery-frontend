@@ -1,6 +1,7 @@
 import { request, gql } from 'graphql-request'
 import { GRAPH_API_LOTTERY } from 'config/constants/endpoints'
 import { LotteryRoundGraphEntity, LotteryResponse } from 'state/types'
+import { PublicClient } from 'viem'
 import { getRoundIdsArray, fetchMultipleLotteries } from './helpers'
 
 export const MAX_LOTTERIES_REQUEST_SIZE = 100
@@ -88,9 +89,12 @@ export const getGraphLotteries = async (
   }
 }
 
-const getLotteriesData = async (currentLotteryId: string): Promise<LotteryRoundGraphEntity[]> => {
+const getLotteriesData = async (client: PublicClient, currentLotteryId: string): Promise<LotteryRoundGraphEntity[]> => {
   const idsForNodesCall = getRoundIdsArray(currentLotteryId)
-  const [nodeData, graphResponse] = await Promise.all([fetchMultipleLotteries(idsForNodesCall), getGraphLotteries()])
+  const [nodeData, graphResponse] = await Promise.all([
+    fetchMultipleLotteries(client, idsForNodesCall),
+    getGraphLotteries(),
+  ])
   const mergedData = applyNodeDataToLotteriesGraphResponse(nodeData, graphResponse)
   return mergedData
 }

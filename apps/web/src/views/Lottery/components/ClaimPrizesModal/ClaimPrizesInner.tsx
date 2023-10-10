@@ -13,6 +13,7 @@ import { useLottery } from 'state/lottery/hooks'
 import { useGasPrice } from 'state/user/hooks'
 import { callWithEstimateGas } from 'utils/calls'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
+import { usePublicClient } from 'hooks/usePublicClient'
 
 interface ClaimInnerProps {
   roundsToClaim: LotteryTicketClaimData[]
@@ -20,6 +21,7 @@ interface ClaimInnerProps {
 }
 
 const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = ({ onSuccess, roundsToClaim }) => {
+  const client = usePublicClient()
   const { address: account } = useAccount()
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -37,9 +39,9 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
   const activeClaimData = roundsToClaim[activeClaimIndex]
 
   const cakePriceBusd = useCakePrice()
-  const cakeReward = activeClaimData.cakeTotal
-  const dollarReward = cakeReward.times(cakePriceBusd)
-  const rewardAsBalance = getBalanceAmount(cakeReward).toNumber()
+  const reward = activeClaimData.total
+  const dollarReward = reward.times(cakePriceBusd)
+  const rewardAsBalance = getBalanceAmount(reward).toNumber()
   const dollarRewardAsBalance = getBalanceAmount(dollarReward).toNumber()
 
   const parseUnclaimedTicketDataForClaimCall = (ticketsWithUnclaimedRewards: LotteryTicket[], lotteryId: string) => {
@@ -63,7 +65,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     if (roundsToClaim.length > activeClaimIndex + 1) {
       // If there are still rounds to claim, move onto the next claim
       setActiveClaimIndex(activeClaimIndex + 1)
-      dispatch(fetchUserLotteries({ account, currentLotteryId }))
+      dispatch(fetchUserLotteries({ client, account, currentLotteryId }))
     } else {
       onSuccess()
     }

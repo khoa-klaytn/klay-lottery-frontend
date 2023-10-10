@@ -3,9 +3,11 @@ import { Flex, Skeleton, Text, Balance } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { getBalanceNumber, getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
+import { useActiveChainId } from 'hooks/useActiveChainId'
+import { SHORT_SYMBOL } from 'config/chains'
 
 interface RewardBracketDetailProps {
-  cakeAmount: BigNumber
+  amount: BigNumber
   rewardBracket?: number
   numberWinners?: string
   isBurn?: boolean
@@ -15,12 +17,14 @@ interface RewardBracketDetailProps {
 
 const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailProps>> = ({
   rewardBracket,
-  cakeAmount,
+  amount,
   numberWinners,
   isHistoricRound,
   isBurn,
   isLoading,
 }) => {
+  const { chainId } = useActiveChainId()
+  const symbol = SHORT_SYMBOL[chainId]
   const { t } = useTranslation()
   const cakePriceBusd = useCakePrice()
 
@@ -45,12 +49,12 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
         </Text>
       )}
       <>
-        {isLoading || cakeAmount.isNaN() ? (
+        {isLoading || amount.isNaN() ? (
           <Skeleton my="4px" mr="10px" height={20} width={110} />
         ) : (
-          <Balance fontSize="20px" bold unit=" CAKE" value={getBalanceNumber(cakeAmount)} decimals={0} />
+          <Balance fontSize="20px" bold unit={` ${symbol}`} value={getBalanceNumber(amount)} decimals={0} />
         )}
-        {isLoading || cakeAmount.isNaN() ? (
+        {isLoading || amount.isNaN() ? (
           <>
             <Skeleton mt="4px" mb="16px" height={12} width={70} />
           </>
@@ -59,15 +63,15 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
             fontSize="12px"
             color="textSubtle"
             prefix="~$"
-            value={getBalanceNumber(cakeAmount.times(cakePriceBusd))}
+            value={getBalanceNumber(amount.times(cakePriceBusd))}
             decimals={0}
           />
         )}
-        {isHistoricRound && cakeAmount && (
+        {isHistoricRound && amount && (
           <>
             {numberWinners !== '0' && (
               <Text fontSize="12px" color="textSubtle">
-                {getFullDisplayBalance(cakeAmount.div(parseInt(numberWinners, 10)), 18, 2)} CAKE {t('each')}
+                {getFullDisplayBalance(amount.div(parseInt(numberWinners, 10)), 18, 2)} {symbol} {t('each')}
               </Text>
             )}
             <Text fontSize="12px" color="textSubtle">

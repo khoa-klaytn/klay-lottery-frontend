@@ -37,14 +37,14 @@ export const processLotteryResponse = (
   lotteryData: LotteryResponse & { userTickets?: LotteryRoundUserTickets },
 ): LotteryRound => {
   const {
-    priceTicket: priceTicketInCakeAsString,
+    priceTicket: priceTicketAsString,
     discountDivisor: discountDivisorAsString,
-    amountCollected: amountCollectedInCakeAsString,
+    amountCollected: amountCollectedAsString,
   } = lotteryData
 
   const discountDivisor = new BigNumber(discountDivisorAsString)
-  const priceTicketInCake = new BigNumber(priceTicketInCakeAsString)
-  const amountCollectedInCake = new BigNumber(amountCollectedInCakeAsString)
+  const priceTicket = new BigNumber(priceTicketAsString)
+  const amountCollected = new BigNumber(amountCollectedAsString)
 
   return {
     isLoading: lotteryData.isLoading,
@@ -53,13 +53,14 @@ export const processLotteryResponse = (
     status: lotteryData.status,
     startTime: lotteryData.startTime,
     endTime: lotteryData.endTime,
-    priceTicketInCake,
+    priceTicket,
     discountDivisor,
+    winnersPortion: lotteryData.winnersPortion,
     burnPortion: lotteryData.burnPortion,
     firstTicketId: lotteryData.firstTicketId,
-    amountCollectedInCake,
+    amountCollected,
     finalNumber: lotteryData.finalNumber,
-    cakePerBracket: lotteryData.rewardPerUserPerBracket,
+    rewardPerUserPerBracket: lotteryData.rewardPerUserPerBracket,
     countWinnersPerBracket: lotteryData.countWinnersPerBracket,
     rewardsBreakdown: lotteryData.rewardsBreakdown,
   }

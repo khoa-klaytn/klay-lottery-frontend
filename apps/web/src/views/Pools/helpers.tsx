@@ -20,10 +20,10 @@ export const convertSharesToCake = (
   fee?: BigNumber,
 ) => {
   const sharePriceNumber = getBalanceNumber(cakePerFullShare, decimals)
-  const amountInCake = new BigNumber(shares.multipliedBy(sharePriceNumber)).minus(fee || BIG_ZERO)
-  const cakeAsNumberBalance = getBalanceNumber(amountInCake, decimals)
+  const amount = new BigNumber(shares.multipliedBy(sharePriceNumber)).minus(fee || BIG_ZERO)
+  const cakeAsNumberBalance = getBalanceNumber(amount, decimals)
   const cakeAsBigNumber = getDecimalAmount(new BigNumber(cakeAsNumberBalance), decimals)
-  const cakeAsDisplayBalance = getFullDisplayBalance(amountInCake, decimals, decimalsToRound)
+  const cakeAsDisplayBalance = getFullDisplayBalance(amount, decimals, decimalsToRound)
   return { cakeAsNumberBalance, cakeAsBigNumber, cakeAsDisplayBalance }
 }
 
