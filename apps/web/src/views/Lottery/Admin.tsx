@@ -2,7 +2,7 @@ import { Button, Input } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useMemo, useState } from 'react'
 import { useLottery } from 'state/lottery/hooks'
 import { parseEther } from 'viem'
 
@@ -12,7 +12,13 @@ export function Admin() {
   const {
     currentRound: { lotteryId, status },
   } = useLottery()
-  const disabled = status !== LotteryStatus.CLAIMABLE && lotteryId !== '0'
+  const objBtnDisabled = useMemo(
+    () => ({
+      startLottery: status !== LotteryStatus.CLAIMABLE && lotteryId !== '0',
+      closeLottery: status !== LotteryStatus.OPEN,
+    }),
+    [status, lotteryId],
+  )
   const [endTime, setEndTime] = useState(() => {
     const now = new Date()
     const month = `${now.getMonth() + 1}`.padStart(2, '0')
@@ -46,6 +52,11 @@ export function Admin() {
       BigInt(winnersPortion),
       BigInt(burnPortion),
     ])
+    console.log(res)
+  }
+
+  async function closeLottery() {
+    const res = await callWithGasPrice(lotteryContract, 'closeLottery', [BigInt(lotteryId)])
     console.log(res)
   }
 
@@ -172,8 +183,11 @@ export function Admin() {
           />
         </label>{' '}
       </fieldset>
-      <Button type="submit" disabled={disabled}>
+      <Button type="submit" disabled={objBtnDisabled.startLottery}>
         Start Lottery
+      </Button>
+      <Button type="button" disabled={objBtnDisabled.closeLottery} onClick={closeLottery}>
+        Close Lottery
       </Button>
       <Button type="reset" onClick={reset}>
         Reset
