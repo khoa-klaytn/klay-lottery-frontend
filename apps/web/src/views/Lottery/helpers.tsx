@@ -6,7 +6,6 @@ import { LotteryResponse, LotteryRound, LotteryRoundUserTickets } from 'state/ty
  */
 export const parseRetrievedNumber = (number: string): string => {
   const numberAsArray = number.split('')
-  numberAsArray.splice(0, 1)
   numberAsArray.reverse()
   return numberAsArray.join('')
 }
