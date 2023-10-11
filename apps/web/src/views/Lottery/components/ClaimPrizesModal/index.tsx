@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { styled } from 'styled-components'
 import { Heading, ModalContainer, ModalHeader, ModalTitle, ModalBody, ModalCloseButton } from '@pancakeswap/uikit'
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import { useTranslation } from '@pancakeswap/localization'
 import delay from 'lodash/delay'
 import confetti from 'canvas-confetti'
@@ -56,6 +56,7 @@ const ClaimPrizesModal: React.FC<React.PropsWithChildren<ClaimPrizesModalModalPr
   onDismiss,
   roundsToClaim,
 }) => {
+  const publicClient = usePublicClient()
   const { t } = useTranslation()
   const { address: account } = useAccount()
   const { currentLotteryId } = useLottery()
@@ -79,7 +80,7 @@ const ClaimPrizesModal: React.FC<React.PropsWithChildren<ClaimPrizesModalModalPr
       <ModalBody p="24px">
         <ClaimPrizesInner
           onSuccess={() => {
-            dispatch(fetchUserLotteries({ account, currentLotteryId }))
+            dispatch(fetchUserLotteries({ publicClient, account, currentLotteryId }))
             onDismiss?.()
           }}
           roundsToClaim={roundsToClaim}
