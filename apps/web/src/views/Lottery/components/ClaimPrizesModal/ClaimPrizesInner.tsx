@@ -1,11 +1,11 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { AutoRenewIcon, Button, Flex, PresentWonIcon, Text, useToast, Balance } from '@pancakeswap/uikit'
-import { useAccount, usePublicClient } from 'wagmi'
+import { useAccount, useChainId, usePublicClient } from 'wagmi'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { useKlayLotteryContract } from 'hooks/useContract'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useAppDispatch } from 'state'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { fetchUserLotteries } from 'state/lottery'
@@ -13,6 +13,7 @@ import { useLottery } from 'state/lottery/hooks'
 import { useGasPrice } from 'state/user/hooks'
 import { callWithEstimateGas } from 'utils/calls'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
+import { SHORT_SYMBOL } from 'config/chains'
 
 interface ClaimInnerProps {
   roundsToClaim: LotteryTicketClaimData[]
@@ -21,6 +22,8 @@ interface ClaimInnerProps {
 
 const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = ({ onSuccess, roundsToClaim }) => {
   const publicClient = usePublicClient()
+  const chainId = useChainId()
+  const symbol = useMemo(() => SHORT_SYMBOL[chainId], [chainId])
   const { address: account } = useAccount()
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -94,7 +97,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
       toastSuccess(
         t('Prizes Collected!'),
         <ToastDescriptionWithTx txHash={receipt.transactionHash}>
-          {t('Your CAKE prizes for round %lotteryId% have been sent to your wallet', { lotteryId })}
+          {t('Your %symbol% prizes for round %lotteryId% have been sent to your wallet', { symbol, lotteryId })}
         </ToastDescriptionWithTx>,
       )
       handleProgressToNextClaim()
@@ -147,7 +150,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     if (receipts.length === transactionsToFire) {
       toastSuccess(
         t('Prizes Collected!'),
-        t('Your CAKE prizes for round %lotteryId% have been sent to your wallet', { lotteryId }),
+        t('Your %symbol% prizes for round %lotteryId% have been sent to your wallet', { symbol, lotteryId }),
       )
       handleProgressToNextClaim()
     }
@@ -171,7 +174,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
             fontSize="44px"
             bold
             color="secondary"
-            unit=" CAKE!"
+            unit={` ${symbol}!`}
           />
           <PresentWonIcon ml={['0', null, '12px']} width="64px" />
         </Flex>
