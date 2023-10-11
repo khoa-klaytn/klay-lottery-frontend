@@ -1,12 +1,11 @@
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { useLottery } from 'state/lottery/hooks'
-import { StartLottery } from './StartLottery'
-import { CloseLottery } from './CloseLottery'
-import { MakeLotteryClaimable } from './MakeLotteryClaimable'
-import { Reset } from './Reset'
+import StartLottery from './StartLottery'
+import CloseLottery from './CloseLottery'
+import MakeLotteryClaimable from './MakeLotteryClaimable'
 
-export function Admin() {
+export default function Operator() {
   const { callWithGasPrice } = useCallWithGasPrice()
   const lotteryContract = useKlayLotteryContract()
   const {
@@ -28,7 +27,6 @@ export function Admin() {
         lotteryId={lotteryId}
         status={status}
       />
-      <Reset callWithGasPrice={callWithGasPrice} lotteryContract={lotteryContract} />
     </>
   )
 }

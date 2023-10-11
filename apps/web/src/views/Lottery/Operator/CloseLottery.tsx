@@ -2,7 +2,7 @@ import { Button } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallback } from 'react'
 
-export function CloseLottery({ callWithGasPrice, lotteryContract, lotteryId, status }) {
+export default function CloseLottery({ callWithGasPrice, lotteryContract, lotteryId, status }) {
   const closeLottery = useCallback(async () => {
     const res = await callWithGasPrice(lotteryContract, 'closeLottery', [BigInt(lotteryId)])
     console.log(res)

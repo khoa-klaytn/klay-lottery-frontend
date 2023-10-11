@@ -1,7 +1,7 @@
 import { Button } from '@pancakeswap/uikit'
 import { useCallback } from 'react'
 
-export function Reset({ callWithGasPrice, lotteryContract }) {
+export default function Reset({ callWithGasPrice, lotteryContract }) {
   const reset = useCallback(async () => {
     const res = await callWithGasPrice(lotteryContract, 'reset', [])
     console.log(res)

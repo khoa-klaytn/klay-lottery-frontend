@@ -5,7 +5,7 @@ import { useCallback, useMemo } from 'react'
 import { Chain, useChainId } from 'wagmi'
 import { SendTransactionResult } from 'wagmi/dist/actions'
 
-export function MakeLotteryClaimable({ callWithGasPrice, lotteryContract, lotteryId, status }) {
+export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract, lotteryId, status }) {
   const chainId = useChainId()
   const chain = useMemo(() => chains[chains.CHAIN_QUERY_NAME[chainId]] as Chain, [chainId])
   const makeLotteryClaimable = useCallback(async () => {
