@@ -1,12 +1,17 @@
 import { Button, Input } from '@pancakeswap/uikit'
+import * as chains from 'config/chains'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useMemo, useState } from 'react'
 import { useLottery } from 'state/lottery/hooks'
 import { parseEther } from 'viem'
+import { Chain, useChainId } from 'wagmi'
+import { SendTransactionResult } from 'wagmi/dist/actions'
 
 export function Admin() {
+  const chainId = useChainId()
+  const chain = useMemo(() => chains[chains.CHAIN_QUERY_NAME[chainId]] as Chain, [chainId])
   const { callWithGasPrice } = useCallWithGasPrice()
   const lotteryContract = useKlayLotteryContract()
   const {
@@ -16,6 +21,7 @@ export function Admin() {
     () => ({
       startLottery: status !== LotteryStatus.CLAIMABLE && lotteryId !== '0',
       closeLottery: status !== LotteryStatus.OPEN,
+      drawFinal: status !== LotteryStatus.CLOSE,
     }),
     [status, lotteryId],
   )
@@ -57,6 +63,20 @@ export function Admin() {
 
   async function closeLottery() {
     const res = await callWithGasPrice(lotteryContract, 'closeLottery', [BigInt(lotteryId)])
+    console.log(res)
+  }
+
+  async function drawFinal() {
+    let res: SendTransactionResult
+    if (chain.testnet) {
+      res = await callWithGasPrice(lotteryContract, 'setFinalNumberAndMakeLotteryClaimable', [
+        BigInt(lotteryId),
+        true,
+        BigInt(1),
+      ])
+    } else {
+      res = await callWithGasPrice(lotteryContract, 'drawFinalNumberAndMakeLotteryClaimable', [BigInt(lotteryId), true])
+    }
     console.log(res)
   }
 
@@ -188,6 +208,9 @@ export function Admin() {
       </Button>
       <Button type="button" disabled={objBtnDisabled.closeLottery} onClick={closeLottery}>
         Close Lottery
+      </Button>
+      <Button type="button" disabled={objBtnDisabled.drawFinal} onClick={drawFinal}>
+        Draw Final
       </Button>
       <Button type="reset" onClick={reset}>
         Reset
