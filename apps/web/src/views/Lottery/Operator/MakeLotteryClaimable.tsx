@@ -18,7 +18,7 @@ export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract
         res = await callWithGasPrice(lotteryContract, 'setFinalNumberAndMakeLotteryClaimable', [
           BigInt(lotteryId),
           true,
-          BigInt(finalNumber),
+          BigInt(finalNumber.toString().split('').reverse().join('')),
         ])
       } else {
         res = await callWithGasPrice(lotteryContract, 'drawFinalNumberAndMakeLotteryClaimable', [
