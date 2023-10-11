@@ -52,12 +52,12 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
     if (lotteryNodeData) {
       const { burnPortion, amountCollected, rewardsBreakdown, countWinnersPerBracket } = lotteryNodeData
 
-      const feeAsPercentage = new BigNumber(burnPortion).div(100)
-      const cakeToBurn = feeAsPercentage.div(100).times(new BigNumber(amountCollected))
-      const amountLessTreasuryFee = new BigNumber(amountCollected).minus(cakeToBurn)
+      const burnPercentage = new BigNumber(burnPortion).div(100)
+      const amountToBurn = burnPercentage.div(100).times(new BigNumber(amountCollected))
+      const amountLessTreasuryFee = new BigNumber(amountCollected).minus(amountToBurn)
       setState({
         isLoading: false,
-        amountToBurn: cakeToBurn,
+        amountToBurn,
         rewardsLessTreasuryFee: amountLessTreasuryFee,
         rewardsBreakdown,
         countWinnersPerBracket,
@@ -73,7 +73,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
     }
   }, [lotteryNodeData])
 
-  const getCakeRewards = (bracket: number) => {
+  const getRewards = (bracket: number) => {
     const shareAsPercentage = new BigNumber(state.rewardsBreakdown[bracket]).div(100)
     return state.rewardsLessTreasuryFee.div(100).times(shareAsPercentage)
   }
@@ -93,7 +93,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
           <RewardBracketDetail
             key={bracketIndex}
             rewardBracket={bracketIndex}
-            amount={!isLoading && getCakeRewards(bracketIndex)}
+            amount={!isLoading && getRewards(bracketIndex)}
             numberWinners={!isLoading && countWinnersPerBracket[bracketIndex]}
             isHistoricRound={isHistoricRound}
             isLoading={isLoading}
