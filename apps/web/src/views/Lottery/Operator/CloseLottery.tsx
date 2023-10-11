@@ -9,7 +9,7 @@ export default function CloseLottery({ callWithGasPrice, lotteryContract, lotter
   }, [callWithGasPrice, lotteryContract, lotteryId])
 
   return (
-    <Button type="button" onClick={closeLottery} disabled={status === LotteryStatus.OPEN}>
+    <Button type="button" onClick={closeLottery} disabled={status !== LotteryStatus.OPEN}>
       Close Lottery
     </Button>
   )
