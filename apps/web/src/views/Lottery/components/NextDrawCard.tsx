@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { styled } from 'styled-components'
 import {
   Card,
@@ -15,12 +15,13 @@ import {
   ExpandableLabel,
   Balance,
 } from '@pancakeswap/uikit'
-import { useAccount } from 'wagmi'
+import { useAccount, useChainId } from 'wagmi'
 import { LotteryStatus } from 'config/constants/types'
 import { useTranslation } from '@pancakeswap/localization'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { useLottery } from 'state/lottery/hooks'
 import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
+import { SHORT_SYMBOL } from 'config/chains'
 import ViewTicketsModal from './ViewTicketsModal'
 import BuyTicketsButton from './BuyTicketsButton'
 import { dateTimeOptions } from '../helpers'
@@ -58,6 +59,8 @@ const NextDrawCard = () => {
     t,
     currentLanguage: { locale },
   } = useTranslation()
+  const chainId = useChainId()
+  const symbol = useMemo(() => SHORT_SYMBOL[chainId], [chainId])
   const { address: account } = useAccount()
   const { currentLotteryId, isTransitioning, currentRound } = useLottery()
   const { endTime, amountCollected, userTickets, status } = currentRound
@@ -104,7 +107,7 @@ const NextDrawCard = () => {
             fontSize="14px"
             color="textSubtle"
             textAlign={['center', null, null, 'left']}
-            unit=" CAKE"
+            unit={` ${symbol}`}
             value={getBalanceNumber(amountCollected)}
             decimals={0}
           />

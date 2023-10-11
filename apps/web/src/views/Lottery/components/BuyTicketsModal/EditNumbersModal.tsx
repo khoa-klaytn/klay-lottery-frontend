@@ -1,8 +1,10 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { styled } from 'styled-components'
 import { Modal, Text, Flex, Button, ArrowBackIcon, AutoRenewIcon } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { useTranslation } from '@pancakeswap/localization'
+import { useChainId } from 'wagmi'
+import { SHORT_SYMBOL } from 'config/chains'
 import TicketInput from './TicketInput'
 import { UpdateTicketAction, Ticket } from './useTicketsReducer'
 
@@ -36,6 +38,8 @@ const EditNumbersModal: React.FC<
     onDismiss?: () => void
   }>
 > = ({ totalCost, updateTicket, randomize, tickets, allComplete, onConfirm, isConfirming, onDismiss }) => {
+  const chainId = useChainId()
+  const symbol = useMemo(() => SHORT_SYMBOL[chainId], [chainId])
   const { theme } = useTheme()
   const { t } = useTranslation()
   const handleOnConfirm = useCallback(() => onConfirm(), [onConfirm])
@@ -49,7 +53,9 @@ const EditNumbersModal: React.FC<
       <ScrollableContainer>
         <Flex justifyContent="space-between" mb="16px">
           <Text color="textSubtle">{t('Total cost')}:</Text>
-          <Text>~{totalCost} CAKE</Text>
+          <Text>
+            ~{totalCost} {symbol}
+          </Text>
         </Flex>
         <Text fontSize="12px" color="textSubtle" mb="16px">
           {t(
