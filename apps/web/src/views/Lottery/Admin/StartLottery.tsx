@@ -1,30 +1,14 @@
 import { Button, Input } from '@pancakeswap/uikit'
-import * as chains from 'config/chains'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
-import { FormEvent, useMemo, useState } from 'react'
-import { useLottery } from 'state/lottery/hooks'
+import { FormEvent, useCallback, useMemo, useState } from 'react'
 import { parseEther } from 'viem'
-import { Chain, useChainId } from 'wagmi'
-import { SendTransactionResult } from 'wagmi/dist/actions'
 
-export function Admin() {
-  const chainId = useChainId()
-  const chain = useMemo(() => chains[chains.CHAIN_QUERY_NAME[chainId]] as Chain, [chainId])
+export function StartLottery({ lotteryId, status }) {
+  const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
   const { callWithGasPrice } = useCallWithGasPrice()
   const lotteryContract = useKlayLotteryContract()
-  const {
-    currentRound: { lotteryId, status },
-  } = useLottery()
-  const objBtnDisabled = useMemo(
-    () => ({
-      startLottery: status !== LotteryStatus.CLAIMABLE && lotteryId !== '0',
-      closeLottery: status !== LotteryStatus.OPEN,
-      drawFinal: status !== LotteryStatus.CLOSE,
-    }),
-    [status, lotteryId],
-  )
   const [endTime, setEndTime] = useState(() => {
     const now = new Date()
     const month = `${now.getMonth() + 1}`.padStart(2, '0')
@@ -44,46 +28,39 @@ export function Admin() {
   const [winnersPortion, setWinnersPortion] = useState('8000')
   const [burnPortion, setBurnPortion] = useState('1000')
 
-  async function startLottery(ev: FormEvent<HTMLFormElement>) {
-    ev.preventDefault()
+  const startLottery = useCallback(
+    async (ev: FormEvent<HTMLFormElement>) => {
+      ev.preventDefault()
 
-    const parsedEndTime = Math.ceil(new Date(endTime).getTime() / 1000)
-    const parsedPriceTicket = parseEther(priceTicket)
+      const parsedEndTime = Math.ceil(new Date(endTime).getTime() / 1000)
+      const parsedPriceTicket = parseEther(priceTicket)
 
-    const res = await callWithGasPrice(lotteryContract, 'startLottery', [
-      BigInt(parsedEndTime),
-      BigInt(parsedPriceTicket),
-      BigInt(discountDivisor),
-      [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
-      BigInt(winnersPortion),
-      BigInt(burnPortion),
-    ])
-    console.log(res)
-  }
-
-  async function closeLottery() {
-    const res = await callWithGasPrice(lotteryContract, 'closeLottery', [BigInt(lotteryId)])
-    console.log(res)
-  }
-
-  async function drawFinal() {
-    let res: SendTransactionResult
-    if (chain.testnet) {
-      res = await callWithGasPrice(lotteryContract, 'setFinalNumberAndMakeLotteryClaimable', [
-        BigInt(lotteryId),
-        true,
-        BigInt(1),
+      const res = await callWithGasPrice(lotteryContract, 'startLottery', [
+        BigInt(parsedEndTime),
+        BigInt(parsedPriceTicket),
+        BigInt(discountDivisor),
+        [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
+        BigInt(winnersPortion),
+        BigInt(burnPortion),
       ])
-    } else {
-      res = await callWithGasPrice(lotteryContract, 'drawFinalNumberAndMakeLotteryClaimable', [BigInt(lotteryId), true])
-    }
-    console.log(res)
-  }
-
-  async function reset() {
-    const res = await callWithGasPrice(lotteryContract, 'reset', [])
-    console.log(res)
-  }
+      console.log(res)
+    },
+    [
+      callWithGasPrice,
+      lotteryContract,
+      endTime,
+      priceTicket,
+      discountDivisor,
+      reward1,
+      reward2,
+      reward3,
+      reward4,
+      reward5,
+      reward6,
+      winnersPortion,
+      burnPortion,
+    ],
+  )
 
   return (
     <form onSubmit={startLottery}>
@@ -201,19 +178,10 @@ export function Admin() {
             value={burnPortion}
             onInput={(ev) => setBurnPortion(ev.currentTarget.value)}
           />
-        </label>{' '}
+        </label>
       </fieldset>
-      <Button type="submit" disabled={objBtnDisabled.startLottery}>
+      <Button type="submit" disabled={disabled}>
         Start Lottery
-      </Button>
-      <Button type="button" disabled={objBtnDisabled.closeLottery} onClick={closeLottery}>
-        Close Lottery
-      </Button>
-      <Button type="button" disabled={objBtnDisabled.drawFinal} onClick={drawFinal}>
-        Draw Final
-      </Button>
-      <Button type="reset" onClick={reset}>
-        Reset
       </Button>
     </form>
   )
