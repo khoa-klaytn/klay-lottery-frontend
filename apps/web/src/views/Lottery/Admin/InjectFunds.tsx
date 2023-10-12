@@ -1,16 +1,8 @@
 import { LotteryStatus } from 'config/constants/types'
-import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useState } from 'react'
-import { useLottery } from 'state/lottery/hooks'
 
-export default function InjectFunds() {
-  const { callWithGasPrice } = useCallWithGasPrice()
-  const lotteryContract = useKlayLotteryContract()
+export default function InjectFunds({ callWithGasPrice, lotteryContract, status }) {
   const [amount, setAmount] = useState(0)
-  const {
-    currentRound: { status },
-  } = useLottery()
   const disabled = useMemo(() => status !== LotteryStatus.OPEN, [status])
 
   const injectFunds = useCallback(

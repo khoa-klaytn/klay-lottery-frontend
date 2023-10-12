@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { getKlayLotteryAddress } from 'utils/addressHelpers'
+import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
+import { useKlayLotteryContract } from 'hooks/useContract'
+import { useLottery } from 'state/lottery/hooks'
 import InjectFunds from './InjectFunds'
 import Operator from './Operator'
 import Owner from './Owner'
@@ -12,6 +15,11 @@ export default function Admin() {
   const [isOperator, setIsOperator] = useState(false)
   const [isOwner, setIsOwner] = useState(false)
   const [isInjector, setIsInjector] = useState(false)
+  const { callWithGasPrice } = useCallWithGasPrice()
+  const lotteryContract = useKlayLotteryContract()
+  const {
+    currentRound: { lotteryId, status },
+  } = useLottery()
 
   useEffect(() => {
     if (account && publicClient) {
@@ -51,9 +59,18 @@ export default function Admin() {
 
   return (
     <>
-      {isOperator && <Operator />}
-      {isOwner && <Owner />}
-      {isInjector && <InjectFunds />}
+      {isOperator && (
+        <Operator
+          callWithGasPrice={callWithGasPrice}
+          lotteryContract={lotteryContract}
+          lotteryId={lotteryId}
+          status={status}
+        />
+      )}
+      {isOwner && <Owner callWithGasPrice={callWithGasPrice} lotteryContract={lotteryContract} />}
+      {isInjector && (
+        <InjectFunds callWithGasPrice={callWithGasPrice} lotteryContract={lotteryContract} status={status} />
+      )}
     </>
   )
 }
