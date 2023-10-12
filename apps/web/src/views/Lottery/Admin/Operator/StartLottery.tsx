@@ -2,13 +2,14 @@ import { Button, Input } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
-import { FormEvent, useCallback, useMemo, useState } from 'react'
-import { parseEther } from 'viem'
+import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
+import { ContractFunctionExecutionError, parseEther } from 'viem'
 
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
   const { callWithGasPrice } = useCallWithGasPrice()
   const lotteryContract = useKlayLotteryContract()
+  const endTimeRef = useRef<HTMLInputElement>(null)
   const [endTime, setEndTime] = useState(() => {
     const now = new Date()
     const month = `${now.getMonth() + 1}`.padStart(2, '0')
@@ -35,15 +36,24 @@ export default function StartLottery({ lotteryId, status }) {
       const parsedEndTime = Math.ceil(new Date(endTime).getTime() / 1000)
       const parsedPriceTicket = parseEther(priceTicket)
 
-      const res = await callWithGasPrice(lotteryContract, 'startLottery', [
-        BigInt(parsedEndTime),
-        BigInt(parsedPriceTicket),
-        BigInt(discountDivisor),
-        [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
-        BigInt(winnersPortion),
-        BigInt(burnPortion),
-      ])
-      console.log(res)
+      try {
+        const res = await callWithGasPrice(lotteryContract, 'startLottery', [
+          BigInt(parsedEndTime),
+          BigInt(parsedPriceTicket),
+          BigInt(discountDivisor),
+          [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
+          BigInt(winnersPortion),
+          BigInt(burnPortion),
+        ])
+        console.log(res)
+      } catch (e) {
+        console.error(e)
+        if (e instanceof ContractFunctionExecutionError) {
+          if (e.shortMessage.endsWith('underflow or overflow.')) {
+            endTimeRef.current.setCustomValidity('endTime must be in the future')
+          }
+        }
+      }
     },
     [
       callWithGasPrice,
@@ -71,7 +81,11 @@ export default function StartLottery({ lotteryId, status }) {
           name="endTime"
           id="endTime"
           value={endTime}
-          onInput={(ev) => setEndTime(ev.currentTarget.value)}
+          ref={endTimeRef}
+          onInput={(ev) => {
+            ev.currentTarget.setCustomValidity('')
+            setEndTime(ev.currentTarget.value)
+          }}
         />
       </label>
       <label>
