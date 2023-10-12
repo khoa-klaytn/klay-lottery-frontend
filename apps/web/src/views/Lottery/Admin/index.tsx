@@ -1,13 +1,19 @@
-import { useEffect, useState } from 'react'
-import { useAccount, usePublicClient } from 'wagmi'
 import { klayLotteryABI } from 'config/abi/klayLottery'
+import { useEffect, useMemo, useState } from 'react'
 import { getKlayLotteryAddress } from 'utils/addressHelpers'
-import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { useKlayLotteryContract } from 'hooks/useContract'
-import { useLottery } from 'state/lottery/hooks'
-import InjectFunds from './InjectFunds'
-import Operator from './Operator'
-import Owner from './Owner'
+import { useAccount, usePublicClient } from 'wagmi'
+import { Button } from '@pancakeswap/uikit'
+import { styled } from 'styled-components'
+import Modal from './Modal'
+
+const klayLotteryAddress = getKlayLotteryAddress()
+
+const ShowAdminBtn = styled(Button)`
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+`
 
 export default function Admin() {
   const publicClient = usePublicClient()
@@ -15,18 +21,15 @@ export default function Admin() {
   const [isOperator, setIsOperator] = useState(false)
   const [isOwner, setIsOwner] = useState(false)
   const [isInjector, setIsInjector] = useState(false)
-  const { callWithGasPrice } = useCallWithGasPrice()
-  const lotteryContract = useKlayLotteryContract()
-  const {
-    currentRound: { lotteryId, status },
-  } = useLottery()
+  const isAdmin = useMemo(() => isOperator || isOwner || isInjector, [isOperator, isOwner, isInjector])
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     if (account && publicClient) {
       const operatorPromise = publicClient
         .readContract({
           abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
+          address: klayLotteryAddress,
           functionName: 'operatorAddress',
         })
         .then((operatorAddress) => {
@@ -37,7 +40,7 @@ export default function Admin() {
       const ownerPromise = publicClient
         .readContract({
           abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
+          address: klayLotteryAddress,
           functionName: 'owner',
         })
         .then((ownerAddress) => {
@@ -48,7 +51,7 @@ export default function Admin() {
       const injectorPromise = publicClient
         .readContract({
           abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
+          address: klayLotteryAddress,
           functionName: 'injectorAddress',
         })
         .then((injectorAddress) => {
@@ -62,19 +65,20 @@ export default function Admin() {
     }
   }, [account, publicClient])
 
+  if (!isAdmin) return <></>
+
   return (
     <>
-      {isOperator && (
-        <Operator
-          callWithGasPrice={callWithGasPrice}
-          lotteryContract={lotteryContract}
-          lotteryId={lotteryId}
-          status={status}
+      <ShowAdminBtn type="button" onClick={() => setShowModal(true)}>
+        Admin
+      </ShowAdminBtn>
+      {showModal && (
+        <Modal
+          isOperator={isOperator}
+          isOwner={isOwner}
+          isInjector={isInjector}
+          hideModal={() => setShowModal(false)}
         />
-      )}
-      {isOwner && <Owner callWithGasPrice={callWithGasPrice} lotteryContract={lotteryContract} />}
-      {isInjector && (
-        <InjectFunds callWithGasPrice={callWithGasPrice} lotteryContract={lotteryContract} status={status} />
       )}
     </>
   )
