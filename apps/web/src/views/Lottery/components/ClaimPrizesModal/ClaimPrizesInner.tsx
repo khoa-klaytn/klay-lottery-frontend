@@ -10,10 +10,9 @@ import { useAppDispatch } from 'state'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { fetchUserLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
-import { useGasPrice } from 'state/user/hooks'
-import { callWithEstimateGas } from 'utils/calls'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
 import { SHORT_SYMBOL } from 'config/chains'
+import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 
 interface ClaimInnerProps {
   roundsToClaim: LotteryTicketClaimData[]
@@ -28,7 +27,6 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const { maxNumberTicketsPerBuyOrClaim, currentLotteryId } = useLottery()
-  const gasPrice = useGasPrice()
   const { toastSuccess } = useToast()
   const { fetchWithCatchTxError, loading: pendingTx } = useCatchTxError()
   const [activeClaimIndex, setActiveClaimIndex] = useState(0)
@@ -38,6 +36,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     ),
   )
   const lotteryContract = useKlayLotteryContract()
+  const { callWithGasPrice } = useCallWithGasPrice()
   const activeClaimData = roundsToClaim[activeClaimIndex]
 
   const cakePriceBusd = useCakePrice()
@@ -50,10 +49,7 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     const ticketIds = ticketsWithUnclaimedRewards.map((ticket) => {
       return ticket.id
     })
-    const brackets = ticketsWithUnclaimedRewards.map((ticket) => {
-      return ticket.rewardBracket
-    })
-    return { lotteryId, ticketIds, brackets }
+    return { lotteryId, ticketIds }
   }
 
   const claimTicketsCallData = parseUnclaimedTicketDataForClaimCall(
@@ -73,25 +69,22 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     }
   }
 
-  const getTicketBatches = (ticketIds: string[], brackets: number[]): { ticketIds: string[]; brackets: number[] }[] => {
+  const getTicketBatches = (ticketIds: string[]): { ticketIds: string[] }[] => {
     const requests = []
     const maxAsNumber = maxNumberTicketsPerBuyOrClaim.toNumber()
 
     for (let i = 0; i < ticketIds.length; i += maxAsNumber) {
       const ticketIdsSlice = ticketIds.slice(i, maxAsNumber + i)
-      const bracketsSlice = brackets.slice(i, maxAsNumber + i)
-      requests.push({ ticketIds: ticketIdsSlice, brackets: bracketsSlice })
+      requests.push({ ticketIds: ticketIdsSlice })
     }
 
     return requests
   }
 
   const handleClaim = async () => {
-    const { lotteryId, ticketIds, brackets } = claimTicketsCallData
+    const { lotteryId, ticketIds } = claimTicketsCallData
     const receipt = await fetchWithCatchTxError(() => {
-      return callWithEstimateGas(lotteryContract, 'claimTickets', [lotteryId, ticketIds, brackets], {
-        gasPrice,
-      })
+      return callWithGasPrice(lotteryContract, 'claimTickets', [lotteryId, ticketIds])
     })
     if (receipt?.status) {
       toastSuccess(
@@ -105,20 +98,15 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
   }
 
   const handleBatchClaim = async () => {
-    const { lotteryId, ticketIds, brackets } = claimTicketsCallData
-    const ticketBatches = getTicketBatches(ticketIds, brackets)
+    const { lotteryId, ticketIds } = claimTicketsCallData
+    const ticketBatches = getTicketBatches(ticketIds)
     const transactionsToFire = ticketBatches.length
     const receipts = []
     // eslint-disable-next-line no-restricted-syntax
     for (const ticketBatch of ticketBatches) {
       /* eslint-disable no-await-in-loop */
       const receipt = await fetchWithCatchTxError(() => {
-        return callWithEstimateGas(
-          lotteryContract,
-          'claimTickets',
-          [lotteryId, ticketBatch.ticketIds, ticketBatch.brackets],
-          { gasPrice },
-        )
+        return callWithGasPrice(lotteryContract, 'claimTickets', [lotteryId, ticketBatch.ticketIds])
       })
       if (receipt?.status) {
         // One transaction within batch has succeeded
