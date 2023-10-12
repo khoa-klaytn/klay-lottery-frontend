@@ -33,7 +33,6 @@ interface TicketNumberProps extends LotteryTicket {
 const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({ localId, id, number, rewardBracket }) => {
   const { t } = useTranslation()
   const reversedNumber = parseRetrievedNumber(number)
-  const numberAsArray = reversedNumber.split('')
   const numberMatches = rewardBracket + 1
 
   return (
@@ -50,7 +49,7 @@ const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({ lo
       </Flex>
       <StyledNumberWrapper>
         {rewardBracket >= 0 && <RewardHighlighter numberMatches={numberMatches} />}
-        {numberAsArray.map((digit) => (
+        {reversedNumber.map((digit) => (
           <Text key={`${localId || id}-${digit}-${_uniqueId()}`} fontSize="16px">
             {digit}
           </Text>

@@ -7,7 +7,6 @@ import random from 'lodash/random'
 const generateTicketNumbers = (
   numberOfTickets: number,
   userCurrentTickets?: LotteryTicket[] | null,
-  minNumber = 0,
   maxNumber = 999999,
 ): number[] => {
   // Populate array with existing tickets (if they have them) to ensure no duplicates when generating new numbers
@@ -20,10 +19,10 @@ const generateTicketNumbers = (
   const generatedTicketNumbers = [...existingTicketNumbers]
 
   for (let count = 0; count < numberOfTickets; count++) {
-    let randomNumber = random(minNumber, maxNumber)
+    let randomNumber = random(0, maxNumber)
     while (generatedTicketNumbers.includes(randomNumber)) {
       // Catch for duplicates - generate a new number until the array doesn't include the random number generated
-      randomNumber = random(minNumber, maxNumber)
+      randomNumber = random(0, maxNumber)
     }
     generatedTicketNumbers.push(randomNumber)
   }
