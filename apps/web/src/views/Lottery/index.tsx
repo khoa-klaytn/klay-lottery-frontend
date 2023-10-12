@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { styled } from 'styled-components'
 import { Box, Flex, Heading, Skeleton, PageSection } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
@@ -6,9 +5,7 @@ import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { useFetchLottery, useLottery } from 'state/lottery/hooks'
 import { LotterySubgraphHealthIndicator } from 'components/SubgraphHealthIndicator'
-import { useAccount, usePublicClient } from 'wagmi'
-import { klayLotteryABI } from 'config/abi/klayLottery'
-import { getKlayLotteryAddress } from 'utils/addressHelpers'
+import { useState } from 'react'
 import {
   TITLE_BG,
   GET_TICKETS_BG,
@@ -27,9 +24,7 @@ import AllHistoryCard from './components/AllHistoryCard'
 import CheckPrizesSection from './components/CheckPrizesSection'
 import HowToPlay from './components/HowToPlay'
 import useShowMoreUserHistory from './hooks/useShowMoreUserRounds'
-import Operator from './Operator'
-import Owner from './Owner'
-import InjectFunds from './InjectFunds'
+import Admin from './Admin'
 
 const LotteryPage = styled.div`
   min-height: calc(100vh - 64px);
@@ -47,45 +42,11 @@ const Lottery = () => {
   const endTimeAsInt = parseInt(endTime, 10)
   const { nextEventTime, postCountdownText, preCountdownText } = useGetNextLotteryEvent(endTimeAsInt, status)
   const { numUserRoundsRequested, handleShowMoreUserRounds } = useShowMoreUserHistory()
-  const publicClient = usePublicClient()
-  const { address: account } = useAccount()
-  const [isOperator, setIsOperator] = useState(false)
-  const [isOwner, setIsOwner] = useState(false)
-  const [isInjector, setIsInjector] = useState(false)
-
-  useEffect(() => {
-    if (account && publicClient)
-      (async () => {
-        const operatorAddress = await publicClient.readContract({
-          abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
-          functionName: 'operatorAddress',
-        })
-        if (operatorAddress === account) setIsOperator(true)
-        const ownerAddress = await publicClient.readContract({
-          abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
-          functionName: 'owner',
-        })
-        if (ownerAddress === account) {
-          setIsOwner(true)
-          setIsInjector(true)
-        }
-        const injectorAddress = await publicClient.readContract({
-          abi: klayLotteryABI,
-          address: getKlayLotteryAddress(),
-          functionName: 'injectorAddress',
-        })
-        if (injectorAddress === account) setIsInjector(true)
-      })()
-  }, [account, publicClient])
 
   return (
     <>
       <LotteryPage>
-        {isOperator && <Operator />}
-        {isOwner && <Owner />}
-        {isInjector && <InjectFunds />}
+        <Admin />
         <PageSection background={TITLE_BG} index={1} hasCurvedDivider={false}>
           <Hero />
         </PageSection>
