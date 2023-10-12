@@ -30,7 +30,9 @@ export default function Admin() {
           functionName: 'operatorAddress',
         })
         .then((operatorAddress) => {
-          if (operatorAddress === account) setIsOperator(true)
+          console.info(`operatorAddress: ${operatorAddress}`)
+          setIsOperator(operatorAddress === account)
+          return operatorAddress
         })
       const ownerPromise = publicClient
         .readContract({
@@ -39,10 +41,9 @@ export default function Admin() {
           functionName: 'owner',
         })
         .then((ownerAddress) => {
-          if (ownerAddress === account) {
-            setIsOwner(true)
-            setIsInjector(true)
-          }
+          console.info(`ownerAddress: ${ownerAddress}`)
+          setIsOwner(ownerAddress === account)
+          return ownerAddress
         })
       const injectorPromise = publicClient
         .readContract({
@@ -51,9 +52,13 @@ export default function Admin() {
           functionName: 'injectorAddress',
         })
         .then((injectorAddress) => {
-          if (injectorAddress === account) setIsInjector(true)
+          console.info(`injectorAddress: ${injectorAddress}`)
+          return injectorAddress
         })
-      Promise.all([operatorPromise, ownerPromise, injectorPromise])
+      ;(async () => {
+        const [, ownerAddress, injectorAddress] = await Promise.all([operatorPromise, ownerPromise, injectorPromise])
+        setIsInjector(injectorAddress === account || ownerAddress === account)
+      })()
     }
   }, [account, publicClient])
 
