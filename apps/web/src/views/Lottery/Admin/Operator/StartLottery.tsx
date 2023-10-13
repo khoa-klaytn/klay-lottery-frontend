@@ -3,16 +3,9 @@ import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
+import { setRefChildCustomValidity, setRefCustomValidity } from 'utils/customValidity'
 import { handleCustomError } from 'utils/viem'
 import { BaseError, formatEther, parseEther } from 'viem'
-
-function setChildCustomValidity(el: HTMLFieldSetElement, msg: string) {
-  el.querySelectorAll('input')[0].setCustomValidity(msg)
-}
-
-function setRefChildCustomValidity(ref: React.RefObject<HTMLFieldSetElement>, msg: string) {
-  if (ref.current) setChildCustomValidity(ref.current, msg)
-}
 
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
@@ -64,16 +57,10 @@ export default function StartLottery({ lotteryId, status }) {
         console.error(e)
         if (e instanceof BaseError)
           handleCustomError(e, {
-            EndTimePast: (_, msg) => {
-              if (endTimeRef.current) endTimeRef.current.setCustomValidity(msg)
-            },
-            TicketPriceLow: ([min]) => {
-              if (priceTicketRef.current)
-                priceTicketRef.current.setCustomValidity(`TicketPriceLow: [min: ${formatEther(min)}]`)
-            },
-            DiscountDivisorLow: (_, msg) => {
-              if (discountDivisorRef.current) discountDivisorRef.current.setCustomValidity(msg)
-            },
+            EndTimePast: (_, msg) => setRefCustomValidity(endTimeRef, msg),
+            TicketPriceLow: ([min]) =>
+              setRefCustomValidity(priceTicketRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
+            DiscountDivisorLow: (_, msg) => setRefCustomValidity(discountDivisorRef, msg),
             PortionsExceed10000: ([name], msg) => {
               switch (name) {
                 case 'winners & burn':
@@ -116,7 +103,7 @@ export default function StartLottery({ lotteryId, status }) {
           value={endTime}
           ref={endTimeRef}
           onInput={(ev) => {
-            ev.currentTarget.setCustomValidity('')
+            setRefCustomValidity(endTimeRef, '')
             setEndTime(ev.currentTarget.value)
           }}
         />
@@ -129,7 +116,10 @@ export default function StartLottery({ lotteryId, status }) {
           id="priceTicket"
           value={priceTicket}
           ref={priceTicketRef}
-          onInput={(ev) => setPriceTicket(ev.currentTarget.value)}
+          onInput={(ev) => {
+            setRefCustomValidity(priceTicketRef, '')
+            setPriceTicket(ev.currentTarget.value)
+          }}
         />
       </label>
       <label>
@@ -141,7 +131,7 @@ export default function StartLottery({ lotteryId, status }) {
           value={discountDivisor}
           ref={discountDivisorRef}
           onInput={(ev) => {
-            ev.currentTarget.setCustomValidity('')
+            setRefCustomValidity(discountDivisorRef, '')
             setDiscountDivisor(ev.currentTarget.value)
           }}
         />

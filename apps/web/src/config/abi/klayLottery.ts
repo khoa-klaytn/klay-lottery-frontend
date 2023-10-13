@@ -11,11 +11,6 @@ export const klayLotteryABI = [
     type: 'constructor',
   },
   {
-    inputs: [],
-    name: 'CurrentLotteryNotClaimable',
-    type: 'error',
-  },
-  {
     inputs: [
       {
         internalType: 'uint256',
@@ -29,6 +24,21 @@ export const klayLotteryABI = [
   {
     inputs: [],
     name: 'EndTimePast',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'FinalNumberNotDrawn',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'LotteryNotClaimable',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'LotteryNotClose',
     type: 'error',
   },
   {
