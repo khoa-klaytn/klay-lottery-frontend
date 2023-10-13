@@ -32,6 +32,22 @@ export const klayLotteryABI = [
     type: 'error',
   },
   {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'sending',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'demanding',
+        type: 'uint256',
+      },
+    ],
+    name: 'InsufficientFunds',
+    type: 'error',
+  },
+  {
     inputs: [],
     name: 'LotteryNotClaimable',
     type: 'error',
@@ -52,6 +68,11 @@ export const klayLotteryABI = [
     type: 'error',
   },
   {
+    inputs: [],
+    name: 'LotteryOver',
+    type: 'error',
+  },
+  {
     inputs: [
       {
         internalType: 'string',
@@ -60,6 +81,32 @@ export const klayLotteryABI = [
       },
     ],
     name: 'PortionsExceed10000',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'SendFailed',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'TicketIdInvalid',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'TicketNotYours',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint32',
+        name: 'number',
+        type: 'uint32',
+      },
+    ],
+    name: 'TicketNumberInvalid',
     type: 'error',
   },
   {

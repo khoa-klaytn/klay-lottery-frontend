@@ -24,13 +24,14 @@ import { useAppDispatch } from 'state'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { fetchUserTicketsAndLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
-import { parseEther } from 'viem'
+import { BaseError, parseEther } from 'viem'
 import { styled } from 'styled-components'
 import { BIG_ZERO, BIG_ONE_HUNDRED } from '@pancakeswap/utils/bigNumber'
 import { getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
 import { klayLotteryABI } from 'config/abi/klayLottery'
+import { handleCustomError } from 'utils/viem'
 import EditNumbersModal from './EditNumbersModal'
 import NumTicketsToBuyButton from './NumTicketsToBuyButton'
 import { useTicketsReducer } from './useTicketsReducer'
@@ -83,7 +84,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
   const [insufficientBalance, setInsufficientBalance] = useState(false)
   const lotteryContract = useKlayLotteryContract()
-  const { toastSuccess } = useToast()
+  const { toastSuccess, toastError } = useToast()
   const [balance, setBalance] = useState(0n)
   const bnBalance = useMemo(() => new BigNumber(balance.toString()), [balance])
   const cakePriceBusd = useCakePrice()
@@ -254,7 +255,21 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         functionName: 'calculateCurrentTotalPriceForBulkTickets',
         args: [BigInt(ticketsForPurchase.length)],
       })
-      return callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], { value })
+      let res
+      try {
+        res = callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], { value })
+        console.log(res)
+      } catch (e) {
+        console.error(e)
+        if (e instanceof BaseError) {
+          handleCustomError(e, {
+            LotteryNotOpen: (_, msg) => toastError(msg),
+            InsufficientFunds: (_, msg) => toastError(msg),
+            TicketNumberInvalid: (_, msg) => toastError(msg),
+          })
+        }
+      }
+      return res
     },
     onSuccess: async ({ receipt }) => {
       onDismiss?.()
