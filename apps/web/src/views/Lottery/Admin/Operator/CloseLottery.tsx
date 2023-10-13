@@ -1,27 +1,35 @@
-import { Button } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
-import { useCallback, useRef } from 'react'
-import { setRefCustomValidity } from 'utils/customValidity'
+import { useCallback, useState } from 'react'
 import { handleCustomError } from 'utils/viem'
 import { BaseError } from 'viem'
+import { Button } from '@pancakeswap/uikit'
+import { EMsg } from '../EMsg'
 
 export default function CloseLottery({ callWithGasPrice, lotteryContract, lotteryId, status }) {
-  const btnRef = useRef<HTMLInputElement>(null)
+  const [eMsg, setEMsg] = useState('')
 
   const closeLottery = useCallback(async () => {
     try {
       const res = await callWithGasPrice(lotteryContract, 'closeLottery', [BigInt(lotteryId)])
+      setEMsg('')
       console.log(res)
     } catch (e) {
       console.error(e)
       if (e instanceof BaseError) {
         handleCustomError(e, {
-          LotteryNotOpen: (_, msg) => setRefCustomValidity(btnRef, msg),
-          LotteryNotOver: (_, msg) => setRefCustomValidity(btnRef, msg),
+          LotteryNotOpen: (_, msg) => setEMsg(msg),
+          LotteryNotOver: (_, msg) => setEMsg(msg),
         })
       }
     }
   }, [callWithGasPrice, lotteryContract, lotteryId])
 
-  return <input type="submit" onClick={closeLottery} disabled={status !== LotteryStatus.OPEN} value="Close Lottery" />
+  return (
+    <>
+      <Button type="button" onClick={closeLottery} disabled={status !== LotteryStatus.OPEN}>
+        Close Lottery
+      </Button>
+      {eMsg && <EMsg>{eMsg}</EMsg>}
+    </>
+  )
 }

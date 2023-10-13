@@ -3,9 +3,10 @@ import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
-import { setRefChildCustomValidity, setRefCustomValidity } from 'utils/customValidity'
+import { setRefCustomValidity } from 'utils/customValidity'
 import { handleCustomError } from 'utils/viem'
 import { BaseError, formatEther, parseEther } from 'viem'
+import { EMsg } from '../EMsg'
 
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
@@ -31,9 +32,9 @@ export default function StartLottery({ lotteryId, status }) {
   const [reward5, setReward5] = useState('2500')
   const [reward6, setReward6] = useState('5000')
 
-  const wnbPortionsRef = useRef<HTMLFieldSetElement>(null)
+  const [wnbEMsg, setWnbEMsg] = useState('') // [winners & burn] error message
   const [winnersPortion, setWinnersPortion] = useState('8000')
-  const rewardPortionsRef = useRef<HTMLFieldSetElement>(null)
+  const [rewardsEMsg, setRewardsEMsg] = useState('') // [rewards] error message
   const [burnPortion, setBurnPortion] = useState('1000')
 
   const startLottery = useCallback(
@@ -64,10 +65,10 @@ export default function StartLottery({ lotteryId, status }) {
             PortionsExceed10000: ([name], msg) => {
               switch (name) {
                 case 'winners & burn':
-                  setRefChildCustomValidity(wnbPortionsRef, msg)
+                  setWnbEMsg(msg)
                   break
                 case 'rewards':
-                  setRefChildCustomValidity(rewardPortionsRef, msg)
+                  setRewardsEMsg(msg)
                   break
                 default:
               }
@@ -136,7 +137,8 @@ export default function StartLottery({ lotteryId, status }) {
           }}
         />
       </label>
-      <fieldset ref={wnbPortionsRef}>
+      <fieldset>
+        {wnbEMsg && <EMsg>{wnbEMsg}</EMsg>}
         <header>Winners & Burn Portions</header>
         <label>
           winnersPortion
@@ -146,7 +148,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="winnersPortion"
             value={winnersPortion}
             onInput={(ev) => {
-              setRefChildCustomValidity(wnbPortionsRef, '')
+              setWnbEMsg('')
               setWinnersPortion(ev.currentTarget.value)
             }}
           />
@@ -159,13 +161,14 @@ export default function StartLottery({ lotteryId, status }) {
             id="burnPortion"
             value={burnPortion}
             onInput={(ev) => {
-              setRefChildCustomValidity(wnbPortionsRef, '')
+              setWnbEMsg('')
               setBurnPortion(ev.currentTarget.value)
             }}
           />
         </label>
       </fieldset>
-      <fieldset ref={rewardPortionsRef}>
+      <fieldset>
+        {rewardsEMsg && <EMsg>{rewardsEMsg}</EMsg>}
         <header>Reward Portions</header>
         <label>
           1
@@ -175,7 +178,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="reward1"
             value={reward1}
             onInput={(ev) => {
-              setRefChildCustomValidity(rewardPortionsRef, '')
+              setRewardsEMsg('')
               setReward1(ev.currentTarget.value)
             }}
           />
@@ -188,7 +191,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="reward2"
             value={reward2}
             onInput={(ev) => {
-              setRefChildCustomValidity(rewardPortionsRef, '')
+              setRewardsEMsg('')
               setReward2(ev.currentTarget.value)
             }}
           />
@@ -201,7 +204,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="reward3"
             value={reward3}
             onInput={(ev) => {
-              setRefChildCustomValidity(rewardPortionsRef, '')
+              setRewardsEMsg('')
               setReward3(ev.currentTarget.value)
             }}
           />
@@ -214,7 +217,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="reward4"
             value={reward4}
             onInput={(ev) => {
-              setRefChildCustomValidity(rewardPortionsRef, '')
+              setRewardsEMsg('')
               setReward4(ev.currentTarget.value)
             }}
           />
@@ -227,7 +230,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="reward5"
             value={reward5}
             onInput={(ev) => {
-              setRefChildCustomValidity(rewardPortionsRef, '')
+              setRewardsEMsg('')
               setReward5(ev.currentTarget.value)
             }}
           />
@@ -240,7 +243,7 @@ export default function StartLottery({ lotteryId, status }) {
             id="reward6"
             value={reward6}
             onInput={(ev) => {
-              setRefChildCustomValidity(rewardPortionsRef, '')
+              setRewardsEMsg('')
               setReward6(ev.currentTarget.value)
             }}
           />
