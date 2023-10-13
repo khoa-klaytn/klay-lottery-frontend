@@ -42,6 +42,16 @@ export const klayLotteryABI = [
     type: 'error',
   },
   {
+    inputs: [],
+    name: 'LotteryNotOpen',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'LotteryNotOver',
+    type: 'error',
+  },
+  {
     inputs: [
       {
         internalType: 'string',
