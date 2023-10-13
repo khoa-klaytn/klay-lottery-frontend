@@ -4,6 +4,7 @@ import { LotteryStatus } from 'config/constants/types'
 import { FormEvent, useCallback, useMemo, useState } from 'react'
 import { Chain, useChainId } from 'wagmi'
 import { SendTransactionResult } from 'wagmi/dist/actions'
+import { parseRetrievedNumber } from 'views/Lottery/helpers'
 
 export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract, lotteryId, status }) {
   const chainId = useChainId()
@@ -18,7 +19,7 @@ export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract
         res = await callWithGasPrice(lotteryContract, 'setFinalNumberAndMakeLotteryClaimable', [
           BigInt(lotteryId),
           true,
-          BigInt(finalNumber.toString().split('').reverse().join('')),
+          BigInt(parseRetrievedNumber(finalNumber.toString()).join('')),
         ])
       } else {
         res = await callWithGasPrice(lotteryContract, 'drawFinalNumberAndMakeLotteryClaimable', [
