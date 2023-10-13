@@ -32,7 +32,7 @@ const initialState: LotteryState = {
     finalNumber: null,
     rewardPerUserPerBracket: [],
     countWinnersPerBracket: [],
-    rewardsBreakdown: [],
+    rewardPortions: [],
     userTickets: {
       isLoading: true,
       tickets: [],

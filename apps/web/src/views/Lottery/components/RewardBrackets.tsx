@@ -31,7 +31,7 @@ interface RewardsState {
   isLoading: boolean
   amountToBurn: BigNumber
   rewardsLessTreasuryFee: BigNumber
-  rewardsBreakdown: string[]
+  rewardPortions: string[]
   countWinnersPerBracket: string[]
 }
 
@@ -44,13 +44,13 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
     isLoading: true,
     amountToBurn: BIG_ZERO,
     rewardsLessTreasuryFee: BIG_ZERO,
-    rewardsBreakdown: null,
+    rewardPortions: null,
     countWinnersPerBracket: null,
   })
 
   useEffect(() => {
     if (lotteryNodeData) {
-      const { burnPortion, amountCollected, rewardsBreakdown, countWinnersPerBracket } = lotteryNodeData
+      const { burnPortion, amountCollected, rewardPortions, countWinnersPerBracket } = lotteryNodeData
 
       const burnPercentage = new BigNumber(burnPortion).div(100)
       const amountToBurn = burnPercentage.div(100).times(new BigNumber(amountCollected))
@@ -59,7 +59,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
         isLoading: false,
         amountToBurn,
         rewardsLessTreasuryFee: amountLessTreasuryFee,
-        rewardsBreakdown,
+        rewardPortions,
         countWinnersPerBracket,
       })
     } else {
@@ -67,14 +67,14 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
         isLoading: true,
         amountToBurn: BIG_ZERO,
         rewardsLessTreasuryFee: BIG_ZERO,
-        rewardsBreakdown: null,
+        rewardPortions: null,
         countWinnersPerBracket: null,
       })
     }
   }, [lotteryNodeData])
 
   const getRewards = (bracket: number) => {
-    const shareAsPercentage = new BigNumber(state.rewardsBreakdown[bracket]).div(100)
+    const shareAsPercentage = new BigNumber(state.rewardPortions[bracket]).div(100)
     return state.rewardsLessTreasuryFee.div(100).times(shareAsPercentage)
   }
 

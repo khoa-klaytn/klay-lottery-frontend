@@ -11,6 +11,49 @@ export const klayLotteryABI = [
     type: 'constructor',
   },
   {
+    inputs: [],
+    name: 'CurrentLotteryNotClaimable',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'min',
+        type: 'uint256',
+      },
+    ],
+    name: 'DiscountDivisorLow',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'EndTimePast',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'string',
+        name: 'name',
+        type: 'string',
+      },
+    ],
+    name: 'PortionsExceed10000',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'min',
+        type: 'uint256',
+      },
+    ],
+    name: 'TicketPriceLow',
+    type: 'error',
+  },
+  {
     anonymous: false,
     inputs: [
       {
@@ -248,33 +291,7 @@ export const klayLotteryABI = [
   },
   {
     inputs: [],
-    name: 'MAX_LENGTH_LOTTERY',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'MIN_DISCOUNT_DIVISOR',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'MIN_LENGTH_LOTTERY',
     outputs: [
       {
         internalType: 'uint256',
@@ -493,19 +510,6 @@ export const klayLotteryABI = [
   },
   {
     inputs: [],
-    name: 'maxPriceTicket',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'minPriceTicket',
     outputs: [
       {
@@ -644,13 +648,8 @@ export const klayLotteryABI = [
         name: '_minPriceTicket',
         type: 'uint256',
       },
-      {
-        internalType: 'uint256',
-        name: '_maxPriceTicket',
-        type: 'uint256',
-      },
     ],
-    name: 'setMinAndMaxTicketPrice',
+    name: 'setMinTicketPrice',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -691,11 +690,6 @@ export const klayLotteryABI = [
         type: 'uint256',
       },
       {
-        internalType: 'uint256[6]',
-        name: '_rewardsBreakdown',
-        type: 'uint256[6]',
-      },
-      {
         internalType: 'uint256',
         name: '_winnersPortion',
         type: 'uint256',
@@ -704,6 +698,11 @@ export const klayLotteryABI = [
         internalType: 'uint256',
         name: '_burnPortion',
         type: 'uint256',
+      },
+      {
+        internalType: 'uint256[6]',
+        name: '_rewardPortions',
+        type: 'uint256[6]',
       },
     ],
     name: 'startLottery',
@@ -757,7 +756,7 @@ export const klayLotteryABI = [
           },
           {
             internalType: 'uint256[6]',
-            name: 'rewardsBreakdown',
+            name: 'rewardPortions',
             type: 'uint256[6]',
           },
           {
@@ -848,7 +847,7 @@ export const klayLotteryABI = [
           },
           {
             internalType: 'uint256[6]',
-            name: 'rewardsBreakdown',
+            name: 'rewardPortions',
             type: 'uint256[6]',
           },
           {

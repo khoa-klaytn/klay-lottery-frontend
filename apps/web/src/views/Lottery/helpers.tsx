@@ -62,6 +62,6 @@ export const processLotteryResponse = (
     finalNumber: lotteryData.finalNumber,
     rewardPerUserPerBracket: lotteryData.rewardPerUserPerBracket,
     countWinnersPerBracket: lotteryData.countWinnersPerBracket,
-    rewardsBreakdown: lotteryData.rewardsBreakdown,
+    rewardPortions: lotteryData.rewardPortions,
   }
 }

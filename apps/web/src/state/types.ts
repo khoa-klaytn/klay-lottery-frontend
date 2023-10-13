@@ -249,7 +249,7 @@ export interface LotteryRound extends LotteryRoundGenerics {
   amountCollected: BigNumber
   rewardPerUserPerBracket: string[]
   countWinnersPerBracket: string[]
-  rewardsBreakdown: string[]
+  rewardPortions: string[]
 }
 
 export interface LotteryResponse extends LotteryRoundGenerics {
@@ -258,7 +258,7 @@ export interface LotteryResponse extends LotteryRoundGenerics {
   amountCollected: SerializedBigNumber
   rewardPerUserPerBracket: SerializedBigNumber[]
   countWinnersPerBracket: SerializedBigNumber[]
-  rewardsBreakdown: SerializedBigNumber[]
+  rewardPortions: SerializedBigNumber[]
 }
 
 export interface LotteryState {

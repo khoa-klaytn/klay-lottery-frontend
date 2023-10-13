@@ -23,7 +23,7 @@ const processViewLotterySuccessResponse = (
     finalNumber,
     rewardPerUserPerBracket,
     countWinnersPerBracket,
-    rewardsBreakdown,
+    rewardPortions,
   } = response
 
   const statusKey = Object.keys(LotteryStatus)[status]
@@ -33,7 +33,7 @@ const processViewLotterySuccessResponse = (
   const serializedCountWinnersPerBracket = countWinnersPerBracket.map((winnersInBracket) =>
     bigIntToSerializedBigNumber(winnersInBracket),
   )
-  const serializedRewardsBreakdown = rewardsBreakdown.map((reward) => bigIntToSerializedBigNumber(reward))
+  const serializedRewardPortions = rewardPortions.map((reward) => bigIntToSerializedBigNumber(reward))
 
   return {
     isLoading: false,
@@ -50,7 +50,7 @@ const processViewLotterySuccessResponse = (
     finalNumber,
     rewardPerUserPerBracket: serializedRewardPerUserPerBracket,
     countWinnersPerBracket: serializedCountWinnersPerBracket,
-    rewardsBreakdown: serializedRewardsBreakdown,
+    rewardPortions: serializedRewardPortions,
   }
 }
 
@@ -70,7 +70,7 @@ const processViewLotteryErrorResponse = (lotteryId: string): LotteryResponse => 
     finalNumber: null,
     rewardPerUserPerBracket: [],
     countWinnersPerBracket: [],
-    rewardsBreakdown: [],
+    rewardPortions: [],
   }
 }
 
