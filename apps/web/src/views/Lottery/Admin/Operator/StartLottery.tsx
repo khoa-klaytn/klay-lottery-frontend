@@ -3,7 +3,16 @@ import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
-import { ContractFunctionExecutionError, parseEther } from 'viem'
+import { handleCustomError } from 'utils/viem'
+import { BaseError, formatEther, parseEther } from 'viem'
+
+function setChildCustomValidity(el: HTMLFieldSetElement, msg: string) {
+  el.querySelectorAll('input')[0].setCustomValidity(msg)
+}
+
+function setRefChildCustomValidity(ref: React.RefObject<HTMLFieldSetElement>, msg: string) {
+  if (ref.current) setChildCustomValidity(ref.current, msg)
+}
 
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
@@ -18,7 +27,9 @@ export default function StartLottery({ lotteryId, status }) {
     const minutes = `${now.getMinutes()}`.padStart(2, '0')
     return `${now.getFullYear()}-${month}-${date}T${hours}:${minutes}`
   })
+  const priceTicketRef = useRef<HTMLInputElement>(null)
   const [priceTicket, setPriceTicket] = useState('1')
+  const discountDivisorRef = useRef<HTMLInputElement>(null)
   const [discountDivisor, setDiscountDivisor] = useState('2000')
   const [reward1, setReward1] = useState('200')
   const [reward2, setReward2] = useState('300')
@@ -26,7 +37,10 @@ export default function StartLottery({ lotteryId, status }) {
   const [reward4, setReward4] = useState('1500')
   const [reward5, setReward5] = useState('2500')
   const [reward6, setReward6] = useState('5000')
+
+  const wnbPortionsRef = useRef<HTMLFieldSetElement>(null)
   const [winnersPortion, setWinnersPortion] = useState('8000')
+  const rewardPortionsRef = useRef<HTMLFieldSetElement>(null)
   const [burnPortion, setBurnPortion] = useState('1000')
 
   const startLottery = useCallback(
@@ -41,18 +55,37 @@ export default function StartLottery({ lotteryId, status }) {
           BigInt(parsedEndTime),
           BigInt(parsedPriceTicket),
           BigInt(discountDivisor),
-          [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
           BigInt(winnersPortion),
           BigInt(burnPortion),
+          [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
         ])
         console.log(res)
       } catch (e) {
         console.error(e)
-        if (e instanceof ContractFunctionExecutionError) {
-          if (e.shortMessage.endsWith('underflow or overflow.')) {
-            endTimeRef.current.setCustomValidity('endTime must be in the future')
-          }
-        }
+        if (e instanceof BaseError)
+          handleCustomError(e, {
+            EndTimePast: (_, msg) => {
+              if (endTimeRef.current) endTimeRef.current.setCustomValidity(msg)
+            },
+            TicketPriceLow: ([min]) => {
+              if (priceTicketRef.current)
+                priceTicketRef.current.setCustomValidity(`TicketPriceLow: [min: ${formatEther(min)}]`)
+            },
+            DiscountDivisorLow: (_, msg) => {
+              if (discountDivisorRef.current) discountDivisorRef.current.setCustomValidity(msg)
+            },
+            PortionsExceed10000: ([name], msg) => {
+              switch (name) {
+                case 'winners & burn':
+                  setRefChildCustomValidity(wnbPortionsRef, msg)
+                  break
+                case 'rewards':
+                  setRefChildCustomValidity(rewardPortionsRef, msg)
+                  break
+                default:
+              }
+            },
+          })
       }
     },
     [
@@ -95,6 +128,7 @@ export default function StartLottery({ lotteryId, status }) {
           name="priceTicket"
           id="priceTicket"
           value={priceTicket}
+          ref={priceTicketRef}
           onInput={(ev) => setPriceTicket(ev.currentTarget.value)}
         />
       </label>
@@ -105,74 +139,15 @@ export default function StartLottery({ lotteryId, status }) {
           name="discountDivisor"
           id="discountDivisor"
           value={discountDivisor}
-          onInput={(ev) => setDiscountDivisor(ev.currentTarget.value)}
+          ref={discountDivisorRef}
+          onInput={(ev) => {
+            ev.currentTarget.setCustomValidity('')
+            setDiscountDivisor(ev.currentTarget.value)
+          }}
         />
       </label>
-      <fieldset>
-        <header>Rewards Breakdown</header>
-        <label>
-          1
-          <Input
-            type="number"
-            name="reward1"
-            id="reward1"
-            value={reward1}
-            onInput={(ev) => setReward1(ev.currentTarget.value)}
-          />
-        </label>
-        <label>
-          2
-          <Input
-            type="number"
-            name="reward2"
-            id="reward2"
-            value={reward2}
-            onInput={(ev) => setReward2(ev.currentTarget.value)}
-          />
-        </label>
-        <label>
-          3
-          <Input
-            type="number"
-            name="reward3"
-            id="reward3"
-            value={reward3}
-            onInput={(ev) => setReward3(ev.currentTarget.value)}
-          />
-        </label>
-        <label>
-          4
-          <Input
-            type="number"
-            name="reward4"
-            id="reward4"
-            value={reward4}
-            onInput={(ev) => setReward4(ev.currentTarget.value)}
-          />
-        </label>
-        <label>
-          5
-          <Input
-            type="number"
-            name="reward5"
-            id="reward5"
-            value={reward5}
-            onInput={(ev) => setReward5(ev.currentTarget.value)}
-          />
-        </label>
-        <label>
-          6
-          <Input
-            type="number"
-            name="reward6"
-            id="reward6"
-            value={reward6}
-            onInput={(ev) => setReward6(ev.currentTarget.value)}
-          />
-        </label>{' '}
-      </fieldset>
-      <fieldset>
-        <header>Portions</header>
+      <fieldset ref={wnbPortionsRef}>
+        <header>Winners & Burn Portions</header>
         <label>
           winnersPortion
           <Input
@@ -180,7 +155,10 @@ export default function StartLottery({ lotteryId, status }) {
             name="winnersPortion"
             id="winnersPortion"
             value={winnersPortion}
-            onInput={(ev) => setWinnersPortion(ev.currentTarget.value)}
+            onInput={(ev) => {
+              setRefChildCustomValidity(wnbPortionsRef, '')
+              setWinnersPortion(ev.currentTarget.value)
+            }}
           />
         </label>
         <label>
@@ -190,7 +168,91 @@ export default function StartLottery({ lotteryId, status }) {
             name="burnPortion"
             id="burnPortion"
             value={burnPortion}
-            onInput={(ev) => setBurnPortion(ev.currentTarget.value)}
+            onInput={(ev) => {
+              setRefChildCustomValidity(wnbPortionsRef, '')
+              setBurnPortion(ev.currentTarget.value)
+            }}
+          />
+        </label>
+      </fieldset>
+      <fieldset ref={rewardPortionsRef}>
+        <header>Reward Portions</header>
+        <label>
+          1
+          <Input
+            type="number"
+            name="reward1"
+            id="reward1"
+            value={reward1}
+            onInput={(ev) => {
+              setRefChildCustomValidity(rewardPortionsRef, '')
+              setReward1(ev.currentTarget.value)
+            }}
+          />
+        </label>
+        <label>
+          2
+          <Input
+            type="number"
+            name="reward2"
+            id="reward2"
+            value={reward2}
+            onInput={(ev) => {
+              setRefChildCustomValidity(rewardPortionsRef, '')
+              setReward2(ev.currentTarget.value)
+            }}
+          />
+        </label>
+        <label>
+          3
+          <Input
+            type="number"
+            name="reward3"
+            id="reward3"
+            value={reward3}
+            onInput={(ev) => {
+              setRefChildCustomValidity(rewardPortionsRef, '')
+              setReward3(ev.currentTarget.value)
+            }}
+          />
+        </label>
+        <label>
+          4
+          <Input
+            type="number"
+            name="reward4"
+            id="reward4"
+            value={reward4}
+            onInput={(ev) => {
+              setRefChildCustomValidity(rewardPortionsRef, '')
+              setReward4(ev.currentTarget.value)
+            }}
+          />
+        </label>
+        <label>
+          5
+          <Input
+            type="number"
+            name="reward5"
+            id="reward5"
+            value={reward5}
+            onInput={(ev) => {
+              setRefChildCustomValidity(rewardPortionsRef, '')
+              setReward5(ev.currentTarget.value)
+            }}
+          />
+        </label>
+        <label>
+          6
+          <Input
+            type="number"
+            name="reward6"
+            id="reward6"
+            value={reward6}
+            onInput={(ev) => {
+              setRefChildCustomValidity(rewardPortionsRef, '')
+              setReward6(ev.currentTarget.value)
+            }}
           />
         </label>
       </fieldset>
