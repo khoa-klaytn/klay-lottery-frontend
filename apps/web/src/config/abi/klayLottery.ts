@@ -797,7 +797,7 @@ export const klayLotteryABI = [
       {
         components: [
           {
-            internalType: 'enum KlayLottery.Status',
+            internalType: 'enum IndexedKlayLottery.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -867,7 +867,7 @@ export const klayLotteryABI = [
             type: 'uint32',
           },
         ],
-        internalType: 'struct KlayLottery.Lottery[]',
+        internalType: 'struct IndexedKlayLottery.Lottery[]',
         name: 'lotteries',
         type: 'tuple[]',
       },
@@ -888,7 +888,7 @@ export const klayLotteryABI = [
       {
         components: [
           {
-            internalType: 'enum KlayLottery.Status',
+            internalType: 'enum IndexedKlayLottery.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -958,7 +958,7 @@ export const klayLotteryABI = [
             type: 'uint32',
           },
         ],
-        internalType: 'struct KlayLottery.Lottery',
+        internalType: 'struct IndexedKlayLottery.Lottery',
         name: '',
         type: 'tuple',
       },
@@ -1055,7 +1055,7 @@ export const klayLotteryABI = [
             type: 'address',
           },
         ],
-        internalType: 'struct KlayLottery.Ticket[]',
+        internalType: 'struct IndexedKlayLottery.Ticket[]',
         name: 'tickets',
         type: 'tuple[]',
       },

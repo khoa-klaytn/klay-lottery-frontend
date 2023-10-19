@@ -18,7 +18,7 @@ export default {
     [ChainId.BSC]: '0x6Ab8463a4185b80905E05A9ff80A2d6b714B9e95',
   },
   klayLottery: {
-    [ChainId.KLAYTN_TESTNET]: '0x1C4Ef2947493df191c285684b2c683FF2D924975',
+    [ChainId.KLAYTN_TESTNET]: '0x932b292250Da9D9eCdFFAfA0F37bb4A07EFd0fc8',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {
