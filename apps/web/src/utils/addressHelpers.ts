@@ -119,10 +119,6 @@ export const getMasterChefV3Address = (chainId?: number) => {
   return getAddressFromMapNoFallback(addresses.masterChefV3, chainId)
 }
 
-export const getV3MigratorAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.v3Migrator, chainId)
-}
-
 export const getTradingRewardAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.tradingReward, chainId)
 }

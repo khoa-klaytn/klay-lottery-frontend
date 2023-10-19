@@ -27,7 +27,6 @@ import {
   getTradingCompetitionAddressMobox,
   getTradingRewardAddress,
   getV3AirdropAddress,
-  getV3MigratorAddress,
   getAffiliateProgramAddress,
   getTradingRewardTopTradesAddress,
   getVCakeAddress,
@@ -73,7 +72,6 @@ import { tradingCompetitionMoDABI } from 'config/abi/tradingCompetitionMoD'
 import { tradingCompetitionMoboxABI } from 'config/abi/tradingCompetitionMobox'
 import { tradingRewardABI } from 'config/abi/tradingReward'
 import { v3AirdropABI } from 'config/abi/v3Airdrop'
-import { v3MigratorABI } from 'config/abi/v3Migrator'
 import { vCakeABI } from 'config/abi/vCake'
 import { anniversaryAchievementABI } from 'config/abi/anniversaryAchievement'
 import { revenueSharingPoolABI } from 'config/abi/revenueSharingPool'
@@ -324,15 +322,6 @@ export const getMasterChefV3Contract = (signer?: WalletClient, chainId?: number)
         signer,
       })
     : null
-}
-
-export const getV3MigratorContract = (signer?: WalletClient, chainId?: number) => {
-  return getContract({
-    abi: v3MigratorABI,
-    address: getV3MigratorAddress(chainId),
-    chainId,
-    signer,
-  })
 }
 
 export const getTradingRewardContract = (signer?: WalletClient, chainId?: number) => {

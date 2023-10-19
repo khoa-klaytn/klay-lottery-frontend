@@ -19,9 +19,6 @@ import v3BgCoinUp from './v3BgCoinUp.png'
 import v3BgCoinDown from './v3BgCoinDown.png'
 import v3BgBlingNormal from './v3BgBlingNormal.png'
 import v3BgBlingBlur from './v3BgBlingBlur.png'
-import farmV3MigrationBunny from './farmV3MigrationBunny.png'
-import farmV3MigrationMobileBunny from './farmV3MigrationMobileBunny.png'
-import farmV3MigrationBunnyFull from './farmV3MigrationBunnyFull.png'
 import TradingRewardButter from './butter.png'
 import TradingRewardButter2 from './butter-2.png'
 import TradingRewardLoveButter from './love-butter.png'
@@ -117,9 +114,6 @@ export {
   v3BgCoinDown,
   v3BgBlingNormal,
   v3BgBlingBlur,
-  farmV3MigrationBunny,
-  farmV3MigrationMobileBunny,
-  farmV3MigrationBunnyFull,
   TradingRewardButter,
   TradingRewardLoveButter,
   TradingRewardBunny,

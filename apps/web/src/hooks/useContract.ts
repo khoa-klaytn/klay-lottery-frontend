@@ -39,7 +39,6 @@ import {
   getUnsContract,
   getAffiliateProgramContract,
   getV3AirdropContract,
-  getV3MigratorContract,
   getTradingRewardTopTradesContract,
   getVCakeContract,
   getRevenueSharingPoolContract,
@@ -321,12 +320,6 @@ export function useMasterchefV3() {
   const { chainId } = useActiveChainId()
   const { data: signer } = useWalletClient()
   return useMemo(() => getMasterChefV3Contract(signer ?? undefined, chainId), [signer, chainId])
-}
-
-export function useV3MigratorContract() {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getV3MigratorContract(signer ?? undefined, chainId), [chainId, signer])
 }
 
 export const useTradingRewardContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {

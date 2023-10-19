@@ -1,14 +1,12 @@
-import { useMemo, useContext } from 'react'
+import { useMemo } from 'react'
 import { Currency, CurrencyAmount, Pair, Percent } from '@pancakeswap/sdk'
-import { Text, Card, CardBody, Flex, CardProps, TooltipText, useTooltip, Link, AutoColumn } from '@pancakeswap/uikit'
+import { Text, Card, CardBody, Flex, CardProps, TooltipText, useTooltip, AutoColumn } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
 import { useTranslation } from '@pancakeswap/localization'
 import useTotalSupply from 'hooks/useTotalSupply'
 import { useStablecoinPriceAmount } from 'hooks/useBUSDPrice'
 import { useAccount } from 'wagmi'
 import { BIG_INT_ZERO } from 'config/constants/exchange'
-import { useGetRemovedTokenAmounts } from 'views/RemoveLiquidity/RemoveStableLiquidity/hooks/useStableDerivedBurnInfo'
-import { StableConfigContext } from 'views/Swap/hooks/useStableConfig'
 
 import { useLPApr } from 'state/swap/useLPApr'
 import { useTokenBalance } from 'state/wallet/hooks'
@@ -114,13 +112,6 @@ export const withLPValues = withLPValuesFactory({
   hookArgFn: ({ pair, userPoolBalance, totalPoolTokens }) => ({ pair, userPoolBalance, totalPoolTokens }),
 })
 
-export const withStableLPValues = withLPValuesFactory({
-  useLPValuesHook: useGetRemovedTokenAmounts,
-  hookArgFn: ({ userPoolBalance }) => ({
-    lpAmount: userPoolBalance?.quotient?.toString(),
-  }),
-})
-
 function MinimalPositionCardView({
   pair,
   currency0,
@@ -131,8 +122,6 @@ function MinimalPositionCardView({
   userPoolBalance,
   poolTokenPercentage,
 }: PositionCardProps) {
-  const isStableLP = useContext(StableConfigContext)
-
   const { t } = useTranslation()
   const poolData = useLPApr(pair)
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
@@ -190,34 +179,30 @@ function MinimalPositionCardView({
                   </Text>
                   <Text>{poolTokenPercentage ? `${poolTokenPercentage.toFixed(6)}%` : '-'}</Text>
                 </FixedHeightRow>
-                {isStableLP ? null : (
-                  <FixedHeightRow>
-                    <Text color="textSubtle" small>
-                      {t('Pooled %asset%', { asset: currency0.symbol })}:
-                    </Text>
-                    {token0Deposited ? (
-                      <RowFixed>
-                        <Text ml="6px">{token0Deposited?.toSignificant(6)}</Text>
-                      </RowFixed>
-                    ) : (
-                      '-'
-                    )}
-                  </FixedHeightRow>
-                )}
-                {isStableLP ? null : (
-                  <FixedHeightRow>
-                    <Text color="textSubtle" small>
-                      {t('Pooled %asset%', { asset: currency1.symbol })}:
-                    </Text>
-                    {token1Deposited ? (
-                      <RowFixed>
-                        <Text ml="6px">{token1Deposited?.toSignificant(6)}</Text>
-                      </RowFixed>
-                    ) : (
-                      '-'
-                    )}
-                  </FixedHeightRow>
-                )}
+                <FixedHeightRow>
+                  <Text color="textSubtle" small>
+                    {t('Pooled %asset%', { asset: currency0.symbol })}:
+                  </Text>
+                  {token0Deposited ? (
+                    <RowFixed>
+                      <Text ml="6px">{token0Deposited?.toSignificant(6)}</Text>
+                    </RowFixed>
+                  ) : (
+                    '-'
+                  )}
+                </FixedHeightRow>
+                <FixedHeightRow>
+                  <Text color="textSubtle" small>
+                    {t('Pooled %asset%', { asset: currency1.symbol })}:
+                  </Text>
+                  {token1Deposited ? (
+                    <RowFixed>
+                      <Text ml="6px">{token1Deposited?.toSignificant(6)}</Text>
+                    </RowFixed>
+                  ) : (
+                    '-'
+                  )}
+                </FixedHeightRow>
               </AutoColumn>
             </AutoColumn>
           </CardBody>
@@ -228,24 +213,8 @@ function MinimalPositionCardView({
             <span role="img" aria-label="pancake-icon">
               🥞
             </span>{' '}
-            {isStableLP ? (
-              <>
-                {t(
-                  'By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click',
-                )}
-                <Link
-                  style={{ display: 'inline' }}
-                  ml="4px"
-                  external
-                  href="https://docs.pancakeswap.finance/products/stableswap#stableswap-fees"
-                >
-                  {t('here.')}
-                </Link>
-              </>
-            ) : (
-              t(
-                "By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share in the trading pair. Fees are added to the pair, accrue in real time and can be claimed by withdrawing your liquidity.",
-              )
+            {t(
+              "By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share in the trading pair. Fees are added to the pair, accrue in real time and can be claimed by withdrawing your liquidity.",
             )}
           </Text>
         </LightCard>
