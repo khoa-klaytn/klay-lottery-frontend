@@ -211,17 +211,6 @@ const TermsOfService = () => {
         </li>
       </ul>
 
-      <Text as="h3">Initial Farm Offering</Text>
-      <Text as="p">
-        You represent that you are not a user from the following countries or regions when participating in our Initial
-        Farm Offerings:
-      </Text>
-      <Text as="p">
-        Belarus, Cuba, Crimea Region, Democratic Republic of Congo, Iran, Iraq, New Zealand, North Korea, South Sudan,
-        Sudan, Syria, United States of America and its territories (American Samoa, Guam, Puerto Rico, the Northern
-        Mariana Islands, and the U.S. Virgin Islands), Zimbabwe.
-      </Text>
-
       <Text as="h3">Not Registered with the SEC or Any Other Agency</Text>
       <Text as="p">
         We are not registered with the U.S. Securities and Exchange Commission as a national securities exchange or in

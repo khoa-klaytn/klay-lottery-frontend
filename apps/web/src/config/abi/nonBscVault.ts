@@ -141,20 +141,6 @@ export const nonBscVaultABI = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'CROSS_FARMING_RECEIVER',
-    outputs: [{ internalType: 'address', name: '', type: 'address' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'CROSS_FARMING_SENDER',
-    outputs: [{ internalType: 'address', name: '', type: 'address' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [
       { internalType: 'address', name: '_user', type: 'address' },
       { internalType: 'uint256', name: '_mcv2pid', type: 'uint256' },

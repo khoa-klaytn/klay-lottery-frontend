@@ -28,8 +28,7 @@ const Agreement = () => {
         <Text as="p">
           1.2 A Referral must be a new user and must not have interacted or signed with the PancakeSwap platform or used
           any of PancakeSwap’s services (including but not limited to V2, V3 swapping services, perpetual trading,
-          Non-Fungible Tokens and related services, initial farm offerings and similar offerings) (“PancakeSwap
-          Services”).
+          Non-Fungible Tokens and related services and offerings) (“PancakeSwap Services”).
         </Text>
 
         <Text as="h3">2. Commissions for swap trades</Text>

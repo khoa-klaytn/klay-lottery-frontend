@@ -35,7 +35,6 @@ import {
   useStableSwapPath,
 } from 'state/info/hooks'
 import { styled } from 'styled-components'
-import useSWRImmutable from 'swr/immutable'
 import { getBlockExploreLink } from 'utils'
 import { formatAmount } from 'utils/formatInfoNumbers'
 import { CurrencyLogo, DoubleCurrencyLogo } from 'views/Info/components/CurrencyLogo'
@@ -75,11 +74,6 @@ const LockedTokensContainer = styled(Flex)`
   max-width: 280px;
 `
 
-const getFarmConfig = async (chainId: number) => {
-  const config = await import(`@pancakeswap/farms/constants/${chainId}`)
-  return config
-}
-
 const PoolPage: React.FC<React.PropsWithChildren<{ address: string }>> = ({ address: routeAddress }) => {
   const { isXs, isSm } = useMatchBreakpoints()
   const { t } = useTranslation()
@@ -102,20 +96,8 @@ const PoolPage: React.FC<React.PropsWithChildren<{ address: string }>> = ({ addr
   const infoTypeParam = useStableSwapPath()
   const isStableSwap = checkIsStableSwap()
   const stableAPR = useStableSwapAPR(isStableSwap && address)
-  const { data: farmConfig } = useSWRImmutable(isStableSwap && chainId && `info/gerFarmConfig/${chainId}`, () =>
-    getFarmConfig(chainId),
-  )
 
-  const feeDisplay = useMemo(() => {
-    if (isStableSwap && farmConfig) {
-      const stableLpFee =
-        farmConfig?.default.find((d) => d.stableSwapAddress?.toLowerCase() === address)?.stableLpFee ?? 0
-      return new BigNumber(stableLpFee)
-        .times(showWeeklyData ? poolData?.volumeOutUSDWeek : poolData?.volumeOutUSD)
-        .toNumber()
-    }
-    return showWeeklyData ? poolData?.lpFees7d : poolData?.lpFees24h
-  }, [poolData, isStableSwap, farmConfig, showWeeklyData, address])
+  const feeDisplay = 0
   const stableTotalFee = useMemo(
     () => (isStableSwap ? new BigNumber(feeDisplay).times(2).toNumber() : 0),
     [isStableSwap, feeDisplay],

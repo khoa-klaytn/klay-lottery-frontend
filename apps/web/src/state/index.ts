@@ -8,7 +8,6 @@ import lotteryReducer from './lottery'
 import poolsReducer from './pools'
 import transactions from './transactions/reducer'
 import user from './user/reducer'
-import globalReducer from './global/reducer'
 
 const PERSISTED_KEYS: string[] = ['user', 'transactions']
 
@@ -23,7 +22,6 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    global: globalReducer,
     pools: poolsReducer,
     lottery: lotteryReducer,
 

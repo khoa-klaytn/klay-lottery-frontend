@@ -22,19 +22,16 @@ interface Props {
   externalLink?: ReactNode;
   compoundIndex?: number;
   compoundOn?: boolean;
-  isFarm?: boolean;
 }
 
 export const Details = memo(function Details({
   totalYield = 0,
   externalLink,
   lpReward = 0,
-  farmReward = 0,
   lpApy = ZERO_PERCENT,
   farmApr = ZERO_PERCENT,
   farmApy = ZERO_PERCENT,
   lpApr = ZERO_PERCENT,
-  isFarm = false,
   compoundIndex = 0,
   compoundOn = true,
 }: Props) {
@@ -64,16 +61,6 @@ export const Details = memo(function Details({
         <Text small color="textSubtle" textAlign="right">
           ${formatAmount(+lpReward)}
         </Text>
-        {isFarm && (
-          <>
-            <Text color="textSubtle" small style={{ textIndent: "1em" }}>
-              {t("Farm Yield")}
-            </Text>
-            <Text small color="textSubtle" textAlign="right">
-              ${formatAmount(+farmReward)}
-            </Text>
-          </>
-        )}
       </Grid>
       <Grid gridTemplateColumns="2.5fr 1fr" gridRowGap="8px" gridTemplateRows="repeat(2, auto)" mb="8px">
         <Text color="textSubtle" small>
@@ -88,7 +75,7 @@ export const Details = memo(function Details({
         <Text small color="textSubtle" textAlign="right">
           {`${formatPercent(lpApr, 5) || "0"}%`}
         </Text>
-        {isFarm && farmApr && (
+        {farmApr && (
           <>
             <Text color="textSubtle" small style={{ textIndent: "1em" }}>
               {t("Farm APR")}

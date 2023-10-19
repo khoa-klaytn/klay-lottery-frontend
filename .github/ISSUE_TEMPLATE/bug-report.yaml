@@ -20,10 +20,8 @@ body:
       multiple: false
       options:
         - Trade
-        - Farms
         - Syrup Pools
         - Lottery
-        - IFO
         - Info
         - NFT
         - Other

@@ -4,7 +4,6 @@ import { useAnniversaryEffect } from 'hooks/useAnniversaryEffect'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 import MultipleBanner from './components/Banners/MultipleBanner'
-import CakeDataRow from './components/CakeDataRow'
 import CakeSection from './components/CakeSection'
 import CommunitySection from './components/CommunitySection'
 import { RightTopBox } from './components/CommunitySection/ImagesOnBg'
@@ -132,7 +131,6 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             {t('Figures')}
           </Text>
         </Flex>
-        <CakeDataRow />
         <OuterWedgeWrapper>
           <InnerWedgeWrapper id="bottom-wedge4-2">
             <WedgeBottomRight />

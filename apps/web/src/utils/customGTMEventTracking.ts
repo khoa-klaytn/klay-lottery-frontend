@@ -57,24 +57,6 @@ export const logGTMClickSwapEvent = () => {
   })
 }
 
-export const logGTMClickStakeFarmEvent = () => {
-  console.info('---Stake---')
-  window?.dataLayer?.push({
-    event: GTMEvent.Farm,
-    action: GTMAction.ClickStakeButton,
-    category: GTMCategory.Farm,
-  })
-}
-
-export const logGTMClickAddLiquidityEvent = () => {
-  console.info('---AddLiquidity---')
-  window?.dataLayer?.push({
-    event: GTMEvent.AddLiquidity,
-    action: GTMAction.ClickAddLiquidityButton,
-    category: GTMCategory.AddLiquidity,
-  })
-}
-
 export const logGTMWalletConnectEvent = () => {
   console.info('---WalletConnect---')
   window?.dataLayer?.push({

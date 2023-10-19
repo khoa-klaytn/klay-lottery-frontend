@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "dependencies": {
     "@pancakeswap/chains": "workspace:*",
-    "@pancakeswap/farms": "workspace:*",
     "@pancakeswap/sdk": "workspace:*",
     "@pancakeswap/smart-router": "workspace:*",
     "@pancakeswap/v3-sdk": "workspace:*",

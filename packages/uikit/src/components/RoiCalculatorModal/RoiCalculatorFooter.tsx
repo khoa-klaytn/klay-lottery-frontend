@@ -1,16 +1,12 @@
 import { useTranslation } from "@pancakeswap/localization";
 import { getApy } from "@pancakeswap/utils/compoundApyHelpers";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { styled } from "styled-components";
 
-import { BIG_ONE_HUNDRED } from "@pancakeswap/utils/bigNumber";
-import { useTooltip } from "../../hooks/useTooltip";
 import { Box, Flex, Grid } from "../Box";
 import { ExpandableLabel } from "../Button";
-import { Link, LinkExternal } from "../Link";
-import { HelpIcon } from "../Svg";
+import { LinkExternal } from "../Link";
 import { Text } from "../Text";
-import { FarmMultiplierInfo } from "./FarmMultiplierInfo";
 
 export const Footer = styled(Flex)`
   width: 100%;
@@ -36,7 +32,6 @@ export const BulletList = styled.ul`
 `;
 
 interface RoiCalculatorFooterProps {
-  isFarm: boolean;
   apr?: number;
   apy?: number;
   displayApr?: string;
@@ -54,46 +49,16 @@ interface RoiCalculatorFooterProps {
 }
 
 const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterProps>> = ({
-  isFarm,
   apr = 0,
   apy = 0,
-  displayApr,
   autoCompoundFrequency,
-  multiplier,
   linkLabel,
   linkHref,
   performanceFee,
-  rewardCakePerSecond,
-  isLocked = false,
-  stableSwapAddress,
-  stableLpFee,
-  farmCakePerSecond,
-  totalMultipliers,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation();
-  const isAptos = rewardCakePerSecond === true;
-
-  const multiplierTooltipContent = FarmMultiplierInfo({
-    farmCakePerSecond: farmCakePerSecond ?? "-",
-    totalMultipliers: totalMultipliers ?? "-",
-  });
-  const {
-    targetRef: multiplierRef,
-    tooltip: multiplierTooltip,
-    tooltipVisible: multiplierTooltipVisible,
-  } = useTooltip(multiplierTooltipContent, { placement: "top-end", tooltipOffset: [20, 10] });
-
-  const gridRowCount = isFarm ? 4 : 2;
-  const lpRewardsAPR = useMemo(
-    () =>
-      isFarm
-        ? Number.isFinite(Number(displayApr)) && Number.isFinite(apr)
-          ? Math.max(Number(displayApr) - apr, 0).toFixed(2)
-          : null
-        : null,
-    [isFarm, displayApr, apr]
-  );
+  const gridRowCount = 2;
 
   return (
     <Footer p="16px" flexDirection="column">
@@ -103,45 +68,6 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
       {isExpanded && (
         <Box px="8px">
           <Grid gridTemplateColumns="2.5fr 1fr" gridRowGap="8px" gridTemplateRows={`repeat(${gridRowCount}, auto)`}>
-            {!isFarm && (
-              <>
-                <Text color="textSubtle" small>
-                  {Number.isFinite(apy) && apy !== 0 && !isLocked ? t("APY") : t("APR")}
-                </Text>
-                <Text small textAlign="right">
-                  {Number.isFinite(apy) && apy !== 0 ? apy.toFixed(2) : apr?.toFixed(2)}%
-                </Text>
-              </>
-            )}
-            {isFarm && (
-              <>
-                <Text color="textSubtle" small>
-                  {t("APR (incl. LP rewards)")}
-                </Text>
-                <Text small textAlign="right">
-                  {displayApr}%
-                </Text>
-                <Text color="textSubtle" small>
-                  *{t("Base APR (CAKE yield only)")}
-                </Text>
-                <Text small textAlign="right">
-                  {apr.toFixed(2)}%
-                </Text>
-                <Text color="textSubtle" small>
-                  *{t("LP Rewards APR")}
-                </Text>
-                <Text small textAlign="right">
-                  {lpRewardsAPR === "0" || !lpRewardsAPR ? "-" : lpRewardsAPR}%
-                </Text>
-              </>
-            )}
-            {!Number.isFinite(apy) && (
-              <Text color="textSubtle" small>
-                {t("APY (%compoundTimes%x daily compound)", {
-                  compoundTimes: autoCompoundFrequency > 0 ? autoCompoundFrequency : 1,
-                })}
-              </Text>
-            )}
             {!Number.isFinite(apy) && (
               <Text small textAlign="right">
                 {(
@@ -150,22 +76,6 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
                 %
               </Text>
             )}
-            {isFarm && (
-              <>
-                <Text color="textSubtle" small>
-                  {t("Farm Multiplier")}
-                </Text>
-                <Flex justifyContent="flex-end" alignItems="flex-end">
-                  <Text small textAlign="right" mr="4px">
-                    {multiplier}
-                  </Text>
-                  <span ref={multiplierRef}>
-                    <HelpIcon color="textSubtle" width="16px" height="16px" />
-                  </span>
-                  {multiplierTooltipVisible && multiplierTooltip}
-                </Flex>
-              </>
-            )}
           </Grid>
           <BulletList>
             <li>
@@ -173,40 +83,6 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
                 {t("Calculated based on current rates.")}
               </Text>
             </li>
-            {isFarm && (
-              <>
-                <li>
-                  <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
-                    {t("LP rewards: %percent%% trading fees, distributed proportionally among LP token holders.", {
-                      percent: stableSwapAddress && stableLpFee ? BIG_ONE_HUNDRED.times(stableLpFee).toNumber() : 0.17,
-                    })}
-                  </Text>
-                </li>
-                <li>
-                  {isAptos ? (
-                    <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
-                      {t(
-                        "To provide stable estimates, APR figures are calculated and updated daily using volume data from CoinMarketCap"
-                      )}
-                    </Text>
-                  ) : (
-                    <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
-                      {t(
-                        "To provide stable estimates, APR figures are calculated once per day on the farm page. For real time APR, please visit the"
-                      )}
-                      <Link
-                        style={{ display: "inline-block" }}
-                        fontSize="12px"
-                        ml="3px"
-                        href={`/info${stableSwapAddress ? `/pairs/${stableSwapAddress}?type=stableSwap` : ""}`}
-                      >
-                        {t("Info Page")}
-                      </Link>
-                    </Text>
-                  )}
-                </li>
-              </>
-            )}
             <li>
               <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline" lineHeight={1.1}>
                 {t(

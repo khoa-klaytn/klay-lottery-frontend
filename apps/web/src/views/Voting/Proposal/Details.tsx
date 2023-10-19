@@ -6,7 +6,6 @@ import { getBlockExploreLink } from 'utils'
 import { useTranslation } from '@pancakeswap/localization'
 import truncateHash from '@pancakeswap/utils/truncateHash'
 import { IPFS_GATEWAY } from '../config'
-import { ProposalStateTag } from '../components/Proposals/tags'
 
 interface DetailsProps {
   proposal: Proposal
@@ -50,7 +49,6 @@ const Details: React.FC<React.PropsWithChildren<DetailsProps>> = ({ proposal }) 
           </ScanLink>
         </Flex>
         <DetailBox p="16px">
-          <ProposalStateTag proposalState={proposal.state} mb="8px" />
           <Flex alignItems="center">
             <Text color="textSubtle" fontSize="14px">
               {t('Start Date')}

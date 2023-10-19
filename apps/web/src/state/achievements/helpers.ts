@@ -1,6 +1,5 @@
 import { request, gql } from 'graphql-request'
 import { campaignMap } from 'config/constants/campaigns'
-import { TranslateFunction } from '@pancakeswap/localization'
 import { GRAPH_API_PROFILE } from 'config/constants/endpoints'
 import { Achievement } from 'state/types'
 import { getAchievementTitle, getAchievementDescription } from 'utils/achievements'
@@ -43,7 +42,7 @@ export const getUserPointIncreaseEvents = async (account: string): Promise<UserP
 /**
  * Gets all user point increase events and adds achievement meta
  */
-export const getAchievements = async (account: string, t: TranslateFunction): Promise<Achievement[]> => {
+export const getAchievements = async (account: string): Promise<Achievement[]> => {
   const pointIncreaseEvents = await getUserPointIncreaseEvents(account)
 
   if (!pointIncreaseEvents) {
@@ -61,8 +60,8 @@ export const getAchievements = async (account: string, t: TranslateFunction): Pr
       id: userPoint.campaignId,
       type: campaignMeta.type,
       address: userPoint.id,
-      title: getAchievementTitle(campaignMeta, t),
-      description: getAchievementDescription(campaignMeta, t),
+      title: getAchievementTitle(campaignMeta),
+      description: getAchievementDescription(campaignMeta),
       badge: campaignMeta.badge,
       points: Number(userPoint.points),
     })

@@ -39,37 +39,4 @@ export const getPoolApr = (
   return apr.isNaN() || !apr.isFinite() ? null : apr.toNumber()
 }
 
-const BIG_NUMBER_NAN = new BigNumber(NaN)
-
-/**
- * Get farm APR value in %
- * @param poolWeight allocationPoint / totalAllocationPoint
- * @param cakePriceUsd Cake price in USD
- * @param poolLiquidityUsd Total pool liquidity in USD
- * @param farmAddress Farm Address
- * @returns Farm Apr
- */
-export const getFarmApr = (
-  chainId: number,
-  poolWeight: BigNumber | null,
-  cakePriceUsd: BigNumber | null,
-  poolLiquidityUsd: BigNumber | null,
-  farmAddress: string | null,
-  regularCakePerBlock: number,
-): { cakeRewardsApr: number; lpRewardsApr: number } => {
-  const yearlyCakeRewardAllocation = poolWeight
-    ? poolWeight.times(BLOCKS_PER_YEAR * regularCakePerBlock)
-    : new BigNumber(NaN)
-  const cakeRewardsApr = yearlyCakeRewardAllocation
-    .times(cakePriceUsd || BIG_NUMBER_NAN)
-    .div(poolLiquidityUsd || BIG_NUMBER_NAN)
-    .times(100)
-  let cakeRewardsAprAsNumber = null
-  if (!cakeRewardsApr.isNaN() && cakeRewardsApr.isFinite()) {
-    cakeRewardsAprAsNumber = cakeRewardsApr.toNumber()
-  }
-  const lpRewardsApr = (getLpApr(chainId)[farmAddress?.toLowerCase()] || getLpApr(chainId)[farmAddress]) ?? 0 // can get both checksummed or lowercase
-  return { cakeRewardsApr: cakeRewardsAprAsNumber, lpRewardsApr }
-}
-
 export default null

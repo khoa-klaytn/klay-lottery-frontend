@@ -9,7 +9,6 @@ import {
 import { deserializeToken } from '@pancakeswap/token-lists'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { DeserializedPool } from '@pancakeswap/pools'
-import { isAddress } from 'utils'
 import { Token } from '@pancakeswap/sdk'
 
 type UserData =
@@ -139,27 +138,4 @@ export const transformVault = (vaultKey: VaultKey, vault: SerializedCakeVault): 
       ...userDataExtra,
     },
   }
-}
-
-export const getTokenPricesFromFarm = (
-  farms: {
-    quoteToken: { address: string }
-    token: { address: string }
-    quoteTokenPriceBusd: string
-    tokenPriceBusd: string
-  }[],
-) => {
-  return farms.reduce((prices, farm) => {
-    const quoteTokenAddress = isAddress(farm.quoteToken.address)
-    const tokenAddress = isAddress(farm.token.address)
-    /* eslint-disable no-param-reassign */
-    if (quoteTokenAddress && !prices[quoteTokenAddress]) {
-      prices[quoteTokenAddress] = new BigNumber(farm.quoteTokenPriceBusd).toNumber()
-    }
-    if (tokenAddress && !prices[tokenAddress]) {
-      prices[tokenAddress] = new BigNumber(farm.tokenPriceBusd).toNumber()
-    }
-    /* eslint-enable no-param-reassign */
-    return prices
-  }, {})
 }

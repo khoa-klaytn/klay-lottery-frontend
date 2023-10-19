@@ -68,7 +68,6 @@ export interface RoiCalculatorModalProps {
   multiplier?: string;
   autoCompoundFrequency?: number;
   performanceFee?: number;
-  isFarm?: boolean;
   initialState?: any;
   initialValue?: string;
   strategy?: any;
@@ -100,7 +99,6 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
   earningTokenSymbol = "CAKE",
   autoCompoundFrequency = 0,
   performanceFee = 0,
-  isFarm = false,
   initialState,
   strategy,
   header,
@@ -150,12 +148,9 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
   }, [initialValue, setPrincipalFromTokenValue]);
 
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
-    isFarm
-      ? t("“My Balance” here includes both LP Tokens in your wallet, and LP Tokens already staked in this farm.")
-      : t(
-          "“My Balance” here includes both %assetSymbol% in your wallet, and %assetSymbol% already staked in this pool.",
-          { assetSymbol: stakingTokenSymbol }
-        ),
+    t("“My Balance” here includes both %assetSymbol% in your wallet, and %assetSymbol% already staked in this pool.", {
+      assetSymbol: stakingTokenSymbol,
+    }),
     { placement: "top-end", tooltipOffset: [20, 10] }
   );
 
@@ -304,7 +299,6 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
         </Flex>
       </ScrollableContainer>
       <RoiCalculatorFooter
-        isFarm={isFarm}
         apr={apr}
         apy={apy}
         displayApr={displayApr}

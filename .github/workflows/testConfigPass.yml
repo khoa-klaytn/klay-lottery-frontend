@@ -5,7 +5,6 @@ on:
     paths-ignore:
       - 'apps/web/src/config/**'
       - 'packages/pools/src/**'
-      - 'packages/farms/constants/**'
       - 'packages/tokens/src/**'
 
 jobs:

@@ -1,10 +1,7 @@
-import { Currency, CurrencyAmount, Price, Token, ZERO, Percent, ZERO_PERCENT } from "@pancakeswap/sdk";
+import { Currency, CurrencyAmount, Price, Token, Percent, ZERO_PERCENT } from "@pancakeswap/sdk";
 import { FeeAmount, FeeCalculator, Tick, TickMath, sqrtRatioX96ToPrice } from "@pancakeswap/v3-sdk";
 import { useTranslation } from "@pancakeswap/localization";
 import { useCallback, useMemo, useState } from "react";
-import BigNumber from "bignumber.js";
-import { BIG_ZERO } from "@pancakeswap/utils/bigNumber";
-import { isPositionOutOfRange } from "@pancakeswap/utils/isPositionOutOfRange";
 import { formatPercent, formatFraction, formatPrice } from "@pancakeswap/utils/formatFractions";
 
 import { Button, DynamicSection, Flex, Message, MessageText, useMatchBreakpoints } from "@pancakeswap/uikit";
@@ -25,7 +22,6 @@ import { TickData } from "./types";
 import { TwoColumns } from "./TwoColumns";
 import { PriceChart } from "./PriceChart";
 import { PriceInvertSwitch } from "./PriceInvertSwitch";
-import { FarmingRewardsToggle } from "./FarmingRewardsToggle";
 import { LiquidityChartRangeInput } from "../swap/LiquidityChartRangeInput";
 import { useDensityChartData } from "../swap/LiquidityChartRangeInput/hooks";
 
@@ -75,16 +71,6 @@ export type RoiCalculatorProps = {
   volume24H?: number;
   max?: string;
   maxLabel?: string;
-} & (RoiCalculatorFarmProps | RoiCalculatorLPProps);
-
-type RoiCalculatorLPProps = {
-  isFarm?: false;
-};
-
-type RoiCalculatorFarmProps = {
-  isFarm: true;
-  cakePrice?: string;
-  cakeAprFactor?: BigNumber;
 };
 
 // Price is always price of token0
@@ -112,7 +98,6 @@ export function RoiCalculator({
   onPriceSpanChange,
   allowApply = false,
   onApply,
-  ...props
 }: RoiCalculatorProps) {
   const { isMobile } = useMatchBreakpoints();
   const { t } = useTranslation();
@@ -220,82 +205,23 @@ export function RoiCalculator({
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [editCakePrice, setEditCakePrice] = useState<number | null>(null);
-  const [includeFarmingRewards, setIncludeFarmingRewards] = useState(true);
-  const farmingRewardsEnabled = props.isFarm && includeFarmingRewards;
-  const cakeAprFactor = farmingRewardsEnabled && props.cakeAprFactor;
 
-  const cakePriceDiffPercent =
-    farmingRewardsEnabled && props.cakePrice && editCakePrice && editCakePrice / +props.cakePrice;
-
-  const derivedCakeApr = useMemo(() => {
-    if (
-      !amountA ||
-      !amountB ||
-      typeof priceRange?.tickUpper !== "number" ||
-      typeof priceRange?.tickLower !== "number" ||
-      !sqrtRatioX96 ||
-      !farmingRewardsEnabled ||
-      !cakeAprFactor
-    ) {
-      return undefined;
-    }
-
-    if (isPositionOutOfRange(tickCurrent, { tickLower: priceRange.tickLower, tickUpper: priceRange.tickUpper })) {
-      return BIG_ZERO;
-    }
-
-    try {
-      const positionLiquidity = FeeCalculator.getLiquidityByAmountsAndPrice({
-        amountA,
-        amountB,
-        tickUpper: priceRange?.tickUpper,
-        tickLower: priceRange?.tickLower,
-        sqrtRatioX96,
-      });
-
-      if (!positionLiquidity) {
-        return BIG_ZERO;
-      }
-
-      const cakeApr =
-        positionLiquidity > ZERO
-          ? new BigNumber(positionLiquidity.toString()).times(cakeAprFactor).div(usdValue)
-          : BIG_ZERO;
-
-      return cakeApr;
-    } catch (error) {
-      console.error(error, amountA, priceRange, sqrtRatioX96);
-      return undefined;
-    }
-  }, [amountA, amountB, priceRange, sqrtRatioX96, farmingRewardsEnabled, cakeAprFactor, tickCurrent, usdValue]);
-
-  const editedCakeApr = useMemo(
-    () =>
-      derivedCakeApr && typeof cakePriceDiffPercent === "number"
-        ? derivedCakeApr.times(cakePriceDiffPercent)
-        : derivedCakeApr,
-    [cakePriceDiffPercent, derivedCakeApr]
-  );
-
-  const { fee, rate, apr, apy, cakeApr, cakeApy, editCakeApr, editCakeApy, cakeRate, cakeReward, originalCakeReward } =
-    useRoi({
-      amountA,
-      amountB,
-      currencyAUsdPrice,
-      currencyBUsdPrice,
-      tickLower: priceRange?.tickLower,
-      tickUpper: priceRange?.tickUpper,
-      volume24H,
-      sqrtRatioX96,
-      mostActiveLiquidity,
-      fee: feeAmount,
-      protocolFee,
-      compoundEvery: compoundingIndexToFrequency[compoundIndex],
-      stakeFor: spanIndexToSpan[spanIndex],
-      compoundOn,
-      cakeApr: farmingRewardsEnabled && derivedCakeApr ? derivedCakeApr.toNumber() : undefined,
-      editCakeApr: farmingRewardsEnabled && editedCakeApr ? editedCakeApr.toNumber() : undefined,
-    });
+  const { fee, rate, apr, apy, cakeRate, cakeReward, originalCakeReward } = useRoi({
+    amountA,
+    amountB,
+    currencyAUsdPrice,
+    currencyBUsdPrice,
+    tickLower: priceRange?.tickLower,
+    tickUpper: priceRange?.tickUpper,
+    volume24H,
+    sqrtRatioX96,
+    mostActiveLiquidity,
+    fee: feeAmount,
+    protocolFee,
+    compoundEvery: compoundingIndexToFrequency[compoundIndex],
+    stakeFor: spanIndexToSpan[spanIndex],
+    compoundOn,
+  });
 
   const handleApply = useCallback(
     () =>
@@ -360,12 +286,6 @@ export function RoiCalculator({
       </Section>
     </>
   );
-
-  const farmingRewards = props.isFarm ? (
-    <Section title={t("Include farming rewards")}>
-      <FarmingRewardsToggle on={includeFarmingRewards} onToggle={setIncludeFarmingRewards} />
-    </Section>
-  ) : null;
 
   const { formattedData } = useDensityChartData({
     tickCurrent,
@@ -463,7 +383,6 @@ export function RoiCalculator({
     <>
       {depositSection}
       {priceChart}
-      {farmingRewards}
       {priceRangeSettings}
       {stakeAndCompound}
     </>
@@ -474,7 +393,6 @@ export function RoiCalculator({
         {priceChart}
       </Flex>
       <Flex flexDirection="column" alignItems="flex-start">
-        {farmingRewards}
         {stakeAndCompound}
         {priceRangeSettings}
       </Flex>
@@ -495,9 +413,7 @@ export function RoiCalculator({
           tickLower={priceRange?.tickLower}
           tickUpper={priceRange?.tickUpper}
           sqrtRatioX96={sqrtRatioX96}
-          isFarm={farmingRewardsEnabled}
           cakeReward={originalCakeReward}
-          cakePrice={farmingRewardsEnabled ? props.cakePrice : undefined}
           setEditCakePrice={setEditCakePrice}
         />
         <AnimatedArrow state={{}} />
@@ -515,10 +431,7 @@ export function RoiCalculator({
         lpApy={apy}
         compoundIndex={compoundIndex}
         compoundOn={compoundOn}
-        farmApr={farmingRewardsEnabled ? editCakeApr || cakeApr : undefined}
-        farmApy={farmingRewardsEnabled ? editCakeApy || cakeApy : undefined}
         farmReward={farmReward}
-        isFarm={farmingRewardsEnabled}
       />
     </>
   );

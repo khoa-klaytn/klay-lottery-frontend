@@ -1,4 +1,4 @@
-import { ArrowBackIcon, Box, Button, Flex, Heading, NotFound, ReactMarkdown } from '@pancakeswap/uikit'
+import { ArrowBackIcon, Box, Button, Heading, NotFound, ReactMarkdown } from '@pancakeswap/uikit'
 import { getAllVotes, getProposal } from 'state/voting/helpers'
 import { useAccount } from 'wagmi'
 import useSWRImmutable from 'swr/immutable'
@@ -9,8 +9,6 @@ import { useTranslation } from '@pancakeswap/localization'
 import Container from 'components/Layout/Container'
 import PageLoader from 'components/Loader/PageLoader'
 import { FetchStatus } from 'config/constants/types'
-import { isCoreProposal } from '../helpers'
-import { ProposalStateTag, ProposalTypeTag } from '../components/Proposals/tags'
 import Layout from '../components/Layout'
 import Details from './Details'
 import Results from './Results'
@@ -58,10 +56,6 @@ const Overview = () => {
       <Layout>
         <Box>
           <Box mb="32px">
-            <Flex alignItems="center" mb="8px">
-              <ProposalStateTag proposalState={proposal.state} />
-              <ProposalTypeTag isCoreProposal={isCoreProposal(proposal)} ml="8px" />
-            </Flex>
             <Heading as="h1" scale="xl" mb="16px">
               {proposal.title}
             </Heading>

@@ -1,9 +1,7 @@
 import { BlockIcon, CheckmarkCircleIcon, Flex, BscScanIcon, RefreshIcon } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
-import { useAppDispatch } from 'state'
 import { useTranslation } from '@pancakeswap/localization'
 import { TransactionDetails } from 'state/transactions/reducer'
-import { pickFarmTransactionTx } from 'state/global/actions'
 import { TransactionType, FarmTransactionStatus } from 'state/transactions/actions'
 import { getBlockExploreLink } from 'utils'
 
@@ -54,12 +52,10 @@ const renderIcon = (txn: TransactionDetails) => {
 
 const TransactionRow: React.FC<React.PropsWithChildren<TransactionRowProps>> = ({ txn, chainId, type, onDismiss }) => {
   const { t } = useTranslation()
-  const dispatch = useAppDispatch()
 
   const onClickTransaction = () => {
     if (type === 'non-bsc-farm') {
       onDismiss()
-      dispatch(pickFarmTransactionTx({ tx: txn.hash, chainId }))
     } else {
       const url = getBlockExploreLink(txn.hash, 'transaction', chainId)
       window.open(url, '_blank', 'noopener noreferrer')

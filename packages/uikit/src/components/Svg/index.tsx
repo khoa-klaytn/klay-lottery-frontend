@@ -59,7 +59,6 @@ export { default as HistoryIcon } from "./Icons/History";
 export { default as HomeIcon } from "./Icons/Home";
 export { default as HotIcon } from "./Icons/Hot";
 export { default as HotDisableIcon } from "./Icons/HotDisable";
-export { default as IfoIcon } from "./Icons/Ifo";
 export { default as InfoIcon } from "./Icons/Info";
 export { default as InfoFilledIcon } from "./Icons/InfoFilled";
 export { default as InstagramIcon } from "./Icons/Instagram";

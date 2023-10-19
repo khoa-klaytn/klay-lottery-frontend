@@ -1,5 +1,4 @@
 import { ChainId } from '@pancakeswap/chains'
-import { masterChefV3Addresses } from '@pancakeswap/farms'
 import { DEPLOYER_ADDRESSES } from '@pancakeswap/v3-sdk'
 import { V3_QUOTER_ADDRESSES } from '@pancakeswap/smart-router/evm'
 
@@ -8,7 +7,6 @@ export default {
     [ChainId.BSC_TESTNET]: '0xB4A466911556e39210a6bB2FaECBB59E4eB7E43d',
     [ChainId.BSC]: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
   },
-  masterChefV3: masterChefV3Addresses,
   masterChefV1: {
     [ChainId.BSC_TESTNET]: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
     [ChainId.BSC]: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
@@ -109,10 +107,6 @@ export default {
     [ChainId.BSC]: '0x59EdDF3c21509dA3b0aCCd7c5ccc596d930f4783',
     [ChainId.BSC_TESTNET]: '0x',
   },
-  farmAuction: {
-    [ChainId.BSC]: '0xb92Ab7c1edcb273AbA24b0656cEb3681654805D2',
-    [ChainId.BSC_TESTNET]: '0x3F9602593b4f7C67ab045DB51BbDEa94E40fA9Fe',
-  },
   nftMarket: {
     [ChainId.BSC]: '0x17539cCa21C7933Df5c980172d22659B8C345C5A',
     [ChainId.BSC_TESTNET]: '0x7F9F37Ddcaa33893F9bEB3D8748c8D6BfbDE6AB2',
@@ -137,29 +131,9 @@ export default {
     [ChainId.BSC]: '0x3C458828D1622F5f4d526eb0d24Da8C4Eb8F07b1',
     [ChainId.BSC_TESTNET]: '0x',
   },
-  bCakeFarmBooster: {
-    [ChainId.BSC]: '0xE4FAa3Ef5A9708C894435B0F39c2B440936A3A52',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  bCakeFarmBoosterProxyFactory: {
-    [ChainId.BSC]: '0x2C36221bF724c60E9FEE3dd44e2da8017a8EF3BA',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  bCakeFarmBoosterV3: {
-    [ChainId.BSC]: '0x695170faE243147b3bEB4C43AA8DE5DcD9202752',
-    [ChainId.BSC_TESTNET]: '0x56666300A1E25624489b661f3C6c456c159a109a',
-  },
   nonBscVault: {
     [ChainId.ETHEREUM]: '0x2e71B2688019ebdFDdE5A45e6921aaebb15b25fb',
     [ChainId.GOERLI]: '0xE6c904424417D03451fADd6E3f5b6c26BcC43841',
-  },
-  crossFarmingSender: {
-    [ChainId.ETHEREUM]: '0x8EA90Ef07f37c77137453C7A1B72B7886d51eCFb',
-    [ChainId.GOERLI]: '0x327d26dE30f92600620A99043034e0A5FD9402C8',
-  },
-  crossFarmingReceiver: {
-    [ChainId.BSC]: '0x0726a8C8206b9eC0AfB788df5adb36a8AEDB13c2',
-    [ChainId.BSC_TESTNET]: '0xBab5d3B6bA24E185f216419f3ba07f03984bF983',
   },
   mmLinkedPool: {
     [ChainId.ETHEREUM]: '0x9Ca2A439810524250E543BA8fB6E88578aF242BC',

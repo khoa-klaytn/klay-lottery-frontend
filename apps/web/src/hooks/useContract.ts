@@ -9,20 +9,13 @@ import addresses from 'config/constants/contracts'
 import { useMemo } from 'react'
 import { getMulticallAddress, getZapAddress } from 'utils/addressHelpers'
 import {
-  getBCakeFarmBoosterContract,
-  getBCakeFarmBoosterProxyFactoryContract,
-  getBCakeFarmBoosterV3Contract,
-  getBCakeProxyContract,
   getBunnyFactoryContract,
   getCakeFlexibleSideVaultV2Contract,
   getCakeVaultV2Contract,
   getChainlinkOracleContract,
   getContract,
-  getCrossFarmingProxyContract,
   getIfoCreditAddressContract,
   getKlayLotteryContract,
-  getMasterChefContract,
-  getMasterChefV3Contract,
   getNftMarketContract,
   getNftSaleContract,
   getNonBscVaultContract,
@@ -50,9 +43,6 @@ import { CAKE } from '@pancakeswap/tokens'
 import { nonfungiblePositionManagerABI } from '@pancakeswap/v3-sdk'
 import { multicallABI } from 'config/abi/Multicall'
 import { erc20Bytes32ABI } from 'config/abi/erc20_bytes32'
-import { ifoV1ABI } from 'config/abi/ifoV1'
-import { ifoV2ABI } from 'config/abi/ifoV2'
-import { ifoV3ABI } from 'config/abi/ifoV3'
 import { zapABI } from 'config/abi/zap'
 import { VaultKey } from 'state/types'
 
@@ -62,18 +52,6 @@ import { wethABI } from 'config/abi/weth'
 /**
  * Helper hooks to get specific contracts (by ABI)
  */
-
-export const useIfoV1Contract = (address: Address) => {
-  return useContract(address, ifoV1ABI)
-}
-
-export const useIfoV2Contract = (address: Address) => {
-  return useContract(address, ifoV2ABI)
-}
-
-export const useIfoV3Contract = (address: Address) => {
-  return useContract(address, ifoV3ABI)
-}
 
 export const useERC20 = (address: Address) => {
   return useContract(address, erc20ABI)
@@ -98,12 +76,6 @@ export const useProfileContract = () => {
 export const useKlayLotteryContract = () => {
   const { data: signer } = useWalletClient()
   return useMemo(() => getKlayLotteryContract(signer ?? undefined), [signer])
-}
-
-export const useMasterchef = () => {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getMasterChefContract(signer ?? undefined, chainId), [signer, chainId])
 }
 
 export const useSousChef = (id) => {
@@ -253,30 +225,6 @@ export function useZapContract() {
   return useContract(getZapAddress(chainId), zapABI)
 }
 
-export function useBCakeFarmBoosterContract() {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getBCakeFarmBoosterContract(signer ?? undefined), [signer])
-}
-
-export function useBCakeFarmBoosterV3Contract() {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getBCakeFarmBoosterV3Contract(signer ?? undefined, chainId), [signer, chainId])
-}
-
-export function useBCakeFarmBoosterProxyFactoryContract() {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getBCakeFarmBoosterProxyFactoryContract(signer ?? undefined), [signer])
-}
-
-export function useBCakeProxyContract(proxyContractAddress: Address) {
-  const { data: signer } = useWalletClient()
-  return useMemo(
-    () => proxyContractAddress && getBCakeProxyContract(proxyContractAddress, signer ?? undefined),
-    [signer, proxyContractAddress],
-  )
-}
-
 export const useNonBscVault = () => {
   const { chainId } = useActiveChainId()
   const { data: signer } = useWalletClient()
@@ -291,15 +239,6 @@ export const useUNSContract = (address, chainId, provider) => {
   return useMemo(() => getUnsContract(address, chainId, provider), [chainId, address, provider])
 }
 
-export const useCrossFarmingProxy = (proxyContractAddress: Address) => {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(
-    () => proxyContractAddress && getCrossFarmingProxyContract(proxyContractAddress, signer ?? undefined, chainId),
-    [proxyContractAddress, signer, chainId],
-  )
-}
-
 export const useStableSwapNativeHelperContract = () => {
   const { chainId } = useActiveChainId()
   const { data: signer } = useWalletClient()
@@ -308,12 +247,6 @@ export const useStableSwapNativeHelperContract = () => {
 
 export function useV3NFTPositionManagerContract() {
   return useContract(addresses.nftPositionManager, nonfungiblePositionManagerABI)
-}
-
-export function useMasterchefV3() {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getMasterChefV3Contract(signer ?? undefined, chainId), [signer, chainId])
 }
 
 export const useTradingRewardContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {

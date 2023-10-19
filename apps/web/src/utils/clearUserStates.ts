@@ -1,6 +1,6 @@
 import { configureScope } from '@sentry/nextjs'
 import { Dispatch } from '@reduxjs/toolkit'
-import { resetUserState, toggleFarmTransactionModal } from 'state/global/actions'
+import { resetUserState } from 'state/global/actions'
 import { deleteCookie } from 'cookies-next'
 import { AFFILIATE_SID } from 'pages/api/affiliates-program/affiliate-login'
 import { LS_ORDERS } from './localStorageOrders'
@@ -17,7 +17,6 @@ export const clearUserStates = (
   },
 ) => {
   dispatch(resetUserState({ chainId, newChainId }))
-  dispatch(toggleFarmTransactionModal({ showModal: false }))
   configureScope((scope) => scope.setUser(null))
   const lsOrderKeys = getLocalStorageItemKeys(LS_ORDERS)
   lsOrderKeys.forEach((lsOrderKey) => window?.localStorage?.removeItem(lsOrderKey))

@@ -4,12 +4,10 @@ import BaseBanner from '../BaseBanner'
 import CompetitionBanner from '../CompetitionBanner'
 import GalxeSyndicateBanner from '../GalxeSyndicateBanner'
 import { GalxeTraverseBanner } from '../GalxeTraverseBanner'
-import IFOBanner from '../IFOBanner'
 import { OpBnbBanner } from '../OpBnbBanner'
 import PerpetualBanner from '../PerpetualBanner'
 import TradingRewardBanner from '../TradingRewardBanner'
 import useIsRenderCompetitionBanner from './useIsRenderCompetitionBanner'
-import useIsRenderIfoBanner from './useIsRenderIFOBanner'
 
 interface IBannerConfig {
   shouldRender: boolean
@@ -22,15 +20,14 @@ interface IBannerConfig {
  *
  * @example
  * ```ts
- *  {
- *    shouldRender: isRenderIFOBanner,
- *    banner: <IFOBanner />,
- *  },
+ * {
+ *   shouldRender: isRenderCompetitionBanner,
+ *   banner: <CompetitionBanner />,
+ * },
  * ```
  */
 
 export const useMultipleBannerConfig = () => {
-  const isRenderIFOBanner = useIsRenderIfoBanner()
   const isRenderCompetitionBanner = useIsRenderCompetitionBanner()
 
   return useMemo(() => {
@@ -38,10 +35,6 @@ export const useMultipleBannerConfig = () => {
       { shouldRender: true, banner: <GalxeSyndicateBanner /> },
       { shouldRender: true, banner: <OpBnbBanner /> },
       { shouldRender: true, banner: <BaseBanner /> },
-      {
-        shouldRender: isRenderIFOBanner,
-        banner: <IFOBanner />,
-      },
     ]
 
     const SHUFFLE_BANNERS: IBannerConfig[] = [
@@ -59,5 +52,5 @@ export const useMultipleBannerConfig = () => {
     return [...NO_SHUFFLE_BANNERS, ...shuffle(SHUFFLE_BANNERS)]
       .filter((bannerConfig: IBannerConfig) => bannerConfig.shouldRender)
       .map((bannerConfig: IBannerConfig) => bannerConfig.banner)
-  }, [isRenderIFOBanner, isRenderCompetitionBanner])
+  }, [isRenderCompetitionBanner])
 }

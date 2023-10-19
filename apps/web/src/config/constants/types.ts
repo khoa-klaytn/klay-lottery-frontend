@@ -1,4 +1,3 @@
-import type { FarmConfigBaseProps, SerializedFarmConfig } from '@pancakeswap/farms'
 import { Currency, CurrencyAmount, Percent, Price, Token, Trade, TradeType } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 import { LegacyTradeWithStableSwap as TradeWithStableSwap } from '@pancakeswap/smart-router/legacy-router'
@@ -30,44 +29,12 @@ export enum PoolIds {
   poolUnlimited = 'poolUnlimited',
 }
 
-export type IfoStatus = 'idle' | 'coming_soon' | 'live' | 'finished'
-
-interface IfoPoolInfo {
-  saleAmount?: string
-  raiseAmount: string
-  cakeToBurn?: string
-  distributionRatio?: number // Range [0-1]
-}
-
-export interface Ifo {
-  id: string
-  isActive: boolean
-  address: Address
-  name: string
-  currency: Token
-  token: Token
-  articleUrl: string
-  campaignId: string
-  tokenOfferingPrice: number
-  description?: string
-  twitterUrl?: string
-  telegramUrl?: string
-  version: number
-  vestingTitle?: string
-  cIFO?: boolean
-  plannedStartTime?: number
-  [PoolIds.poolBasic]?: IfoPoolInfo
-  [PoolIds.poolUnlimited]: IfoPoolInfo
-}
-
 export enum PoolCategory {
   'COMMUNITY' = 'Community',
   'CORE' = 'Core',
   'BINANCE' = 'Binance', // Pools using native BNB behave differently than pools using a token
   'AUTO' = 'Auto',
 }
-
-export type { SerializedFarmConfig, FarmConfigBaseProps }
 
 export type Images = {
   lg: string
@@ -92,7 +59,7 @@ export type Team = {
   textColor: string
 }
 
-export type CampaignType = 'ifo' | 'teambattle' | 'participation'
+export type CampaignType = 'teambattle' | 'participation'
 
 export type Campaign = {
   id: string
@@ -129,59 +96,6 @@ export interface LotteryTicketClaimData {
   allWinningTickets: LotteryTicket[]
   total: BigNumber
   roundId: string
-}
-
-// Farm Auction
-export interface FarmAuctionBidderConfig {
-  account: string
-  farmName: string
-  tokenAddress: string
-  quoteToken: Token
-  tokenName: string
-  projectSite?: string
-  lpAddress?: string
-}
-
-// Note: this status is slightly different compared to 'status' config
-// from Farm Auction smart contract
-export enum AuctionStatus {
-  ToBeAnnounced, // No specific dates/blocks to display
-  Pending, // Auction is scheduled but not live yet (i.e. waiting for startBlock)
-  Open, // Auction is open for bids
-  Finished, // Auction end block is reached, bidding is not possible
-  Closed, // Auction was closed in smart contract
-}
-
-export interface Auction {
-  id: number
-  status: AuctionStatus
-  startBlock: number
-  startDate: Date
-  endBlock: number
-  endDate: Date
-  auctionDuration: number
-  initialBidAmount: number
-  topLeaderboard: number
-  leaderboardThreshold: BigNumber
-}
-
-export interface BidderAuction {
-  id: number
-  amount: BigNumber
-  claimed: boolean
-}
-
-export interface Bidder extends FarmAuctionBidderConfig {
-  position?: number
-  isTopPosition: boolean
-  samePositionAsAbove: boolean
-  amount: BigNumber
-}
-
-export interface ConnectedBidder {
-  account: string
-  isWhitelisted: boolean
-  bidderData?: Bidder
 }
 
 export const FetchStatus = {

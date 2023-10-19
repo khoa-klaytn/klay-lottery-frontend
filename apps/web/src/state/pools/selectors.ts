@@ -1,5 +1,3 @@
-import BigNumber from 'bignumber.js'
-import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { createSelector } from '@reduxjs/toolkit'
 import { State, VaultKey } from '../types'
 import { transformPool, transformVault } from './helpers'
@@ -10,8 +8,6 @@ const selectPoolsData = (state: State) => state.pools.data
 const selectPoolData = (sousId) => (state: State) => state.pools.data.find((p) => p.sousId === sousId)
 const selectUserDataLoaded = (state: State) => state.pools.userDataLoaded
 const selectVault = (key: VaultKey) => (state: State) => key ? state.pools[key] : initialPoolVaultState
-const selectIfo = (state: State) => state.pools.ifo
-const selectIfoUserCredit = (state: State) => state.pools.ifo.credit ?? BIG_ZERO
 
 export const makePoolWithUserDataLoadingSelector = (sousId) =>
   createSelector([selectPoolData(sousId), selectUserDataLoaded], (pool, userDataLoaded) => {
@@ -70,11 +66,3 @@ export const poolsWithVaultSelector = createSelector(
 
 export const makeVaultPoolWithKeySelector = (vaultKey) =>
   createSelector(poolsWithVaultSelector, ({ pools }) => pools.find((p) => p.vaultKey === vaultKey))
-
-export const ifoCreditSelector = createSelector([selectIfoUserCredit], (ifoUserCredit) => {
-  return new BigNumber(ifoUserCredit)
-})
-
-export const ifoCeilingSelector = createSelector([selectIfo], (ifoData) => {
-  return new BigNumber(ifoData.ceiling)
-})

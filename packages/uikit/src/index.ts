@@ -19,7 +19,6 @@ export * from "./contexts";
 export * from "./widgets/Modal";
 export * from "./widgets/Menu";
 export * as Liquidity from "./widgets/Liquidity";
-export * from "./widgets/Ifo";
 
 // Theme
 export { default as ResetCSS } from "./ResetCSS";

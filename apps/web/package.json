@@ -36,7 +36,6 @@
     "@gnosis.pm/safe-apps-wagmi": "^1.2.0",
     "@next/bundle-analyzer": "13.0.7",
     "@pancakeswap/chains": "workspace:*",
-    "@pancakeswap/farms": "workspace:*",
     "@pancakeswap/hooks": "workspace:*",
     "@pancakeswap/localization": "workspace:*",
     "@pancakeswap/multicall": "workspace:*",

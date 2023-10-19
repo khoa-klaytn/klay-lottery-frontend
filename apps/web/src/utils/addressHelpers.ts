@@ -69,10 +69,6 @@ export const getCakeFlexibleSideVaultAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.cakeFlexibleSideVault, chainId)
 }
 
-export const getFarmAuctionAddress = () => {
-  return getAddressFromMap(addresses.farmAuction)
-}
-
 export const getNftMarketAddress = () => {
   return getAddressFromMap(addresses.nftMarket)
 }
@@ -87,36 +83,12 @@ export const getZapAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.zap, chainId)
 }
 
-export const getBCakeFarmBoosterAddress = () => {
-  return getAddressFromMap(addresses.bCakeFarmBooster)
-}
-
-export const getBCakeFarmBoosterV3Address = (chainId?: number) => {
-  return getAddressFromMap(addresses.bCakeFarmBoosterV3, chainId)
-}
-
-export const getBCakeFarmBoosterProxyFactoryAddress = () => {
-  return getAddressFromMap(addresses.bCakeFarmBoosterProxyFactory)
-}
-
 export const getNonBscVaultAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.nonBscVault, chainId)
 }
 
-export const getCrossFarmingSenderAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.crossFarmingSender, chainId)
-}
-
-export const getCrossFarmingReceiverAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.crossFarmingReceiver, chainId)
-}
-
 export const getStableSwapNativeHelperAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.stableSwapNativeHelper, chainId)
-}
-
-export const getMasterChefV3Address = (chainId?: number) => {
-  return getAddressFromMapNoFallback(addresses.masterChefV3, chainId)
 }
 
 export const getTradingRewardAddress = (chainId?: number) => {

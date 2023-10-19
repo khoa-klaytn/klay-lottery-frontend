@@ -1,5 +1,4 @@
 import { parseEther } from 'viem'
-import { SerializedFarmsState } from '@pancakeswap/farms'
 import { SerializedPoolWithInfo } from '@pancakeswap/pools'
 import { Address } from 'wagmi'
 import BigNumber from 'bignumber.js'
@@ -135,18 +134,8 @@ export interface SerializedCakeVault {
   userData?: SerializedVaultUser
 }
 
-// Ifo
-export interface IfoState extends PublicIfoData {
-  credit: string
-}
-
-export interface PublicIfoData {
-  ceiling: string
-}
-
 export interface PoolsState {
   data: SerializedPool[]
-  ifo: IfoState
   cakeVault: SerializedLockedCakeVault
   cakeFlexibleSideVault: SerializedCakeVault
   userDataLoaded: boolean
@@ -301,8 +290,6 @@ export interface UserRound {
 // Global state
 
 export interface State {
-  farms: SerializedFarmsState
-  farmsV1: SerializedFarmsState
   pools: PoolsState
   lottery: LotteryState
 }

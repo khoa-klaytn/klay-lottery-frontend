@@ -9,7 +9,6 @@
     "./roi": "./roi/index.ts"
   },
   "dependencies": {
-    "@pancakeswap/farms": "workspace:*",
     "@pancakeswap/localization": "workspace:*",
     "@pancakeswap/sdk": "workspace:*",
     "@pancakeswap/tokens": "workspace:*",

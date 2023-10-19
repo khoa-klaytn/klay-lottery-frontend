@@ -1,31 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import sumBy from 'lodash/sumBy'
-import { useAppDispatch } from 'state'
-import { useAccount } from 'wagmi'
 import { Card, CardBody, CardHeader, Flex, Heading, PrizeIcon } from '@pancakeswap/uikit'
 import { useProfile } from 'state/profile/hooks'
 import { Achievement } from 'state/types'
 import { useTranslation } from '@pancakeswap/localization'
-import { getClaimableIfoData } from 'utils/achievements'
 import AchievementRow from './AchievementRow'
 
 const ClaimPointsCallout: React.FC<React.PropsWithChildren<{ onSuccess?: () => void }>> = ({ onSuccess = null }) => {
   const [claimableAchievements, setClaimableAchievement] = useState<Achievement[]>([])
   const { t } = useTranslation()
-  const dispatch = useAppDispatch()
   const { profile, refresh: refreshProfile } = useProfile()
-  const { address: account } = useAccount()
-
-  useEffect(() => {
-    const fetchIfoClaims = async () => {
-      const ifoData = await getClaimableIfoData(account, t)
-      setClaimableAchievement(ifoData)
-    }
-
-    if (account) {
-      fetchIfoClaims()
-    }
-  }, [account, dispatch, setClaimableAchievement, t])
 
   const handleCollectSuccess = (achievement: Achievement) => {
     refreshProfile()

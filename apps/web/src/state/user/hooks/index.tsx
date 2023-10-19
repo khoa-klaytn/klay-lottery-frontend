@@ -2,11 +2,9 @@ import { Pair, ERC20Token } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 import { deserializeToken } from '@pancakeswap/token-lists'
 import flatMap from 'lodash/flatMap'
-import { getFarmConfig } from '@pancakeswap/farms/constants'
 import { useCallback, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from 'config/constants/exchange'
-import useSWRImmutable from 'swr/immutable'
 import { useOfficialsAndUserAddedTokens } from 'hooks/Tokens'
 import useSWR from 'swr'
 import { useActiveChainId } from 'hooks/useActiveChainId'
@@ -319,16 +317,6 @@ export function useTrackedTokenPairs(): [ERC20Token, ERC20Token][] {
   // pinned pairs
   const pinnedPairs = useMemo(() => (chainId ? PINNED_PAIRS[chainId] ?? [] : []), [chainId])
 
-  const { data: farmPairs = [] } = useSWRImmutable(chainId && ['track-farms-pairs', chainId], async () => {
-    const farms = await getFarmConfig(chainId)
-
-    const fPairs: [ERC20Token, ERC20Token][] | undefined = farms
-      ?.filter((farm) => farm.pid !== 0)
-      ?.map((farm) => [deserializeToken(farm.token), deserializeToken(farm.quoteToken)])
-
-    return fPairs
-  })
-
   // pairs for every token against every base
   const generatedPairs: [ERC20Token, ERC20Token][] = useMemo(
     () =>
@@ -369,8 +357,8 @@ export function useTrackedTokenPairs(): [ERC20Token, ERC20Token][] {
   }, [savedSerializedPairs, chainId])
 
   const combinedList = useMemo(
-    () => userPairs.concat(generatedPairs).concat(pinnedPairs).concat(farmPairs),
-    [generatedPairs, pinnedPairs, userPairs, farmPairs],
+    () => userPairs.concat(generatedPairs).concat(pinnedPairs),
+    [generatedPairs, pinnedPairs, userPairs],
   )
 
   return useMemo(() => {

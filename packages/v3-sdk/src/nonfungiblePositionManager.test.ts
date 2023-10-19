@@ -348,34 +348,4 @@ describe('NonfungiblePositionManager', () => {
       expect(value).toEqual('0x00')
     })
   })
-  describe('#safeTransferFromParameters', () => {
-    it('succeeds no data param', () => {
-      const options = {
-        sender,
-        recipient,
-        tokenId,
-      }
-      const { calldata, value } = NonfungiblePositionManager.safeTransferFromParameters(options)
-
-      expect(calldata).toEqual(
-        '0x42842e0e000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000001'
-      )
-      expect(value).toEqual('0x00')
-    })
-    it('succeeds data param', () => {
-      const data = '0x0000000000000000000000000000000000009004'
-      const options = {
-        sender,
-        recipient,
-        tokenId,
-        data,
-      }
-      const { calldata, value } = NonfungiblePositionManager.safeTransferFromParameters(options)
-
-      expect(calldata).toEqual(
-        '0xb88d4fde000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000009004000000000000000000000000'
-      )
-      expect(value).toEqual('0x00')
-    })
-  })
 })

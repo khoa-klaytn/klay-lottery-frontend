@@ -45,12 +45,6 @@ const config: (
           href: '/info/v3',
         },
         {
-          label: t('IFO'),
-          href: '/ifo',
-          supportChainIds: SUPPORT_ONLY_KLAYTN,
-          image: '/images/ifos/ifo-bunny.png',
-        },
-        {
           label: t('NFT'),
           href: `${nftsBaseUrl}`,
           supportChainIds: SUPPORT_ONLY_KLAYTN,

@@ -140,11 +140,6 @@ export const PolygonZkEvmBanner = () => {
             />
           </Flex>
           <Title data-text={title}>{title}</Title>
-          {isDesktop && (
-            <Text color="#FFE437" fontSize={24} fontWeight={700} mb="8px">
-              {t('Swap, LP, and Farms on Polygon zkEVM now')}
-            </Text>
-          )}
           <Flex>
             <NextLinkFromReactRouter
               target="_blank"

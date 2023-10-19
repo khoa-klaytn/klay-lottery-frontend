@@ -1,5 +1,4 @@
 import { Flex, LinkExternal, Text, ScanLink } from '@pancakeswap/uikit'
-import { FarmWidget } from '@pancakeswap/widgets-internal'
 import truncateHash from '@pancakeswap/utils/truncateHash'
 import { getBlockExploreLink } from 'utils'
 import { Vote } from 'state/types'
@@ -7,14 +6,12 @@ import { IPFS_GATEWAY } from '../../config'
 import TextEllipsis from '../TextEllipsis'
 import Row, { AddressColumn, ChoiceColumn, VotingPowerColumn } from './Row'
 
-const { VotedTag } = FarmWidget.Tags
-
 interface VoteRowProps {
   vote: Vote
   isVoter: boolean
 }
 
-const VoteRow: React.FC<React.PropsWithChildren<VoteRowProps>> = ({ vote, isVoter }) => {
+const VoteRow: React.FC<React.PropsWithChildren<VoteRowProps>> = ({ vote }) => {
   const hasVotingPower = !!vote.metadata?.votingPower
 
   const votingPower = hasVotingPower
@@ -31,7 +28,6 @@ const VoteRow: React.FC<React.PropsWithChildren<VoteRowProps>> = ({ vote, isVote
           <ScanLink useBscCoinFallback href={getBlockExploreLink(vote.voter, 'address')}>
             {truncateHash(vote.voter)}
           </ScanLink>
-          {isVoter && <VotedTag mr="4px" />}
         </Flex>
       </AddressColumn>
       <ChoiceColumn>

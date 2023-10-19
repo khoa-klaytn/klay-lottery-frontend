@@ -38,7 +38,6 @@ interface Props {
   sqrtRatioX96?: bigint;
   lpReward?: number;
   cakeReward?: number;
-  isFarm?: boolean;
   cakePrice?: string;
   setEditCakePrice: (cakePrice: number) => void;
 }
@@ -63,7 +62,6 @@ export const ImpermanentLossCalculator = memo(function ImpermanentLossCalculator
   currencyBUsdPrice,
   lpReward = 0,
   cakeReward = 0,
-  isFarm,
   cakePrice = "0",
   setEditCakePrice,
 }: Props) {
@@ -110,13 +108,13 @@ export const ImpermanentLossCalculator = memo(function ImpermanentLossCalculator
   );
 
   const exitAssets = useMemo<Asset[] | undefined>(() => {
-    if (assets && isFarm && currencyA && currencyA.chainId in CAKE && cakePrice) {
+    if (assets && currencyA && currencyA.chainId in CAKE && cakePrice) {
       const cakePriceToUse =
         assets.find((a) => a.currency.equals(CAKE[currencyA.chainId as keyof typeof CAKE]))?.price ?? cakePrice;
       return [...assets, getCakeAssetsByReward(currencyA.chainId, cakeRewardAmount, cakePriceToUse)];
     }
     return assets;
-  }, [assets, cakeRewardAmount, cakePrice, currencyA, isFarm]);
+  }, [assets, cakeRewardAmount, cakePrice, currencyA]);
 
   const [entry, setEntry] = useState<Asset[] | undefined>(assets);
   const [exit, setExit] = useState<Asset[] | undefined>(exitAssets);

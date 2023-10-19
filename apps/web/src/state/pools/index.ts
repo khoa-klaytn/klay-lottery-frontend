@@ -13,8 +13,6 @@ import {
   fetchUserBalances,
   fetchUserPendingRewards,
   fetchUserStakeBalances,
-  fetchPublicIfoData,
-  fetchUserIfoCredit,
   fetchPublicVaultData,
   fetchPublicFlexibleSideVaultData,
   fetchVaultUser,
@@ -35,7 +33,6 @@ import {
   SerializedVaultFees,
   SerializedCakeVault,
   SerializedLockedVaultUser,
-  PublicIfoData,
   SerializedVaultUser,
   SerializedLockedCakeVault,
 } from 'state/types'
@@ -44,11 +41,9 @@ import { isAddress } from 'utils'
 import { publicClient } from 'utils/wagmi'
 import { getViemClients } from 'utils/viem'
 import { fetchTokenUSDValue } from 'utils/llamaPrice'
-import { farmV3ApiFetch } from 'state/farmsV3/hooks'
 import { getCakePriceFromOracle } from 'hooks/useCakePrice'
 import { fetchTokenAplPrice } from 'utils/fetchTokenAplPrice'
 
-import { getTokenPricesFromFarm } from './helpers'
 import { resetUserState } from '../global/actions'
 
 export const initialPoolVaultState = Object.freeze({
@@ -88,7 +83,6 @@ const initialState: PoolsState = {
   data: [],
   userDataLoaded: false,
   cakeVault: initialPoolVaultState,
-  ifo: initialIfoState,
   cakeFlexibleSideVault: initialPoolVaultState,
 }
 
@@ -142,7 +136,7 @@ export const fetchCakePoolUserDataAsync =
     )
   }
 
-export const fetchPoolsPublicDataAsync = (chainId: number) => async (dispatch, getState) => {
+export const fetchPoolsPublicDataAsync = (chainId: number) => async (dispatch) => {
   try {
     const [block, timeLimits] = await Promise.all([
       getViemClients({ chainId })?.getBlock({ blockTag: 'latest' }),
@@ -151,23 +145,12 @@ export const fetchPoolsPublicDataAsync = (chainId: number) => async (dispatch, g
     const timeLimitsSousIdMap = keyBy(timeLimits, 'sousId')
     const poolsConfig = getPoolsConfig(chainId) || []
 
-    const fetchFarmV3Promise = farmV3ApiFetch(chainId)
-      .then((result) => result?.farmsWithPrice || [])
-      .catch(() => {
-        return []
-      })
-
-    const [totalStakings, profileRequirements, farmsV3Data] = await Promise.all([
+    const [totalStakings, profileRequirements] = await Promise.all([
       fetchPoolsTotalStaking(chainId, getViemClients),
       fetchPoolsProfileRequirement(chainId, getViemClients),
-      fetchFarmV3Promise,
     ])
 
     const totalStakingsSousIdMap = keyBy(totalStakings, 'sousId')
-
-    const farmsV2Data = getState().farms.data
-
-    const prices = getTokenPricesFromFarm([...farmsV2Data, ...farmsV3Data])
 
     const liveData: any[] = []
 
@@ -179,8 +162,8 @@ export const fetchPoolsPublicDataAsync = (chainId: number) => async (dispatch, g
       const isPoolFinished = pool.isFinished || isPoolEndBlockExceeded
 
       const stakingTokenAddress = isAddress(pool.stakingToken.address)
-      let stakingTokenPrice = stakingTokenAddress ? prices[stakingTokenAddress] : 0
-      if (stakingTokenAddress && !prices[stakingTokenAddress] && !isPoolFinished) {
+      let stakingTokenPrice = 0
+      if (stakingTokenAddress && !isPoolFinished) {
         // TODO: Remove this when fetchTokenUSDValue can get APL USD Price
         if (
           pool.stakingToken.chainId === ChainId.ARBITRUM_ONE &&
@@ -191,16 +174,16 @@ export const fetchPoolsPublicDataAsync = (chainId: number) => async (dispatch, g
         } else {
           // eslint-disable-next-line no-await-in-loop
           const result = await fetchTokenUSDValue(chainId, [stakingTokenAddress])
-          stakingTokenPrice = result.get(stakingTokenAddress) || 0
+          stakingTokenPrice = +result.get(stakingTokenAddress) || 0
         }
       }
 
       const earningTokenAddress = isAddress(pool.earningToken.address)
-      let earningTokenPrice = earningTokenAddress ? prices[earningTokenAddress] : 0
-      if (earningTokenAddress && !prices[earningTokenAddress] && !isPoolFinished) {
+      let earningTokenPrice = 0
+      if (earningTokenAddress && !isPoolFinished) {
         // eslint-disable-next-line no-await-in-loop
         const result = await fetchTokenUSDValue(chainId, [earningTokenAddress])
-        earningTokenPrice = result.get(earningTokenAddress) || 0
+        earningTokenPrice = +result.get(earningTokenAddress) || 0
       }
       const totalStaked = getBalanceNumber(new BigNumber(totalStaking.totalStaked), pool.stakingToken.decimals)
       const apr = !isPoolFinished
@@ -373,24 +356,6 @@ export const fetchCakeVaultUserData = createAsyncThunk<
   return userData
 })
 
-export const fetchIfoPublicDataAsync = createAsyncThunk<PublicIfoData, ChainId>(
-  'ifoVault/fetchIfoPublicDataAsync',
-  async (chainId) => {
-    const publicIfoData = await fetchPublicIfoData(chainId, getViemClients)
-    return publicIfoData
-  },
-)
-
-export const fetchUserIfoCreditDataAsync =
-  ({ account, chainId }: { account: Address; chainId: ChainId }) =>
-  async (dispatch) => {
-    try {
-      const credit = await fetchUserIfoCredit({ account, chainId, provider: getViemClients })
-      dispatch(setIfoUserCreditData(credit))
-    } catch (error) {
-      console.error('[Ifo Credit Action] Error fetching user Ifo credit data', error)
-    }
-  }
 export const fetchCakeFlexibleSideVaultUserData = createAsyncThunk<
   SerializedVaultUser,
   { account: Address; chainId: ChainId }
@@ -409,7 +374,6 @@ export const PoolsSlice = createSlice({
       state.data = [...poolsConfig]
       state.userDataLoaded = false
       state.cakeVault = initialPoolVaultState
-      state.ifo = initialIfoState
       state.cakeFlexibleSideVault = initialPoolVaultState
     },
     setPoolPublicData: (state, action) => {
@@ -436,11 +400,6 @@ export const PoolsSlice = createSlice({
         const livePoolData = livePoolsSousIdMap[pool.sousId]
         return { ...pool, ...livePoolData }
       })
-    },
-    // IFO
-    setIfoUserCreditData: (state, action) => {
-      const credit = action.payload
-      state.ifo = { ...state.ifo, credit }
     },
   },
   extraReducers: (builder) => {
@@ -498,11 +457,6 @@ export const PoolsSlice = createSlice({
       const userData = action.payload
       state.cakeVault = { ...state.cakeVault, userData }
     })
-    // IFO
-    builder.addCase(fetchIfoPublicDataAsync.fulfilled, (state, action: PayloadAction<PublicIfoData>) => {
-      const { ceiling } = action.payload
-      state.ifo = { ...state.ifo, ceiling }
-    })
     builder.addCase(
       fetchCakeFlexibleSideVaultUserData.fulfilled,
       (state, action: PayloadAction<SerializedVaultUser>) => {
@@ -530,7 +484,6 @@ export const PoolsSlice = createSlice({
 })
 
 // Actions
-export const { setPoolsPublicData, setPoolPublicData, setPoolUserData, setIfoUserCreditData, setInitialPoolConfig } =
-  PoolsSlice.actions
+export const { setPoolsPublicData, setPoolPublicData, setPoolUserData, setInitialPoolConfig } = PoolsSlice.actions
 
 export default PoolsSlice.reducer
