@@ -2,7 +2,7 @@ import { ChainId } from '@pancakeswap/chains'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { CHAINS } from 'config/chains'
 import { PUBLIC_NODES } from 'config/nodes'
-import type { AbiError } from 'viem/abi'
+import type { AbiError } from 'abitype'
 import {
   createPublicClient,
   http,

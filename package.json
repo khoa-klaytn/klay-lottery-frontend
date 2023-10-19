@@ -43,6 +43,7 @@
     "@pancakeswap/tsconfig": "workspace:*",
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "@types/node": "^18.16.2",
+    "abitype": "^0.10.1",
     "eslint-plugin-address": "^0.0.2",
     "eslint-plugin-lodash": "^7.4.0",
     "eslint-plugin-strict-null-checks": "0.0.21",
