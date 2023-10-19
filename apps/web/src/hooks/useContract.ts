@@ -19,7 +19,6 @@ import {
   getChainlinkOracleContract,
   getContract,
   getCrossFarmingProxyContract,
-  getFarmAuctionContract,
   getIfoCreditAddressContract,
   getKlayLotteryContract,
   getMasterChefContract,
@@ -186,11 +185,6 @@ export const useChainlinkOracleContract = (address) => {
 export const useNftSaleContract = () => {
   const { data: signer } = useWalletClient()
   return useMemo(() => getNftSaleContract(signer ?? undefined), [signer])
-}
-
-export const useFarmAuctionContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getFarmAuctionContract(signer ?? undefined), [signer])
 }
 
 export const useNftMarketContract = () => {

@@ -10,7 +10,6 @@ import {
   getCakeVaultAddress,
   getCrossFarmingReceiverAddress,
   getCrossFarmingSenderAddress,
-  getFarmAuctionAddress,
   getKlayLotteryAddress,
   getMasterChefV2Address,
   getMasterChefV3Address,
@@ -59,7 +58,6 @@ import { bCakeProxyABI } from 'config/abi/bCakeProxy'
 import { bunnyFactoryABI } from 'config/abi/bunnyFactory'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import { crossFarmingReceiverABI } from 'config/abi/crossFarmingReceiver'
-import { farmAuctionABI } from 'config/abi/farmAuction'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
 import { masterChefV2ABI } from 'config/abi/masterchefV2'
@@ -188,10 +186,6 @@ export const getCakeFlexibleSideVaultV2Contract = (signer?: WalletClient, chainI
 
 export const getChainlinkOracleContract = (address: Address, signer?: WalletClient, chainId?: number) => {
   return getContract({ abi: chainlinkOracleABI, address, signer, chainId })
-}
-
-export const getFarmAuctionContract = (signer?: WalletClient) => {
-  return getContract({ abi: farmAuctionABI, address: getFarmAuctionAddress(), signer })
 }
 
 export const getNftMarketContract = (signer?: WalletClient) => {
