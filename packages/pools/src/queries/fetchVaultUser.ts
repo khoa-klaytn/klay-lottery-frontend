@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js'
 import { ChainId } from '@pancakeswap/chains'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 
 import { OnChainProvider, SerializedLockedVaultUser, SerializedVaultUser } from '../types'
 import { cakeVaultV2ABI } from '../abis/ICakeVaultV2'

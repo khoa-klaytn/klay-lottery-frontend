@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, ERC20Token, Pair as V2Pair, Percent, Price, TradeType } from '@pancakeswap/sdk'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 
 import { RouteType } from './bestTrade'
 import { BasePair } from './pair'

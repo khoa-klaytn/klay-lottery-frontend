@@ -2,7 +2,7 @@ import { Currency, CurrencyAmount, Percent, BigintIsh } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 import { deserializeToken } from '@pancakeswap/token-lists'
 import { FeeAmount, DEPLOYER_ADDRESSES, parseProtocolFees } from '@pancakeswap/v3-sdk'
-import { Address, ContractFunctionConfig, Abi } from 'viem'
+import { type Address, ContractFunctionConfig, Abi } from 'viem'
 
 import { OnChainProvider, Pool, PoolType, V2Pool, StablePool, V3Pool } from '../../types'
 import { pancakePairABI } from '../../../abis/IPancakePair'
@@ -219,7 +219,7 @@ function createOnChainPoolFactory<
     const results = await client.multicall({
       contracts: calls.map((call) => ({
         abi: abi as any,
-        address: call.address as `0x${string}`,
+        address: call.address as Address,
         functionName: call.functionName,
         args: call.args as any,
       })),

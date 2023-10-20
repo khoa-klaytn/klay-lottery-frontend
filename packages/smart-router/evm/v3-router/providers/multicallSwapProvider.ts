@@ -1,7 +1,7 @@
 /* eslint-disable no-console, camelcase, @typescript-eslint/no-non-null-assertion */
 import { BigintIsh } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
-import { encodeFunctionData, PublicClient, decodeFunctionResult } from 'viem'
+import { encodeFunctionData, PublicClient, decodeFunctionResult, type Address } from 'viem'
 import stats from 'stats-lite'
 import { multicallByGasLimit } from '@pancakeswap/multicall'
 
@@ -96,7 +96,7 @@ export class PancakeMulticallProvider extends IMulticallProvider<PancakeMultical
           result: decodeFunctionResult({
             abi,
             functionName,
-            data: callResult as `0x${string}`,
+            data: callResult as Address,
           }) as TReturn,
         })
         gasUsedForSuccess.push(Number(gasUsed))
@@ -176,7 +176,7 @@ export class PancakeMulticallProvider extends IMulticallProvider<PancakeMultical
           result: decodeFunctionResult({
             abi,
             functionName,
-            data: callResult as `0x${string}`,
+            data: callResult as Address,
           }) as TReturn,
         })
         gasUsedForSuccess.push(Number(gasUsed))
@@ -254,7 +254,7 @@ export class PancakeMulticallProvider extends IMulticallProvider<PancakeMultical
           result: decodeFunctionResult({
             abi,
             functionName: functionNames[i],
-            data: callResult as `0x${string}`,
+            data: callResult as Address,
           }) as TReturn,
         })
         gasUsedForSuccess.push(Number(gasUsed))

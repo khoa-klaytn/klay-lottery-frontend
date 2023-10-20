@@ -1,6 +1,6 @@
 import {
   keccak256,
-  Address,
+  type Address,
   encodeAbiParameters,
   parseAbiParameters,
   Hash,
@@ -34,7 +34,7 @@ function getCreate2Address(
 const EMPTY_INPU_HASH = '0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470'
 const ZKSYNC_PREFIX = '0x2020dba91b30cc0006188af794c2fb30dd8520db7e2c088b7fc7c103c00ca494' // keccak256('zksyncCreate2')
 
-function getCreate2AddressZkSync(from: Address, salt: `0x${string}`, initCodeHash: `0x${string}`): `0x${string}` {
+function getCreate2AddressZkSync(from: Address, salt: Address, initCodeHash: Address): Address {
   return getAddress(
     `0x${keccak256(concat([ZKSYNC_PREFIX, pad(from, { size: 32 }), salt, initCodeHash, EMPTY_INPU_HASH])).slice(26)}`
   )

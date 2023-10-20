@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount, Pair, Percent, Price, Trade, TradeType, ERC20Token } from '@pancakeswap/sdk'
 import invariant from 'tiny-invariant'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 
 import { RouteType, RouteWithStableSwap, StableSwapFeeRaw, StableSwapPair, StableSwapFeePercent } from './types'
 import { BasePair } from './types/pair'

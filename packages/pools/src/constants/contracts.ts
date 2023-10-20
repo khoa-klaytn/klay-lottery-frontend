@@ -1,5 +1,5 @@
 import { ChainId } from '@pancakeswap/chains'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 
 import { SupportedChainId } from './supportedChains'
 

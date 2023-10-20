@@ -26,6 +26,8 @@ import {
 import { ChainMap, ChainTokenList } from '../types'
 
 export const SMART_ROUTER_ADDRESSES = {
+  [ChainId.KLAYTN]: '',
+  [ChainId.KLAYTN_TESTNET]: '',
   [ChainId.ETHEREUM]: '0x13f4EA83D0bd40E75C8222255bc855a974568Dd4',
   [ChainId.GOERLI]: '0x9a489505a00cE272eAa5e07Dba6491314CaE3796',
   [ChainId.BSC]: '0x13f4EA83D0bd40E75C8222255bc855a974568Dd4',
@@ -46,6 +48,8 @@ export const SMART_ROUTER_ADDRESSES = {
 } as const satisfies Record<ChainId, string>
 
 export const V2_ROUTER_ADDRESS: ChainMap<string> = {
+  [ChainId.KLAYTN]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
+  [ChainId.KLAYTN_TESTNET]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.ETHEREUM]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.GOERLI]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.BSC]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
@@ -66,6 +70,8 @@ export const V2_ROUTER_ADDRESS: ChainMap<string> = {
 }
 
 export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
+  [ChainId.KLAYTN]: '',
+  [ChainId.KLAYTN_TESTNET]: '',
   [ChainId.ETHEREUM]: '',
   [ChainId.GOERLI]: '',
   [ChainId.BSC]: '0xa680d27f63Fa5E213C502d1B3Ca1EB6a3C1b31D6',

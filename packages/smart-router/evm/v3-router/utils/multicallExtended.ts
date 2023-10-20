@@ -1,4 +1,4 @@
-import { encodeFunctionData, Hex } from 'viem'
+import { type Address, encodeFunctionData, Hex } from 'viem'
 import { BigintIsh } from '@pancakeswap/sdk'
 import { Multicall } from '@pancakeswap/v3-sdk'
 
@@ -7,12 +7,12 @@ import { multicallExtendedAbi } from '../../abis/IMulticallExtended'
 // deadline or previousBlockhash
 export type Validation = BigintIsh | string
 
-function validateAndParseBytes32(bytes32: string): `0x${string}` {
+function validateAndParseBytes32(bytes32: string): Address {
   if (!bytes32.match(/^0x[0-9a-fA-F]{64}$/)) {
     throw new Error(`${bytes32} is not valid bytes32.`)
   }
 
-  return bytes32.toLowerCase() as `0x${string}`
+  return bytes32.toLowerCase() as Address
 }
 
 export abstract class MulticallExtended {

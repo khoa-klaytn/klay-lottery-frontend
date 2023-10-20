@@ -1,4 +1,4 @@
-import { encodeFunctionData } from 'viem'
+import { type Address, encodeFunctionData } from 'viem'
 
 const IMulticall = [
   {
@@ -30,7 +30,7 @@ export abstract class Multicall {
    */
   private constructor() {}
 
-  public static encodeMulticall(calldatas: `0x${string}` | `0x${string}`[]): `0x${string}` {
+  public static encodeMulticall(calldatas: Address | Address[]): Address {
     if (!Array.isArray(calldatas)) {
       calldatas = [calldatas]
     }

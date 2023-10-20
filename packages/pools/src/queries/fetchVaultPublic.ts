@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { ChainId } from '@pancakeswap/chains'
 import { CAKE } from '@pancakeswap/tokens'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 
 import { cakeVaultV2ABI } from '../abis/ICakeVaultV2'
 import { OnChainProvider } from '../types'

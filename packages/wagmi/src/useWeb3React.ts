@@ -1,8 +1,8 @@
-import { Chain, Connector, useAccount, useNetwork } from 'wagmi'
+import { type Address, Chain, Connector, useAccount, useNetwork } from 'wagmi'
 
 export function useWeb3React(): {
   chainId: number | undefined
-  account: `0x${string}` | null | undefined
+  account: Address | null | undefined
   isConnected: boolean
   isConnecting: boolean
   chain: (Chain & { unsupported?: boolean | undefined }) | undefined

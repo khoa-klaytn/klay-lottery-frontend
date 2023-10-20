@@ -1,5 +1,5 @@
 import { BaseCurrency, Currency, Token } from '@pancakeswap/swap-sdk-core'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 import invariant from 'tiny-invariant'
 import { validateAndParseAddress } from '../utils'
 
@@ -39,13 +39,13 @@ export class OnRampCurrency extends BaseCurrency {
   /**
    * The contract address on the chain on which this token lives
    */
-  public readonly address: `0x${string}`
+  public readonly address: Address
 
   public readonly projectLink?: string
 
   public constructor(
     chainId: number,
-    address: `0x${string}`,
+    address: Address,
     decimals: number,
     symbol: string,
     name?: string,

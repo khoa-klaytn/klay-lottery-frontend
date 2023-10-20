@@ -7,7 +7,7 @@ import {
   NativeCurrency,
   validateAndParseAddress,
 } from '@pancakeswap/sdk'
-import { Address, encodeFunctionData, Hex } from 'viem'
+import { type Address, encodeFunctionData, Hex } from 'viem'
 
 import invariant from 'tiny-invariant'
 import { nonfungiblePositionManagerABI } from './abi/NonfungiblePositionManager'
@@ -126,8 +126,8 @@ export interface CollectOptions {
 
 export interface NFTPermitOptions {
   v: 0 | 1 | 27 | 28
-  r: `0x${string}`
-  s: `0x${string}`
+  r: Address
+  s: Address
   deadline: BigintIsh
   spender: string
 }

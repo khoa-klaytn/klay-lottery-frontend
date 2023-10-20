@@ -2,7 +2,7 @@
 import { BigintIsh, CurrencyAmount, Price, Token } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 import invariant from 'tiny-invariant'
-import { Address, Hash } from 'viem'
+import { type Address, Hash } from 'viem'
 import { FeeAmount, TICK_SPACINGS, DEPLOYER_ADDRESSES } from '../constants'
 import { NEGATIVE_ONE, ONE, Q192, ZERO } from '../internalConstants'
 import { computePoolAddress } from '../utils/computePoolAddress'
@@ -58,7 +58,7 @@ export class Pool {
     fee: FeeAmount,
     initCodeHashManualOverride?: Hash,
     deployerAddressOverride?: Address
-  ): `0x${string}` {
+  ): Address {
     return computePoolAddress({
       deployerAddress: deployerAddressOverride ?? DEPLOYER_ADDRESSES[tokenA.chainId as ChainId],
       fee,

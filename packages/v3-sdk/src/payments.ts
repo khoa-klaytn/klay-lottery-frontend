@@ -1,5 +1,5 @@
 import { Percent, Token, validateAndParseAddress } from '@pancakeswap/sdk'
-import { Address, encodeFunctionData } from 'viem'
+import { type Address, encodeFunctionData } from 'viem'
 import { peripheryPaymentsWithFeeABI } from './abi/PeripheryPaymentsWithFee'
 
 export interface FeeOptions {
@@ -26,7 +26,7 @@ export abstract class Payments {
     return fee.multiply(10_000).quotient
   }
 
-  public static encodeUnwrapWETH9(amountMinimum: bigint, recipient: Address, feeOptions?: FeeOptions): `0x${string}` {
+  public static encodeUnwrapWETH9(amountMinimum: bigint, recipient: Address, feeOptions?: FeeOptions): Address {
     recipient = validateAndParseAddress(recipient)
 
     if (feeOptions) {
@@ -48,7 +48,7 @@ export abstract class Payments {
     amountMinimum: bigint,
     recipient: Address,
     feeOptions?: FeeOptions
-  ): `0x${string}` {
+  ): Address {
     recipient = validateAndParseAddress(recipient)
 
     if (feeOptions) {
@@ -69,7 +69,7 @@ export abstract class Payments {
     })
   }
 
-  public static encodeRefundETH(): `0x${string}` {
+  public static encodeRefundETH(): Address {
     return encodeFunctionData({ abi: Payments.ABI, functionName: 'refundETH' })
   }
 }

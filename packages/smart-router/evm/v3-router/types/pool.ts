@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount, Percent } from '@pancakeswap/sdk'
 import { FeeAmount, Tick } from '@pancakeswap/v3-sdk'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 
 export enum PoolType {
   V2,
