@@ -9,6 +9,7 @@ import { LotteryTicketClaimData } from 'config/constants/types'
 import { useAppDispatch } from 'state'
 import { useLottery } from 'state/lottery/hooks'
 import { fetchUserLotteries } from 'state/lottery'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import ClaimPrizesInner from './ClaimPrizesInner'
 
 const StyledModal = styled(ModalContainer)`
@@ -57,6 +58,7 @@ const ClaimPrizesModal: React.FC<React.PropsWithChildren<ClaimPrizesModalModalPr
   roundsToClaim,
 }) => {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const { t } = useTranslation()
   const { address: account } = useAccount()
   const { currentLotteryId } = useLottery()
@@ -80,7 +82,7 @@ const ClaimPrizesModal: React.FC<React.PropsWithChildren<ClaimPrizesModalModalPr
       <ModalBody p="24px">
         <ClaimPrizesInner
           onSuccess={() => {
-            dispatch(fetchUserLotteries({ publicClient, account, currentLotteryId }))
+            dispatch(fetchUserLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
             onDismiss?.()
           }}
           roundsToClaim={roundsToClaim}

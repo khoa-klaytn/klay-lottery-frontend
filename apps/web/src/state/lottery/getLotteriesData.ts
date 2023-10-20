@@ -89,10 +89,14 @@ export const getGraphLotteries = async (
   }
 }
 
-const getLotteriesData = async (client: PublicClient, currentLotteryId: string): Promise<LotteryRoundGraphEntity[]> => {
+const getLotteriesData = async (
+  client: PublicClient,
+  lotteryAddress: `0x${string}`,
+  currentLotteryId: string,
+): Promise<LotteryRoundGraphEntity[]> => {
   const idsForNodesCall = getRoundIdsArray(currentLotteryId)
   const [nodeData, graphResponse] = await Promise.all([
-    fetchMultipleLotteries(client, idsForNodesCall),
+    fetchMultipleLotteries(client, lotteryAddress, idsForNodesCall),
     getGraphLotteries(),
   ])
   const mergedData = applyNodeDataToLotteriesGraphResponse(nodeData, graphResponse)

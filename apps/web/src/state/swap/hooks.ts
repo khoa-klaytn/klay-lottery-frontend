@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Currency, CurrencyAmount, Price, Trade, TradeType } from '@pancakeswap/sdk'
+import { Currency, CurrencyAmount, Trade, TradeType } from '@pancakeswap/sdk'
 import { CAKE, USDC, USDT, STABLE_COIN } from '@pancakeswap/tokens'
 import tryParseAmount from '@pancakeswap/utils/tryParseAmount'
 import { useUserSlippage } from '@pancakeswap/utils/user'
@@ -7,7 +7,6 @@ import { SLOW_INTERVAL } from 'config/constants'
 import { DEFAULT_INPUT_CURRENCY } from 'config/constants/exchange'
 import { useTradeExactIn, useTradeExactOut } from 'hooks/Trades'
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { useBestAMMTrade } from 'hooks/useBestAMMTrade'
 import { useGetENSAddressByName } from 'hooks/useGetENSAddressByName'
 import useNativeCurrency from 'hooks/useNativeCurrency'
 import { useAtom, useAtomValue } from 'jotai'
@@ -17,7 +16,6 @@ import { useEffect, useMemo, useState } from 'react'
 import useSWRImmutable from 'swr/immutable'
 import { isAddress } from 'utils'
 import { computeSlippageAdjustedAmounts } from 'utils/exchange'
-import { getTokenAddress } from 'views/Swap/components/Chart/utils'
 import { useAccount } from 'wagmi'
 import { useCurrencyBalances } from '../wallet/hooks'
 import { Field, replaceSwapState } from './actions'
@@ -47,57 +45,6 @@ function involvesAddress(trade: Trade<Currency, Currency, TradeType>, checksumme
     trade.route.path.some((token) => token.address === checksummedAddress) ||
     trade.route.pairs.some((pair) => pair.liquidityToken.address === checksummedAddress)
   )
-}
-
-// Get swap price for single token disregarding slippage and price impact
-export function useSingleTokenSwapInfo(
-  inputCurrencyId: string | undefined,
-  inputCurrency: Currency | undefined,
-  outputCurrencyId: string | undefined,
-  outputCurrency: Currency | undefined,
-): { [key: string]: number } {
-  const { chainId } = useActiveChainId()
-  const token0Address = useMemo(() => getTokenAddress(chainId, inputCurrencyId), [chainId, inputCurrencyId])
-  const token1Address = useMemo(() => getTokenAddress(chainId, outputCurrencyId), [chainId, outputCurrencyId])
-
-  const amount = useMemo(() => tryParseAmount('1', inputCurrency ?? undefined), [inputCurrency])
-
-  const { trade: bestTradeExactIn } = useBestAMMTrade({
-    amount,
-    currency: outputCurrency,
-    baseCurrency: inputCurrency,
-    tradeType: TradeType.EXACT_INPUT,
-    maxSplits: 0,
-    v2Swap: true,
-    v3Swap: true,
-    stableSwap: true,
-    type: 'api',
-    autoRevalidate: false,
-  })
-  if (!inputCurrency || !outputCurrency || !bestTradeExactIn) {
-    return null
-  }
-
-  let inputTokenPrice = 0
-  try {
-    inputTokenPrice = parseFloat(
-      new Price({
-        baseAmount: bestTradeExactIn.inputAmount,
-        quoteAmount: bestTradeExactIn.outputAmount,
-      }).toSignificant(6),
-    )
-  } catch (error) {
-    //
-  }
-  if (!inputTokenPrice) {
-    return null
-  }
-  const outputTokenPrice = 1 / inputTokenPrice
-
-  return {
-    [token0Address]: inputTokenPrice,
-    [token1Address]: outputTokenPrice,
-  }
 }
 
 // from the current swap inputs, compute the best trade and return it.

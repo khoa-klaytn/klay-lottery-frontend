@@ -12,7 +12,6 @@ import { FixedSizeList } from 'react-window'
 import { styled } from 'styled-components'
 import { wrappedCurrency } from 'utils/wrappedCurrency'
 import { useAccount } from 'wagmi'
-import { fiatCurrencyMap } from 'views/BuyCrypto/constants'
 import { FiatLogo } from 'components/Logo/CurrencyLogo'
 import { useIsUserAddedToken } from '../../hooks/Tokens'
 import { useCombinedActiveList } from '../../state/lists/hooks'
@@ -162,13 +161,12 @@ export default function CurrencyList({
   const Row = useCallback(
     ({ data, index, style }) => {
       const currency: any = data[index]
-      const isFiat = Boolean(Object.keys(fiatCurrencyMap).includes(currency?.symbol))
 
       // the alternative to making a fiat currency token list
       // with class methods
       let isSelected = false
       let otherSelected = false
-      if (!isFiat && mode !== 'onramp-input') {
+      if (mode !== 'onramp-input') {
         isSelected = Boolean(selectedCurrency && currency && selectedCurrency.equals(currency))
         otherSelected = Boolean(otherCurrency && currency && otherCurrency.equals(currency))
       } else {

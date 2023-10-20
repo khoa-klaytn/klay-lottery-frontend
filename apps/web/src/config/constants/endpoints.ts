@@ -83,7 +83,7 @@ export const V3_SUBGRAPH_URLS = {
   [ChainId.OPBNB]: 'https://opbnb-mainnet-graph.nodereal.io/subgraphs/name/pancakeswap/exchange-v3',
   [ChainId.OPBNB_TESTNET]: null,
   [ChainId.SCROLL_SEPOLIA]: 'https://api.studio.thegraph.com/query/45376/exchange-v3-scroll-sepolia/version/latest',
-} satisfies Record<ChainId, string | null>
+} as Record<ChainId, string | null>
 
 export const TRADING_REWARD_API = 'https://pancake-trading-fee-rebate-api.pancakeswap.com/api/v1'
 

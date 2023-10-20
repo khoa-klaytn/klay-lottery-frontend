@@ -10,7 +10,6 @@ import { formatAmount } from '@pancakeswap/utils/formatFractions'
 
 import { useStablecoinPriceAmount } from 'hooks/useBUSDPrice'
 import { formatNumber } from '@pancakeswap/utils/formatBalance'
-import { StablePair } from 'views/AddLiquidity/AddStableLiquidity/hooks/useStableLPDerivedMintInfo'
 
 import { FiatLogo } from 'components/Logo/CurrencyLogo'
 import { useAccount } from 'wagmi'
@@ -46,7 +45,7 @@ interface CurrencyInputPanelProps {
   currency?: Currency | null
   disableCurrencySelect?: boolean
   hideBalance?: boolean
-  pair?: Pair | StablePair | null
+  pair?: Pair | null
   otherCurrency?: Currency | null
   id: string
   showCommonBases?: boolean

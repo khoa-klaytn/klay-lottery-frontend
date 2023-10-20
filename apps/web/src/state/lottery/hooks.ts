@@ -3,6 +3,7 @@ import { useAccount, usePublicClient } from 'wagmi'
 import { useSelector, batch } from 'react-redux'
 import { useAppDispatch } from 'state'
 import { useFastRefreshEffect } from 'hooks/useRefreshEffect'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import { State } from '../types'
 import { fetchCurrentLotteryId, fetchCurrentLottery, fetchUserTicketsAndLotteries, fetchPublicLotteries } from '.'
 import { makeLotteryGraphDataByIdSelector, lotterySelector } from './selectors'
@@ -27,32 +28,33 @@ export const useGetLotteryGraphDataById = (lotteryId: string) => {
 
 export const useFetchLottery = (fetchPublicDataOnly = false) => {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const { address: account } = useAccount()
   const dispatch = useAppDispatch()
   const currentLotteryId = useGetCurrentLotteryId()
 
   useEffect(() => {
     // get current lottery ID & max ticket buy
-    dispatch(fetchCurrentLotteryId({ publicClient }))
-  }, [publicClient, dispatch])
+    dispatch(fetchCurrentLotteryId({ publicClient, lotteryAddress }))
+  }, [publicClient, lotteryAddress, dispatch])
 
   useFastRefreshEffect(() => {
     if (currentLotteryId) {
       batch(() => {
         // Get historical lottery data from nodes +  last 100 subgraph entries
-        dispatch(fetchPublicLotteries({ publicClient, currentLotteryId }))
+        dispatch(fetchPublicLotteries({ publicClient, lotteryAddress, currentLotteryId }))
         // get public data for current lottery
-        dispatch(fetchCurrentLottery({ publicClient, currentLotteryId }))
+        dispatch(fetchCurrentLottery({ publicClient, lotteryAddress, currentLotteryId }))
       })
     }
-  }, [publicClient, dispatch, currentLotteryId])
+  }, [publicClient, lotteryAddress, dispatch, currentLotteryId])
 
   useEffect(() => {
     // get user tickets for current lottery, and user lottery subgraph data
     if (account && currentLotteryId && !fetchPublicDataOnly) {
-      dispatch(fetchUserTicketsAndLotteries({ publicClient, account, currentLotteryId }))
+      dispatch(fetchUserTicketsAndLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
     }
-  }, [publicClient, dispatch, currentLotteryId, account, fetchPublicDataOnly])
+  }, [publicClient, lotteryAddress, dispatch, currentLotteryId, account, fetchPublicDataOnly])
 }
 
 export const useLottery = () => {

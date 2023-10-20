@@ -14,7 +14,6 @@ import {
   getCakeVaultV2Contract,
   getChainlinkOracleContract,
   getContract,
-  getIfoCreditAddressContract,
   getKlayLotteryContract,
   getNftMarketContract,
   getNftSaleContract,
@@ -49,6 +48,7 @@ import { VaultKey } from 'state/types'
 import { erc721CollectionABI } from 'config/abi/erc721collection'
 import { infoStableSwapABI } from 'config/abi/infoStableSwap'
 import { wethABI } from 'config/abi/weth'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 /**
  * Helper hooks to get specific contracts (by ABI)
  */
@@ -74,8 +74,9 @@ export const useProfileContract = () => {
 }
 
 export const useKlayLotteryContract = () => {
+  const address = useLotteryAddress()
   const { data: signer } = useWalletClient()
-  return useMemo(() => getKlayLotteryContract(signer ?? undefined), [signer])
+  return useMemo(() => getKlayLotteryContract(address, signer ?? undefined), [address, signer])
 }
 
 export const useSousChef = (id) => {
@@ -143,10 +144,6 @@ export const useCakeVaultContract = () => {
   const { data: signer } = useWalletClient()
   const { chainId } = useActiveChainId()
   return useMemo(() => getCakeVaultV2Contract(signer ?? undefined, chainId), [signer, chainId])
-}
-
-export const useIfoCreditAddressContract = () => {
-  return useMemo(() => getIfoCreditAddressContract(), [])
 }
 
 export const useChainlinkOracleContract = (address) => {

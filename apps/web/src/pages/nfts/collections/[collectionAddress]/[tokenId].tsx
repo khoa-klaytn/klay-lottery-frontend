@@ -1,5 +1,5 @@
 import IndividualNFT from 'views/Nft/market/Collection/IndividualNFTPage'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getCollection, getNftApi } from 'state/nftMarket/helpers'
 import { NftToken } from 'state/nftMarket/types'

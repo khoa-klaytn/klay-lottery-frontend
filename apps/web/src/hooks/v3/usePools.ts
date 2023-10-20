@@ -1,7 +1,7 @@
 import { BigintIsh, Currency, Token } from '@pancakeswap/swap-sdk-core'
 import { computePoolAddress, FeeAmount, Pool, DEPLOYER_ADDRESSES } from '@pancakeswap/v3-sdk'
 import { useMemo } from 'react'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 import { useMultipleContractSingleData } from 'state/multicall/hooks'
 import { v3PoolStateABI } from 'config/abi/v3PoolState'
 import { useActiveChainId } from 'hooks/useActiveChainId'

@@ -1,12 +1,10 @@
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { useEffect, useMemo, useState } from 'react'
-import { getKlayLotteryAddress } from 'utils/addressHelpers'
 import { useAccount, usePublicClient } from 'wagmi'
 import { Button } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
 import Modal from './Modal'
-
-const klayLotteryAddress = getKlayLotteryAddress()
+import useLotteryAddress from '../hooks/useLotteryAddress'
 
 const ShowAdminBtn = styled(Button)`
   position: fixed;
@@ -17,6 +15,7 @@ const ShowAdminBtn = styled(Button)`
 
 export default function Admin() {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const { address: account } = useAccount()
   const [isOperator, setIsOperator] = useState(false)
   const [isOwner, setIsOwner] = useState(false)
@@ -26,48 +25,35 @@ export default function Admin() {
 
   useEffect(() => {
     if (account && publicClient) {
-      const operatorPromise = publicClient
-        .readContract({
+      ;(async () => {
+        const operatorAddress = await publicClient.readContract({
           abi: klayLotteryABI,
-          address: klayLotteryAddress,
+          address: lotteryAddress,
           functionName: 'operatorAddress',
         })
-        .then((operatorAddress) => {
-          console.info(`operatorAddress: ${operatorAddress}`)
-          setIsOperator(operatorAddress === account)
-          return operatorAddress
-        })
-      const ownerPromise = publicClient
-        .readContract({
+        console.info(`operatorAddress: ${operatorAddress}`)
+        setIsOperator(operatorAddress === account)
+
+        const ownerAddress = await publicClient.readContract({
           abi: klayLotteryABI,
-          address: klayLotteryAddress,
+          address: lotteryAddress,
           functionName: 'owner',
         })
-        .then((ownerAddress) => {
-          console.info(`ownerAddress: ${ownerAddress}`)
-          setIsOwner(ownerAddress === account)
-          return ownerAddress
-        })
-      const injectorPromise = publicClient
-        .readContract({
+        console.info(`ownerAddress: ${ownerAddress}`)
+        setIsOwner(ownerAddress === account)
+
+        const injectorAddress = await publicClient.readContract({
           abi: klayLotteryABI,
-          address: klayLotteryAddress,
+          address: lotteryAddress,
           functionName: 'injectorAddress',
         })
-        .then((injectorAddress) => {
-          console.info(`injectorAddress: ${injectorAddress}`)
-          return injectorAddress
-        })
-      ;(async () => {
-        const [, ownerAddress, injectorAddress] = await Promise.all([operatorPromise, ownerPromise, injectorPromise])
-        setIsInjector(injectorAddress === account || ownerAddress === account)
+        console.info(`injectorAddress: ${injectorAddress}`)
+        setIsInjector([operatorAddress, ownerAddress].includes(injectorAddress))
       })()
     }
-  }, [account, publicClient])
+  }, [publicClient, lotteryAddress, account])
 
-  if (!isAdmin) return <></>
-
-  return (
+  return isAdmin ? (
     <>
       <ShowAdminBtn type="button" onClick={() => setShowModal(true)}>
         Admin
@@ -81,5 +67,5 @@ export default function Admin() {
         />
       )}
     </>
-  )
+  ) : null
 }

@@ -6,7 +6,7 @@ import orderBy from 'lodash/orderBy'
 import { useMemo } from 'react'
 import { isAddress } from 'utils'
 import { getMulticallAddress } from 'utils/addressHelpers'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 import { erc20ABI, useAccount } from 'wagmi'
 import { useMultipleContractSingleData, useSingleContractMultipleData } from '../multicall/hooks'
 

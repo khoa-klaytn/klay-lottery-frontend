@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { multiChainId, MultiChainName } from 'state/info/constant'
 import { styled } from 'styled-components'
 import { isAddress } from 'utils'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 import getTokenLogoURL from '../../../../utils/getTokenLogoURL'
 
 const StyledLogo = styled(TokenLogo)<{ size: string }>`

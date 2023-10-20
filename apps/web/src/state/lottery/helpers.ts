@@ -1,10 +1,9 @@
 import { LotteryStatus, LotteryTicket } from 'config/constants/types'
 import { klayLotteryABI } from 'config/abi/klayLottery'
-import { getKlayLotteryAddress } from 'utils/addressHelpers'
 import { LotteryResponse } from 'state/types'
 import { bigIntToSerializedBigNumber } from '@pancakeswap/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
-import { ContractFunctionResult, PublicClient } from 'viem'
+import { type Address, ContractFunctionResult, PublicClient } from 'viem'
 
 const processViewLotterySuccessResponse = (
   response: ContractFunctionResult<typeof klayLotteryABI, 'viewLottery'>,
@@ -74,12 +73,16 @@ const processViewLotteryErrorResponse = (lotteryId: string): LotteryResponse => 
   }
 }
 
-export const fetchLottery = async (client: PublicClient, lotteryId: string): Promise<LotteryResponse> => {
+export const fetchLottery = async (
+  client: PublicClient,
+  lotteryAddress: Address,
+  lotteryId: string,
+): Promise<LotteryResponse> => {
   try {
     const lotteryData = await client.readContract({
       abi: klayLotteryABI,
       functionName: 'viewLottery',
-      address: getKlayLotteryAddress(),
+      address: lotteryAddress,
       args: [BigInt(lotteryId)],
     })
     console.log('lotteryData', lotteryData)
@@ -91,6 +94,7 @@ export const fetchLottery = async (client: PublicClient, lotteryId: string): Pro
 
 export const fetchMultipleLotteries = async (
   client: PublicClient,
+  lotteryAddress: `0x${string}`,
   lotteryIds: string[],
 ): Promise<LotteryResponse[]> => {
   const calls = lotteryIds.map(
@@ -98,7 +102,7 @@ export const fetchMultipleLotteries = async (
       ({
         abi: klayLotteryABI,
         functionName: 'viewLottery',
-        address: getKlayLotteryAddress(),
+        address: lotteryAddress,
         args: [BigInt(id)],
       } as const),
   )
@@ -112,22 +116,21 @@ export const fetchMultipleLotteries = async (
   }
 }
 
-export const fetchCurrentLotteryId = async (client: PublicClient): Promise<bigint> => {
+export const fetchCurrentLotteryId = async (client: PublicClient, lotteryAddress: `0x${string}`): Promise<bigint> => {
   return client.readContract({
     abi: klayLotteryABI,
-    address: getKlayLotteryAddress(),
+    address: lotteryAddress,
     functionName: 'currentLotteryId',
   })
 }
 
-export const fetchCurrentLotteryIdAndMaxBuy = async (client: PublicClient) => {
+export const fetchCurrentLotteryIdAndMaxBuy = async (client: PublicClient, lotteryAddress: `0x${string}`) => {
   try {
-    const address = getKlayLotteryAddress()
     const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
       (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
         client.readContract({
           abi: klayLotteryABI,
-          address,
+          address: lotteryAddress,
           functionName: method,
         }),
       ),

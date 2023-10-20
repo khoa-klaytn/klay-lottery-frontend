@@ -1,5 +1,5 @@
 import { Token, CurrencyAmount } from '@pancakeswap/sdk'
-import { erc20ABI } from 'wagmi'
+import { Address, erc20ABI } from 'wagmi'
 import { useMemo } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
@@ -17,7 +17,7 @@ function useTokenAllowance(
 } {
   const { chainId } = useActiveChainId()
 
-  const inputs = useMemo(() => [owner, spender] as [`0x${string}`, `0x${string}`], [owner, spender])
+  const inputs = useMemo(() => [owner, spender] as [Address, Address], [owner, spender])
 
   const { data: allowance, refetch } = useQuery(
     [chainId, token?.address, owner, spender],

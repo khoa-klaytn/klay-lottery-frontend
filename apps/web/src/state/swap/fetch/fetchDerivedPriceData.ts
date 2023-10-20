@@ -69,7 +69,7 @@ const SWAP_INFO_BY_CHAIN = {
   [ChainId.SCROLL_SEPOLIA]: {
     v3: V3_SUBGRAPH_URLS[ChainId.SCROLL_SEPOLIA],
   },
-} satisfies Record<ChainId, Partial<ProtocolEndpoint>>
+} as Record<ChainId, Partial<ProtocolEndpoint>>
 
 export const getTokenBestTvlProtocol = async (tokenAddress: string, chainId: ChainId): Promise<Protocol | null> => {
   const infos = SWAP_INFO_BY_CHAIN[chainId]

@@ -3,8 +3,10 @@ import { useAccount, usePublicClient } from 'wagmi'
 import { useGetLotteriesGraphData, useGetUserLotteriesGraphData, useLottery } from 'state/lottery/hooks'
 import fetchUnclaimedUserRewards from 'state/lottery/fetchUnclaimedUserRewards'
 import { FetchStatus, TFetchStatus } from 'config/constants/types'
+import useLotteryAddress from './useLotteryAddress'
 
 const useGetUnclaimedRewards = () => {
+  const lotteryAddress = useLotteryAddress()
   const publicClient = usePublicClient()
   const { address: account } = useAccount()
   const { isTransitioning, currentLotteryId } = useLottery()
@@ -21,6 +23,7 @@ const useGetUnclaimedRewards = () => {
   const fetchAllRewards = async () => {
     setFetchStatus(FetchStatus.Fetching)
     const unclaimedRewardsResponse = await fetchUnclaimedUserRewards(
+      lotteryAddress,
       publicClient,
       account,
       userLotteryData,

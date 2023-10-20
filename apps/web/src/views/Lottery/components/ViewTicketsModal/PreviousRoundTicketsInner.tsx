@@ -22,6 +22,7 @@ import { LotteryRound } from 'state/types'
 import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import orderBy from 'lodash/orderBy'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import WinningNumbers from '../WinningNumbers'
 import { processLotteryResponse } from '../../helpers'
 import TicketNumber from '../TicketNumber'
@@ -54,6 +55,7 @@ const TicketSkeleton = () => {
 
 const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: string }>> = ({ roundId }) => {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const [lotteryInfo, setLotteryInfo] = useState<LotteryRound>(null)
   const [allUserTickets, setAllUserTickets] = useState<LotteryTicket[]>(null)
   const [userWinningTickets, setUserWinningTickets] = useState<{
@@ -106,11 +108,11 @@ const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: str
 
     const fetchData = async () => {
       const [userTickets, lotteryData] = await Promise.all([
-        fetchUserTicketsForOneRound(publicClient, account, roundId),
-        fetchLottery(publicClient, roundId),
+        fetchUserTicketsForOneRound(publicClient, lotteryAddress, account, roundId),
+        fetchLottery(publicClient, lotteryAddress, roundId),
       ])
       const processedLotteryData = processLotteryResponse(lotteryData)
-      const winningTickets = await getWinningTickets(publicClient, {
+      const winningTickets = await getWinningTickets(publicClient, lotteryAddress, {
         roundId,
         userTickets,
         finalNumber: processedLotteryData.finalNumber.toString(),
@@ -138,7 +140,7 @@ const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: str
     }
 
     fetchData()
-  }, [publicClient, roundId, account])
+  }, [publicClient, lotteryAddress, roundId, account])
 
   const getFooter = () => {
     if (userWinningTickets?.ticketsWithUnclaimedRewards?.length > 0) {

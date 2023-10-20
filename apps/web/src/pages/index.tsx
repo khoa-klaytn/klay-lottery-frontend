@@ -1,10 +1,7 @@
-import { formatEther } from 'viem'
 import { getUnixTime, sub } from 'date-fns'
 import { gql } from 'graphql-request'
 import { GetStaticProps } from 'next'
 import { SWRConfig } from 'swr'
-import { getCakeVaultAddress } from 'utils/addressHelpers'
-import { getCakeContract } from 'utils/contractHelpers'
 import { getBlocksFromTimestamps } from 'utils/getBlocksFromTimestamps'
 import { bitQueryServerClient, infoServerClient } from 'utils/graphql'
 import Home from '../views/Home'
@@ -110,12 +107,8 @@ export const getStaticProps: GetStaticProps = async () => {
         }
       }
     `)
-    const cake = await (await fetch('https://farms-api.pancakeswap.com/price/cake')).json()
     const { totalLiquidityUSD } = result.pancakeFactories[0]
-    const cakeVaultV2 = getCakeVaultAddress()
-    const cakeContract = getCakeContract()
-    const totalCakeInVault = await cakeContract.read.balanceOf([cakeVaultV2])
-    results.tvl = parseFloat(formatEther(totalCakeInVault)) * cake.price + parseFloat(totalLiquidityUSD)
+    results.tvl = parseFloat(totalLiquidityUSD)
   } catch (error) {
     if (process.env.NODE_ENV === 'production') {
       console.error('Error when fetching tvl stats', error)

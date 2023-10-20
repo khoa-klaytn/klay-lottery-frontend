@@ -1,9 +1,7 @@
 import { useAccount, usePublicClient } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import useSWR from 'swr'
-import { useIfoCreditAddressContract } from 'hooks/useContract'
 import { ChainId } from '@pancakeswap/chains'
-import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
 import { useTranslation } from '@pancakeswap/localization'
 import { useChainCurrentBlock } from 'state/block/hooks'
 import { getVaultPosition, VaultPosition } from 'utils/cakePool'
@@ -20,7 +18,6 @@ const useCakeBenefits = () => {
   const {
     currentLanguage: { locale },
   } = useTranslation()
-  const ifoCreditAddressContract = useIfoCreditAddressContract()
   const cakeVaultAddress = getCakeVaultAddress()
   const currentBscBlock = useChainCurrentBlock(ChainId.BSC)
 
@@ -73,12 +70,8 @@ const useCakeBenefits = () => {
       lockEndTime: userContractResponse.lockEndTime.toString(),
     })
 
-    let iCake = ''
     let vCake = { vaultScore: '0', totalScore: '0' }
     if (lockPosition === VaultPosition.Locked) {
-      const credit = await ifoCreditAddressContract.read.getUserCredit([account])
-      iCake = getBalanceNumber(new BigNumber(credit.toString())).toLocaleString('en', { maximumFractionDigits: 3 })
-
       const eligiblePools = await getActivePools(ChainId.BSC, currentBscBlock)
       const poolAddresses = eligiblePools.map(({ contractAddress }) => contractAddress)
 
@@ -104,7 +97,6 @@ const useCakeBenefits = () => {
         year: 'numeric',
         day: 'numeric',
       }),
-      iCake,
       vCake,
     }
   })

@@ -48,10 +48,12 @@ export const CHAIN_REFRESH_TIME = {
   [ChainId.BASE]: 6_000,
   [ChainId.BASE_TESTNET]: 6_000,
   [ChainId.SCROLL_SEPOLIA]: 6_000,
-} as const satisfies Record<ChainId, number>
+} as const as Record<ChainId, number>
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
+  [ChainId.KLAYTN]: [USDC[ChainId.KLAYTN], USDT[ChainId.KLAYTN], WNATIVE[ChainId.KLAYTN]],
+  [ChainId.KLAYTN_TESTNET]: [USDC[ChainId.KLAYTN_TESTNET], WNATIVE[ChainId.KLAYTN_TESTNET]],
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.usdt, bscTokens.cake, bscTokens.btcb],
@@ -77,7 +79,9 @@ export const SUGGESTED_BASES: ChainTokenList = {
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
-export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
+export const BASES_TO_TRACK_LIQUIDITY_FOR = {
+  [ChainId.KLAYTN]: [USDC[ChainId.KLAYTN], USDT[ChainId.KLAYTN], WNATIVE[ChainId.KLAYTN]],
+  [ChainId.KLAYTN_TESTNET]: [USDC[ChainId.KLAYTN_TESTNET], WNATIVE[ChainId.KLAYTN_TESTNET]],
   [ChainId.ETHEREUM]: [USDC[ChainId.ETHEREUM], WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM], WBTC_ETH],
   [ChainId.GOERLI]: [USDC[ChainId.GOERLI], WNATIVE[ChainId.GOERLI], BUSD[ChainId.GOERLI]],
   [ChainId.BSC]: [bscTokens.wbnb, bscTokens.dai, bscTokens.busd, bscTokens.usdt, bscTokens.cake],
@@ -97,16 +101,26 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
 }
 
-export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
+export const PINNED_PAIRS: { readonly [chainId in ChainId]: [Token, Token][] } = {
+  [ChainId.KLAYTN]: [
+    [WNATIVE[ChainId.KLAYTN], USDC[ChainId.KLAYTN]],
+    [WNATIVE[ChainId.KLAYTN], USDT[ChainId.KLAYTN]],
+  ],
+  [ChainId.KLAYTN_TESTNET]: [[WNATIVE[ChainId.KLAYTN_TESTNET], USDC[ChainId.KLAYTN_TESTNET]]],
   [ChainId.ETHEREUM]: [
     [WNATIVE[ChainId.ETHEREUM], USDC[ChainId.ETHEREUM]],
     [WBTC_ETH, WNATIVE[ChainId.ETHEREUM]],
     [WNATIVE[ChainId.ETHEREUM], USDT[ChainId.ETHEREUM]],
   ],
+  [ChainId.GOERLI]: [[WNATIVE[ChainId.GOERLI], USDC[ChainId.GOERLI]]],
   [ChainId.BSC]: [
     [bscTokens.cake, bscTokens.wbnb],
     [bscTokens.busd, bscTokens.usdt],
     [bscTokens.dai, bscTokens.usdt],
+  ],
+  [ChainId.BSC_TESTNET]: [
+    [bscTestnetTokens.wbnb, bscTestnetTokens.cake],
+    [bscTestnetTokens.busd, bscTestnetTokens.usdt],
   ],
   [ChainId.ARBITRUM_ONE]: [
     [arbitrumTokens.weth, arbitrumTokens.usdt],
@@ -114,6 +128,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   ],
   [ChainId.ARBITRUM_GOERLI]: [[arbitrumGoerliTokens.weth, arbitrumGoerliTokens.usdc]],
   [ChainId.POLYGON_ZKEVM]: [[polygonZkEvmTokens.weth, polygonZkEvmTokens.usdt]],
+  [ChainId.POLYGON_ZKEVM_TESTNET]: [[polygonZkEvmTestnetTokens.weth, polygonZkEvmTestnetTokens.usdt]],
   [ChainId.ZKSYNC]: [[zksyncTokens.usdc, zksyncTokens.weth]],
   [ChainId.ZKSYNC_TESTNET]: [[zkSyncTestnetTokens.usdc, zkSyncTestnetTokens.weth]],
   [ChainId.LINEA]: [[lineaTokens.usdc, lineaTokens.weth]],

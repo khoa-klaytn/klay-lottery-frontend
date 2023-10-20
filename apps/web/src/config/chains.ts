@@ -2,20 +2,20 @@ import { ChainId } from '@pancakeswap/chains'
 import memoize from 'lodash/memoize'
 import {
   klaytn as klaytn_,
-  bsc as bsc_,
-  bscTestnet,
-  goerli,
-  mainnet,
-  zkSync,
-  zkSyncTestnet,
-  polygonZkEvmTestnet,
-  polygonZkEvm,
-  lineaTestnet,
-  arbitrum,
-  arbitrumGoerli,
-  base,
-  baseGoerli,
-  scrollSepolia as scrollSepolia_,
+  // bsc as bsc_,
+  // bscTestnet,
+  // goerli,
+  // mainnet,
+  // zkSync,
+  // zkSyncTestnet,
+  // polygonZkEvmTestnet,
+  // polygonZkEvm,
+  // lineaTestnet,
+  // arbitrum,
+  // arbitrumGoerli,
+  // base,
+  // baseGoerli,
+  // scrollSepolia as scrollSepolia_,
   Chain,
 } from 'wagmi/chains'
 
@@ -39,7 +39,7 @@ export const CHAIN_QUERY_NAME = {
   // [ChainId.BASE]: 'base',
   // [ChainId.BASE_TESTNET]: 'baseTestnet',
   // [ChainId.SCROLL_SEPOLIA]: 'scrollSepolia',
-} as const satisfies Record<ChainId, string>
+} as const as Record<ChainId, string>
 
 const CHAIN_QUERY_NAME_TO_ID = Object.entries(CHAIN_QUERY_NAME).reduce((acc, [chainId, chainName]) => {
   return {
@@ -278,7 +278,7 @@ export const CHAINS = [
   // opbnb,
   // opbnbTestnet,
   // scrollSepolia,
-]
+] as Chain[]
 
 export const SHORT_SYMBOL = {
   [ChainId.KLAYTN]: 'KLAY',
@@ -300,4 +300,4 @@ export const SHORT_SYMBOL = {
   // [ChainId.BASE]: 'Base',
   // [ChainId.BASE_TESTNET]: 'tBase',
   // [ChainId.SCROLL_SEPOLIA]: 'tScroll',
-} as const satisfies Record<ChainId, string>
+} as const as Record<ChainId, string>

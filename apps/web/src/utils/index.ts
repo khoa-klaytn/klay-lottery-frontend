@@ -1,4 +1,4 @@
-import { getAddress } from 'viem'
+import { type Address, getAddress } from 'viem'
 import { Currency } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 import { bsc } from 'wagmi/chains'
@@ -7,7 +7,7 @@ import { TokenAddressMap } from '@pancakeswap/token-lists'
 import { chains } from './wagmi'
 
 // returns the checksummed address if the address is valid, otherwise returns false
-export const isAddress = memoize((value: any): `0x${string}` | false => {
+export const isAddress = memoize((value: any): Address | false => {
   try {
     let value_ = value
     if (typeof value === 'string' && !value.startsWith('0x')) {

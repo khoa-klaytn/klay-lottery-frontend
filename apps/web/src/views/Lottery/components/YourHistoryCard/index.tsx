@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import { useAccount } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import { styled } from 'styled-components'
 import {
   CardHeader,
@@ -19,6 +19,7 @@ import { useGetUserLotteriesGraphData, useLottery } from 'state/lottery/hooks'
 import { fetchLottery } from 'state/lottery/helpers'
 import { LotteryRound } from 'state/types'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import FinishedRoundTable from './FinishedRoundTable'
 import { WhiteBunny } from '../../svgs'
 import BuyTicketsButton from '../BuyTicketsButton'
@@ -51,6 +52,8 @@ const YourHistoryCard: React.FC<React.PropsWithChildren<YourHistoryCardProps>> =
   handleShowMoreClick,
   numUserRoundsRequested,
 }) => {
+  const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const {
     t,
     currentLanguage: { locale },
@@ -67,13 +70,16 @@ const YourHistoryCard: React.FC<React.PropsWithChildren<YourHistoryCardProps>> =
   const userLotteryData = useGetUserLotteriesGraphData()
   const ticketBuyIsDisabled = status !== LotteryStatus.OPEN || isTransitioning
 
-  const handleHistoryRowClick = async (lotteryId: string) => {
-    setShouldShowRoundDetail(true)
-    setSelectedLotteryId(lotteryId)
-    const lotteryData = await fetchLottery(lotteryId)
-    const processedLotteryData = processLotteryResponse(lotteryData)
-    setSelectedLotteryNodeData(processedLotteryData)
-  }
+  const handleHistoryRowClick = useCallback(
+    async (lotteryId: string) => {
+      setShouldShowRoundDetail(true)
+      setSelectedLotteryId(lotteryId)
+      const lotteryData = await fetchLottery(publicClient, lotteryAddress, lotteryId)
+      const processedLotteryData = processLotteryResponse(lotteryData)
+      setSelectedLotteryNodeData(processedLotteryData)
+    },
+    [publicClient, lotteryAddress],
+  )
 
   const clearState = useCallback(() => {
     setShouldShowRoundDetail(false)

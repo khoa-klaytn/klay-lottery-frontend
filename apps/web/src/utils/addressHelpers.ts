@@ -1,12 +1,13 @@
 import { ChainId } from '@pancakeswap/chains'
 import addresses from 'config/constants/contracts'
 import { VaultKey } from 'state/types'
+import type { Address } from 'viem'
 
 export interface Addresses {
-  [chainId: number]: `0x${string}`
+  [chainId: number]: Address
 }
 
-export const getAddressFromMap = (address: Addresses, chainId?: number): `0x${string}` => {
+export const getAddressFromMap = (address: Addresses, chainId?: number): Address => {
   return address[chainId]
     ? address[chainId]
     : process.env.NODE_ENV === 'development'
@@ -14,7 +15,7 @@ export const getAddressFromMap = (address: Addresses, chainId?: number): `0x${st
     : address[ChainId.KLAYTN]
 }
 
-export const getAddressFromMapNoFallback = (address: Addresses, chainId?: number): `0x${string}` | null => {
+export const getAddressFromMapNoFallback = (address: Addresses, chainId?: number): Address | null => {
   return address[chainId]
 }
 
@@ -24,8 +25,8 @@ export const getMasterChefV2Address = (chainId?: number) => {
 export const getMulticallAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.multiCall, chainId)
 }
-export const getKlayLotteryAddress = () => {
-  return getAddressFromMap(addresses.klayLottery)
+export const getKlayLotteryAddress = (chainId: number) => {
+  return getAddressFromMap(addresses.klayLottery, chainId)
 }
 export const getPancakeProfileAddress = () => {
   return getAddressFromMap(addresses.pancakeProfile)

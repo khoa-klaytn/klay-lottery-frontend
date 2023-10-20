@@ -32,6 +32,7 @@ import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { handleCustomError } from 'utils/viem'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import EditNumbersModal from './EditNumbersModal'
 import NumTicketsToBuyButton from './NumTicketsToBuyButton'
 import { useTicketsReducer } from './useTicketsReducer'
@@ -60,6 +61,7 @@ enum BuyingStage {
 
 const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> = ({ onDismiss }) => {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const { chainId } = useActiveChainId()
   const symbol = SHORT_SYMBOL[chainId]
   const { address: account } = useAccount()
@@ -273,7 +275,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     },
     onSuccess: async ({ receipt }) => {
       onDismiss?.()
-      dispatch(fetchUserTicketsAndLotteries({ publicClient, account, currentLotteryId }))
+      dispatch(fetchUserTicketsAndLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
       toastSuccess(t('Lottery tickets purchased!'), <ToastDescriptionWithTx txHash={receipt.transactionHash} />)
     },
   })

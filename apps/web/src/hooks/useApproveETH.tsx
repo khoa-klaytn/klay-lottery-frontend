@@ -1,5 +1,5 @@
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { Address } from 'viem'
+import type { Address } from 'viem'
 import { useTokenContract } from 'hooks/useContract'
 import { WETH9 } from '@pancakeswap/sdk'
 import { useCallback } from 'react'

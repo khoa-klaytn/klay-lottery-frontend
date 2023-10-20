@@ -5,7 +5,6 @@ import {
   getBunnyFactoryAddress,
   getCakeFlexibleSideVaultAddress,
   getCakeVaultAddress,
-  getKlayLotteryAddress,
   getNftMarketAddress,
   getNftSaleAddress,
   getNonBscVaultAddress,
@@ -32,11 +31,7 @@ import { nonBscVaultABI } from 'config/abi/nonBscVault'
 import { pointCenterIfoABI } from 'config/abi/pointCenterIfo'
 import { stableSwapNativeHelperABI } from 'config/abi/stableSwapNativeHelper'
 
-import {
-  cakeFlexibleSideVaultV2ABI,
-  cakeVaultV2ABI,
-  getIfoCreditAddressContract as getIfoCreditAddressContract_,
-} from '@pancakeswap/pools'
+import { cakeFlexibleSideVaultV2ABI, cakeVaultV2ABI } from '@pancakeswap/pools'
 import { ChainId } from '@pancakeswap/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
@@ -57,7 +52,7 @@ import { v3AirdropABI } from 'config/abi/v3Airdrop'
 import { vCakeABI } from 'config/abi/vCake'
 import { anniversaryAchievementABI } from 'config/abi/anniversaryAchievement'
 import { revenueSharingPoolABI } from 'config/abi/revenueSharingPool'
-import { getViemClients, viemClients } from 'utils/viem'
+import { viemClients } from 'utils/viem'
 import { Abi, PublicClient, WalletClient, getContract as viemGetContract } from 'viem'
 import { Address, erc20ABI, erc721ABI } from 'wagmi'
 
@@ -120,8 +115,8 @@ export const getProfileContract = (signer?: WalletClient) => {
 export const getBunnyFactoryContract = (signer?: WalletClient) => {
   return getContract({ abi: bunnyFactoryABI, address: getBunnyFactoryAddress(), signer })
 }
-export const getKlayLotteryContract = (signer?: WalletClient) => {
-  return getContract({ abi: klayLotteryABI, address: getKlayLotteryAddress(), signer })
+export const getKlayLotteryContract = (address: Address, signer?: WalletClient) => {
+  return getContract({ abi: klayLotteryABI, address, signer })
 }
 
 export const getTradingCompetitionContractEaster = (signer?: WalletClient) => {
@@ -180,10 +175,6 @@ export const getNftSaleContract = (signer?: WalletClient) => {
 }
 export const getPancakeSquadContract = (signer?: WalletClient) => {
   return getContract({ abi: pancakeSquadABI, address: getPancakeSquadAddress(), signer })
-}
-
-export const getIfoCreditAddressContract = (signer?: WalletClient) => {
-  return getIfoCreditAddressContract_(ChainId.BSC, getViemClients, signer)
 }
 
 export const getNonBscVaultContract = (signer?: WalletClient, chainId?: number) => {

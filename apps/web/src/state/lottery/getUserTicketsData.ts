@@ -1,8 +1,7 @@
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { TICKET_LIMIT_PER_REQUEST } from 'config/constants/lottery'
 import { LotteryTicket } from 'config/constants/types'
-import { getKlayLotteryAddress } from 'utils/addressHelpers'
-import { ContractFunctionResult, Address, PublicClient } from 'viem'
+import { ContractFunctionResult, type Address, PublicClient } from 'viem'
 
 export const processRawTicketsResponse = (
   ticketsResponse: ContractFunctionResult<typeof klayLotteryABI, 'viewUserInfoForLotteryId'>,
@@ -23,6 +22,7 @@ export const processRawTicketsResponse = (
 
 export const viewUserInfoForLotteryId = async (
   client: PublicClient,
+  lotteryAddress: Address,
   account: string,
   lotteryId: string,
   cursor: number,
@@ -31,7 +31,7 @@ export const viewUserInfoForLotteryId = async (
   try {
     const data = await client.readContract({
       abi: klayLotteryABI,
-      address: getKlayLotteryAddress(),
+      address: lotteryAddress,
       functionName: 'viewUserInfoForLotteryId',
       args: [account as Address, BigInt(lotteryId), BigInt(cursor), BigInt(perRequestLimit)],
     })
@@ -44,6 +44,7 @@ export const viewUserInfoForLotteryId = async (
 
 export const fetchUserTicketsForOneRound = async (
   client: PublicClient,
+  lotteryAddress: Address,
   account: string,
   lotteryId: string,
 ): Promise<LotteryTicket[]> => {
@@ -53,7 +54,14 @@ export const fetchUserTicketsForOneRound = async (
 
   while (numReturned === TICKET_LIMIT_PER_REQUEST) {
     // eslint-disable-next-line no-await-in-loop
-    const response = await viewUserInfoForLotteryId(client, account, lotteryId, cursor, TICKET_LIMIT_PER_REQUEST)
+    const response = await viewUserInfoForLotteryId(
+      client,
+      lotteryAddress,
+      account,
+      lotteryId,
+      cursor,
+      TICKET_LIMIT_PER_REQUEST,
+    )
     cursor += TICKET_LIMIT_PER_REQUEST
     numReturned = response.length
     ticketData.push(...response)
@@ -64,12 +72,13 @@ export const fetchUserTicketsForOneRound = async (
 
 export const fetchUserTicketsForMultipleRounds = async (
   client: PublicClient,
+  lotteryAddress: Address,
   idsToCheck: string[],
   account: string,
 ): Promise<{ roundId: string; userTickets: LotteryTicket[] }[]> => {
   const results = await Promise.all(
     idsToCheck.map((roundId) =>
-      Promise.all([Promise.resolve(roundId), fetchUserTicketsForOneRound(client, account, roundId)]),
+      Promise.all([Promise.resolve(roundId), fetchUserTicketsForOneRound(client, lotteryAddress, account, roundId)]),
     ),
   )
 

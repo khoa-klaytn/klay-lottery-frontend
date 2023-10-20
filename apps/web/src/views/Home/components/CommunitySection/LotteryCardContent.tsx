@@ -9,6 +9,7 @@ import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
 import { SLOW_INTERVAL } from 'config/constants'
 import useSWRImmutable from 'swr/immutable'
 import { usePublicClient } from 'wagmi'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 
 const StyledLink = styled(NextLinkFromReactRouter)`
   width: 100%;
@@ -22,6 +23,7 @@ const StyledBalance = styled(Balance)`
 
 const LotteryCardContent = () => {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const { t } = useTranslation()
   const { observerRef, isIntersecting } = useIntersectionObserver()
   const [loadData, setLoadData] = useState(false)
@@ -31,7 +33,7 @@ const LotteryCardContent = () => {
   })
   const { data: currentLottery } = useSWRImmutable(
     currentLotteryId ? ['currentLottery'] : null,
-    async () => fetchLottery(publicClient, currentLotteryId?.toString() ?? ''),
+    async () => fetchLottery(publicClient, lotteryAddress, currentLotteryId?.toString() ?? ''),
     {
       refreshInterval: SLOW_INTERVAL,
     },

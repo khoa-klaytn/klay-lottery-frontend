@@ -2,7 +2,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { LotteryTicket, LotteryStatus } from 'config/constants/types'
 import { LotteryState, LotteryRoundGraphEntity, LotteryUserGraphEntity, LotteryResponse } from 'state/types'
-import { PublicClient } from 'viem'
+import { Address, PublicClient } from 'viem'
 import { fetchLottery, fetchCurrentLotteryIdAndMaxBuy } from './helpers'
 import getLotteriesData from './getLotteriesData'
 import getUserLotteryData, { getGraphLotteryUser } from './getUserLotteryData'
@@ -44,25 +44,25 @@ const initialState: LotteryState = {
 
 export const fetchCurrentLottery = createAsyncThunk<
   LotteryResponse,
-  { publicClient: PublicClient; currentLotteryId: string }
->('lottery/fetchCurrentLottery', async ({ publicClient, currentLotteryId }) => {
-  const lotteryInfo = await fetchLottery(publicClient, currentLotteryId)
+  { publicClient: PublicClient; lotteryAddress: Address; currentLotteryId: string }
+>('lottery/fetchCurrentLottery', async ({ publicClient, lotteryAddress, currentLotteryId }) => {
+  const lotteryInfo = await fetchLottery(publicClient, lotteryAddress, currentLotteryId)
   return lotteryInfo
 })
 
-export const fetchCurrentLotteryId = createAsyncThunk<PublicLotteryData, { publicClient: PublicClient }>(
-  'lottery/fetchCurrentLotteryId',
-  async ({ publicClient }) => {
-    const currentIdAndMaxBuy = await fetchCurrentLotteryIdAndMaxBuy(publicClient)
-    return currentIdAndMaxBuy
-  },
-)
+export const fetchCurrentLotteryId = createAsyncThunk<
+  PublicLotteryData,
+  { publicClient: PublicClient; lotteryAddress: Address }
+>('lottery/fetchCurrentLotteryId', async ({ publicClient, lotteryAddress }) => {
+  const currentIdAndMaxBuy = await fetchCurrentLotteryIdAndMaxBuy(publicClient, lotteryAddress)
+  return currentIdAndMaxBuy
+})
 
 export const fetchUserTicketsAndLotteries = createAsyncThunk<
   { userTickets: LotteryTicket[]; userLotteries: LotteryUserGraphEntity },
-  { publicClient: PublicClient; account: string; currentLotteryId: string }
->('lottery/fetchUserTicketsAndLotteries', async ({ publicClient, account, currentLotteryId }) => {
-  const userLotteriesRes = await getUserLotteryData(publicClient, account, currentLotteryId)
+  { publicClient: PublicClient; lotteryAddress: Address; account: string; currentLotteryId: string }
+>('lottery/fetchUserTicketsAndLotteries', async ({ publicClient, lotteryAddress, account, currentLotteryId }) => {
+  const userLotteriesRes = await getUserLotteryData(publicClient, lotteryAddress, account, currentLotteryId)
   const userParticipationInCurrentRound = userLotteriesRes.rounds?.find((round) => round.lotteryId === currentLotteryId)
   const userTickets = userParticipationInCurrentRound?.tickets
 
@@ -76,17 +76,17 @@ export const fetchUserTicketsAndLotteries = createAsyncThunk<
 
 export const fetchPublicLotteries = createAsyncThunk<
   LotteryRoundGraphEntity[],
-  { publicClient: PublicClient; currentLotteryId: string }
->('lottery/fetchPublicLotteries', async ({ publicClient, currentLotteryId }) => {
-  const lotteries = await getLotteriesData(publicClient, currentLotteryId)
+  { publicClient: PublicClient; lotteryAddress: Address; currentLotteryId: string }
+>('lottery/fetchPublicLotteries', async ({ publicClient, lotteryAddress, currentLotteryId }) => {
+  const lotteries = await getLotteriesData(publicClient, lotteryAddress, currentLotteryId)
   return lotteries
 })
 
 export const fetchUserLotteries = createAsyncThunk<
   LotteryUserGraphEntity,
-  { publicClient: PublicClient; account: string; currentLotteryId: string }
->('lottery/fetchUserLotteries', async ({ publicClient, account, currentLotteryId }) => {
-  const userLotteries = await getUserLotteryData(publicClient, account, currentLotteryId)
+  { publicClient: PublicClient; lotteryAddress: Address; account: string; currentLotteryId: string }
+>('lottery/fetchUserLotteries', async ({ publicClient, lotteryAddress, account, currentLotteryId }) => {
+  const userLotteries = await getUserLotteryData(publicClient, lotteryAddress, account, currentLotteryId)
   return userLotteries
 })
 

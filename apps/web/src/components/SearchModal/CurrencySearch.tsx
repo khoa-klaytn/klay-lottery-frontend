@@ -11,7 +11,6 @@ import { WrappedTokenInfo, createFilterToken } from '@pancakeswap/token-lists'
 import { useAudioPlay } from '@pancakeswap/utils/user'
 import { isAddress } from 'utils'
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { whiteListedFiatCurrenciesMap } from 'views/BuyCrypto/constants'
 import { useAllTokens, useIsUserAddedToken, useToken } from '../../hooks/Tokens'
 import Row from '../Layout/Row'
 import CommonBases from './CommonBases'
@@ -128,10 +127,8 @@ function CurrencySearch({
   const queryTokens = useSortedTokensByQuery(filteredTokens, debouncedQuery)
   const filteredQueryTokens = useMemo(() => {
     if (!chainId) return queryTokens
-    return mode === 'onramp-input'
-      ? queryTokens.filter((curr) => whiteListedFiatCurrenciesMap[chainId].includes(curr.symbol))
-      : queryTokens
-  }, [mode, queryTokens, chainId])
+    return queryTokens
+  }, [queryTokens, chainId])
 
   const tokenComparator = useTokenComparator(invertSearchOrder)
 

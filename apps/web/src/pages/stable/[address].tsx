@@ -25,7 +25,6 @@ import { useSingleCallResult } from 'state/multicall/hooks'
 import { usePoolTokenPercentage, useTotalUSDValue } from 'components/PositionCard'
 import { useAccount } from 'wagmi'
 import { useTokenBalance } from 'state/wallet/hooks'
-import { useGetRemovedTokenAmountsNoContext } from 'views/RemoveLiquidity/RemoveStableLiquidity/hooks/useStableDerivedBurnInfo'
 import useTotalSupply from 'hooks/useTotalSupply'
 import currencyId from 'utils/currencyId'
 import { useTranslation } from '@pancakeswap/localization'
@@ -85,21 +84,6 @@ export default function StablePoolPage() {
 
   const userPoolBalance = useTokenBalance(account ?? undefined, selectedLp?.liquidityToken)
 
-  const [token0Deposited, token1Deposited] = useGetRemovedTokenAmountsNoContext({
-    lpAmount: userPoolBalance?.quotient?.toString(),
-    token0: selectedLp?.token0.wrapped,
-    token1: selectedLp?.token1.wrapped,
-    stableSwapInfoContract,
-    stableSwapAddress: selectedLp?.stableSwapAddress,
-  })
-
-  const totalUSDValue = useTotalUSDValue({
-    currency0: selectedLp?.token0,
-    currency1: selectedLp?.token1,
-    token0Deposited,
-    token1Deposited,
-  })
-
   const totalPoolTokens = useTotalSupply(selectedLp?.liquidityToken)
 
   const poolTokenPercentage = usePoolTokenPercentage({ totalPoolTokens, userPoolBalance })
@@ -155,38 +139,9 @@ export default function StablePoolPage() {
                   {t('Liquidity')}
                 </Text>
                 <Text fontSize="24px" fontWeight={600}>
-                  $
-                  {totalUSDValue
-                    ? totalUSDValue.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })
-                    : '-'}
+                  $-
                 </Text>
-                <LightGreyCard mr="4px">
-                  <AutoRow justifyContent="space-between" mb="8px">
-                    <Flex>
-                      <CurrencyLogo currency={stableLp?.token0} />
-                      <Text small color="textSubtle" id="remove-liquidity-tokenb-symbol" ml="4px">
-                        {stableLp?.token0?.symbol}
-                      </Text>
-                    </Flex>
-                    <Flex justifyContent="center">
-                      <Text mr="4px">{formatCurrencyAmount(token0Deposited, 4, locale)}</Text>
-                    </Flex>
-                  </AutoRow>
-                  <AutoRow justifyContent="space-between" mb="8px">
-                    <Flex>
-                      <CurrencyLogo currency={stableLp?.token1} />
-                      <Text small color="textSubtle" id="remove-liquidity-tokenb-symbol" ml="4px">
-                        {stableLp?.token1?.symbol}
-                      </Text>
-                    </Flex>
-                    <Flex justifyContent="center">
-                      <Text mr="4px">{formatCurrencyAmount(token1Deposited, 4, locale)}</Text>
-                    </Flex>
-                  </AutoRow>
-                </LightGreyCard>
+                <LightGreyCard mr="4px" />
               </Box>
               <Box width="100%" mr="4px" mb="16px">
                 <Text fontSize="12px" color="secondary" bold textTransform="uppercase">

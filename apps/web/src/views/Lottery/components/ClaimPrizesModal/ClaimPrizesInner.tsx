@@ -5,7 +5,7 @@ import { ToastDescriptionWithTx } from 'components/Toast'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { useKlayLotteryContract } from 'hooks/useContract'
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { useAppDispatch } from 'state'
 import { useCakePrice } from 'hooks/useCakePrice'
 import { fetchUserLotteries } from 'state/lottery'
@@ -13,6 +13,7 @@ import { useLottery } from 'state/lottery/hooks'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
 import { SHORT_SYMBOL } from 'config/chains'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
+import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 
 interface ClaimInnerProps {
   roundsToClaim: LotteryTicketClaimData[]
@@ -21,6 +22,7 @@ interface ClaimInnerProps {
 
 const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = ({ onSuccess, roundsToClaim }) => {
   const publicClient = usePublicClient()
+  const lotteryAddress = useLotteryAddress()
   const chainId = useChainId()
   const symbol = useMemo(() => SHORT_SYMBOL[chainId], [chainId])
   const { address: account } = useAccount()
@@ -59,15 +61,15 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
 
   const shouldBatchRequest = maxNumberTicketsPerBuyOrClaim.lt(claimTicketsCallData.ticketIds.length)
 
-  const handleProgressToNextClaim = () => {
+  const handleProgressToNextClaim = useCallback(() => {
     if (roundsToClaim.length > activeClaimIndex + 1) {
       // If there are still rounds to claim, move onto the next claim
       setActiveClaimIndex(activeClaimIndex + 1)
-      dispatch(fetchUserLotteries({ publicClient, account, currentLotteryId }))
+      dispatch(fetchUserLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
     } else {
       onSuccess()
     }
-  }
+  }, [activeClaimIndex, currentLotteryId, dispatch, onSuccess, publicClient, lotteryAddress, roundsToClaim, account])
 
   const getTicketBatches = (ticketIds: string[]): { ticketIds: string[] }[] => {
     const requests = []

@@ -3,9 +3,8 @@ import { LotteryStatus, LotteryTicket, LotteryTicketClaimData } from 'config/con
 import { LotteryUserGraphEntity, LotteryRoundGraphEntity } from 'state/types'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
-import { getKlayLotteryAddress } from 'utils/addressHelpers'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
-import { PublicClient } from 'viem'
+import { type Address, PublicClient } from 'viem'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
 import { MAX_LOTTERIES_REQUEST_SIZE } from './getLotteriesData'
 
@@ -15,9 +14,8 @@ interface RoundDataAndUserTickets {
   finalNumber: string
 }
 
-const lotteryAddress = getKlayLotteryAddress()
-
 const fetchCakeRewardsForTickets = async (
+  lotteryAddress: Address,
   client: PublicClient,
   winningTickets: LotteryTicket[],
 ): Promise<{ ticketsWithUnclaimedRewards: LotteryTicket[]; total: BigNumber }> => {
@@ -69,6 +67,7 @@ const getRewardBracketByNumber = (ticketNumber: string, finalNumber: string): nu
 
 export const getWinningTickets = async (
   client: PublicClient,
+  lotteryAddress: Address,
   roundDataAndUserTickets: RoundDataAndUserTickets,
 ): Promise<LotteryTicketClaimData> => {
   const { roundId, userTickets, finalNumber } = roundDataAndUserTickets
@@ -94,7 +93,11 @@ export const getWinningTickets = async (
   })
 
   if (unclaimedWinningTickets.length > 0) {
-    const { ticketsWithUnclaimedRewards, total } = await fetchCakeRewardsForTickets(client, unclaimedWinningTickets)
+    const { ticketsWithUnclaimedRewards, total } = await fetchCakeRewardsForTickets(
+      lotteryAddress,
+      client,
+      unclaimedWinningTickets,
+    )
     return { ticketsWithUnclaimedRewards, allWinningTickets, total, roundId }
   }
 
@@ -111,6 +114,7 @@ const getWinningNumbersForRound = (targetRoundId: string, lotteriesData: Lottery
 }
 
 const fetchUnclaimedUserRewards = async (
+  lotteryAddress: Address,
   client: PublicClient,
   account: string,
   userLotteryData: LotteryUserGraphEntity,
@@ -151,7 +155,7 @@ const fetchUnclaimedUserRewards = async (
 
   if (roundsToCheck.length > 0) {
     const idsToCheck = roundsToCheck.map((round) => round.lotteryId)
-    const userTicketData = await fetchUserTicketsForMultipleRounds(client, idsToCheck, account)
+    const userTicketData = await fetchUserTicketsForMultipleRounds(client, lotteryAddress, idsToCheck, account)
     const roundsWithTickets = userTicketData.filter((roundData) => roundData?.userTickets?.length > 0)
 
     const roundDataAndWinningTickets = roundsWithTickets.map((roundData) => {
@@ -159,7 +163,7 @@ const fetchUnclaimedUserRewards = async (
     })
 
     const winningTicketsForPastRounds = await Promise.all(
-      roundDataAndWinningTickets.map((roundData) => getWinningTickets(client, roundData)),
+      roundDataAndWinningTickets.map((roundData) => getWinningTickets(client, lotteryAddress, roundData)),
     )
 
     // Filter out null values (returned when no winning tickets found for past round)

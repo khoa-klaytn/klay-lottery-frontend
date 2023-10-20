@@ -1,5 +1,6 @@
 import { Currency } from '@pancakeswap/swap-sdk-core'
 import { log } from 'next-axiom'
+import type { Address } from 'viem'
 
 export const logTx = ({ account, hash, chainId }: { account: string; hash: string; chainId: number }) => {
   fetch(`/api/_log/${account}/${chainId}/${hash}`)
@@ -20,8 +21,8 @@ export const logSwap = ({
   inputAmount: string
   outputAmount: string
   chainId: number
-  account: `0x${string}`
-  hash: `0x${string}`
+  account: Address
+  hash: Address
   type: 'V2Swap' | 'SmartSwap' | 'StableSwap' | 'MarketMakerSwap' | 'V3SmartSwap'
 }) => {
   try {
