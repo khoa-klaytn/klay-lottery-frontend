@@ -1,4 +1,4 @@
-# 🥞 Pancake Frontend
+# 🥞 Klay Lottery Frontend
 
 <p align="center">
   <a href="https://pancakeswap.finance">
@@ -18,6 +18,18 @@ If you want to contribute, please refer to the [contributing guidelines](./CONTR
 > Install dependencies using [pnpm](https://pnpm.io)
 
 ## `apps/web`
+<details>
+<summary>
+Config
+</summary>
+
+| Config | Location |
+|--------|----------|
+| KlayLottery address | src/config/constants/contracts.ts @default.klayLottery |
+| KlayLottery ABI | src/config/abi/klayLottery.ts @klayLotteryABI |
+| Lottery subgraph url | src/config/constants/endpoints.ts @GRAPH_API_LOTTERY |
+</details>
+
 <details>
 <summary>
 How to start
@@ -46,7 +58,7 @@ pnpm start
 
 | Package                                                       | Description                                                                                                            |
 |---------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [sdk](/packages/swap-sdk)                                     | An SDK for building applications on top of Pancakeswap                                                                 |
+| [sdk](/packages/swap-sdk)                                     | An SDK for building applications                                                                 |
 | [aptos-swap-sdk](/packages/aptos-swap-sdk)                    | Aptos version of Swap SDK                                                                                              |
 | [swap-sdk-core](/packages/swap-sdk-core)                      | Swap SDK Shared code                                                                                                   |
 | [wagmi](/packages/wagmi)                                      | Extension for [wagmi](https://github.com/wagmi-dev/wagmi), including bsc chain and binance wallet connector            |
