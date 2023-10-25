@@ -25,9 +25,9 @@ Config
 
 | Config | Location |
 |--------|----------|
-| KlayLottery address | src/config/constants/contracts.ts @default.klayLottery |
-| KlayLottery ABI | src/config/abi/klayLottery.ts @klayLotteryABI |
-| Lottery subgraph url | src/config/constants/endpoints.ts @GRAPH_API_LOTTERY |
+| KlayLottery address | [constants/contracts.ts @default.klayLottery](apps/web/src/config/constants/contracts.ts?plain=1#L20) |
+| KlayLottery ABI | [abi/klayLottery.ts @klayLotteryABI](apps/web/src/config/abi/klayLottery.ts?plain=1#L1) |
+| Lottery subgraph url | [constants/endpoints.ts @GRAPH_API_LOTTERY](apps/web/src/config/constants/endpoints.ts?plain=1#L5) |
 </details>
 
 <details>
