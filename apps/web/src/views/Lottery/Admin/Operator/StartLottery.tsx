@@ -5,7 +5,7 @@ import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
 import { setRefCustomValidity } from 'utils/customValidity'
 import { handleCustomError } from 'utils/viem'
-import { BaseError, formatEther, parseEther } from 'viem'
+import { BaseError, formatEther } from 'viem'
 import { EMsg } from '../EMsg'
 
 export default function StartLottery({ lotteryId, status }) {
@@ -21,16 +21,16 @@ export default function StartLottery({ lotteryId, status }) {
     const minutes = `${now.getMinutes()}`.padStart(2, '0')
     return `${now.getFullYear()}-${month}-${date}T${hours}:${minutes}`
   })
-  const priceTicketRef = useRef<HTMLInputElement>(null)
-  const [priceTicket, setPriceTicket] = useState('1')
+  const ticketPriceInUsdRef = useRef<HTMLInputElement>(null)
+  const [ticketPriceInUsd, setTicketPrice] = useState('1')
   const discountDivisorRef = useRef<HTMLInputElement>(null)
   const [discountDivisor, setDiscountDivisor] = useState('2000')
-  const [reward1, setReward1] = useState('200')
-  const [reward2, setReward2] = useState('300')
-  const [reward3, setReward3] = useState('500')
-  const [reward4, setReward4] = useState('1500')
-  const [reward5, setReward5] = useState('2500')
-  const [reward6, setReward6] = useState('5000')
+  const [reward1, setReward1] = useState('1000')
+  const [reward2, setReward2] = useState('1125')
+  const [reward3, setReward3] = useState('1250')
+  const [reward4, setReward4] = useState('1375')
+  const [reward5, setReward5] = useState('1625')
+  const [reward6, setReward6] = useState('2625')
 
   const [wnbEMsg, setWnbEMsg] = useState('') // [winners & burn] error message
   const [winnersPortion, setWinnersPortion] = useState('8000')
@@ -42,12 +42,12 @@ export default function StartLottery({ lotteryId, status }) {
       ev.preventDefault()
 
       const parsedEndTime = Math.ceil(new Date(endTime).getTime() / 1000)
-      const parsedPriceTicket = parseEther(priceTicket)
+      const parsedTicketPrice = BigInt(Math.round(+ticketPriceInUsd * 1e8))
 
       try {
         const res = await callWithGasPrice(lotteryContract, 'startLottery', [
           BigInt(parsedEndTime),
-          BigInt(parsedPriceTicket),
+          BigInt(parsedTicketPrice),
           BigInt(discountDivisor),
           BigInt(winnersPortion),
           BigInt(burnPortion),
@@ -60,9 +60,11 @@ export default function StartLottery({ lotteryId, status }) {
           handleCustomError(e, {
             EndTimePast: (_, msg) => setRefCustomValidity(endTimeRef, msg),
             TicketPriceLow: ([min]) =>
-              setRefCustomValidity(priceTicketRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
+              setRefCustomValidity(ticketPriceInUsdRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
             DiscountDivisorLow: (_, msg) => setRefCustomValidity(discountDivisorRef, msg),
-            PortionsExceed10000: ([name], msg) => {
+            PortionsInvalidLen: (_, msg) => setRewardsEMsg(msg),
+            PortionDescending: (_, msg) => setRewardsEMsg(msg),
+            PortionsExceedMax: ([name], msg) => {
               switch (name) {
                 case 'winners & burn':
                   setWnbEMsg(msg)
@@ -80,7 +82,7 @@ export default function StartLottery({ lotteryId, status }) {
       callWithGasPrice,
       lotteryContract,
       endTime,
-      priceTicket,
+      ticketPriceInUsd,
       discountDivisor,
       reward1,
       reward2,
@@ -96,7 +98,7 @@ export default function StartLottery({ lotteryId, status }) {
   return (
     <form onSubmit={startLottery}>
       <label>
-        endTime
+        End Time
         <Input
           type="datetime"
           name="endTime"
@@ -110,21 +112,21 @@ export default function StartLottery({ lotteryId, status }) {
         />
       </label>
       <label>
-        priceTicket
+        Ticket Price in USD
         <Input
           type="number"
-          name="priceTicket"
-          id="priceTicket"
-          value={priceTicket}
-          ref={priceTicketRef}
+          name="ticketPriceInUsd"
+          id="ticketPriceInUsd"
+          value={ticketPriceInUsd}
+          ref={ticketPriceInUsdRef}
           onInput={(ev) => {
-            setRefCustomValidity(priceTicketRef, '')
-            setPriceTicket(ev.currentTarget.value)
+            setRefCustomValidity(ticketPriceInUsdRef, '')
+            setTicketPrice(ev.currentTarget.value)
           }}
         />
       </label>
       <label>
-        discountDivisor
+        Discount Divisor
         <Input
           type="number"
           name="discountDivisor"
@@ -154,7 +156,7 @@ export default function StartLottery({ lotteryId, status }) {
           />
         </label>
         <label>
-          burnPortion
+          Burn Portion
           <Input
             type="number"
             name="burnPortion"

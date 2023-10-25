@@ -22,7 +22,7 @@ const applyNodeDataToLotteriesGraphResponse = (
         startTime: nodeRound.startTime,
         status: nodeRound.status,
         id: nodeRound.lotteryId.toString(),
-        ticketPrice: nodeRound.priceTicket,
+        ticketPrice: nodeRound.ticketPrice,
         totalTickets: '',
         totalUsers: '',
         winningTickets: '',

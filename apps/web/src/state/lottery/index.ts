@@ -23,7 +23,7 @@ const initialState: LotteryState = {
     status: LotteryStatus.PENDING,
     startTime: '',
     endTime: '',
-    priceTicket: '',
+    ticketPrice: '',
     discountDivisor: '',
     winnersPortion: '',
     burnPortion: '',

@@ -6,6 +6,16 @@ export const klayLotteryABI = [
         name: '_randomGeneratorAddress',
         type: 'address',
       },
+      {
+        internalType: 'address',
+        name: '_dataFeedConsumerAddress',
+        type: 'address',
+      },
+      {
+        internalType: 'uint256',
+        name: '_minTicketPriceInUsd',
+        type: 'uint256',
+      },
     ],
     stateMutability: 'nonpayable',
     type: 'constructor',
@@ -75,12 +85,28 @@ export const klayLotteryABI = [
   {
     inputs: [
       {
+        internalType: 'uint8',
+        name: 'i',
+        type: 'uint8',
+      },
+    ],
+    name: 'PortionDescending',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
         internalType: 'string',
         name: 'name',
         type: 'string',
       },
     ],
-    name: 'PortionsExceed10000',
+    name: 'PortionsExceedMax',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'PortionsInvalidLen',
     type: 'error',
   },
   {
@@ -94,7 +120,13 @@ export const klayLotteryABI = [
     type: 'error',
   },
   {
-    inputs: [],
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'ticketId',
+        type: 'uint256',
+      },
+    ],
     name: 'TicketNotYours',
     type: 'error',
   },
@@ -226,7 +258,7 @@ export const klayLotteryABI = [
       {
         indexed: false,
         internalType: 'uint256',
-        name: 'priceTicket',
+        name: 'ticketPrice',
         type: 'uint256',
       },
       {
@@ -358,7 +390,33 @@ export const klayLotteryABI = [
   },
   {
     inputs: [],
+    name: 'MAX_PORTION',
+    outputs: [
+      {
+        internalType: 'uint16',
+        name: '',
+        type: 'uint16',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: 'MIN_DISCOUNT_DIVISOR',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'MIN_TICKET_PRICE_IN_USD',
     outputs: [
       {
         internalType: 'uint256',
@@ -415,7 +473,7 @@ export const klayLotteryABI = [
       },
       {
         internalType: 'uint256',
-        name: '_priceTicket',
+        name: '_ticketPrice',
         type: 'uint256',
       },
       {
@@ -577,19 +635,6 @@ export const klayLotteryABI = [
   },
   {
     inputs: [],
-    name: 'minPriceTicket',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'operatorAddress',
     outputs: [
       {
@@ -622,19 +667,6 @@ export const klayLotteryABI = [
         internalType: 'uint256',
         name: '',
         type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'randomGenerator',
-    outputs: [
-      {
-        internalType: 'contract IRandomNumberGenerator',
-        name: '',
-        type: 'address',
       },
     ],
     stateMutability: 'view',
@@ -711,19 +743,6 @@ export const klayLotteryABI = [
   {
     inputs: [
       {
-        internalType: 'uint256',
-        name: '_minPriceTicket',
-        type: 'uint256',
-      },
-    ],
-    name: 'setMinTicketPrice',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [
-      {
         internalType: 'address',
         name: '_operatorAddress',
         type: 'address',
@@ -748,7 +767,7 @@ export const klayLotteryABI = [
       },
       {
         internalType: 'uint256',
-        name: '_priceTicket',
+        name: '_ticketPriceInUsd',
         type: 'uint256',
       },
       {
@@ -757,19 +776,19 @@ export const klayLotteryABI = [
         type: 'uint256',
       },
       {
-        internalType: 'uint256',
+        internalType: 'uint16',
         name: '_winnersPortion',
-        type: 'uint256',
+        type: 'uint16',
       },
       {
-        internalType: 'uint256',
+        internalType: 'uint16',
         name: '_burnPortion',
-        type: 'uint256',
+        type: 'uint16',
       },
       {
-        internalType: 'uint256[6]',
+        internalType: 'uint16[]',
         name: '_rewardPortions',
-        type: 'uint256[6]',
+        type: 'uint16[]',
       },
     ],
     name: 'startLottery',
@@ -813,7 +832,7 @@ export const klayLotteryABI = [
           },
           {
             internalType: 'uint256',
-            name: 'priceTicket',
+            name: 'ticketPrice',
             type: 'uint256',
           },
           {
@@ -822,29 +841,34 @@ export const klayLotteryABI = [
             type: 'uint256',
           },
           {
-            internalType: 'uint256[6]',
+            internalType: 'uint8',
+            name: 'numBrackets',
+            type: 'uint8',
+          },
+          {
+            internalType: 'uint16[]',
             name: 'rewardPortions',
-            type: 'uint256[6]',
+            type: 'uint16[]',
           },
           {
-            internalType: 'uint256',
+            internalType: 'uint16',
             name: 'winnersPortion',
-            type: 'uint256',
+            type: 'uint16',
           },
           {
-            internalType: 'uint256',
+            internalType: 'uint16',
             name: 'burnPortion',
-            type: 'uint256',
+            type: 'uint16',
           },
           {
-            internalType: 'uint256[6]',
+            internalType: 'uint256[]',
             name: 'rewardPerUserPerBracket',
-            type: 'uint256[6]',
+            type: 'uint256[]',
           },
           {
-            internalType: 'uint256[6]',
+            internalType: 'uint256[]',
             name: 'countWinnersPerBracket',
-            type: 'uint256[6]',
+            type: 'uint256[]',
           },
           {
             internalType: 'uint256',
@@ -904,7 +928,7 @@ export const klayLotteryABI = [
           },
           {
             internalType: 'uint256',
-            name: 'priceTicket',
+            name: 'ticketPrice',
             type: 'uint256',
           },
           {
@@ -913,29 +937,34 @@ export const klayLotteryABI = [
             type: 'uint256',
           },
           {
-            internalType: 'uint256[6]',
+            internalType: 'uint8',
+            name: 'numBrackets',
+            type: 'uint8',
+          },
+          {
+            internalType: 'uint16[]',
             name: 'rewardPortions',
-            type: 'uint256[6]',
+            type: 'uint16[]',
           },
           {
-            internalType: 'uint256',
+            internalType: 'uint16',
             name: 'winnersPortion',
-            type: 'uint256',
+            type: 'uint16',
           },
           {
-            internalType: 'uint256',
+            internalType: 'uint16',
             name: 'burnPortion',
-            type: 'uint256',
+            type: 'uint16',
           },
           {
-            internalType: 'uint256[6]',
+            internalType: 'uint256[]',
             name: 'rewardPerUserPerBracket',
-            type: 'uint256[6]',
+            type: 'uint256[]',
           },
           {
-            internalType: 'uint256[6]',
+            internalType: 'uint256[]',
             name: 'countWinnersPerBracket',
-            type: 'uint256[6]',
+            type: 'uint256[]',
           },
           {
             internalType: 'uint256',

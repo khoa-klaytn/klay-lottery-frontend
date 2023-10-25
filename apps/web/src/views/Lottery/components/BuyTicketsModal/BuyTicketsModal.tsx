@@ -71,7 +71,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     maxNumberTicketsPerBuyOrClaim,
     currentLotteryId,
     currentRound: {
-      priceTicket,
+      ticketPrice,
       discountDivisor,
       userTickets: { tickets: userCurrentTickets },
     },
@@ -119,25 +119,25 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
 
   const getTicketCostAfterDiscount = useCallback(
     (numberTickets: BigNumber) => {
-      const totalAfterDiscount = priceTicket
+      const totalAfterDiscount = ticketPrice
         .times(numberTickets)
         .times(discountDivisor.plus(1).minus(numberTickets))
         .div(discountDivisor)
       return totalAfterDiscount
     },
-    [discountDivisor, priceTicket],
+    [discountDivisor, ticketPrice],
   )
 
   const getMaxTicketBuyWithDiscount = useCallback(
     (numberTickets: BigNumber) => {
       const costAfterDiscount = getTicketCostAfterDiscount(numberTickets)
-      const costBeforeDiscount = priceTicket.times(numberTickets)
+      const costBeforeDiscount = ticketPrice.times(numberTickets)
       const discountAmount = costBeforeDiscount.minus(costAfterDiscount)
-      const ticketsBoughtWithDiscount = discountAmount.div(priceTicket)
+      const ticketsBoughtWithDiscount = discountAmount.div(ticketPrice)
       const overallTicketBuy = numberTickets.plus(ticketsBoughtWithDiscount)
       return { overallTicketBuy, ticketsBoughtWithDiscount }
     },
-    [getTicketCostAfterDiscount, priceTicket],
+    [getTicketCostAfterDiscount, ticketPrice],
   )
 
   const validateInput = useCallback(
@@ -169,7 +169,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
 
   useEffect(() => {
     const getMaxPossiblePurchase = () => {
-      const maxBalancePurchase = bnBalance.div(priceTicket)
+      const maxBalancePurchase = bnBalance.div(ticketPrice)
       const limitedMaxPurchase = limitNumberByMaxTicketsPerBuy(maxBalancePurchase)
       let maxPurchase = limitedMaxPurchase
 
@@ -198,7 +198,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   }, [
     bnBalance,
     maxNumberTicketsPerBuyOrClaim,
-    priceTicket,
+    ticketPrice,
     limitNumberByMaxTicketsPerBuy,
     getTicketCostAfterDiscount,
     getMaxTicketBuyWithDiscount,
@@ -207,12 +207,12 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   useEffect(() => {
     const numberOfTicketsToBuy = new BigNumber(ticketsToBuy)
     const costAfterDiscount = getTicketCostAfterDiscount(numberOfTicketsToBuy)
-    const costBeforeDiscount = priceTicket.times(numberOfTicketsToBuy)
+    const costBeforeDiscount = ticketPrice.times(numberOfTicketsToBuy)
     const discountBeingApplied = costBeforeDiscount.minus(costAfterDiscount)
     setTicketCostBeforeDiscount(costBeforeDiscount.gt(0) ? getFullDisplayBalance(costBeforeDiscount) : '0')
     setTotalCost(costAfterDiscount.gt(0) ? getFullDisplayBalance(costAfterDiscount) : '0')
     setDiscountValue(discountBeingApplied.gt(0) ? getFullDisplayBalance(discountBeingApplied, 18, 5) : '0')
-  }, [ticketsToBuy, priceTicket, discountDivisor, getTicketCostAfterDiscount])
+  }, [ticketsToBuy, ticketPrice, discountDivisor, getTicketCostAfterDiscount])
 
   const getNumTicketsByPercentage = (percentage: number): number => {
     const percentageOfMaxTickets = maxPossibleTicketPurchase.gt(0)
@@ -339,7 +339,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         onUserInput={handleInputChange}
         currencyValue={
           cakePriceBusd.gt(0) &&
-          `~${ticketsToBuy ? getFullDisplayBalance(priceTicket.times(new BigNumber(ticketsToBuy))) : '0.00'} ${symbol}`
+          `~${ticketsToBuy ? getFullDisplayBalance(ticketPrice.times(new BigNumber(ticketsToBuy))) : '0.00'} ${symbol}`
         }
       />
       <Flex alignItems="center" justifyContent="flex-end" mt="4px" mb="12px">
@@ -392,7 +392,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
             {t('Cost')} {symbol}
           </Text>
           <Text color="textSubtle" fontSize="14px">
-            {priceTicket && getFullDisplayBalance(priceTicket.times(ticketsToBuy || 0))} {symbol}
+            {ticketPrice && getFullDisplayBalance(ticketPrice.times(ticketsToBuy || 0))} {symbol}
           </Text>
         </Flex>
         <Flex mb="8px" justifyContent="space-between">
