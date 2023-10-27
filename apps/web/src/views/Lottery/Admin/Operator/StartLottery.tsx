@@ -3,16 +3,17 @@ import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
-import { setRefCustomValidity } from 'utils/customValidity'
+import { HasSetCustomValidity, setRefCustomValidity } from 'utils/customValidity'
 import { handleCustomError } from 'utils/viem'
 import { BaseError, formatEther } from 'viem'
 import { EMsg } from '../EMsg'
+import EndTime from './EndTime'
 
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
   const { callWithGasPrice } = useCallWithGasPrice()
   const lotteryContract = useKlayLotteryContract()
-  const endTimeRef = useRef<HTMLInputElement>(null)
+  const endTimeRef = useRef<HasSetCustomValidity>(null)
   const [endTime, setEndTime] = useState(() => {
     const now = new Date()
     const month = `${now.getMonth() + 1}`.padStart(2, '0')
@@ -58,7 +59,7 @@ export default function StartLottery({ lotteryId, status }) {
         console.error(e)
         if (e instanceof BaseError)
           handleCustomError(e, {
-            EndTimePast: (_, msg) => setRefCustomValidity(endTimeRef, msg),
+            EndTimePast: (_, msg) => endTimeRef.current.setCustomValidity(msg),
             TicketPriceLow: ([min]) =>
               setRefCustomValidity(ticketPriceInUsdRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
             DiscountDivisorLow: (_, msg) => setRefCustomValidity(discountDivisorRef, msg),
@@ -97,20 +98,7 @@ export default function StartLottery({ lotteryId, status }) {
 
   return (
     <form onSubmit={startLottery}>
-      <label>
-        End Time
-        <Input
-          type="datetime"
-          name="endTime"
-          id="endTime"
-          value={endTime}
-          ref={endTimeRef}
-          onInput={(ev) => {
-            setRefCustomValidity(endTimeRef, '')
-            setEndTime(ev.currentTarget.value)
-          }}
-        />
-      </label>
+      <EndTime value={endTime} ref={endTimeRef} setEndTime={setEndTime} />
       <label>
         Ticket Price in USD
         <Input
