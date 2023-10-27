@@ -6,13 +6,6 @@ import useTheme from 'hooks/useTheme'
 import { useFetchLottery, useLottery } from 'state/lottery/hooks'
 import { LotterySubgraphHealthIndicator } from 'components/SubgraphHealthIndicator'
 import { useState } from 'react'
-import {
-  TITLE_BG,
-  GET_TICKETS_BG,
-  FINISHED_ROUNDS_BG,
-  FINISHED_ROUNDS_BG_DARK,
-  CHECK_PRIZES_BG,
-} from './pageSectionStyles'
 import useGetNextLotteryEvent from './hooks/useGetNextLotteryEvent'
 import useStatusTransitions from './hooks/useStatusTransitions'
 import Hero from './components/Hero'
@@ -34,7 +27,7 @@ const Lottery = () => {
   useFetchLottery()
   useStatusTransitions()
   const { t } = useTranslation()
-  const { isDark, theme } = useTheme()
+  const { theme } = useTheme()
   const {
     currentRound: { status, endTime },
   } = useLottery()
@@ -47,14 +40,14 @@ const Lottery = () => {
     <>
       <LotteryPage>
         <Admin />
-        <PageSection background={TITLE_BG} index={1} hasCurvedDivider={false}>
+        <PageSection background="var(--colors-gradientSecondary)" index={1} hasCurvedDivider={false}>
           <Hero />
         </PageSection>
         <PageSection
+          background="var(--colors-gradientSecondary2)"
           containerProps={{ style: { marginTop: '-30px' } }}
-          background={GET_TICKETS_BG}
           concaveDivider
-          clipFill={{ light: '#7645D9' }}
+          clipFill={{ light: 'var(--colors-secondary)' }}
           dividerPosition="top"
           index={2}
         >
@@ -78,13 +71,13 @@ const Lottery = () => {
             <NextDrawCard />
           </Flex>
         </PageSection>
-        <PageSection background={CHECK_PRIZES_BG} hasCurvedDivider={false} index={2}>
+        <PageSection background="var(--colors-gradientBubblegum)" hasCurvedDivider={false} index={2}>
           <CheckPrizesSection />
         </PageSection>
         <PageSection
           position="relative"
           innerProps={{ style: { margin: '0', width: '100%' } }}
-          background={isDark ? FINISHED_ROUNDS_BG_DARK : FINISHED_ROUNDS_BG}
+          background="var(--colors-gradientOverlay)"
           hasCurvedDivider={false}
           index={2}
         >

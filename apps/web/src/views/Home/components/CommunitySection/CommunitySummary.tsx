@@ -15,7 +15,8 @@ export const sharedCss = css`
 const Wrapper = styled.div`
   border-radius: 32px;
   border: 2px solid #3c1786;
-  background: var(--linear, linear-gradient(180deg, #7645d9 0%, #5121b1 100%));
+  background: ${({ theme }) =>
+    `var(--linear, linear-gradient(180deg, ${theme.colors.secondary} 0%, ${theme.colors.primaryBright} 100%))`};
   box-shadow: 0px 4px 0px 0px #3c1786;
   padding: 24px;
   box-sizing: border-box;

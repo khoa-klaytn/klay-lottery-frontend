@@ -90,7 +90,7 @@ const Header = styled.div`
   font-size: 25px;
   line-height: 98%;
   letter-spacing: 0.01em;
-  color: #000000;
+  color: ${({ theme }) => theme.colors.primaryDark};
   margin-top: 18px;
   margin-bottom: 20px;
   ${({ theme }) => theme.mediaQueries.sm} {

@@ -299,7 +299,7 @@ interface CardTagProps extends TagProps {
 }
 
 const ActiveTag = styled(Tag)`
-  background: ${({ theme }) => theme.colors.gradientBold};
+  background: ${({ theme }) => theme.colors.gradientSecondary};
 `;
 
 export const CardTag = memo(function CardTag({ isActive, ...rest }: PropsWithChildren<CardTagProps>) {

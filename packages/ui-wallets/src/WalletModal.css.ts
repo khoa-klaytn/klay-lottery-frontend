@@ -16,7 +16,7 @@ const promotedGradientKf = keyframes({
 
 export const promotedGradientClass = style([
   atoms({
-    background: 'gradientBold',
+    background: 'gradientSecondary',
   }),
   style({
     animation: `${promotedGradientKf} 3s ease infinite`,

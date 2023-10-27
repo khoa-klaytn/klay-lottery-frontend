@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import Text from "../Text/Text";
 import Dropdown from "../Dropdown/Dropdown";
 import Button from "../Button/Button";
@@ -50,4 +50,4 @@ const LangSelector: React.FC<React.PropsWithChildren<Props>> = ({
   </Dropdown>
 );
 
-export default React.memo(LangSelector, (prev, next) => prev.currentLang === next.currentLang);
+export default memo(LangSelector, (prev, next) => prev.currentLang === next.currentLang);
