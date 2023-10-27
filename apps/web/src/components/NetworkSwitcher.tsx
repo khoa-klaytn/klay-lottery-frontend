@@ -23,7 +23,6 @@ import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
 import { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { chains } from 'utils/wagmi'
-import { ASSET_CDN } from 'config/constants/endpoints'
 
 import { SHORT_SYMBOL } from 'config/chains'
 import { ChainLogo } from './Logo/ChainLogo'
@@ -149,7 +148,7 @@ export const NetworkSwitcher = () => {
         mr="8px"
         placement="bottom"
         variant={isLoading ? 'pending' : isWrongNetwork ? 'danger' : 'default'}
-        avatarSrc={`${ASSET_CDN}/web/chains/${chainId}.png`}
+        avatarSrc="https://klaytn.foundation/wp-content/themes/klaytn/download/klaytn-symbol.svg"
         disabled={cannotChangeNetwork}
         text={
           isLoading ? (
