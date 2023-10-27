@@ -2,12 +2,14 @@ import BigNumber from 'bignumber.js'
 import { LotteryResponse, LotteryRound, LotteryRoundUserTickets } from 'state/types'
 
 /**
- * Remove the '1' and reverse the digits in a lottery number retrieved from the smart contract
+ * Reverse the digits in a lottery number retrieved from the smart contract
  */
 export const parseRetrievedNumber = (number: string): string[] => {
   let numberAsArray = number.split('')
   numberAsArray.reverse()
-  if (numberAsArray.length < 6) numberAsArray = numberAsArray.concat(Array(6 - numberAsArray.length).fill('0'))
+  const numBrackets = 6 // TODO: get this from lottery
+  if (numberAsArray.length < numBrackets)
+    numberAsArray = numberAsArray.concat(Array(numBrackets - numberAsArray.length).fill('0'))
   return numberAsArray
 }
 

@@ -14,9 +14,15 @@ const StyledNumberWrapper = styled(Flex)`
   justify-content: space-between;
 `
 
-const RewardHighlighter = styled.div<{ numberMatches: number }>`
+function bracketWidth(numBrackets: number) {
+  const baseBracketWidth = 100 / numBrackets
+  return baseBracketWidth + 1
+}
+
+const RewardHighlighter = styled.div<{ rewardBracket: number; numBrackets: number }>`
   z-index: 1;
-  width: ${({ numberMatches }) => `${numberMatches < 6 ? numberMatches * 17.66 : 100}%`};
+  width: ${({ rewardBracket, numBrackets }) =>
+    `${rewardBracket < numBrackets ? rewardBracket * bracketWidth(numBrackets) : 100}%`};
   height: 34px;
   border-radius: ${({ theme }) => theme.radii.default};
   top: 0;
@@ -28,13 +34,20 @@ const RewardHighlighter = styled.div<{ numberMatches: number }>`
 interface TicketNumberProps extends LotteryTicket {
   localId?: number
   rewardBracket?: number
+  numBrackets?: number
 }
 
-const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({ localId, id, number, rewardBracket }) => {
+const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({
+  localId,
+  id,
+  number,
+  rewardBracket,
+  numBrackets,
+}) => {
   const { t } = useTranslation()
   const reversedNumber = parseRetrievedNumber(number)
-  const numberMatches = rewardBracket + 1
 
+  // TODO: translate "Matches all"
   return (
     <Flex flexDirection="column" mb="12px">
       <Flex justifyContent="space-between">
@@ -43,12 +56,12 @@ const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({ lo
         </Text>
         {rewardBracket >= 0 && (
           <Text fontSize="12px">
-            {t('Matched first')} {numberMatches}
+            {rewardBracket === numBrackets ? t('Matched first') : 'Matches all'} {rewardBracket}
           </Text>
         )}
       </Flex>
       <StyledNumberWrapper>
-        {rewardBracket >= 0 && <RewardHighlighter numberMatches={numberMatches} />}
+        {rewardBracket >= 0 && <RewardHighlighter rewardBracket={rewardBracket} numBrackets={6} />}
         {reversedNumber.map((digit) => (
           <Text key={`${localId || id}-${digit}-${_uniqueId()}`} fontSize="16px">
             {digit}

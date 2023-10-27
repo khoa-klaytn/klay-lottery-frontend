@@ -5,6 +5,7 @@ import { klayLotteryABI } from 'config/abi/klayLottery'
 import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import { type Address, PublicClient } from 'viem'
+import { parseRetrievedNumber } from 'views/Lottery/helpers'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
 import { MAX_LOTTERIES_REQUEST_SIZE } from './getLotteriesData'
 
@@ -48,21 +49,18 @@ const fetchCakeRewardsForTickets = async (
 const getRewardBracketByNumber = (ticketNumber: string, finalNumber: string): number => {
   // Winning numbers are evaluated right-to-left in the smart contract, so we reverse their order for validation here:
   // i.e. '1123456' should be evaluated as '6543211'
-  const ticketNumAsArray = ticketNumber.split('').reverse()
-  const winningNumsAsArray = finalNumber.split('').reverse()
-  const matchingNumbers = []
+  const parsedTicketNum = parseRetrievedNumber(ticketNumber)
+  const parsedFinalNum = parseRetrievedNumber(finalNumber)
 
+  const numBrackets = parsedFinalNum.length
   // The number at index 6 in all tickets is 1 and will always match, so finish at index 5
-  for (let index = 0; index < winningNumsAsArray.length - 1; index++) {
-    if (ticketNumAsArray[index] !== winningNumsAsArray[index]) {
-      break
+  for (let index = 0; index < numBrackets; index++) {
+    if (parsedTicketNum[index] === parsedFinalNum[index]) {
+      const rewardBracket = numBrackets - index
+      return rewardBracket
     }
-    matchingNumbers.push(ticketNumAsArray[index])
   }
-
-  // Reward brackets refer to indexes, 0 = 1 match, 5 = 6 matches. Deduct 1 from matchingNumbers' length to get the reward bracket
-  const rewardBracket = matchingNumbers.length - 1
-  return rewardBracket
+  return 0
 }
 
 export const getWinningTickets = async (
