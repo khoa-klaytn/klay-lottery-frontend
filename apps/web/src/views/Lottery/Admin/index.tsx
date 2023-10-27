@@ -1,7 +1,7 @@
 import { klayLotteryABI } from 'config/abi/klayLottery'
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
-import { Button } from '@pancakeswap/uikit'
+import { Button, useToast } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
 import Modal from './Modal'
 import useLotteryAddress from '../hooks/useLotteryAddress'
@@ -22,36 +22,36 @@ export default function Admin() {
   const [isInjector, setIsInjector] = useState(false)
   const isAdmin = useMemo(() => isOperator || isOwner || isInjector, [isOperator, isOwner, isInjector])
   const [showModal, setShowModal] = useState(false)
+  const { toastError } = useToast()
+
+  const readRole = useCallback(
+    async (roleName: 'operatorAddress' | 'owner' | 'injectorAddress'): Promise<string | null> =>
+      publicClient
+        .readContract({
+          abi: klayLotteryABI,
+          address: lotteryAddress,
+          functionName: roleName,
+        })
+        .catch((e) => {
+          console.error(e)
+          toastError(`Failed to read ${roleName} from contract`)
+          return null
+        }),
+    [lotteryAddress, publicClient, toastError],
+  )
 
   useEffect(() => {
     if (account && publicClient) {
       ;(async () => {
-        const operatorAddress = await publicClient.readContract({
-          abi: klayLotteryABI,
-          address: lotteryAddress,
-          functionName: 'operatorAddress',
-        })
-        console.info(`operatorAddress: ${operatorAddress}`)
+        const operatorAddress = await readRole('operatorAddress')
         setIsOperator(operatorAddress === account)
-
-        const ownerAddress = await publicClient.readContract({
-          abi: klayLotteryABI,
-          address: lotteryAddress,
-          functionName: 'owner',
-        })
-        console.info(`ownerAddress: ${ownerAddress}`)
+        const ownerAddress = await readRole('owner')
         setIsOwner(ownerAddress === account)
-
-        const injectorAddress = await publicClient.readContract({
-          abi: klayLotteryABI,
-          address: lotteryAddress,
-          functionName: 'injectorAddress',
-        })
-        console.info(`injectorAddress: ${injectorAddress}`)
-        setIsInjector([operatorAddress, ownerAddress].includes(injectorAddress))
+        const injectorAddress = await readRole('injectorAddress')
+        setIsInjector([injectorAddress, ownerAddress].includes(injectorAddress))
       })()
     }
-  }, [publicClient, lotteryAddress, account])
+  }, [publicClient, lotteryAddress, account, readRole])
 
   return isAdmin ? (
     <>
