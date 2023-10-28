@@ -6,49 +6,8 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     label: t("Ecosystem"),
     items: [
       {
-        label: t("Trade"),
-        href: "/swap",
-      },
-      {
-        label: t("Earn"),
-        href: "/farms",
-      },
-      {
-        label: t("NFT"),
-        href: "/nfts",
-      },
-      {
-        label: t("Tokenomics"),
-        href: "https://docs.pancakeswap.finance/governance-and-tokenomics/cake-tokenomics",
-      },
-      {
-        label: t("Litepaper"),
-        href: "https://assets.pancakeswap.finance/litepaper/v2litepaper.pdf",
-      },
-      {
-        label: t("CAKE Emission Projection"),
-        href: "https://analytics.pancakeswap.finance/",
-      },
-      {
-        label: t("Merchandise"),
-        href: "https://merch.pancakeswap.finance/",
-      },
-    ],
-  },
-  {
-    label: "Business",
-    items: [
-      {
-        label: t("Farms and Syrup Pools"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/syrup-pools-and-farms",
-      },
-      {
-        label: t("IFO"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/initial-farm-offerings-ifos",
-      },
-      {
-        label: t("NFT Marketplace"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/business-partnerships/nft-market-applications",
+        label: t("Lottery"),
+        href: "/lottery",
       },
     ],
   },
