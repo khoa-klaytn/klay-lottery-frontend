@@ -86,7 +86,7 @@ const CommunitySection = () => {
             mb="12px"
           >
             <Heading scale="xl">{t('Join our')}</Heading>{' '}
-            <Heading color={theme.isDark ? '#A881FC' : theme.colors.secondary} scale="xl">
+            <Heading color={theme.isDark ? 'var(--colors-primaryBright)' : theme.colors.secondary} scale="xl">
               {t('Community')}
             </Heading>
           </Flex>

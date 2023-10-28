@@ -196,7 +196,7 @@ const PoolAllocations = () => {
           <Text textAlign="right" bold>
             10%
           </Text>
-          <AllocationMatch color="#A881FC" text={t('Matches first %digits%', { digits: 5 })} />
+          <AllocationMatch color="var(--colors-primaryBright)" text={t('Matches first %digits%', { digits: 5 })} />
           <Text textAlign="right" bold>
             20%
           </Text>

@@ -404,7 +404,7 @@ const CakeSection: React.FC = () => {
           fontWeight={600}
           display="inline"
           marginLeft={10}
-          color={theme.isDark ? '#A881FC' : theme.colors.secondary}
+          color={theme.isDark ? 'var(--colors-primaryBright)' : theme.colors.secondary}
           fontSize={['32px', null, null, '40px']}
           lineHeight="110%"
         >

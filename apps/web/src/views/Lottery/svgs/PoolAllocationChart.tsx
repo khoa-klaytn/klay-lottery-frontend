@@ -24,7 +24,7 @@ const PoolAllocationChart: React.FC<React.PropsWithChildren<SvgProps>> = (props)
         />
         <path
           d="M201.5 2.00002C243.63 2.00002 284.679 15.4044 318.763 40.2921C352.847 65.1798 378.217 100.273 391.236 140.542C404.255 180.811 404.255 224.189 391.236 264.458C378.217 304.727 352.847 339.82 318.763 364.708L201.5 202.5L201.5 2.00002Z"
-          fill="#A881FC"
+          fill="var(--colors-primaryBright)"
           stroke="#0E0E0E"
           strokeOpacity="0.05"
           strokeWidth="2"
