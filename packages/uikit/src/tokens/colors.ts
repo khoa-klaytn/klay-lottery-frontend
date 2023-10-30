@@ -27,6 +27,8 @@ export const additionalColors = {
 const darkSecondary = "#4A81E8";
 const darkBubblegum = "#546180";
 const darkBubblegum2 = "#556880";
+const darkContrast = "#0f0d0e";
+const darkContrast2 = "#3b192c";
 
 export const lightColors = {
   ...baseColors,
@@ -39,6 +41,7 @@ export const lightColors = {
   backgroundAlt2: "rgba(255, 255, 255, 0.7)",
   cardBorder: "#E7E3EB",
   contrast: "#191326",
+  contrast2: "#3b192c",
   dropdown: "#F6F6F6",
   dropdownDeep: "#EEEEEE",
   invertedContrast: "#FFFFFF",
@@ -62,6 +65,7 @@ export const lightColors = {
   gradientInversePrimary: `linear-gradient(${darkSecondary}, ${baseColors.primaryBright})`,
   gradientSecondary2: `linear-gradient(180deg, ${darkSecondary} 0%, ${additionalColors.overlay2} 100%)`,
   gradientOverlay: `linear-gradient(180deg, ${additionalColors.overlay} 0%, ${additionalColors.overlay3} 100%)`,
+  gradientContrast: `radial-gradient(103.12% 50% at 50% 50%, ${darkContrast2} 0%, ${darkContrast} 100%)`,
 };
 
 export const darkColors = {
@@ -75,6 +79,7 @@ export const darkColors = {
   backgroundAlt2: "rgba(29, 29, 29, 0.7)",
   cardBorder: "#383241",
   contrast: "#0f0d0e",
+  contrast2: darkContrast2,
   dropdown: "#1E1D20",
   dropdownDeep: "#100C18",
   invertedContrast: "#f3f1f3",
@@ -93,6 +98,7 @@ export const darkColors = {
   gradientOverlay: `linear-gradient(180deg, ${additionalColors.overlay2} 0%, ${additionalColors.overlay3} 100%)`,
   gradientBubblegum: `linear-gradient(139.73deg, ${darkBubblegum} 0%, ${darkBubblegum2} 100%)`,
   gradientInverseBubblegum: `linear-gradient(139.73deg, ${darkBubblegum2} 0%, ${darkBubblegum} 100%)`,
+  gradientContrast: `radial-gradient(103.12% 50% at 50% 50%, ${darkContrast2} 0%, ${darkContrast} 100%)`,
   gradientCardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
   gradientBlue: "linear-gradient(180deg, #00707F 0%, #19778C 100%)",
   gradientViolet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",
