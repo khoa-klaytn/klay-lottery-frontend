@@ -23,10 +23,6 @@ const StyledLink = styled("a")`
   }
   .desktop-icon {
     width: 160px;
-    display: none;
-    ${({ theme }) => theme.mediaQueries.lg} {
-      display: block;
-    }
   }
   .eye {
     animation-delay: 20ms;
