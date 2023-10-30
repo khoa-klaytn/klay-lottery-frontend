@@ -362,7 +362,7 @@ const TermsOfService = () => {
         Similarly, the Protocol is provided "AS IS", at your own risk, and without warranties of any kind. Although we
         contributed to the initial code for the Protocol, we do not provide, own, or control the Protocol, which is run
         autonomously without any headcount by smart contracts deployed on various blockchains. Upgrades and
-        modifications to the Protocol are generally managed in a community-driven way by holders of the CAKE token. No
+        modifications to the Protocol are generally managed in a community-driven way by holders of the KLAY token. No
         developer or entity involved in creating the Protocol will be liable for any claims or damages whatsoever
         associated with your use, inability to use, or your interaction with other users of, the Protocol, including any
         direct, indirect, incidental, special, exemplary, punitive or consequential damages, or loss of profits,

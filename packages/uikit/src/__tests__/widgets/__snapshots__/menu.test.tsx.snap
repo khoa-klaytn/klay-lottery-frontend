@@ -2351,7 +2351,7 @@ exports[`renders correctly 1`] = `
               rel="noreferrer noopener"
               target="_blank"
             >
-              CAKE
+              KLAY
             </a>
           </li>
           <li
@@ -3223,7 +3223,7 @@ exports[`renders correctly 1`] = `
             target="_blank"
             variant="primary"
           >
-            Buy CAKE
+            Buy KLAY
             <svg
               class="c53"
               color="backgroundAlt"

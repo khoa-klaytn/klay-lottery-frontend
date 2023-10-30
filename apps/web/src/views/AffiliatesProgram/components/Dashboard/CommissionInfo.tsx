@@ -155,7 +155,7 @@ const CommissionInfo: React.FC<React.PropsWithChildren<CommissionInfoProps>> = (
                     {`${chart.percentage}%`}
                   </Text>
                   <Text color="textSubtle" fontSize={['14px']}>
-                    {`~ ${chart.cakeValue} CAKE`}
+                    {`~ ${chart.cakeValue} KLAY`}
                   </Text>
                 </Box>
               </Flex>

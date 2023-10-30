@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount, Price, WNATIVE, WETH9, TradeType } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
-import { BUSD, CAKE, USDC, STABLE_COIN } from '@pancakeswap/tokens'
+import { BUSD, KLAY, USDC, STABLE_COIN } from '@pancakeswap/tokens'
 import { useMemo } from 'react'
 import useSWRImmutable from 'swr/immutable'
 import { multiplyPriceByAmount } from 'utils/prices'
@@ -30,7 +30,7 @@ export function useStablecoinPrice(
 
   const cakePrice = useCakePrice()
   const stableCoin = chainId && chainId in ChainId ? STABLE_COIN[chainId as ChainId] : undefined
-  const isCake = chainId && currency && CAKE[chainId] && currency.wrapped.equals(CAKE[chainId])
+  const isCake = chainId && currency && KLAY[chainId] && currency.wrapped.equals(KLAY[chainId])
 
   const isStableCoin = currency && stableCoin && currency.wrapped.equals(stableCoin)
 

@@ -1,7 +1,7 @@
 import { WETH9, ERC20Token } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 
-import { CAKE, USDC, USDT, WBTC_ETH } from './common'
+import { KLAY, USDC, USDT, WBTC_ETH } from './common'
 
 export const ethereumTokens = {
   weth: WETH9[ChainId.ETHEREUM],
@@ -40,7 +40,7 @@ export const ethereumTokens = {
     'Capsule Coin',
     'https://www.ternoa.network/en',
   ),
-  cake: CAKE[ChainId.ETHEREUM],
+  cake: KLAY[ChainId.ETHEREUM],
   dai: new ERC20Token(
     ChainId.ETHEREUM,
     '0x6B175474E89094C44Da98b954EedeAC495271d0F',

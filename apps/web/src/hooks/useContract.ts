@@ -38,7 +38,7 @@ import {
 
 import { WNATIVE, pancakePairV2ABI } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
-import { CAKE } from '@pancakeswap/tokens'
+import { KLAY } from '@pancakeswap/tokens'
 import { nonfungiblePositionManagerABI } from '@pancakeswap/v3-sdk'
 import { multicallABI } from 'config/abi/Multicall'
 import { erc20Bytes32ABI } from 'config/abi/erc20_bytes32'
@@ -60,7 +60,7 @@ export const useERC20 = (address: Address) => {
 export const useCake = () => {
   const { chainId } = useActiveChainId()
 
-  return useContract((chainId && CAKE[chainId]?.address) ?? CAKE[ChainId.BSC].address, erc20ABI)
+  return useContract((chainId && KLAY[chainId]?.address) ?? KLAY[ChainId.BSC].address, erc20ABI)
 }
 
 export const useBunnyFactory = () => {

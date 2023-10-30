@@ -96,7 +96,7 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
   stakingTokenPrice,
   multiplier,
   initialValue,
-  earningTokenSymbol = "CAKE",
+  earningTokenSymbol = "KLAY",
   autoCompoundFrequency = 0,
   performanceFee = 0,
   initialState,

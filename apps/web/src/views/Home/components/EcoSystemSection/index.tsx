@@ -140,7 +140,7 @@ const useNftGameBlockData = () => {
     return [
       {
         title: t('Lottery'),
-        description: t('Enter for a chance to win CAKE prize pools'),
+        description: t('Enter for a chance to win KLAY prize pools'),
         ctaTitle: t('Try Now'),
         image: gameLottery,
         defaultImage: gameLotteryPurple,

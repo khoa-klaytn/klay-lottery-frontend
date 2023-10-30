@@ -119,7 +119,7 @@ const Agreement = () => {
           referral link. We will not pay commissions if someone says they signed up through you but such a sign up was
           not done through the referral link.
         </Text>
-        <Text as="p">4.2 All commissions will be paid out in CAKE tokens.</Text>
+        <Text as="p">4.2 All commissions will be paid out in KLAY tokens.</Text>
         <Text as="p">
           4.3 All commissions are calculated upon the completion of every on-chain transaction and denominated in U.S.
           dollars as follows. This means that:
@@ -132,12 +132,12 @@ const Agreement = () => {
         </Text>
         <Text as="p">
           (b) At or around the time that the commissions are paid out to you, using the USD value calculated at Clause
-          4.3(a) , we will calculate your commissions in CAKE tokens using the prevailing USD price of CAKE tokens at
+          4.3(a) , we will calculate your commissions in KLAY tokens using the prevailing USD price of KLAY tokens at
           that time.
         </Text>
         <Text as="p">4.4 In calculating your commissions, we reserve the right to determine the:</Text>
         <Text as="p">
-          (a) prevailing USD price of the Trading Fees Denomination and the CAKE tokens by reference to the spot price
+          (a) prevailing USD price of the Trading Fees Denomination and the KLAY tokens by reference to the spot price
           on a centralised exchange, the exchange rate in a liquidity pool, or a data oracle in our sole discretion; and
         </Text>
         <Text as="p">(b) exact timing which the prevailing price is taken at.</Text>
@@ -365,7 +365,7 @@ const Agreement = () => {
         <Text as="p">
           (b) making any representations or providing advice, in the course of your performance regarding investments,
           investment outcomes, the likelihood of returns, or suitability for investment. For example, you should not
-          make any price predictions over the CAKE tokens;
+          make any price predictions over the KLAY tokens;
         </Text>
         <Text as="p">
           (c) using the Program for any illegal or unauthorised purpose or in a way which violate any laws in your

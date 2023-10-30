@@ -4,7 +4,7 @@ export const SEO: DefaultSeoProps = {
   titleTemplate: '%s | PancakeSwap',
   defaultTitle: 'PancakeSwap',
   description:
-    'Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on BNB Smart Chain (BSC) with a lottery for CAKE.',
+    'Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on BNB Smart Chain (BSC) with a lottery for KLAY.',
   twitter: {
     cardType: 'summary_large_image',
     handle: '@PancakeSwap',

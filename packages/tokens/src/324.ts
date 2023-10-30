@@ -1,12 +1,12 @@
 import { WETH9, ERC20Token } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
-import { USDC, USDT, CAKE } from './common'
+import { USDC, USDT, KLAY } from './common'
 
 export const zksyncTokens = {
   weth: WETH9[ChainId.ZKSYNC],
   usdc: USDC[ChainId.ZKSYNC],
   usdt: USDT[ChainId.ZKSYNC],
-  cake: CAKE[ChainId.ZKSYNC],
+  cake: KLAY[ChainId.ZKSYNC],
   tes: new ERC20Token(
     ChainId.ZKSYNC,
     '0xCab3F741Fa54e79E34753B95717b23018332b8AC',

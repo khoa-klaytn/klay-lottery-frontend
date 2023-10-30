@@ -162,7 +162,7 @@ const Question = () => {
               </StyledListText>
               <StyledListText color="textSubtle">
                 {t(
-                  'You will be able to redeem your CAKE rewards from the affiliate dashboard page. Once redeemed, PancakeSwap will transfer the commission amount earned to your designated wallet. You will be able to see the details of each payment in your affiliate dashboard, including the amount, date, and status of each payment.',
+                  'You will be able to redeem your KLAY rewards from the affiliate dashboard page. Once redeemed, PancakeSwap will transfer the commission amount earned to your designated wallet. You will be able to see the details of each payment in your affiliate dashboard, including the amount, date, and status of each payment.',
                 )}
               </StyledListText>
             </FoldableText>

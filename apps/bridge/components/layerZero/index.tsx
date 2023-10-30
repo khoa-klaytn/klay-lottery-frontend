@@ -62,7 +62,7 @@ const LayerZero = ({ isCake }: { isCake?: boolean }) => {
             app?.bridgeStore?.addCurrencies(currencies?.filter((i) => i.symbol.toLowerCase() === 'cake'))
 
             const srcCake = app?.bridgeStore?.currencies?.find(
-              (i) => i.symbol.toUpperCase() === 'CAKE' && i.chainId === 102,
+              (i) => i.symbol.toUpperCase() === 'KLAY' && i.chainId === 102,
             )
             app?.bridgeStore?.setSrcCurrency(srcCake)
           }

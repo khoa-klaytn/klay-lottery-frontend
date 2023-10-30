@@ -65,11 +65,11 @@ const Mint: React.FC<React.PropsWithChildren> = () => {
             {t('Choose wisely: you can only ever make one starter collectible!')}
           </Text>
           <Text as="p" mb="24px" color="textSubtle">
-            {t('Cost: %num% CAKE', { num: formatUnits(MINT_COST, 18) })}
+            {t('Cost: %num% KLAY', { num: formatUnits(MINT_COST, 18) })}
           </Text>
           {!hasMinimumCakeRequired && (
             <Text color="failure" mb="16px">
-              {t('A minimum of %num% CAKE is required', { num: formatUnits(MINT_COST, 18) })}
+              {t('A minimum of %num% KLAY is required', { num: formatUnits(MINT_COST, 18) })}
             </Text>
           )}
           <ApproveConfirmButtons
