@@ -5,7 +5,6 @@ import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, R
 import storage from 'redux-persist/lib/storage'
 import { updateVersion } from './global/actions'
 import lotteryReducer from './lottery'
-import poolsReducer from './pools'
 import transactions from './transactions/reducer'
 import user from './user/reducer'
 
@@ -22,7 +21,6 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    pools: poolsReducer,
     lottery: lotteryReducer,
 
     // Exchange

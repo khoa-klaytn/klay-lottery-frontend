@@ -1,8 +1,5 @@
-import { useState, useCallback, useMemo, useEffect } from 'react'
-import { useIsTransactionPending } from 'state/transactions/hooks'
+import { useState, useCallback, useMemo } from 'react'
 import { getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
-import { useAppDispatch } from 'state'
-import { updateUserBalance } from 'state/pools'
 import { Native } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
 import { CAKE } from '@pancakeswap/tokens'
@@ -15,11 +12,9 @@ import BigNumber from 'bignumber.js'
 import useAccountActiveChain from 'hooks/useAccountActiveChain'
 
 export const useCakeEnable = (enableAmount: BigNumber) => {
-  const { account, chainId } = useAccountActiveChain()
-  const dispatch = useAppDispatch()
+  const { chainId } = useAccountActiveChain()
   const [pendingEnableTx, setPendingEnableTx] = useState(false)
-  const [transactionHash, setTransactionHash] = useState<string>()
-  const isTransactionPending = useIsTransactionPending(transactionHash)
+  const [, setTransactionHash] = useState<string>()
   const swapAmount = useMemo(() => getFullDisplayBalance(enableAmount), [enableAmount])
 
   const parsedAmount = tryParseAmount(swapAmount, CAKE[chainId])
@@ -29,13 +24,6 @@ export const useCakeEnable = (enableAmount: BigNumber) => {
   const swapCalls = useSwapCallArguments(trade, INITIAL_ALLOWED_SLIPPAGE, null)
 
   const { callback: swapCallback } = useSwapCallback(trade, INITIAL_ALLOWED_SLIPPAGE, null, swapCalls)
-
-  useEffect(() => {
-    if (pendingEnableTx && transactionHash && !isTransactionPending) {
-      dispatch(updateUserBalance({ sousId: 0, account, chainId }))
-      setPendingEnableTx(isTransactionPending)
-    }
-  }, [account, dispatch, transactionHash, pendingEnableTx, isTransactionPending, chainId])
 
   const handleEnable = useCallback(() => {
     if (!swapCallback) {

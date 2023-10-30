@@ -7,24 +7,15 @@ import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useBunnyFactory } from 'hooks/useContract'
 import { useBSCCakeBalance } from 'hooks/useTokenBalance'
-import { useEffect, useState } from 'react'
-import { getNftsFromCollectionApi } from 'state/nftMarket/helpers'
-import { ApiSingleTokenData } from 'state/nftMarket/types'
+import { useState } from 'react'
 import { getBunnyFactoryAddress } from 'utils/addressHelpers'
 import { bscTokens } from '@pancakeswap/tokens'
-import { pancakeBunniesAddress } from 'views/Nft/market/constants'
-import { MINT_COST, STARTER_NFT_BUNNY_IDS } from './config'
+import { MINT_COST } from './config'
 import useProfileCreation from './contexts/hook'
 import NextStepButton from './NextStepButton'
-import SelectionCard from './SelectionCard'
-
-interface MintNftData extends ApiSingleTokenData {
-  bunnyId?: string
-}
 
 const Mint: React.FC<React.PropsWithChildren> = () => {
-  const [selectedBunnyId, setSelectedBunnyId] = useState<string>('')
-  const [starterNfts, setStarterNfts] = useState<MintNftData[]>([])
+  const [selectedBunnyId] = useState<string>('')
   const { actions, allowance } = useProfileCreation()
   const { toastSuccess } = useToast()
 
@@ -33,24 +24,6 @@ const Mint: React.FC<React.PropsWithChildren> = () => {
   const { balance: cakeBalance, fetchStatus } = useBSCCakeBalance()
   const hasMinimumCakeRequired = fetchStatus === FetchStatus.Fetched && cakeBalance >= MINT_COST
   const { callWithGasPrice } = useCallWithGasPrice()
-
-  useEffect(() => {
-    const getStarterNfts = async () => {
-      const response = await getNftsFromCollectionApi(pancakeBunniesAddress)
-      if (!response) return
-      const { data: allPbTokens } = response
-      const nfts = STARTER_NFT_BUNNY_IDS.map((bunnyId) => {
-        if (allPbTokens && allPbTokens[bunnyId]) {
-          return { ...allPbTokens[bunnyId], bunnyId }
-        }
-        return undefined
-      })
-      setStarterNfts(nfts)
-    }
-    if (starterNfts.length === 0) {
-      getStarterNfts()
-    }
-  }, [starterNfts])
 
   const { isApproving, isApproved, isConfirmed, isConfirming, handleApprove, handleConfirm } =
     useApproveConfirmTransaction({
@@ -94,23 +67,6 @@ const Mint: React.FC<React.PropsWithChildren> = () => {
           <Text as="p" mb="24px" color="textSubtle">
             {t('Cost: %num% CAKE', { num: formatUnits(MINT_COST, 18) })}
           </Text>
-          {starterNfts.map((nft) => {
-            const handleChange = (value: string) => setSelectedBunnyId(value)
-
-            return (
-              <SelectionCard
-                key={nft?.name}
-                name="mintStarter"
-                value={nft?.bunnyId}
-                image={nft?.image.thumbnail}
-                isChecked={selectedBunnyId === nft?.bunnyId}
-                onChange={handleChange}
-                disabled={isApproving || isConfirming || isConfirmed || !hasMinimumCakeRequired}
-              >
-                <Text bold>{nft?.name}</Text>
-              </SelectionCard>
-            )
-          })}
           {!hasMinimumCakeRequired && (
             <Text color="failure" mb="16px">
               {t('A minimum of %num% CAKE is required', { num: formatUnits(MINT_COST, 18) })}

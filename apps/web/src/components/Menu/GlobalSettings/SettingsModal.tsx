@@ -26,7 +26,6 @@ import { ExpertModal } from '@pancakeswap/widgets-internal'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useTheme from 'hooks/useTheme'
 import { ReactNode, useCallback, useState } from 'react'
-import { useSwapActionHandlers } from 'state/swap/useSwapActionHandlers'
 import {
   useAudioPlay,
   useExpertMode,
@@ -91,7 +90,6 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
   const [audioPlay, setAudioMode] = useAudioPlay()
   const [subgraphHealth, setSubgraphHealth] = useSubgraphHealthIndicatorManager()
   const [userUsernameVisibility, setUserUsernameVisibility] = useUserUsernameVisibility()
-  const { onChangeRecipient } = useSwapActionHandlers()
   const { chainId } = useActiveChainId()
   const [tokenRisk, setTokenRisk] = useUserTokenRisk()
 
@@ -111,7 +109,6 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
 
   const handleExpertModeToggle = () => {
     if (expertMode || !showExpertModeAcknowledgement) {
-      onChangeRecipient(null)
       setExpertMode((s) => !s)
     } else {
       setShowConfirmExpertModal(true)

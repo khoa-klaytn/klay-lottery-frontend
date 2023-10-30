@@ -23,10 +23,7 @@ const TeamAvatar = styled.img`
   }
 `
 
-const AvatarWrapper = styled.div<{ bg: string }>`
-  background: url('${({ bg }) => bg}');
-  background-repeat: no-repeat;
-  background-size: cover;
+const AvatarWrapper = styled.div`
   border-radius: 50%;
   position: relative;
   width: 100%;
@@ -44,7 +41,7 @@ const AvatarInactive = styled(NoProfileAvatarIcon)`
 
 const ProfileAvatarWithTeam: React.FC<React.PropsWithChildren<ProfileAvatarProps>> = ({ profile }) => {
   return (
-    <AvatarWrapper bg={profile.nft?.image.thumbnail}>
+    <AvatarWrapper>
       {!profile.isActive && <AvatarInactive />}
       {profile.team && <TeamAvatar src={`/images/teams/${profile.team.images.alt}`} alt={profile.team.name} />}
     </AvatarWrapper>

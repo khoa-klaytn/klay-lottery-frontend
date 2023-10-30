@@ -1,7 +1,6 @@
 import { ContextApi } from '@pancakeswap/localization'
 import { DropdownMenuItemType, DropdownMenuItems, MenuItemsType, MoreIcon } from '@pancakeswap/uikit'
 import { SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
-import { nftsBaseUrl } from 'views/Nft/market/constants'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
 export type ConfigMenuItemsType = Omit<MenuItemsType, 'items'> & { hideSubNav?: boolean; image?: string } & {
@@ -43,12 +42,6 @@ const config: (
         {
           label: t('Info'),
           href: '/info/v3',
-        },
-        {
-          label: t('NFT'),
-          href: `${nftsBaseUrl}`,
-          supportChainIds: SUPPORT_ONLY_KLAYTN,
-          image: '/images/decorations/nft.png',
         },
         {
           label: t('Affiliate Program'),

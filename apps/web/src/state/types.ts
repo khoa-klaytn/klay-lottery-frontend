@@ -3,7 +3,6 @@ import { SerializedPoolWithInfo } from '@pancakeswap/pools'
 import { Address } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import { CampaignType, LotteryStatus, LotteryTicket, Team, TranslatableText } from 'config/constants/types'
-import { NftToken } from './nftMarket/types'
 
 export enum GAS_PRICE {
   default = '3',
@@ -46,7 +45,6 @@ export interface Profile {
   tokenId: number
   isActive: boolean
   username: string
-  nft?: NftToken
   team?: Team
   hasRegistered: boolean
 }

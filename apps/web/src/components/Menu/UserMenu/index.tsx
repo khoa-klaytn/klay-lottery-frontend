@@ -83,8 +83,6 @@ const UserMenu = () => {
   const { domainName, avatar } = useDomainNameForAddress(account)
   const { isWrongNetwork } = useActiveChainId()
   const { hasPendingTransactions, pendingNumber } = usePendingTransactions()
-  const { profile } = useProfile()
-  const avatarSrc = profile?.nft?.image?.thumbnail ?? avatar
   const [userMenuText, setUserMenuText] = useState<string>('')
   const [userMenuVariable, setUserMenuVariable] = useState<UserMenuVariant>('default')
 
@@ -103,7 +101,7 @@ const UserMenu = () => {
       <UIKitUserMenu
         account={domainName || account}
         ellipsis={!domainName}
-        avatarSrc={avatarSrc}
+        avatarSrc={avatar}
         text={userMenuText}
         variant={userMenuVariable}
       >

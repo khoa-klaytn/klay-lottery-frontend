@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { Currency, CurrencyAmount, Pair, Percent } from '@pancakeswap/sdk'
-import { Text, Card, CardBody, Flex, CardProps, TooltipText, useTooltip, AutoColumn } from '@pancakeswap/uikit'
+import { Currency, CurrencyAmount, Percent } from '@pancakeswap/sdk'
+import { Text, Card, CardBody, Flex, CardProps, AutoColumn } from '@pancakeswap/uikit'
 import { styled } from 'styled-components'
 import { useTranslation } from '@pancakeswap/localization'
 import useTotalSupply from 'hooks/useTotalSupply'
@@ -8,21 +8,18 @@ import { useStablecoinPriceAmount } from 'hooks/useBUSDPrice'
 import { useAccount } from 'wagmi'
 import { BIG_INT_ZERO } from 'config/constants/exchange'
 
-import { useLPApr } from 'state/swap/useLPApr'
 import { useTokenBalance } from 'state/wallet/hooks'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 
 import { LightCard } from '../Card'
 import { DoubleCurrencyLogo } from '../Logo'
 import { RowBetween, RowFixed } from '../Layout/Row'
-import { formatAmount } from '../../utils/formatInfoNumbers'
 
 const FixedHeightRow = styled(RowBetween)`
   height: 24px;
 `
 
 export interface PositionCardProps extends CardProps {
-  pair: Pair
   showUnwrapped?: boolean
   currency0: Currency
   currency1: Currency
@@ -113,7 +110,6 @@ export const withLPValues = withLPValuesFactory({
 })
 
 function MinimalPositionCardView({
-  pair,
   currency0,
   currency1,
   token0Deposited,
@@ -123,13 +119,6 @@ function MinimalPositionCardView({
   poolTokenPercentage,
 }: PositionCardProps) {
   const { t } = useTranslation()
-  const poolData = useLPApr(pair)
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
-    t(`Based on last 7 days' performance. Does not account for impermanent loss`),
-    {
-      placement: 'bottom',
-    },
-  )
 
   return (
     <>
@@ -164,15 +153,6 @@ function MinimalPositionCardView({
                 </RowFixed>
               </FixedHeightRow>
               <AutoColumn gap="4px">
-                {poolData && (
-                  <FixedHeightRow>
-                    <TooltipText ref={targetRef} color="textSubtle" small>
-                      {t('LP reward APR')}:
-                    </TooltipText>
-                    {tooltipVisible && tooltip}
-                    <Text>{formatAmount(poolData.lpApr7d)}%</Text>
-                  </FixedHeightRow>
-                )}
                 <FixedHeightRow>
                   <Text color="textSubtle" small>
                     {t('Share in Trading Pair')}:

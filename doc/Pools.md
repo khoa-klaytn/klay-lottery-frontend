@@ -7,7 +7,3 @@
 - Run `pnpm test:config` to make sure the data you set in the config match the data on chain
 
 Pools APRs depend on farm data to compute prices
-
-## Pools data
-
-Data are stored in the global redux state (`apps/web/src/state/pools`).

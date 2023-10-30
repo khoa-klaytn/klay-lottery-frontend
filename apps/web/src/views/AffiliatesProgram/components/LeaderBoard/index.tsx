@@ -4,7 +4,6 @@ import { useAccount } from 'wagmi'
 import { useTranslation } from '@pancakeswap/localization'
 import AffiliatesProgramLayout from 'views/AffiliatesProgram/components/AffiliatesProgramLayout'
 import Banner from 'views/AffiliatesProgram/components/Dashboard/Banner'
-import Podium from 'views/AffiliatesProgram/components/LeaderBoard/Podium'
 import LeaderBoardList from 'views/AffiliatesProgram/components/LeaderBoard/LeaderBoardList'
 import useLeaderboard from 'views/AffiliatesProgram/hooks/useLeaderboard'
 import useAuthAffiliate from 'views/AffiliatesProgram/hooks/useAuthAffiliate'
@@ -41,7 +40,6 @@ const LeaderBoard = () => {
         <LoginButton />
       ) : (
         <>
-          <Podium list={list} />
           <LeaderBoardList list={list} isFetching={isFetching} />
         </>
       )}

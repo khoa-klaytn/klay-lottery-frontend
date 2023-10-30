@@ -148,7 +148,7 @@ export default function PoolFinder() {
             pairState === PairState.EXISTS ? (
               hasPosition && pair ? (
                 <>
-                  <MinimalPositionCard pair={pair} />
+                  <MinimalPositionCard />
                   <Button
                     as={NextLinkFromReactRouter}
                     to={`/v2/pair/${pair.token0.address}/${pair.token1.address}`}
