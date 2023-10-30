@@ -73,7 +73,7 @@ const Menu = (props) => {
         activeItem={activeMenuItem?.href}
         activeSubItem={activeSubMenuItem?.href}
         buyCakeLabel={t('Buy KLAY')}
-        buyCakeLink="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+        buyCakeLink="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index"
         {...props}
       />
     </>

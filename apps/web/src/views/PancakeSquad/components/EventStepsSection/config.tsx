@@ -56,7 +56,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         <>
           <Button
             as="a"
-            href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+            href="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index"
             target="_blank"
             width="100%"
           >
