@@ -2,9 +2,9 @@ export const baseColors = {
   white: "white",
   failure: "#ED4B9E",
   failure33: "#ED4B9E33",
-  primary: "#2D27E6",
-  primary0f: "#2D27E60f",
-  primary3D: "#2D27E63D",
+  primary: "#3D27E6",
+  primary0f: "#3D27E60f",
+  primary3D: "#3D27E63D",
   primaryBright: "#5854E8",
   primaryDark: "#0500A1",
   success: "#31D0AA",
@@ -24,7 +24,9 @@ export const additionalColors = {
   bronze: "#E7974D",
 };
 
-const darkSecondary = "#32A2ED";
+const darkSecondary = "#4A81E8";
+const darkBubblegum = "#546180";
+const darkBubblegum2 = "#556880";
 
 export const lightColors = {
   ...baseColors,
@@ -56,6 +58,8 @@ export const lightColors = {
   gradientVioletAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
   gradientGold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
   gradientSecondary: "linear-gradient(#53DEE9, #7645D9)",
+  gradientPrimary: `linear-gradient(${darkSecondary}, ${baseColors.primaryBright})`,
+  gradientInversePrimary: `linear-gradient(${darkSecondary}, ${baseColors.primaryBright})`,
   gradientSecondary2: `linear-gradient(180deg, ${darkSecondary} 0%, ${additionalColors.overlay2} 100%)`,
   gradientOverlay: `linear-gradient(180deg, ${additionalColors.overlay} 0%, ${additionalColors.overlay3} 100%)`,
 };
@@ -64,7 +68,7 @@ export const darkColors = {
   ...baseColors,
   ...additionalColors,
   secondary: darkSecondary,
-  secondary80: "#32A2ED80",
+  secondary80: `${darkSecondary}80`,
   background: "#141312",
   backgroundDisabled: "#3c3742",
   backgroundAlt: "#1d1d1d",
@@ -82,11 +86,13 @@ export const darkColors = {
   textDisabled: "#666171",
   textSubtle: "#e3dde6",
   disabled: "#524B63",
+  gradientPrimary: `linear-gradient(${darkSecondary}, ${baseColors.primaryBright})`,
+  gradientInversePrimary: `linear-gradient(180deg, ${darkSecondary}, ${baseColors.primaryBright})`,
   gradientSecondary: `linear-gradient(180deg, ${darkSecondary} 0%, ${additionalColors.overlay} 100%)`,
   gradientSecondary2: `linear-gradient(180deg, ${darkSecondary} 0%, ${additionalColors.overlay2} 100%)`,
   gradientOverlay: `linear-gradient(180deg, ${additionalColors.overlay2} 0%, ${additionalColors.overlay3} 100%)`,
-  gradientBubblegum: `linear-gradient(139.73deg, #2B2A54 0%, #2A3C54 100%)`,
-  gradientInverseBubblegum: `linear-gradient(139.73deg, #2A3C54 0%, #2B2A54 100%)`,
+  gradientBubblegum: `linear-gradient(139.73deg, ${darkBubblegum} 0%, ${darkBubblegum2} 100%)`,
+  gradientInverseBubblegum: `linear-gradient(139.73deg, ${darkBubblegum2} 0%, ${darkBubblegum} 100%)`,
   gradientCardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
   gradientBlue: "linear-gradient(180deg, #00707F 0%, #19778C 100%)",
   gradientViolet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",

@@ -20,8 +20,7 @@ const CakeBenefitsCardWrapper = styled(Box)`
   width: 100%;
   margin-bottom: 24px;
   padding: 1px 1px 3px 1px;
-  background-image: ${({ theme }) =>
-    `linear-gradient(180deg, ${theme.colors.secondary}, ${theme.colors.primaryBright})`};
+  background-image: ${({ theme }) => theme.colors.gradientInversePrimary};
   border-radius: ${({ theme }) => theme.radii.default};
 `
 

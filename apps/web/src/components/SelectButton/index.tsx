@@ -6,8 +6,7 @@ export const StyledCard = styled.button<{ isActive?: boolean }>`
   cursor: pointer;
   border: none;
   width: fit-content;
-  background: ${({ theme, isActive }) =>
-    isActive ? `linear-gradient(180deg, ${theme.colors.primaryBright}, ${theme.colors.secondary})` : 'inherit'};
+  background: ${({ theme, isActive }) => (isActive ? theme.colors.gradientPrimary : 'inherit')};
   border-radius: 16px;
   color: ${({ theme }) => theme.colors.text};
   overflow: hidden;

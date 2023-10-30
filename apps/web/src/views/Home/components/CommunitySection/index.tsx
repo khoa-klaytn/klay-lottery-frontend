@@ -85,8 +85,8 @@ const CommunitySection = () => {
             flexDirection={isMobile ? 'column' : 'row'}
             mb="12px"
           >
-            <Heading scale="xl">{t('Join our')}</Heading>{' '}
-            <Heading color={theme.isDark ? 'var(--colors-primaryBright)' : theme.colors.secondary} scale="xl">
+            <Heading scale="xl">{t('Join our')}</Heading>
+            <Heading color={theme.isDark ? theme.colors.primaryBright : theme.colors.secondary} scale="xl">
               {t('Community')}
             </Heading>
           </Flex>
