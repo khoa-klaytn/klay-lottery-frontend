@@ -1,3 +1,4 @@
+import { ASSET_CDN } from 'config/constants/endpoints'
 import { DefaultSeoProps } from 'next-seo'
 
 export const SEO: DefaultSeoProps = {
@@ -14,6 +15,6 @@ export const SEO: DefaultSeoProps = {
     title: '🥞 SweepStakes - A next evolution DeFi exchange on BNB Smart Chain (BSC)',
     description:
       'The most popular AMM on BSC by user count! Win it in the Lottery, then stake it in Syrup Pools to earn more tokens! NFTs and more on a platform you can trust.',
-    images: [{ url: 'https://assets.sweepstakes.finance/web/og/hero.jpg' }],
+    images: [{ url: `${ASSET_CDN}/web/og/hero.jpg` }],
   },
 }

@@ -47,7 +47,7 @@ export function CurrencyLogo({
     return (
       <StyledLogo
         size={size}
-        srcs={[`https://assets.sweepstakes.finance/web/native/${currency.chainId}.png`]}
+        srcs={[`https://assets.pancakeswap.finance/web/native/${currency.chainId}.png`]}
         width={size}
         style={style}
       />

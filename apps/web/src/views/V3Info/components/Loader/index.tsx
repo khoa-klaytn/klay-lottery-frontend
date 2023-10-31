@@ -1,3 +1,4 @@
+import { ASSET_CDN } from 'config/constants/endpoints'
 import { styled, css, keyframes } from 'styled-components'
 
 const rotate = keyframes`
@@ -78,7 +79,7 @@ export const LocalLoader = ({ fill }: { fill: boolean }) => {
   return (
     <Wrapper fill={fill ? 1 : 0}>
       <AnimatedImg>
-        <img src="https://assets.sweepstakes.finance/web/pancake-3d-spinner-v2.gif" alt="loading-icon" />
+        <img src={`${ASSET_CDN}/web/pancake-3d-spinner-v2.gif`} alt="loading-icon" />
       </AnimatedImg>
     </Wrapper>
   )
