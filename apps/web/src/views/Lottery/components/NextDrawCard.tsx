@@ -18,7 +18,7 @@ import {
 import { useAccount, useChainId } from 'wagmi'
 import { LotteryStatus } from 'config/constants/types'
 import { useTranslation } from '@pancakeswap/localization'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import { useLottery } from 'state/lottery/hooks'
 import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
 import { SHORT_SYMBOL } from 'config/chains'
@@ -69,8 +69,8 @@ const NextDrawCard = () => {
   const [isExpanded, setIsExpanded] = useState(false)
   const ticketBuyIsDisabled = status !== LotteryStatus.OPEN || isTransitioning
 
-  const cakePriceBusd = useCakePrice()
-  const prizeInBusd = amountCollected.times(cakePriceBusd)
+  const klayPriceBusd = useKlayPrice()
+  const prizeInBusd = amountCollected.times(klayPriceBusd)
   const endTimeMs = parseInt(endTime, 10) * 1000
   const endDate = new Date(endTimeMs)
   const isLotteryOpen = status === LotteryStatus.OPEN

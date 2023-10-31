@@ -21,7 +21,7 @@ import { useKlayLotteryContract } from 'hooks/useContract'
 import useTheme from 'hooks/useTheme'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAppDispatch } from 'state'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import { fetchUserTicketsAndLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
 import { BaseError, parseEther } from 'viem'
@@ -89,7 +89,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const { toastSuccess, toastError } = useToast()
   const [balance, setBalance] = useState(0n)
   const bnBalance = useMemo(() => new BigNumber(balance.toString()), [balance])
-  const cakePriceBusd = useCakePrice()
+  const klayPriceBusd = useKlayPrice()
   const dispatch = useAppDispatch()
   const displayBalance = getFullDisplayBalance(bnBalance, 18, 3)
 
@@ -338,7 +338,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         value={ticketsToBuy}
         onUserInput={handleInputChange}
         currencyValue={
-          cakePriceBusd.gt(0) &&
+          klayPriceBusd.gt(0) &&
           `~${ticketsToBuy ? getFullDisplayBalance(ticketPrice.times(new BigNumber(ticketsToBuy))) : '0.00'} ${symbol}`
         }
       />

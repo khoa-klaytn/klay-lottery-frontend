@@ -2,7 +2,7 @@ import { styled, keyframes } from 'styled-components'
 import { Box, Flex, Heading, Skeleton, Balance } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useTranslation } from '@pancakeswap/localization'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import { useLottery } from 'state/lottery/hooks'
 import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
 import { TicketPurchaseCard } from '../svgs'
@@ -217,16 +217,16 @@ const Hero = () => {
     isTransitioning,
   } = useLottery()
 
-  const cakePriceBusd = useCakePrice()
-  const prizeInBusd = amountCollected.times(cakePriceBusd)
-  const prizeTotal = getBalanceNumber(prizeInBusd)
+  const klayPriceUsd = useKlayPrice()
+  const prizeInUsd = amountCollected.times(klayPriceUsd)
+  const prizeTotal = getBalanceNumber(prizeInUsd)
   const ticketBuyIsDisabled = status !== LotteryStatus.OPEN || isTransitioning
 
   const getHeroHeading = () => {
     if (status === LotteryStatus.OPEN) {
       return (
         <>
-          {prizeInBusd.isNaN() ? (
+          {prizeInUsd.isNaN() ? (
             <Skeleton my="7px" height={60} width={190} />
           ) : (
             <PrizeTotalBalance fontSize="64px" bold prefix="$" value={prizeTotal} mb="8px" decimals={0} />

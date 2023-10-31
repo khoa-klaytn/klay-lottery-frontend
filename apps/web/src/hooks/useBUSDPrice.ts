@@ -4,7 +4,7 @@ import { BUSD, KLAY, USDC, STABLE_COIN } from '@pancakeswap/tokens'
 import { useMemo } from 'react'
 import useSWRImmutable from 'swr/immutable'
 import { multiplyPriceByAmount } from 'utils/prices'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import { getFullDecimalMultiplier } from '@pancakeswap/utils/getFullDecimalMultiplier'
 import { SmartRouterTrade } from '@pancakeswap/smart-router/evm'
 import { PairState, useV2Pairs } from './usePairs'
@@ -28,7 +28,7 @@ export function useStablecoinPrice(
   const chainId = currency?.chainId
   const { enabled, hideIfPriceImpactTooHigh } = { ...DEFAULT_CONFIG, ...config }
 
-  const cakePrice = useCakePrice()
+  const klayPrice = useKlayPrice()
   const stableCoin = chainId && chainId in ChainId ? STABLE_COIN[chainId as ChainId] : undefined
   const isCake = chainId && currency && KLAY[chainId] && currency.wrapped.equals(KLAY[chainId])
 
@@ -76,12 +76,12 @@ export function useStablecoinPrice(
       return undefined
     }
 
-    if (isCake && cakePrice) {
+    if (isCake && klayPrice) {
       return new Price(
         currency,
         stableCoin,
         1 * 10 ** currency.decimals,
-        getFullDecimalMultiplier(stableCoin.decimals).times(cakePrice.toFixed(stableCoin.decimals)).toString(),
+        getFullDecimalMultiplier(stableCoin.decimals).times(klayPrice.toFixed(stableCoin.decimals)).toString(),
       )
     }
 
@@ -118,7 +118,7 @@ export function useStablecoinPrice(
     stableCoin,
     enabled,
     isCake,
-    cakePrice,
+    klayPrice,
     isStableCoin,
     priceFromLlama,
     enableLlama,

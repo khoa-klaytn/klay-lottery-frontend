@@ -92,9 +92,9 @@ export default {
     [ChainId.BSC]: '0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE',
     [ChainId.BSC_TESTNET]: '0x',
   },
-  chainlinkOracleCAKE: {
-    [ChainId.BSC]: '0xB6064eD41d4f67e353768aA239cA86f4F73665a1',
-    [ChainId.BSC_TESTNET]: '0x',
+  oraklKlayUsd: {
+    [ChainId.KLAYTN]: '0x33D6ee12D4ADE244100F09b280e159659fe0ACE0',
+    [ChainId.KLAYTN_TESTNET]: '0xC874f389A3F49C5331490145f77c4eFE202d72E1',
   },
   bunnySpecialCakeVault: {
     [ChainId.BSC]: '0x5B4a770Abe7Eafb2601CA4dF9d73EA99363E60a4',

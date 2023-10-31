@@ -1,6 +1,6 @@
 import { ChainId } from '@pancakeswap/chains'
 import { KLAY } from '@pancakeswap/tokens'
-import { getCakePriceFromOracle } from 'hooks/useCakePrice'
+import { getKlayPriceFromOracle } from 'hooks/useKlayPrice'
 
 const CHAIN_MAPPING = {
   [ChainId.ETHEREUM]: 'ethereum',
@@ -41,13 +41,13 @@ export const fetchTokenUSDValue = async (chainId: number, tokenAddresses: string
     .filter(Boolean)
 
   if (cakeAddress.length > 0) {
-    const cakePrice = parseFloat(await getCakePriceFromOracle())
+    const klayPrice = parseFloat(await getKlayPriceFromOracle())
     cakeAddress.forEach((address) => {
       tokenPriceArray = {
         coins: {
           ...tokenPriceArray.coins,
           [address]: {
-            price: cakePrice.toString(),
+            price: klayPrice.toString(),
           },
         },
       }

@@ -12,7 +12,7 @@ export type FooterProps = {
   buyCakeLink: string;
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
-  cakePriceUsd?: number;
+  klayPriceUsd?: number;
   currentLang: string;
   langs: Language[];
   chainId: number;

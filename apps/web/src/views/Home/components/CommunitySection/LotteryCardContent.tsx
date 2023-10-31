@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Flex, Text, Skeleton, Button, ArrowForwardIcon, Balance, NextLinkFromReactRouter } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
 import { useIntersectionObserver } from '@pancakeswap/hooks'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import { styled } from 'styled-components'
 import { fetchLottery, fetchCurrentLotteryId } from 'state/lottery/helpers'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
@@ -27,7 +27,7 @@ const LotteryCardContent = () => {
   const { t } = useTranslation()
   const { observerRef, isIntersecting } = useIntersectionObserver()
   const [loadData, setLoadData] = useState(false)
-  const cakePriceBusd = useCakePrice()
+  const klayPriceBusd = useKlayPrice()
   const { data: currentLotteryId } = useSWRImmutable(loadData ? ['currentLotteryId'] : null, fetchCurrentLotteryId, {
     refreshInterval: SLOW_INTERVAL,
   })
@@ -39,10 +39,10 @@ const LotteryCardContent = () => {
     },
   )
 
-  const cakePrizesText = t('%cakePrizeInUsd% in KLAY prizes this round', { cakePrizeInUsd: cakePriceBusd.toString() })
-  const [pretext, prizesThisRound] = cakePrizesText.split(cakePriceBusd.toString())
+  const cakePrizesText = t('%cakePrizeInUsd% in KLAY prizes this round', { cakePrizeInUsd: klayPriceBusd.toString() })
+  const [pretext, prizesThisRound] = cakePrizesText.split(klayPriceBusd.toString())
   const amountCollected = currentLottery ? parseFloat(currentLottery.amountCollected) : null
-  const currentLotteryPrize = amountCollected ? cakePriceBusd.times(amountCollected) : null
+  const currentLotteryPrize = amountCollected ? klayPriceBusd.times(amountCollected) : null
 
   useEffect(() => {
     if (isIntersecting) {

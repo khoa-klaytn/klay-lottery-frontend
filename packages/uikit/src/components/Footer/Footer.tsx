@@ -15,7 +15,7 @@ import {
 
 import { vars } from "../../css/vars.css";
 import { Button } from "../Button";
-import CakePrice from "../CakePrice/CakePrice";
+import KlayPrice from "../KlayPrice/KlayPrice";
 import LangSelector from "../LangSelector/LangSelector";
 import { ArrowForwardIcon, LogoIcon, LogoWithTextIcon } from "../Svg";
 import { ThemeSwitcher } from "../ThemeSwitcher";
@@ -28,7 +28,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   currentLang,
   langs,
   setLang,
-  cakePriceUsd,
+  klayPriceUsd,
   buyCakeLabel,
   buyCakeLink,
   chainId,
@@ -99,7 +99,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
-              <CakePrice chainId={chainId} cakePriceUsd={cakePriceUsd} color="textSubtle" />
+              <KlayPrice chainId={chainId} klayPriceUsd={klayPriceUsd} color="textSubtle" />
             </Box>
             <Button
               data-theme="dark"

@@ -7,7 +7,7 @@ import { useAccount } from 'wagmi'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { encodePacked, keccak256 } from 'viem'
 import { ChainId } from '@pancakeswap/chains'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import SingleLatestReward from 'views/AffiliatesProgram/components/Dashboard/Reward/SingleLatestReward'
 import { UserClaimListResponse } from 'views/AffiliatesProgram/hooks/useUserClaimList'
 import { useAffiliateProgramContract } from 'hooks/useContract'
@@ -43,19 +43,19 @@ const LatestReward: React.FC<React.PropsWithChildren<LatestRewardProps>> = ({
   const { isUserExist } = useUserExist()
   const { toastSuccess, toastError } = useToast()
   const { signMessageAsync } = useSignMessage()
-  const cakePriceBusd = useCakePrice()
+  const klayPriceBusd = useKlayPrice()
 
   const [isAffiliateClaimLoading, setIsAffiliateClaimLoading] = useState(false)
   const [isUserClaimLoading, setIsUserClaimLoading] = useState(false)
   const contract = useAffiliateProgramContract({ chainId: ChainId.BSC })
 
   const affiliateTotalCakeEarned = useMemo(
-    () => new BigNumber(affiliateRewardFeeUSD).div(cakePriceBusd).toNumber(),
-    [cakePriceBusd, affiliateRewardFeeUSD],
+    () => new BigNumber(affiliateRewardFeeUSD).div(klayPriceBusd).toNumber(),
+    [klayPriceBusd, affiliateRewardFeeUSD],
   )
   const userTotalCakeEarned = useMemo(
-    () => new BigNumber(userRewardFeeUSD).div(cakePriceBusd).toNumber(),
-    [cakePriceBusd, userRewardFeeUSD],
+    () => new BigNumber(userRewardFeeUSD).div(klayPriceBusd).toNumber(),
+    [klayPriceBusd, userRewardFeeUSD],
   )
 
   const handleClaim = async (isAffiliateClaim: boolean) => {

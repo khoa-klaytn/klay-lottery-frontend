@@ -38,16 +38,16 @@ interface Props {
   sqrtRatioX96?: bigint;
   lpReward?: number;
   cakeReward?: number;
-  cakePrice?: string;
-  setEditCakePrice: (cakePrice: number) => void;
+  klayPrice?: string;
+  setEditKlayPrice: (klayPrice: number) => void;
 }
 
-const getCakeAssetsByReward = (chainId: number, cakeRewardAmount = 0, cakePrice: string) => {
+const getCakeAssetsByReward = (chainId: number, cakeRewardAmount = 0, klayPrice: string) => {
   return {
     currency: KLAY[chainId as keyof typeof KLAY],
     amount: cakeRewardAmount,
-    price: cakePrice,
-    value: Number.isFinite(cakeRewardAmount) ? +cakeRewardAmount * +cakePrice : Infinity,
+    price: klayPrice,
+    value: Number.isFinite(cakeRewardAmount) ? +cakeRewardAmount * +klayPrice : Infinity,
     key: "CAKE_ASSET_BY_APY",
   };
 };
@@ -62,8 +62,8 @@ export const ImpermanentLossCalculator = memo(function ImpermanentLossCalculator
   currencyBUsdPrice,
   lpReward = 0,
   cakeReward = 0,
-  cakePrice = "0",
-  setEditCakePrice,
+  klayPrice = "0",
+  setEditKlayPrice,
 }: Props) {
   const { t } = useTranslation();
   const [on, setOn] = useState(false);
@@ -92,8 +92,8 @@ export const ImpermanentLossCalculator = memo(function ImpermanentLossCalculator
     [valueA, currencyA, valueB, currencyB, currencyAUsdPrice, currencyBUsdPrice]
   );
   const cakeRewardAmount = useMemo(
-    () => (Number.isFinite(cakeReward) ? +cakeReward / +cakePrice : Infinity),
-    [cakeReward, cakePrice]
+    () => (Number.isFinite(cakeReward) ? +cakeReward / +klayPrice : Infinity),
+    [cakeReward, klayPrice]
   );
   const liquidity = useMemo(
     () =>
@@ -108,13 +108,13 @@ export const ImpermanentLossCalculator = memo(function ImpermanentLossCalculator
   );
 
   const exitAssets = useMemo<Asset[] | undefined>(() => {
-    if (assets && currencyA && currencyA.chainId in KLAY && cakePrice) {
-      const cakePriceToUse =
-        assets.find((a) => a.currency.equals(KLAY[currencyA.chainId as keyof typeof KLAY]))?.price ?? cakePrice;
-      return [...assets, getCakeAssetsByReward(currencyA.chainId, cakeRewardAmount, cakePriceToUse)];
+    if (assets && currencyA && currencyA.chainId in KLAY && klayPrice) {
+      const klayPriceToUse =
+        assets.find((a) => a.currency.equals(KLAY[currencyA.chainId as keyof typeof KLAY]))?.price ?? klayPrice;
+      return [...assets, getCakeAssetsByReward(currencyA.chainId, cakeRewardAmount, klayPriceToUse)];
     }
     return assets;
-  }, [assets, cakeRewardAmount, cakePrice, currencyA]);
+  }, [assets, cakeRewardAmount, klayPrice, currencyA]);
 
   const [entry, setEntry] = useState<Asset[] | undefined>(assets);
   const [exit, setExit] = useState<Asset[] | undefined>(exitAssets);
@@ -228,12 +228,12 @@ export const ImpermanentLossCalculator = memo(function ImpermanentLossCalculator
           },
         ];
 
-        setEditCakePrice(+maybeAssetCake.price);
+        setEditKlayPrice(+maybeAssetCake.price);
       }
 
       return adjusted;
     },
-    // setEditCakePrice is not a dependency because it's setState
+    // setEditKlayPrice is not a dependency because it's setState
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [amountA, amountB, tickLower, tickUpper, sqrtRatioX96, cakeRewardAmount, liquidity]
   );

@@ -7,7 +7,7 @@ import useCatchTxError from 'hooks/useCatchTxError'
 import { useKlayLotteryContract } from 'hooks/useContract'
 import { useCallback, useMemo, useState } from 'react'
 import { useAppDispatch } from 'state'
-import { useCakePrice } from 'hooks/useCakePrice'
+import { useKlayPrice } from 'hooks/useKlayPrice'
 import { fetchUserLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
 import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
@@ -41,9 +41,9 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
   const { callWithGasPrice } = useCallWithGasPrice()
   const activeClaimData = roundsToClaim[activeClaimIndex]
 
-  const cakePriceBusd = useCakePrice()
+  const klayPriceBusd = useKlayPrice()
   const reward = activeClaimData.total
-  const dollarReward = reward.times(cakePriceBusd)
+  const dollarReward = reward.times(klayPriceBusd)
   const rewardAsBalance = getBalanceAmount(reward).toNumber()
   const dollarRewardAsBalance = getBalanceAmount(dollarReward).toNumber()
 

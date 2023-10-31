@@ -15,7 +15,7 @@ interface Params extends Omit<FeeParams, "amount" | "currency"> {
   amountB?: CurrencyAmount<Currency>;
   cakeApr?: number;
   editCakeApr?: number;
-  cakePrice?: number;
+  klayPrice?: number;
 }
 
 export function useRoi({

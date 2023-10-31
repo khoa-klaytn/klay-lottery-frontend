@@ -27,6 +27,6 @@ Default.args = {
   langs,
   setLang: noop,
   currentLang: "EN",
-  cakePriceUsd: 0.023158668932877668,
+  klayPriceUsd: 0.023158668932877668,
   buyCakeLabel: "Buy KLAY",
 };

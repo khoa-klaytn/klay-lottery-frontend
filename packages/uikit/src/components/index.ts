@@ -6,7 +6,7 @@ export * from "./Button";
 export * from "./ButtonMenu";
 export * from "./BottomDrawer";
 export * from "./Card";
-export * from "./CakePrice";
+export * from "./KlayPrice";
 export * from "./Checkbox";
 export * from "./Dropdown";
 export * from "./FallingBunnies";

@@ -204,7 +204,7 @@ export function RoiCalculator({
   }, [balanceA, balanceB, currencyAUsdPrice, currencyBUsdPrice, max]);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [editCakePrice, setEditCakePrice] = useState<number | null>(null);
+  const [editKlayPrice, setEditKlayPrice] = useState<number | null>(null);
 
   const { fee, rate, apr, apy, cakeRate, cakeReward, originalCakeReward } = useRoi({
     amountA,
@@ -414,7 +414,7 @@ export function RoiCalculator({
           tickUpper={priceRange?.tickUpper}
           sqrtRatioX96={sqrtRatioX96}
           cakeReward={originalCakeReward}
-          setEditCakePrice={setEditCakePrice}
+          setEditKlayPrice={setEditKlayPrice}
         />
         <AnimatedArrow state={{}} />
         <RoiRate usdAmount={totalReward} roiPercent={totalRate} />
