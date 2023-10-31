@@ -1,4 +1,4 @@
-import { Box, Flex, Logo, ThemeSwitcher, DropdownMenuItemType, DropdownMenu } from '@pancakeswap/uikit'
+import { Box, Flex, Logo, ThemeSwitcher, DropdownMenuItemType, DropdownMenu } from '@sweepstakes/uikit'
 import { useRouter } from 'next/router'
 import { useTheme as useNextTheme } from 'next-themes'
 import NextLink from 'next/link'
@@ -73,7 +73,7 @@ export function Menu() {
   return (
     <Flex height="56px" bg="backgroundAlt" px="16px" alignItems="center" justifyContent="space-between" zIndex={9}>
       <Flex>
-        <Logo href="https://pancakeswap.finance" />
+        <Logo href="https://sweepstakes.finance" />
 
         <Flex pl={['10px', null, '50px']}>
           {MenuConfig.map((menu) => (

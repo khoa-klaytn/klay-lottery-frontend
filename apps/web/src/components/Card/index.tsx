@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { Box, BoxProps } from '@pancakeswap/uikit'
+import { Box, BoxProps } from '@sweepstakes/uikit'
 
 export interface LightCardProps extends BoxProps {
   width?: string

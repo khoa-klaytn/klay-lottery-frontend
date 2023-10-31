@@ -1,5 +1,5 @@
-import { Heading, Text } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Heading, Text } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 
 const WalletNotConnected = () => {

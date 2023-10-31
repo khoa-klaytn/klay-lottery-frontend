@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { AtomBox, AtomBoxProps, SwapCSS } from "@pancakeswap/uikit";
+import { AtomBox, AtomBoxProps, SwapCSS } from "@sweepstakes/uikit";
 
 import { SwapFooter } from "./Footer";
 

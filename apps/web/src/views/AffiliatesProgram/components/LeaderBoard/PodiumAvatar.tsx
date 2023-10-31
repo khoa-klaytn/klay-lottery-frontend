@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import { Flex, ProfileAvatar, NoProfileAvatarIcon } from '@pancakeswap/uikit'
+import { Flex, ProfileAvatar, NoProfileAvatarIcon } from '@sweepstakes/uikit'
 import { useDomainNameForAddress } from 'hooks/useDomain'
 
 const StyledNoProfileAvatarIcon = styled(NoProfileAvatarIcon)`

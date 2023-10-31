@@ -1,9 +1,9 @@
 /* eslint-disable address/addr-type */
-import { Token, Percent, CurrencyAmount } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Token, Percent, CurrencyAmount } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { getBlockExploreLink, isAddress, calculateGasMargin } from 'utils'
 import { calculateSlippageAmount, basisPointsToPercent } from 'utils/exchange'
-import { ADDRESS_ZERO } from '@pancakeswap/v3-sdk'
+import { ADDRESS_ZERO } from '@sweepstakes/v3-sdk'
 
 describe('utils', () => {
   describe('#getBscScanLink', () => {

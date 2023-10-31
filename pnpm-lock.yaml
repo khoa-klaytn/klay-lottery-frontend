@@ -24,10 +24,10 @@ importers:
       '@changesets/cli':
         specifier: ^2.26.2
         version: 2.26.2
-      '@pancakeswap/eslint-config-pancake':
+      '@sweepstakes/eslint-config-pancake':
         specifier: workspace:*
         version: link:packages/eslint-config
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:packages/tsconfig
       '@stylelint/postcss-css-in-js':
@@ -112,7 +112,7 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^3.10.0
         version: 3.16.0
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@types/itty-router-extras':
@@ -127,19 +127,19 @@ importers:
 
   apis/routing:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../../packages/chains
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../../packages/swap-sdk
-      '@pancakeswap/smart-router':
+      '@sweepstakes/smart-router':
         specifier: workspace:*
         version: link:../../packages/smart-router
-      '@pancakeswap/v3-sdk':
+      '@sweepstakes/v3-sdk':
         specifier: workspace:*
         version: link:../../packages/v3-sdk
-      '@pancakeswap/worker-utils':
+      '@sweepstakes/worker-utils':
         specifier: workspace:*
         version: link:../../packages/worker-utils
       graphql-request:
@@ -158,7 +158,7 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^3.10.0
         version: 3.16.0
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@types/itty-router-extras':
@@ -179,13 +179,13 @@ importers:
       '@material-ui/core':
         specifier: ^4.12.4
         version: 4.12.4(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
-      '@pancakeswap/hooks':
+      '@sweepstakes/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@pancakeswap/uikit':
+      '@sweepstakes/uikit':
         specifier: workspace:*
         version: link:../../packages/uikit
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../../packages/utils
       '@vanilla-extract/next-plugin':
@@ -228,10 +228,10 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 13.4.2
         version: 13.4.2
-      '@pancakeswap/next-config':
+      '@sweepstakes/next-config':
         specifier: workspace:*
         version: link:../../packages/next-config
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@types/node':
@@ -271,52 +271,52 @@ importers:
       '@next/bundle-analyzer':
         specifier: 13.0.7
         version: 13.0.7
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../../packages/chains
-      '@pancakeswap/hooks':
+      '@sweepstakes/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@pancakeswap/localization':
+      '@sweepstakes/localization':
         specifier: workspace:*
         version: link:../../packages/localization
-      '@pancakeswap/multicall':
+      '@sweepstakes/multicall':
         specifier: workspace:*
         version: link:../../packages/multicall
-      '@pancakeswap/pools':
+      '@sweepstakes/pools':
         specifier: workspace:*
         version: link:../../packages/pools
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../../packages/swap-sdk
-      '@pancakeswap/smart-router':
+      '@sweepstakes/smart-router':
         specifier: workspace:*
         version: link:../../packages/smart-router
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../../packages/swap-sdk-core
-      '@pancakeswap/token-lists':
+      '@sweepstakes/token-lists':
         specifier: workspace:*
         version: link:../../packages/token-lists
-      '@pancakeswap/tokens':
+      '@sweepstakes/tokens':
         specifier: workspace:*
         version: link:../../packages/tokens
-      '@pancakeswap/ui-wallets':
+      '@sweepstakes/ui-wallets':
         specifier: workspace:*
         version: link:../../packages/ui-wallets
-      '@pancakeswap/uikit':
+      '@sweepstakes/uikit':
         specifier: workspace:*
         version: link:../../packages/uikit
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../../packages/utils
-      '@pancakeswap/v3-sdk':
+      '@sweepstakes/v3-sdk':
         specifier: workspace:*
         version: link:../../packages/v3-sdk
-      '@pancakeswap/wagmi':
+      '@sweepstakes/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
-      '@pancakeswap/widgets-internal':
+      '@sweepstakes/widgets-internal':
         specifier: workspace:*
         version: link:../../packages/widgets-internal
       '@reduxjs/toolkit':
@@ -500,10 +500,10 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 13.4.2
         version: 13.4.2
-      '@pancakeswap/next-config':
+      '@sweepstakes/next-config':
         specifier: workspace:*
         version: link:../../packages/next-config
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@stylelint/postcss-css-in-js':
@@ -632,7 +632,7 @@ importers:
 
   examples/playground:
     dependencies:
-      '@pancakeswap/uikit':
+      '@sweepstakes/uikit':
         specifier: workspace:*
         version: link:../../packages/uikit
       '@types/node':
@@ -659,7 +659,7 @@ importers:
 
   packages/aptos-swap-sdk:
     dependencies:
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
       aptos:
@@ -727,10 +727,10 @@ importers:
       '@blocto/sdk':
         specifier: ^0.5.4
         version: 0.5.4(aptos@1.3.16)
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       '@types/react':
@@ -790,10 +790,10 @@ importers:
 
   packages/hooks:
     dependencies:
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       js-cookie:
@@ -828,10 +828,10 @@ importers:
         specifier: ^2.2.0
         version: 2.4.0
     devDependencies:
-      '@pancakeswap/hooks':
+      '@sweepstakes/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       '@types/lodash':
@@ -843,20 +843,20 @@ importers:
 
   packages/multicall:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../swap-sdk
       viem:
         specifier: ^1.10.9
         version: 1.10.9(typescript@5.1.3)(zod@3.21.4)
     devDependencies:
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       tsup:
@@ -877,13 +877,13 @@ importers:
 
   packages/pools:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/token-lists':
+      '@sweepstakes/token-lists':
         specifier: workspace:*
         version: link:../token-lists
-      '@pancakeswap/tokens':
+      '@sweepstakes/tokens':
         specifier: workspace:*
         version: link:../tokens
       bignumber.js:
@@ -899,10 +899,10 @@ importers:
         specifier: ^1.3.10
         version: 1.3.10(encoding@0.1.13)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.10.9)(zod@3.21.4)
     devDependencies:
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       '@types/lodash':
@@ -920,25 +920,25 @@ importers:
 
   packages/smart-router:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/multicall':
+      '@sweepstakes/multicall':
         specifier: workspace:*
         version: link:../multicall
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../swap-sdk
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
-      '@pancakeswap/token-lists':
+      '@sweepstakes/token-lists':
         specifier: workspace:*
         version: link:../token-lists
-      '@pancakeswap/tokens':
+      '@sweepstakes/tokens':
         specifier: workspace:*
         version: link:../tokens
-      '@pancakeswap/v3-sdk':
+      '@sweepstakes/v3-sdk':
         specifier: workspace:*
         version: link:../v3-sdk
       async-retry:
@@ -972,10 +972,10 @@ importers:
         specifier: ^3.21.4
         version: 3.21.4
     devDependencies:
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       '@types/async-retry':
@@ -999,10 +999,10 @@ importers:
 
   packages/swap-sdk:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:^
         version: link:../chains
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
       big.js:
@@ -1070,7 +1070,7 @@ importers:
 
   packages/token-lists:
     dependencies:
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
       ajv:
@@ -1080,7 +1080,7 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
     devDependencies:
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       '@reduxjs/toolkit':
@@ -1107,17 +1107,17 @@ importers:
 
   packages/tokens:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../swap-sdk
-      '@pancakeswap/token-lists':
+      '@sweepstakes/token-lists':
         specifier: workspace:*
         version: link:../token-lists
     devDependencies:
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       tsup:
@@ -1128,13 +1128,13 @@ importers:
 
   packages/ui-wallets:
     dependencies:
-      '@pancakeswap/hooks':
+      '@sweepstakes/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@pancakeswap/localization':
+      '@sweepstakes/localization':
         specifier: workspace:*
         version: link:../localization
-      '@pancakeswap/uikit':
+      '@sweepstakes/uikit':
         specifier: workspace:*
         version: link:../uikit
       '@types/react':
@@ -1161,10 +1161,10 @@ importers:
 
   packages/uikit:
     dependencies:
-      '@pancakeswap/hooks':
+      '@sweepstakes/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@pancakeswap/localization':
+      '@sweepstakes/localization':
         specifier: workspace:*
         version: link:../localization
       '@popperjs/core':
@@ -1237,10 +1237,10 @@ importers:
       '@babel/preset-react':
         specifier: ^7.18.6
         version: 7.18.6(@babel/core@7.21.3)
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       '@rollup/plugin-json':
@@ -1411,7 +1411,7 @@ importers:
 
   packages/utils:
     dependencies:
-      '@pancakeswap/localization':
+      '@sweepstakes/localization':
         specifier: workspace:*
         version: link:../localization
       date-fns:
@@ -1421,7 +1421,7 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
     devDependencies:
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
       '@types/lodash':
@@ -1445,16 +1445,16 @@ importers:
 
   packages/v3-sdk:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../swap-sdk
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
-      '@pancakeswap/tokens':
+      '@sweepstakes/tokens':
         specifier: workspace:*
         version: link:../tokens
       '@uniswap/v3-staker':
@@ -1479,7 +1479,7 @@ importers:
         specifier: ^1.10.9
         version: 1.10.9(typescript@5.1.3)(zod@3.21.4)
     devDependencies:
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
       tsup:
@@ -1497,7 +1497,7 @@ importers:
       '@blocto/sdk':
         specifier: ^0.5.4
         version: 0.5.4(aptos@1.3.16)
-      '@pancakeswap/tsconfig':
+      '@sweepstakes/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/react':
@@ -1521,34 +1521,34 @@ importers:
 
   packages/widgets-internal:
     dependencies:
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../chains
-      '@pancakeswap/hooks':
+      '@sweepstakes/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@pancakeswap/localization':
+      '@sweepstakes/localization':
         specifier: workspace:*
         version: link:../localization
-      '@pancakeswap/pools':
+      '@sweepstakes/pools':
         specifier: workspace:*
         version: link:../pools
-      '@pancakeswap/sdk':
+      '@sweepstakes/sdk':
         specifier: workspace:*
         version: link:../swap-sdk
-      '@pancakeswap/swap-sdk-core':
+      '@sweepstakes/swap-sdk-core':
         specifier: workspace:*
         version: link:../swap-sdk-core
-      '@pancakeswap/tokens':
+      '@sweepstakes/tokens':
         specifier: workspace:*
         version: link:../tokens
-      '@pancakeswap/uikit':
+      '@sweepstakes/uikit':
         specifier: workspace:*
         version: link:../uikit
-      '@pancakeswap/utils':
+      '@sweepstakes/utils':
         specifier: workspace:*
         version: link:../utils
-      '@pancakeswap/v3-sdk':
+      '@sweepstakes/v3-sdk':
         specifier: workspace:*
         version: link:../v3-sdk
       bignumber.js:
@@ -1605,10 +1605,10 @@ importers:
 
   scripts:
     devDependencies:
-      '@pancakeswap/aptos-swap-sdk':
+      '@sweepstakes/aptos-swap-sdk':
         specifier: workspace:*
         version: link:../packages/aptos-swap-sdk
-      '@pancakeswap/chains':
+      '@sweepstakes/chains':
         specifier: workspace:*
         version: link:../packages/chains
       '@types/lodash':

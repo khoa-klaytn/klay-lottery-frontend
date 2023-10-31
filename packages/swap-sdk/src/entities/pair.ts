@@ -11,7 +11,7 @@ import {
   _9975,
   BigintIsh,
   MINIMUM_LIQUIDITY,
-} from '@pancakeswap/swap-sdk-core'
+} from '@sweepstakes/swap-sdk-core'
 import {
   type Address,
   encodePacked,
@@ -27,7 +27,7 @@ import {
   concat,
 } from 'viem'
 import invariant from 'tiny-invariant'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { FACTORY_ADDRESS_MAP, INIT_CODE_HASH_MAP } from '../constants'
 import { ERC20Token } from './token'
 

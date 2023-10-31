@@ -1,5 +1,5 @@
-import { Currency } from "@pancakeswap/sdk";
-import { FeeAmount, TICK_SPACINGS, tickToPrice } from "@pancakeswap/v3-sdk";
+import { Currency } from "@sweepstakes/sdk";
+import { FeeAmount, TICK_SPACINGS, tickToPrice } from "@sweepstakes/v3-sdk";
 import { useMemo } from "react";
 
 import { ChartEntry, TickProcessed, TickDataRaw } from "./types";

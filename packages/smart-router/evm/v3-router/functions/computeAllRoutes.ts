@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { Currency } from '@pancakeswap/sdk'
+import { Currency } from '@sweepstakes/sdk'
 import { metric } from '../utils/metric'
 
 import { BaseRoute, Pool } from '../types'

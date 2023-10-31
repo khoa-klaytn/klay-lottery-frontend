@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { Flex, Text, Box, Image } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Text, Box, Image } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import commissionList from 'views/AffiliatesProgram/utils/commisionList'
 
 const CardInner = styled(Flex)`

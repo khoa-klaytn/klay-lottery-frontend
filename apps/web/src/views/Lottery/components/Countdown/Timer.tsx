@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { Flex, Heading } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Heading } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 
 export interface TimerProps {
   seconds?: number

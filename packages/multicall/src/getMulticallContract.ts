@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { GetContractReturnType, PublicClient, getContract } from 'viem'
 
 import { MULTICALL_ADDRESS } from './constants/contracts'

@@ -1,6 +1,6 @@
-import { BigintIsh, ZERO, CurrencyAmount, Fraction, Percent } from '@pancakeswap/swap-sdk-core'
+import { BigintIsh, ZERO, CurrencyAmount, Fraction, Percent } from '@sweepstakes/swap-sdk-core'
 import { describe, it, expect, vi, afterEach } from 'vitest'
-import { bscTokens } from '@pancakeswap/tokens'
+import { bscTokens } from '@sweepstakes/tokens'
 
 import { FeeCalculator } from './feeCalculator'
 import { Tick } from '../entities'

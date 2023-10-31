@@ -1,13 +1,13 @@
 {
-  "extends": "@pancakeswap/tsconfig/nextjs.json",
+  "extends": "@sweepstakes/tsconfig/nextjs.json",
   "include": ["next-env.d.ts"],
   "compilerOptions": {
     "target": "ES2015",
     "baseUrl": "./",
     "paths": {
       "*": ["./*"],
-      "@pancakeswap/uikit": ["../../packages/uikit/src/index.ts"],
-      "@pancakeswap/uikit/*": ["../../packages/uikit/src/*"]
+      "@sweepstakes/uikit": ["../../packages/uikit/src/index.ts"],
+      "@sweepstakes/uikit/*": ["../../packages/uikit/src/*"]
     }
   },
   "exclude": ["node_modules"]

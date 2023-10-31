@@ -1,5 +1,5 @@
-import { Flex, LinkExternal, Text, ScanLink } from '@pancakeswap/uikit'
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import { Flex, LinkExternal, Text, ScanLink } from '@sweepstakes/uikit'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import { getBlockExploreLink } from 'utils'
 import { Vote } from 'state/types'
 import { IPFS_GATEWAY } from '../../config'

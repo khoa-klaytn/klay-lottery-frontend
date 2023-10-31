@@ -1,9 +1,9 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { Currency, Percent } from "@pancakeswap/sdk";
+import { useTranslation } from "@sweepstakes/localization";
+import { Currency, Percent } from "@sweepstakes/sdk";
 import { memo, PropsWithChildren, ReactNode, useCallback, Ref, MouseEvent } from "react";
 import { styled } from "styled-components";
 import { SpaceProps } from "styled-system";
-import { formatAmount } from "@pancakeswap/utils/formatInfoNumbers";
+import { formatAmount } from "@sweepstakes/utils/formatInfoNumbers";
 
 import {
   Flex,
@@ -20,7 +20,7 @@ import {
   useMatchBreakpoints,
   Tag,
   TagProps,
-} from "@pancakeswap/uikit";
+} from "@sweepstakes/uikit";
 import { CurrencyLogo } from "../components/CurrencyLogo";
 
 import { StyledInput } from "./StyledInput";

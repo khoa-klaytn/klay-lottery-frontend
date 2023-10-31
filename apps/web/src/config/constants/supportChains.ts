@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 
 export const SUPPORT_ONLY_KLAYTN = [ChainId.KLAYTN, ChainId.KLAYTN_TESTNET]
 export const SUPPORT_BUY_CRYPTO = [

@@ -1,6 +1,6 @@
-import { Token, CurrencyAmount, Price } from '@pancakeswap/swap-sdk-core'
+import { Token, CurrencyAmount, Price } from '@sweepstakes/swap-sdk-core'
 import { describe, it, expect } from 'vitest'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { Pair } from '../src/entities'
 import { WNATIVE } from '../src/constants'
 

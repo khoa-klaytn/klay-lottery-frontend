@@ -1,10 +1,10 @@
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { useCallback, useEffect, useState, useMemo, memo } from "react";
-import { Currency, CurrencyAmount, ONE_HUNDRED_PERCENT, ZERO_PERCENT } from "@pancakeswap/sdk";
-import { FeeCalculator, encodeSqrtRatioX96 } from "@pancakeswap/v3-sdk";
+import { Currency, CurrencyAmount, ONE_HUNDRED_PERCENT, ZERO_PERCENT } from "@sweepstakes/sdk";
+import { FeeCalculator, encodeSqrtRatioX96 } from "@sweepstakes/v3-sdk";
 import { styled } from "styled-components";
-import { KLAY } from "@pancakeswap/tokens";
-import { Box, Row, AutoColumn, Toggle, RowBetween, Message } from "@pancakeswap/uikit";
+import { KLAY } from "@sweepstakes/tokens";
+import { Box, Row, AutoColumn, Toggle, RowBetween, Message } from "@sweepstakes/uikit";
 import { DoubleCurrencyLogo } from "../components/CurrencyLogo";
 
 import { Section } from "./Section";

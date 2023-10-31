@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { SubMenuItems } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { SubMenuItems } from '@sweepstakes/uikit'
 import { useRouter } from 'next/router'
 import { useChainNameByQuery, useMultiChainPath } from 'state/info/hooks'
 import { useMemo } from 'react'

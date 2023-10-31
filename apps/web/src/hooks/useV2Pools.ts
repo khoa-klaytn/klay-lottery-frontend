@@ -1,5 +1,5 @@
-import { Currency } from '@pancakeswap/sdk'
-import { SmartRouter, V2Pool } from '@pancakeswap/smart-router/evm'
+import { Currency } from '@sweepstakes/sdk'
+import { SmartRouter, V2Pool } from '@sweepstakes/smart-router/evm'
 import { useMemo, useRef } from 'react'
 import useSWR from 'swr'
 

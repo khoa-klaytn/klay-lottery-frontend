@@ -1,5 +1,5 @@
 import { formatUnits } from 'viem'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   AutoRenewIcon,
   Button,
@@ -15,9 +15,9 @@ import {
   useModal,
   useToast,
   WarningIcon,
-} from '@pancakeswap/uikit'
-import { useDebounce } from '@pancakeswap/hooks'
-import { useSignMessage } from '@pancakeswap/wagmi'
+} from '@sweepstakes/uikit'
+import { useDebounce } from '@sweepstakes/hooks'
+import { useSignMessage } from '@sweepstakes/wagmi'
 import { API_PROFILE } from 'config/constants/endpoints'
 import { FetchStatus } from 'config/constants/types'
 import { formatDistance, parseISO } from 'date-fns'

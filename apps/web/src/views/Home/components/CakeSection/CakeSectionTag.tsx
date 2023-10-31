@@ -1,4 +1,4 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   GovernanceIcon,
   InsertChartOutlinedIcon,
@@ -7,7 +7,7 @@ import {
   StoreIcon,
   Text,
   TrophyIcon,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import useTheme from 'hooks/useTheme'
 import { cloneElement, useMemo, useRef, useLayoutEffect, useState } from 'react'
 import Marquee from 'react-fast-marquee'

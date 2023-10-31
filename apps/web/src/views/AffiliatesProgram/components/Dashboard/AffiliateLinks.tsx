@@ -15,8 +15,8 @@ import {
   Th,
   useMatchBreakpoints,
   useToast,
-} from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+} from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { InfoDetail, FeeType } from 'views/AffiliatesProgram/hooks/useAuthAffiliate'
 import BigNumber from 'bignumber.js'
 

@@ -1,9 +1,9 @@
 /* eslint-disable no-console, camelcase, @typescript-eslint/no-non-null-assertion */
-import { BigintIsh } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { BigintIsh } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { encodeFunctionData, PublicClient, decodeFunctionResult, type Address } from 'viem'
 import stats from 'stats-lite'
-import { multicallByGasLimit } from '@pancakeswap/multicall'
+import { multicallByGasLimit } from '@sweepstakes/multicall'
 
 import IMulticallABI from '../../abis/InterfaceMulticall'
 import {

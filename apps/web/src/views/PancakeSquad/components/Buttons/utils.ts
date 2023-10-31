@@ -1,4 +1,4 @@
-import { ContextApi } from '@pancakeswap/localization'
+import { ContextApi } from '@sweepstakes/localization'
 import { SaleStatusEnum } from 'views/PancakeSquad/types'
 import { BuyButtonsEnum } from './types'
 

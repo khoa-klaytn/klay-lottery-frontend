@@ -1,5 +1,5 @@
-import { Native, NativeCurrency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Native, NativeCurrency } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { useMemo } from 'react'
 import { useActiveChainId } from './useActiveChainId'
 

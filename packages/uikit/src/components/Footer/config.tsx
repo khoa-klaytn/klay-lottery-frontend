@@ -8,26 +8,26 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Contact",
-        href: "https://docs.pancakeswap.finance/contact-us",
+        href: "https://docs.sweepstakes.finance/contact-us",
       },
       {
         label: "Blog",
-        href: "https://blog.pancakeswap.finance/",
+        href: "https://blog.sweepstakes.finance/",
       },
       {
         label: "Community",
-        href: "https://docs.pancakeswap.finance/contact-us/telegram",
+        href: "https://docs.sweepstakes.finance/contact-us/telegram",
       },
       {
         label: "KLAY",
-        href: "https://docs.pancakeswap.finance/tokenomics/cake",
+        href: "https://docs.sweepstakes.finance/tokenomics/cake",
       },
       {
         label: "—",
       },
       {
         label: "Online Store",
-        href: "https://pancakeswap.creator-spring.com/",
+        href: "https://sweepstakes.creator-spring.com/",
         isHighlighted: true,
       },
     ],
@@ -37,15 +37,15 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Customer",
-        href: "Support https://docs.pancakeswap.finance/contact-us/customer-support",
+        href: "Support https://docs.sweepstakes.finance/contact-us/customer-support",
       },
       {
         label: "Troubleshooting",
-        href: "https://docs.pancakeswap.finance/help/troubleshooting",
+        href: "https://docs.sweepstakes.finance/help/troubleshooting",
       },
       {
         label: "Guides",
-        href: "https://docs.pancakeswap.finance/get-started",
+        href: "https://docs.sweepstakes.finance/get-started",
       },
     ],
   },
@@ -54,23 +54,23 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Github",
-        href: "https://github.com/pancakeswap",
+        href: "https://github.com/sweepstakes",
       },
       {
         label: "Documentation",
-        href: "https://docs.pancakeswap.finance",
+        href: "https://docs.sweepstakes.finance",
       },
       {
         label: "Bug Bounty",
-        href: "https://app.gitbook.com/@pancakeswap-1/s/pancakeswap/code/bug-bounty",
+        href: "https://app.gitbook.com/@sweepstakes-1/s/sweepstakes/code/bug-bounty",
       },
       {
         label: "Audits",
-        href: "https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited",
+        href: "https://docs.sweepstakes.finance/help/faq#is-sweepstakes-safe-has-sweepstakes-been-audited",
       },
       {
         label: "Careers",
-        href: "https://docs.pancakeswap.finance/hiring/become-a-chef",
+        href: "https://docs.sweepstakes.finance/hiring/become-a-chef",
       },
     ],
   },
@@ -80,7 +80,7 @@ export const socials = [
   {
     label: "Twitter",
     icon: TwitterIcon,
-    href: "https://twitter.com/pancakeswap",
+    href: "https://twitter.com/sweepstakes",
   },
   {
     label: "Telegram",
@@ -88,15 +88,15 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/pancakeswap",
+        href: "https://t.me/sweepstakes",
       },
       {
         label: "Bahasa Indonesia",
-        href: "https://t.me/pancakeswapIndonesia",
+        href: "https://t.me/sweepstakesIndonesia",
       },
       {
         label: "中文",
-        href: "https://t.me/pancakeswap_CN",
+        href: "https://t.me/sweepstakes_CN",
       },
       {
         label: "Tiếng Việt",
@@ -104,47 +104,47 @@ export const socials = [
       },
       {
         label: "Italiano",
-        href: "https://t.me/pancakeswap_Ita",
+        href: "https://t.me/sweepstakes_Ita",
       },
       {
         label: "русский",
-        href: "https://t.me/pancakeswap_ru",
+        href: "https://t.me/sweepstakes_ru",
       },
       {
         label: "Türkiye",
-        href: "https://t.me/pancakeswapturkiye",
+        href: "https://t.me/sweepstakesturkiye",
       },
       {
         label: "Português",
-        href: "https://t.me/pancakeswapPortuguese",
+        href: "https://t.me/sweepstakesPortuguese",
       },
       {
         label: "Español",
-        href: "https://t.me/pancakeswapES",
+        href: "https://t.me/sweepstakesES",
       },
       {
         label: "日本語",
-        href: "https://t.me/pancakeswapJP",
+        href: "https://t.me/sweepstakesJP",
       },
       {
         label: "Français",
-        href: "https://t.me/pancakeswapFR",
+        href: "https://t.me/sweepstakesFR",
       },
       {
         label: "Deutsch",
-        href: "https://t.me/pancakeswap_DE",
+        href: "https://t.me/sweepstakes_DE",
       },
       {
         label: "Filipino",
-        href: "https://t.me/pancakeswap_PH",
+        href: "https://t.me/sweepstakes_PH",
       },
       {
         label: "ქართული ენა",
-        href: "https://t.me/pancakeswapGeorgia",
+        href: "https://t.me/sweepstakesGeorgia",
       },
       {
         label: "हिन्दी",
-        href: "https://t.me/pancakeswap_INDIA",
+        href: "https://t.me/sweepstakes_INDIA",
       },
       {
         label: "Announcements",
@@ -155,27 +155,27 @@ export const socials = [
   {
     label: "Reddit",
     icon: RedditIcon,
-    href: "https://reddit.com/r/pancakeswap",
+    href: "https://reddit.com/r/sweepstakes",
   },
   {
     label: "Instagram",
     icon: InstagramIcon,
-    href: "https://instagram.com/pancakeswap_official",
+    href: "https://instagram.com/sweepstakes_official",
   },
   {
     label: "Github",
     icon: GithubIcon,
-    href: "https://github.com/pancakeswap/",
+    href: "https://github.com/sweepstakes/",
   },
   {
     label: "Discord",
     icon: DiscordIcon,
-    href: "https://discord.gg/pancakeswap",
+    href: "https://discord.gg/sweepstakes",
   },
   {
     label: "Youtube",
     icon: YoutubeIcon,
-    href: "https://www.youtube.com/@pancakeswap_official",
+    href: "https://www.youtube.com/@sweepstakes_official",
   },
 ];
 

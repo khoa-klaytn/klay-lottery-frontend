@@ -1,5 +1,5 @@
-import { BigintIsh, Currency, CurrencyAmount, Price, ZERO } from '@pancakeswap/sdk'
-import { formatPrice } from '@pancakeswap/utils/formatFractions'
+import { BigintIsh, Currency, CurrencyAmount, Price, ZERO } from '@sweepstakes/sdk'
+import { formatPrice } from '@sweepstakes/utils/formatFractions'
 
 import { OnChainProvider, SubgraphProvider, V2PoolWithTvl } from '../../types'
 import { createAsyncCallWithFallbacks, WithFallbackOptions } from '../../../utils/withFallback'

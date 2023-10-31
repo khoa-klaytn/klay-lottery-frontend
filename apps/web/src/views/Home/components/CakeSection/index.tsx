@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Button, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Button, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints } from '@sweepstakes/uikit'
 import useTheme from 'hooks/useTheme'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import React, { memo, useCallback, useLayoutEffect, useRef } from 'react'
@@ -429,7 +429,7 @@ const CakeSection: React.FC = () => {
         <Link href="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index">
           <Button variant="primary">{t('Buy KLAY')}</Button>
         </Link>
-        <Link href="https://docs.pancakeswap.finance/governance-and-tokenomics/cake-tokenomics">
+        <Link href="https://docs.sweepstakes.finance/governance-and-tokenomics/cake-tokenomics">
           <Button pl="0" endIcon={<OpenNewIcon color="primary" />} variant="text">
             {t('Learn')}
           </Button>

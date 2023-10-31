@@ -1,8 +1,8 @@
-import { Currency, CurrencyAmount, Price } from "@pancakeswap/sdk";
-import tryParseAmount from "@pancakeswap/utils/tryParseAmount";
-import { FeeCalculator, TickMath } from "@pancakeswap/v3-sdk";
+import { Currency, CurrencyAmount, Price } from "@sweepstakes/sdk";
+import tryParseAmount from "@sweepstakes/utils/tryParseAmount";
+import { FeeCalculator, TickMath } from "@sweepstakes/v3-sdk";
 import { useCallback, useMemo, useState, useEffect } from "react";
-import { formatPrice, formatAmount } from "@pancakeswap/utils/formatFractions";
+import { formatPrice, formatAmount } from "@sweepstakes/utils/formatFractions";
 
 import { getTokenAmountsFromDepositUsd } from "../utils";
 

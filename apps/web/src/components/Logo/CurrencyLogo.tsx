@@ -1,11 +1,11 @@
-import { Currency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { BinanceIcon, TokenLogo } from '@pancakeswap/uikit'
+import { Currency } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { BinanceIcon, TokenLogo } from '@sweepstakes/uikit'
 import { useMemo } from 'react'
-import { WrappedTokenInfo } from '@pancakeswap/token-lists'
+import { WrappedTokenInfo } from '@sweepstakes/token-lists'
 import { styled } from 'styled-components'
 import { ASSET_CDN } from 'config/constants/endpoints'
-import { useHttpLocations } from '@pancakeswap/hooks'
+import { useHttpLocations } from '@sweepstakes/hooks'
 import getTokenLogoURL from '../../utils/getTokenLogoURL'
 
 const StyledLogo = styled(TokenLogo)<{ size: string }>`

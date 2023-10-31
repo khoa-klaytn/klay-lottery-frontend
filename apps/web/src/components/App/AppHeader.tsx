@@ -8,8 +8,8 @@ import {
   NotificationDot,
   QuestionHelper,
   AutoRow,
-} from '@pancakeswap/uikit'
-import { useExpertMode } from '@pancakeswap/utils/user'
+} from '@sweepstakes/uikit'
+import { useExpertMode } from '@sweepstakes/utils/user'
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import Link from 'next/link'
 import { SettingsMode } from '../Menu/GlobalSettings/types'

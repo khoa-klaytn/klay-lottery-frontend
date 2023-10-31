@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Box, Button, Card, CardBody, Flex, Step, Stepper, Text } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Box, Button, Card, CardBody, Flex, Step, Stepper, Text } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { StyledWaveContainer, LandingBodyWrapper } from 'views/PancakeSquad/styles'
 import useTheme from 'hooks/useTheme'
 import { useBSCCakeBalance } from 'hooks/useTokenBalance'

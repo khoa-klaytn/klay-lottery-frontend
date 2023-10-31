@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { Box } from '@pancakeswap/uikit'
+import { Box } from '@sweepstakes/uikit'
 
 const PageContainer = styled(Box)`
   display: flex;

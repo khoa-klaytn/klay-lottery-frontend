@@ -1,5 +1,5 @@
-import { Price, Token } from '@pancakeswap/sdk'
-import { Position } from '@pancakeswap/v3-sdk'
+import { Price, Token } from '@sweepstakes/sdk'
+import { Position } from '@sweepstakes/v3-sdk'
 
 export default function getPriceOrderingFromPositionForUI(position?: Position): {
   priceLower?: Price<Token, Token>

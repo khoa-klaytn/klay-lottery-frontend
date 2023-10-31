@@ -1,4 +1,4 @@
-import { Box } from '@pancakeswap/uikit'
+import { Box } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
 
 const Row = styled(Box)<{

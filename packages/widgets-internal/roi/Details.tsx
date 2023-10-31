@@ -1,11 +1,11 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { Percent, ZERO_PERCENT } from "@pancakeswap/sdk";
-import { formatAmount } from "@pancakeswap/utils/formatInfoNumbers";
+import { useTranslation } from "@sweepstakes/localization";
+import { Percent, ZERO_PERCENT } from "@sweepstakes/sdk";
+import { formatAmount } from "@sweepstakes/utils/formatInfoNumbers";
 import { useState, ReactNode, memo } from "react";
 import { styled } from "styled-components";
-import { formatPercent } from "@pancakeswap/utils/formatFractions";
-import { ExpandableLabel, Box, Grid, Text, Flex } from "@pancakeswap/uikit";
-import { Footer, BulletList } from "@pancakeswap/uikit/components/RoiCalculatorModal/RoiCalculatorFooter";
+import { formatPercent } from "@sweepstakes/utils/formatFractions";
+import { ExpandableLabel, Box, Grid, Text, Flex } from "@sweepstakes/uikit";
+import { Footer, BulletList } from "@sweepstakes/uikit/components/RoiCalculatorModal/RoiCalculatorFooter";
 
 const StyledFooter = styled(Footer)`
   border-radius: 16px;

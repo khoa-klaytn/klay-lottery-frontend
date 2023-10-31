@@ -1,5 +1,5 @@
-import { Flex, Box, Text, Button, LogoRoundIcon, Checkbox, Link } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Box, Text, Button, LogoRoundIcon, Checkbox, Link } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { useRouter } from 'next/router'
 import { useState, useMemo } from 'react'
 import BigNumber from 'bignumber.js'
@@ -81,7 +81,7 @@ const WelcomePage: React.FC<React.PropsWithChildren<WelcomePageProps>> = ({ isLo
             <Text fontSize="14px" ml="8px">
               {t('*I have read the')}
               <Text display="inline-block" as="span" ml="4px">
-                <Link external href="https://docs.pancakeswap.finance/affiliate-program/terms-and-conditions">
+                <Link external href="https://docs.sweepstakes.finance/affiliate-program/terms-and-conditions">
                   {t('terms and conditions')}
                 </Link>
               </Text>

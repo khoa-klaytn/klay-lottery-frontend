@@ -1,7 +1,7 @@
-import { useTranslation, Trans } from '@pancakeswap/localization'
-import { ERC20Token, Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import isUndefinedOrNull from '@pancakeswap/utils/isUndefinedOrNull'
+import { useTranslation, Trans } from '@sweepstakes/localization'
+import { ERC20Token, Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import isUndefinedOrNull from '@sweepstakes/utils/isUndefinedOrNull'
 import {
   Button,
   Dots,
@@ -14,7 +14,7 @@ import {
   useTooltip,
   promotedGradient,
   AutoRenewIcon,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useEffect, useMemo, useState } from 'react'
 import { useUserTokenRisk } from 'state/user/hooks/useUserTokenRisk'
 import { useAllLists } from 'state/lists/hooks'

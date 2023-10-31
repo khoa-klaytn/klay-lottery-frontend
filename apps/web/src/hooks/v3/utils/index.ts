@@ -1,4 +1,4 @@
-import { Price, Token } from '@pancakeswap/swap-sdk-core'
+import { Price, Token } from '@sweepstakes/swap-sdk-core'
 import {
   encodeSqrtRatioX96,
   FeeAmount,
@@ -6,7 +6,7 @@ import {
   priceToClosestTick,
   TICK_SPACINGS,
   TickMath,
-} from '@pancakeswap/v3-sdk'
+} from '@sweepstakes/v3-sdk'
 
 export function tryParsePrice(baseToken?: Token, quoteToken?: Token, value?: string) {
   if (!baseToken || !quoteToken || !value) {

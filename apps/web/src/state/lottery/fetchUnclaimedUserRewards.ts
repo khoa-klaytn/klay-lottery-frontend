@@ -3,7 +3,7 @@ import { LotteryStatus, LotteryTicket, LotteryTicketClaimData } from 'config/con
 import { LotteryUserGraphEntity, LotteryRoundGraphEntity } from 'state/types'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
-import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
+import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import { type Address, PublicClient } from 'viem'
 import { parseRetrievedNumber } from 'views/Lottery/helpers'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'

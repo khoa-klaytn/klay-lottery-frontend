@@ -1,5 +1,5 @@
-import { ERC20Token, Pair } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { ERC20Token, Pair } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { isAddress } from 'utils'
 import memoize from 'lodash/memoize'
 

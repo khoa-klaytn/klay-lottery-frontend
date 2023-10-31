@@ -1,6 +1,6 @@
 /* eslint-disable no-console, @typescript-eslint/no-non-null-assertion */
-import { Currency, CurrencyAmount, TradeType } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Currency, CurrencyAmount, TradeType } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import FixedReverseHeap from 'mnemonist/fixed-reverse-heap.js'
 import Queue from 'mnemonist/queue.js'
 import flatMap from 'lodash/flatMap.js'

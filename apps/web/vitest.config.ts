@@ -11,12 +11,12 @@ export default defineConfig({
   plugins: [tsconfigPaths({ projects: ['tsconfig.test.json'] }), react(), vanillaExtractPlugin()],
   resolve: {
     alias: {
-      '@pancakeswap/wagmi/connectors/binanceWallet': r('../../packages/wagmi/connectors/binanceWallet/index.ts'),
-      '@pancakeswap/wagmi/connectors/blocto': r('../../packages/wagmi/connectors/blocto/index.ts'),
-      '@pancakeswap/wagmi/connectors/miniProgram': r('../../packages/wagmi/connectors/miniProgram/index.ts'),
-      '@pancakeswap/wagmi/connectors/trustWallet': r('../../packages/wagmi/connectors/trustWallet/index.ts'),
-      '@pancakeswap/uikit': r('../../packages/uikit/src'),
-      '@pancakeswap/localization': r('../../packages/localization/src'),
+      '@sweepstakes/wagmi/connectors/binanceWallet': r('../../packages/wagmi/connectors/binanceWallet/index.ts'),
+      '@sweepstakes/wagmi/connectors/blocto': r('../../packages/wagmi/connectors/blocto/index.ts'),
+      '@sweepstakes/wagmi/connectors/miniProgram': r('../../packages/wagmi/connectors/miniProgram/index.ts'),
+      '@sweepstakes/wagmi/connectors/trustWallet': r('../../packages/wagmi/connectors/trustWallet/index.ts'),
+      '@sweepstakes/uikit': r('../../packages/uikit/src'),
+      '@sweepstakes/localization': r('../../packages/localization/src'),
     },
   },
   test: {

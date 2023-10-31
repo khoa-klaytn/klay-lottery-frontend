@@ -7,7 +7,7 @@ import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { getPancakeProfileAddress } from 'utils/addressHelpers'
 import fromPairs from 'lodash/fromPairs'
 import { publicClient } from 'utils/wagmi'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 
 export const getTeam = async (teamId: number): Promise<Team> => {
   try {

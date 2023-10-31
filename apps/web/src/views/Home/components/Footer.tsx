@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Box, Flex, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Box, Flex, Text, useMatchBreakpoints } from '@sweepstakes/uikit'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import Image from 'next/image'
 import { keyframes, styled } from 'styled-components'

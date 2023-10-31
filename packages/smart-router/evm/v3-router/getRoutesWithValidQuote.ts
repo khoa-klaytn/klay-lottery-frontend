@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@pancakeswap/sdk'
+import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@sweepstakes/sdk'
 import chunk from 'lodash/chunk.js'
 
 import { BaseRoute, GasModel, QuoteProvider, RouteWithoutQuote, RouteWithQuote } from './types'

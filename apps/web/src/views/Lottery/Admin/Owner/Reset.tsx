@@ -1,4 +1,4 @@
-import { Button } from '@pancakeswap/uikit'
+import { Button } from '@sweepstakes/uikit'
 import { useCallback } from 'react'
 
 export default function Reset({ callWithGasPrice, lotteryContract }) {

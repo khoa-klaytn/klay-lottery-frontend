@@ -1,4 +1,4 @@
-import { Currency, Price } from '@pancakeswap/sdk'
+import { Currency, Price } from '@sweepstakes/sdk'
 
 import { BaseRoute, Pool, RouteType, PoolType, Route } from '../types'
 import { getOutputCurrency, getTokenPrice } from './pool'

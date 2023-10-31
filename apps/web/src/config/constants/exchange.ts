@@ -1,5 +1,5 @@
-import { Percent, Token, WNATIVE } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Percent, Token, WNATIVE } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import {
   bscTokens,
   bscTestnetTokens,
@@ -20,7 +20,7 @@ import {
   baseTestnetTokens,
   scrollSepoliaTokens,
   lineaTokens,
-} from '@pancakeswap/tokens'
+} from '@sweepstakes/tokens'
 import { ChainTokenList } from './types'
 
 export {
@@ -28,7 +28,7 @@ export {
   V2_ROUTER_ADDRESS,
   BASES_TO_CHECK_TRADES_AGAINST,
   CUSTOM_BASES,
-} from '@pancakeswap/smart-router/evm'
+} from '@sweepstakes/smart-router/evm'
 
 export const CHAIN_REFRESH_TIME = {
   [ChainId.ETHEREUM]: 12_000,
@@ -171,9 +171,9 @@ export const DEFAULT_INPUT_CURRENCY = 'BNB'
 export const DEFAULT_OUTPUT_CURRENCY = '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'
 
 // Handler string is passed to Gelato to use PCS router
-export const GELATO_HANDLER = 'pancakeswap'
+export const GELATO_HANDLER = 'sweepstakes'
 export const GENERIC_GAS_LIMIT_ORDER_EXECUTION = 500000n
 
-export const LIMIT_ORDERS_DOCS_URL = 'https://docs.pancakeswap.finance/products/pancakeswap-exchange/limit-orders'
+export const LIMIT_ORDERS_DOCS_URL = 'https://docs.sweepstakes.finance/products/sweepstakes-exchange/limit-orders'
 
 export const EXCHANGE_PAGE_PATHS = ['/swap', '/limit-orders', 'liquidity', '/add', '/find', '/remove']

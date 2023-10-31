@@ -1,7 +1,7 @@
 import { getAddress } from 'viem'
 import memoize from 'lodash/memoize'
-import { Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 const mapping = {
   [ChainId.BSC]: 'smartchain',

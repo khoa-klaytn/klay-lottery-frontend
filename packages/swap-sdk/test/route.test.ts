@@ -1,5 +1,5 @@
-import { Token, CurrencyAmount } from '@pancakeswap/swap-sdk-core'
-import { ChainId } from '@pancakeswap/chains'
+import { Token, CurrencyAmount } from '@sweepstakes/swap-sdk-core'
+import { ChainId } from '@sweepstakes/chains'
 import { Pair, Route, Native } from '../src/entities'
 import { WNATIVE } from '../src/constants'
 

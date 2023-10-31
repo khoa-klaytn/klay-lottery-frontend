@@ -1,4 +1,4 @@
-import { Token } from '@pancakeswap/sdk'
+import { Token } from '@sweepstakes/sdk'
 import SwapWarningTokens from 'config/constants/swapWarningTokens'
 
 const shouldShowSwapWarning = (chainId: number, swapCurrency: Token): boolean => {

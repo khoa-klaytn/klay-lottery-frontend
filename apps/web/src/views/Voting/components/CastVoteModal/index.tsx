@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Box, Modal, useToast } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Box, Modal, useToast } from '@sweepstakes/uikit'
 import { useAccount, useWalletClient } from 'wagmi'
 import snapshot from '@snapshot-labs/snapshot.js'
 import useTheme from 'hooks/useTheme'

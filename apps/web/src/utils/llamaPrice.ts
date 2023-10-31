@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { KLAY } from '@pancakeswap/tokens'
+import { ChainId } from '@sweepstakes/chains'
+import { KLAY } from '@sweepstakes/tokens'
 import { getKlayPriceFromOracle } from 'hooks/useKlayPrice'
 
 const CHAIN_MAPPING = {

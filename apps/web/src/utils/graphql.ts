@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import {
   BIT_QUERY,
   INFO_CLIENT,
@@ -71,7 +71,7 @@ export const infoStableSwapClient = new GraphQLClient(STABLESWAP_SUBGRAPH_CLIENT
 export const infoServerClient = new GraphQLClient(INFO_CLIENT, {
   timeout: 5000,
   headers: {
-    origin: 'https://pancakeswap.finance',
+    origin: 'https://sweepstakes.finance',
   },
 })
 

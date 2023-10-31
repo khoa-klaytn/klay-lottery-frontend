@@ -1,7 +1,7 @@
-import { Currency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { SmartRouter, StablePool, V2Pool, V3Pool } from '@pancakeswap/smart-router/evm'
-import { CORS_ALLOW, handleCors, wrapCorsHeader } from '@pancakeswap/worker-utils'
+import { Currency } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { SmartRouter, StablePool, V2Pool, V3Pool } from '@sweepstakes/smart-router/evm'
+import { CORS_ALLOW, handleCors, wrapCorsHeader } from '@sweepstakes/worker-utils'
 import { Router } from 'itty-router'
 import { error, json, missing } from 'itty-router-extras'
 

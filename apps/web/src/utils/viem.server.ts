@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { OnChainProvider } from '@pancakeswap/smart-router/evm'
+import { ChainId } from '@sweepstakes/chains'
+import { OnChainProvider } from '@sweepstakes/smart-router/evm'
 import { CHAINS } from 'config/chains'
 import { SERVER_NODES } from 'config/nodes'
 import { createPublicClient, fallback, http, PublicClient } from 'viem'

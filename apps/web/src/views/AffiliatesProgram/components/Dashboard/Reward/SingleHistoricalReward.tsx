@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { useEffect, useState } from 'react'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { UserClaimListResponse, MAX_PER_PAGE, ClaimDetail } from 'views/AffiliatesProgram/hooks/useUserClaimList'
 import {
@@ -16,8 +16,8 @@ import {
   FlexProps,
   Button,
   useMatchBreakpoints,
-} from '@pancakeswap/uikit'
-import { formatNumber } from '@pancakeswap/utils/formatBalance'
+} from '@sweepstakes/uikit'
+import { formatNumber } from '@sweepstakes/utils/formatBalance'
 
 const Dot = styled(Box)`
   width: 8px;

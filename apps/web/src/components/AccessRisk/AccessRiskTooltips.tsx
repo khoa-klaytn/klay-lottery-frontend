@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Flex, Link, Text } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Flex, Link, Text } from '@sweepstakes/uikit'
 import { TOKEN_RISK } from 'components/AccessRisk'
 
 interface AccessRiskTooltipsProps {

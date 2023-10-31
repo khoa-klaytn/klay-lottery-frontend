@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { Card, CardBody, CardHeader, Heading, Text, Flex, PageSection, Link } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Card, CardBody, CardHeader, Heading, Text, Flex, PageSection, Link } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import FoldableText from 'components/FoldableSection/FoldableText'
 import useTheme from 'hooks/useTheme'
 
@@ -83,7 +83,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-extended.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-extended.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('BNB Smart Chain')},
@@ -92,7 +92,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-arbitrum-default.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-arbitrum-default.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('Arbitrum One')},
@@ -101,7 +101,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-base-default.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-base-default.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('Base')},
@@ -110,7 +110,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-eth-default.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-eth-default.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('Ethereum')},
@@ -119,7 +119,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-linea-default.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-linea-default.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('Linea')},
@@ -128,7 +128,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-polygon-zkevm-default.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-polygon-zkevm-default.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('Polygon zkEVM')},
@@ -137,7 +137,7 @@ const Question = () => {
                 <Link
                   external
                   style={{ display: 'inline-block' }}
-                  href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json"
+                  href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-zksync-default.json"
                 >
                   <Text color="primary" ml="4px" as="span">
                     {t('zkSync Era')}

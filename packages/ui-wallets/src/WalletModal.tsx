@@ -1,5 +1,5 @@
-import { usePreloadImages } from '@pancakeswap/hooks'
-import { useTranslation } from '@pancakeswap/localization'
+import { usePreloadImages } from '@sweepstakes/hooks'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   AtomBox,
   Button,
@@ -15,7 +15,7 @@ import {
   TabMenu,
   Text,
   WarningIcon,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { atom, useAtom } from 'jotai'
 import { lazy, PropsWithChildren, Suspense, useMemo, useState } from 'react'
 import { isMobile } from 'react-device-detect'
@@ -401,7 +401,7 @@ export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
       wallets
         .map((w) => w.icon)
         .filter((icon) => typeof icon === 'string')
-        .concat('https://cdn.pancakeswap.com/wallets/wallet_intro.png') as string[],
+        .concat('https://cdn.sweepstakes.com/wallets/wallet_intro.png') as string[],
     [wallets],
   )
 
@@ -458,7 +458,7 @@ const Intro = ({ docLink, docText }: { docLink: string; docText: string }) => {
       <Heading as="h1" fontSize="20px" color="secondary">
         {t('Haven’t got a wallet yet?')}
       </Heading>
-      <Image src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width={198} height={178} />
+      <Image src="https://cdn.sweepstakes.com/wallets/wallet_intro.png" width={198} height={178} />
       <Button as={LinkExternal} color="backgroundAlt" variant="subtle" href={docLink}>
         {docText}
       </Button>

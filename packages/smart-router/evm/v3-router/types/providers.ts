@@ -1,5 +1,5 @@
-import { Currency, BigintIsh } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Currency, BigintIsh } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { PublicClient } from 'viem'
 import type { GraphQLClient } from 'graphql-request'
 

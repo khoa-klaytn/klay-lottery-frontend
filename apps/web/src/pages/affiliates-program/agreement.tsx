@@ -1,4 +1,4 @@
-import { Text, Link } from '@pancakeswap/uikit'
+import { Text, Link } from '@sweepstakes/uikit'
 import { Container } from 'pages/terms-of-service'
 import AffiliatesProgramLayout from 'views/AffiliatesProgram/components/AffiliatesProgramLayout'
 
@@ -51,44 +51,44 @@ const Agreement = () => {
           <Text as="span">(i) Is in the following Pancake Swap token lists</Text>
           <Text as="p">
             BNB Smart Chain:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-extended.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-extended.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-extended.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-extended.json
             </Link>
           </Text>
           <Text as="p">
             Arbitrum One:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-arbitrum-default.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-arbitrum-default.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-arbitrum-default.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-arbitrum-default.json
             </Link>
           </Text>
           <Text as="p">
             Base:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-base-default.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-base-default.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-base-default.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-base-default.json
             </Link>
           </Text>
           <Text as="p">
             Ethereum:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-eth-default.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-eth-default.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-eth-default.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-eth-default.json
             </Link>
           </Text>
           <Text as="p">
             Linea:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-linea-default.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-linea-default.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-linea-default.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-linea-default.json
             </Link>
           </Text>
           <Text as="p">
             Polygon zkEVM:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-polygon-zkevm-default.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-polygon-zkevm-default.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-polygon-zkevm-default.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-polygon-zkevm-default.json
             </Link>
           </Text>
           <Text as="p">
             zkSync Era:
-            <Link href="https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json">
-              https://tokenlists.org/token-list?url=https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json
+            <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-zksync-default.json">
+              https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-zksync-default.json
             </Link>
           </Text>
           <Text as="span">; and</Text>

@@ -1,4 +1,4 @@
-import { useIsMounted } from "@pancakeswap/hooks";
+import { useIsMounted } from "@sweepstakes/hooks";
 import throttle from "lodash/throttle";
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import { styled } from "styled-components";

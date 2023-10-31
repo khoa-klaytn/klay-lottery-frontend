@@ -1,4 +1,4 @@
-import { LanguageProvider } from "@pancakeswap/localization";
+import { LanguageProvider } from "@sweepstakes/localization";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { Box } from "../Box";

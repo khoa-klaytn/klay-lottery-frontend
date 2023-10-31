@@ -6,7 +6,7 @@ import { SendTransactionResult } from 'wagmi/dist/actions'
 import { parseRetrievedNumber } from 'views/Lottery/helpers'
 import { BaseError } from 'viem'
 import { handleCustomError } from 'utils/viem'
-import { Button } from '@pancakeswap/uikit'
+import { Button } from '@sweepstakes/uikit'
 import { EMsg } from '../EMsg'
 
 export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract, lotteryId, status }) {

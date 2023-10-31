@@ -1,4 +1,4 @@
-export const LS_KEY = 'blog_pancakeswap_language'
+export const LS_KEY = 'blog_sweepstakes_language'
 
 export const getLanguageCodeFromLS = () => {
   try {

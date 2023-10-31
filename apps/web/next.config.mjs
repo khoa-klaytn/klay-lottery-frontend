@@ -5,8 +5,8 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import BundleAnalyzer from '@next/bundle-analyzer'
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin'
-import smartRouterPkgs from '@pancakeswap/smart-router/package.json' assert { type: 'json' }
-import { withWebSecurityHeaders } from '@pancakeswap/next-config/withWebSecurityHeaders'
+import smartRouterPkgs from '@sweepstakes/smart-router/package.json' assert { type: 'json' }
+import { withWebSecurityHeaders } from '@sweepstakes/next-config/withWebSecurityHeaders'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -36,7 +36,7 @@ const sentryWebpackPluginOptions =
       }
 
 const workerDeps = Object.keys(smartRouterPkgs.dependencies)
-  .map((d) => d.replace('@pancakeswap/', 'packages/'))
+  .map((d) => d.replace('@sweepstakes/', 'packages/'))
   .concat(['/packages/smart-router/', '/packages/swap-sdk/', '/packages/token-lists/'])
 
 /** @type {import('next').NextConfig} */
@@ -52,11 +52,11 @@ const config = {
     },
   },
   transpilePackages: [
-    '@pancakeswap/farms',
-    '@pancakeswap/localization',
-    '@pancakeswap/hooks',
-    '@pancakeswap/utils',
-    '@pancakeswap/widgets-internal',
+    '@sweepstakes/farms',
+    '@sweepstakes/localization',
+    '@sweepstakes/hooks',
+    '@sweepstakes/utils',
+    '@sweepstakes/widgets-internal',
   ],
   reactStrictMode: true,
   swcMinify: true,
@@ -65,7 +65,7 @@ const config = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'static-nft.pancakeswap.com',
+        hostname: 'static-nft.sweepstakes.com',
         pathname: '/mainnet/**',
       },
     ],
@@ -176,12 +176,12 @@ const config = {
       },
       {
         source: '/api/v3/:chainId/farms/liquidity/:address',
-        destination: 'https://farms-api.pancakeswap.com/v3/:chainId/liquidity/:address',
+        destination: 'https://farms-api.sweepstakes.com/v3/:chainId/liquidity/:address',
         permanent: false,
       },
       {
         source: '/images/tokens/:address',
-        destination: 'https://tokens.pancakeswap.finance/images/:address',
+        destination: 'https://tokens.sweepstakes.finance/images/:address',
         permanent: false,
       },
     ]

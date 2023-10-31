@@ -1,6 +1,6 @@
-import { Flex, Text, Box, ChevronRightIcon, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Flex, Text, Box, ChevronRightIcon, useMatchBreakpoints } from '@sweepstakes/uikit'
 import { useRouter } from 'next/router'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 import { useMemo } from 'react'

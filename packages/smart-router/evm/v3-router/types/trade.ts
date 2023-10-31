@@ -1,4 +1,4 @@
-import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@pancakeswap/sdk'
+import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@sweepstakes/sdk'
 
 import { Route } from './route'
 import { PoolProvider, QuoteProvider } from './providers'

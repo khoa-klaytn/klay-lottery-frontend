@@ -1,4 +1,4 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import dayjs from 'dayjs'
 import {
   AutoColumn,
@@ -13,7 +13,7 @@ import {
   useMatchBreakpoints,
   Button,
   ScanLink,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import Page from 'components/Layout/Page'
 import { TabToggle, TabToggleGroup } from 'components/TabToggle'
 import { CHAIN_QUERY_NAME } from 'config/chains'

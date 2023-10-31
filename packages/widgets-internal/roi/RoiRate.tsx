@@ -1,7 +1,7 @@
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { memo } from "react";
 
-import { Flex, Text } from "@pancakeswap/uikit";
+import { Flex, Text } from "@sweepstakes/uikit";
 import {
   RoiCardInner,
   RoiCardWrapper,
@@ -9,7 +9,7 @@ import {
   RoiDisplayContainer,
   MILLION,
   TRILLION,
-} from "@pancakeswap/uikit/components/RoiCalculatorModal/RoiCard";
+} from "@sweepstakes/uikit/components/RoiCalculatorModal/RoiCard";
 
 interface Props {
   usdAmount?: number;

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { Flex } from '@pancakeswap/uikit'
+import { Flex } from '@sweepstakes/uikit'
 import { Address } from 'wagmi'
-import { ContextApi } from '@pancakeswap/localization'
+import { ContextApi } from '@sweepstakes/localization'
 import { DefaultTheme } from 'styled-components'
 import { SaleStatusEnum, UserStatusEnum } from '../../types'
 import BuyTicketsButtons from '../Buttons/BuyTickets'

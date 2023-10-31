@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { isAddress } from 'utils'
-import { Flex, Text } from '@pancakeswap/uikit'
+import { Flex, Text } from '@sweepstakes/uikit'
 import Page from 'components/Layout/Page'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 
 const NftProfile: React.FC<React.PropsWithChildren<unknown>> = ({ children }) => {
   const accountAddress = useRouter().query.accountAddress as string

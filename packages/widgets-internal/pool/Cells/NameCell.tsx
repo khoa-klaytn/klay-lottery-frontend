@@ -1,9 +1,9 @@
 import BigNumber from "bignumber.js";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import React, { useMemo, ReactNode } from "react";
 import { styled } from "styled-components";
-import { BIG_ZERO } from "@pancakeswap/utils/bigNumber";
-import { Text, Skeleton, useMatchBreakpoints } from "@pancakeswap/uikit";
+import { BIG_ZERO } from "@sweepstakes/utils/bigNumber";
+import { Text, Skeleton, useMatchBreakpoints } from "@sweepstakes/uikit";
 
 import { DeserializedPool } from "../types";
 import { BaseCell, CellContent } from "./BaseCell";

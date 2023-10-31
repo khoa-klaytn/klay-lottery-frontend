@@ -1,8 +1,8 @@
 import { styled } from 'styled-components'
-import { Text, Button, Input, InputProps, Flex, Link } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Text, Button, Input, InputProps, Flex, Link } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { parseUnits } from 'viem'
-import { formatBigInt } from '@pancakeswap/utils/formatBalance'
+import { formatBigInt } from '@sweepstakes/utils/formatBalance'
 
 interface ModalInputProps {
   max: string

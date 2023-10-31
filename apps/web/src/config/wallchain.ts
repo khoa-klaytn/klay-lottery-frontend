@@ -1,6 +1,6 @@
-import { bscTokens } from '@pancakeswap/tokens'
-import { ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { bscTokens } from '@sweepstakes/tokens'
+import { ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 export const WALLCHAIN_ENABLED = true
 

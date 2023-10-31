@@ -1,5 +1,5 @@
-import { atoms } from '@pancakeswap/uikit/css/atoms'
-import { responsiveStyle } from '@pancakeswap/uikit/css/responsiveStyle'
+import { atoms } from '@sweepstakes/uikit/css/atoms'
+import { responsiveStyle } from '@sweepstakes/uikit/css/responsiveStyle'
 import { style, keyframes } from '@vanilla-extract/css'
 
 const promotedGradientKf = keyframes({

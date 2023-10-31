@@ -10,9 +10,9 @@ import {
   Message,
   Flex,
   RocketIcon,
-} from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import { formatNumber } from '@pancakeswap/utils/formatBalance'
+} from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { formatNumber } from '@sweepstakes/utils/formatBalance'
 import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 import TextEllipsis from '../TextEllipsis'
 import { VotingBoxBorder, VotingBoxCardInner, ModalInner } from './styles'

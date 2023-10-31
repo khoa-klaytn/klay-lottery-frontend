@@ -1,4 +1,4 @@
-import { BigintIsh } from '@pancakeswap/sdk'
+import { BigintIsh } from '@sweepstakes/sdk'
 import { Hex } from 'viem'
 
 /**

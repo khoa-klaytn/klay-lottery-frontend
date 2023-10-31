@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { CheckmarkIcon, CloseIcon, ScanLink } from '@pancakeswap/uikit'
+import { CheckmarkIcon, CloseIcon, ScanLink } from '@sweepstakes/uikit'
 import { getBlockExploreLink } from 'utils'
 import { TransactionDetails } from 'state/transactions/reducer'
 import { ChainLinkSupportChains } from 'state/info/constant'

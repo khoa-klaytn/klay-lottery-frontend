@@ -1,4 +1,4 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   ArrowForwardIcon,
   BalanceInput,
@@ -10,7 +10,7 @@ import {
   Ticket,
   useToast,
   useTooltip,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useAccount, usePublicClient } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -26,8 +26,8 @@ import { fetchUserTicketsAndLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
 import { BaseError, parseEther } from 'viem'
 import { styled } from 'styled-components'
-import { BIG_ZERO, BIG_ONE_HUNDRED } from '@pancakeswap/utils/bigNumber'
-import { getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
+import { BIG_ZERO, BIG_ONE_HUNDRED } from '@sweepstakes/utils/bigNumber'
+import { getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
 import { klayLotteryABI } from 'config/abi/klayLottery'

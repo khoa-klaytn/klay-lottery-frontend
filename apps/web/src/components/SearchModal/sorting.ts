@@ -1,4 +1,4 @@
-import { Token, getTokenComparator } from '@pancakeswap/sdk'
+import { Token, getTokenComparator } from '@sweepstakes/sdk'
 import { useMemo } from 'react'
 import { useAllTokenBalances } from '../../state/wallet/hooks'
 

@@ -1,6 +1,6 @@
-import { BigintIsh } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { toBigInt } from '@pancakeswap/utils/toBigInt'
+import { BigintIsh } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { toBigInt } from '@sweepstakes/utils/toBigInt'
 import { PublicClient } from 'viem'
 
 import {

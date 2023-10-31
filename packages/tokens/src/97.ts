@@ -1,5 +1,5 @@
-import { ERC20Token, WBNB } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { ERC20Token, WBNB } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 import { BUSD_TESTNET, CAKE_TESTNET } from './common'
 
@@ -13,7 +13,7 @@ export const bscTestnetTokens = {
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   hbtc: new ERC20Token(ChainId.BSC_TESTNET, '0x3Fb6a6C06c7486BD194BB99a078B89B9ECaF4c82', 18, 'HBTC', 'Huobi BTC'),
   wbtc: new ERC20Token(ChainId.BSC_TESTNET, '0xfC8bFbe9644e1BC836b8821660593e7de711e564', 8, 'WBTC', 'Wrapped BTC'),
@@ -41,6 +41,6 @@ export const bscTestnetTokens = {
     18,
     'CAKE2',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
 }

@@ -1,9 +1,9 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { useAccount, Address } from 'wagmi'
 import { FetchStatus } from 'config/constants/types'
 import useSWRImmutable from 'swr/immutable'
 import { getActivePools } from 'utils/calls'
-import { bscTokens } from '@pancakeswap/tokens'
+import { bscTokens } from '@sweepstakes/tokens'
 import { publicClient } from 'utils/wagmi'
 import { getVotingPower } from '../helpers'
 

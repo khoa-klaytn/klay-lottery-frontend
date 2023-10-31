@@ -1,4 +1,4 @@
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { CardBody, CardFooter } from "../../../components/Card";
 import { Box } from "../../../components/Box";
 import { Text } from "../../../components/Text";

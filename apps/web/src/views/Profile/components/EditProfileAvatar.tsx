@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { useModal } from '@pancakeswap/uikit'
+import { useModal } from '@sweepstakes/uikit'
 import EditProfileModal from './EditProfileModal'
 
 const EditOverlay = styled.div`

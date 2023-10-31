@@ -1,6 +1,6 @@
-import { ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { bscTestnetTokens } from '@pancakeswap/tokens'
+import { ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { bscTestnetTokens } from '@sweepstakes/tokens'
 
 import { StableSwapPool } from './types'
 

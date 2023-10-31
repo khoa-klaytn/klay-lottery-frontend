@@ -1,4 +1,4 @@
-import { ZERO_PERCENT } from "@pancakeswap/sdk";
+import { ZERO_PERCENT } from "@sweepstakes/sdk";
 import { useMemo } from "react";
 
 import { getAccrued } from "../aprHelper";

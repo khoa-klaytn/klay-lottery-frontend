@@ -1,5 +1,5 @@
 {
-  "name": "@pancakeswap/pools",
+  "name": "@sweepstakes/pools",
   "version": "4.0.13",
   "sideEffects": false,
   "scripts": {
@@ -16,17 +16,17 @@
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "dependencies": {
-    "@pancakeswap/token-lists": "workspace:*",
-    "@pancakeswap/tokens": "workspace:*",
-    "@pancakeswap/chains": "workspace:*",
+    "@sweepstakes/token-lists": "workspace:*",
+    "@sweepstakes/tokens": "workspace:*",
+    "@sweepstakes/chains": "workspace:*",
     "bignumber.js": "^9.0.0",
     "lodash": "^4.17.21",
     "viem": "^1.10.9",
     "wagmi": "^1.3.10"
   },
   "devDependencies": {
-    "@pancakeswap/tsconfig": "workspace:*",
-    "@pancakeswap/utils": "workspace:*",
+    "@sweepstakes/tsconfig": "workspace:*",
+    "@sweepstakes/utils": "workspace:*",
     "@types/lodash": "^4.14.168",
     "tsup": "^6.7.0",
     "typescript": "^5.1.3",

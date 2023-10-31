@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { Currency, Token } from '@pancakeswap/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { Currency, Token } from '@sweepstakes/sdk'
 import flatMap from 'lodash/flatMap.js'
 import memoize from 'lodash/memoize.js'
 

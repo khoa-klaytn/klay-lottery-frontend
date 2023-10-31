@@ -1,4 +1,4 @@
-import { Pool } from '@pancakeswap/v3-sdk'
+import { Pool } from '@sweepstakes/v3-sdk'
 
 const isPoolTickInRange = (pool: Pool, tickLower: number, tickUpper: number) => {
   const below = pool && typeof tickLower === 'number' ? pool.tickCurrent < tickLower : undefined

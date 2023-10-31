@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Native, Token } from '@pancakeswap/sdk'
+import { Currency, CurrencyAmount, Native, Token } from '@sweepstakes/sdk'
 import { multicallABI } from 'config/abi/Multicall'
 import { useAllTokens } from 'hooks/Tokens'
 import useNativeCurrency from 'hooks/useNativeCurrency'

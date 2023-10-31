@@ -1,4 +1,4 @@
-import { KLAY } from '@pancakeswap/tokens'
+import { KLAY } from '@sweepstakes/tokens'
 
 // Addresses
 import {
@@ -31,8 +31,8 @@ import { nonBscVaultABI } from 'config/abi/nonBscVault'
 import { pointCenterIfoABI } from 'config/abi/pointCenterIfo'
 import { stableSwapNativeHelperABI } from 'config/abi/stableSwapNativeHelper'
 
-import { cakeFlexibleSideVaultV2ABI, cakeVaultV2ABI } from '@pancakeswap/pools'
-import { ChainId } from '@pancakeswap/chains'
+import { cakeFlexibleSideVaultV2ABI, cakeVaultV2ABI } from '@sweepstakes/pools'
+import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
 import { affiliateProgramABI } from 'config/abi/affiliateProgram'

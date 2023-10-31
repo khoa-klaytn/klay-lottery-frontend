@@ -1,10 +1,10 @@
 import { useRef, useState, useEffect, useCallback, Dispatch, SetStateAction } from 'react'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { ColorType, createChart, IChartApi } from 'lightweight-charts'
 import { format } from 'date-fns'
-import { useTheme } from '@pancakeswap/hooks'
+import { useTheme } from '@sweepstakes/hooks'
 import { CandleChartLoader } from 'components/ChartLoaders'
-import { baseColors, lightColors, darkColors } from '@pancakeswap/uikit'
+import { baseColors, lightColors, darkColors } from '@sweepstakes/uikit'
 
 const CANDLE_CHART_HEIGHT = 250
 

@@ -1,5 +1,5 @@
-import { Token, WNATIVE } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Token, WNATIVE } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import {
   bscTokens,
   bscTestnetTokens,
@@ -21,7 +21,7 @@ import {
   opBnbTestnetTokens,
   scrollSepoliaTokens,
   lineaTokens,
-} from '@pancakeswap/tokens'
+} from '@sweepstakes/tokens'
 
 import { ChainMap, ChainTokenList } from '../types'
 

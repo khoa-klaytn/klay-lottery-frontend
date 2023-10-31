@@ -1,4 +1,4 @@
-# @pancakeswap/smart-router
+# @sweepstakes/smart-router
 
 ## 4.9.0
 
@@ -10,11 +10,11 @@
 ### Patch Changes
 
 - Updated dependencies [435a90ac2]
-  - @pancakeswap/multicall@3.2.0
-  - @pancakeswap/sdk@5.6.0
-  - @pancakeswap/chains@0.1.0
-  - @pancakeswap/tokens@0.5.0
-  - @pancakeswap/v3-sdk@3.5.0
+  - @sweepstakes/multicall@3.2.0
+  - @sweepstakes/sdk@5.6.0
+  - @sweepstakes/chains@0.1.0
+  - @sweepstakes/tokens@0.5.0
+  - @sweepstakes/v3-sdk@3.5.0
 
 ## 4.8.8
 
@@ -28,10 +28,10 @@
 
 - 1831356d9: refactor: Move ChainsId usage from Sdk to Chains package
 - Updated dependencies [1831356d9]
-  - @pancakeswap/sdk@5.5.0
-  - @pancakeswap/multicall@3.1.2
-  - @pancakeswap/tokens@0.4.4
-  - @pancakeswap/v3-sdk@3.4.4
+  - @sweepstakes/sdk@5.5.0
+  - @sweepstakes/multicall@3.1.2
+  - @sweepstakes/tokens@0.4.4
+  - @sweepstakes/v3-sdk@3.4.4
 
 ## 4.8.6
 
@@ -45,10 +45,10 @@
 
 - 2d7e1b3e2: Upgraded viem
 - Updated dependencies [2d7e1b3e2]
-  - @pancakeswap/multicall@3.1.1
-  - @pancakeswap/sdk@5.4.2
-  - @pancakeswap/v3-sdk@3.4.3
-  - @pancakeswap/tokens@0.4.3
+  - @sweepstakes/multicall@3.1.1
+  - @sweepstakes/sdk@5.4.2
+  - @sweepstakes/v3-sdk@3.4.3
+  - @sweepstakes/tokens@0.4.3
 
 ## 4.8.4
 
@@ -56,7 +56,7 @@
 
 - 4cca3f688: Support dropping unexected multicalls
 - Updated dependencies [4cca3f688]
-  - @pancakeswap/multicall@3.1.0
+  - @sweepstakes/multicall@3.1.0
 
 ## 4.8.3
 
@@ -64,23 +64,23 @@
 
 - bb83caccc: Accept nullish value to getExecutionPrice function
 - Updated dependencies [51b77c787]
-  - @pancakeswap/tokens@0.4.2
-  - @pancakeswap/v3-sdk@3.4.2
-  - @pancakeswap/multicall@3.0.1
+  - @sweepstakes/tokens@0.4.2
+  - @sweepstakes/v3-sdk@3.4.2
+  - @sweepstakes/multicall@3.0.1
 
 ## 4.8.2
 
 ### Patch Changes
 
 - Updated dependencies [5a9836d39]
-  - @pancakeswap/multicall@3.0.1
+  - @sweepstakes/multicall@3.0.1
 
 ## 4.8.1
 
 ### Patch Changes
 
 - Updated dependencies [8337b09a8]
-  - @pancakeswap/multicall@3.0.0
+  - @sweepstakes/multicall@3.0.0
 
 ## 4.8.0
 
@@ -92,18 +92,18 @@
 
 - e4bfa0a15: Add mm route type
 - Updated dependencies [a784ca6ed]
-  - @pancakeswap/multicall@1.0.0
-  - @pancakeswap/tokens@0.4.1
-  - @pancakeswap/v3-sdk@3.4.1
+  - @sweepstakes/multicall@1.0.0
+  - @sweepstakes/tokens@0.4.1
+  - @sweepstakes/v3-sdk@3.4.1
 
 ## 4.7.1
 
 ### Patch Changes
 
 - Updated dependencies [7a0c21e72]
-  - @pancakeswap/sdk@5.4.1
-  - @pancakeswap/tokens@0.4.1
-  - @pancakeswap/v3-sdk@3.4.1
+  - @sweepstakes/sdk@5.4.1
+  - @sweepstakes/tokens@0.4.1
+  - @sweepstakes/v3-sdk@3.4.1
 
 ## 4.7.0
 
@@ -114,9 +114,9 @@
 ### Patch Changes
 
 - Updated dependencies [868f4d11f]
-  - @pancakeswap/sdk@5.4.0
-  - @pancakeswap/tokens@0.4.0
-  - @pancakeswap/v3-sdk@3.4.0
+  - @sweepstakes/sdk@5.4.0
+  - @sweepstakes/tokens@0.4.0
+  - @sweepstakes/v3-sdk@3.4.0
 
 ## 4.6.0
 
@@ -135,8 +135,8 @@
 ### Patch Changes
 
 - Updated dependencies [d0f9b28a9]
-  - @pancakeswap/tokens@0.3.1
-  - @pancakeswap/v3-sdk@3.3.1
+  - @sweepstakes/tokens@0.3.1
+  - @sweepstakes/v3-sdk@3.3.1
 
 ## 4.5.0
 
@@ -153,16 +153,16 @@
 ### Patch Changes
 
 - Updated dependencies [5e15c611e]
-  - @pancakeswap/sdk@5.3.0
-  - @pancakeswap/tokens@0.3.0
-  - @pancakeswap/v3-sdk@3.3.0
+  - @sweepstakes/sdk@5.3.0
+  - @sweepstakes/tokens@0.3.0
+  - @sweepstakes/v3-sdk@3.3.0
 
 ## 4.3.6
 
 ### Patch Changes
 
-- @pancakeswap/tokens@0.2.3
-- @pancakeswap/v3-sdk@3.2.3
+- @sweepstakes/tokens@0.2.3
+- @sweepstakes/v3-sdk@3.2.3
 
 ## 4.3.5
 
@@ -181,8 +181,8 @@
 ### Patch Changes
 
 - Updated dependencies [e0a681bc6]
-  - @pancakeswap/tokens@0.2.2
-  - @pancakeswap/v3-sdk@3.2.2
+  - @sweepstakes/tokens@0.2.2
+  - @sweepstakes/v3-sdk@3.2.2
 
 ## 4.3.2
 
@@ -195,9 +195,9 @@
 ### Patch Changes
 
 - Updated dependencies [3ba496cb1]
-  - @pancakeswap/sdk@5.2.1
-  - @pancakeswap/tokens@0.2.1
-  - @pancakeswap/v3-sdk@3.2.1
+  - @sweepstakes/sdk@5.2.1
+  - @sweepstakes/tokens@0.2.1
+  - @sweepstakes/v3-sdk@3.2.1
 
 ## 4.3.0
 
@@ -208,17 +208,17 @@
 ### Patch Changes
 
 - Updated dependencies [77fc3406a]
-  - @pancakeswap/sdk@5.2.0
-  - @pancakeswap/tokens@0.2.0
-  - @pancakeswap/v3-sdk@3.2.0
+  - @sweepstakes/sdk@5.2.0
+  - @sweepstakes/tokens@0.2.0
+  - @sweepstakes/v3-sdk@3.2.0
 
 ## 4.2.1
 
 ### Patch Changes
 
 - Updated dependencies [500adb4f8]
-  - @pancakeswap/tokens@0.1.6
-  - @pancakeswap/v3-sdk@3.1.1
+  - @sweepstakes/tokens@0.1.6
+  - @sweepstakes/v3-sdk@3.1.1
 
 ## 4.2.0
 
@@ -235,16 +235,16 @@
 ### Patch Changes
 
 - Updated dependencies [f9fda4ebe]
-  - @pancakeswap/sdk@5.1.0
-  - @pancakeswap/v3-sdk@3.1.0
-  - @pancakeswap/tokens@0.1.5
+  - @sweepstakes/sdk@5.1.0
+  - @sweepstakes/v3-sdk@3.1.0
+  - @sweepstakes/tokens@0.1.5
 
 ## 4.0.1
 
 ### Patch Changes
 
-- @pancakeswap/tokens@0.1.4
-- @pancakeswap/v3-sdk@3.0.1
+- @sweepstakes/tokens@0.1.4
+- @sweepstakes/v3-sdk@3.0.1
 
 ## 4.0.0
 
@@ -256,9 +256,9 @@
 
 - Updated dependencies [e8a1a97a3]
 - Updated dependencies [938aa75f5]
-  - @pancakeswap/v3-sdk@3.0.0
-  - @pancakeswap/sdk@5.0.0
-  - @pancakeswap/tokens@0.1.3
+  - @sweepstakes/v3-sdk@3.0.0
+  - @sweepstakes/sdk@5.0.0
+  - @sweepstakes/tokens@0.1.3
 
 ## 3.0.0
 
@@ -269,11 +269,11 @@
 ### Patch Changes
 
 - Updated dependencies [b5dbd2921]
-  - @pancakeswap/sdk@4.0.0
-  - @pancakeswap/swap-sdk-core@1.0.0
-  - @pancakeswap/v3-sdk@2.0.0
-  - @pancakeswap/multicall@2.0.0
-  - @pancakeswap/tokens@0.1.2
+  - @sweepstakes/sdk@4.0.0
+  - @sweepstakes/swap-sdk-core@1.0.0
+  - @sweepstakes/v3-sdk@2.0.0
+  - @sweepstakes/multicall@2.0.0
+  - @sweepstakes/tokens@0.1.2
 
 ## 2.0.3
 
@@ -309,10 +309,10 @@
 
 - Updated dependencies [65fbb250a]
 - Updated dependencies [65fbb250a]
-  - @pancakeswap/v3-sdk@1.0.0
-  - @pancakeswap/multicall@1.0.0
-  - @pancakeswap/sdk@3.2.0
-  - @pancakeswap/tokens@0.1.0
+  - @sweepstakes/v3-sdk@1.0.0
+  - @sweepstakes/multicall@1.0.0
+  - @sweepstakes/sdk@3.2.0
+  - @sweepstakes/tokens@0.1.0
 
 ## 0.6.1
 
@@ -320,7 +320,7 @@
 
 - d83530d6b: Remove duplicate isTradeBetter util
 - Updated dependencies [d83530d6b]
-  - @pancakeswap/sdk@3.1.3
+  - @sweepstakes/sdk@3.1.3
 
 ## 0.6.0
 
@@ -352,7 +352,7 @@
 
 - 1e4a4b27c: Fix missing dependencies
 - Updated dependencies [1e4a4b27c]
-  - @pancakeswap/multicall@0.0.2
+  - @sweepstakes/multicall@0.0.2
 
 ## 0.2.0
 

@@ -1,8 +1,8 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { useTheme } from "@pancakeswap/hooks";
+import { useTranslation } from "@sweepstakes/localization";
+import { useTheme } from "@sweepstakes/hooks";
 import { useState } from "react";
 import { styled } from "styled-components";
-import { AutoColumn, Flex, Link, Text, Checkbox, Button, Message, Box, RowBetween, RowFixed } from "@pancakeswap/uikit";
+import { AutoColumn, Flex, Link, Text, Checkbox, Button, Message, Box, RowBetween, RowFixed } from "@sweepstakes/uikit";
 import { ListLogo } from "./ListLogo";
 
 interface ImportProps {

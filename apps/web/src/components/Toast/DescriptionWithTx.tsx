@@ -1,8 +1,8 @@
-import { Link, Text, BscScanIcon } from '@pancakeswap/uikit'
-import { ChainId } from '@pancakeswap/chains'
+import { Link, Text, BscScanIcon } from '@sweepstakes/uikit'
+import { ChainId } from '@sweepstakes/chains'
 import { getBlockExploreLink, getBlockExploreName } from 'utils'
-import { useTranslation } from '@pancakeswap/localization'
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import { useTranslation } from '@sweepstakes/localization'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 
 interface DescriptionWithTxProps {

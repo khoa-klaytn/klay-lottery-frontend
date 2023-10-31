@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react'
-import { AutoRenewIcon, Box, Button, Flex, Modal, Text, useToast, ModalV2 } from '@pancakeswap/uikit'
+import { AutoRenewIcon, Box, Button, Flex, Modal, Text, useToast, ModalV2 } from '@sweepstakes/uikit'
 import confetti from 'canvas-confetti'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import delay from 'lodash/delay'
 import { styled } from 'styled-components'
 import Dots from 'components/Loader/Dots'
@@ -54,7 +54,7 @@ export interface WhitelistType {
   }
 }
 
-const GITHUB_ENDPOINT = 'https://raw.githubusercontent.com/pancakeswap/airdrop-v3-users/master'
+const GITHUB_ENDPOINT = 'https://raw.githubusercontent.com/sweepstakes/airdrop-v3-users/master'
 
 const V3AirdropModal: React.FC = () => {
   const { t } = useTranslation()

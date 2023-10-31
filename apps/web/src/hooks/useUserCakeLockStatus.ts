@@ -1,5 +1,5 @@
 import { useAccount } from 'wagmi'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import useSWRImmutable from 'swr/immutable'
 import { useCakeVaultContract } from 'hooks/useContract'
 import { useActiveChainId } from './useActiveChainId'

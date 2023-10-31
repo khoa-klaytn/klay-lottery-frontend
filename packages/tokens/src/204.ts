@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { WBNB } from '@pancakeswap/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { WBNB } from '@sweepstakes/sdk'
 
 import { USDT } from './common'
 

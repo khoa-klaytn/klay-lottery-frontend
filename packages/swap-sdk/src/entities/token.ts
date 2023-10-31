@@ -1,4 +1,4 @@
-import { BaseCurrency, Currency, Token } from '@pancakeswap/swap-sdk-core'
+import { BaseCurrency, Currency, Token } from '@sweepstakes/swap-sdk-core'
 import type { Address } from 'viem'
 import invariant from 'tiny-invariant'
 import { validateAndParseAddress } from '../utils'

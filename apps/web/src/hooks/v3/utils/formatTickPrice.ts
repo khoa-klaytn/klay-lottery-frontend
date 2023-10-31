@@ -1,4 +1,4 @@
-import { Price, Token } from '@pancakeswap/sdk'
+import { Price, Token } from '@sweepstakes/sdk'
 import { formatPrice } from 'utils/formatCurrencyAmount'
 import { Bound } from 'config/constants/types'
 

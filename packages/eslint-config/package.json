@@ -1,5 +1,5 @@
 {
-  "name": "@pancakeswap/eslint-config-pancake",
+  "name": "@sweepstakes/eslint-config-pancake",
   "version": "1.2.0",
   "description": "Eslint config for SweepStakes",
   "main": "lib/index.js",

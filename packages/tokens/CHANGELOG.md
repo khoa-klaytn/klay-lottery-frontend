@@ -1,4 +1,4 @@
-# @pancakeswap/tokens
+# @sweepstakes/tokens
 
 ## 0.5.0
 
@@ -9,8 +9,8 @@
 ### Patch Changes
 
 - Updated dependencies [435a90ac2]
-  - @pancakeswap/sdk@5.6.0
-  - @pancakeswap/chains@0.1.0
+  - @sweepstakes/sdk@5.6.0
+  - @sweepstakes/chains@0.1.0
 
 ## 0.4.4
 
@@ -18,30 +18,30 @@
 
 - 1831356d9: refactor: Move ChainsId usage from Sdk to Chains package
 - Updated dependencies [1831356d9]
-  - @pancakeswap/sdk@5.5.0
+  - @sweepstakes/sdk@5.5.0
 
 ## 0.4.3
 
 ### Patch Changes
 
 - Updated dependencies [2d7e1b3e2]
-  - @pancakeswap/sdk@5.4.2
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.4.2
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.4.2
 
 ### Patch Changes
 
-- 51b77c787: Fix utils deps: `@pancakeswap/utils` now should not dependent on sdk and awgmi
-  - @pancakeswap/token-lists@0.0.8
+- 51b77c787: Fix utils deps: `@sweepstakes/utils` now should not dependent on sdk and awgmi
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.4.1
 
 ### Patch Changes
 
 - Updated dependencies [7a0c21e72]
-  - @pancakeswap/sdk@5.4.1
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.4.1
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.4.0
 
@@ -52,15 +52,15 @@
 ### Patch Changes
 
 - Updated dependencies [868f4d11f]
-  - @pancakeswap/sdk@5.4.0
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.4.0
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.3.1
 
 ### Patch Changes
 
 - d0f9b28a9: Remove invalid dependency
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.3.0
 
@@ -71,31 +71,31 @@
 ### Patch Changes
 
 - Updated dependencies [5e15c611e]
-  - @pancakeswap/sdk@5.3.0
-  - @pancakeswap/utils@4.0.0
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.3.0
+  - @sweepstakes/utils@4.0.0
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.2.3
 
 ### Patch Changes
 
-- @pancakeswap/utils@3.0.3
-- @pancakeswap/token-lists@0.0.8
+- @sweepstakes/utils@3.0.3
+- @sweepstakes/token-lists@0.0.8
 
 ## 0.2.2
 
 ### Patch Changes
 
 - e0a681bc6: Usd native USDC in Arbitrum
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.2.1
 
 ### Patch Changes
 
 - Updated dependencies [3ba496cb1]
-  - @pancakeswap/sdk@5.2.1
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.2.1
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.2.0
 
@@ -106,46 +106,46 @@
 ### Patch Changes
 
 - Updated dependencies [77fc3406a]
-  - @pancakeswap/sdk@5.2.0
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.2.0
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.1.6
 
 ### Patch Changes
 
 - 500adb4f8: Add new tokens
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.1.5
 
 ### Patch Changes
 
 - Updated dependencies [f9fda4ebe]
-  - @pancakeswap/sdk@5.1.0
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/sdk@5.1.0
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.1.4
 
 ### Patch Changes
 
 - Updated dependencies [e31475e6b]
-  - @pancakeswap/token-lists@0.0.8
+  - @sweepstakes/token-lists@0.0.8
 
 ## 0.1.3
 
 ### Patch Changes
 
 - Updated dependencies [938aa75f5]
-  - @pancakeswap/sdk@5.0.0
-  - @pancakeswap/token-lists@0.0.7
+  - @sweepstakes/sdk@5.0.0
+  - @sweepstakes/token-lists@0.0.7
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies [b5dbd2921]
-  - @pancakeswap/sdk@4.0.0
-  - @pancakeswap/token-lists@0.0.7
+  - @sweepstakes/sdk@4.0.0
+  - @sweepstakes/token-lists@0.0.7
 
 ## 0.1.1
 
@@ -162,4 +162,4 @@
 ### Patch Changes
 
 - Updated dependencies [65fbb250a]
-  - @pancakeswap/sdk@3.2.0
+  - @sweepstakes/sdk@3.2.0

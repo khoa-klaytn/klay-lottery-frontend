@@ -1,4 +1,4 @@
-import { ContextApi } from "@pancakeswap/localization";
+import { ContextApi } from "@sweepstakes/localization";
 import { FooterLinkType } from "../../../components/Footer/types";
 
 export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
@@ -16,15 +16,15 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Contributing"),
-        href: "https://docs.pancakeswap.finance/developers/contributing",
+        href: "https://docs.sweepstakes.finance/developers/contributing",
       },
       {
         label: t("Github"),
-        href: "https://github.com/pancakeswap",
+        href: "https://github.com/sweepstakes",
       },
       {
         label: t("Bug Bounty"),
-        href: "https://docs.pancakeswap.finance/developers/bug-bounty",
+        href: "https://docs.sweepstakes.finance/developers/bug-bounty",
       },
     ],
   },
@@ -33,15 +33,15 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Contact"),
-        href: "https://docs.pancakeswap.finance/contact-us/customer-support",
+        href: "https://docs.sweepstakes.finance/contact-us/customer-support",
       },
       {
         label: t("Troubleshooting"),
-        href: "https://docs.pancakeswap.finance/readme/help/troubleshooting",
+        href: "https://docs.sweepstakes.finance/readme/help/troubleshooting",
       },
       {
         label: t("Documentation"),
-        href: "https://docs.pancakeswap.finance/",
+        href: "https://docs.sweepstakes.finance/",
       },
     ],
   },
@@ -50,19 +50,19 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
     items: [
       {
         label: t("Terms Of Service"),
-        href: "https://pancakeswap.finance/terms-of-service",
+        href: "https://sweepstakes.finance/terms-of-service",
       },
       {
         label: t("Blog"),
-        href: "https://blog.pancakeswap.finance/",
+        href: "https://blog.sweepstakes.finance/",
       },
       {
         label: t("Brand Assets"),
-        href: "https://docs.pancakeswap.finance/ecosystem-and-partnerships/brand",
+        href: "https://docs.sweepstakes.finance/ecosystem-and-partnerships/brand",
       },
       {
         label: t("Careers"),
-        href: "https://docs.pancakeswap.finance/team/become-a-chef",
+        href: "https://docs.sweepstakes.finance/team/become-a-chef",
       },
     ],
   },

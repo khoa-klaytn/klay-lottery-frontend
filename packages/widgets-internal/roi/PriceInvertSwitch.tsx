@@ -1,9 +1,9 @@
-import { Currency } from "@pancakeswap/sdk";
+import { Currency } from "@sweepstakes/sdk";
 import { memo } from "react";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { styled } from "styled-components";
 
-import { Flex, Text, Button, SyncAltIcon } from "@pancakeswap/uikit";
+import { Flex, Text, Button, SyncAltIcon } from "@sweepstakes/uikit";
 
 const StyledButton = styled(Button)`
   border-radius: 8px;

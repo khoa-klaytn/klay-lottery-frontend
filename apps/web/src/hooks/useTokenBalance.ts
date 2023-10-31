@@ -1,6 +1,6 @@
-import { ChainId } from '@pancakeswap/chains'
-import { KLAY } from '@pancakeswap/tokens'
-import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
+import { ChainId } from '@sweepstakes/chains'
+import { KLAY } from '@sweepstakes/tokens'
+import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import BigNumber from 'bignumber.js'
 import { useMemo } from 'react'
 

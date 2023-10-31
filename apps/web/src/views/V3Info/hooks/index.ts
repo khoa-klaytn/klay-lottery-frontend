@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { FetchStatus } from 'config/constants/types'
 import dayjs, { ManipulateType } from 'dayjs'
 import { GraphQLClient } from 'graphql-request'

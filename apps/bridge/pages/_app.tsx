@@ -1,4 +1,4 @@
-import { PancakeTheme, ResetCSS, dark, light, ModalProvider, UIKitProvider } from '@pancakeswap/uikit'
+import { PancakeTheme, ResetCSS, dark, light, ModalProvider, UIKitProvider } from '@sweepstakes/uikit'
 import React, { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import Script from 'next/script'
@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Cheaper and faster than Uniswap? Discover SweepStakes, the leading DEX on BNB Smart Chain (BSC) with a lottery for KLAY."
         />
         <meta name="theme-color" content="#1FC7D4" />
-        <meta name="twitter:image" content="https://pancakeswap.finance/images/hero.png" />
+        <meta name="twitter:image" content="https://sweepstakes.finance/images/hero.png" />
         <meta
           name="twitter:description"
           content="The most popular AMM on BSC! Win it in the Lottery, then stake it in Syrup Pools to earn more tokens! NFTs and more on a platform you can trust."

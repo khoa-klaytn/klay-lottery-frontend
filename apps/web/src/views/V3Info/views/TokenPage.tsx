@@ -1,4 +1,4 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   AutoColumn,
   Box,
@@ -15,7 +15,7 @@ import {
   Message,
   MessageText,
   ScanLink,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import Page from 'components/Layout/Page'
 import { TabToggle, TabToggleGroup } from 'components/TabToggle'
 import dayjs from 'dayjs'
@@ -27,7 +27,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { getBlockExploreLink, isAddress } from 'utils'
 import { formatAmount } from 'utils/formatInfoNumbers'
 
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import {
   ChainLinkSupportChains,
   multiChainId,

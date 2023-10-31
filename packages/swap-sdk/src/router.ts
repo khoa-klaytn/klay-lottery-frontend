@@ -1,4 +1,4 @@
-import { TradeType, Token, CurrencyAmount, Currency, Percent } from '@pancakeswap/swap-sdk-core'
+import { TradeType, Token, CurrencyAmount, Currency, Percent } from '@sweepstakes/swap-sdk-core'
 import invariant from 'tiny-invariant'
 import { Address, Hex } from 'viem'
 import { Trade } from './entities'

@@ -1,4 +1,4 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   ArrowBackIcon,
   ArrowForwardIcon,
@@ -8,7 +8,7 @@ import {
   Text,
   Flex,
   ScanLink,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { useChainNameByQuery } from 'state/info/hooks'
 import { multiChainId, subgraphTokenSymbol, ChainLinkSupportChains } from 'state/info/constant'

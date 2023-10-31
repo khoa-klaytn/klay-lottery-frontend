@@ -1,9 +1,9 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { formatNumber } from "@pancakeswap/utils/formatBalance";
+import { useTranslation } from "@sweepstakes/localization";
+import { formatNumber } from "@sweepstakes/utils/formatBalance";
 import { useTheme } from "styled-components";
 
-import { Flex, Heading, Button, Text, AutoRenewIcon, Modal } from "@pancakeswap/uikit";
-import getThemeValue from "@pancakeswap/uikit/util/getThemeValue";
+import { Flex, Heading, Button, Text, AutoRenewIcon, Modal } from "@sweepstakes/uikit";
+import getThemeValue from "@sweepstakes/uikit/util/getThemeValue";
 
 export interface CollectModalProps {
   formattedBalance: string;

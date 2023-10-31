@@ -1,4 +1,4 @@
-import { Percent, Token } from '@pancakeswap/sdk'
+import { Percent, Token } from '@sweepstakes/sdk'
 import { Payments } from './payments'
 
 const recipient = '0x0000000000000000000000000000000000000003'

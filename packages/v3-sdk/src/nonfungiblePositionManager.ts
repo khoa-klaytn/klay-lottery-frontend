@@ -6,7 +6,7 @@ import {
   Currency,
   NativeCurrency,
   validateAndParseAddress,
-} from '@pancakeswap/sdk'
+} from '@sweepstakes/sdk'
 import { type Address, encodeFunctionData, Hex } from 'viem'
 
 import invariant from 'tiny-invariant'

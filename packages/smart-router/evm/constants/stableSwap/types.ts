@@ -1,4 +1,4 @@
-import type { SerializedWrappedToken } from '@pancakeswap/token-lists'
+import type { SerializedWrappedToken } from '@sweepstakes/token-lists'
 import type { Address } from 'viem'
 
 export interface BasePool {

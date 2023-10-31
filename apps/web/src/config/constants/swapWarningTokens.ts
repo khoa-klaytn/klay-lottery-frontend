@@ -1,6 +1,6 @@
-import { Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { bscTokens, ethereumTokens } from '@pancakeswap/tokens'
+import { Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { bscTokens, ethereumTokens } from '@sweepstakes/tokens'
 import { bscWarningTokens } from 'config/constants/warningTokens'
 
 const { alETH } = ethereumTokens

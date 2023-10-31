@@ -1,6 +1,6 @@
-import { Currency, CurrencyAmount, Percent, Price, Token, Trade, TradeType } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { LegacyTradeWithStableSwap as TradeWithStableSwap } from '@pancakeswap/smart-router/legacy-router'
+import { Currency, CurrencyAmount, Percent, Price, Token, Trade, TradeType } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { LegacyTradeWithStableSwap as TradeWithStableSwap } from '@sweepstakes/smart-router/legacy-router'
 import BigNumber from 'bignumber.js'
 import { Address } from 'wagmi'
 // a list of tokens by chain

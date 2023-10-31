@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Flex, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Flex, Text, useMatchBreakpoints } from '@sweepstakes/uikit'
 import Image from 'next/legacy/image'
 import { styled } from 'styled-components'
 import useSWRImmutable from 'swr/immutable'

@@ -1,4 +1,4 @@
-import { Token, CurrencyAmount } from '@pancakeswap/sdk'
+import { Token, CurrencyAmount } from '@sweepstakes/sdk'
 import { Address, erc20ABI } from 'wagmi'
 import { useMemo } from 'react'
 

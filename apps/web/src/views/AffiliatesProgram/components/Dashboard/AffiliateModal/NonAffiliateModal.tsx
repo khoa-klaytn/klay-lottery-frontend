@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
-import { ModalV2, Modal, Flex, Text, Checkbox, Button, Link } from '@pancakeswap/uikit'
+import { ModalV2, Modal, Flex, Text, Checkbox, Button, Link } from '@sweepstakes/uikit'
 import { useAccount } from 'wagmi'
 import { useAtom } from 'jotai'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import useAuthAffiliateExist from 'views/AffiliatesProgram/hooks/useAuthAffiliateExist'
 import atomWithStorageWithErrorCatch from 'utils/atomWithStorageWithErrorCatch'
 import useUserExist from 'views/AffiliatesProgram/hooks/useUserExist'
@@ -50,7 +50,7 @@ const NonAffiliateModal = () => {
                 <Text display="inline-block" as="span" ml="4px">
                   <Link
                     external
-                    href="https://docs.pancakeswap.finance/ecosystem-and-partnerships/affiliate-program/terms-and-conditions"
+                    href="https://docs.sweepstakes.finance/ecosystem-and-partnerships/affiliate-program/terms-and-conditions"
                   >
                     {t('terms and conditions')}
                   </Link>

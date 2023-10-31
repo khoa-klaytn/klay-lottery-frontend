@@ -11,7 +11,7 @@ import isEmpty from 'lodash/isEmpty'
 import { useAccount } from 'wagmi'
 
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { FeeAmount } from '@pancakeswap/v3-sdk'
+import { FeeAmount } from '@sweepstakes/v3-sdk'
 import { Hash } from 'viem'
 
 import useAccountActiveChain from 'hooks/useAccountActiveChain'

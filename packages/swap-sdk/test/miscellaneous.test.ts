@@ -1,5 +1,5 @@
-import { Token, CurrencyAmount, sortedInsert, InsufficientInputAmountError } from '@pancakeswap/swap-sdk-core'
-import { ChainId } from '@pancakeswap/chains'
+import { Token, CurrencyAmount, sortedInsert, InsufficientInputAmountError } from '@sweepstakes/swap-sdk-core'
+import { ChainId } from '@sweepstakes/chains'
 import { Pair } from '../src/entities'
 
 describe('miscellaneous', () => {

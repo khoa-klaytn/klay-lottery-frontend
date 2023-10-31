@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import sumBy from 'lodash/sumBy'
-import { Card, CardBody, CardHeader, Flex, Heading, PrizeIcon } from '@pancakeswap/uikit'
+import { Card, CardBody, CardHeader, Flex, Heading, PrizeIcon } from '@sweepstakes/uikit'
 import { useProfile } from 'state/profile/hooks'
 import { Achievement } from 'state/types'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import AchievementRow from './AchievementRow'
 
 const ClaimPointsCallout: React.FC<React.PropsWithChildren<{ onSuccess?: () => void }>> = ({ onSuccess = null }) => {

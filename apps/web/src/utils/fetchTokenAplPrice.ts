@@ -1,7 +1,7 @@
 import { getViemClients } from 'utils/viem'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import BigNumber from 'bignumber.js'
-import { getBalanceAmount } from '@pancakeswap/utils/formatBalance'
+import { getBalanceAmount } from '@sweepstakes/utils/formatBalance'
 
 // Contract will return price with 10^8, although ALP token decimals is 18.
 const TOKEN_DECIMALS = 8

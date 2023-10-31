@@ -1,4 +1,4 @@
-import { Percent, Router, SwapParameters, Trade, TradeType, Currency } from '@pancakeswap/sdk'
+import { Percent, Router, SwapParameters, Trade, TradeType, Currency } from '@sweepstakes/sdk'
 import { useMemo } from 'react'
 import { BIPS_BASE } from 'config/constants/exchange'
 import { INITIAL_ALLOWED_SLIPPAGE } from 'config/constants'

@@ -1,5 +1,5 @@
-import { Currency } from '@pancakeswap/sdk'
-import { Text, Heading } from '@pancakeswap/uikit'
+import { Currency } from '@sweepstakes/sdk'
+import { Text, Heading } from '@sweepstakes/uikit'
 import { LightGreyCard, LightCardProps } from 'components/Card'
 
 interface RangePriceSectionProps extends LightCardProps {

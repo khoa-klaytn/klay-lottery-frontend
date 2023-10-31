@@ -2,11 +2,11 @@
   "name": "routing-api",
   "version": "0.3.0",
   "dependencies": {
-    "@pancakeswap/chains": "workspace:*",
-    "@pancakeswap/sdk": "workspace:*",
-    "@pancakeswap/smart-router": "workspace:*",
-    "@pancakeswap/v3-sdk": "workspace:*",
-    "@pancakeswap/worker-utils": "workspace:*",
+    "@sweepstakes/chains": "workspace:*",
+    "@sweepstakes/sdk": "workspace:*",
+    "@sweepstakes/smart-router": "workspace:*",
+    "@sweepstakes/v3-sdk": "workspace:*",
+    "@sweepstakes/worker-utils": "workspace:*",
     "graphql-request": "^5.0.0",
     "itty-router": "^2.6.1",
     "itty-router-extras": "^0.4.2",
@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.10.0",
-    "@pancakeswap/tsconfig": "workspace:*",
+    "@sweepstakes/tsconfig": "workspace:*",
     "@types/itty-router-extras": "^0.4.0",
     "typescript": "^5.1.3",
     "wrangler": "2.13.0"

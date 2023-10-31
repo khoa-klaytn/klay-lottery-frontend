@@ -11,13 +11,13 @@ To run the tests, follow these steps. You must have at least node v10 and [pnpm]
 First clone the repository:
 
 ```sh
-git clone https://github.com/pancakeswap/pancake-swap-sdk.git
+git clone https://github.com/sweepstakes/pancake-swap-sdk.git
 ```
 
-Move into the pancakeswap-sdk working directory
+Move into the sweepstakes-sdk working directory
 
 ```sh
-cd pancakeswap-sdk/
+cd sweepstakes-sdk/
 ```
 
 Install dependencies

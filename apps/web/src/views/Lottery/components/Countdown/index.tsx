@@ -1,5 +1,5 @@
-import { Flex, Heading, Skeleton } from '@pancakeswap/uikit'
-import getTimePeriods from '@pancakeswap/utils/getTimePeriods'
+import { Flex, Heading, Skeleton } from '@sweepstakes/uikit'
+import getTimePeriods from '@sweepstakes/utils/getTimePeriods'
 import Timer from './Timer'
 import useNextEventCountdown from '../../hooks/useNextEventCountdown'
 

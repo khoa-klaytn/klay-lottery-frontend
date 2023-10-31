@@ -1,4 +1,4 @@
-import { toBigInt } from '@pancakeswap/utils/toBigInt'
+import { toBigInt } from '@sweepstakes/utils/toBigInt'
 
 import { GetGasLimitParams, getDefaultGasBuffer, getGasLimit } from './getGasLimit'
 import { MulticallRequestWithGas } from './types'

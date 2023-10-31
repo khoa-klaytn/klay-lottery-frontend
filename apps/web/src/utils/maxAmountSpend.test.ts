@@ -1,4 +1,4 @@
-import { CurrencyAmount, Native } from '@pancakeswap/sdk'
+import { CurrencyAmount, Native } from '@sweepstakes/sdk'
 import { maxAmountSpend } from './maxAmountSpend'
 
 describe('maxAmountSpend', () => {

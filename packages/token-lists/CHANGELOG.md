@@ -1,4 +1,4 @@
-# @pancakeswap/token-lists
+# @sweepstakes/token-lists
 
 ## 0.0.8
 
@@ -11,7 +11,7 @@
 ### Patch Changes
 
 - Updated dependencies [b5dbd2921]
-  - @pancakeswap/swap-sdk-core@1.0.0
+  - @sweepstakes/swap-sdk-core@1.0.0
 
 ## 0.0.6
 

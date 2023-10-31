@@ -10,11 +10,11 @@ import {
   NextLinkFromReactRouter,
   Message,
   MessageText,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useCallback, useMemo } from 'react'
 import {} from 'hooks/useSwitchNetwork'
-import { ChainId } from '@pancakeswap/chains'
-import { useTranslation } from '@pancakeswap/localization'
+import { ChainId } from '@sweepstakes/chains'
+import { useTranslation } from '@sweepstakes/localization'
 import { useRouter } from 'next/router'
 import { styled } from 'styled-components'
 import Search from 'views/Info/components/InfoSearch'

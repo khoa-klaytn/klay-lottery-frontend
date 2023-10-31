@@ -1,4 +1,4 @@
-import { Button, Input } from '@pancakeswap/uikit'
+import { Button, Input } from '@sweepstakes/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useKlayLotteryContract } from 'hooks/useContract'

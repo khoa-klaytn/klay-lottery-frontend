@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { BigintIsh, Currency } from '@pancakeswap/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { BigintIsh, Currency } from '@sweepstakes/sdk'
 import memoize from 'lodash/memoize.js'
 import type { Address } from 'viem'
 
@@ -94,7 +94,7 @@ const createFallbackTvlRefGetter = () => {
     if (cached) {
       return cached
     }
-    const res = await fetch(`https://routing-api.pancakeswap.com/v0/v3-pools-tvl/${currencyA.chainId}`)
+    const res = await fetch(`https://routing-api.sweepstakes.com/v0/v3-pools-tvl/${currencyA.chainId}`)
     const refs: V3PoolTvlReference[] = await res.json()
     cache.set(currencyA.chainId, refs)
     return refs

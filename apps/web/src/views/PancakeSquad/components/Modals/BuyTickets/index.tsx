@@ -13,11 +13,11 @@ import {
   ModalProps,
   ModalTitle,
   Text,
-} from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+} from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import useTheme from 'hooks/useTheme'
 import { useState } from 'react'
-import { formatBigInt } from '@pancakeswap/utils/formatBalance'
+import { formatBigInt } from '@sweepstakes/utils/formatBalance'
 import { SaleStatusEnum } from 'views/PancakeSquad/types'
 
 interface BuyTicketsModalProps extends ModalProps {

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useTranslation } from "@pancakeswap/localization";
-import { Button, Text, Flex, Checkbox, InjectedModalProps, Modal, Message } from "@pancakeswap/uikit";
+import { useTranslation } from "@sweepstakes/localization";
+import { Button, Text, Flex, Checkbox, InjectedModalProps, Modal, Message } from "@sweepstakes/uikit";
 
 interface ExpertModalProps extends InjectedModalProps {
   setShowConfirmExpertModal: (show: boolean) => void;

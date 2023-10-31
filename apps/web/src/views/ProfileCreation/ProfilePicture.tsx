@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Button, Card, CardBody, Heading, Text, useToast } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Button, Card, CardBody, Heading, Text, useToast } from '@sweepstakes/uikit'
 import { useEffect, useState } from 'react'
 import { usePublicClient } from 'wagmi'
 

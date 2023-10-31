@@ -1,4 +1,4 @@
-# @pancakeswap/wagmi
+# @sweepstakes/wagmi
 
 ## 2.0.2
 

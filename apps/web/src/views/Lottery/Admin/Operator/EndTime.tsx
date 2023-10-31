@@ -1,4 +1,4 @@
-import { Input } from '@pancakeswap/uikit'
+import { Input } from '@sweepstakes/uikit'
 import { useCallback, forwardRef, type ForwardedRef, useRef, useImperativeHandle, ChangeEvent } from 'react'
 import { HasSetCustomValidity, setRefCustomValidity } from 'utils/customValidity'
 

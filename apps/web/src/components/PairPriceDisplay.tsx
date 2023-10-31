@@ -1,4 +1,4 @@
-import { Flex, Skeleton, Text, FlexGap, FlexGapProps } from '@pancakeswap/uikit'
+import { Flex, Skeleton, Text, FlexGap, FlexGapProps } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
 import { formatAmount, formatAmountNotation, tokenPrecisionStyle } from 'utils/formatInfoNumbers'
 

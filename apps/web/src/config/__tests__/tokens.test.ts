@@ -1,5 +1,5 @@
-import { Token } from '@pancakeswap/sdk'
-import { bscTokens, ethereumTokens } from '@pancakeswap/tokens'
+import { Token } from '@sweepstakes/sdk'
+import { bscTokens, ethereumTokens } from '@sweepstakes/tokens'
 import { erc20ABI } from 'wagmi'
 import map from 'lodash/map'
 import slice from 'lodash/slice'

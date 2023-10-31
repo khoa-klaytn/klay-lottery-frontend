@@ -1,4 +1,4 @@
-import { Currency } from '@pancakeswap/sdk'
+import { Currency } from '@sweepstakes/sdk'
 import {
   AddIcon,
   Button,
@@ -8,9 +8,9 @@ import {
   NextLinkFromReactRouter,
   AutoColumn,
   ColumnCenter,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useAccount } from 'wagmi'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { BIG_INT_ZERO } from 'config/constants/exchange'
 import useNativeCurrency from 'hooks/useNativeCurrency'
 import { useCallback, useEffect, useState } from 'react'

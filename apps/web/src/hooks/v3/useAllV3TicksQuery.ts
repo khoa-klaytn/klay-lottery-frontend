@@ -2,9 +2,9 @@ import useSWRImmutable from 'swr/immutable'
 import { useMemo } from 'react'
 import { v3Clients } from 'utils/graphql'
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { gql } from 'graphql-request'
-import { TickMath } from '@pancakeswap/v3-sdk'
+import { TickMath } from '@sweepstakes/v3-sdk'
 
 export type AllV3TicksQuery = {
   ticks: Array<{

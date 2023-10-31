@@ -1,7 +1,7 @@
-import getTimePeriods from "@pancakeswap/utils/getTimePeriods";
-import { useTranslation } from "@pancakeswap/localization";
+import getTimePeriods from "@sweepstakes/utils/getTimePeriods";
+import { useTranslation } from "@sweepstakes/localization";
 import { useMemo } from "react";
-import { Text, Flex, useTooltip, TimerIcon } from "@pancakeswap/uikit";
+import { Text, Flex, useTooltip, TimerIcon } from "@sweepstakes/uikit";
 
 import { CellContent, BaseCell } from "./BaseCell";
 import { DeserializedPool } from "../types";

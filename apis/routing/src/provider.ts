@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { OnChainProvider, SubgraphProvider } from '@pancakeswap/smart-router/evm'
+import { ChainId } from '@sweepstakes/chains'
+import { OnChainProvider, SubgraphProvider } from '@sweepstakes/smart-router/evm'
 import { createPublicClient, http } from 'viem'
 import { bsc, bscTestnet, goerli, mainnet } from 'viem/chains'
 import { GraphQLClient } from 'graphql-request'

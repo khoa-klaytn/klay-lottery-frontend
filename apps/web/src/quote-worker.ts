@@ -1,4 +1,4 @@
-import { SmartRouter } from '@pancakeswap/smart-router/evm'
+import { SmartRouter } from '@sweepstakes/smart-router/evm'
 import { log } from 'next-axiom'
 import { Call } from 'state/multicall/actions'
 import { fetchChunk } from 'state/multicall/fetchChunk'

@@ -1,7 +1,7 @@
 import { LotteryStatus, LotteryTicket } from 'config/constants/types'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { LotteryResponse } from 'state/types'
-import { bigIntToSerializedBigNumber } from '@pancakeswap/utils/bigNumber'
+import { bigIntToSerializedBigNumber } from '@sweepstakes/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
 import { type Address, ContractFunctionResult, PublicClient } from 'viem'
 

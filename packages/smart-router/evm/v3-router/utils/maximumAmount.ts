@@ -1,4 +1,4 @@
-import { Percent, TradeType, Fraction, ONE, CurrencyAmount } from '@pancakeswap/sdk'
+import { Percent, TradeType, Fraction, ONE, CurrencyAmount } from '@sweepstakes/sdk'
 
 import { SmartRouterTrade } from '../types'
 

@@ -1,5 +1,5 @@
-import { Currency, Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Currency, Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { gql } from 'graphql-request'
 import { getAddress, Address } from 'viem'
 
@@ -156,7 +156,7 @@ export const getCommonTokenPricesByLlma = createCommonTokenPriceProvider<BySubgr
 
 export const getCommonTokenPricesByWalletApi = createCommonTokenPriceProvider<BySubgraphEssentials>(
   createGetTokenPriceFromLlmaWithCache({
-    endpoint: 'https://alpha.wallet-api.pancakeswap.com/v0/prices',
+    endpoint: 'https://alpha.wallet-api.sweepstakes.com/v0/prices',
   }),
 )
 

@@ -2,7 +2,7 @@ import noop from "lodash/noop";
 import React, { useState } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserRouter, Link, MemoryRouter } from "react-router-dom";
-import { Language } from "@pancakeswap/localization";
+import { Language } from "@sweepstakes/localization";
 import Box from "../../components/Box/Box";
 import Flex from "../../components/Box/Flex";
 import Button from "../../components/Button/Button";
@@ -99,7 +99,7 @@ const defaultProps = {
     </>
   ),
   activeItem: "/swap",
-  activeSubItem: "https://exchange.pancakeswap.finance",
+  activeSubItem: "https://exchange.sweepstakes.finance",
   buyCakeLabel: "Buy KLAY",
 };
 
@@ -203,7 +203,7 @@ export const NotConnected: React.FC<React.PropsWithChildren> = () => {
         subLinks={links[0].items as SubMenuItemsType[]}
         footerLinks={footerLinks}
         activeItem="/swap"
-        activeSubItem="https://exchange.pancakeswap.finance"
+        activeSubItem="https://exchange.sweepstakes.finance"
         buyCakeLabel="Buy KLAY"
       >
         <div>
@@ -236,7 +236,7 @@ export const WithoutConnectButton: React.FC<React.PropsWithChildren> = () => {
         footerLinks={footerLinks}
         subLinks={links[0].items as SubMenuItemsType[]}
         activeItem="/swap"
-        activeSubItem="https://exchange.pancakeswap.finance"
+        activeSubItem="https://exchange.sweepstakes.finance"
         buyCakeLabel="Buy KLAY"
       >
         <div>
@@ -262,7 +262,7 @@ export const WithSubmenuSelected: React.FC<React.PropsWithChildren> = () => {
         subLinks={links[0].items as SubMenuItemsType[]}
         footerLinks={footerLinks}
         activeItem="/swap"
-        activeSubItem="https://exchange.pancakeswap.finance"
+        activeSubItem="https://exchange.sweepstakes.finance"
         buyCakeLabel="Buy KLAY"
       >
         <div>

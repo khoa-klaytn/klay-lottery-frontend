@@ -2,7 +2,7 @@ import { LotteryStatus } from 'config/constants/types'
 import { useCallback, useState } from 'react'
 import { handleCustomError } from 'utils/viem'
 import { BaseError } from 'viem'
-import { Button } from '@pancakeswap/uikit'
+import { Button } from '@sweepstakes/uikit'
 import { EMsg } from '../EMsg'
 
 export default function CloseLottery({ callWithGasPrice, lotteryContract, lotteryId, status }) {

@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { IconButton, ArrowForwardIcon, ArrowBackIcon, ArrowLastIcon, Flex, Heading, Input } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { IconButton, ArrowForwardIcon, ArrowBackIcon, ArrowLastIcon, Flex, Heading, Input } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { useCallback } from 'react'
 
 const StyledInput = styled(Input)`

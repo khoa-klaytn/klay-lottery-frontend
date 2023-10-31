@@ -1,5 +1,5 @@
-import { BigintIsh, Currency, CurrencyAmount, TradeType, ZERO } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { BigintIsh, Currency, CurrencyAmount, TradeType, ZERO } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 import { computeAllRoutes, getBestRouteCombinationByQuotes } from './functions'
 import { createGasModel } from './gasModel'

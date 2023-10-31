@@ -1,6 +1,6 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Swap } from '@pancakeswap/widgets-internal'
-import { ChainId } from '@pancakeswap/chains'
+import { useTranslation } from '@sweepstakes/localization'
+import { Swap } from '@sweepstakes/widgets-internal'
+import { ChainId } from '@sweepstakes/chains'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { EXCHANGE_HELP_URLS } from 'config/constants'
 
@@ -23,7 +23,7 @@ const Page: React.FC<
   const { chainId } = useActiveChainId()
   const isBSC = chainId === ChainId.BSC
   const externalText = isBSC ? t('Bridge assets to BNB Chain') : ''
-  const externalLinkUrl = isBSC ? 'https://bridge.pancakeswap.finance/' : ''
+  const externalLinkUrl = isBSC ? 'https://bridge.sweepstakes.finance/' : ''
 
   return (
     <Swap.Page

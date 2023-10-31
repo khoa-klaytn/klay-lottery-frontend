@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { QuestionHelper, Tag, TagProps, Flex } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { QuestionHelper, Tag, TagProps, Flex } from '@sweepstakes/uikit'
 import { ReactNode } from 'react'
 
 export function RangeTag({

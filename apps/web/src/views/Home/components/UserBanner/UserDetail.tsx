@@ -9,13 +9,13 @@ import {
   VisibilityOff,
   VisibilityOn,
   ProfileAvatar,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useAccount } from 'wagmi'
 import { styled } from 'styled-components'
 import { useProfile } from 'state/profile/hooks'
 import ProfileAvatarWithTeam from 'components/ProfileAvatarWithTeam'
-import { useTranslation } from '@pancakeswap/localization'
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import { useTranslation } from '@sweepstakes/localization'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import useGetUsernameWithVisibility from 'hooks/useUsernameWithVisibility'
 import { useDomainNameForAddress } from 'hooks/useDomain'
 

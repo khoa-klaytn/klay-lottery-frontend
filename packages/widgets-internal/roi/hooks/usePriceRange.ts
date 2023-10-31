@@ -1,4 +1,4 @@
-import { Currency, ERC20Token, Price, Token } from "@pancakeswap/sdk";
+import { Currency, ERC20Token, Price, Token } from "@sweepstakes/sdk";
 import {
   FeeAmount,
   nearestUsableTick,
@@ -6,9 +6,9 @@ import {
   TICK_SPACINGS,
   tickToPrice,
   priceToClosestTick,
-} from "@pancakeswap/v3-sdk";
+} from "@sweepstakes/v3-sdk";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { formatPrice } from "@pancakeswap/utils/formatFractions";
+import { formatPrice } from "@sweepstakes/utils/formatFractions";
 
 import { tryParsePrice, tryParseTick } from "../utils";
 import { Bound } from "../../swap/LiquidityChartRangeInput";

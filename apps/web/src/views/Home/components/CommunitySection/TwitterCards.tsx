@@ -1,4 +1,4 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   BarChartIcon,
   FavoriteBorderIcon,
@@ -9,7 +9,7 @@ import {
   Text,
   VerifiedIcon,
   useMatchBreakpoints,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import useTheme from 'hooks/useTheme'
 import { useMemo } from 'react'
 import { styled } from 'styled-components'
@@ -157,7 +157,7 @@ export const BlogCard: React.FC = () => {
     <Wrapper
       onClick={() => {
         window.open(
-          `https://blog.pancakeswap.finance/articles/${articlesData?.data?.[0]?.slug ?? ''}`,
+          `https://blog.sweepstakes.finance/articles/${articlesData?.data?.[0]?.slug ?? ''}`,
           '_blank',
           'noopener noreferrer',
         )

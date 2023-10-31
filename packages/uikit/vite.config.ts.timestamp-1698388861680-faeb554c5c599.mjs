@@ -5,7 +5,7 @@ import dts from "file:///Users/floer/Projects/klay-lottery/frontend/node_modules
 
 // package.json
 var package_default = {
-  name: "@pancakeswap/uikit",
+  name: "@sweepstakes/uikit",
   version: "0.64.0",
   description: "Set of UI components for pancake projects",
   type: "module",
@@ -57,9 +57,9 @@ var package_default = {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
-    "@pancakeswap/hooks": "workspace:*",
-    "@pancakeswap/utils": "workspace:*",
-    "@pancakeswap/chains": "workspace:*",
+    "@sweepstakes/hooks": "workspace:*",
+    "@sweepstakes/utils": "workspace:*",
+    "@sweepstakes/chains": "workspace:*",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@rollup/plugin-url": "^6.0.0",
@@ -130,8 +130,8 @@ var package_default = {
     "styled-components": "^6.0.7"
   },
   dependencies: {
-    "@pancakeswap/hooks": "workspace:*",
-    "@pancakeswap/localization": "workspace:*",
+    "@sweepstakes/hooks": "workspace:*",
+    "@sweepstakes/localization": "workspace:*",
     "@popperjs/core": "^2.9.2",
     "@radix-ui/react-dismissable-layer": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.0",

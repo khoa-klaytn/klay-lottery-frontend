@@ -1,6 +1,6 @@
-import { Currency, Pair, Price } from '@pancakeswap/sdk'
-import { Pool as SDKV3Pool, computePoolAddress } from '@pancakeswap/v3-sdk'
-import tryParseAmount from '@pancakeswap/utils/tryParseAmount'
+import { Currency, Pair, Price } from '@sweepstakes/sdk'
+import { Pool as SDKV3Pool, computePoolAddress } from '@sweepstakes/v3-sdk'
+import tryParseAmount from '@sweepstakes/utils/tryParseAmount'
 import memoize from 'lodash/memoize.js'
 import type { Address } from 'viem'
 

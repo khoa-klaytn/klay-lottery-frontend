@@ -1,5 +1,5 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { Spinner, Text, Box, Flex, TooltipText, AutoColumn, ColumnCenter, useTooltip } from "@pancakeswap/uikit";
+import { useTranslation } from "@sweepstakes/localization";
+import { Spinner, Text, Box, Flex, TooltipText, AutoColumn, ColumnCenter, useTooltip } from "@sweepstakes/uikit";
 
 interface ApproveModalContentProps {
   title: string;

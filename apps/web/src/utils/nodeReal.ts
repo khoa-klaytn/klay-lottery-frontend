@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 
 export const getNodeRealUrl = (networkName: string) => {
   let host = null

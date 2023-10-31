@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { CHAINS } from 'config/chains'
 import { PUBLIC_NODES } from 'config/nodes'

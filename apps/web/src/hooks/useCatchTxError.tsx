@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { useToast } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { useToast } from '@sweepstakes/uikit'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import { useCallback, useState } from 'react'
 import { WaitForTransactionResult, SendTransactionResult } from 'wagmi/actions'

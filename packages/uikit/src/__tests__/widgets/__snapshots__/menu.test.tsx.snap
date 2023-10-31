@@ -1154,7 +1154,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               class="c26"
-              href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+              href="https://sweepstakes.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
               target="_blank"
             >
               <svg
@@ -2308,7 +2308,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/contact-us"
+              href="https://docs.sweepstakes.finance/contact-us"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2321,7 +2321,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://blog.pancakeswap.finance/"
+              href="https://blog.sweepstakes.finance/"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2334,7 +2334,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/contact-us/telegram"
+              href="https://docs.sweepstakes.finance/contact-us/telegram"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2347,7 +2347,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/tokenomics/cake"
+              href="https://docs.sweepstakes.finance/tokenomics/cake"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2369,7 +2369,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c15 c13"
               data-theme="dark"
-              href="https://pancakeswap.creator-spring.com/"
+              href="https://sweepstakes.creator-spring.com/"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2391,7 +2391,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="Support https://docs.pancakeswap.finance/contact-us/customer-support"
+              href="Support https://docs.sweepstakes.finance/contact-us/customer-support"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2404,7 +2404,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/help/troubleshooting"
+              href="https://docs.sweepstakes.finance/help/troubleshooting"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2417,7 +2417,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/get-started"
+              href="https://docs.sweepstakes.finance/get-started"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2439,7 +2439,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://github.com/pancakeswap"
+              href="https://github.com/sweepstakes"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2452,7 +2452,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance"
+              href="https://docs.sweepstakes.finance"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2465,7 +2465,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://app.gitbook.com/@pancakeswap-1/s/pancakeswap/code/bug-bounty"
+              href="https://app.gitbook.com/@sweepstakes-1/s/sweepstakes/code/bug-bounty"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2478,7 +2478,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited"
+              href="https://docs.sweepstakes.finance/help/faq#is-sweepstakes-safe-has-sweepstakes-been-audited"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2491,7 +2491,7 @@ exports[`renders correctly 1`] = `
             <a
               class="c12 c13"
               data-theme="dark"
-              href="https://docs.pancakeswap.finance/hiring/become-a-chef"
+              href="https://docs.sweepstakes.finance/hiring/become-a-chef"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2542,7 +2542,7 @@ exports[`renders correctly 1`] = `
         <a
           aria-label="Twitter"
           class="c20 c13"
-          href="https://twitter.com/pancakeswap"
+          href="https://twitter.com/sweepstakes"
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -2581,7 +2581,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="English"
               class="c26 c13"
-              href="https://t.me/pancakeswap"
+              href="https://t.me/sweepstakes"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2590,7 +2590,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Bahasa Indonesia"
               class="c26 c13"
-              href="https://t.me/pancakeswapIndonesia"
+              href="https://t.me/sweepstakesIndonesia"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2599,7 +2599,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="中文"
               class="c26 c13"
-              href="https://t.me/pancakeswap_CN"
+              href="https://t.me/sweepstakes_CN"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2617,7 +2617,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Italiano"
               class="c26 c13"
-              href="https://t.me/pancakeswap_Ita"
+              href="https://t.me/sweepstakes_Ita"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2626,7 +2626,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="русский"
               class="c26 c13"
-              href="https://t.me/pancakeswap_ru"
+              href="https://t.me/sweepstakes_ru"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2635,7 +2635,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Türkiye"
               class="c26 c13"
-              href="https://t.me/pancakeswapturkiye"
+              href="https://t.me/sweepstakesturkiye"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2644,7 +2644,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Português"
               class="c26 c13"
-              href="https://t.me/pancakeswapPortuguese"
+              href="https://t.me/sweepstakesPortuguese"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2653,7 +2653,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Español"
               class="c26 c13"
-              href="https://t.me/pancakeswapES"
+              href="https://t.me/sweepstakesES"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2662,7 +2662,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="日本語"
               class="c26 c13"
-              href="https://t.me/pancakeswapJP"
+              href="https://t.me/sweepstakesJP"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2671,7 +2671,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Français"
               class="c26 c13"
-              href="https://t.me/pancakeswapFR"
+              href="https://t.me/sweepstakesFR"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2680,7 +2680,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Deutsch"
               class="c26 c13"
-              href="https://t.me/pancakeswap_DE"
+              href="https://t.me/sweepstakes_DE"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2689,7 +2689,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Filipino"
               class="c26 c13"
-              href="https://t.me/pancakeswap_PH"
+              href="https://t.me/sweepstakes_PH"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2698,7 +2698,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="ქართული ენა"
               class="c26 c13"
-              href="https://t.me/pancakeswapGeorgia"
+              href="https://t.me/sweepstakesGeorgia"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2707,7 +2707,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="हिन्दी"
               class="c26 c13"
-              href="https://t.me/pancakeswap_INDIA"
+              href="https://t.me/sweepstakes_INDIA"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2727,7 +2727,7 @@ exports[`renders correctly 1`] = `
         <a
           aria-label="Reddit"
           class="c20 c13"
-          href="https://reddit.com/r/pancakeswap"
+          href="https://reddit.com/r/sweepstakes"
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -2753,7 +2753,7 @@ exports[`renders correctly 1`] = `
         <a
           aria-label="Instagram"
           class="c20 c13"
-          href="https://instagram.com/pancakeswap_official"
+          href="https://instagram.com/sweepstakes_official"
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -2776,7 +2776,7 @@ exports[`renders correctly 1`] = `
         <a
           aria-label="Github"
           class="c20 c13"
-          href="https://github.com/pancakeswap/"
+          href="https://github.com/sweepstakes/"
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -2798,7 +2798,7 @@ exports[`renders correctly 1`] = `
         <a
           aria-label="Discord"
           class="c20 c13"
-          href="https://discord.gg/pancakeswap"
+          href="https://discord.gg/sweepstakes"
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -2818,7 +2818,7 @@ exports[`renders correctly 1`] = `
         <a
           aria-label="Youtube"
           class="c27 c13"
-          href="https://www.youtube.com/@pancakeswap_official"
+          href="https://www.youtube.com/@sweepstakes_official"
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -3154,7 +3154,7 @@ exports[`renders correctly 1`] = `
           >
             <a
               class="c49"
-              href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+              href="https://sweepstakes.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
               target="_blank"
             >
               <svg
@@ -3218,7 +3218,7 @@ exports[`renders correctly 1`] = `
           <a
             class="c52"
             data-theme="dark"
-            href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+            href="https://sweepstakes.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
             scale="sm"
             target="_blank"
             variant="primary"

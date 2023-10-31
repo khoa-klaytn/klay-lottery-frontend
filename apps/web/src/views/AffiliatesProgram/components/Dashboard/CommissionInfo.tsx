@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
-import { useTranslation, Trans } from '@pancakeswap/localization'
+import { useTranslation, Trans } from '@sweepstakes/localization'
 import { styled } from 'styled-components'
-import { Box, Card, Flex, Text } from '@pancakeswap/uikit'
+import { Box, Card, Flex, Text } from '@sweepstakes/uikit'
 import BigNumber from 'bignumber.js'
 import { useKlayPrice } from 'hooks/useKlayPrice'
-import { formatNumber } from '@pancakeswap/utils/formatBalance'
+import { formatNumber } from '@sweepstakes/utils/formatBalance'
 import { InfoDetail } from 'views/AffiliatesProgram/hooks/useAuthAffiliate'
 import PieChartContainer from './PieChartContainer'
 

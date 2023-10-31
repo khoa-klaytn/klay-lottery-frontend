@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Card, Heading, Text } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Card, Heading, Text } from '@sweepstakes/uikit'
 import Page from 'components/Layout/Page'
 import useInfoUserSavedTokensAndPools from 'hooks/useInfoUserSavedTokensAndPoolsList'
 import { useMemo } from 'react'

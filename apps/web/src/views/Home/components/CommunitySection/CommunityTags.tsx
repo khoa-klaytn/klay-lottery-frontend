@@ -6,7 +6,7 @@ import {
   TelegramIcon,
   TwitterIcon,
   YoutubeIcon,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { cloneElement } from 'react'
 import { styled } from 'styled-components'
 
@@ -41,12 +41,12 @@ const CommunityTag = styled.div`
   }
 `
 const communityData = [
-  { icon: <TwitterIcon />, href: 'https://twitter.com/pancakeswap', alt: 'TwitterIcon' },
-  { icon: <TelegramIcon />, href: 'https://t.me/pancakeswap', alt: 'TelegramIcon' },
-  { icon: <DiscordIcon />, href: 'https://discord.gg/pancakeswap', alt: 'DiscordIcon' },
-  { icon: <InstagramIcon />, href: 'https://www.instagram.com/pancakeswap_official/', alt: 'InstagramIcon' },
-  { icon: <RedditIcon />, href: 'https://www.reddit.com/r/pancakeswap/', alt: 'RedditIcon' },
-  { icon: <YoutubeIcon />, href: 'https://www.youtube.com/@pancakeswap_official', alt: 'YoutubeIcon' },
+  { icon: <TwitterIcon />, href: 'https://twitter.com/sweepstakes', alt: 'TwitterIcon' },
+  { icon: <TelegramIcon />, href: 'https://t.me/sweepstakes', alt: 'TelegramIcon' },
+  { icon: <DiscordIcon />, href: 'https://discord.gg/sweepstakes', alt: 'DiscordIcon' },
+  { icon: <InstagramIcon />, href: 'https://www.instagram.com/sweepstakes_official/', alt: 'InstagramIcon' },
+  { icon: <RedditIcon />, href: 'https://www.reddit.com/r/sweepstakes/', alt: 'RedditIcon' },
+  { icon: <YoutubeIcon />, href: 'https://www.youtube.com/@sweepstakes_official', alt: 'YoutubeIcon' },
 ]
 
 export const CommunityTags: React.FC = () => {

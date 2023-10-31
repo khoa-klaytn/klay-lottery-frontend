@@ -1,6 +1,6 @@
-import { ChainId } from '@pancakeswap/chains'
-import { DEPLOYER_ADDRESSES } from '@pancakeswap/v3-sdk'
-import { V3_QUOTER_ADDRESSES } from '@pancakeswap/smart-router/evm'
+import { ChainId } from '@sweepstakes/chains'
+import { DEPLOYER_ADDRESSES } from '@sweepstakes/v3-sdk'
+import { V3_QUOTER_ADDRESSES } from '@sweepstakes/smart-router/evm'
 import type { Address } from 'viem'
 
 export default {

@@ -1,5 +1,5 @@
-import { Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import {
   ethereumTokens,
   bscTokens,
@@ -20,7 +20,7 @@ import {
   scrollSepoliaTokens,
   klaytnTokens,
   klaytnTestnetTokens,
-} from '@pancakeswap/tokens'
+} from '@sweepstakes/tokens'
 
 export const usdGasTokensByChain = {
   [ChainId.KLAYTN]: [klaytnTokens.usdc],

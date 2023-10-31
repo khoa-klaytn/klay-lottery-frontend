@@ -1,6 +1,6 @@
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { ReactElement } from "react";
-import { Flex, CardBody, CardRibbon, Skeleton } from "@pancakeswap/uikit";
+import { Flex, CardBody, CardRibbon, Skeleton } from "@sweepstakes/uikit";
 import { PoolCardHeader, PoolCardHeaderTitle } from "./PoolCardHeader";
 import { StyledCard } from "./StyledCard";
 import { DeserializedPool } from "./types";

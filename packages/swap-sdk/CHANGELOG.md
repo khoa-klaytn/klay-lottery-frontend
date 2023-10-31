@@ -1,4 +1,4 @@
-# @pancakeswap/sdk
+# @sweepstakes/sdk
 
 ## 5.6.0
 
@@ -9,7 +9,7 @@
 ### Patch Changes
 
 - Updated dependencies [435a90ac2]
-  - @pancakeswap/chains@0.1.0
+  - @sweepstakes/chains@0.1.0
 
 ## 5.5.0
 
@@ -23,7 +23,7 @@
 
 - 2d7e1b3e2: Upgraded viem
 - Updated dependencies [2d7e1b3e2]
-  - @pancakeswap/chains@0.0.1
+  - @sweepstakes/chains@0.0.1
 
 ## 5.4.1
 
@@ -76,7 +76,7 @@
 ### Patch Changes
 
 - Updated dependencies [b5dbd2921]
-  - @pancakeswap/swap-sdk-core@1.0.0
+  - @sweepstakes/swap-sdk-core@1.0.0
 
 ## 3.2.1
 
@@ -93,7 +93,7 @@
 ### Patch Changes
 
 - Updated dependencies [65fbb250a]
-  - @pancakeswap/swap-sdk-core@0.1.0
+  - @sweepstakes/swap-sdk-core@0.1.0
 
 ## 3.1.5
 

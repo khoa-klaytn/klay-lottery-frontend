@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.2",
   "devDependencies": {
-    "@pancakeswap/aptos-swap-sdk": "workspace:*",
-    "@pancakeswap/chains": "workspace:*",
+    "@sweepstakes/aptos-swap-sdk": "workspace:*",
+    "@sweepstakes/chains": "workspace:*",
     "@types/lodash": "^4.14.168",
     "bignumber.js": "^9.1.1",
     "ethers": "^5.0.0",

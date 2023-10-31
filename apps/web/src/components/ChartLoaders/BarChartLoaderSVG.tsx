@@ -1,4 +1,4 @@
-import { Svg, SvgProps } from '@pancakeswap/uikit'
+import { Svg, SvgProps } from '@sweepstakes/uikit'
 
 const BarChartLoaderSVG: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (

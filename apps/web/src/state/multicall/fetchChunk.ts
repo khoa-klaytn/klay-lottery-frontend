@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { getViemClients } from 'utils/viem'
 import { multicallABI } from 'config/abi/Multicall'
 import { getMulticallAddress } from 'utils/addressHelpers'

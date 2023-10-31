@@ -1,4 +1,4 @@
-# @pancakeswap/aptos-swap-sdk
+# @sweepstakes/aptos-swap-sdk
 
 ## 1.0.0
 
@@ -9,7 +9,7 @@
 ### Patch Changes
 
 - Updated dependencies [b5dbd2921]
-  - @pancakeswap/swap-sdk-core@1.0.0
+  - @sweepstakes/swap-sdk-core@1.0.0
 
 ## 0.0.2
 

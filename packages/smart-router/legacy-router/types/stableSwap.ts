@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, ERC20Token, Pair as V2Pair, Percent, Price, TradeType } from '@pancakeswap/sdk'
+import { Currency, CurrencyAmount, ERC20Token, Pair as V2Pair, Percent, Price, TradeType } from '@sweepstakes/sdk'
 import type { Address } from 'viem'
 
 import { RouteType } from './bestTrade'

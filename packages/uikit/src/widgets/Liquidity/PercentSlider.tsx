@@ -1,6 +1,6 @@
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { useCallback } from "react";
-import { useDebouncedChangeHandler } from "@pancakeswap/hooks";
+import { useDebouncedChangeHandler } from "@sweepstakes/hooks";
 
 import { AtomBox } from "../../components/AtomBox";
 import { Button } from "../../components/Button";

@@ -1,8 +1,8 @@
 # 🥞 Klay Lottery Frontend
 
 <p align="center">
-  <a href="https://pancakeswap.finance">
-      <img src="https://pancakeswap.finance/logo.png" height="128">
+  <a href="https://sweepstakes.finance">
+      <img src="https://sweepstakes.finance/logo.png" height="128">
   </a>
 </p>
 

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { escapeRegExp } from 'utils'
-import { Text, Button, Input, Flex, Box, QuestionHelper } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import { useUserSlippage } from '@pancakeswap/utils/user'
+import { Text, Button, Input, Flex, Box, QuestionHelper } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { useUserSlippage } from '@sweepstakes/utils/user'
 import { useUserTransactionTTL } from 'state/user/hooks'
 
 enum SlippageError {

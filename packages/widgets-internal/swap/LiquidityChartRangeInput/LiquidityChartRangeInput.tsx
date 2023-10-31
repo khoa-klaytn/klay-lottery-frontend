@@ -1,12 +1,12 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { Currency, Price } from "@pancakeswap/swap-sdk-core";
-import { FeeAmount } from "@pancakeswap/v3-sdk";
+import { useTranslation } from "@sweepstakes/localization";
+import { Currency, Price } from "@sweepstakes/swap-sdk-core";
+import { FeeAmount } from "@sweepstakes/v3-sdk";
 import { styled, useTheme } from "styled-components";
 import { useCallback, useMemo } from "react";
 import { format } from "d3";
 import * as Sentry from "@sentry/nextjs";
 import { saturate } from "polished";
-import { AutoColumn, BunnyKnownPlaceholder, ChartDisableIcon, LineGraphIcon } from "@pancakeswap/uikit";
+import { AutoColumn, BunnyKnownPlaceholder, ChartDisableIcon, LineGraphIcon } from "@sweepstakes/uikit";
 
 import { Bound, ChartEntry, TickDataRaw, ZOOM_LEVELS, ZoomLevels } from "./types";
 import { InfoBox } from "./InfoBox";

@@ -1,5 +1,5 @@
 {
-  "name": "@pancakeswap/localization",
+  "name": "@sweepstakes/localization",
   "license": "MIT",
   "version": "5.0.5",
   "description": "A minimal internationalization library",
@@ -14,12 +14,12 @@
     "react": "^18.2.0"
   },
   "peerDependencies": {
-    "@pancakeswap/utils": "workspace:*",
-    "@pancakeswap/hooks": "workspace:*"
+    "@sweepstakes/utils": "workspace:*",
+    "@sweepstakes/hooks": "workspace:*"
   },
   "devDependencies": {
-    "@pancakeswap/utils": "workspace:*",
-    "@pancakeswap/hooks": "workspace:*",
+    "@sweepstakes/utils": "workspace:*",
+    "@sweepstakes/hooks": "workspace:*",
     "@types/react": "^18.2.21",
     "@types/lodash": "^4.14.178"
   }

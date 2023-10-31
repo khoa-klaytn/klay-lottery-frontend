@@ -2,7 +2,7 @@
   {
     "inputs": [
       { "internalType": "address", "name": "_WETHAddress", "type": "address" },
-      { "internalType": "address", "name": "_pancakeswapV2", "type": "address" },
+      { "internalType": "address", "name": "_sweepstakesV2", "type": "address" },
       { "internalType": "address", "name": "_stableswapFactory", "type": "address" }
     ],
     "stateMutability": "nonpayable",
@@ -67,7 +67,7 @@
   },
   {
     "inputs": [],
-    "name": "pancakeswapV2",
+    "name": "sweepstakesV2",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"

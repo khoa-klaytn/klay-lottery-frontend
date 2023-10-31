@@ -1,6 +1,6 @@
-import { BlockIcon, CheckmarkCircleIcon, Flex, BscScanIcon, RefreshIcon } from '@pancakeswap/uikit'
+import { BlockIcon, CheckmarkCircleIcon, Flex, BscScanIcon, RefreshIcon } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { TransactionDetails } from 'state/transactions/reducer'
 import { TransactionType, FarmTransactionStatus } from 'state/transactions/actions'
 import { getBlockExploreLink } from 'utils'

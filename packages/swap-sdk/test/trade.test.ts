@@ -1,5 +1,5 @@
-import { TradeType, Percent, Token, CurrencyAmount } from '@pancakeswap/swap-sdk-core'
-import { ChainId } from '@pancakeswap/chains'
+import { TradeType, Percent, Token, CurrencyAmount } from '@sweepstakes/swap-sdk-core'
+import { ChainId } from '@sweepstakes/chains'
 import { Pair, Route, Trade, Native } from '../src/entities'
 import { WNATIVE } from '../src/constants'
 

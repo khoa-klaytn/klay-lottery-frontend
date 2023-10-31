@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { getGasLimitOnChain, getDefaultGasLimit } from '@pancakeswap/multicall'
+import { ChainId } from '@sweepstakes/chains'
+import { getGasLimitOnChain, getDefaultGasLimit } from '@sweepstakes/multicall'
 import { useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
 

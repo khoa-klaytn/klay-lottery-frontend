@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import {
   Box,
   Breadcrumbs,
@@ -14,11 +14,11 @@ import {
   Link as UIKitLink,
   useMatchBreakpoints,
   ScanLink,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import useInfoUserSavedTokensAndPools from 'hooks/useInfoUserSavedTokensAndPoolsList'
 import { NextSeo } from 'next-seo'
 
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import Page from 'components/Layout/Page'
 import { CHAIN_QUERY_NAME } from 'config/chains'
 import { ONE_HOUR_SECONDS } from 'config/constants/info'

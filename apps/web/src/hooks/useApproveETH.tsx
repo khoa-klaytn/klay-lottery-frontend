@@ -1,13 +1,13 @@
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import type { Address } from 'viem'
 import { useTokenContract } from 'hooks/useContract'
-import { WETH9 } from '@pancakeswap/sdk'
+import { WETH9 } from '@sweepstakes/sdk'
 import { useCallback } from 'react'
-import { useToast } from '@pancakeswap/uikit'
+import { useToast } from '@sweepstakes/uikit'
 import useCatchTxError from 'hooks/useCatchTxError'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { ToastDescriptionWithTx } from 'components/Toast'
-import { MaxUint256 } from '@pancakeswap/swap-sdk-core'
+import { MaxUint256 } from '@sweepstakes/swap-sdk-core'
 import { useActiveChainId } from './useActiveChainId'
 
 export const useApproveETH = (spender: string) => {

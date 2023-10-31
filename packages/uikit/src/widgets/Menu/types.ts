@@ -1,5 +1,5 @@
 import { ElementType, ReactElement, ReactNode } from "react";
-import type { Language } from "@pancakeswap/localization";
+import type { Language } from "@sweepstakes/localization";
 import { FooterLinkType } from "../../components/Footer/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
 import { SubMenuItemsType } from "../../components/SubMenuItems/types";

@@ -1,15 +1,14 @@
-import { MaxUint256 } from '@pancakeswap/swap-sdk-core'
-import { useTranslation } from '@pancakeswap/localization'
-import { Currency, CurrencyAmount, ERC20Token } from '@pancakeswap/sdk'
-import { useToast } from '@pancakeswap/uikit'
+import { MaxUint256 } from '@sweepstakes/swap-sdk-core'
+import { useTranslation } from '@sweepstakes/localization'
+import { Currency, CurrencyAmount, ERC20Token } from '@sweepstakes/sdk'
+import { useToast } from '@sweepstakes/uikit'
 import { useAccount, Address } from 'wagmi'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { isUserRejected, logError } from 'utils/sentry'
 import { SendTransactionResult } from 'wagmi/actions'
 import { useHasPendingApproval, useTransactionAdder } from 'state/transactions/hooks'
 import { calculateGasMargin } from 'utils'
-import isUndefinedOrNull from '@pancakeswap/utils/isUndefinedOrNull'
-import useGelatoLimitOrdersLib from './limitOrders/useGelatoLimitOrdersLib'
+import isUndefinedOrNull from '@sweepstakes/utils/isUndefinedOrNull'
 import { useCallWithGasPrice } from './useCallWithGasPrice'
 import { useTokenContract } from './useContract'
 import useTokenAllowance from './useTokenAllowance'
@@ -220,11 +219,4 @@ export function useApproveCallbackFromAmount({
     addToTransaction,
     targetAmount,
   })
-}
-
-// Wraps useApproveCallback in the context of a Gelato Limit Orders
-export function useApproveCallbackFromInputCurrencyAmount(currencyAmountIn: CurrencyAmount<Currency> | undefined) {
-  const gelatoLibrary = useGelatoLimitOrdersLib()
-
-  return useApproveCallback(currencyAmountIn, gelatoLibrary?.erc20OrderRouter?.address ?? undefined)
 }

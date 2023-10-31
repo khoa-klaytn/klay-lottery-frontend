@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { CurrencyAmount, Percent } from '@pancakeswap/sdk'
-import { bscTokens } from '@pancakeswap/tokens'
+import { CurrencyAmount, Percent } from '@sweepstakes/sdk'
+import { bscTokens } from '@sweepstakes/tokens'
 
 import { getSwapOutput, getSwapInput } from './getSwapOutput'
 

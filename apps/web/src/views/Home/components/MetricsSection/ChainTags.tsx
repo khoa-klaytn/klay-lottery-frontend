@@ -8,7 +8,7 @@ import {
   BaseIcon,
   Svg,
   SvgProps,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import React, { cloneElement } from 'react'
 import Marquee from 'react-fast-marquee'
 import { styled } from 'styled-components'

@@ -1,5 +1,5 @@
-import { Currency, Rounding } from "@pancakeswap/sdk";
-import { FeeAmount, tickToPrice, TICK_SPACINGS } from "@pancakeswap/v3-sdk";
+import { Currency, Rounding } from "@sweepstakes/sdk";
+import { FeeAmount, tickToPrice, TICK_SPACINGS } from "@sweepstakes/v3-sdk";
 import { useCallback, useMemo } from "react";
 
 export function useRangeHopCallbacks(

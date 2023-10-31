@@ -1,5 +1,5 @@
-import { useTranslation } from "@pancakeswap/localization";
-import { getApy } from "@pancakeswap/utils/compoundApyHelpers";
+import { useTranslation } from "@sweepstakes/localization";
+import { getApy } from "@sweepstakes/utils/compoundApyHelpers";
 import { useState } from "react";
 import { styled } from "styled-components";
 

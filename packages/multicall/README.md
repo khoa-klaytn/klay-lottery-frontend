@@ -7,7 +7,7 @@ Inspired by the [1inch multicall](https://github.com/1inch/multicall).
 ## Install
 
 ```bash
-$ pnpm add @pancakeswap/multicall @pancakeswap/sdk viem
+$ pnpm add @sweepstakes/multicall @sweepstakes/sdk viem
 ```
 
 ## Usage
@@ -17,8 +17,8 @@ $ pnpm add @pancakeswap/multicall @pancakeswap/sdk viem
 By default the calls will be splitted into chunks based on gas limit of each call and the rpc call gas limit of the chain
 
 ```typescript
-import { ChainId } from '@pancakeswap/chains'
-import { multicallByGasLimit, MulticallRequestWithGas } from '@pancakeswap/multicall'
+import { ChainId } from '@sweepstakes/chains'
+import { multicallByGasLimit, MulticallRequestWithGas } from '@sweepstakes/multicall'
 
 const calls: MulticallRequestWithGas[] = [
   {
@@ -63,8 +63,8 @@ const { results, blockNumber } = await multicallByGasLimit(calls, {
 ### Get multicall gas limit
 
 ```typescript
-import { ChainId } from '@pancakeswap/chains'
-import { getGasLimitOnChain } from '@pancakeswap/multicall'
+import { ChainId } from '@sweepstakes/chains'
+import { getGasLimitOnChain } from '@sweepstakes/multicall'
 
 // Get the rpc call gas limit of the specified chain
 const gasLimit = await getGasLimitOnChain(ChainId.BSC)

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-shadow, no-await-in-loop, no-constant-condition, no-console */
-import { Currency } from '@pancakeswap/sdk'
-import { Pool } from '@pancakeswap/smart-router/evm'
+import { Currency } from '@sweepstakes/sdk'
+import { Pool } from '@sweepstakes/smart-router/evm'
 import { useMemo, useCallback } from 'react'
 
 import { useV3CandidatePools, useV3CandidatePoolsWithoutTicks, V3PoolsHookParams, V3PoolsResult } from './useV3Pools'

@@ -1,8 +1,8 @@
 import BigNumber from 'bignumber.js'
-import { Flex, Skeleton, Text, Balance } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Skeleton, Text, Balance } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { useKlayPrice } from 'hooks/useKlayPrice'
-import { getBalanceNumber, getFullDisplayBalance } from '@pancakeswap/utils/formatBalance'
+import { getBalanceNumber, getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
 

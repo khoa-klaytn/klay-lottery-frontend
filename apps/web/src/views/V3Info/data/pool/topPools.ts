@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { gql, GraphQLClient } from 'graphql-request'
 
 import { POOL_HIDE } from '../../constants'

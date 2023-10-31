@@ -1,4 +1,4 @@
-import { Percent, Token, validateAndParseAddress } from '@pancakeswap/sdk'
+import { Percent, Token, validateAndParseAddress } from '@sweepstakes/sdk'
 import { type Address, encodeFunctionData } from 'viem'
 import { peripheryPaymentsWithFeeABI } from './abi/PeripheryPaymentsWithFee'
 

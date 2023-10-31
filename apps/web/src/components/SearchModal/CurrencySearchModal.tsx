@@ -1,5 +1,5 @@
 import { useCallback, useState, useRef, useEffect } from 'react'
-import { Currency, Token } from '@pancakeswap/sdk'
+import { Currency, Token } from '@sweepstakes/sdk'
 import {
   ModalContainer,
   ModalHeader,
@@ -12,16 +12,16 @@ import {
   Button,
   useMatchBreakpoints,
   MODAL_SWIPE_TO_CLOSE_VELOCITY,
-} from '@pancakeswap/uikit'
-import { ImportList } from '@pancakeswap/widgets-internal'
+} from '@sweepstakes/uikit'
+import { ImportList } from '@sweepstakes/widgets-internal'
 import { useRouter } from 'next/router'
 import { styled } from 'styled-components'
 import { useListState } from 'state/lists/lists'
 import { useAllLists } from 'state/lists/hooks'
-import { usePreviousValue } from '@pancakeswap/hooks'
-import { TokenList } from '@pancakeswap/token-lists'
-import { useTranslation } from '@pancakeswap/localization'
-import { enableList, removeList, useFetchListCallback } from '@pancakeswap/token-lists/react'
+import { usePreviousValue } from '@sweepstakes/hooks'
+import { TokenList } from '@sweepstakes/token-lists'
+import { useTranslation } from '@sweepstakes/localization'
+import { enableList, removeList, useFetchListCallback } from '@sweepstakes/token-lists/react'
 import CurrencySearch from './CurrencySearch'
 import ImportToken from './ImportToken'
 import Manage from './Manage'

@@ -1,7 +1,7 @@
 import { encodeFunctionData, Hex, Address } from 'viem'
-import { Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress, WNATIVE } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { FeeOptions, MethodParameters, Payments, PermitOptions, Position, SelfPermit, toHex } from '@pancakeswap/v3-sdk'
+import { Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress, WNATIVE } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { FeeOptions, MethodParameters, Payments, PermitOptions, Position, SelfPermit, toHex } from '@sweepstakes/v3-sdk'
 import invariant from 'tiny-invariant'
 
 import { swapRouter02Abi } from '../../abis/ISwapRouter02'

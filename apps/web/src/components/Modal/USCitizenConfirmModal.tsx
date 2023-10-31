@@ -4,8 +4,8 @@ import { memo, useCallback } from 'react'
 import { getPerpetualUrl } from 'utils/getPerpetualUrl'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useTheme } from 'styled-components'
-import { Text, Link } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Text, Link } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 
 interface USCitizenConfirmModalProps {
   id: IdType

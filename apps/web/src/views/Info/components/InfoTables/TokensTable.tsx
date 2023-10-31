@@ -9,13 +9,13 @@ import {
   ArrowForwardIcon,
   useMatchBreakpoints,
   NextLinkFromReactRouter,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useMultiChainPath, useStableSwapPath, useChainNameByQuery } from 'state/info/hooks'
 import { subgraphTokenName, subgraphTokenSymbol } from 'state/info/constant'
 import { TokenData } from 'state/info/types'
 import { CurrencyLogo } from 'views/Info/components/CurrencyLogo'
 import Percent from 'views/Info/components/Percent'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import orderBy from 'lodash/orderBy'
 import { formatAmount } from 'utils/formatInfoNumbers'
 import { isAddress } from 'utils'

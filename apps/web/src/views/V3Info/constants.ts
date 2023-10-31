@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { ManipulateType } from 'dayjs'
 
 export const v3InfoPath = `info/v3`

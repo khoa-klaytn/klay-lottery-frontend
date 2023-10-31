@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Price } from '@pancakeswap/sdk'
+import { Currency, CurrencyAmount, Fraction, Price } from '@sweepstakes/sdk'
 import formatLocaleNumber from './formatLocaleNumber'
 
 export function formatCurrencyAmount(

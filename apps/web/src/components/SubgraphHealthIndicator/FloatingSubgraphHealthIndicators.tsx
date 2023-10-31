@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { useMemo } from 'react'
 import { createPortal } from 'react-dom'
 

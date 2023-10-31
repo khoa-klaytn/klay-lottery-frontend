@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { useToast } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { useToast } from '@sweepstakes/uikit'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useEffect, useState } from 'react'

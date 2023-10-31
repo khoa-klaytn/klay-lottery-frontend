@@ -1,7 +1,7 @@
-import { Currency, Native, Token, WNATIVE } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { enumValues } from '@pancakeswap/utils/enumValues'
-import { TokenAddressMap } from '@pancakeswap/token-lists'
+import { Currency, Native, Token, WNATIVE } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { enumValues } from '@sweepstakes/utils/enumValues'
+import { TokenAddressMap } from '@sweepstakes/token-lists'
 
 const createEmptyList = () => {
   const list = {} as Record<ChainId, TokenAddressMap<ChainId>[ChainId]>

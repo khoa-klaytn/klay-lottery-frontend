@@ -1,4 +1,4 @@
-import { getPoolContractBySousId } from '@pancakeswap/pools'
+import { getPoolContractBySousId } from '@sweepstakes/pools'
 
 import { Abi, Address } from 'viem'
 import { erc20ABI, usePublicClient, useWalletClient } from 'wagmi'
@@ -36,10 +36,10 @@ import {
   getAnniversaryAchievementContract,
 } from 'utils/contractHelpers'
 
-import { WNATIVE, pancakePairV2ABI } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { KLAY } from '@pancakeswap/tokens'
-import { nonfungiblePositionManagerABI } from '@pancakeswap/v3-sdk'
+import { WNATIVE, pancakePairV2ABI } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { KLAY } from '@sweepstakes/tokens'
+import { nonfungiblePositionManagerABI } from '@sweepstakes/v3-sdk'
 import { multicallABI } from 'config/abi/Multicall'
 import { erc20Bytes32ABI } from 'config/abi/erc20_bytes32'
 import { zapABI } from 'config/abi/zap'

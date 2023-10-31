@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 import { useState, useEffect } from 'react'
-import { Link } from '@pancakeswap/uikit'
+import { Link } from '@sweepstakes/uikit'
 import throttle from 'lodash/throttle'
 import Image from 'next/image'
 import { isEventEnded } from 'hooks/useAnniversaryEffect'
@@ -42,7 +42,7 @@ export const ThirdYearBirthdayCake = () => {
     <Container
       external
       hasScrollToTopButton={hasScrollToTopButton}
-      href="https://blog.pancakeswap.finance/?category=Birthday"
+      href="https://blog.sweepstakes.finance/?category=Birthday"
     >
       <Image src="/images/third-year-cake.svg" alt="third-year-cake-icon" width={48} height={58} />
     </Container>

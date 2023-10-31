@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { Text, Button } from "../../components";
 import { AtomBox } from "../../components/AtomBox";
 

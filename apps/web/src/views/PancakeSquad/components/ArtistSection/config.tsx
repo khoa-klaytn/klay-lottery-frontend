@@ -1,5 +1,5 @@
-import { InstagramIcon, TwitterIcon } from '@pancakeswap/uikit'
-import { ContextApi } from '@pancakeswap/localization'
+import { InstagramIcon, TwitterIcon } from '@sweepstakes/uikit'
+import { ContextApi } from '@sweepstakes/localization'
 
 type ArtistConfigType = {
   t: ContextApi['t']

@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { styled } from "styled-components";
-import { AutoColumn, ErrorIcon, Text, Flex, Button } from "@pancakeswap/uikit";
+import { AutoColumn, ErrorIcon, Text, Flex, Button } from "@sweepstakes/uikit";
 
 const Wrapper = styled.div`
   width: 100%;

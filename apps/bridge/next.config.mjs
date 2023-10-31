@@ -1,6 +1,6 @@
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin'
 import { withAxiom } from 'next-axiom'
-import { withWebSecurityHeaders } from '@pancakeswap/next-config/withWebSecurityHeaders'
+import { withWebSecurityHeaders } from '@sweepstakes/next-config/withWebSecurityHeaders'
 
 const withVanillaExtract = createVanillaExtractPlugin()
 
@@ -9,10 +9,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: [
-    '@pancakeswap/uikit',
-    '@pancakeswap/hooks',
-    '@pancakeswap/localization',
-    '@pancakeswap/utils',
+    '@sweepstakes/uikit',
+    '@sweepstakes/hooks',
+    '@sweepstakes/localization',
+    '@sweepstakes/utils',
     '@0xsquid/widget',
   ],
   compiler: {

@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
-import { ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { Currency, NativeCurrency } from '@pancakeswap/swap-sdk-core'
+import { ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { Currency, NativeCurrency } from '@sweepstakes/swap-sdk-core'
 
-import { TokenAddressMap } from '@pancakeswap/token-lists'
+import { TokenAddressMap } from '@sweepstakes/token-lists'
 import { GELATO_NATIVE } from 'config/constants'
 import { useAtomValue } from 'jotai'
 import { useMemo } from 'react'

@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { ChainId } from '@pancakeswap/chains'
+import { useTranslation } from '@sweepstakes/localization'
+import { ChainId } from '@sweepstakes/chains'
 import {
   AtomBox,
   Flex,
@@ -21,8 +21,8 @@ import {
   Checkbox,
   AutoRow,
   RowFixed,
-} from '@pancakeswap/uikit'
-import { ExpertModal } from '@pancakeswap/widgets-internal'
+} from '@sweepstakes/uikit'
+import { ExpertModal } from '@sweepstakes/widgets-internal'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useTheme from 'hooks/useTheme'
 import { ReactNode, useCallback, useState } from 'react'
@@ -31,7 +31,7 @@ import {
   useExpertMode,
   useUserSingleHopOnly,
   useUserExpertModeAcknowledgement,
-} from '@pancakeswap/utils/user'
+} from '@sweepstakes/utils/user'
 import { useSubgraphHealthIndicatorManager, useUserUsernameVisibility } from 'state/user/hooks'
 import { useUserTokenRisk } from 'state/user/hooks/useUserTokenRisk'
 import {

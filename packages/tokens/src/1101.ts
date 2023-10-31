@@ -1,5 +1,5 @@
-import { WETH9, ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { WETH9, ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { USDC, USDT, KLAY } from './common'
 
 export const polygonZkEvmTokens = {

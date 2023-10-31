@@ -1,6 +1,6 @@
-import { BinanceWalletConnector } from '@pancakeswap/wagmi/connectors/binanceWallet'
-import { BloctoConnector } from '@pancakeswap/wagmi/connectors/blocto'
-import { TrustWalletConnector } from '@pancakeswap/wagmi/connectors/trustWallet'
+import { BinanceWalletConnector } from '@sweepstakes/wagmi/connectors/binanceWallet'
+import { BloctoConnector } from '@sweepstakes/wagmi/connectors/blocto'
+import { TrustWalletConnector } from '@sweepstakes/wagmi/connectors/trustWallet'
 import { CHAINS } from 'config/chains'
 import { PUBLIC_NODES } from 'config/nodes'
 import memoize from 'lodash/memoize'
@@ -58,7 +58,7 @@ export const coinbaseConnector = new CoinbaseWalletConnector({
   chains,
   options: {
     appName: 'SweepStakes',
-    appLogoUrl: 'https://pancakeswap.com/logo.png',
+    appLogoUrl: 'https://sweepstakes.com/logo.png',
   },
 })
 

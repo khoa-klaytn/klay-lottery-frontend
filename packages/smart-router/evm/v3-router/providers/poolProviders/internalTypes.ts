@@ -1,5 +1,5 @@
-import { Currency } from '@pancakeswap/sdk'
-import { FeeAmount } from '@pancakeswap/v3-sdk'
+import { Currency } from '@sweepstakes/sdk'
+import { FeeAmount } from '@sweepstakes/v3-sdk'
 import type { Address } from 'viem'
 
 // Information used to identify a pool

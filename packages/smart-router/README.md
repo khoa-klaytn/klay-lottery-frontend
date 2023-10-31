@@ -1,23 +1,23 @@
 # Pancakeswap Smart Router
 
-`@pancakeswap/smart-router` is a SDK for getting best trade routes from Pancakeswap AMM.
+`@sweepstakes/smart-router` is a SDK for getting best trade routes from Pancakeswap AMM.
 
 ## Install
 
 ```bash
-$ pnpm add @pancakeswap/smart-router
+$ pnpm add @sweepstakes/smart-router
 ```
 
 ## Usage
 
 Use BSC as an example. Here's how we use smart router sdk to find the best trade route swapping from BNB to KLAY and construct a valid swap transaction from the trade route we got.
 
-For working code example, please refer to [smart-router-example](https://github.com/pancakeswap/smart-router-example).
+For working code example, please refer to [smart-router-example](https://github.com/sweepstakes/smart-router-example).
 
 0. Install other dependencies
 
 ```bash
-$ pnpm add viem graphql-request @pancakeswap/sdk @pancakeswap/tokens
+$ pnpm add viem graphql-request @sweepstakes/sdk @sweepstakes/tokens
 ```
 
 1. Prepare on-chain rpc provider and subgraph providers
@@ -25,7 +25,7 @@ $ pnpm add viem graphql-request @pancakeswap/sdk @pancakeswap/tokens
 ```typescript
 import { createPublicClient, http } from 'viem'
 import { GraphQLClient } from 'graphql-request'
-import { SmartRouter } from '@pancakeswap/smart-router/evm'
+import { SmartRouter } from '@sweepstakes/smart-router/evm'
 
 const publicClient = createPublicClient({
   chain: mainnet,
@@ -37,8 +37,8 @@ const publicClient = createPublicClient({
   },
 })
 
-const v3SubgraphClient = new GraphQLClient('https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-bsc')
-const v2SubgraphClient = new GraphQLClient('https://proxy-worker-api.pancakeswap.com/bsc-exchange')
+const v3SubgraphClient = new GraphQLClient('https://api.thegraph.com/subgraphs/name/sweepstakes/exchange-v3-bsc')
+const v2SubgraphClient = new GraphQLClient('https://proxy-worker-api.sweepstakes.com/bsc-exchange')
 
 const quoteProvider = SmartRouter.createQuoteProvider({ onChainProvider: () => publicClient })
 ```
@@ -46,9 +46,9 @@ const quoteProvider = SmartRouter.createQuoteProvider({ onChainProvider: () => p
 2. Get candidate pools
 
 ```typescript
-import { Native } from '@pancakeswap/sdk'
-import { SmartRouter } from '@pancakeswap/smart-router/evm'
-import { bscTokens } from '@pancakeswap/tokens'
+import { Native } from '@sweepstakes/sdk'
+import { SmartRouter } from '@sweepstakes/smart-router/evm'
+import { bscTokens } from '@sweepstakes/tokens'
 
 const swapFrom = Native.onChain(chainId)
 const swapTo = bscTokens.cake
@@ -73,7 +73,7 @@ const [v2Pools, v3Pools] = await Promise.all([
 3. Find the best swap trade route
 
 ```typescript
-import { CurrencyAmount, TradeType } from '@pancakeswap/sdk'
+import { CurrencyAmount, TradeType } from '@sweepstakes/sdk'
 
 // 0.01 BNB in our example
 const amount = CurrencyAmount.fromRawAmount(swapFrom, 10 ** 16)
@@ -91,8 +91,8 @@ const trade = await SmartRouter.getBestTrade(amount, swapTo, TradeType.EXACT_INP
 4. Build the swap transaction from trade
 
 ```typescript
-import { ChainId } from '@pancakeswap/chains'
-import { SmartRouter, SmartRouterTrade, SMART_ROUTER_ADDRESSES, SwapRouter } from '@pancakeswap/smart-router/evm'
+import { ChainId } from '@sweepstakes/chains'
+import { SmartRouter, SmartRouterTrade, SMART_ROUTER_ADDRESSES, SwapRouter } from '@sweepstakes/smart-router/evm'
 import { hexToBigInt } from 'viem'
 
 const routerAddress = SMART_ROUTER_ADDRESSES[ChainId.BSC]

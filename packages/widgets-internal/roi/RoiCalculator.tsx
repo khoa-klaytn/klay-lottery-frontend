@@ -1,12 +1,12 @@
-import { Currency, CurrencyAmount, Price, Token, Percent, ZERO_PERCENT } from "@pancakeswap/sdk";
-import { FeeAmount, FeeCalculator, Tick, TickMath, sqrtRatioX96ToPrice } from "@pancakeswap/v3-sdk";
-import { useTranslation } from "@pancakeswap/localization";
+import { Currency, CurrencyAmount, Price, Token, Percent, ZERO_PERCENT } from "@sweepstakes/sdk";
+import { FeeAmount, FeeCalculator, Tick, TickMath, sqrtRatioX96ToPrice } from "@sweepstakes/v3-sdk";
+import { useTranslation } from "@sweepstakes/localization";
 import { useCallback, useMemo, useState } from "react";
-import { formatPercent, formatFraction, formatPrice } from "@pancakeswap/utils/formatFractions";
+import { formatPercent, formatFraction, formatPrice } from "@sweepstakes/utils/formatFractions";
 
-import { Button, DynamicSection, Flex, Message, MessageText, useMatchBreakpoints } from "@pancakeswap/uikit";
+import { Button, DynamicSection, Flex, Message, MessageText, useMatchBreakpoints } from "@sweepstakes/uikit";
 
-import { ScrollableContainer } from "@pancakeswap/uikit/components/RoiCalculatorModal/RoiCalculatorModal";
+import { ScrollableContainer } from "@sweepstakes/uikit/components/RoiCalculatorModal/RoiCalculatorModal";
 import { Section } from "./Section";
 import { DepositAmountInput } from "./DepositAmount";
 import { RangeSelector } from "./RangeSelector";

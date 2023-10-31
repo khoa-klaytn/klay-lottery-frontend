@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import { styled, useTheme } from 'styled-components'
-import { Flex, Box } from '@pancakeswap/uikit'
+import { Flex, Box } from '@sweepstakes/uikit'
 import { LAYER_ZERO_JS, FEE_COLLECTOR, FEE_TENTH_BPS, PARTNER_ID } from 'components/layerZero/config'
 import { LayerZeroWidget } from 'components/layerZero/LayerZeroWidget'
 import AptosBridgeFooter from 'components/layerZero/AptosBridgeFooter'

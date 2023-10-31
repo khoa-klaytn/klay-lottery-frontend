@@ -1,4 +1,4 @@
-import { ColumnCenter, Text } from '@pancakeswap/uikit'
+import { ColumnCenter, Text } from '@sweepstakes/uikit'
 import { ReactNode } from 'react'
 
 // TODO: merge with uikit

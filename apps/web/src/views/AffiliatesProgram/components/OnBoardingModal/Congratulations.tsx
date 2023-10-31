@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Flex, Text, Button, Link, ModalV2 } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Text, Button, Link, ModalV2 } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
 import { useUserNotUsCitizenAcknowledgement, IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
 
@@ -26,7 +26,7 @@ const Congratulations = () => {
         </Link>
         <Link
           external
-          href="https://perp.pancakeswap.finance/en/futures/BTCUSDT"
+          href="https://perp.sweepstakes.finance/en/futures/BTCUSDT"
           width="100% !important"
           onClick={(e) => {
             if (!userNotUsCitizenAcknowledgement) {
@@ -40,7 +40,7 @@ const Congratulations = () => {
             {t('Try out our Perpetuals Platform')}
           </Button>
         </Link>
-        <Link external href="https://docs.pancakeswap.finance/affiliate-program" width="100% !important">
+        <Link external href="https://docs.sweepstakes.finance/affiliate-program" width="100% !important">
           <Button width="100%" variant="secondary">
             {t('Learn More')}
           </Button>

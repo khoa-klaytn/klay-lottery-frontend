@@ -1,4 +1,4 @@
-# @pancakeswap/multicall
+# @sweepstakes/multicall
 
 ## 3.2.0
 
@@ -9,8 +9,8 @@
 ### Patch Changes
 
 - Updated dependencies [435a90ac2]
-  - @pancakeswap/sdk@5.6.0
-  - @pancakeswap/chains@0.1.0
+  - @sweepstakes/sdk@5.6.0
+  - @sweepstakes/chains@0.1.0
 
 ## 3.1.2
 
@@ -18,7 +18,7 @@
 
 - 1831356d9: refactor: Move ChainsId usage from Sdk to Chains package
 - Updated dependencies [1831356d9]
-  - @pancakeswap/sdk@5.5.0
+  - @sweepstakes/sdk@5.5.0
 
 ## 3.1.1
 
@@ -26,7 +26,7 @@
 
 - 2d7e1b3e2: Upgraded viem
 - Updated dependencies [2d7e1b3e2]
-  - @pancakeswap/sdk@5.4.2
+  - @sweepstakes/sdk@5.4.2
 
 ## 3.1.0
 

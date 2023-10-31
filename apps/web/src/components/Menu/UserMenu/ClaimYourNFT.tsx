@@ -1,6 +1,6 @@
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { styled } from 'styled-components'
-import { Flex, UserMenuItem } from '@pancakeswap/uikit'
+import { Flex, UserMenuItem } from '@sweepstakes/uikit'
 import { useShowOnceAirdropModal } from 'hooks/useShowOnceAirdropModal'
 
 const Dot = styled.div`

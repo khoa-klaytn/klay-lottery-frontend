@@ -1,7 +1,7 @@
 import BigNumber from "bignumber.js";
-import { getBalanceNumber } from "@pancakeswap/utils/formatBalance";
-import { useTranslation } from "@pancakeswap/localization";
-import { TooltipText, Balance, Skeleton, useTooltip } from "@pancakeswap/uikit";
+import { getBalanceNumber } from "@sweepstakes/utils/formatBalance";
+import { useTranslation } from "@sweepstakes/localization";
+import { TooltipText, Balance, Skeleton, useTooltip } from "@sweepstakes/uikit";
 import { StatWrapper } from "./StatWrapper";
 
 export const TotalToken = ({

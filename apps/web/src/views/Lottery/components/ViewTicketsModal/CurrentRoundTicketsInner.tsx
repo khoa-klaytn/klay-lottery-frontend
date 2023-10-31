@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { Flex, Box, Text } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Flex, Box, Text } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { LotteryStatus } from 'config/constants/types'
 import { useLottery } from 'state/lottery/hooks'
 import useTheme from 'hooks/useTheme'

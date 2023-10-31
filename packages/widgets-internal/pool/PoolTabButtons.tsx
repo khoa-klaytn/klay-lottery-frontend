@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { styled } from "styled-components";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import {
   ToggleView,
   ViewMode,
@@ -10,7 +10,7 @@ import {
   Text,
   NotificationDot,
   NextLinkFromReactRouter,
-} from "@pancakeswap/uikit";
+} from "@sweepstakes/uikit";
 
 const ToggleWrapper = styled.div`
   display: flex;

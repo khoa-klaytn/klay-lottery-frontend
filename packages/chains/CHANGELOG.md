@@ -1,4 +1,4 @@
-# @pancakeswap/chains
+# @sweepstakes/chains
 
 ## 0.1.0
 

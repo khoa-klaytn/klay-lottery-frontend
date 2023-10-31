@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { NextSeo } from "next-seo";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import Link from "next/link";
 import { LogoIcon } from "../Svg";
 import { Heading } from "../Heading";

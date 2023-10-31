@@ -1,9 +1,9 @@
 import BigNumber from "bignumber.js";
 
 import { styled } from "styled-components";
-import { BIG_ZERO } from "@pancakeswap/utils/bigNumber";
-import { useTranslation } from "@pancakeswap/localization";
-import { Flex, Text, Box, TextProps } from "@pancakeswap/uikit";
+import { BIG_ZERO } from "@sweepstakes/utils/bigNumber";
+import { useTranslation } from "@sweepstakes/localization";
+import { Flex, Text, Box, TextProps } from "@sweepstakes/uikit";
 import { DeserializedPool } from "./types";
 
 const InlineText = styled((props: TextProps) => <Text {...props} />)`

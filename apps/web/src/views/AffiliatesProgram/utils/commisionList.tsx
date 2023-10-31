@@ -1,4 +1,4 @@
-import { Trans } from '@pancakeswap/localization'
+import { Trans } from '@sweepstakes/localization'
 
 interface CommissionType {
   id: string

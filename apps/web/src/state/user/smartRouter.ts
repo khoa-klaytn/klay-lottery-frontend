@@ -1,5 +1,5 @@
 import { atom, useAtom, useAtomValue } from 'jotai'
-import { userSingleHopAtom } from '@pancakeswap/utils/user'
+import { userSingleHopAtom } from '@sweepstakes/utils/user'
 import atomWithStorageWithErrorCatch from 'utils/atomWithStorageWithErrorCatch'
 
 const userUseStableSwapAtom = atomWithStorageWithErrorCatch<boolean>('pcs:useStableSwap', true)

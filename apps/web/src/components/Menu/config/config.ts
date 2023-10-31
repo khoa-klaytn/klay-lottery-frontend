@@ -1,5 +1,5 @@
-import { ContextApi } from '@pancakeswap/localization'
-import { /* DropdownMenuItemType, */ DropdownMenuItems, MenuItemsType /* MoreIcon */ } from '@pancakeswap/uikit'
+import { ContextApi } from '@sweepstakes/localization'
+import { /* DropdownMenuItemType, */ DropdownMenuItems, MenuItemsType /* MoreIcon */ } from '@sweepstakes/uikit'
 // import { SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
@@ -67,12 +67,12 @@ const config: (
     //     },
     //     {
     //       label: t('Blog'),
-    //       href: 'https://blog.pancakeswap.finance',
+    //       href: 'https://blog.sweepstakes.finance',
     //       type: DropdownMenuItemType.EXTERNAL_LINK,
     //     },
     //     {
     //       label: t('Docs'),
-    //       href: 'https://docs.pancakeswap.finance',
+    //       href: 'https://docs.sweepstakes.finance',
     //       type: DropdownMenuItemType.EXTERNAL_LINK,
     //     },
     //   ].map((item) => addMenuItemSupported(item, chainId)),

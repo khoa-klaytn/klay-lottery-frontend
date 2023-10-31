@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { Link } from "../Link";
 import { Text } from "../Text";
 
@@ -46,7 +46,7 @@ export const FarmMultiplierInfo: React.FC<React.PropsWithChildren<FarmMultiplier
         <InlineLink
           mt="8px"
           display="inline"
-          href="https://docs.pancakeswap.finance/products/yield-farming/faq#why-a-2x-farm-in-v3-has-less-apr-than-a-1x-farm-in-v2"
+          href="https://docs.sweepstakes.finance/products/yield-farming/faq#why-a-2x-farm-in-v3-has-less-apr-than-a-1x-farm-in-v2"
           external
         >
           {t("Learn More")}

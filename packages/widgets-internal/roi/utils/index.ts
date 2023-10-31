@@ -1,4 +1,4 @@
-import { Price, Token, Currency, Percent, Fraction } from "@pancakeswap/sdk";
+import { Price, Token, Currency, Percent, Fraction } from "@sweepstakes/sdk";
 import { parseUnits } from "viem";
 import {
   encodeSqrtRatioX96,
@@ -7,8 +7,8 @@ import {
   priceToClosestTick,
   TICK_SPACINGS,
   TickMath,
-} from "@pancakeswap/v3-sdk";
-import tryParseAmount from "@pancakeswap/utils/tryParseAmount";
+} from "@sweepstakes/v3-sdk";
+import tryParseAmount from "@sweepstakes/utils/tryParseAmount";
 
 export * from "./computeSurroundingTicks";
 export * from "./getTokenAmountsFromDepositUsd";

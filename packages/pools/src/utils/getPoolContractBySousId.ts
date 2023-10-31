@@ -1,4 +1,4 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 import { WalletClient, getContract, PublicClient, Address, GetContractReturnType, Account, Chain } from 'viem'
 
 import { getPoolsConfig } from '../constants'

@@ -1,5 +1,5 @@
-import { WETH9 } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { WETH9 } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 import { USDC } from './common'
 

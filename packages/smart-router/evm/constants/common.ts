@@ -1,5 +1,5 @@
-import { Percent } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Percent } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 export const BIG_INT_TEN = 10n
 // one basis point

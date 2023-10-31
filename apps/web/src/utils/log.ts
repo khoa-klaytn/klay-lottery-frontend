@@ -1,4 +1,4 @@
-import { Currency } from '@pancakeswap/swap-sdk-core'
+import { Currency } from '@sweepstakes/swap-sdk-core'
 import { log } from 'next-axiom'
 import type { Address } from 'viem'
 

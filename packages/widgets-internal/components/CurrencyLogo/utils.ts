@@ -1,7 +1,7 @@
 import { getAddress } from "viem";
 import memoize from "lodash/memoize";
-import { Token, Currency } from "@pancakeswap/sdk";
-import { ChainId } from "@pancakeswap/chains";
+import { Token, Currency } from "@sweepstakes/sdk";
+import { ChainId } from "@sweepstakes/chains";
 
 const mapping: { [key: number]: string } = {
   [ChainId.BSC]: "smartchain",
@@ -50,11 +50,11 @@ const chainName: { [key: number]: string } = {
 
 // TODO: move to utils or token-list
 export const getTokenListBaseURL = (chainId: number) =>
-  `https://tokens.pancakeswap.finance/images/${chainName[chainId]}`;
+  `https://tokens.sweepstakes.finance/images/${chainName[chainId]}`;
 
 export const getTokenListTokenUrl = (token: Token) =>
   chainName[token.chainId]
-    ? `https://tokens.pancakeswap.finance/images/${
+    ? `https://tokens.sweepstakes.finance/images/${
         token.chainId === ChainId.BSC ? "" : `${chainName[token.chainId]}/`
       }${token.address}.png`
     : null;

@@ -13,7 +13,7 @@ import {
   Pair,
   Route as V2Route,
   Trade as V2Trade,
-} from '@pancakeswap/sdk'
+} from '@sweepstakes/sdk'
 import {
   encodeSqrtRatioX96,
   FeeAmount,
@@ -24,7 +24,7 @@ import {
   TICK_SPACINGS,
   Trade as V3Trade,
   Pool as V3PoolSDK,
-} from '@pancakeswap/v3-sdk'
+} from '@sweepstakes/v3-sdk'
 import { SwapRouter } from './swapRouter'
 import { SmartRouterTrade, V3Pool, PoolType, V2Pool, RouteType, Pool } from '../types'
 import { ApprovalTypes } from './approveAndCall'

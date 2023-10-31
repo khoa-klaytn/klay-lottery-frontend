@@ -1,5 +1,5 @@
-import { BigintIsh, Currency, Token } from '@pancakeswap/swap-sdk-core'
-import { computePoolAddress, FeeAmount, Pool, DEPLOYER_ADDRESSES } from '@pancakeswap/v3-sdk'
+import { BigintIsh, Currency, Token } from '@sweepstakes/swap-sdk-core'
+import { computePoolAddress, FeeAmount, Pool, DEPLOYER_ADDRESSES } from '@sweepstakes/v3-sdk'
 import { useMemo } from 'react'
 import type { Address } from 'viem'
 import { useMultipleContractSingleData } from 'state/multicall/hooks'

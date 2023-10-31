@@ -1,9 +1,9 @@
-import { Text, Card, Flex, Tag, SyncAltIcon } from '@pancakeswap/uikit'
+import { Text, Card, Flex, Tag, SyncAltIcon } from '@sweepstakes/uikit'
 import NextLink from 'next/link'
 import { styled } from 'styled-components'
 
 import DoubleCurrencyLogo from 'components/Logo/DoubleLogo'
-import { Percent, Currency } from '@pancakeswap/sdk'
+import { Percent, Currency } from '@sweepstakes/sdk'
 
 const TagCell = styled(Flex)`
   padding: 8px 0;

@@ -1,4 +1,4 @@
-import { Box, PageSection, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Box, PageSection, useMatchBreakpoints } from '@sweepstakes/uikit'
 import { useAnniversaryEffect } from 'hooks/useAnniversaryEffect'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'

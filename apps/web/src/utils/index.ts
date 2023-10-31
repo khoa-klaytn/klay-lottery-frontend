@@ -1,9 +1,9 @@
 import { type Address, getAddress } from 'viem'
-import { Currency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Currency } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { bsc } from 'wagmi/chains'
 import memoize from 'lodash/memoize'
-import { TokenAddressMap } from '@pancakeswap/token-lists'
+import { TokenAddressMap } from '@sweepstakes/token-lists'
 import { chains } from './wagmi'
 
 // returns the checksummed address if the address is valid, otherwise returns false

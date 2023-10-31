@@ -1,5 +1,5 @@
 import { parseEther } from 'viem'
-import { SerializedPoolWithInfo } from '@pancakeswap/pools'
+import { SerializedPoolWithInfo } from '@sweepstakes/pools'
 import { Address } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import { CampaignType, LotteryStatus, LotteryTicket, Team, TranslatableText } from 'config/constants/types'

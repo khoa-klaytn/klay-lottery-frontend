@@ -1,9 +1,9 @@
 /* eslint-disable consistent-return */
-import { useTranslation } from '@pancakeswap/localization'
-import { ChainId } from '@pancakeswap/chains'
-import { useToast } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { ChainId } from '@sweepstakes/chains'
+import { useToast } from '@sweepstakes/uikit'
 import { useCallback, useMemo } from 'react'
-import replaceBrowserHistory from '@pancakeswap/utils/replaceBrowserHistory'
+import replaceBrowserHistory from '@sweepstakes/utils/replaceBrowserHistory'
 import { useAccount, useSwitchNetwork as useSwitchNetworkWallet } from 'wagmi'
 import { CHAIN_QUERY_NAME } from 'config/chains'
 import { useSessionChainId } from './useSessionChainId'

@@ -1,5 +1,5 @@
-import { Box, Button, Flex, Link, Text } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { Box, Button, Flex, Link, Text } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { LandingBodyWrapper } from 'views/PancakeSquad/styles'
 import eventDescriptionConfigBuilder from './config'
 import {

@@ -1,21 +1,21 @@
-import { ChainId } from '@pancakeswap/chains'
+import { ChainId } from '@sweepstakes/chains'
 
-export const PANCAKE_EXTENDED = 'https://tokens.pancakeswap.finance/pancakeswap-extended.json'
+export const PANCAKE_EXTENDED = 'https://tokens.sweepstakes.finance/sweepstakes-extended.json'
 
-const COINGECKO = 'https://tokens.pancakeswap.finance/coingecko.json'
-const PANCAKE_ETH_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-eth-default.json'
-const PANCAKE_ZKSYNC_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-zksync-default.json'
-const PANCAKE_POLYGON_ZKEVM_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-polygon-zkevm-default.json'
-const PANCAKE_ARB_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-arbitrum-default.json'
-const PANCAKE_LINEA_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-linea-default.json'
-const PANCAKE_BASE_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-base-default.json'
-const PANCAKE_OPBNB_DEFAULT = 'https://tokens.pancakeswap.finance/pancakeswap-opbnb-default.json'
+const COINGECKO = 'https://tokens.sweepstakes.finance/coingecko.json'
+const PANCAKE_ETH_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-eth-default.json'
+const PANCAKE_ZKSYNC_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-zksync-default.json'
+const PANCAKE_POLYGON_ZKEVM_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-polygon-zkevm-default.json'
+const PANCAKE_ARB_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-arbitrum-default.json'
+const PANCAKE_LINEA_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-linea-default.json'
+const PANCAKE_BASE_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-base-default.json'
+const PANCAKE_OPBNB_DEFAULT = 'https://tokens.sweepstakes.finance/sweepstakes-opbnb-default.json'
 
-export const PANCAKE_ETH_MM = 'https://tokens.pancakeswap.finance/pancakeswap-eth-mm.json'
-export const PANCAKE_BSC_MM = 'https://tokens.pancakeswap.finance/pancakeswap-bnb-mm.json'
+export const PANCAKE_ETH_MM = 'https://tokens.sweepstakes.finance/sweepstakes-eth-mm.json'
+export const PANCAKE_BSC_MM = 'https://tokens.sweepstakes.finance/sweepstakes-bnb-mm.json'
 
 const COINGECKO_ETH = 'https://tokens.coingecko.com/uniswap/all.json'
-// export const CMC = 'https://tokens.pancakeswap.finance/cmc.json' // not updated for a while
+// export const CMC = 'https://tokens.sweepstakes.finance/cmc.json' // not updated for a while
 
 const ETH_URLS = [PANCAKE_ETH_DEFAULT, PANCAKE_ETH_MM, COINGECKO_ETH]
 const BSC_URLS = [PANCAKE_EXTENDED, COINGECKO, PANCAKE_BSC_MM]

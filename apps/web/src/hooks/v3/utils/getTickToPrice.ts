@@ -1,5 +1,5 @@
-import { Price, Token } from '@pancakeswap/swap-sdk-core'
-import { tickToPrice } from '@pancakeswap/v3-sdk'
+import { Price, Token } from '@sweepstakes/swap-sdk-core'
+import { tickToPrice } from '@sweepstakes/v3-sdk'
 
 export function getTickToPrice(baseToken?: Token, quoteToken?: Token, tick?: number): Price<Token, Token> | undefined {
   if (!baseToken || !quoteToken || typeof tick !== 'number') {

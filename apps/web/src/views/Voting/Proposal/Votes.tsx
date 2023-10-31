@@ -9,10 +9,10 @@ import {
   Button,
   ChevronUpIcon,
   useMatchBreakpoints,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useAccount } from 'wagmi'
 import orderBy from 'lodash/orderBy'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { Vote } from 'state/types'
 import { FetchStatus, TFetchStatus } from 'config/constants/types'
 import VotesLoading from '../components/Proposal/VotesLoading'

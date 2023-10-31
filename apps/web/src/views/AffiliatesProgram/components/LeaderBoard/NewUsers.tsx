@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Flex, Text, Skeleton, AccountFilledIcon } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Flex, Text, Skeleton, AccountFilledIcon } from '@sweepstakes/uikit'
 
 interface NewUsersProps {
   totalUsers: number

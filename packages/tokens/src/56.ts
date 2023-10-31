@@ -1,5 +1,5 @@
-import { WBNB, ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { WBNB, ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 import { BUSD_BSC, CAKE_MAINNET, USDT_BSC } from './common'
 
@@ -223,7 +223,7 @@ export const bscTokens = {
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   pha: new ERC20Token(
     ChainId.BSC,

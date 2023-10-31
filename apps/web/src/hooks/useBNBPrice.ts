@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
+import { ChainId } from '@sweepstakes/chains'
+import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import BigNumber from 'bignumber.js'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import contracts from 'config/constants/contracts'

@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { ChainId } from '@pancakeswap/chains'
+import { useTranslation } from '@sweepstakes/localization'
+import { ChainId } from '@sweepstakes/chains'
 import {
   Box,
   ButtonMenu,
@@ -10,7 +10,7 @@ import {
   UserMenu,
   UserMenuDivider,
   UserMenuItem,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { ChainLogo } from 'components/Logo/ChainLogo'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import { useRouter } from 'next/router'

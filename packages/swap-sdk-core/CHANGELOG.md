@@ -1,4 +1,4 @@
-# @pancakeswap/swap-sdk-core
+# @sweepstakes/swap-sdk-core
 
 ## 1.0.0
 

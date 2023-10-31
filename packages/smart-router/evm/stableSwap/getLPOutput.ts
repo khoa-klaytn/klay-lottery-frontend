@@ -1,4 +1,4 @@
-import { BigintIsh, CurrencyAmount, Currency, ZERO, Percent } from '@pancakeswap/sdk'
+import { BigintIsh, CurrencyAmount, Currency, ZERO, Percent } from '@sweepstakes/sdk'
 import invariant from 'tiny-invariant'
 
 import { getD } from './amm'

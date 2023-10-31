@@ -1,5 +1,5 @@
-import { WETH9, ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { WETH9, ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 import { KLAY, USDC, USDT, WBTC_ETH } from './common'
 

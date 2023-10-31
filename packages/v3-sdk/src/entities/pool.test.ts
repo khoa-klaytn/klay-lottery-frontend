@@ -1,4 +1,4 @@
-import { Token, CurrencyAmount, WETH9 } from '@pancakeswap/sdk'
+import { Token, CurrencyAmount, WETH9 } from '@sweepstakes/sdk'
 import { FeeAmount, TICK_SPACINGS } from '../constants'
 import { nearestUsableTick } from '../utils/nearestUsableTick'
 import { TickMath } from '../utils/tickMath'

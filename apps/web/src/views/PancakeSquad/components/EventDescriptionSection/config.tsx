@@ -1,5 +1,5 @@
-import { Text } from '@pancakeswap/uikit'
-import { ContextApi } from '@pancakeswap/localization'
+import { Text } from '@sweepstakes/uikit'
+import { ContextApi } from '@sweepstakes/localization'
 import Link from 'next/link'
 
 type EventDescriptionType = {
@@ -35,7 +35,7 @@ const eventDescriptionConfigBuilder = ({ t }: EventDescriptionType) => ({
     },
   ],
   primaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https://docs.sweepstakes.finance/',
     text: t('View Documentation'),
     external: true,
     isDisplayed: false,

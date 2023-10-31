@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { ButtonProps, IconButton, ArrowUpDownIcon, ArrowDownIcon } from "@pancakeswap/uikit";
+import { ButtonProps, IconButton, ArrowUpDownIcon, ArrowDownIcon } from "@sweepstakes/uikit";
 import { CurrencyInputPanel } from "./CurrencyInputPanel";
 import { CurrencyInputHeader, CurrencyInputHeaderSubTitle, CurrencyInputHeaderTitle } from "./CurrencyInputHeader";
 import { SwapPage as Page } from "./Page";

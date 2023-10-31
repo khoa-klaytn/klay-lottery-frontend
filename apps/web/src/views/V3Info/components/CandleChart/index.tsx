@@ -1,4 +1,4 @@
-import { baseColors, lightColors, darkColors } from '@pancakeswap/uikit'
+import { baseColors, lightColors, darkColors } from '@sweepstakes/uikit'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import useTheme from 'hooks/useTheme'

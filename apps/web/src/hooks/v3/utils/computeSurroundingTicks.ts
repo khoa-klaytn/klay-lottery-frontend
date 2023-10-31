@@ -1,5 +1,5 @@
-import { Token } from '@pancakeswap/sdk'
-import { tickToPrice } from '@pancakeswap/v3-sdk'
+import { Token } from '@sweepstakes/sdk'
+import { tickToPrice } from '@sweepstakes/v3-sdk'
 import { Ticks } from '../useAllV3TicksQuery'
 import { TickProcessed } from '../types'
 

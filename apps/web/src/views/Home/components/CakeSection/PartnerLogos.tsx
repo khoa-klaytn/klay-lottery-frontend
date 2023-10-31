@@ -1,5 +1,5 @@
 import React from 'react'
-import { Svg, SvgProps } from '@pancakeswap/uikit'
+import { Svg, SvgProps } from '@sweepstakes/uikit'
 
 export const PartnerVenus: React.FC<React.PropsWithChildren<SvgProps>> = (props) => (
   <Svg viewBox="0 0 20 20" {...props}>

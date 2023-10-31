@@ -1,5 +1,5 @@
-import { Currency, CurrencyAmount, Pair, Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Currency, CurrencyAmount, Pair, Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import type { Address } from 'viem'
 
 import { wrappedCurrency } from '../../evm/utils/currency'

@@ -1,4 +1,4 @@
-import { Percent } from '@pancakeswap/sdk'
+import { Percent } from '@sweepstakes/sdk'
 
 import { Address, useContractReads } from 'wagmi'
 import { stableSwapABI } from 'config/abi/stableSwapAbi'

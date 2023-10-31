@@ -1,4 +1,4 @@
-import { BigintIsh } from '@pancakeswap/sdk'
+import { BigintIsh } from '@sweepstakes/sdk'
 import { Abi, Address } from 'viem'
 
 export type ProviderConfig = {

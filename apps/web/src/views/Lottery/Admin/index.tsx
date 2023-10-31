@@ -1,7 +1,7 @@
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
-import { Button, useToast } from '@pancakeswap/uikit'
+import { Button, useToast } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
 import Modal from './Modal'
 import useLotteryAddress from '../hooks/useLotteryAddress'

@@ -1,4 +1,4 @@
-import { TranslateFunction } from '@pancakeswap/localization'
+import { TranslateFunction } from '@sweepstakes/localization'
 import { parseError } from 'hooks/useCatchTxError'
 
 /**

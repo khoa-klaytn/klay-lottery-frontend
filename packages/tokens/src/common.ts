@@ -1,5 +1,5 @@
-import { ERC20Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { ERC20Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 
 export const CAKE_MAINNET = new ERC20Token(
   ChainId.BSC,
@@ -7,7 +7,7 @@ export const CAKE_MAINNET = new ERC20Token(
   18,
   'KLAY',
   'SweepStakes Token',
-  'https://pancakeswap.finance/',
+  'https://sweepstakes.finance/',
 )
 
 export const CAKE_TESTNET = new ERC20Token(
@@ -16,7 +16,7 @@ export const CAKE_TESTNET = new ERC20Token(
   18,
   'KLAY',
   'SweepStakes Token',
-  'https://pancakeswap.finance/',
+  'https://sweepstakes.finance/',
 )
 
 export const USDC_KLAYTN = new ERC20Token(
@@ -165,7 +165,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
@@ -173,7 +173,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.BSC]: CAKE_MAINNET,
   [ChainId.BSC_TESTNET]: CAKE_TESTNET,
@@ -183,7 +183,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.POLYGON_ZKEVM_TESTNET]: new ERC20Token(
     ChainId.POLYGON_ZKEVM_TESTNET,
@@ -191,7 +191,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.ZKSYNC_TESTNET]: new ERC20Token(
     ChainId.ZKSYNC_TESTNET,
@@ -199,7 +199,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.ZKSYNC]: new ERC20Token(
     ChainId.ZKSYNC,
@@ -207,7 +207,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
@@ -215,7 +215,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.ARBITRUM_GOERLI]: new ERC20Token(
     ChainId.ARBITRUM_GOERLI,
@@ -223,7 +223,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.LINEA]: new ERC20Token(
     ChainId.LINEA,
@@ -231,7 +231,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.BASE]: new ERC20Token(
     ChainId.BASE,
@@ -239,7 +239,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.BASE_TESTNET]: new ERC20Token(
     ChainId.BASE_TESTNET,
@@ -247,7 +247,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
   [ChainId.LINEA_TESTNET]: new ERC20Token(
     ChainId.LINEA_TESTNET,
@@ -255,7 +255,7 @@ export const KLAY = {
     18,
     'KLAY',
     'SweepStakes Token',
-    'https://pancakeswap.finance/',
+    'https://sweepstakes.finance/',
   ),
 }
 

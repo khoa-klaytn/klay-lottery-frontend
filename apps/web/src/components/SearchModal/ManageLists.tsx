@@ -1,12 +1,12 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { TokenList, Version } from '@pancakeswap/token-lists'
+import { useTranslation } from '@sweepstakes/localization'
+import { TokenList, Version } from '@sweepstakes/token-lists'
 import {
   acceptListUpdate,
   disableList,
   enableList,
   removeList,
   useFetchListCallback,
-} from '@pancakeswap/token-lists/react'
+} from '@sweepstakes/token-lists/react'
 import {
   AutoColumn,
   Button,
@@ -18,10 +18,10 @@ import {
   Text,
   Toggle,
   useTooltip,
-} from '@pancakeswap/uikit'
-import { ListLogo } from '@pancakeswap/widgets-internal'
+} from '@sweepstakes/uikit'
+import { ListLogo } from '@sweepstakes/widgets-internal'
 
-import uriToHttp from '@pancakeswap/utils/uriToHttp'
+import uriToHttp from '@sweepstakes/utils/uriToHttp'
 import Card from 'components/Card'
 import { MULTI_CHAIN_LIST_URLS, UNSUPPORTED_LIST_URLS } from 'config/constants/lists'
 import { useAtomValue } from 'jotai'
@@ -225,7 +225,7 @@ function ManageLists({
 
         if (l1 && l2) {
           // Always make SweepStakes list in top.
-          const keyword = 'pancakeswap'
+          const keyword = 'sweepstakes'
           if (!l1.name.toLowerCase().includes(keyword) && l2.name.toLowerCase().includes(keyword)) {
             return 1
           }

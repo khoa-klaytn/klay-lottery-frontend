@@ -14,13 +14,13 @@ import {
   CardFooter,
   ExpandableLabel,
   Balance,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useAccount, useChainId } from 'wagmi'
 import { LotteryStatus } from 'config/constants/types'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { useKlayPrice } from 'hooks/useKlayPrice'
 import { useLottery } from 'state/lottery/hooks'
-import { getBalanceNumber } from '@pancakeswap/utils/formatBalance'
+import { getBalanceNumber } from '@sweepstakes/utils/formatBalance'
 import { SHORT_SYMBOL } from 'config/chains'
 import ViewTicketsModal from './ViewTicketsModal'
 import BuyTicketsButton from './BuyTicketsButton'

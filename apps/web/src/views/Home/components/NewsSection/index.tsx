@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { ChevronLeftIcon, ChevronRightIcon, Flex, Text } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { ChevronLeftIcon, ChevronRightIcon, Flex, Text } from '@sweepstakes/uikit'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 import { useRef, useCallback } from 'react'

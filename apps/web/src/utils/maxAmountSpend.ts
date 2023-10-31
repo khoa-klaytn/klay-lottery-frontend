@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@pancakeswap/sdk'
+import { Currency, CurrencyAmount } from '@sweepstakes/sdk'
 import { BIG_INT_ZERO, MIN_BNB } from 'config/constants/exchange'
 
 /**

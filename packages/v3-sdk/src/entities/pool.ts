@@ -1,6 +1,6 @@
 /* eslint-disable operator-assignment */
-import { BigintIsh, CurrencyAmount, Price, Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { BigintIsh, CurrencyAmount, Price, Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import invariant from 'tiny-invariant'
 import { type Address, Hash } from 'viem'
 import { FeeAmount, TICK_SPACINGS, DEPLOYER_ADDRESSES } from '../constants'

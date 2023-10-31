@@ -1,5 +1,5 @@
-import { AutoColumn, Box, Text } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+import { AutoColumn, Box, Text } from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 import { PoolData, DensityChartEntry } from '../../types'

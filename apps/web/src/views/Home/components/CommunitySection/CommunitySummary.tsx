@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Flex, Text } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Flex, Text } from '@sweepstakes/uikit'
 
 import { styled, css } from 'styled-components'
 

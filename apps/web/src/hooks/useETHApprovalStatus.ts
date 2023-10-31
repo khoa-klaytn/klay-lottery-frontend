@@ -1,4 +1,4 @@
-import { WETH9 } from '@pancakeswap/sdk'
+import { WETH9 } from '@sweepstakes/sdk'
 import BigNumber from 'bignumber.js'
 import { Address, erc20ABI, useAccount, useContractRead } from 'wagmi'
 import { useActiveChainId } from './useActiveChainId'

@@ -1,6 +1,6 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { NATIVE } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { useTranslation } from '@sweepstakes/localization'
+import { NATIVE } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import {
   ArrowDownIcon,
   ArrowUpIcon,
@@ -13,7 +13,7 @@ import {
   UserMenuDivider,
   UserMenuItem,
   useTooltip,
-} from '@pancakeswap/uikit'
+} from '@sweepstakes/uikit'
 import { useNetwork } from 'wagmi'
 import { useActiveChainId, useLocalNetworkChain } from 'hooks/useActiveChainId'
 import { useNetworkConnectorUpdater } from 'hooks/useActiveWeb3React'

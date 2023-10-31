@@ -9,10 +9,10 @@ import {
   VisibilityOn,
   NextLinkFromReactRouter as ReactRouterLink,
   ScanLink,
-} from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
+} from '@sweepstakes/uikit'
+import { useTranslation } from '@sweepstakes/localization'
 import { getBlockExploreLink, isAddress } from 'utils'
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import { Achievement, Profile } from 'state/types'
 import { useAccount } from 'wagmi'
 import { useMemo } from 'react'

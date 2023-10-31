@@ -10,7 +10,7 @@ interface AirdropModalStatus {
   v3WhitelistAddress: any
 }
 
-const GITHUB_ENDPOINT = 'https://raw.githubusercontent.com/pancakeswap/airdrop-v3-users/master'
+const GITHUB_ENDPOINT = 'https://raw.githubusercontent.com/sweepstakes/airdrop-v3-users/master'
 
 const useAirdropModalStatus = (): AirdropModalStatus => {
   const { address: account } = useAccount()

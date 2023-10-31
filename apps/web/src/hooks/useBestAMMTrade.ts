@@ -6,10 +6,10 @@ import {
   QuoteProvider,
   SmartRouterTrade,
   BATCH_MULTICALL_CONFIGS,
-} from '@pancakeswap/smart-router/evm'
-import { CurrencyAmount, TradeType, Currency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
-import { useDebounce, usePropsChanged } from '@pancakeswap/hooks'
+} from '@sweepstakes/smart-router/evm'
+import { CurrencyAmount, TradeType, Currency } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
+import { useDebounce, usePropsChanged } from '@sweepstakes/hooks'
 
 import { useIsWrapping } from 'hooks/useWrapCallback'
 import { publicClient } from 'utils/wagmi'

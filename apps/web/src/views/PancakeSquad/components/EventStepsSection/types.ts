@@ -1,4 +1,4 @@
-import { ContextApi } from '@pancakeswap/localization'
+import { ContextApi } from '@sweepstakes/localization'
 import { DefaultTheme } from 'styled-components'
 import { UserInfos, EventInfos, UserStatusEnum } from 'views/PancakeSquad/types'
 import { Address } from 'wagmi'

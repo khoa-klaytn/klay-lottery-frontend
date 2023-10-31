@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Token, Currency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Token, Currency } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import {
   Button,
   Text,
@@ -15,17 +15,17 @@ import {
   useTooltip,
   HelpIcon,
   AutoColumn,
-} from '@pancakeswap/uikit'
-import { ListLogo } from '@pancakeswap/widgets-internal'
+} from '@sweepstakes/uikit'
+import { ListLogo } from '@sweepstakes/widgets-internal'
 import { useAddUserToken } from 'state/user/hooks'
 import { getBlockExploreLink, getBlockExploreName } from 'utils'
 import useSWRImmutable from 'swr/immutable'
-import truncateHash from '@pancakeswap/utils/truncateHash'
+import truncateHash from '@sweepstakes/utils/truncateHash'
 import { useCombinedInactiveList } from 'state/lists/hooks'
-import { useTranslation } from '@pancakeswap/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { chains } from 'utils/wagmi'
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { WrappedTokenInfo } from '@pancakeswap/token-lists'
+import { WrappedTokenInfo } from '@sweepstakes/token-lists'
 import AccessRisk, { TOKEN_RISK } from 'components/AccessRisk'
 import { SUPPORT_ONLY_KLAYTN } from 'config/constants/supportChains'
 import { fetchRiskToken } from 'components/AccessRisk/utils/fetchTokenRisk'

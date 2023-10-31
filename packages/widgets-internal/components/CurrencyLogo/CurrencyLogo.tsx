@@ -1,9 +1,9 @@
-import { Currency } from "@pancakeswap/sdk";
-import { ChainId } from "@pancakeswap/chains";
+import { Currency } from "@sweepstakes/sdk";
+import { ChainId } from "@sweepstakes/chains";
 import { useMemo } from "react";
 import { styled } from "styled-components";
-import { useHttpLocations } from "@pancakeswap/hooks";
-import { TokenLogo, BinanceIcon } from "@pancakeswap/uikit";
+import { useHttpLocations } from "@sweepstakes/hooks";
+import { TokenLogo, BinanceIcon } from "@sweepstakes/uikit";
 
 import { getCurrencyLogoUrls } from "./utils";
 
@@ -47,7 +47,7 @@ export function CurrencyLogo({
     return (
       <StyledLogo
         size={size}
-        srcs={[`https://assets.pancakeswap.finance/web/native/${currency.chainId}.png`]}
+        srcs={[`https://assets.sweepstakes.finance/web/native/${currency.chainId}.png`]}
         width={size}
         style={style}
       />

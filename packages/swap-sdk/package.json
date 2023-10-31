@@ -1,5 +1,5 @@
 {
-  "name": "@pancakeswap/sdk",
+  "name": "@sweepstakes/sdk",
   "license": "MIT",
   "version": "5.6.0",
   "description": "🛠 An SDK for building applications on top of Pancakeswap.",
@@ -15,7 +15,7 @@
     "directory": "packages/swap-sdk"
   },
   "keywords": [
-    "pancakeswap",
+    "sweepstakes",
     "bsc"
   ],
   "exports": {
@@ -34,8 +34,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@pancakeswap/chains": "workspace:^",
-    "@pancakeswap/swap-sdk-core": "workspace:*",
+    "@sweepstakes/chains": "workspace:^",
+    "@sweepstakes/swap-sdk-core": "workspace:*",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
     "tiny-invariant": "^1.1.0",

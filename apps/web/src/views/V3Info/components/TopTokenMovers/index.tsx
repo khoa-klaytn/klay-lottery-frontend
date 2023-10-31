@@ -1,5 +1,5 @@
-import { useTranslation } from '@pancakeswap/localization'
-import { Box, Card, Flex, NextLinkFromReactRouter, Text } from '@pancakeswap/uikit'
+import { useTranslation } from '@sweepstakes/localization'
+import { Box, Card, Flex, NextLinkFromReactRouter, Text } from '@sweepstakes/uikit'
 import { useEffect, useMemo, useRef } from 'react'
 import { useChainNameByQuery, useMultiChainPath } from 'state/info/hooks'
 import { styled } from 'styled-components'

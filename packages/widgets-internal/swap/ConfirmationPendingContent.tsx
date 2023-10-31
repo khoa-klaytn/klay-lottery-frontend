@@ -1,6 +1,6 @@
-import { useTranslation } from "@pancakeswap/localization";
+import { useTranslation } from "@sweepstakes/localization";
 import { styled } from "styled-components";
-import { Spinner, Text, ColumnCenter, AutoColumn } from "@pancakeswap/uikit";
+import { Spinner, Text, ColumnCenter, AutoColumn } from "@sweepstakes/uikit";
 
 const Wrapper = styled.div`
   width: 100%;

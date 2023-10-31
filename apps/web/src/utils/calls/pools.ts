@@ -1,5 +1,5 @@
-import { ChainId } from '@pancakeswap/chains'
-import { getPoolsConfig } from '@pancakeswap/pools'
+import { ChainId } from '@sweepstakes/chains'
+import { getPoolsConfig } from '@sweepstakes/pools'
 
 import chunk from 'lodash/chunk'
 import { publicClient } from 'utils/wagmi'

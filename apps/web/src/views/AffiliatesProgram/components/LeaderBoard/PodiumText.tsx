@@ -1,5 +1,5 @@
-import { Box, Text, Skeleton, BoxProps } from '@pancakeswap/uikit'
-import { formatNumber } from '@pancakeswap/utils/formatBalance'
+import { Box, Text, Skeleton, BoxProps } from '@sweepstakes/uikit'
+import { formatNumber } from '@sweepstakes/utils/formatBalance'
 
 interface PodiumTextProps extends BoxProps {
   title: string

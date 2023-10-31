@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
-import { Currency, Token } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
+import { Currency, Token } from '@sweepstakes/sdk'
+import { ChainId } from '@sweepstakes/chains'
 import { styled } from 'styled-components'
 import {
   Button,
@@ -13,11 +13,11 @@ import {
   BscScanIcon,
   AutoColumn,
   ColumnCenter,
-} from '@pancakeswap/uikit'
-import { ConfirmationPendingContent } from '@pancakeswap/widgets-internal'
-import { useTranslation } from '@pancakeswap/localization'
+} from '@sweepstakes/uikit'
+import { ConfirmationPendingContent } from '@sweepstakes/widgets-internal'
+import { useTranslation } from '@sweepstakes/localization'
 import { wrappedCurrency } from 'utils/wrappedCurrency'
-import { WrappedTokenInfo } from '@pancakeswap/token-lists'
+import { WrappedTokenInfo } from '@sweepstakes/token-lists'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { getBlockExploreLink, getBlockExploreName } from 'utils'
 import AddToWalletButton, { AddToWalletTextOptions } from '../AddToWallet/AddToWalletButton'
