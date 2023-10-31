@@ -41,7 +41,7 @@ export const fetchTokenUSDValue = async (chainId: number, tokenAddresses: string
     .filter(Boolean)
 
   if (cakeAddress.length > 0) {
-    const klayPrice = parseFloat(await getKlayPriceFromOracle())
+    const klayPrice = parseFloat(await getKlayPriceFromOracle(chainId))
     cakeAddress.forEach((address) => {
       tokenPriceArray = {
         coins: {
