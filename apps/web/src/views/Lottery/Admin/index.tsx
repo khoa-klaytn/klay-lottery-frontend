@@ -32,12 +32,10 @@ export default function Admin() {
           address: lotteryAddress,
           functionName: roleName,
         })
-        .catch((e) => {
-          console.error(e)
-          toastError(`Failed to read ${roleName} from contract`)
-          return null
+        .catch(() => {
+          throw Error(`Failed to read ${roleName} from contract`)
         }),
-    [lotteryAddress, publicClient, toastError],
+    [lotteryAddress, publicClient],
   )
 
   useEffect(() => {
@@ -49,9 +47,12 @@ export default function Admin() {
         setIsOwner(ownerAddress === account)
         const injectorAddress = await readRole('injectorAddress')
         setIsInjector([injectorAddress, ownerAddress].includes(account))
-      })()
+      })().catch((e) => {
+        console.error(e)
+        toastError('Failed to read admin roles from contract')
+      })
     }
-  }, [publicClient, lotteryAddress, account, readRole])
+  }, [publicClient, lotteryAddress, account, readRole, toastError])
 
   return isAdmin ? (
     <>
