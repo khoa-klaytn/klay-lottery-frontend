@@ -2608,7 +2608,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Tiếng Việt"
               class="c26 c13"
-              href="https://t.me/PancakeSwapVN"
+              href="https://t.me/SweepStakesVN"
               rel="noreferrer noopener"
               target="_blank"
             >
@@ -2716,7 +2716,7 @@ exports[`renders correctly 1`] = `
             <a
               aria-label="Announcements"
               class="c26 c13"
-              href="https://t.me/PancakeSwapAnn"
+              href="https://t.me/SweepStakesAnn"
               rel="noreferrer noopener"
               target="_blank"
             >

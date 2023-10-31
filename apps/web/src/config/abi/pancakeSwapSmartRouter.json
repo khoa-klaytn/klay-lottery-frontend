@@ -93,7 +93,7 @@
       { "internalType": "contract IERC20", "name": "dstToken", "type": "address" },
       { "internalType": "uint256", "name": "amount", "type": "uint256" },
       { "internalType": "uint256", "name": "minReturn", "type": "uint256" },
-      { "internalType": "enum PancakeSwapSmartRouter.FLAG", "name": "flag", "type": "uint8" }
+      { "internalType": "enum SweepStakesSmartRouter.FLAG", "name": "flag", "type": "uint8" }
     ],
     "name": "swap",
     "outputs": [{ "internalType": "uint256", "name": "returnAmount", "type": "uint256" }],
@@ -105,7 +105,7 @@
       { "internalType": "contract IERC20[]", "name": "tokens", "type": "address[]" },
       { "internalType": "uint256", "name": "amount", "type": "uint256" },
       { "internalType": "uint256", "name": "minReturn", "type": "uint256" },
-      { "internalType": "enum PancakeSwapSmartRouter.FLAG[]", "name": "flags", "type": "uint8[]" }
+      { "internalType": "enum SweepStakesSmartRouter.FLAG[]", "name": "flags", "type": "uint8[]" }
     ],
     "name": "swapMulti",
     "outputs": [{ "internalType": "uint256", "name": "returnAmount", "type": "uint256" }],

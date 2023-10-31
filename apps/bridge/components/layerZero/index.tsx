@@ -5,7 +5,7 @@ import { Flex, Box } from '@pancakeswap/uikit'
 import { LAYER_ZERO_JS, FEE_COLLECTOR, FEE_TENTH_BPS, PARTNER_ID } from 'components/layerZero/config'
 import { LayerZeroWidget } from 'components/layerZero/LayerZeroWidget'
 import AptosBridgeFooter from 'components/layerZero/AptosBridgeFooter'
-import { PancakeSwapTheme } from './theme'
+import { SweepStakesTheme } from './theme'
 
 declare global {
   interface Window {
@@ -44,8 +44,8 @@ const LayerZero = ({ isCake }: { isCake?: boolean }) => {
         })
 
         const newTheme = {
-          dark: createBasicTheme(PancakeSwapTheme.dark),
-          light: createBasicTheme(PancakeSwapTheme.light),
+          dark: createBasicTheme(SweepStakesTheme.dark),
+          light: createBasicTheme(SweepStakesTheme.light),
         }
         uiStore.theme.setConfig(newTheme)
       }

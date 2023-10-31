@@ -18,16 +18,18 @@ If you want to contribute, please refer to the [contributing guidelines](./CONTR
 > Install dependencies using [pnpm](https://pnpm.io)
 
 ## `apps/web`
+
 <details>
 <summary>
 Config
 </summary>
 
-| Config | Location |
-|--------|----------|
-| KlayLottery address | [constants/contracts.ts @default.klayLottery](apps/web/src/config/constants/contracts.ts?plain=1#L20) |
-| KlayLottery ABI | [abi/klayLottery.ts @klayLotteryABI](apps/web/src/config/abi/klayLottery.ts?plain=1#L1) |
-| Lottery subgraph url | [constants/endpoints.ts @GRAPH_API_LOTTERY](apps/web/src/config/constants/endpoints.ts?plain=1#L5) |
+| Config               | Location                                                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| KlayLottery address  | [constants/contracts.ts @default.klayLottery](apps/web/src/config/constants/contracts.ts?plain=1#L20) |
+| KlayLottery ABI      | [abi/klayLottery.ts @klayLotteryABI](apps/web/src/config/abi/klayLottery.ts?plain=1#L1)               |
+| Lottery subgraph url | [constants/endpoints.ts @GRAPH_API_LOTTERY](apps/web/src/config/constants/endpoints.ts?plain=1#L5)    |
+
 </details>
 
 <details>
@@ -40,27 +42,28 @@ pnpm i
 ```
 
 start the development server
+
 ```sh
 pnpm dev
 ```
 
 build with production mode
+
 ```sh
 pnpm build
 
 # start the application after build
 pnpm start
 ```
-</details>
 
+</details>
 
 ## Packages
 
-| Package                                                       | Description                                                                                                            |
-|---------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [sdk](/packages/swap-sdk)                                     | An SDK for building applications                                                                 |
-| [aptos-swap-sdk](/packages/aptos-swap-sdk)                    | Aptos version of Swap SDK                                                                                              |
-| [swap-sdk-core](/packages/swap-sdk-core)                      | Swap SDK Shared code                                                                                                   |
-| [wagmi](/packages/wagmi)                                      | Extension for [wagmi](https://github.com/wagmi-dev/wagmi), including bsc chain and binance wallet connector            |
-| [awgmi](/packages/awgmi)                                      | Connect to Aptos with similar wagmi React hooks.                                                                       |
-
+| Package                                    | Description                                                                                                 |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| [sdk](/packages/swap-sdk)                  | An SDK for building applications                                                                            |
+| [aptos-swap-sdk](/packages/aptos-swap-sdk) | Aptos version of Swap SDK                                                                                   |
+| [swap-sdk-core](/packages/swap-sdk-core)   | Swap SDK Shared code                                                                                        |
+| [wagmi](/packages/wagmi)                   | Extension for [wagmi](https://github.com/wagmi-dev/wagmi), including bsc chain and binance wallet connector |
+| [awgmi](/packages/awgmi)                   | Connect to Aptos with similar wagmi React hooks.                                                            |

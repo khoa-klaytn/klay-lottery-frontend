@@ -12,7 +12,7 @@ const CHAIN_MAPPING = {
   [ChainId.POLYGON_ZKEVM]: 'polygon_zkevm',
 } as const satisfies Record<number, string>
 
-// use for fetch usd outside of the liquidity pools on PancakeSwap
+// use for fetch usd outside of the liquidity pools on SweepStakes
 export const fetchTokenUSDValue = async (chainId: number, tokenAddresses: string[]) => {
   if (!tokenAddresses.length || !CHAIN_MAPPING[chainId]) return new Map<string, string>()
 

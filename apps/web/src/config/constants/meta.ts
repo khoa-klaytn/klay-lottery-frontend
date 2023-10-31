@@ -4,7 +4,7 @@ import { PageMeta } from './types'
 import { ASSET_CDN } from './endpoints'
 
 export const DEFAULT_META: PageMeta = {
-  title: 'PancakeSwap',
+  title: 'SweepStakes',
   description:
     'The most popular AMM on BSC by user count! Win it in the Lottery, then stake it in Syrup Pools to earn more tokens! NFTs and more on a platform you can trust.',
   image: `${ASSET_CDN}/web/og/hero.jpg`,
@@ -37,7 +37,7 @@ const getPathList = (t: ContextApi['t']): PathList => {
       },
       '/profile': { basePath: true, title: t('Profile') },
     },
-    defaultTitleSuffix: t('PancakeSwap'),
+    defaultTitleSuffix: t('SweepStakes'),
   }
 }
 

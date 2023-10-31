@@ -38,7 +38,7 @@ const IntroSteps = [
     icon: '/images/affiliates-program/slider/3.png',
     description: (
       <Trans>
-        Earn KLAY tokens on most trades made on PancakeSwap. Stake for more rewards or use them in our Lottery
+        Earn KLAY tokens on most trades made on SweepStakes. Stake for more rewards or use them in our Lottery
       </Trans>
     ),
   },

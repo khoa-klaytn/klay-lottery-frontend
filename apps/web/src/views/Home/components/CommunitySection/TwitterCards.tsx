@@ -73,7 +73,7 @@ export const useTweetsData = () => {
     return [
       {
         tweet: `🎂 3 years ago, we planted the seed on the BNB Chain, and today, it has grown into Everyone's Favorite DEX across eight blockchains.`,
-        link: 'https://x.com/PancakeSwap/status/1705190230394032541?s=20',
+        link: 'https://x.com/SweepStakes/status/1705190230394032541?s=20',
         date: 'Sep 22',
         like: '249',
         impression: '19.7k',
@@ -116,13 +116,13 @@ export const TwitterCards: React.FC = () => {
       </LogoBox>
       <Flex alignItems="center">
         <Text mt="10px" fontSize={14} bold>
-          PancakeSwap🥞Ev3ryone&#39;s Favourite D3X
+          SweepStakes🥞Ev3ryone&#39;s Favourite D3X
         </Text>
         <VerifiedIcon ml="3px" mt="9px" color={theme.colors.secondary} />
       </Flex>
       <Flex style={{ gap: 0 }} alignItems="center" justifyContent="center">
         <StyledText fontSize={14} color={theme.colors.textSubtle}>
-          @PancakeSwap
+          @SweepStakes
         </StyledText>
         <Divider />
         <Text fontSize={14} color={theme.colors.textSubtle}>

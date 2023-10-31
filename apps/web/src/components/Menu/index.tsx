@@ -28,7 +28,7 @@ const Menu = (props) => {
   const { currentLanguage, setLanguage, t } = useTranslation()
   const { pathname } = useRouter()
   const [onUSCitizenModalPresent] = useModal(
-    <USCitizenConfirmModal title={t('PancakeSwap Perpetuals')} id={IdType.PERPETUALS} />,
+    <USCitizenConfirmModal title={t('SweepStakes Perpetuals')} id={IdType.PERPETUALS} />,
     false,
     false,
     'usCitizenConfirmModal',

@@ -100,7 +100,7 @@ export const socials = [
       },
       {
         label: "Tiếng Việt",
-        href: "https://t.me/PancakeSwapVN",
+        href: "https://t.me/SweepStakesVN",
       },
       {
         label: "Italiano",
@@ -148,7 +148,7 @@ export const socials = [
       },
       {
         label: "Announcements",
-        href: "https://t.me/PancakeSwapAnn",
+        href: "https://t.me/SweepStakesAnn",
       },
     ],
   },

@@ -7,7 +7,7 @@ export const cakeToken = new ERC20Token(
   "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
   18,
   "KLAY",
-  "PancakeSwap Token",
+  "SweepStakes Token",
   "https://pancakeswap.finance/"
 );
 

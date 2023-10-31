@@ -142,7 +142,7 @@ const BaseBanner = () => {
             <Divider />
             <BaseLogo width={60} height={16} />
           </Flex>
-          <Header>{isMobile ? t('Base is LIVE!') : t('PancakeSwap Now Live on Base!')}</Header>
+          <Header>{isMobile ? t('Base is LIVE!') : t('SweepStakes Now Live on Base!')}</Header>
           {!isMobile && <SubTitle>{t('Swap and Provide Liquidity Now')}</SubTitle>}
           <Link
             style={{ textDecoration: 'none' }}

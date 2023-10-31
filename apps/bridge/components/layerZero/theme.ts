@@ -46,7 +46,7 @@ const defaultTypography = {
 
 const borderRadius = 18
 
-export const PancakeSwapTheme = {
+export const SweepStakesTheme = {
   dark: {
     typography: {
       ...defaultTypography,

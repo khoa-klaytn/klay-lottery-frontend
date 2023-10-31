@@ -421,7 +421,7 @@ const CakeSection: React.FC = () => {
           padding="0px 16px"
         >
           {t(
-            'Experience the power of community ownership, global governance, and explore infinite use cases within the PancakeSwap ecosystem',
+            'Experience the power of community ownership, global governance, and explore infinite use cases within the SweepStakes ecosystem',
           )}
         </Text>
       </Flex>
