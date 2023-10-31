@@ -29,8 +29,8 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   langs,
   setLang,
   klayPriceUsd,
-  buyCakeLabel,
-  buyCakeLink,
+  buyKlayLabel,
+  buyKlayLink,
   chainId,
   ...props
 }) => {
@@ -104,12 +104,12 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             <Button
               data-theme="dark"
               as="a"
-              href={buyCakeLink}
+              href={buyKlayLink}
               target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color="backgroundAlt" />}
             >
-              {buyCakeLabel}
+              {buyKlayLabel}
             </Button>
           </Flex>
         </StyledToolsContainer>

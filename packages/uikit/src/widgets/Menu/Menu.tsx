@@ -85,8 +85,8 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   activeItem,
   activeSubItem,
   langs,
-  buyCakeLabel,
-  buyCakeLink,
+  buyKlayLabel,
+  buyKlayLink,
   children,
   chainId,
 }) => {
@@ -205,8 +205,8 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
         setLang={setLang}
         currentLang={currentLang}
         klayPriceUsd={klayPriceUsd}
-        buyCakeLabel={buyCakeLabel}
-        buyCakeLink={buyCakeLink}
+        buyKlayLabel={buyKlayLabel}
+        buyKlayLink={buyKlayLink}
         mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
       />
       <AtomBox display={{ xs: "block", md: "none" }}>

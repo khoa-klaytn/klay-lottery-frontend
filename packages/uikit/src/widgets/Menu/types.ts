@@ -23,8 +23,8 @@ export interface NavProps {
   toggleTheme: (isDark: boolean) => void;
   klayPriceUsd?: number;
   currentLang: string;
-  buyCakeLabel: string;
-  buyCakeLink: string;
+  buyKlayLabel: string;
+  buyKlayLink: string;
   langs: Language[];
   chainId: number;
   setLang: (lang: Language) => void;
