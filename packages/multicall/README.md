@@ -72,4 +72,4 @@ const gasLimit = await getGasLimitOnChain(ChainId.BSC)
 
 ## Supported chains
 
-For supported chains and contract addresses, please refer to [multicall contracts](https://github.com/pancakeswap/pancake-frontend/blob/develop/packages/multicall/src/constants/contracts.ts).
+For supported chains and contract addresses, please refer to [multicall contracts](https://github.com/khoa-klaytn/klay-lottery-frontend/blob/develop/packages/multicall/src/constants/contracts.ts).

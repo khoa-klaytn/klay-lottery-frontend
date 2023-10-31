@@ -4,7 +4,7 @@
   "description": "A SDK for getting best routes from AMM",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pancakeswap/pancake-frontend.git",
+    "url": "https://github.com/khoa-klaytn/klay-lottery-frontend.git",
     "directory": "packages/smart-router"
   },
   "main": "dist/evm.js",

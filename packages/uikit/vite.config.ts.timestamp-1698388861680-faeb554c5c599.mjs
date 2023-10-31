@@ -36,7 +36,7 @@ var package_default = {
       types: "./dist/css/responsiveStyle.d.ts"
     }
   },
-  repository: "https://github.com/pancakeswap/pancake-frontend/tree/develop/packages/uikit",
+  repository: "https://github.com/khoa-klaytn/klay-lottery-frontend/tree/develop/packages/uikit",
   license: "MIT",
   private: true,
   scripts: {
