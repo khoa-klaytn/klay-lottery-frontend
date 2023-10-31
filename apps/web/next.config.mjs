@@ -85,15 +85,6 @@ const config = {
   async headers() {
     return [
       {
-        source: '/favicon.ico',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, immutable, max-age=31536000',
-          },
-        ],
-      },
-      {
         source: '/logo.png',
         headers: [
           {
