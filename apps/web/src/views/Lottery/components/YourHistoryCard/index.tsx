@@ -1,18 +1,7 @@
 import { useState, useCallback } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { styled } from 'styled-components'
-import {
-  CardHeader,
-  Card,
-  CardBody,
-  Text,
-  CardFooter,
-  ArrowBackIcon,
-  Flex,
-  Heading,
-  Skeleton,
-  Box,
-} from '@pancakeswap/uikit'
+import { CardHeader, Card, CardBody, Text, ArrowBackIcon, Flex, Heading, Skeleton, Box } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
 import { LotteryStatus } from 'config/constants/types'
 import { useGetUserLotteriesGraphData, useLottery } from 'state/lottery/hooks'
@@ -158,15 +147,7 @@ const YourHistoryCard: React.FC<React.PropsWithChildren<YourHistoryCardProps>> =
     if (selectedLotteryNodeData) {
       return <PreviousRoundCardFooter lotteryNodeData={selectedLotteryNodeData} lotteryId={selectedLotteryId} />
     }
-    return (
-      <CardFooter>
-        <Flex flexDirection="column" justifyContent="center" alignItems="center">
-          <Text fontSize="12px" color="textSubtle">
-            {t('Only showing data for Lottery V2')}
-          </Text>
-        </Flex>
-      </CardFooter>
-    )
+    return null
   }
 
   return (
