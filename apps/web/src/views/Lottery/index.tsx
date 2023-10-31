@@ -2,7 +2,6 @@ import { styled } from 'styled-components'
 import { Box, Flex, Heading, Skeleton, PageSection } from '@pancakeswap/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useTranslation } from '@pancakeswap/localization'
-import useTheme from 'hooks/useTheme'
 import { useFetchLottery, useLottery } from 'state/lottery/hooks'
 import { LotterySubgraphHealthIndicator } from 'components/SubgraphHealthIndicator'
 import { useState } from 'react'
@@ -15,7 +14,6 @@ import HistoryTabMenu from './components/HistoryTabMenu'
 import YourHistoryCard from './components/YourHistoryCard'
 import AllHistoryCard from './components/AllHistoryCard'
 import CheckPrizesSection from './components/CheckPrizesSection'
-import HowToPlay from './components/HowToPlay'
 import useShowMoreUserHistory from './hooks/useShowMoreUserRounds'
 import Admin from './Admin'
 
@@ -27,7 +25,6 @@ const Lottery = () => {
   useFetchLottery()
   useStatusTransitions()
   const { t } = useTranslation()
-  const { theme } = useTheme()
   const {
     currentRound: { status, endTime },
   } = useLottery()
@@ -100,14 +97,6 @@ const Lottery = () => {
               />
             )}
           </Flex>
-        </PageSection>
-        <PageSection
-          dividerPosition="top"
-          dividerFill={{ light: theme.colors.background }}
-          clipFill={{ light: '#9A9FD0', dark: theme.colors.overlay3 }}
-          index={2}
-        >
-          <HowToPlay />
         </PageSection>
         <LotterySubgraphHealthIndicator />
       </LotteryPage>
