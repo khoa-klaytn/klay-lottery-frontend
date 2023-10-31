@@ -18,7 +18,7 @@ interface PathList {
 const getPathList = (t: ContextApi['t']): PathList => {
   return {
     paths: {
-      '/': { title: t('Home') },
+      '/': { title: t('Lottery') }, // TODO: change this back to Home
       '/lottery': { title: t('Lottery'), image: `${ASSET_CDN}/web/og/lottery.jpg` },
       '/info': {
         title: `${t('Overview')} - ${t('Info')}`,
