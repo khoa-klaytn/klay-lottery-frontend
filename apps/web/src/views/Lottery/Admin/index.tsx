@@ -48,7 +48,7 @@ export default function Admin() {
         const ownerAddress = await readRole('owner')
         setIsOwner(ownerAddress === account)
         const injectorAddress = await readRole('injectorAddress')
-        setIsInjector([injectorAddress, ownerAddress].includes(injectorAddress))
+        setIsInjector([injectorAddress, ownerAddress].includes(account))
       })()
     }
   }, [publicClient, lotteryAddress, account, readRole])
