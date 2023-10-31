@@ -2,7 +2,7 @@
   "name": "@sweepstakes/sdk",
   "license": "MIT",
   "version": "5.6.0",
-  "description": "🛠 An SDK for building applications on top of Pancakeswap.",
+  "description": "🛠 An SDK for building applications on top of SweepStakesswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/index.mjs",

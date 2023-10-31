@@ -1081,7 +1081,7 @@ export const stableSwapPairABI = [
     name: 'token',
     outputs: [
       {
-        internalType: 'contract PancakeStableSwapLP',
+        internalType: 'contract SweepStakesStableSwapLP',
         name: '',
         type: 'address',
       },

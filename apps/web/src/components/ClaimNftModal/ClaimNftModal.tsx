@@ -51,7 +51,7 @@ const ClaimNftModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
         />
         <Text bold color="secondary" textAlign="center" fontSize="18px" mb="24px">
           {t(
-            'Celebrate Christmas and New Year with us! Enjoy this wonderful NFT crafted by Chef Cecy and the winner from our #PancakeChristmas event.',
+            'Celebrate Christmas and New Year with us! Enjoy this wonderful NFT crafted by Chef Cecy and the winner from our #SweepStakesChristmas event.',
           )}
         </Text>
         <Button disabled={isClaiming} onClick={claimNft}>

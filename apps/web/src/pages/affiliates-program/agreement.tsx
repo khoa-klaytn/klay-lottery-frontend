@@ -48,7 +48,7 @@ const Agreement = () => {
         <Text as="p">2.2 To be eligible for commissions, the swap trades must have:</Text>
         <Text as="p">(a) a token pair that:</Text>
         <Text as="p">
-          <Text as="span">(i) Is in the following Pancake Swap token lists</Text>
+          <Text as="span">(i) Is in the following SweepStakes Swap token lists</Text>
           <Text as="p">
             BNB Smart Chain:
             <Link href="https://tokenlists.org/token-list?url=https://tokens.sweepstakes.finance/sweepstakes-extended.json">

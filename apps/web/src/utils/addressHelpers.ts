@@ -28,10 +28,10 @@ export const getMulticallAddress = (chainId?: number) => {
 export const getKlayLotteryAddress = (chainId: number) => {
   return getAddressFromMap(addresses.klayLottery, chainId)
 }
-export const getPancakeProfileAddress = () => {
+export const getSweepStakesProfileAddress = () => {
   return getAddressFromMap(addresses.pancakeProfile)
 }
-export const getPancakeBunniesAddress = () => {
+export const getSweepStakesBunniesAddress = () => {
   return getAddressFromMap(addresses.pancakeBunnies)
 }
 export const getBunnyFactoryAddress = () => {
@@ -76,7 +76,7 @@ export const getNftMarketAddress = () => {
 export const getNftSaleAddress = () => {
   return getAddressFromMap(addresses.nftSale)
 }
-export const getPancakeSquadAddress = () => {
+export const getSweepStakesSquadAddress = () => {
   return getAddressFromMap(addresses.pancakeSquad)
 }
 

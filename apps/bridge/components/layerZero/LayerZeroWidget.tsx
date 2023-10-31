@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Box, PancakeTheme } from '@sweepstakes/uikit'
+import { Box, SweepStakesTheme } from '@sweepstakes/uikit'
 
 declare global {
   interface Window {
@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-export const LayerZeroWidget = ({ theme }: { theme: PancakeTheme }) => {
+export const LayerZeroWidget = ({ theme }: { theme: SweepStakesTheme }) => {
   useEffect(() => {
     const themeText = theme.isDark ? 'dark' : 'light'
 

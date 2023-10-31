@@ -4,7 +4,7 @@ import { getProfileContract } from 'utils/contractHelpers'
 import { Team } from 'config/constants/types'
 import { TeamsById } from 'state/types'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import fromPairs from 'lodash/fromPairs'
 import { publicClient } from 'utils/wagmi'
 import { ChainId } from '@sweepstakes/chains'
@@ -44,7 +44,7 @@ export const getTeams = async (): Promise<TeamsById> => {
       (_, i) =>
         ({
           abi: pancakeProfileABI,
-          address: getPancakeProfileAddress(),
+          address: getSweepStakesProfileAddress(),
           functionName: 'getTeamProfile',
           args: [BigInt(i + 1)] as const,
         } as const),

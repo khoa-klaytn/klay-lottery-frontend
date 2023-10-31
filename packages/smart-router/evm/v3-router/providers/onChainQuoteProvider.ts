@@ -9,7 +9,7 @@ import { mixedRouteQuoterV1ABI } from '../../abis/IMixedRouteQuoterV1'
 import { quoterV2ABI } from '../../abis/IQuoterV2'
 import { encodeMixedRouteToPath, getQuoteCurrency, isStablePool, isV2Pool, isV3Pool } from '../utils'
 import { Result } from './multicallProvider'
-import { PancakeMulticallProvider } from './multicallSwapProvider'
+import { SweepStakesMulticallProvider } from './multicallSwapProvider'
 import { MIXED_ROUTE_QUOTER_ADDRESSES, V3_QUOTER_ADDRESSES } from '../../constants'
 import { BatchMulticallConfigs, ChainMap } from '../../types'
 import { BATCH_MULTICALL_CONFIGS } from '../../constants/multicall'
@@ -138,7 +138,7 @@ function onChainQuoteProviderFactory({ getQuoteFunctionName, getQuoterAddress, a
         } = multicallConfigs
         const chainProvider = onChainProvider({ chainId })
         const providerConfig = { blockNumber: blockNumberFromConfig }
-        const multicall2Provider = new PancakeMulticallProvider(chainId, chainProvider, defaultGasLimitPerCall)
+        const multicall2Provider = new SweepStakesMulticallProvider(chainId, chainProvider, defaultGasLimitPerCall)
         const inputs = routes.map<CallInputs>((route) => getCallInputs(route, isExactIn))
 
         const { shouldRetry, onRetry } = retryControllerFactory()

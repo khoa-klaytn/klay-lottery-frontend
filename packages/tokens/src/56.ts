@@ -406,7 +406,7 @@ export const bscTokens = {
     '0xC9849E6fdB743d08fAeE3E34dd2D1bc69EA11a51',
     18,
     'BUNNY',
-    'Pancakebunny Token',
+    'SweepStakesbunny Token',
     'https://pancakebunny.finance/',
   ),
   alice: new ERC20Token(

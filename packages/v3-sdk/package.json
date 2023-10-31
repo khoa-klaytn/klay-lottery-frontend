@@ -5,7 +5,7 @@
     "access": "public"
   },
   "version": "3.5.0",
-  "description": "⚒️ An SDK for building applications on top of Pancakeswap V3",
+  "description": "⚒️ An SDK for building applications on top of SweepStakesswap V3",
   "files": [
     "dist"
   ],

@@ -19,7 +19,7 @@ export function createStableSwapPair(
     stableSwapAddress,
     lpAddress,
     infoStableSwapAddress,
-    liquidityToken: new ERC20Token(pair.token0.chainId, lpAddress, 18, 'Stable-LP', 'Pancake StableSwap LPs'),
+    liquidityToken: new ERC20Token(pair.token0.chainId, lpAddress, 18, 'Stable-LP', 'SweepStakes StableSwap LPs'),
     // default price & fees are zero, need to get the actual price from chain
     price: new Price(pair.token0, pair.token1, '0', '1'),
     fee: new Percent(0),

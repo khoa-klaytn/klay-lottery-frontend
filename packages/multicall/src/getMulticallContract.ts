@@ -15,7 +15,7 @@ export function getMulticallContract({
 }: Params): GetContractReturnType<typeof iMulticallABI, PublicClient> {
   const address = MULTICALL_ADDRESS[chainId]
   if (!address) {
-    throw new Error(`PancakeMulticall not supported on chain ${chainId}`)
+    throw new Error(`SweepStakesMulticall not supported on chain ${chainId}`)
   }
 
   return getContract({ abi: iMulticallABI, address, publicClient: client })

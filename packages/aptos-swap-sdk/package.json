@@ -2,7 +2,7 @@
   "name": "@sweepstakes/aptos-swap-sdk",
   "license": "MIT",
   "version": "1.0.0",
-  "description": "🛠 An SDK for building applications on top of Pancakeswap Aptos.",
+  "description": "🛠 An SDK for building applications on top of SweepStakesswap Aptos.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/index.mjs",

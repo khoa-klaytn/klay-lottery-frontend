@@ -5,9 +5,9 @@ import { FeeAmount, DEPLOYER_ADDRESSES, parseProtocolFees } from '@sweepstakes/v
 import { type Address, ContractFunctionConfig, Abi } from 'viem'
 
 import { OnChainProvider, Pool, PoolType, V2Pool, StablePool, V3Pool } from '../../types'
-import { pancakePairABI } from '../../../abis/IPancakePair'
+import { pancakePairABI } from '../../../abis/ISweepStakesPair'
 import { stableSwapPairABI } from '../../../abis/StableSwapPair'
-import { pancakeV3PoolABI } from '../../../abis/IPancakeV3Pool'
+import { pancakeV3PoolABI } from '../../../abis/ISweepStakesV3Pool'
 import { getStableSwapPools } from '../../../constants/stableSwap'
 import { computeV2PoolAddress, computeV3PoolAddress } from '../../utils'
 import { PoolMeta, V3PoolMeta } from './internalTypes'

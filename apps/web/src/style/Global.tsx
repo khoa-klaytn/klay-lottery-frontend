@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-import { PancakeTheme } from '@sweepstakes/uikit'
+import { SweepStakesTheme } from '@sweepstakes/uikit'
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
-  export interface DefaultTheme extends PancakeTheme {}
+  export interface DefaultTheme extends SweepStakesTheme {}
 }
 
 const GlobalStyle = createGlobalStyle`

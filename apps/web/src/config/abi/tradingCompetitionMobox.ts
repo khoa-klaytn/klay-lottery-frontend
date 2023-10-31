@@ -215,7 +215,7 @@ export const tradingCompetitionMoboxABI = [
   {
     inputs: [],
     name: 'pancakeProfile',
-    outputs: [{ internalType: 'contract IPancakeProfile', name: '', type: 'address' }],
+    outputs: [{ internalType: 'contract ISweepStakesProfile', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },

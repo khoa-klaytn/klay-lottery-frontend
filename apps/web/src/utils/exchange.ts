@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, Fraction, Percent, Trade, TradeType } from '@sweepstakes/sdk'
-import { pancakeRouter02ABI } from 'config/abi/IPancakeRouter02'
+import { pancakeRouter02ABI } from 'config/abi/ISweepStakesRouter02'
 import {
   ALLOWED_PRICE_IMPACT_HIGH,
   ALLOWED_PRICE_IMPACT_LOW,

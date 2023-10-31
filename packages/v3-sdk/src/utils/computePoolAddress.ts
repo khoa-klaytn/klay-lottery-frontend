@@ -42,7 +42,7 @@ function getCreate2AddressZkSync(from: Address, salt: Address, initCodeHash: Add
 
 /**
  * Computes a pool address
- * @param deployerAddress The Pancake V3 deployer address
+ * @param deployerAddress The SweepStakes V3 deployer address
  * @param tokenA The first token of the pair, irrespective of sort order
  * @param tokenB The second token of the pair, irrespective of sort order
  * @param fee The fee tier of the pool

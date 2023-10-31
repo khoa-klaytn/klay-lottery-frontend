@@ -1,3 +1,3 @@
-import PancakeSquad from '../views/PancakeSquad'
+import SweepStakesSquad from '../views/SweepStakesSquad'
 
-export default PancakeSquad
+export default SweepStakesSquad

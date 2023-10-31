@@ -1,4 +1,4 @@
-import { PancakeTheme, ResetCSS, dark, light, ModalProvider, UIKitProvider } from '@sweepstakes/uikit'
+import { SweepStakesTheme, ResetCSS, dark, light, ModalProvider, UIKitProvider } from '@sweepstakes/uikit'
 import React, { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import Script from 'next/script'
@@ -9,7 +9,7 @@ import { Menu } from '../components/Menu'
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
-  export interface DefaultTheme extends PancakeTheme {}
+  export interface DefaultTheme extends SweepStakesTheme {}
 }
 
 const StyledThemeProvider: React.FC<React.PropsWithChildren> = (props) => {

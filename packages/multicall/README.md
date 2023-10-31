@@ -1,4 +1,4 @@
-# Pancake Multicall
+# SweepStakes Multicall
 
 Enhanced multicall sdk to safely make multicalls within the gas limit.
 

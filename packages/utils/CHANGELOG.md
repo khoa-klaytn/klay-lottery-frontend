@@ -28,7 +28,7 @@
 
 ### Patch Changes
 
-- a784ca6ed: Pancake Multicall release
+- a784ca6ed: SweepStakes Multicall release
   - @sweepstakes/awgmi@0.1.14
   - @sweepstakes/localization@5.0.2
   - @sweepstakes/token-lists@0.0.8

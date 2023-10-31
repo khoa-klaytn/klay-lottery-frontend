@@ -22,17 +22,17 @@ const getPathList = (t: ContextApi['t']): PathList => {
       '/lottery': { title: t('Lottery'), image: `${ASSET_CDN}/web/og/lottery.jpg` },
       '/info': {
         title: `${t('Overview')} - ${t('Info')}`,
-        description: 'View statistics for Pancakeswap exchanges.',
+        description: 'View statistics for SweepStakesswap exchanges.',
         image: `${ASSET_CDN}/web/og/info.jpg`,
       },
       '/info/pairs': {
         title: `${t('Pairs')} - ${t('Info')}`,
-        description: 'View statistics for Pancakeswap exchanges.',
+        description: 'View statistics for SweepStakesswap exchanges.',
         image: `${ASSET_CDN}/web/og/info.jpg`,
       },
       '/info/tokens': {
         title: `${t('Tokens')} - ${t('Info')}`,
-        description: 'View statistics for Pancakeswap exchanges.',
+        description: 'View statistics for SweepStakesswap exchanges.',
         image: `${ASSET_CDN}/web/og/info.jpg`,
       },
       '/profile': { basePath: true, title: t('Profile') },

@@ -3,7 +3,7 @@ import { useToast } from '@sweepstakes/uikit'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useEffect, useState } from 'react'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import { usePublicClient } from 'wagmi'
 
 const useGetProfileCosts = () => {
@@ -21,7 +21,7 @@ const useGetProfileCosts = () => {
   useEffect(() => {
     const fetchCosts = async () => {
       try {
-        const pancakeProfileAddress = getPancakeProfileAddress()
+        const pancakeProfileAddress = getSweepStakesProfileAddress()
 
         const [numberCakeToReactivate, numberCakeToRegister, numberCakeToUpdate] = await publicClient.multicall({
           allowFailure: false,

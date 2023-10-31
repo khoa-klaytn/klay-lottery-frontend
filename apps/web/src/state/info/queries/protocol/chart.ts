@@ -3,7 +3,7 @@ import { gql } from 'graphql-request'
 import { useEffect, useState } from 'react'
 import { ChartEntry } from 'state/info/types'
 import { fetchChartData, mapDayData } from '../helpers'
-import { PancakeDayDatasResponse } from '../types'
+import { SweepStakesDayDatasResponse } from '../types'
 import { MultiChainName, getMultiChainQueryEndPointWithStableSwap, multiChainStartTime } from '../../constant'
 import { useGetChainName } from '../../hooks'
 
@@ -27,7 +27,7 @@ const getOverviewChartData = async (
   try {
     const { pancakeDayDatas } = await getMultiChainQueryEndPointWithStableSwap(
       chainName,
-    ).request<PancakeDayDatasResponse>(PANCAKE_DAY_DATAS, {
+    ).request<SweepStakesDayDatasResponse>(PANCAKE_DAY_DATAS, {
       startTime: multiChainStartTime[chainName],
       skip,
     })

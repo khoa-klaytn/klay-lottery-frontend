@@ -2,7 +2,7 @@
   "name": "@sweepstakes/chains",
   "license": "MIT",
   "version": "0.1.0",
-  "description": "The single source of truth for Pancakeswap chain-related information",
+  "description": "The single source of truth for SweepStakesswap chain-related information",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/index.mjs",

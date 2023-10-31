@@ -1,6 +1,6 @@
-# Pancakeswap Smart Router
+# SweepStakesswap Smart Router
 
-`@sweepstakes/smart-router` is a SDK for getting best trade routes from Pancakeswap AMM.
+`@sweepstakes/smart-router` is a SDK for getting best trade routes from SweepStakesswap AMM.
 
 ## Install
 

@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { SquidWidget } from '@0xsquid/widget'
 import { AppConfig } from '@0xsquid/widget/widget/core/types/config'
-import { Box, PancakeTheme } from '@sweepstakes/uikit'
+import { Box, SweepStakesTheme } from '@sweepstakes/uikit'
 import { useTheme } from 'styled-components'
 import PageContainer from 'components/Page'
 
@@ -47,7 +47,7 @@ const Axelar = () => {
   const theme = useTheme()
 
   const config = useMemo(() => {
-    const style = (theme as PancakeTheme).isDark ? darkStyle : lightStyle
+    const style = (theme as SweepStakesTheme).isDark ? darkStyle : lightStyle
     return {
       integratorId: 'squid-swap-sweepstakes',
       slippage: 1.5,

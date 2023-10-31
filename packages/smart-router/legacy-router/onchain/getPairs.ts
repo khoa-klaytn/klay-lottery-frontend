@@ -3,7 +3,7 @@ import { ChainId } from '@sweepstakes/chains'
 import type { Address } from 'viem'
 
 import { wrappedCurrency } from '../../evm/utils/currency'
-import { pancakePairABI } from '../../evm/abis/IPancakePair'
+import { pancakePairABI } from '../../evm/abis/ISweepStakesPair'
 
 import { Provider } from '../types'
 

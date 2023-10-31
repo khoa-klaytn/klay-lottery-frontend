@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 import { useAccount } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import { Button, Flex, InjectedModalProps, Message, MessageText } from '@sweepstakes/uikit'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import { useCake } from 'hooks/useContract'
 import { useBSCCakeBalance } from 'hooks/useTokenBalance'
 import { useCakeEnable } from 'hooks/useCakeEnable'
@@ -74,7 +74,7 @@ const StartPage: React.FC<React.PropsWithChildren<StartPageProps>> = ({ goToAppr
       const approvalNeeded = await requiresApproval(
         cakeContract,
         account,
-        getPancakeProfileAddress(),
+        getSweepStakesProfileAddress(),
         minimumCakeRequired,
       )
       setNeedsApproval(approvalNeeded)

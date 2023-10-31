@@ -14,4 +14,4 @@ export * from './fetcher'
 
 export * from '@sweepstakes/swap-sdk-core'
 
-export * from './abis/IPancakePair'
+export * from './abis/ISweepStakesPair'

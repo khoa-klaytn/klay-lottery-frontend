@@ -50,4 +50,4 @@
 
 ### Major Changes
 
-- a784ca6ed: Pancake Multicall release
+- a784ca6ed: SweepStakes Multicall release

@@ -21,7 +21,7 @@ import TradingRewardButter2 from './butter-2.png'
 import TradingRewardLoveButter from './love-butter.png'
 import TradingRewardBunny from './trading-reward-bunny.png'
 import TradingRewardBg from './trading-reward-bg.png'
-import ETHXPancakeSwap from './ethXpancakeswap.png'
+import ETHXSweepStakesSwap from './ethXpancakeswap.png'
 import ETHBunny from './ETHBunny.png'
 import v3LaunchBg from './v3LaunchBg.png'
 import v3LaunchBnb from './v3LaunchBnb.png'
@@ -77,12 +77,12 @@ import galxePredictorsBg from './galxePredictorsBg.png'
 import galxeSyndicateBunny from './galxe-syndicate-bunny.png'
 import galxeSyndicateBackground from './galxe-syndicate-bg.png'
 import galxePredictorsBunny from './galxe-predictors-bunny.png'
-import galxePancakeBannerLogo from './galaxe-pancake-banner-logo.png'
+import galxeSweepStakesBannerLogo from './galaxe-pancake-banner-logo.png'
 import galxePredictorsBackground from './galxe-predictors-bg.png'
 
 export {
   galxePredictorsBackground,
-  galxePancakeBannerLogo,
+  galxeSweepStakesBannerLogo,
   galxePredictorsBunny,
   galxeSyndicateBackground,
   galxeSyndicateBunny,
@@ -113,7 +113,7 @@ export {
   TradingRewardBunny,
   TradingRewardBg,
   TradingRewardButter2,
-  ETHXPancakeSwap,
+  ETHXSweepStakesSwap,
   ETHBunny,
   v3LaunchBg,
   v3LaunchBunny,

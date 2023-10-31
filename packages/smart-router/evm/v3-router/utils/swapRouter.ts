@@ -61,7 +61,7 @@ export interface SwapAndAddOptions extends SwapOptions {
 type AnyTradeType = SmartRouterTrade<TradeType> | SmartRouterTrade<TradeType>[]
 
 /**
- * Represents the Pancakeswap V2 + V3 + StableSwap SwapRouter02, and has static methods for helping execute trades.
+ * Represents the SweepStakesswap V2 + V3 + StableSwap SwapRouter02, and has static methods for helping execute trades.
  */
 export abstract class SwapRouter {
   public static ABI = swapRouter02Abi

@@ -72,7 +72,7 @@ export class Pair {
       Pair.getAddress(tokenA, tokenB),
       8,
       'Cake-LP',
-      `Pancake-${token0.symbol}-${token1.symbol}-LP`
+      `SweepStakes-${token0.symbol}-${token1.symbol}-LP`
     )
   }
 

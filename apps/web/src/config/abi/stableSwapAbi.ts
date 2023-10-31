@@ -1057,7 +1057,7 @@ export const stableSwapABI = [
     name: 'token',
     outputs: [
       {
-        internalType: 'contract PancakeStableSwapLP',
+        internalType: 'contract SweepStakesStableSwapLP',
         name: '',
         type: 'address',
       },

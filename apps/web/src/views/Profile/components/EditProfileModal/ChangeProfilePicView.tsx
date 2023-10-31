@@ -8,7 +8,7 @@ import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useProfileContract } from 'hooks/useContract'
 import { useState } from 'react'
 import { useProfile } from 'state/profile/hooks'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import { getErc721Contract } from 'utils/contractHelpers'
 
 interface ChangeProfilePicPageProps extends InjectedModalProps {
@@ -36,12 +36,12 @@ const ChangeProfilePicPage: React.FC<React.PropsWithChildren<ChangeProfilePicPag
         if (!selectedNft.tokenId) return true
         const contract = getErc721Contract(selectedNft.collectionAddress, signer)
         const approvedAddress = await contract.read.getApproved([selectedNft.tokenId])
-        return approvedAddress !== getPancakeProfileAddress()
+        return approvedAddress !== getSweepStakesProfileAddress()
       },
       onApprove: () => {
         const contract = getErc721Contract(selectedNft.collectionAddress, signer)
 
-        return callWithGasPrice(contract, 'approve', [getPancakeProfileAddress(), selectedNft.tokenId])
+        return callWithGasPrice(contract, 'approve', [getSweepStakesProfileAddress(), selectedNft.tokenId])
       },
       onConfirm: () => {
         if (!profile.isActive) {

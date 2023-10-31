@@ -4,8 +4,8 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import Image from 'next/image'
 import { keyframes, styled } from 'styled-components'
 import { useAccount } from 'wagmi'
-import ctaPancakeBig from '../images/cta-pancake-big.png'
-import ctaPancake from '../images/cta-pancake.png'
+import ctaSweepStakesBig from '../images/cta-pancake-big.png'
+import ctaSweepStakes from '../images/cta-pancake.png'
 import ctaRock2 from '../images/cta-rock-2.png'
 import ctaRock from '../images/cta-rock.png'
 import SunburstSvg from './SunburstSvg'
@@ -82,9 +82,9 @@ const ImageWrapper = styled.div`
 const ImageBox: React.FC = () => {
   return (
     <ImageWrapper>
-      <Image className="pancake" src={ctaPancake} alt="pancake" />
+      <Image className="pancake" src={ctaSweepStakes} alt="pancake" />
       <Image className="rock" src={ctaRock} alt="rock" />
-      <Image className="big-pancake" src={ctaPancakeBig} alt="big-pancake" />
+      <Image className="big-pancake" src={ctaSweepStakesBig} alt="big-pancake" />
       <Image className="rock2" src={ctaRock2} alt="rock2" />
     </ImageWrapper>
   )

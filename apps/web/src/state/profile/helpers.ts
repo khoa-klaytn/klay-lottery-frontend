@@ -2,7 +2,7 @@ import { Profile } from 'state/types'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { API_PROFILE } from 'config/constants/endpoints'
 import { getTeam } from 'state/teams/helpers'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import { Address } from 'wagmi'
 import { PublicClient } from 'viem'
 
@@ -45,13 +45,13 @@ export const getProfile = async (client: PublicClient, address: string): Promise
     const profileCallsResult = await client.multicall({
       contracts: [
         {
-          address: getPancakeProfileAddress(),
+          address: getSweepStakesProfileAddress(),
           abi: pancakeProfileABI,
           functionName: 'hasRegistered',
           args: [address as Address],
         },
         {
-          address: getPancakeProfileAddress(),
+          address: getSweepStakesProfileAddress(),
           abi: pancakeProfileABI,
           functionName: 'getUserProfile',
           args: [address as Address],

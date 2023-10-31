@@ -155,7 +155,7 @@ export const zapABI = [
   {
     inputs: [],
     name: 'pancakeRouter',
-    outputs: [{ internalType: 'contract IPancakeRouter02', name: '', type: 'address' }],
+    outputs: [{ internalType: 'contract ISweepStakesRouter02', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },

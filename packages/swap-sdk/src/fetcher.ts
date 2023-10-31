@@ -5,7 +5,7 @@ import { ChainId } from '@sweepstakes/chains'
 import invariant from 'tiny-invariant'
 import { Pair } from './entities/pair'
 import { erc20ABI } from './abis/ERC20'
-import { pancakePairV2ABI } from './abis/IPancakePair'
+import { pancakePairV2ABI } from './abis/ISweepStakesPair'
 
 let TOKEN_DECIMALS_CACHE: { [chainId: number]: { [address: string]: number } } = {
   [ChainId.BSC]: {},

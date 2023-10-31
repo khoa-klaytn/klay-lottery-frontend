@@ -5,7 +5,7 @@ import { useWeb3React } from '@sweepstakes/wagmi'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { useCake } from 'hooks/useContract'
 import { useProfile } from 'state/profile/hooks'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
 import { UseEditProfileResponse } from './reducer'
 
@@ -31,7 +31,7 @@ const ApproveCakePage: React.FC<React.PropsWithChildren<ApproveCakePageProps>> =
 
   const handleApprove = async () => {
     const receipt = await fetchWithCatchTxError(() => {
-      return cakeContract.write.approve([getPancakeProfileAddress(), cost * 2n], {
+      return cakeContract.write.approve([getSweepStakesProfileAddress(), cost * 2n], {
         account,
         chain,
       })

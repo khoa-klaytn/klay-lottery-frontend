@@ -334,7 +334,7 @@ export const nftSaleABI = [
         type: 'address',
       },
     ],
-    name: 'changeOwnershipPancakeSquad',
+    name: 'changeOwnershipSweepStakesSquad',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -559,7 +559,7 @@ export const nftSaleABI = [
     name: 'pancakeProfile',
     outputs: [
       {
-        internalType: 'contract IPancakeProfile',
+        internalType: 'contract ISweepStakesProfile',
         name: '',
         type: 'address',
       },
@@ -572,7 +572,7 @@ export const nftSaleABI = [
     name: 'pancakeSquad',
     outputs: [
       {
-        internalType: 'contract PancakeSquad',
+        internalType: 'contract SweepStakesSquad',
         name: '',
         type: 'address',
       },

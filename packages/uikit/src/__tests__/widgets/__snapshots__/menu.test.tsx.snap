@@ -791,7 +791,7 @@ exports[`renders correctly 1`] = `
             class="c4"
           >
             <a
-              aria-label="Pancake home page"
+              aria-label="SweepStakes home page"
               class="c5"
               href="/"
             >

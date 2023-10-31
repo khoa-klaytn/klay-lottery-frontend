@@ -263,7 +263,7 @@ export const tradingCompetitionEasterABI = [
     name: 'pancakeProfile',
     outputs: [
       {
-        internalType: 'contract IPancakeProfile',
+        internalType: 'contract ISweepStakesProfile',
         name: '',
         type: 'address',
       },

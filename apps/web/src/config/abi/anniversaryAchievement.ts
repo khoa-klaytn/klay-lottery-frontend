@@ -110,7 +110,7 @@ export const anniversaryAchievementABI = [
   {
     inputs: [],
     name: 'pancakeProfile',
-    outputs: [{ internalType: 'contract PancakeProfile', name: '', type: 'address' }],
+    outputs: [{ internalType: 'contract SweepStakesProfile', name: '', type: 'address' }],
     stateMutability: 'view',
     type: 'function',
   },

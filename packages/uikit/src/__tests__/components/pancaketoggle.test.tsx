@@ -1,11 +1,11 @@
 import { vi } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import PancakeToggle from "../../components/PancakeToggle/PancakeToggle";
+import SweepStakesToggle from "../../components/SweepStakesToggle/SweepStakesToggle";
 
 const handleChange = vi.fn();
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithProvider(<PancakeToggle checked onChange={handleChange} scale="md" />);
+  const { asFragment } = renderWithProvider(<SweepStakesToggle checked onChange={handleChange} scale="md" />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -175,7 +175,7 @@ it("renders correctly", () => {
 });
 
 it("renders correctly scale sm", () => {
-  const { asFragment } = renderWithProvider(<PancakeToggle checked onChange={handleChange} scale="sm" />);
+  const { asFragment } = renderWithProvider(<SweepStakesToggle checked onChange={handleChange} scale="sm" />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {

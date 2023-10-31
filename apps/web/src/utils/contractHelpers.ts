@@ -8,8 +8,8 @@ import {
   getNftMarketAddress,
   getNftSaleAddress,
   getNonBscVaultAddress,
-  getPancakeProfileAddress,
-  getPancakeSquadAddress,
+  getSweepStakesProfileAddress,
+  getSweepStakesSquadAddress,
   getPointCenterIfoAddress,
   getStableSwapNativeHelperAddress,
   getTradingCompetitionAddressEaster,
@@ -109,7 +109,7 @@ export const getCakeContract = (chainId?: number) => {
 }
 
 export const getProfileContract = (signer?: WalletClient) => {
-  return getContract({ abi: pancakeProfileABI, address: getPancakeProfileAddress(), signer })
+  return getContract({ abi: pancakeProfileABI, address: getSweepStakesProfileAddress(), signer })
 }
 
 export const getBunnyFactoryContract = (signer?: WalletClient) => {
@@ -173,8 +173,8 @@ export const getNftMarketContract = (signer?: WalletClient) => {
 export const getNftSaleContract = (signer?: WalletClient) => {
   return getContract({ abi: nftSaleABI, address: getNftSaleAddress(), signer })
 }
-export const getPancakeSquadContract = (signer?: WalletClient) => {
-  return getContract({ abi: pancakeSquadABI, address: getPancakeSquadAddress(), signer })
+export const getSweepStakesSquadContract = (signer?: WalletClient) => {
+  return getContract({ abi: pancakeSquadABI, address: getSweepStakesSquadAddress(), signer })
 }
 
 export const getNonBscVaultContract = (signer?: WalletClient, chainId?: number) => {

@@ -14,7 +14,7 @@ import {
   Result,
 } from './multicallProvider'
 
-export type PancakeMulticallConfig = {
+export type SweepStakesMulticallConfig = {
   gasLimitPerCall?: BigintIsh
 
   // Total gas limit of the multicall happens in a single rpc call
@@ -26,15 +26,15 @@ export type PancakeMulticallConfig = {
 }
 
 /**
- * The PancakeswapMulticall contract has added functionality for limiting the amount of gas
+ * The SweepStakesswapMulticall contract has added functionality for limiting the amount of gas
  * that each call within the multicall can consume. This is useful for operations where
  * a call could consume such a large amount of gas that it causes the node to error out
  * with an out of gas error.
  *
  * @export
- * @class PancakeMulticallProvider
+ * @class SweepStakesMulticallProvider
  */
-export class PancakeMulticallProvider extends IMulticallProvider<PancakeMulticallConfig> {
+export class SweepStakesMulticallProvider extends IMulticallProvider<SweepStakesMulticallConfig> {
   static abi = IMulticallABI
 
   constructor(protected chainId: ChainId, protected provider: PublicClient, protected gasLimitPerCall = 1_000_000) {
@@ -121,7 +121,7 @@ export class PancakeMulticallProvider extends IMulticallProvider<PancakeMultical
   }
 
   public async callSameFunctionOnContractWithMultipleParams<TFunctionParams extends any[] | undefined, TReturn>(
-    params: CallSameFunctionOnContractWithMultipleParams<TFunctionParams, PancakeMulticallConfig>,
+    params: CallSameFunctionOnContractWithMultipleParams<TFunctionParams, SweepStakesMulticallConfig>,
   ): Promise<{
     blockNumber: bigint
     results: Result<TReturn>[]
@@ -197,7 +197,7 @@ export class PancakeMulticallProvider extends IMulticallProvider<PancakeMultical
   }
 
   public async callMultipleFunctionsOnSameContract<TFunctionParams extends any[] | undefined, TReturn>(
-    params: CallMultipleFunctionsOnSameContractParams<TFunctionParams, PancakeMulticallConfig>,
+    params: CallMultipleFunctionsOnSameContractParams<TFunctionParams, SweepStakesMulticallConfig>,
   ): Promise<{
     blockNumber: bigint
     results: Result<TReturn>[]

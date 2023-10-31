@@ -9,15 +9,15 @@ import { getPercentChange } from 'views/Info/utils/infoDataHelpers'
 import { checkIsStableSwap, getMultiChainQueryEndPointWithStableSwap, MultiChainName } from '../../constant'
 import { useGetChainName } from '../../hooks'
 
-interface PancakeFactory {
+interface SweepStakesFactory {
   totalTransactions: string
   totalVolumeUSD: string
   totalLiquidityUSD: string
 }
 
 interface OverviewResponse {
-  pancakeFactories: PancakeFactory[]
-  factories?: PancakeFactory[]
+  pancakeFactories: SweepStakesFactory[]
+  factories?: SweepStakesFactory[]
 }
 /**
  * Latest Liquidity, Volume and Transaction count
@@ -45,9 +45,9 @@ const getOverviewData = async (
   }
 }
 
-const formatPancakeFactoryResponse = (rawPancakeFactory?: PancakeFactory[]) => {
-  if (rawPancakeFactory) {
-    return rawPancakeFactory.reduce(
+const formatSweepStakesFactoryResponse = (rawSweepStakesFactory?: SweepStakesFactory[]) => {
+  if (rawSweepStakesFactory) {
+    return rawSweepStakesFactory.reduce(
       (acc, cur) => {
         acc.totalLiquidityUSD += parseFloat(cur.totalLiquidityUSD)
         acc.totalTransactions += parseFloat(cur.totalTransactions)
@@ -86,9 +86,9 @@ const useFetchProtocolData = (): ProtocolFetchState => {
         getOverviewData(chainName, block48?.number ?? undefined),
       ])
       const anyError = error || error24 || error48
-      const overviewData = formatPancakeFactoryResponse(data?.pancakeFactories)
-      const overviewData24 = formatPancakeFactoryResponse(data24?.pancakeFactories)
-      const overviewData48 = formatPancakeFactoryResponse(data48?.pancakeFactories)
+      const overviewData = formatSweepStakesFactoryResponse(data?.pancakeFactories)
+      const overviewData24 = formatSweepStakesFactoryResponse(data24?.pancakeFactories)
+      const overviewData48 = formatSweepStakesFactoryResponse(data48?.pancakeFactories)
       const allDataAvailable = overviewData && overviewData24 && overviewData48
       if (anyError || !allDataAvailable) {
         setFetchState({
@@ -142,9 +142,9 @@ export const fetchProtocolData = async (chainName: MultiChainName, block24: Bloc
   if (data48.factories && data48.factories.length > 0) data48.pancakeFactories = data48.factories
 
   // const anyError = error || error24 || error48
-  const overviewData = formatPancakeFactoryResponse(data?.pancakeFactories)
-  const overviewData24 = formatPancakeFactoryResponse(data24?.pancakeFactories)
-  const overviewData48 = formatPancakeFactoryResponse(data48?.pancakeFactories)
+  const overviewData = formatSweepStakesFactoryResponse(data?.pancakeFactories)
+  const overviewData24 = formatSweepStakesFactoryResponse(data24?.pancakeFactories)
+  const overviewData48 = formatSweepStakesFactoryResponse(data48?.pancakeFactories)
   // const allDataAvailable = overviewData && overviewData24 && overviewData48
 
   const [volumeUSD, volumeUSDChange] = getChangeForPeriod(

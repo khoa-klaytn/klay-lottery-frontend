@@ -5,7 +5,7 @@ import {
   Flex,
   InjectedModalProps,
   Modal,
-  PancakeToggle,
+  SweepStakesToggle,
   QuestionHelper,
   Text,
   ThemeSwitcher,
@@ -228,7 +228,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
                   ml="4px"
                 />
               </Flex>
-              <PancakeToggle checked={audioPlay} onChange={() => setAudioMode((s) => !s)} scale="md" />
+              <SweepStakesToggle checked={audioPlay} onChange={() => setAudioMode((s) => !s)} scale="md" />
             </Flex>
             <RoutingSettingsButton />
           </>
@@ -366,7 +366,7 @@ function RoutingSettings() {
                 ml="4px"
               />
             </Flex>
-            <PancakeToggle
+            <SweepStakesToggle
               disabled={isStableSwapByDefault && onlyOneAMMSourceEnabled}
               id="stable-swap-toggle"
               scale="md"
