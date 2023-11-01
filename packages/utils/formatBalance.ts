@@ -22,7 +22,7 @@ export const getBalanceNumber = (balance: BigNumber, decimals = 18) => {
   return getBalanceAmount(balance, decimals).toNumber()
 }
 
-export const getFullDisplayBalance = (balance: BigNumber, decimals = 18, displayDecimals?: number): string => {
+export const getFullDisplayBalance = (balance: BigNumber, decimals = 18, displayDecimals: number = 5): string => {
   const stringNumber = getBalanceAmount(balance, decimals).toFixed(displayDecimals as number)
 
   return displayDecimals ? _trimEnd(_trimEnd(stringNumber, '0'), '.') : stringNumber
