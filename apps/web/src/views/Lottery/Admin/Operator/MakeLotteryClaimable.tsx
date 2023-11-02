@@ -12,7 +12,7 @@ import { EMsg } from '../EMsg'
 export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract, lotteryId, status }) {
   const chainId = useChainId()
   const chain = useMemo(() => chains[chains.CHAIN_QUERY_NAME[chainId]] as Chain, [chainId])
-  const [finalNumber, setFinalNumber] = useState(0)
+  const [finalNumber, setFinalNumber] = useState<number>(Number.NaN)
   const [eMsg, setEMsg] = useState('')
 
   const makeLotteryClaimable = useCallback(
@@ -21,7 +21,7 @@ export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract
 
       let res: SendTransactionResult
       try {
-        if (chain.testnet) {
+        if (chain.testnet && !Number.isNaN(finalNumber)) {
           res = await callWithGasPrice(lotteryContract, 'setFinalNumberAndMakeLotteryClaimable', [
             BigInt(lotteryId),
             true,
