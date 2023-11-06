@@ -12,11 +12,6 @@ import v3BgCoinUp from './v3BgCoinUp.png'
 import v3BgCoinDown from './v3BgCoinDown.png'
 import v3BgBlingNormal from './v3BgBlingNormal.png'
 import v3BgBlingBlur from './v3BgBlingBlur.png'
-import TradingRewardButter from './butter.png'
-import TradingRewardButter2 from './butter-2.png'
-import TradingRewardLoveButter from './love-butter.png'
-import TradingRewardBunny from './trading-reward-bunny.png'
-import TradingRewardBg from './trading-reward-bg.png'
 import ETHXSweepStakesSwap from './ethXpancakeswap.png'
 import ETHBunny from './ETHBunny.png'
 import v3LaunchBg from './v3LaunchBg.png'
@@ -95,11 +90,6 @@ export {
   v3BgCoinDown,
   v3BgBlingNormal,
   v3BgBlingBlur,
-  TradingRewardButter,
-  TradingRewardLoveButter,
-  TradingRewardBunny,
-  TradingRewardBg,
-  TradingRewardButter2,
   ETHXSweepStakesSwap,
   ETHBunny,
   v3LaunchBg,
