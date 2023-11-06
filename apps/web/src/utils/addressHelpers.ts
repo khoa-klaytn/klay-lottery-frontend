@@ -55,12 +55,6 @@ export const getCakeFlexibleSideVaultAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.cakeFlexibleSideVault, chainId)
 }
 
-export const getNftMarketAddress = () => {
-  return getAddressFromMap(addresses.nftMarket)
-}
-export const getNftSaleAddress = () => {
-  return getAddressFromMap(addresses.nftSale)
-}
 export const getZapAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.zap, chainId)
 }

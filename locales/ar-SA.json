@@ -151,7 +151,6 @@
   "Only approved SweepStakes Collectibles can be used.": "وحدها عناصر SweepStakes القابلة للتحصيل المعتمدة يمكن استخدامها.",
   "Allow collectible to be locked": "السماح بتجميد العنصر القابل للتحصيل",
   "Join a Team": "الانضمام لفريق",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "سيظهر هذا الاسم في لوحات صدارة الفرق ونتائج البحث ما دام ملفك التعريفي نشطًا.",
   "Complete Profile": "إكمال الملف التعريفي",
   "Oops!": "عذرًا!",
   "ROI Calculator": "حاسبة العائد على الاستثمار (ROI)",
@@ -486,7 +485,6 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "أنت بحاجة إلى إعادة تنشيط ملفك التعريفي عن طريق استبدال صورة ملفك التعريفي للانضمام إلى المسابقة.",
   "Go to my profile": "الانتقال إلى ملفي التعريفي",
   "You have registered for the competition!": "لقد سجَّلت في المسابقة!",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "سيصبح عنوان محفظتك مرئيًا بشكلٍ علني على لوحة الصدارة بعد التسجيل في المسابقة.",
   "This decision cannot be reversed.": "لن يتم التراجع عن هذا القرار.",
   "I understand that my address may be displayed publicly throughout the competition.": "أتفهم أن عنواني قد يتم عرضه علنًا خلال فترة المسابقة.",
   "Eligible trading pairs": "أزواج التداول المؤهلة",
@@ -566,7 +564,6 @@
   "Volume": "الحجم",
   "Prediction (BETA)": "التنبؤ (تجريبي)",
   "You can now start prediction": "يمكنك الآن البدء بالتنبؤ",
-  "Leaderboard": "لوحة الصدارة",
   "Tokens": "الرموز المميزة",
   "Contact": "تواصل معنا",
   "The higher your team’s rank, the better your prizes!": "كلما ارتفع ترتيب فريقك، أصبحت جوائزك أفضل!",
@@ -2808,6 +2805,5 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

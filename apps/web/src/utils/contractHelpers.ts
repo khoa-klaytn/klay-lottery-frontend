@@ -5,8 +5,6 @@ import {
   getBunnyFactoryAddress,
   getCakeFlexibleSideVaultAddress,
   getCakeVaultAddress,
-  getNftMarketAddress,
-  getNftSaleAddress,
   getNonBscVaultAddress,
   getSweepStakesProfileAddress,
   getPointCenterIfoAddress,
@@ -20,7 +18,6 @@ import {
 } from 'utils/addressHelpers'
 
 // ABI
-import { nftSaleABI } from 'config/abi/nftSale'
 import { nonBscVaultABI } from 'config/abi/nonBscVault'
 import { pointCenterIfoABI } from 'config/abi/pointCenterIfo'
 import { stableSwapNativeHelperABI } from 'config/abi/stableSwapNativeHelper'
@@ -33,7 +30,6 @@ import { bunnyFactoryABI } from 'config/abi/bunnyFactory'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
-import { nftMarketABI } from 'config/abi/nftMarket'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { tradingRewardABI } from 'config/abi/tradingReward'
 import { v3AirdropABI } from 'config/abi/v3Airdrop'
@@ -122,13 +118,6 @@ export const getCakeFlexibleSideVaultV2Contract = (signer?: WalletClient, chainI
 
 export const getChainlinkOracleContract = (address: Address, signer?: WalletClient, chainId?: number) => {
   return getContract({ abi: chainlinkOracleABI, address, signer, chainId })
-}
-
-export const getNftMarketContract = (signer?: WalletClient) => {
-  return getContract({ abi: nftMarketABI, address: getNftMarketAddress(), signer })
-}
-export const getNftSaleContract = (signer?: WalletClient) => {
-  return getContract({ abi: nftSaleABI, address: getNftSaleAddress(), signer })
 }
 
 export const getNonBscVaultContract = (signer?: WalletClient, chainId?: number) => {

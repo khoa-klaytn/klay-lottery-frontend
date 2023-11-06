@@ -44,19 +44,7 @@ const config: (
     //       href: '/info/v3',
     //     },
     //     {
-    //       label: t('Voting'),
-    //       href: '/voting',
-    //       supportChainIds: SUPPORT_ONLY_KLAYTN,
-    //       image: '/images/voting/voting-bunny.png',
-    //     },
-    //     {
     //       type: DropdownMenuItemType.DIVIDER,
-    //     },
-    //     {
-    //       label: t('Leaderboard'),
-    //       href: '/teams',
-    //       supportChainIds: SUPPORT_ONLY_KLAYTN,
-    //       image: '/images/decorations/leaderboard.png',
     //     },
     //     {
     //       type: DropdownMenuItemType.DIVIDER,

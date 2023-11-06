@@ -23,7 +23,6 @@ body:
         - Syrup Pools
         - Lottery
         - Info
-        - NFT
         - Other
     validations:
       required: true

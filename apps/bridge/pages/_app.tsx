@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content="https://sweepstakes.finance/images/hero.png" />
         <meta
           name="twitter:description"
-          content="The most popular AMM on BSC! Win it in the Lottery, then stake it in Syrup Pools to earn more tokens! NFTs and more on a platform you can trust."
+          content="The most popular AMM on BSC! Win it in the Lottery, on a platform you can trust."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="🥞 SweepStakes - A next evolution DeFi exchange on BNB Smart Chain (BSC)" />

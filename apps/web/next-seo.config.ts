@@ -13,8 +13,7 @@ export const SEO: DefaultSeoProps = {
   },
   openGraph: {
     title: '🥞 SweepStakes - A next evolution DeFi exchange on BNB Smart Chain (BSC)',
-    description:
-      'The most popular AMM on BSC by user count! Win it in the Lottery, then stake it in Syrup Pools to earn more tokens! NFTs and more on a platform you can trust.',
+    description: 'The most popular AMM on BSC by user count! Win it in the Lottery, on a platform you can trust.',
     images: [{ url: `${ASSET_CDN}/web/og/hero.jpg` }],
   },
 }

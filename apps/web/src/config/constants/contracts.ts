@@ -60,10 +60,6 @@ export default {
     [ChainId.BSC]: '0xFee8A195570a18461146F401d6033f5ab3380849',
     [ChainId.BSC_TESTNET]: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
   },
-  easterNft: {
-    [ChainId.BSC]: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
-    [ChainId.BSC_TESTNET]: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
-  },
   cakeVault: {
     [ChainId.BSC]: '0x45c54210128a065de780C4B0Df3d16664f7f859e',
     [ChainId.BSC_TESTNET]: '0x1088Fb24053F03802F673b84d16AE1A7023E400b',
@@ -91,14 +87,6 @@ export default {
   bunnySpecialXmas: {
     [ChainId.BSC]: '0x59EdDF3c21509dA3b0aCCd7c5ccc596d930f4783',
     [ChainId.BSC_TESTNET]: '0x',
-  },
-  nftMarket: {
-    [ChainId.BSC]: '0x17539cCa21C7933Df5c980172d22659B8C345C5A',
-    [ChainId.BSC_TESTNET]: '0x7F9F37Ddcaa33893F9bEB3D8748c8D6BfbDE6AB2',
-  },
-  nftSale: {
-    [ChainId.BSC]: '0x29fE7148636b7Ae0b1E53777b28dfbaA9327af8E',
-    [ChainId.BSC_TESTNET]: '0xe486De509c5381cbdBF3e71F57D7F1f7570f5c46',
   },
   zap: {
     [ChainId.BSC]: '0xD4c4a7C55c9f7B3c48bafb6E8643Ba79F42418dF',

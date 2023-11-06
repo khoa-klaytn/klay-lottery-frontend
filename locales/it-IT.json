@@ -151,7 +151,7 @@
   "Only approved SweepStakes Collectibles can be used.": "Possono essere usati solo SweepStakes Collezionabili approvati.",
   "Allow collectible to be locked": "Consenti blocco oggetto collezionabile",
   "Join a Team": "Partecipa a un team",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "Questo nome apparirà nelle classifiche dei team e nei risultati di ricerca finché il tuo profilo è attivo.",
+
   "Complete Profile": "Completa profilo",
   "Oops!": "Ops!",
   "ROI Calculator": "Calcolatrice ROI",
@@ -486,7 +486,7 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "Devi riattivare il tuo profilo sostituendo l'immagine del tuo profilo per partecipare alla gara.",
   "Go to my profile": "Vai al mio profilo",
   "You have registered for the competition!": "Ti sei registrato alla gara!",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "La registrazione alla gara renderà l'indirizzo del tuo wallet visibile pubblicamente sulla classifica.",
+
   "This decision cannot be reversed.": "Questa decisione non può essere annullata.",
   "I understand that my address may be displayed publicly throughout the competition.": "Accetto il fatto che il mio indirizzo sia visibile al pubblico durante la gara.",
   "Eligible trading pairs": "Coppie di scambio disponibili",
@@ -566,7 +566,7 @@
   "Volume": "Volume",
   "Prediction (BETA)": "Previsioni (BETA)",
   "You can now start prediction": "Ora puoi iniziare la previsione",
-  "Leaderboard": "Classifica",
+
   "Tokens": "Token",
   "Contact": "Contatti",
   "The higher your team’s rank, the better your prizes!": "Più alto sarà il tuo team in classifica, migliori saranno i premi!",
@@ -2808,6 +2808,6 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
+
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

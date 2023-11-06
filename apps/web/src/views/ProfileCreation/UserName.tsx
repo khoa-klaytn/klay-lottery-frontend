@@ -199,7 +199,7 @@ const UserName: React.FC<React.PropsWithChildren> = () => {
         {t('Set Your Name')}
       </Heading>
       <Text as="p" mb="24px">
-        {t('This name will be shown in team leaderboards and search results as long as your profile is active.')}
+        {t('This name will be shown in search results as long as your profile is active.')}
       </Text>
       <Card mb="24px">
         <CardBody>

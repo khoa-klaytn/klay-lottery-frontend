@@ -5,7 +5,6 @@ export const GRAPH_API_PROFILE = 'https://api.thegraph.com/subgraphs/name/sweeps
 export const GRAPH_API_LOTTERY = 'http://localhost:8000/subgraphs/name/klay-lottery/graph'
 export const SNAPSHOT_BASE_URL = process.env.NEXT_PUBLIC_SNAPSHOT_BASE_URL
 export const API_PROFILE = 'https://profile.sweepstakes.com'
-export const API_NFT = 'https://nft.sweepstakes.com/api/v1'
 export const SNAPSHOT_API = `${SNAPSHOT_BASE_URL}/graphql`
 export const SNAPSHOT_HUB_API = `${SNAPSHOT_BASE_URL}/api/message`
 export const ONRAMP_API_BASE_URL = 'https://pcs-on-ramp-api.com'
@@ -26,7 +25,6 @@ export const BLOCKS_CLIENT_ZKSYNC = 'https://api.studio.thegraph.com/query/45376
 export const BLOCKS_CLIENT_LINEA = 'https://graph-query.linea.build/subgraphs/name/kybernetwork/linea-blocks'
 export const BLOCKS_CLIENT_BASE = 'https://api.studio.thegraph.com/query/48211/base-blocks/version/latest'
 export const STABLESWAP_SUBGRAPH_CLIENT = 'https://api.thegraph.com/subgraphs/name/sweepstakes/exchange-stableswap'
-export const GRAPH_API_NFTMARKET = 'https://api.thegraph.com/subgraphs/name/sweepstakes/nft-market'
 export const GRAPH_HEALTH = 'https://api.thegraph.com/index-node/graphql'
 
 export const BIT_QUERY = 'https://graphql.bitquery.io'

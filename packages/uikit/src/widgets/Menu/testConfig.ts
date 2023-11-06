@@ -58,10 +58,6 @@ export const links: MenuItemsType[] = [
         href: "/",
       },
       {
-        label: "Team Leaderboard",
-        href: "/",
-      },
-      {
         type: DropdownMenuItemType.DIVIDER,
       },
       {

@@ -2,7 +2,6 @@ import Path from 'path'
 import fs from 'fs'
 import { describe, it, expect } from 'vitest'
 import teams from 'config/constants/teams'
-import { NftLocation } from 'state/nftMarket/types'
 
 // FIXME: should move this test file inside localization pkg
 import { translations } from '@sweepstakes/localization'
@@ -11,9 +10,7 @@ const allTranslationKeys = Object.keys(translations)
 
 // when some keys are hard to be extracted from code
 const whitelist = [
-  ...Object.values(NftLocation),
   ...teams.map((t) => t.description),
-  // NFT description moved to profile sdk
   `Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.`,
   'Eggscellent! Celebrating Syrup Storm winning the Easter Battle!',
   'Melting Easter eggs and melting hearts!',

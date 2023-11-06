@@ -3,7 +3,6 @@ import { AutoRenewIcon, Box, Button, Flex, Modal, Text, useToast, ModalV2 } from
 import confetti from 'canvas-confetti'
 import { useTranslation } from '@sweepstakes/localization'
 import delay from 'lodash/delay'
-import { styled } from 'styled-components'
 import Dots from 'components/Loader/Dots'
 import useSWRImmutable from 'swr/immutable'
 import { useAccount } from 'wagmi'
@@ -13,14 +12,6 @@ import { ToastDescriptionWithTx } from 'components/Toast'
 import { useSWRConfig } from 'swr'
 import { useShowOnceAirdropModal } from 'hooks/useShowOnceAirdropModal'
 import useAirdropModalStatus from './hooks/useAirdropModalStatus'
-
-const Image = styled.img`
-  display: block;
-  height: 128px;
-  width: 128px;
-  margin: auto auto 10px auto;
-  border-radius: 50%;
-`
 
 const showConfetti = () => {
   confetti({
@@ -161,9 +152,6 @@ const V3AirdropModal: React.FC = () => {
           <Flex width="100%" justifyContent="space-between">
             {hasPart1 && (
               <Flex width="100%" flexDirection="column">
-                <Box>
-                  <Image src="/images/nfts/v3-part1.jpg" />
-                </Box>
                 <Button
                   m="12px 0"
                   disabled={isLoading}
@@ -193,9 +181,6 @@ const V3AirdropModal: React.FC = () => {
             )}
             {hasPart2 && (
               <Flex width="100%" flexDirection="column">
-                <Box>
-                  <Image src="/images/nfts/v3-part2.jpg" />
-                </Box>
                 <Button
                   m="12px 0"
                   disabled={isLoading}

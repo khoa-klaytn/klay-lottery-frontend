@@ -1091,16 +1091,6 @@ exports[`renders correctly 1`] = `
                   <div
                     class="c12"
                   >
-                    <a
-                      class="c13 c14"
-                      href="/"
-                    >
-                      Team Leaderboard
-                    </a>
-                  </div>
-                  <div
-                    class="c12"
-                  >
                     <hr
                       class="c22"
                     />
@@ -4118,16 +4108,6 @@ html[data-useragent*="TokenPocket_iOS"] .c1 {
               href="/"
             >
               NFT Collectibles
-            </a>
-          </div>
-          <div
-            class="c14"
-          >
-            <a
-              class="c15 c16"
-              href="/"
-            >
-              Team Leaderboard
             </a>
           </div>
           <div

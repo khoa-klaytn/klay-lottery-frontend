@@ -151,7 +151,7 @@
   "Only approved SweepStakes Collectibles can be used.": "承認されているSweepStakesコレクティブルのみを使用できます。",
   "Allow collectible to be locked": "コレクティブルのロックを許可",
   "Join a Team": "チームへの参加",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "プロファイルがアクティブである限り、チームのリーダーボードと検索結果にはこの名前が表示されます。",
+
   "Complete Profile": "この情報で設定する",
   "Oops!": "あれ？",
   "ROI Calculator": "投資効率計算ツール",
@@ -486,7 +486,7 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "試合に参加するには、プロファイル写真を変えてプロファイルを再有効化する必要があります。",
   "Go to my profile": "自分のプロファイルに移動",
   "You have registered for the competition!": "試合に登録しました！",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "試合に登録すると、あなたのウォレットアドレスがリーダーボードに公開されます。",
+
   "This decision cannot be reversed.": "このアクションは巻き戻すことができます。",
   "I understand that my address may be displayed publicly throughout the competition.": "私のアドレスが試合中に公開されることを理解しています。",
   "Eligible trading pairs": "取引可能なペア",
@@ -566,7 +566,7 @@
   "Volume": "ボリューム",
   "Prediction (BETA)": "プレディクション（BETA）",
   "You can now start prediction": "予測を開始できます",
-  "Leaderboard": "リーダーボード",
+
   "Tokens": "トークン",
   "Contact": "お問い合わせ",
   "The higher your team’s rank, the better your prizes!": "チームのランクが高いほど、より優れた賞金を獲得できます！",
@@ -2808,6 +2808,6 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
+
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

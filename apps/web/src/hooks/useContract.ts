@@ -15,8 +15,6 @@ import {
   getChainlinkOracleContract,
   getContract,
   getKlayLotteryContract,
-  getNftMarketContract,
-  getNftSaleContract,
   getNonBscVaultContract,
   getPointCenterIfoContract,
   getProfileContract,
@@ -117,16 +115,6 @@ export const useCakeVaultContract = () => {
 export const useChainlinkOracleContract = (address) => {
   const { data: signer } = useWalletClient()
   return useMemo(() => getChainlinkOracleContract(address, signer ?? undefined), [signer, address])
-}
-
-export const useNftSaleContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getNftSaleContract(signer ?? undefined), [signer])
-}
-
-export const useNftMarketContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getNftMarketContract(signer ?? undefined), [signer])
 }
 
 export const useErc721CollectionContract = (collectionAddress: Address) => {
