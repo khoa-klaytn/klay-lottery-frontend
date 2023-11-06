@@ -9,7 +9,6 @@ import {
   getNftSaleAddress,
   getNonBscVaultAddress,
   getSweepStakesProfileAddress,
-  getSweepStakesSquadAddress,
   getPointCenterIfoAddress,
   getStableSwapNativeHelperAddress,
   getTradingCompetitionAddressEaster,
@@ -40,7 +39,6 @@ import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
 import { nftMarketABI } from 'config/abi/nftMarket'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
-import { pancakeSquadABI } from 'config/abi/pancakeSquad'
 import { tradingCompetitionEasterABI } from 'config/abi/tradingCompetitionEaster'
 import { tradingCompetitionFanTokenABI } from 'config/abi/tradingCompetitionFanToken'
 import { tradingCompetitionMoDABI } from 'config/abi/tradingCompetitionMoD'
@@ -170,9 +168,6 @@ export const getNftMarketContract = (signer?: WalletClient) => {
 }
 export const getNftSaleContract = (signer?: WalletClient) => {
   return getContract({ abi: nftSaleABI, address: getNftSaleAddress(), signer })
-}
-export const getSweepStakesSquadContract = (signer?: WalletClient) => {
-  return getContract({ abi: pancakeSquadABI, address: getSweepStakesSquadAddress(), signer })
 }
 
 export const getNonBscVaultContract = (signer?: WalletClient, chainId?: number) => {

@@ -76,10 +76,6 @@ export const getNftMarketAddress = () => {
 export const getNftSaleAddress = () => {
   return getAddressFromMap(addresses.nftSale)
 }
-export const getSweepStakesSquadAddress = () => {
-  return getAddressFromMap(addresses.pancakeSquad)
-}
-
 export const getZapAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.zap, chainId)
 }
