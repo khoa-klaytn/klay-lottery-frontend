@@ -34,9 +34,6 @@ export const getSweepStakesProfileAddress = () => {
 export const getSweepStakesBunniesAddress = () => {
   return getAddressFromMap(addresses.pancakeBunnies)
 }
-export const getBunnyFactoryAddress = () => {
-  return getAddressFromMap(addresses.bunnyFactory)
-}
 export const getPointCenterIfoAddress = () => {
   return getAddressFromMap(addresses.pointCenterIfo)
 }

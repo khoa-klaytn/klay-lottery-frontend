@@ -4,36 +4,26 @@ import ApproveConfirmButtons from 'components/ApproveConfirmButtons'
 import { FetchStatus } from 'config/constants/types'
 import { formatUnits } from 'viem'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
-import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { useBunnyFactory } from 'hooks/useContract'
 import { useBSCCakeBalance } from 'hooks/useTokenBalance'
-import { useState } from 'react'
-import { getBunnyFactoryAddress } from 'utils/addressHelpers'
 import { bscTokens } from '@sweepstakes/tokens'
 import { MINT_COST } from './config'
 import useProfileCreation from './contexts/hook'
 import NextStepButton from './NextStepButton'
 
 const Mint: React.FC<React.PropsWithChildren> = () => {
-  const [selectedBunnyId] = useState<string>('')
   const { actions, allowance } = useProfileCreation()
   const { toastSuccess } = useToast()
 
-  const bunnyFactoryContract = useBunnyFactory()
   const { t } = useTranslation()
   const { balance: cakeBalance, fetchStatus } = useBSCCakeBalance()
   const hasMinimumCakeRequired = fetchStatus === FetchStatus.Fetched && cakeBalance >= MINT_COST
-  const { callWithGasPrice } = useCallWithGasPrice()
 
   const { isApproving, isApproved, isConfirmed, isConfirming, handleApprove, handleConfirm } =
     useApproveConfirmTransaction({
       token: bscTokens.cake,
-      spender: getBunnyFactoryAddress(),
       minAmount: MINT_COST,
       targetAmount: allowance,
-      onConfirm: () => {
-        return callWithGasPrice(bunnyFactoryContract, 'mintNFT', [BigInt(selectedBunnyId)])
-      },
+      onConfirm: () => Promise.resolve({} as any),
       onApproveSuccess: () => {
         toastSuccess(t('Enabled'), t("Press 'confirm' to mint this NFT"))
       },
@@ -73,7 +63,7 @@ const Mint: React.FC<React.PropsWithChildren> = () => {
             </Text>
           )}
           <ApproveConfirmButtons
-            isApproveDisabled={selectedBunnyId === null || isConfirmed || isConfirming || isApproved}
+            isApproveDisabled={isConfirmed || isConfirming || isApproved}
             isApproving={isApproving}
             isConfirmDisabled={!isApproved || isConfirmed || !hasMinimumCakeRequired}
             isConfirming={isConfirming}

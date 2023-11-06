@@ -543,17 +543,17 @@
   "Melting Easter eggs and melting hearts!": "Schmelzende Ostereier und schmelzende Herzen!",
   "Watch out for Flipsie’s spatula smash!": "Achten Sie auf Flipsies Spachtel-Schlacht!",
   "Do you like chocolate with your syrup? Go long!": "Mögen Sie Schokolade zu Ihrem SYRUP? Lassen Sie es drauf ankommen!",
-  "Happy Niu Year! This bunny’s excited for the year of the bull (market!)": "Frohes Niu-Jahr! Dieser Hase freut sich auf das Jahr des Bullen (Markt!)",
+
   "Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.": "Hoppla! Hicks hat einen kleinen Unfall gehabt. Armer kleiner Kerl.",
   "Sunny is always cheerful when there are pancakes around. Smile!": "Sunny ist immer fröhlich, wenn es PANCAKE gibt. Lächle!",
   "Don't let that dopey smile deceive you... Churro's a master KLAY chef!": "Das verträumte Lächeln kann täuschen... Churro ist ein KLAY-Meisterkoch!",
   "Nommm... Oh hi, I'm just meditating on the meaning of KLAY.": "Lecker ... Oh hi, ich meditiere gerade über die Bedeutung von KLAY.",
   "Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)": "Dreimal dürft ihr raten, warum meine Augen so glänzen! (Tipp: Es ist KLAY)",
   "These bunnies love nothing more than swapping pancakes. Especially on BSC.": "Diese Hasen lieben nichts mehr, als SweepStakes zu tauschen. Besonders auf BSC.",
-  "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?": "Es regnet SYRUP auf diesen Hasen, aber es scheint ihm nichts auszumachen. Kann man es ihm verübeln?",
+
   "These bunnies like their pancakes with blueberries. What's your favorite topping?": "Diese Hasen mögen ihre PANCAKE mit Blaubeeren. Was ist Ihr Lieblingsbelag?",
   "Love makes the world go 'round... but so do pancakes. And these bunnies know it.": "Liebe bewegt die Welt ... aber SweepStakes bewegen sie auch. Und diese Hasen wissen das.",
-  "It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.": "Es sind glitzernder Syrup, SweepStakes und sogar Lotto-Tickets! Das gefällt dem Hasen sehr.",
+
   "The storm's a-comin! Watch out! These bulls are stampeding in a syrupy surge!": "Der Sturm ist im Anmarsch! Passt auf! Diese Bullen stürmen in einer SYRUP-artigen Woge!",
   "The flippening is coming. Don't get in these bunnies' way, or you'll get flipped, too!": "Das Wenden kommt. Kommen Sie den Hasen nicht in die Quere, sonst werden Sie auch gewendet!",
   "Can you stand the heat? Stay out of the kitchen or you might get burned to a crisp!": "Können Sie die Hitze ertragen? Bleiben Sie der Küche fern, sonst könnten Sie sich verbrühen!",
@@ -998,7 +998,7 @@
   "If you’re not a whitelisted project, you won’t be able to participate, but you can still view what’s going on!": "Wenn Sie kein Projekt auf der Whitelist haben, können Sie nicht teilnehmen, aber Sie können trotzdem sehen, was passiert!",
   "through community auctions so far!": "durch Community-Auktionen bislang!",
   "Farm Auctions": "Farm-Auktionen",
-  "auction bunny": "Auktions-Bunny",
+
   "Burnt KLAY": "Verbrannte KLAY",
   "Stake %stakingSymbol% - Earn %earningSymbol%": "Einsatz %stakingSymbol% - Verdienst %earningSymbol%",
   "Top Farms": "Top-Farmen",
@@ -1294,7 +1294,7 @@
   "Follow on Instagram": "Auf Instagram folgen",
   "Please enable KLAY spending in your wallet": "Bitte aktivieren Sie die KLAY-Ausgaben in Ihrem Wallet",
   "Mint NFTs (%tickets%)": "NFTs prägen (%tickets%)",
-  "490 are available in the pre-sale for owners of Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)": "490 sind im Vorverkauf erhältlich für Besitzer von Gen 0 SweepStakes Bunnys (bunnyID 0, 1, 2, 3, 4)",
+
   "Hold KLAY": "KLAY halten",
   "Head to the NFT Marketplace to buy!": "Kaufen Sie auf dem NFT-Markt!",
   "Max per wallet: %maxPerWallet%": "Maximal pro Wallet: %maxPerWallet%",
@@ -1318,9 +1318,7 @@
   "Claim Phase": "Anspruchsphase",
   "During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a SweepStakes Squad NFT.": "Während dieser Phase kann jedes Wallet, das ein Squad-Ticket besitzt, ein Ticket einlösen, um ein SweepStakes Squad NFT zu erhalten.",
   "Wait for the Reveal": "Warten auf die Enthüllung",
-  "It’ll take a few days before your bunny’s image is revealed. Just hold tight and wait for the final image!": "Es wird ein paar Tage dauern, bis das Bild Ihres Bunnys enthüllt wird. Bleiben Sie einfach dran und warten Sie auf das endgültige Bild!",
-  "Trading will open before the images are live, but you’ll still be able to check the bunnies’ stats.": "Der Handel wird eröffnet, bevor die Bilder live sind, aber Sie können trotzdem die Statistiken der Bunnys einsehen.",
-  "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.": "Vorverkauf: Wallets, die „Gen 0“ SweepStakes Bunnys NFTs (bunnyID 0,1,2,3,4) zu einem Zeitpunkt zwischen 12 und 2 Stunden vor Beginn des Vorverkaufs aufgenommen haben, können ein Squad Ticket pro Gen 0 NFT kaufen.",
+
   "Transaction has succeeded!": "Die Transaktion ist gelungen!",
   "The birthplace of Cecy is truly unknown": "Der Geburtsort von Cecy ist wirklich unbekannt",
   "But legend tells us, she was sailing alone": "Aber die Legende besagt, dass sie allein",
@@ -1346,12 +1344,11 @@
   "end in": "enden",
   "Insufficient Balance": "Unzureichendes Gleichgewicht",
   "Highest price": "Höchster Preis",
-  "10,000 bunnies.": "10.000 Bunnys.",
+
   "ZERO duplicates.": "NULL Duplikate.",
-  "Every SweepStakes Squad bunny is different.": "Jeder SweepStakes Squad-Bunny ist anders.",
-  "On top of that, there are a very small number of ultra-rare special unique bunnies as well...!": "Darüber hinaus gibt es auch eine sehr kleine Anzahl von sehr seltenen und einzigartigen Bunnys ...!",
+
   "View in Market": "Ansicht im Markt",
-  "They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.": "Sie werden alle nach dem Zufallsprinzip aus über 200 verschiedenen Merkmalen mit über acht MILLIARDEN möglichen Kombinationen generiert, so dass kein Bunny jemals genau gleich ist.",
+
   "View Documentation": "Dokumentation anzeigen",
   "What’s the Smart Contract?": "Was ist ein Smart Contract?",
   "Redeem Tickets to claim NFTs": "Tickets einlösen, um NFTs zu beanspruchen",
@@ -1374,12 +1371,10 @@
   "How are the NFTs randomly distributed?": "Wie sind die NFTs zufällig verteilt?",
   "What’s the value of each NFT?": "Welchen Wert haben die einzelnen NFTs?",
   "Wait for the reveal! After all 10,000 members of the SweepStakes Squad have been minted, their images will remain hidden for a few days. Just be patient :)": "Warte auf die Enthüllung! Nachdem alle 10.000 Mitglieder der SweepStakes Squad geprägt worden sind, bleiben ihre Bilder für einige Tage verborgen. Hab einfach etwas Geduld :)",
-  "Users holding Gen 0 SweepStakes Bunny NFTs at the snapshot may also purchase one additional SweepStakes Squad NFT in the presale for each SweepStakes Bunny they hold.": "Nutzer, die zum Zeitpunkt des Schnappschusses Gen 0 SweepStakes Bunny NFTs besitzen, können im Vorverkauf für jeden SweepStakes Bunny, den sie besitzen, einen zusätzlichen SweepStakes Squad NFT erwerben.",
-  "For example, if you have 5 Gen 0 bunnies, you can buy 5 minting tickets in the presale, then max. 10 in the public sale.": "Wenn Sie z. B. 5 Gen 0 Bunnys haben, können Sie 5 Prägekarten im Vorverkauf kaufen, dann max. 10 im öffentlichen Verkauf.",
+
   "Once all 10,000 Squad Tickets have been bought, Chainlink VRF will be used to randomly allocate the pre-generated NFTs to the purchased Tickets. Squad Tickets are allocated IDs numbered in order of their purchase.": "Sobald alle 10.000 Squad-Tickets gekauft wurden, wird Chainlink VRF verwendet, um die vorgenerierten NFTs nach dem Zufallsprinzip den gekauften Tickets zuzuordnen. Squad-Tickets werden IDs zugewiesen, die in der Reihenfolge ihres Kaufs nummeriert sind.",
   "Once all 10,000 have been sold, VRF will pick numbers from 0 to 9999, which will be used to shift the Squad Ticket ID. This will ensure that the distribution of rare NFTs will be randomized, and prevents “sniping” of specific NFTs during the pre-sale or public sale phases.": "Sobald alle 10.000 NFTs verkauft sind, wird VRF Zahlen von 0 bis 9999 wählen, die zur Verschiebung der Squad Ticket ID verwendet werden. Dies stellt sicher, dass die Verteilung der seltenen NFTs zufällig erfolgt und verhindert das „Snipen“ von bestimmten NFTs während der Vorverkaufs- oder öffentlichen Verkaufsphase.",
-  "Value is subjective, but since different traits have different levels of rarity, you can expect bunnies with rarer traits to trade for higher prices than others. If you’re planning to sell, check the NFT market for the price of bunnies with a similarly rare traits to yours.": "Der Wert ist subjektiv, aber da verschiedene Merkmale unterschiedlich selten sind, können Sie davon ausgehen, dass Bunnys mit selteneren Merkmalen zu höheren Preisen gehandelt werden als andere. Wenn Sie verkaufen möchten, sollten Sie auf dem NFT-Markt den Preis von Bunnys mit einem ähnlich seltenen Merkmal wie Ihrem ermitteln.",
-  "Bunny Id": "Bunny ID",
+
   "Filter by": "Filtern nach",
   "On Sale": "Im Verkauf",
   "Results": "Ergebnisse",
@@ -1746,9 +1741,7 @@
   "Circulating Supply": "Zirkulierende Versorgung",
   "Prizes will be announced and available for claiming at ~": "Die Preise werden bekannt gegeben und können ungefähr beansprucht werden am",
   "Follow Update": "Update verfolgen",
-  "Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.": "Ihr Mines of Dalarnia - Bunny Helmet NFT wird am 2. Juni vor 24:00 UTC in Ihr Wallet geschickt.",
-  "Bunny Helmet NFT": "Bunny Helmet NFT",
-  "Bunny Helmet": "Bunny Helmet",
+
   "SweepStakes NFT": "SweepStakes NFT",
   "Pottery": "Pottery",
   "Stake to WIN!": "Einsetzen und GEWINNEN!",

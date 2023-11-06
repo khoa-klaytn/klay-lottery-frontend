@@ -9,7 +9,6 @@ import addresses from 'config/constants/contracts'
 import { useMemo } from 'react'
 import { getMulticallAddress, getZapAddress } from 'utils/addressHelpers'
 import {
-  getBunnyFactoryContract,
   getCakeFlexibleSideVaultV2Contract,
   getCakeVaultV2Contract,
   getChainlinkOracleContract,
@@ -47,11 +46,6 @@ import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 
 export const useERC20 = (address: Address) => {
   return useContract(address, erc20ABI)
-}
-
-export const useBunnyFactory = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getBunnyFactoryContract(signer ?? undefined), [signer])
 }
 
 export const useProfileContract = () => {

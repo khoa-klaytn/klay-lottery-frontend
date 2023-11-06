@@ -44,10 +44,6 @@ export default {
     [ChainId.BSC]: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
     [ChainId.BSC_TESTNET]: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
   },
-  bunnyFactory: {
-    [ChainId.BSC]: '0xfa249Caa1D16f75fa159F7DFBAc0cC5EaB48CeFf',
-    [ChainId.BSC_TESTNET]: '0x707CBF373175fdB601D34eeBF2Cf665d08f01148',
-  },
   claimRefund: {
     [ChainId.BSC]: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',
     [ChainId.BSC_TESTNET]: '0x',
@@ -55,10 +51,6 @@ export default {
   pointCenterIfo: {
     [ChainId.BSC]: '0x3C6919b132462C1FEc572c6300E83191f4F0012a',
     [ChainId.BSC_TESTNET]: '0xd2Ac1B1728Bb1C11ae02AB6e75B76Ae41A2997e3',
-  },
-  bunnySpecial: {
-    [ChainId.BSC]: '0xFee8A195570a18461146F401d6033f5ab3380849',
-    [ChainId.BSC_TESTNET]: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
   },
   cakeVault: {
     [ChainId.BSC]: '0x45c54210128a065de780C4B0Df3d16664f7f859e',
@@ -75,18 +67,6 @@ export default {
   oraklKlayUsd: {
     [ChainId.KLAYTN]: '0x33D6ee12D4ADE244100F09b280e159659fe0ACE0',
     [ChainId.KLAYTN_TESTNET]: '0xC874f389A3F49C5331490145f77c4eFE202d72E1',
-  },
-  bunnySpecialCakeVault: {
-    [ChainId.BSC]: '0x5B4a770Abe7Eafb2601CA4dF9d73EA99363E60a4',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  bunnySpecialLottery: {
-    [ChainId.BSC]: '0x24ED31d31C5868e5a96aA77fdcB890f3511fa0b2',
-    [ChainId.BSC_TESTNET]: '0x382cB497110F398F0f152cae82821476AE51c9cF',
-  },
-  bunnySpecialXmas: {
-    [ChainId.BSC]: '0x59EdDF3c21509dA3b0aCCd7c5ccc596d930f4783',
-    [ChainId.BSC_TESTNET]: '0x',
   },
   zap: {
     [ChainId.BSC]: '0xD4c4a7C55c9f7B3c48bafb6E8643Ba79F42418dF',

@@ -543,17 +543,17 @@
   "Melting Easter eggs and melting hearts!": "녹는 부활절 달걀과 녹는 마음!",
   "Watch out for Flipsie’s spatula smash!": "Flipsie의 주걱 스매시를 조심하세요!",
   "Do you like chocolate with your syrup? Go long!": "시럽이 들어간 초콜릿을 좋아하시나요? 계속하세요!",
-  "Happy Niu Year! This bunny’s excited for the year of the bull (market!)": "해피 니우 이어! 이 버니는 황소의 해를 고대하고 있습니다(마켓!)",
+
   "Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.": "웁시 데이지! Hiccup이 약간의 사고를 당했습니다. 불쌍한 작은 녀석.",
   "Sunny is always cheerful when there are pancakes around. Smile!": "Sunny는 주변에 팬케익이 있을 때 항상 행복합니다. 스마일!",
   "Don't let that dopey smile deceive you... Churro's a master KLAY chef!": "그 혼란한 미소에 속지 마세요... Churro는 마스터 KLAY 셰프입니다!",
   "Nommm... Oh hi, I'm just meditating on the meaning of KLAY.": "음... 안녕하세요, CAKE의 의미를 생각하고 있어요.",
   "Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)": "눈이 반짝거리는 이유를 세 번 맞춰보세요! (힌트: CAKE입니다)",
   "These bunnies love nothing more than swapping pancakes. Especially on BSC.": "이 버니들은 팬케익 스왑을 가장 좋아합니다. 특히 BSC에서요.",
-  "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?": "이 토끼에게 Syrup 비가 내리고 있지만 별로 신경 쓰지 않는 것 같습니다. 그를 비난할 수 있을까요?",
+
   "These bunnies like their pancakes with blueberries. What's your favorite topping?": "이 버니들은 블루베리가 있는 팬케익을 좋아합니다. 여러분이 좋아하는 토핑은 무엇인가요?",
   "Love makes the world go 'round... but so do pancakes. And these bunnies know it.": "사랑은 세상을 움직입니다... 팬케익도 그러합니다. 그리고 이 버니들은 그것을 알고 있습니다.",
-  "It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.": "스파클링 시럽, 팬케익, 그리고 심지어 복권입니다! 이 버니가 아주 좋아합니다.",
+
   "The storm's a-comin! Watch out! These bulls are stampeding in a syrupy surge!": "폭풍이 오고 있습니다! 조심하세요! 이 황소들은 거대한 시럽 물결 속에서 격렬하게 달리고 있습니다!",
   "The flippening is coming. Don't get in these bunnies' way, or you'll get flipped, too!": "큰 반전이 다가오고 있습니다. 이 버니들을 방해하지 마세요. 방해하면 여러분도 반전될 것입니다!",
   "Can you stand the heat? Stay out of the kitchen or you might get burned to a crisp!": "열을 견딜 수 있나요? 부엌에서 멀어지지 않으면 화상을 입을 수 있습니다!",
@@ -998,7 +998,7 @@
   "If you’re not a whitelisted project, you won’t be able to participate, but you can still view what’s going on!": "화이트리스트에 있는 프로젝트가 아닌 경우 참여할 수 없지만 진행 내용을 볼 수는 있습니다!",
   "through community auctions so far!": "지금까지의 커뮤니티 경매!",
   "Farm Auctions": "팜 경매",
-  "auction bunny": "경매 버니",
+
   "Burnt KLAY": "소각한 KLAY",
   "Stake %stakingSymbol% - Earn %earningSymbol%": "%stakingSymbol% 스테이킹 - %earningSymbol% 획득",
   "Top Farms": "상위 팜",
@@ -1294,7 +1294,7 @@
   "Follow on Instagram": "Instagram 팔로우",
   "Please enable KLAY spending in your wallet": "지갑에서 KLAY 사용을 활성화하세요",
   "Mint NFTs (%tickets%)": "NFT 주조(%tickets%)",
-  "490 are available in the pre-sale for owners of Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)": "Gen 0 SweepStakes 버니(버니 ID 0, 1, 2, 3, 4) 소유자를 위해 490개 사전 판매 가능",
+
   "Hold KLAY": "KLAY 유지",
   "Head to the NFT Marketplace to buy!": "NFT 마켓으로 이동하여 구입하세요!",
   "Max per wallet: %maxPerWallet%": "지갑당 최대값: %maxPerWallet%",
@@ -1318,9 +1318,9 @@
   "Claim Phase": "클레임 단계",
   "During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a SweepStakes Squad NFT.": "이 단계에서 스쿼드 티켓이 있는 지갑은 티켓을 사용하여 SweepStakes 스쿼드 NFT를 클레임할 수 있습니다.",
   "Wait for the Reveal": "공개 대기",
-  "It’ll take a few days before your bunny’s image is revealed. Just hold tight and wait for the final image!": "버니의 이미지가 공개되는 데 며칠이 걸립니다. 잠시만 최종 이미지를 기다려주세요!",
+
   "Trading will open before the images are live, but you’ll still be able to check the bunnies’ stats.": "이미지가 라이브 상태가 되기 전에 거래가 열리지만, 버니 통계는 계속 확인할 수 있습니다.",
-  "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.": "사전 판매: 사전 판매 시작 12~2시간 전에 찍은 스냅숏의 \"Gen 0\" SweepStakes 버니 NFT(버니 ID 0,1,2,3,4)가 있는 지갑은 Gen 0 NFT당 하나의 스쿼드 티켓을 구매할 수 있습니다.",
+
   "Transaction has succeeded!": "트랜잭션이 성공했습니다!",
   "The birthplace of Cecy is truly unknown": "Cecy의 출생지는 실제로 알려지지 않았습니다",
   "But legend tells us, she was sailing alone": "하지만 전설에 따르면 그녀는 혼자 항해하고 있었다고 합니다",
@@ -1348,10 +1348,10 @@
   "Highest price": "최고가",
   "10,000 bunnies.": "10,000 버니.",
   "ZERO duplicates.": "제로 중복.",
-  "Every SweepStakes Squad bunny is different.": "각 SweepStakes 스쿼드 버니는 서로 다릅니다.",
+
   "On top of that, there are a very small number of ultra-rare special unique bunnies as well...!": "뿐만 아니라, 완전 희귀하고 독특한 극소수의 버니이기도 합니다...!",
   "View in Market": "마켓에서 보기",
-  "They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.": "모두 200가지 이상의 다양한 기능을 기반으로 무작위로 생성되며 80억 개 이상의 조합이 가능하므로, 완전히 똑같은 버니는 없습니다.",
+
   "View Documentation": "문서 보기",
   "What’s the Smart Contract?": "스마트 계약이란?",
   "Redeem Tickets to claim NFTs": "티켓을 사용하여 NFT 클레임",
@@ -1374,12 +1374,12 @@
   "How are the NFTs randomly distributed?": "NFT는 어떻게 무작위로 배포되나요?",
   "What’s the value of each NFT?": "각 NFT의 가치는 어떻게 되나요?",
   "Wait for the reveal! After all 10,000 members of the SweepStakes Squad have been minted, their images will remain hidden for a few days. Just be patient :)": "공개되길 기다려주세요! SweepStakes 스쿼드 멤버 10,000명 모두가 주조된 후에도 이들의 이미지는 며칠 동안 숨겨져 있습니다. 인내심을 가져주세요 :)",
-  "Users holding Gen 0 SweepStakes Bunny NFTs at the snapshot may also purchase one additional SweepStakes Squad NFT in the presale for each SweepStakes Bunny they hold.": "스냅숏의 Gen 0 SweepStakes 버니 NFT를 소유한 사용자는 자신이 소유한 각각의 SweepStakes 버니에 대해 사전 판매에서 추가 SweepStakes 스쿼드 NFT 하나를 구매할 수도 있습니다.",
+
   "For example, if you have 5 Gen 0 bunnies, you can buy 5 minting tickets in the presale, then max. 10 in the public sale.": "예를 들어 Gen 0 버니가 5개 있는 경우 주조 티켓 5개를 사전 판매에서 구입할 수 있으며 공개 판매에서는 최대 10개까지 구입할 수 있습니다.",
   "Once all 10,000 Squad Tickets have been bought, Chainlink VRF will be used to randomly allocate the pre-generated NFTs to the purchased Tickets. Squad Tickets are allocated IDs numbered in order of their purchase.": "10,000개의 스쿼드 티켓이 모두 구매되면 Chainlink VRF를 사용하여 사전 생성된 NFT를 구매한 티켓에 무작위로 할당합니다. 스쿼드 티켓에는 구매한 순서대로 번호가 매겨진 ID가 할당됩니다.",
   "Once all 10,000 have been sold, VRF will pick numbers from 0 to 9999, which will be used to shift the Squad Ticket ID. This will ensure that the distribution of rare NFTs will be randomized, and prevents “sniping” of specific NFTs during the pre-sale or public sale phases.": "10,000개가 모두 판매되면, VRF는 0에서 9999 사이의 숫자를 선택하며, 이 숫자는 스쿼드 티켓 ID를 전환하는 데 사용됩니다. 이는 희귀 NFT 배포의 무작위성을 보장하고 사전 판매 또는 공개 판매 단계에서 특정 NFT의 \"스나이핑\"을 방지합니다.",
   "Value is subjective, but since different traits have different levels of rarity, you can expect bunnies with rarer traits to trade for higher prices than others. If you’re planning to sell, check the NFT market for the price of bunnies with a similarly rare traits to yours.": "가치는 주관적이지만 특성에 따라 희귀성이 다르기 때문에 특성이 더 희귀한 버니는 다른 버니보다 더 높은 가격에 거래될 것이라고 예상할 수 있습니다. 판매할 계획이라면 NFT 마켓에서 귀하의 버니와 유사한 희귀 특성을 가진 버니의 가격을 확인하세요.",
-  "Bunny Id": "버니 ID",
+
   "Filter by": "필터링 기준",
   "On Sale": "판매 중",
   "Results": "결과",
@@ -1746,9 +1746,7 @@
   "Circulating Supply": "유통량",
   "Prizes will be announced and available for claiming at ~": "상금이 발표되고 ~에서 클레임할 수 있습니다",
   "Follow Update": "업데이트 팔로우",
-  "Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.": "Mines of Dalarnia - Bunny Helmet NFT는 6월 2일 00:00 UTC 이전에 지갑에 에어드랍됩니다.",
-  "Bunny Helmet NFT": "Bunny Helmet NFT",
-  "Bunny Helmet": "Bunny Helmet",
+
   "SweepStakes NFT": "SweepStakes NFT",
   "Pottery": "Pottery",
   "Stake to WIN!": "당첨을 위해 스테이킹하세요!",

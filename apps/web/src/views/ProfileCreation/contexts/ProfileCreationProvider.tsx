@@ -1,6 +1,5 @@
 import { createContext, useEffect, useMemo, useReducer } from 'react'
 import { Address, useAccount } from 'wagmi'
-import { getBunnyFactoryContract } from 'utils/contractHelpers'
 import { MINT_COST, REGISTER_COST, ALLOWANCE_MULTIPLIER } from '../config'
 import { Actions, State, ContextType } from './types'
 
@@ -67,13 +66,11 @@ const ProfileCreationProvider: React.FC<React.PropsWithChildren> = ({ children }
     let isSubscribed = true
 
     const fetchData = async () => {
-      const bunnyFactoryContract = getBunnyFactoryContract()
-      const canMint = await bunnyFactoryContract.read.canMint([account])
-      dispatch({ type: 'initialize', step: canMint ? 0 : 1 })
+      dispatch({ type: 'initialize', step: 1 })
 
       // When changing wallets quickly unmounting before the hasClaim finished causes a React error
       if (isSubscribed) {
-        dispatch({ type: 'initialize', step: canMint ? 0 : 1 })
+        dispatch({ type: 'initialize', step: 1 })
       }
     }
 

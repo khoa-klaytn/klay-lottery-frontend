@@ -1183,14 +1183,6 @@ const finishedPools = [
     tokenPerBlock: '0.1851',
   },
   {
-    sousId: 217,
-    stakingToken: bscTokens.cake,
-    earningToken: bscTokens.bp,
-    contractAddress: '0x8eD7aCF12b08274D5CdAF03d43D0E54bCbDD487e',
-    poolCategory: PoolCategory.CORE,
-    tokenPerBlock: '0.217',
-  },
-  {
     sousId: 215,
     stakingToken: bscTokens.cake,
     earningToken: bscTokens.qbt,
@@ -2360,14 +2352,6 @@ const finishedPools = [
     contractAddress: '0xF682D186168b4114ffDbF1291F19429310727151',
     poolCategory: PoolCategory.CORE,
     tokenPerBlock: '5.787',
-  },
-  {
-    sousId: 72,
-    stakingToken: bscTokens.cake,
-    earningToken: bscTokens.bunny,
-    contractAddress: '0xaDdAE5f4dB84847ac9d947AED1304A8e7D19f7cA',
-    poolCategory: PoolCategory.CORE,
-    tokenPerBlock: '0.00289',
   },
   {
     sousId: 71,

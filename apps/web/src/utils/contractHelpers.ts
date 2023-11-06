@@ -2,7 +2,6 @@ import { KLAY } from '@sweepstakes/tokens'
 
 // Addresses
 import {
-  getBunnyFactoryAddress,
   getCakeFlexibleSideVaultAddress,
   getCakeVaultAddress,
   getNonBscVaultAddress,
@@ -26,7 +25,6 @@ import { cakeFlexibleSideVaultV2ABI, cakeVaultV2ABI } from '@sweepstakes/pools'
 import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
-import { bunnyFactoryABI } from 'config/abi/bunnyFactory'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
@@ -96,9 +94,6 @@ export const getProfileContract = (signer?: WalletClient) => {
   return getContract({ abi: pancakeProfileABI, address: getSweepStakesProfileAddress(), signer })
 }
 
-export const getBunnyFactoryContract = (signer?: WalletClient) => {
-  return getContract({ abi: bunnyFactoryABI, address: getBunnyFactoryAddress(), signer })
-}
 export const getKlayLotteryContract = (address: Address, signer?: WalletClient) => {
   return getContract({ abi: klayLotteryABI, address, signer })
 }

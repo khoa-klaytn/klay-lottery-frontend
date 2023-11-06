@@ -393,14 +393,6 @@ export const bscTokens = {
     'Contentos Token',
     'https://www.contentos.io/',
   ),
-  bunny: new ERC20Token(
-    ChainId.BSC,
-    '0xC9849E6fdB743d08fAeE3E34dd2D1bc69EA11a51',
-    18,
-    'BUNNY',
-    'SweepStakesbunny Token',
-    'https://pancakebunny.finance/',
-  ),
   alice: new ERC20Token(
     ChainId.BSC,
     '0xAC51066d7bEC65Dc4589368da368b212745d63E8',
@@ -1688,14 +1680,6 @@ export const bscTokens = {
     'rUSD',
     'rUSD Token',
     'https://appv2.rampdefi.com/#/',
-  ),
-  bp: new ERC20Token(
-    ChainId.BSC,
-    '0xACB8f52DC63BB752a51186D1c55868ADbFfEe9C1',
-    18,
-    'BP',
-    'BunnyPark Token',
-    'https://www.bunnypark.com/',
   ),
   sfund: new ERC20Token(
     ChainId.BSC,

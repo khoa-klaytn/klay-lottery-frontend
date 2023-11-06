@@ -29,15 +29,6 @@ const tokens = {
     decimals: 18,
     projectLink: "https://www.contentos.io/",
   },
-  bunny: {
-    symbol: "BUNNY",
-    address: {
-      56: "0xC9849E6fdB743d08fAeE3E34dd2D1bc69EA11a51",
-      97: "",
-    },
-    decimals: 18,
-    projectLink: "https://pancakebunny.finance/",
-  },
   alice: {
     symbol: "ALICE",
     address: {
