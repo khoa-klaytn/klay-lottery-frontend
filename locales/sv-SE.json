@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% att ta emot",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Denna transaktion kommer inte att utföras, antingen på grund av prisrörelsen eller transaktionsavgiften. Prova att öka din",
   "slippage tolerance.": "prisförändringsgräns.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Äggande bra! Vi firar när Syrup Storm vinner påskstriden!",
-  "Melting Easter eggs and melting hearts!": "Smältande påskägg och hjärtan!",
+
   "Watch out for Flipsie’s spatula smash!": "Se upp för Flipsies spatelsmash!",
   "Do you like chocolate with your syrup? Go long!": "Gillar du choklad med din sirap? Kör hårt!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "Förläng lås",
   "Unlocked": "Upplåst",
   "Binance Fan token Trading Competition": "Tävling i handel med Binance-fantokens",
-  "Easter Trading Competition": "Handelstävling under påsk",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 avatar-NFT:er från Mobox + 300 nydesignade SweepStakes-NFT:er till de 100 främsta handlarna i vart och ett av de tre lagen.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 mysterielådor från Mobox till de 500 främsta handlarna baserat på handelsvolym med MBOX.",
   "Added by user": "Tillagt av användare",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "Antalet iCAKE-tokens motsvarar den låsta insatsmängden om insatsperioden är längre än %weeks% veckor. Om insatsperioden är kortare än %weeks% veckor minskar den linjärt baserat på insatsperioden.",
   "Go to KLAY pool": "Gå till KLAY-pool",
   "April": "April",
-  "Easter Battle": "Påskslaget",
+
   "$200,000 in Prizes!": "200 000 dollar i prispotten!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "Tävla mot andra lag för att vinna KLAY-tokens, samlingsvärda NFT:er, prestationer med mera!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "Priserna fördelas i form av KLAY-tokens och delas av alla medlemmar på respektive nivå. KLAY-pris i USD fastställs samma dag som utdelningen. Mer information finns nedan.",

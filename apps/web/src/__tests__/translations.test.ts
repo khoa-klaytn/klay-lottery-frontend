@@ -12,8 +12,6 @@ const allTranslationKeys = Object.keys(translations)
 const whitelist = [
   ...teams.map((t) => t.description),
   `Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.`,
-  'Eggscellent! Celebrating Syrup Storm winning the Easter Battle!',
-  'Melting Easter eggs and melting hearts!',
   'Watch out for Flipsie’s spatula smash!',
   'Do you like chocolate with your syrup? Go long!',
   'Sunny is always cheerful when there are pancakes around. Smile!',

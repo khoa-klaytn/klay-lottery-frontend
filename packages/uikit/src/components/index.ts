@@ -9,7 +9,6 @@ export * from "./Card";
 export * from "./KlayPrice";
 export * from "./Checkbox";
 export * from "./Dropdown";
-export * from "./FallingBunnies";
 export * from "./Heading";
 export * from "./Image";
 export * from "./Input";

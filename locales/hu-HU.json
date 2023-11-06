@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% kap",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Ez az ügylet vagy az ármozgás, vagy az átutalási díj miatt nem fog sikerülni. Próbálja megnövelni a",
   "slippage tolerance.": "csúszási toleranciáját.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Tökéletes, mint a tojás! Ünnepeljük a Szirupvihart, a húsvéti csata győztesét!",
-  "Melting Easter eggs and melting hearts!": "Olvadnak a húsvéti csokitojások és olvadnak a szívek!",
+
   "Watch out for Flipsie’s spatula smash!": "Vigyázzon, mert Flipsie spatulájaz összetörik!",
   "Do you like chocolate with your syrup? Go long!": "Ízlik a csokoládé a szirupjával? Vegyen még!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "Zárolás meghosszabbítása",
   "Unlocked": "Zárolás feloldva",
   "Binance Fan token Trading Competition": "Binance rajongói zsetonkereskedési verseny",
-  "Easter Trading Competition": "Húsvéti kereskedési verseny",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 Mobox Avaár NFT + 300 SweepStakes újonnan tervezett NFT a három csapat legjobb 100 kereskedőjének.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 Mobox titokdoboz az MBOX kereskedési volumen alapján rangsorolt 500 legjobb kereskedőnek.",
   "Added by user": "Hozzáadta a felhasználó",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "Az iCAKE számszerűen megegyezik a zárolt tét összegével, ha a tét időtartama hosszabb, mint %weeks% hét. Ha a tét időtartama kevesebb, mint %weeks% hét, akkor a tét időtartamával lineárisan csökken.",
   "Go to KLAY pool": "Menjen a KLAY összevont alapba",
   "April": "Április",
-  "Easter Battle": "Húsvéti csata",
+
   "$200,000 in Prizes!": "$200,000 nyereményekben!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "Versenyezzen más csapatokkal, hogy KLAY-et, gyűjthető NFT-ket nyerjen, eredményeket és egyebeket érjen el!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "A nyereményeket KLAY-ben kell kiosztani, és egy szint összes tagja között kell megosztani. A KLAY árát USD-ben a kiosztás napján határozzák meg. Részletek alább.",

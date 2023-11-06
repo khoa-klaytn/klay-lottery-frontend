@@ -537,8 +537,7 @@
   "%symbol% to receive": "%symbol% لاستلامها",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "لن تنجح هذه المعاملة إما بسبب الحركة السعرية أو رسوم التحويل. حاول أن تزيد من",
   "slippage tolerance.": "درجة تقبُّل تذبذب السعر.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "ممتاز! Syrup Storm احتفالًا بالفوز بمعركة الفصح!",
-  "Melting Easter eggs and melting hearts!": "بيض فصح ذائب وقلوب ذائبة!",
+
   "Watch out for Flipsie’s spatula smash!": "احترس من ملعقة Flipsie الساحقة!",
   "Do you like chocolate with your syrup? Go long!": "هل تريد الشوكولاتة مع Syrup؟ لاحقها!",
 
@@ -1661,7 +1660,7 @@
   "Extend Lock": "تمديد التجميد",
   "Unlocked": "غير مجمد",
   "Binance Fan token Trading Competition": "مسابقة تداول الرموز لـ Binance Fan",
-  "Easter Trading Competition": "مسابقة الفصح للتداول",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 رمز مميز لصور Mobox الرمزية + \n300 من رموز NFT المصممة حديثًا الخاصة بـ SweepStakes إلى أفضل 100 متداول من كل الفرق الثلاثة.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 صندوق غامض إلى أفضل 500 متداول مصنفين حسب حجم تداول MBOX.",
   "Added by user": "أضيفت بواسطة مستخدم",
@@ -1700,7 +1699,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "يتساوى عدد iCAKE مع كمية الرهن المجمّد إذا كانت مدة الرهن أطول من %weeks% أسبوع. وإذا كانت مدة الرهن أقل من %weeks% أسبوع، فسوف تقل خطيًا بناءً على مدة الرهن.",
   "Go to KLAY pool": "الانتقال إلى تجمُّع KLAY",
   "April": "أبريل",
-  "Easter Battle": "معركة الفصح",
+
   "$200,000 in Prizes!": "جوائز بقيمة 200 ألف دولار!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "تنافس مع الفرق الأخرى لربح KLAY، ورموز NFT القابلة للتحصيل، والإنجازات والمزيد!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "الجوائز التي سيتم توزيعها في صورة KLAY ومشاركتها من قِبل جميع أعضاء الدرجة. سيتم تحديد سعر KLAY بالدولار الأمريكي في يوم التوزيع. التفاصيل أدناه.",

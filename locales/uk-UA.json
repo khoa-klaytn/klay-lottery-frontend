@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% доступно для отримання",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Цю транзакцію не вдасться виконати або через рух ціни, або через комісію за переказ. Спробуйте збільшити",
   "slippage tolerance.": "допуск прослизання.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Кролики в захваті! Святкуємо перемогу Сиропового шторму у Великодній битві!",
-  "Melting Easter eggs and melting hearts!": "Великодні яйця розтоплять ваше серце!",
+
   "Watch out for Flipsie’s spatula smash!": "Остерігайтеся лопатки Фліпсі!",
   "Do you like chocolate with your syrup? Go long!": "Полюбляєте сироп із шоколадом? Займайте лонг-позиції!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "Подовжити блокування",
   "Unlocked": "Розблоковано",
   "Binance Fan token Trading Competition": "Змагання з торгівлі токенами для прихильників Binance",
-  "Easter Trading Competition": "Великоднє змагання з торгівлі",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 невзаємозамінних аватарів Mobox + 300 нових невзаємозамінних токенів SweepStakes для 100 найкращих трейдерів у кожній із трьох команд.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 таємничих ящиків Mobox для 500 трейдерів, що мають найбільший обсяг торгів MBOX.",
   "Added by user": "Додав користувач",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "Кількість iCAKE дорівнює сумі в стейкінгу з блокуванням, якщо тривалість стейкінгу перевищує %weeks% тиж. Якщо тривалість стейкінгу менше ніж %weeks% тиж., сума спадатиме лінійно відповідно до тривалості стейкінгу.",
   "Go to KLAY pool": "Перейти в пул KLAY",
   "April": "Квітень",
-  "Easter Battle": "Пасхальна битва",
+
   "$200,000 in Prizes!": "Призовий фонд у 200 000 доларів США!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "Змагайтеся з іншими командами, щоб вигравати KLAY, колекційні невзаємозамінні токени, досягнення та багато іншого!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "Призи розподілятимуться в KLAY між усіма учасниками рівня. Ціна KLAY у доларах США визначатиметься в день розподілу. Докладні відомості наведено нижче.",

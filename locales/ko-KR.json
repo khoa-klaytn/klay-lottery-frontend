@@ -539,8 +539,7 @@
   "%symbol% to receive": "수령할 %symbol%",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "이 트랜잭션은 가격 변동이나 송금 수수료로 인해 실패하게 됩니다.",
   "slippage tolerance.": "슬리피지 허용치를 높여보세요.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "에그셀런트! 이스터 배틀에서 승리하는 Syrup Storm을 축하하세요!",
-  "Melting Easter eggs and melting hearts!": "녹는 부활절 달걀과 녹는 마음!",
+
   "Watch out for Flipsie’s spatula smash!": "Flipsie의 주걱 스매시를 조심하세요!",
   "Do you like chocolate with your syrup? Go long!": "시럽이 들어간 초콜릿을 좋아하시나요? 계속하세요!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "잠금 연장",
   "Unlocked": "잠금 해제됨",
   "Binance Fan token Trading Competition": "Binance Fan 토큰 거래 대회",
-  "Easter Trading Competition": "이스터 거래 대회",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 Mobox Avatars NFT + 300 SweepStakes의 새롭게 디자인된 NFT가 세 팀 각각의 상위 100명의 트레이더에게 제공됩니다.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 Mobox 미스터리 박스가 MBOX 거래량 상위 500명의 트레이더에게 제공됩니다.",
   "Added by user": "사용자가 추가함",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "예치 기간이 %weeks%주를 초과하는 경우 iCAKE 수는 잠긴 예치 금액과 같습니다. 예치 기간이 %weeks%주 미만인 경우 iCAKE 수는 예치 기간에 따라 선형적으로 감소합니다.",
   "Go to KLAY pool": "KLAY 풀로 이동",
   "April": "4월",
-  "Easter Battle": "이스터 배틀",
+
   "$200,000 in Prizes!": "상금 $200,000!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "다른 팀과 겨루고 KLAY, 수집 가능 NFT, 성과 등을 올리세요!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "상금은 CAKE로 배분되며 티어의 모든 멤버가 공유합니다. KLAY 가격(USD)은 배분일에 결정됩니다. 세부 정보는 다음과 같습니다.",

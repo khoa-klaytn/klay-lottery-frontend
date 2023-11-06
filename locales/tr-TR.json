@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% alınacak",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Bu işlem, fiyat hareketi veya transfer ücreti nedeniyle başarılı olmayacaktır. Sapma toleransınızı",
   "slippage tolerance.": "artırmayı deneyin.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Yumur-teşem! Syrup Storm'un Paskalya Savaşını kazanmasını kutluyoruz!",
-  "Melting Easter eggs and melting hearts!": "Eriyen Paskalya yumurtaları ve eriyen kalpler!",
+
   "Watch out for Flipsie’s spatula smash!": "Flipsie'nin spatulasının altında kalmayın!",
   "Do you like chocolate with your syrup? Go long!": "Şuruplu çikolata sever misiniz? Uzun pozisyon açın!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "Kilitlemeyi uzat",
   "Unlocked": "Kilidi açıldı",
   "Binance Fan token Trading Competition": "Binance Fan token Alım Satım Yarışması",
-  "Easter Trading Competition": "Paskalya Alım Satım Yarışması",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "Üç ekibin her birindeki en iyi 100 yatırımcıya 300 Mobox Avatarı NFT'si + yeni tasarlanmış 300 SweepStakes NFT'si.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "MBOX işlem hacmine göre sıralamadaki ilk 500 yatırımcıya 500 Mobox gizemli kutusu.",
   "Added by user": "Şu kullanıcı ekledi",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "Staking süresi %weeks% haftadan uzunsa iCAKE sayısı, kilitli staking miktarına eşittir. Staking süresi %weeks% haftadan azsa staking süresine göre lineer bir şekilde azalır.",
   "Go to KLAY pool": "KLAY havuzuna git",
   "April": "Nisan",
-  "Easter Battle": "Paskalya Savaşı",
+
   "$200,000 in Prizes!": "200.000 Dolar Değerinde Ödüller!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "KLAY, koleksiyonluk NFT, başarılar ve daha birçok şey kazanmak için diğer takımlarla yarışın!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "KLAY cinsinden dağıtılacak ve bir serinin tüm üyeleri arasında dağıtılacak ödüller. Dağıtım günü belirlenecek USD cinsinden KLAY fiyatı. Ayrıntılar aşağıdadır.",

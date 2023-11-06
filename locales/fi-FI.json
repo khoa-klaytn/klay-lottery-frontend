@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% saatavana",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Tämä transaktio ei onnistu joko hintamuutoksen tai siirtomaksun takia. Kokeile kasvattaa",
   "slippage tolerance.": "luisumistoleranssiasi.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Mahtavaa! Juhlitaan Syrup-myrskyä voittamalla pääsiäistaistelu!",
-  "Melting Easter eggs and melting hearts!": "Sulatetaan pääsiäismunia ja sydämiä!",
+
   "Watch out for Flipsie’s spatula smash!": "Varo Flipsien lastaiskua!",
   "Do you like chocolate with your syrup? Go long!": "Pidätkö suklaasta siirappisi kanssa? Anna mennä!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "Pidennä lukitusta",
   "Unlocked": "Lukitus poistettu",
   "Binance Fan token Trading Competition": "Binance Fan token -kaupankäyntikilpailu",
-  "Easter Trading Competition": "Pääsiäiskaupankäyntikilpailu",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 Mobox Avatar NFT:tä + 300 SweepStakesin uuden ulkoasun NFT:tä kunkin kolmen joukkueen 100 parhaalle treidaajalle.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 Mobox-mysteerilaatikkoa parhaalle 500 treidaajalle MBOX-kaupankäyntivolyymin mukaan.",
   "Added by user": "Käyttäjän lisäämä",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "iCAKEn määrä vastaa lukitun panostuksen määrää, jos panostuksen kesto on yli %weeks% viikkoa. Jos panostuksen kesto on alle %weeks% viikkoa, se vähenee lineaarisesti panostuksen keston mukaan.",
   "Go to KLAY pool": "Siirry KLAY-pooliin",
   "April": "Huhtikuu",
-  "Easter Battle": "Pääsiäistaistelu",
+
   "$200,000 in Prizes!": "200 000 dollarin arvosta palkintoja!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "Kilpaile muiden tiimien kanssa voittaaksesi CAKEa, kerättäviä NFT:itä, saavutuksia ja muuta!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "Palkinnot jaetaa CAKEna ja jaetaan kaikkien tason jäsenten kesken. CAKEn hinta Yhdysvaltain dollareina määritetään jakelupäivänä. Katso lisätietoja alla.",

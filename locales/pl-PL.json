@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% do odebrania",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Ta transakcja nie dojdzie do skutku albo z powodu zmiany ceny, albo z powodu opłaty za przeniesienie. Spróbuj zwiększyć swoją",
   "slippage tolerance.": "tolerancję poślizgu.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Z jajem! Świętowanie zwycięstwa Burzy Syrup w Bitwie Wielkanocnej!",
-  "Melting Easter eggs and melting hearts!": "Topniejące pisanki i topniejące serca!",
+
   "Watch out for Flipsie’s spatula smash!": "Uważaj na szpatułkę Flipsiego!",
   "Do you like chocolate with your syrup? Go long!": "Lubisz czekoladę z syropem Syrup? Idź na całość!",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "Przedłuż blokadę",
   "Unlocked": "Odblokowano",
   "Binance Fan token Trading Competition": "Konkurs handlu tokenami fanów Binance",
-  "Easter Trading Competition": "Wielkanocny konkurs handlowy",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 awatarów Mobox NFT + 300 nowo zaprojektowanych NFT SweepStakes dla 100 najlepszych traderów w każdym z trzech zespołów.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 tajemniczych pudełek Mobox dla 500 najlepszych traderów uszeregowanych według wolumenu obrotów MBOX.",
   "Added by user": "Dodany przez użytkownika",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "Liczba iCAKE jest równa zablokowanej do stakowania kwocie, jeśli czas trwania stakowania w tygodniach jest dłuższy niż %weeks%. Jeśli czas trwania stakowania w tygodniach jest krótszy niż %weeks%, będzie on liniowo maleć w zależności od czasu trwania stakowania.",
   "Go to KLAY pool": "Przejdź do puli KLAY",
   "April": "Kwiecień",
-  "Easter Battle": "Wielkanocna bitwa",
+
   "$200,000 in Prizes!": "200 000 USD w nagrodach!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "Rywalizuj z innymi zespołami, aby wygrać KLAY, obiekty kolekcjonerskie NFT, osiągnięcia i o wiele więcej!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "Nagrody będą rozdzielane w KLAY i dzielone przez wszystkich członków danego poziomu. Cena KLAY w USD zostanie określona w dniu rozdziału. Szczegóły poniżej.",

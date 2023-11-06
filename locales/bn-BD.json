@@ -537,8 +537,7 @@
   "%symbol% to receive": "%symbol% পেতে",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "মূল্যের ওঠানামা বা স্থানান্তর ফি-এর কারণে এই লেনদেন সফল হবে না। বাড়ানোর চেষ্টা করুন আপনার ",
   "slippage tolerance.": "স্লিপেজ সহনশীলতা।",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "দুর্দান্ত! ইস্টার লড়াইয়ে বিজয়ী হয়ে Syrup Storm-এর উদযাপন করা হচ্ছে!",
-  "Melting Easter eggs and melting hearts!": "গলিত ইস্টার ডিম এবং বিগলিত হৃদয়!",
+
   "Watch out for Flipsie’s spatula smash!": "ফ্লিপসি'র স্প্যাটুলা স্ম্যাশের জন্য নজর রাখুন!",
   "Do you like chocolate with your syrup? Go long!": "আপনি কি সিরাপের সঙ্গে চকলেট পছন্দ করেন? এগিয়ে যান!",
 
@@ -1661,7 +1660,7 @@
   "Extend Lock": "সম্প্রসারিত লক",
   "Unlocked": "আনলক করা",
   "Binance Fan token Trading Competition": "Binance ফ্যান টোকেন ট্রেডিং প্রতিযোগিতা",
-  "Easter Trading Competition": "ইস্টার ট্রেডিং প্রতিযোগিতা",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "তিনটি দলের প্রত্যেকটির শীর্ষ 100 ট্রেডারকে 300 Mobox Avatars NFT + 300 SweepStakes এর নতুন ডিজাইন করা NFT।",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": " MBOX ট্রেডিং ভলিউম দ্বারা র‍্যাঙ্ক করা শীর্ষ 500 ব্যবসায়ীর কাছে 500টি Mobox মিস্টেরি বক্স।",
   "Added by user": "ব্যবহারকারী কর্তৃক যোগ করা",
@@ -1700,7 +1699,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "স্টেকিং এর সময়কাল %weeks% সপ্তাহের চেয়ে বেশি হলে iCAKE এর সংখ্যা লক করা স্টেকিং এর পরিমাণের সমান। স্টেকিং সময়কাল %weeks% সপ্তাহের কম হলে এটি স্টেকিং এর সময়কালের উপর ভিত্তি করে লিনিয়ারভাবে হ্রাস পাবে।",
   "Go to KLAY pool": "KLAY পুলে যান",
   "April": "এপ্রিল",
-  "Easter Battle": "ইস্টার ব্যাটল",
+
   "$200,000 in Prizes!": "$200,000 পুরস্কার!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "KLAY, কলেক্টিবল NFT, অর্জন এবং আরও অনেক কিছুর জন্য অন্য টিমের সাথে প্রতিযোগিতা করুন!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "পুরস্কার KLAY হিসাবে বিতরণ করা হবে এবং একটি স্তরের সমস্ত সদস্যের মধ্যে ভাগ করা হবে। বিতরণের দিন মার্কিন ডলারে KLAY-এর দান নির্ধারণ করা হবে। নিচে বিস্তারিত রয়েছে।",

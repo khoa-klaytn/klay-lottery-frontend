@@ -539,8 +539,7 @@
   "%symbol% to receive": "%symbol% 待接收",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "由于价格变动过大或代币内置转账费用（抽税），此兑换将不会成功。尝试提高您的",
   "slippage tolerance.": "滑点上限。",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "漂亮的蛋！让我们赢得复活节战争来庆祝糖浆风暴！",
-  "Melting Easter eggs and melting hearts!": "融化复活节彩蛋，感化心灵！",
+
   "Watch out for Flipsie’s spatula smash!": "注意 Flipsie 的锅铲碎屑！",
   "Do you like chocolate with your syrup? Go long!": "你喜欢巧克力加糖浆吗？买进！",
 
@@ -1664,7 +1663,7 @@
   "Extend Lock": "延长锁定",
   "Unlocked": "已解锁",
   "Binance Fan token Trading Competition": "币安粉丝代币交易大赛",
-  "Easter Trading Competition": "复活节交易大赛",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 个 Mobox Avatars NFT + 300 个 SweepStakes 新设计的 NFT，分配给三个团队中的前 100 名交易者。",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 个 Mobox 神秘盒子，分配 MBOX 交易量排名前 500 的交易者。",
   "Added by user": "由用户添加",
@@ -1703,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "如果锁仓持续时间超过 %weeks% 周，则 iCAKE 的数量等于锁仓数量。如果持续时间小于 %weeks% 周，iCAKE 的数量将根据锁仓持续时间线性减少。",
   "Go to KLAY pool": "转到 KLAY 糖浆池",
   "April": "4 月",
-  "Easter Battle": "复活节战争",
+
   "$200,000 in Prizes!": "200,000 美元奖金！",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "与其他团队竞争，赢取 KLAY、收藏品 NFT、成就等！",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "奖金将以 KLAY 分发，并由各级别的所有成员共享。KLAY 价格（美元）将在分发当天确定。详情如下。",

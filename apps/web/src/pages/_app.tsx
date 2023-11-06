@@ -11,7 +11,6 @@ import useThemeCookie from 'hooks/useThemeCookie'
 import useUserAgent from 'hooks/useUserAgent'
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Script from 'next/script'
 import { Fragment } from 'react'
@@ -26,8 +25,6 @@ import { SentryErrorBoundary } from '../components/ErrorBoundary'
 import Menu from '../components/Menu'
 import Providers from '../Providers'
 import GlobalStyle from '../style/Global'
-
-const EasterEgg = dynamic(() => import('components/EasterEgg'), { ssr: false })
 
 // This config is required for number formatting
 BigNumber.config({
@@ -167,7 +164,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
           <Component {...pageProps} />
         </Layout>
       </ShowMenu>
-      <EasterEgg iterations={2} />
       <ToastListener />
       <NetworkModal pageSupportedChains={Component.chains} />
       {isShowScrollToTopButton && <ScrollToTopButtonV2 />}
