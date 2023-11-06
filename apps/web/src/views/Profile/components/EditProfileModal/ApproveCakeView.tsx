@@ -1,11 +1,8 @@
 import { useTranslation } from '@sweepstakes/localization'
 import { AutoRenewIcon, Button, Flex, InjectedModalProps, Text } from '@sweepstakes/uikit'
 import { formatBigInt } from '@sweepstakes/utils/formatBalance'
-import { useWeb3React } from '@sweepstakes/wagmi'
 import useCatchTxError from 'hooks/useCatchTxError'
-import { useCake } from 'hooks/useContract'
 import { useProfile } from 'state/profile/hooks'
-import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
 import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
 import { UseEditProfileResponse } from './reducer'
 
@@ -16,30 +13,16 @@ interface ApproveCakePageProps extends InjectedModalProps {
 const ApproveCakePage: React.FC<React.PropsWithChildren<ApproveCakePageProps>> = ({ goToChange, onDismiss }) => {
   const { profile } = useProfile()
   const { t } = useTranslation()
-  const { account, chain } = useWeb3React()
-  const { fetchWithCatchTxError, loading: isApproving } = useCatchTxError()
+  const { loading: isApproving } = useCatchTxError()
   const {
     costs: { numberCakeToUpdate, numberCakeToReactivate },
   } = useGetProfileCosts()
-  const cakeContract = useCake()
 
   if (!profile) {
     return null
   }
 
   const cost = profile.isActive ? numberCakeToUpdate : numberCakeToReactivate
-
-  const handleApprove = async () => {
-    const receipt = await fetchWithCatchTxError(() => {
-      return cakeContract.write.approve([getSweepStakesProfileAddress(), cost * 2n], {
-        account,
-        chain,
-      })
-    })
-    if (receipt?.status) {
-      goToChange()
-    }
-  }
 
   return (
     <Flex flexDirection="column">
@@ -53,7 +36,7 @@ const ApproveCakePage: React.FC<React.PropsWithChildren<ApproveCakePageProps>> =
         endIcon={isApproving ? <AutoRenewIcon spin color="currentColor" /> : null}
         width="100%"
         mb="8px"
-        onClick={handleApprove}
+        onClick={goToChange}
       >
         {t('Enable')}
       </Button>

@@ -37,7 +37,6 @@ import {
 
 import { WNATIVE, pancakePairV2ABI } from '@sweepstakes/sdk'
 import { ChainId } from '@sweepstakes/chains'
-import { KLAY } from '@sweepstakes/tokens'
 import { nonfungiblePositionManagerABI } from '@sweepstakes/v3-sdk'
 import { multicallABI } from 'config/abi/Multicall'
 import { erc20Bytes32ABI } from 'config/abi/erc20_bytes32'
@@ -54,12 +53,6 @@ import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 
 export const useERC20 = (address: Address) => {
   return useContract(address, erc20ABI)
-}
-
-export const useCake = () => {
-  const { chainId } = useActiveChainId()
-
-  return useContract((chainId && KLAY[chainId]?.address) ?? KLAY[ChainId.BSC].address, erc20ABI)
 }
 
 export const useBunnyFactory = () => {
