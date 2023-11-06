@@ -16,7 +16,7 @@ const StyledNumberWrapper = styled(Flex)`
 
 function bracketWidth(numBrackets: number) {
   const baseBracketWidth = 100 / numBrackets
-  return baseBracketWidth + 1
+  return baseBracketWidth
 }
 
 const RewardHighlighter = styled.div<{ rewardBracket: number; numBrackets: number }>`
@@ -54,14 +54,14 @@ const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({
         <Text fontSize="12px" color="textSubtle">
           #{localId || id}
         </Text>
-        {rewardBracket >= 0 && (
+        {rewardBracket > 0 && (
           <Text fontSize="12px">
-            {rewardBracket === numBrackets ? t('Matched first') : 'Matches all'} {rewardBracket}
+            {rewardBracket === numBrackets ? 'Matches all' : t('Matched first')} {rewardBracket}
           </Text>
         )}
       </Flex>
       <StyledNumberWrapper>
-        {rewardBracket >= 0 && <RewardHighlighter rewardBracket={rewardBracket} numBrackets={6} />}
+        {rewardBracket > 0 && <RewardHighlighter rewardBracket={rewardBracket} numBrackets={6} />}
         {reversedNumber.map((digit) => (
           <Text key={`${localId || id}-${digit}-${_uniqueId()}`} fontSize="16px">
             {digit}
