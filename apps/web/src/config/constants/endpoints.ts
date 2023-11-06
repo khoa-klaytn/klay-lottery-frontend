@@ -8,7 +8,6 @@ export const API_PROFILE = 'https://profile.sweepstakes.com'
 export const SNAPSHOT_API = `${SNAPSHOT_BASE_URL}/graphql`
 export const SNAPSHOT_HUB_API = `${SNAPSHOT_BASE_URL}/api/message`
 export const ONRAMP_API_BASE_URL = 'https://pcs-on-ramp-api.com'
-export const TRANSAK_API_BASE_URL = 'https://api-stg.transak.com/api/v1'
 export const MOONPAY_BASE_URL = 'https://api.moonpay.com'
 
 export const INFO_CLIENT = 'https://proxy-worker-api.sweepstakes.com/bsc-exchange'

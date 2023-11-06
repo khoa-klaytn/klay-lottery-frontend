@@ -26,7 +26,6 @@ import { SentryErrorBoundary } from '../components/ErrorBoundary'
 import Menu from '../components/Menu'
 import Providers from '../Providers'
 import GlobalStyle from '../style/Global'
-import { ThirdYearBirthdayCake } from '../views/Home/components/ThirdYearBirthdayCake'
 
 const EasterEgg = dynamic(() => import('components/EasterEgg'), { ssr: false })
 
@@ -160,7 +159,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const Layout = Component.Layout || Fragment
   const ShowMenu = Component.mp ? Fragment : Menu
   const isShowScrollToTopButton = Component.isShowScrollToTopButton || true
-  const isShowThirdYearButton = Component.isShowThirdYearButton || false
 
   return (
     <ProductionErrorBoundary>
@@ -173,7 +171,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <ToastListener />
       <NetworkModal pageSupportedChains={Component.chains} />
       {isShowScrollToTopButton && <ScrollToTopButtonV2 />}
-      {isShowThirdYearButton && <ThirdYearBirthdayCake />}
     </ProductionErrorBoundary>
   )
 }

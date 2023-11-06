@@ -1,6 +1,4 @@
 import lotteryImage from './lottery.png'
-import modImage from './mod-tc-desktop.png'
-import modMobileImage from './mod-tc-mobile.png'
 import lotteryMobileImage from './lotteryMobile.png'
 import modWhiteLogo from './mod-white-logo.png'
 import perpetualImage from './perpetual.png'
@@ -89,8 +87,6 @@ export {
   galxeBirthdayCampaignPedictMobile,
   galxeBirthdayCampaignPerpMobile,
   lotteryImage,
-  modImage,
-  modMobileImage,
   lotteryMobileImage,
   modWhiteLogo,
   perpetualImage,
