@@ -12,7 +12,6 @@ export interface ExtendEthereum extends WindowProvider {
 declare global {
   interface Window {
     coin98?: true
-    mercuryoWidget?: any
     ethereum?: ExtendEthereum
     BinanceChain?: {
       bnbSign?: (address: string, message: string) => Promise<{ publicKey: string; signature: string }>

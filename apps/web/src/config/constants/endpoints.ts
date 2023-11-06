@@ -7,8 +7,6 @@ export const SNAPSHOT_BASE_URL = process.env.NEXT_PUBLIC_SNAPSHOT_BASE_URL
 export const API_PROFILE = 'https://profile.sweepstakes.com'
 export const SNAPSHOT_API = `${SNAPSHOT_BASE_URL}/graphql`
 export const SNAPSHOT_HUB_API = `${SNAPSHOT_BASE_URL}/api/message`
-export const ONRAMP_API_BASE_URL = 'https://pcs-on-ramp-api.com'
-export const MOONPAY_BASE_URL = 'https://api.moonpay.com'
 
 export const INFO_CLIENT = 'https://proxy-worker-api.sweepstakes.com/bsc-exchange'
 export const V3_BSC_INFO_CLIENT = `https://open-platform.nodereal.io/${
@@ -89,8 +87,3 @@ export const MERCURYO_WIDGET_ID = process.env.NEXT_PUBLIC_MERCURYO_WIDGET_ID || 
 export const MOONPAY_API_KEY = process.env.NEXT_PUBLIC_MOONPAY_LIVE_KEY || 'pk_test_1Ibe44lMglFVL8COOYO7SEKnIBrzrp54'
 
 export const TRANSAK_API_KEY = process.env.NEXT_PUBLIC_TRANSAK_LIVE_KEY || 'bf960e79-6d98-4fd0-823d-8409d290c346'
-// no need for extra public env
-export const MERCURYO_WIDGET_URL =
-  process.env.NODE_ENV === 'development'
-    ? 'https://sandbox-widget.mrcr.io/embed.2.0.js'
-    : 'https://widget.mercuryo.io/embed.2.0.js'
