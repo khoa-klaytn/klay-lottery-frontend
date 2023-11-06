@@ -160,7 +160,6 @@ export { default as BloctoIcon } from "./Icons/Blocto";
 export { default as PetraWalletIcon } from "./Icons/PetraWallet";
 export { default as SortArrowIcon } from "./Icons/SortArrowIcon";
 export { default as YoutubeIcon } from "./Icons/YoutubeIcon";
-export { default as BridgeIcon } from "./Icons/BridgeIcon";
 export { default as ZoomInIcon } from "./Icons/ZoomIn";
 export { default as ZoomOutIcon } from "./Icons/ZoomOut";
 export { default as EthChainIcon } from "./Icons/EthChain";
