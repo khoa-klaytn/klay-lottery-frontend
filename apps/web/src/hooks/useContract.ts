@@ -28,7 +28,6 @@ import {
   getTradingCompetitionContractMobox,
   getTradingRewardContract,
   getUnsContract,
-  getAffiliateProgramContract,
   getV3AirdropContract,
   getTradingRewardTopTradesContract,
   getVCakeContract,
@@ -259,15 +258,6 @@ export const useV3AirdropContract = () => {
 
 export const useInfoStableSwapContract = (infoAddress?: Address) => {
   return useContract(infoAddress, infoStableSwapABI)
-}
-
-export const useAffiliateProgramContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(
-    () => getAffiliateProgramContract(signer ?? undefined, chainId_ ?? chainId),
-    [signer, chainId_, chainId],
-  )
 }
 
 export const useTradingRewardTopTraderContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {

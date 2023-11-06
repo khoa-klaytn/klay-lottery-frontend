@@ -44,10 +44,6 @@ const config: (
     //       href: '/info/v3',
     //     },
     //     {
-    //       label: t('Affiliate Program'),
-    //       href: '/affiliates-program',
-    //     },
-    //     {
     //       label: t('Voting'),
     //       href: '/voting',
     //       supportChainIds: SUPPORT_ONLY_KLAYTN,

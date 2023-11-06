@@ -18,7 +18,6 @@ import {
   getTradingCompetitionAddressMobox,
   getTradingRewardAddress,
   getV3AirdropAddress,
-  getAffiliateProgramAddress,
   getTradingRewardTopTradesAddress,
   getVCakeAddress,
   getRevenueSharingPoolAddress,
@@ -35,7 +34,6 @@ import { cakeFlexibleSideVaultV2ABI, cakeVaultV2ABI } from '@sweepstakes/pools'
 import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
-import { affiliateProgramABI } from 'config/abi/affiliateProgram'
 import { bunnyFactoryABI } from 'config/abi/bunnyFactory'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import { klayLotteryABI } from 'config/abi/klayLottery'
@@ -241,13 +239,6 @@ export const getV3AirdropContract = (walletClient?: WalletClient) => {
     abi: v3AirdropABI,
     address: getV3AirdropAddress(),
     signer: walletClient,
-  })
-}
-
-export const getAffiliateProgramContract = (signer?: WalletClient, chainId?: number) => {
-  return getContract({
-    abi: affiliateProgramABI,
-    address: getAffiliateProgramAddress(chainId),
   })
 }
 

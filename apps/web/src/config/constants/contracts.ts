@@ -172,11 +172,6 @@ export default {
     [ChainId.BSC]: '0xe934d2C5bE5db0295A4de3177762A9E8c74Ae4f4',
     [ChainId.BSC_TESTNET]: '0x',
   },
-  affiliateProgram: {
-    [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0x92C73D90F709DFf7e5E7307e8F2EE20e39396b12',
-    [ChainId.BSC_TESTNET]: '0x1B8a475B5E5De05fB3Ac2D9ec3C2809fBF24e51c',
-  },
   tradingRewardTopTrades: {
     [ChainId.ETHEREUM]: '0x',
     [ChainId.BSC]: '0x41920b6A17CB73D1B60f4F41D82c35eD0a46fD71',
