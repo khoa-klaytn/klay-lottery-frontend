@@ -2,7 +2,7 @@
   "Farm": "Fermă",
   "Exchange": "Schimb",
   "Docs": "Documente",
-  "Voting": "Votare",
+
   "Lottery": "Loterie",
   "Connect Wallet": "Conectează portofelul",
   "Blog": "Blog",
@@ -596,7 +596,7 @@
   "Starts %date%": "Începe la %date%",
   "Ends %date%": "Se încheie la %date%",
   "Closed": "Închis",
-  "Vote Now": "Votează acum",
+
   "Soon": "În curând",
   "No proposals found": "Nu s-au găsit propuneri",
   "Creator": "Creator",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Spune-ți cuvântul în viitorul Ecosistemului SweepStakes",
   "Got a suggestion?": "Ai o sugestie?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Propunerile comunității sunt o modalitate excelentă de a vedea care este părerea comunității despre ideile tale.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Nu vor fi neapărat implementate în cazul în care comunitatea votează cu succes, dar sugestiile cu mult sprijin din partea comunității pot fi transformate în propuneri Nucleu.",
+
   "%field% is required": "%field% este obligatoriu",
   "Please create a minimum of %num% choices": "Creează cel puțin %num% alegeri",
   "Choices must not be empty": "Alegerile nu trebuie să fie goale",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Data de încheiere trebuie să fie după data de început",
   "Invalid snapshot": "Instantaneu nevalid",
   "Proposal created!": "Propunere creată!",
-  "Voted": "Votat",
+
   "Time": "Oră",
   "Input choice text": "Introdu textul alegerii",
   "Start Time": "Oră de început",
-  "Back to Vote Overview": "Înapoi la prezentarea generală a votului",
-  "Voting For": "Se votează pentru",
-  "Your Voting Power": "Puterea votului tău",
-  "Confirm Vote": "Confirmă votul",
+
   "Add Choice": "Adaugă alegere",
   "Title": "Titlu",
   "Content": "Conținut",
@@ -630,27 +627,22 @@
   "Actions": "Acțiuni",
   "End Time": "Ora de încheiere",
   "Publish": "Publică",
-  "No votes found": "Nu s-a găsit niciun vot",
-  "Votes (%count%)": "Voturi (%count%)",
+
   "Snapshot": "Instantaneu",
   "Choices": "Alegeri",
   "Identifier": "Identificator",
   "Current Results": "Rezultate curente",
-  "Vote cast!": "Exprimarea votului!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Sigur vrei să votezi pentru alegerea de mai sus? Această acțiune nu poate fi anulată.",
+
   "Tip: write in Markdown!": "Sugestie: scrie în reducere!",
-  "Cast your vote": "Exprimă-ți votul",
+
   "Preview": "Previzualizare",
-  "%total% Votes": "%total% voturi",
-  "Cast Vote": "Exprimă votul",
+
   "See All": "Vezi toate",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Puterea ta de vot este determinată de suma de KLAY pe care o deții și durata rămasă a poziției de staking pe termen fix (dacă ai una) la blocarea detaliată mai jos. KLAY deținut în alte locuri nu contribuie la puterea ta de vot.",
+
   "Wallet": "Portofel",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Alte portofolii Syrup",
-  "Voting Power": "Puterea votului",
-  "You need at least %count% voting power to publish a proposal.": "Ai nevoie de o putere a votului de cel puțin %count% pentru a publica o propunere.",
-  "Check voting power": "Verifică puterea votului",
+
   "Amount to collect": "Sumă de colectat",
   "Your winnings": "Câștigurile tale",
   "Includes your original position and your winnings, minus the %fee% fee.": "Include poziția ta inițială și câștigurile tale, mai puțin comisionul %fee%.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Grafic pachete de acțiuni",
   "Folder with cake token": "Folder cu jeton de cake",
   "KLAY makes our world go round.": "KLAY face lumea noastră să se învârtească.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Jetonul KLAY este în centrul ecosistemului SweepStakes. Cumpără-l, vinde-l, minează-l, cheltuie-l, investește-l... la naiba, poți chiar să votezi cu el!",
+
   "Small 3d pancake": "SweepStakes 3D mic",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% în premii KLAY runda aceasta",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Cumpără bilete cu KLAY, câștigă KLAY dacă numerele tale se potrivesc",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Ferme vechi",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Reține că acesta este vechiul jeton BTT, care a fost schimbat la noi jetoane BTT în următoarea proporție:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Acest portofoliu a fost configurat greșit. Retrage-ți jetoanele din acesta. Se va folosi metoda de retragere de urgență. Jetoanele tale vor fi returnate în portofelul tău, dar recompensele nu vor fi colectate.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Pentru o vânzare privată, fiecare participant eligibil va putea să angajeze orice sumă de KLAY până la limita maximă de angajare, care este publicată împreună cu propunerea de vot IFO.",
+
   "Meet any one of the following requirements to be eligible.": "Îndeplinește oricare dintre următoarele cerințe pentru a fi eligibil.",
   "You are eligible to participate in this Private Sale!": "Ești eligibil să participi la această vânzare privată!",
   "Meet any one of the requirements to join:": "Îndeplinește oricare dintre cerințe pentru a participa:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Cum convertesc wBETH înapoi în ETH?",
   "You can convert wBETH to ETH through": "Poți converti wBETH în ETH prin",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes funcționează și ca suport pentru un contract de conversie pe pagina noastră de investiții pentru a converti wBETH înapoi în ETH fără nicio problemă.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "În formatul IFO actual. Există o vânzarea privată complet nouă. Pentru a participa, participanții vor trebui să îndeplinească anumite cerințe prezentate pe cardul IFO. Fiecare participant eligibil va putea să angajeze orice sumă de KLAY până la limita maximă de angajare, care este publicată împreună cu propunerea de votare IFO. Vânzarea privată nu are taxă de participare.",
+
   "You can choose one or both at the same time!": "Poți alege una sau pe ambele în același timp!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Îți recomandăm să verifici dacă ești eligibil(ă) să participi la vânzarea privată mai întâi. În vânzarea publică, dacă suma pe care o angajezi este prea mică, este posibil să nu primești o cantitate semnificativă de jetoane IFO.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Reține că ai nevoie de un profil SweepStakes activ pentru a participa.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Prețul pieței curent",
   "Limit Price": "Limită de preț",
   "Error Tracking Id": "ID de urmărire a erorilor",
-  "Your voting power at block": "Puterea ta de vot la blocare",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Tranzacția nu a putut fi definită deoarece termenul limită a expirat. Verifică dacă termenul tranzacției tale este prea apropiat.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Această tranzacție nu va reuși fie din cauza mișcării prețurilor, fie din cauza comisionului pe transfer. Încearcă să mărești toleranța la slippage.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Jetonul de intrare nu poate fi transferat. Este posibil să fie o problemă cu jetonul de intrare.",
@@ -1613,7 +1605,7 @@
   "Limit": "Limită",
   "at market price": "la prețul pieței",
   "Error occurred, please try again later": "S-a produs o eroare, încearcă din nou mai târziu",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Deține același număr de KLAY în portofelul tău ca și în SweepStakes la blocul instantaneu pentru a obține o putere de vot în timpul propunerilor viitoare.",
+
   "Preparing": "Se pregătește",
   "Perpetual": "Permanent",
   "Stake KLAY": "Investește KLAY",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "În Vânzarea publică, toți cei cu un profil SweepStakes activ pot depune. Cu toate acestea, suma maximă de KLAY pe care utilizatorii o pot investi este egală cu numărul de iCAKE pe care îl au.",
   "And there’s a fee for participation: see below.": "Și există un comision pentru participare: a se vedea mai jos.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Comisionul de participare scade în punctele maxime, pe baza procentului de depășire din porțiunea „Vânzare publică” a IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Notă: comisioanele pot varia între diferite IFO. Pentru a afla mai multe despre comisioanele de participare, consultați detaliile din propunerea IFO (vot) pentru elementele specifice ale IFO la care dorești să participi.",
+
   "You have successfully claimed your rewards.": "Ți-ai revendicat cu succes recompensele.",
   "Pottery (BETA)": "Pottery (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "Acest IFO cuprinde o achiziție de jetoane. Jetoanele achiziționate sunt eliberate după o perioadă.",
-  "Learn more in the vote proposal": "Aflați mai multe despre propunerea de vot",
+
   "What is the difference between an IFO and a cIFO?": "Care este diferența dintre un IFO și un cIFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Dacă nu depuneți suficient KLAY, este posibil să nu primiți o sumă semnificativă de jetoane IFO sau să nu primiți niciun jeton IFO.",
   "~%num% available to claim at sales end": "Recuperarea ~%num% disponibil la termenul de vânzare",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Plafon max. de depunere",
   "Fixed Term KLAY Staking": "Staking de KLAY pe termen fix",
   "Flexible KLAY Staking": "Staking de KLAY flexibil",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Poziția de vot este calculată folosind suma stakingului și durata de staking rămasă a următoarei poziții de staking de KLAY pe termen fix la blocare.",
+
   "KLAY locked:": "KLAY blocat:",
   "Go to Pools": "Accesează portofoliile",
   "KLAY Emission Projection": "Proiecție a emisiunilor KLAY",
   "Boosted by vCAKE": "Amplificat de vCAKE",
   "Boosting Expired": "Amplificare expirată",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Amplificarea ta vCAKE a expirat la blocarea instantaneului. Reînnoiește poziția de staking pe termen fix pentru a activa amplificatorul pentru propuneri de vot viitoare.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% din jetonul achiziționat va fi cumpărat și eliberat în mod liniar într-o anumită perioadă. %percentageTgeRelease%% din jetonul achiziționat va fi eliberat imediat și disponibil pentru revendicare când IFO se încheie.",
   "The vested tokens will be released linearly over a period of %days% days.": "Jetoanele achiziționate vor fi eliberate în mod liniar pe o perioadă de %days% (de) zile.",
   "Yield Booster": "Amplificator de randament",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Îndeplinește următoarea cerință pentru a te înscrie:",
   "Order cancellation": "Anulare comandă",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Anulare comandă: %inputAmount% %inputTokenSymbol% pentru %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Reînnoiește-ți poziția de investiții pentru a continua să te bucuri de beneficiile amplificării randamentului fermei, participând la IFO, votând amplificatoare de putere și multe altele!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Perioada de blocare s-a încheiat. Pentru a evita consumarea mai multor recompense, reînnoiește poziția ta de investiții pentru a te bucura în continuare de beneficiile din investițiile blocate.",
   "Default": "Implicit",
   "Shows username of wallet instead of bunnies": "Afișează numele utilizatorului portofelului în loc de iepurași",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (inclusiv recompensele) sunt blocate în portofoliul KLAY până la %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE îți permite să participi la vânzările publice de IFO și să angajezi o sumă de până la %iCake% de KLAY.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE îți permite să amplifici randamentul în Fermele SweepStakes cu până la 2x.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE îți amplifică puterea de vot la %totalScore% în guvernarea votării SweepStakes.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Blochează KLAY pentru a te bucura de beneficiile amplificării randamentului fermei, participând la IFO, votând amplificatoare de putere și multe altele!",
+
   "KLAY staking expired": "Investițiile KLAY au expirat",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Permisiune jeton insuficientă. Fă clic pe „Activare” pentru a aproba.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Pentru o vânzare publică, fiecare participant eligibil va putea să angajeze orice sumă de KLAY până la limita maximă de angajare, care este publicată împreună cu propunerea de vot IFO.",
+
   "Unable to supply": "Nu se poate alimenta",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Prin adăugarea lichidității, vei câștiga 50% din comisioane la toate tranzacțiile pe această pereche, proporțional cu cota pe care o ai în perechea de tranzacționare. Comisioanele sunt adăugate la pereche, acumulate în timp real și pot fi revendicate prin retragerea lichidității. Pentru informații suplimentare despre comisioanele Stableswap, fă clic",
   "For each stableswap trade, refer to the fee table": "Pentru fiecare tranzacție stableswap, consultă tabelul de comisioane",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "Cum se calculează APR pentru SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "APR pentru SnBNB variază între 0,5%-3%. APR câștigat de validatori pe BNB Chain depinde de doi factori:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Rata comisionului: validatorul synclub percepe un comision de 10%.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Putere de vot: suma investită pentru un validator determină APR pe care îl primește.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Validatorul Synclub folosește MEV (Valoare extractibilă miner) pentru a schimba APR. SnBNB se apreciază față de BNB în conformitate cu APR de staking al BNB.",
   "How can I use SnBNB?": "Cum pot utiliza SnBNB?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Poți utiliza SnBNB pentru a explora alte cazuri de utilizare, cum ar fi schimb, acordare/primire de împrumuturi și yield farming pe BNBChain. În paralel",

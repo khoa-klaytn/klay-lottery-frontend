@@ -2,7 +2,7 @@
   "Farm": "Viljele",
   "Exchange": "Vaihtokauppa",
   "Docs": "Asiakirjat",
-  "Voting": "Äänestäminen",
+
   "Lottery": "Arvonta",
   "Connect Wallet": "Yhdistä lompakko",
   "Blog": "Blogi",
@@ -596,7 +596,7 @@
   "Starts %date%": "Alkaa %date%",
   "Ends %date%": "Päättyy %date%",
   "Closed": "Suljettu",
-  "Vote Now": "Äänestä nyt",
+
   "Soon": "Pian",
   "No proposals found": "Ehdotuksia ei löydy",
   "Creator": "Luoja",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Vaikuta SweepStakes-ekosysteemin tulevaisuuteen",
   "Got a suggestion?": "Onko sinulla ehdotuksia?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Yhteisön ehdotukset ovat erinomainen tapa nähdä mitä mieltä yhteisö on ideoistasi.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Niitä ei välttämättä toteuteta, vaikka yhteisö äänestää niiden puolesta, mutta ehdotuksista, joilla on suuri yhteisön tuki, saatetaan tehdä ydinehdotuksia.",
+
   "%field% is required": "%field% vaaditaan",
   "Please create a minimum of %num% choices": "Luo vähintään %num% vaihtoehtoa",
   "Choices must not be empty": "Vaihtoehdot eivät voi olla tyhjiä",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Päättymispäivän täytyy olla alkamispäivän jälkeen",
   "Invalid snapshot": "Virheellinen tilannekuva",
   "Proposal created!": "Ehdotus luotu!",
-  "Voted": "Äänestetty",
+
   "Time": "Aika",
   "Input choice text": "Syötä vaihtoehdon teksti",
   "Start Time": "Alkamisaika",
-  "Back to Vote Overview": "Takaisin äänestyksen yleiskatsaukseen",
-  "Voting For": "Ääni kohteelle",
-  "Your Voting Power": "Äänestysvaltasi",
-  "Confirm Vote": "Vahvista ääni",
+
   "Add Choice": "Lisää vaihtoehto",
   "Title": "Otsikko",
   "Content": "Sisältö",
@@ -630,27 +627,22 @@
   "Actions": "Toiminnot",
   "End Time": "Päättymisaika",
   "Publish": "Julkaise",
-  "No votes found": "Ääniä ei löydy",
-  "Votes (%count%)": "Äänet (%count%)",
+
   "Snapshot": "Tilannekuva",
   "Choices": "Vaihtoehdot",
   "Identifier": "Tunniste",
   "Current Results": "Nykyiset tulokset",
-  "Vote cast!": "Ääni annettu!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Oletko varma, että haluat äänestää edellä olevaa vaihtoehtoa? Tätä toimintoa ei voi kumota.",
+
   "Tip: write in Markdown!": "Vinkki: kirjoita markdown-muodossa!",
-  "Cast your vote": "Anna äänesi",
+
   "Preview": "Esikatselu",
-  "%total% Votes": "%total% ääntä",
-  "Cast Vote": "Anna ääni",
+
   "See All": "Katso kaikki",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Äänestysvaltasi määräytyy hallussasi olevan CAKEn määrän ja kiinteän panostusposition (jos sinulla on sellainen) jäljellä olevan ajan keston perusteella jäljempänä kuvatussa lohkossa. Muissa paikoissa pidetty KLAY ei vaikuta äänestysvaltaasi.",
+
   "Wallet": "Lompakko",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Muut Syrup-poolit",
-  "Voting Power": "Äänestysvalta",
-  "You need at least %count% voting power to publish a proposal.": "Tarvitset vähintään %count% äänestysvaltaa ehdotuksen julkistamiseen.",
-  "Check voting power": "Tarkista äänestysvalta",
+
   "Amount to collect": "Kerättävä määrä",
   "Your winnings": "Voittosi",
   "Includes your original position and your winnings, minus the %fee% fee.": "Sisältää alkuperäisen positiosi ja voittosi vähennettynä %fee% maksulla.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Osakekaavio",
   "Folder with cake token": "Kansio, jossa on KLAY-polettia",
   "KLAY makes our world go round.": "KLAY saa maailman pyörimään.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY-poletti on SweepStakes-ekosysteemin keskiössä. Osta sitä, viljele sitä, käytä sitä, panosta sitä... voit jopa äänestää sillä!",
+
   "Small 3d pancake": "Pieni 3D-pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% KLAY-palkintoina tällä kierroksella",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Osta lippuja CAKElla, voita CAKEa, jos numerosi osuvat",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Vanhat viljelmät",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Huomioithan, että tämä on vanha BTT-poletti, joka on vaihdettu uusiin BTT-poletteihin seuraavassa suhteessa:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Tämä pooli on määritetty väärin. Peru polettiesi panostus siitä, emergencyWithdraw-menetelmää käytetään. Polettisi palautetaan lompakkoosi, palkkioitasi ei kuitenkaan korjata.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Yksityisessä kaupassa kukin kelpoinen osallistuja voi luovuttaa minkä tahansa KLAY-summan tahansa enimmäisluovutusrajaan saakka, mikä julkaistaan IFO-äänestysehdotuksen yhteydessä.",
+
   "Meet any one of the following requirements to be eligible.": "Täytä jokin seuraavista vaatimuksista, jotta voit osallistua.",
   "You are eligible to participate in this Private Sale!": "Voit osallistua tähän yksityiseen kauppaan!",
   "Meet any one of the requirements to join:": "Täytä jokin seuraavista vaatimuksista, jotta voit liittyä:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Miten muunnan wBETH:n takaisin ETH:ksi?",
   "You can convert wBETH to ETH through": "wBETH:n muuntaminen ETH:ksi: ",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes pyrkii myös tukemaan muuntosopimusta likvidipanostussivullamme wBETH:n muuntamiseksi takaisin ETH:ksi saumattomasti.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "Nykyisessä IFO-formaatissa on upouusi yksityinen kauppa. Osallistuakseen osallistujien täytyy täyttää tiettyjä IFO-kortissa esitettyjä vaatimuksia. Kukin kelpoisa osallistuja voi luovuttaa minkä tahansa KLAY-summan enimmäisluovutusrajaan asti, joka julkaistaan IFO-äänestysehdotuksen yhteydessä. Yksityisessä kaupassa ei ole osallistumismaksua.",
+
   "You can choose one or both at the same time!": "Voit valita yhden tai molemmat samaan aikaan!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Suosittelemme tarkistamaa ensin, oletko kelpoinen osallistumaan tähän yksityiseen kauppaan. Julkisessa kaupassa, jos luovuttamasi summa on liian pieni, et välttämättä saa merkittävää määrää IFO-poletteja.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Muista, että tarvitset aktiivisen SweepStakes-profiilin, jotta voit osallistua.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Nykyinen markkinahinta",
   "Limit Price": "Rajahinta",
   "Error Tracking Id": "Virheseurantatunnus",
-  "Your voting power at block": "Äänestysvaltasi lohkossa",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Transaktiota ei voitu lähettää, koska määräaika on päättynyt. Varmista, ettei transaktiosi määräaika ole liian alhainen.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Tämä transaktio ei onnistu joko hintamuutoksen tai siirtomaksun takia. Kokeile kasvattaa luisumistoleranssiasi.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Syötepolettia ei voi siirtää. Syötepoletissa voi olla ongelma.",
@@ -1613,7 +1605,7 @@
   "Limit": "Raja",
   "at market price": "markkinahintaan",
   "Error occurred, please try again later": "Tapahtui virhe, yritä myöhemmin uudelleen",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Pidä jonkin verran CAKEa lompakossasi tai SweepStakesissa tilannekuvalohkossa saadaksesi äänestysvallan tulevissa ehdotuksissa.",
+
   "Preparing": "Valmistellaan",
   "Perpetual": "Jatkuva",
   "Stake KLAY": "Panosta CAKEa",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Julkisessa myynnissä kaikki, joilla on aktiivinen SweepStakes-profiili, voivat tehdä luovutuksen. Enimmäissumma CAKEa, jonka käyttäjät voivat luovuttaa, on kuitenkin heidän iCAKEnsa määrä.",
   "And there’s a fee for participation: see below.": "Osallistumisesta veloitetaan nyt myös maksu: katso alla.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Osallistumismaksu pienenee asteittain perustuen IFO:n julkisen myynnin osan ylivuotoprosenttiin.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Huomautus: maksut voivat vaihdella eri IFO:iden välillä. Lisätietoja osallistumismaksuista saat lukemalla IFO-ehdotuksen (äänestyksen) tiedot sen IFO:n osalta, johon haluat osallistua.",
+
   "You have successfully claimed your rewards.": "Palkintojesi lunastaminen onnistui.",
   "Pottery (BETA)": "Pottery (BEETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "Tähän IFO:hon kuuluu polettien vestaus. Ostetut poletit julkaistaan ajan mittaan.",
-  "Learn more in the vote proposal": "Lue lisätietoja äänestysehdotuksessa",
+
   "What is the difference between an IFO and a cIFO?": "Mitä eroa on IFO:lla ja cIFO:lla?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Jos et luovuta tarpeeksi CAKEa, et saa välttämättä merkittävää summaa IFO-poletteja tai et välttämättä saa IFO-poletteja lainkaan.",
   "~%num% available to claim at sales end": "~%num% lunastettavana myynnin päättyessä",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Enimmäistalletusraja",
   "Fixed Term KLAY Staking": "Kiinteä KLAY-panostus",
   "Flexible KLAY Staking": "Joustava KLAY-panostus",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Äänestysvalta lasketaan käyttämällä panostussummaa ja kiinteän KLAY-panostusposition jäljellä olevaa kestoa lohkossa.",
+
   "KLAY locked:": "KLAY lukittu:",
   "Go to Pools": "Siirry Pooleihin",
   "KLAY Emission Projection": "KLAY-päästöennuste",
   "Boosted by vCAKE": "vCAKEn tehostama",
   "Boosting Expired": "Tehostus päättynyt",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "vCAKE-tehostuksesi päättyi tilannekuvalohkossa. Uudista kiinteä panostuspositiosi tehostuksen aktivoimiseksi tulevissa äänestysehdotuksissa.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested% % ostetusta poletista vestataan ja julkaistaan lineaarisesti ajan kuluessa. %percentageTgeRelease% % ostetusta poletista julkaistaan välittömästi ja on lunastettavissa IFO:n päättyessä.",
   "The vested tokens will be released linearly over a period of %days% days.": "Vestatut poletit julkaistaan lineaarisesti %days% päivän aikana.",
   "Yield Booster": "Tuoton parannus",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Sinun on täytettävä seuraavat vaatimukset liittyäksesi:",
   "Order cancellation": "Tilauksen peruutus",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Tilauksen peruutus: %inputAmount% %inputTokenSymbol% → %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Uusi panostuspositiosi, jotta voit jatkossakin saada viljelmän tuoton parannuksen etuja, osallistua IFO:ihin, äänestää tehostuksia ja paljon muuta!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Lukitusjakso on päättynyt. Voit välttää lisäpalkintojen polttamisen uusimalla panostuspositiosi, jotta voit jatkossakin hyötyä lukitusta panostamisesta.",
   "Default": "Oletus",
   "Shows username of wallet instead of bunnies": "Näyttää lompakon käyttäjänimen pupujen sijaan",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (mukaan lukien palkkiot) on lukittu KLAY-pooliin %lockedEndTime% asti",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKEn avulla voit osallistua IFO:n julkiseen kauppaan ja luovuttaa enintään määrän %iCake% CAKEa.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKEn avulla voit parantaa tuottoasi SweepStakes-viljelmissä enintään kaksinkertaisesti.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE lisää äänestysvallaksesi %totalScore% SweepStakesin äänestyshallinnossa.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Lukitse KLAY, jotta voit saada viljelmän tuoton parannuksen etuja, osallistua IFO:ihin, äänestää tehostuksia ja paljon muuta!",
+
   "KLAY staking expired": "CAKEn panostaminen on erääntynyt",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Polettikiintiö ei riitä. Hyväksy napsauttamalla \"Ota käyttöön\".",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Julkisessa kaupassa kukin kelpoinen osallistuja voi luovuttaa minkä tahansa KLAY-summan tahansa enimmäisluovutusrajaan saakka, mikä julkaistaan IFO-äänestysehdotuksen yhteydessä.",
+
   "Unable to supply": "Tarjoaminen ei onnistu",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Lisäämällä likviditeettiä ansaitset 50 % kaikkien tämän parin kauppojen maksuista suhteessa osuuteesi kaupankäyntiparista. Maksut lisätään pariin, kertyvät reaaliajassa ja voidaan lunastaa nostamalla likviditeettisi. Lisätietoja Stableswapin maksuista saat napsauttamalla",
   "For each stableswap trade, refer to the fee table": "Katso maksutaulukko kussakin stableswap-kaupassa",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "Miten APR lasketaan SnBNB:n osalta?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNB:n APR vaihtelee 0,5–3 prosentin välillä. APR, jonka validaattorit ansaitsevat BNB Chainissa, riippuu kahdestä tekijästä:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Provisioaste: synclub-validaattori veloittaa 10 %:n provisiomaksun.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Äänestysvalta: validaattorille panostettu summa määrittää sen saaman APR:n.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub-validaattori käyttää MEV:tä (Miner Extractable Value) APR:nsä parantamiseen. SnBNB:n arvo nousee suhteessa BNB:hen linjassa BNB:n panostus-APR:n kanssa.",
   "How can I use SnBNB?": "Miten voin käyttää SnBNB:tä?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Voit käyttää SnBNB:tä tutustuaksesi muihin käyttötarkoituksiin, kuten vaihtoon, lainaamiseen ja tuottojen viljelyyn BnbChainissa. Yhdessä",

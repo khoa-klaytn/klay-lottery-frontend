@@ -2,7 +2,7 @@
   "Farm": "Ферма",
   "Exchange": "Обмін",
   "Docs": "Документація",
-  "Voting": "Голосування",
+
   "Lottery": "Лотерея",
   "Connect Wallet": "Підключити гаманець",
   "Blog": "Блоґ",
@@ -596,7 +596,7 @@
   "Starts %date%": "Початок: %date%",
   "Ends %date%": "Завершення: %date%",
   "Closed": "Закрито",
-  "Vote Now": "Голосувати зараз",
+
   "Soon": "Незабаром",
   "No proposals found": "Не знайдено жодних пропозицій",
   "Creator": "Автор",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Зробіть свій внесок у майбутнє екосистеми SweepStakes",
   "Got a suggestion?": "Маєте пропозицію?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Пропозиції учасників спільноти – це чудовий спосіб дізнатися думку спільноти щодо ваших ідей.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Ми не гарантуємо їх упровадження, навіть якщо голосування пройде успішно, але пропозиції зі значною підтримкою спільноти можуть потрапити до ключових.",
+
   "%field% is required": "Поле %field% обов’язкове",
   "Please create a minimum of %num% choices": "Створіть принаймні стільки варіантів вибору: %num%",
   "Choices must not be empty": "Варіанти вибору не можуть бути пусті",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Дата завершення має бути пізніша за дату початку",
   "Invalid snapshot": "Недійсний знімок",
   "Proposal created!": "Пропозицію створено!",
-  "Voted": "Голос віддано",
+
   "Time": "Час",
   "Input choice text": "Введіть текст варіанта вибору",
   "Start Time": "Час початку",
-  "Back to Vote Overview": "Назад до огляду голосування",
-  "Voting For": "Голосування:",
-  "Your Voting Power": "Ваша сила голосу",
-  "Confirm Vote": "Підтвердити голос",
+
   "Add Choice": "Додати варіант вибору",
   "Title": "Назва",
   "Content": "Вміст",
@@ -630,27 +627,22 @@
   "Actions": "Дії",
   "End Time": "Час завершення",
   "Publish": "Опублікувати",
-  "No votes found": "Не вдалося знайти жодних голосів",
-  "Votes (%count%)": "Голоси (%count%)",
+
   "Snapshot": "Знімок",
   "Choices": "Варіанти вибору",
   "Identifier": "Ідентифікатор",
   "Current Results": "Поточні результати",
-  "Vote cast!": "Голос надіслано!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Справді проголосувати за наведений вище варіант вибору? Цю дію не можна буде скасувати.",
+
   "Tip: write in Markdown!": "Порада: використовуйте Markdown!",
-  "Cast your vote": "Проголосувати",
+
   "Preview": "Попередній перегляд",
-  "%total% Votes": "Голосів: %total%",
-  "Cast Vote": "Проголосувати",
+
   "See All": "Переглянути все",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Ваш вплив на голосування визначається кількістю KLAY, які ви утримуєте, і залишковою тривалістю позиції стейкінгу з фіксованим терміном (якщо ви маєте таку позицію) у блоці, зазначеному нижче. KLAY, утримувані в інших місцях, не враховуються.",
+
   "Wallet": "Гаманець",
   "KLAY BNB LP": "ПЛ KLAY BNB",
   "Other Syrup Pools": "Інші пули Syrup",
-  "Voting Power": "Сила голосу",
-  "You need at least %count% voting power to publish a proposal.": "Щоб опублікувати пропозицію, вам потрібна принаймні така сила голосу: %count%.",
-  "Check voting power": "Перевірити силу голосу",
+
   "Amount to collect": "Сума, яку можна забрати",
   "Your winnings": "Ваші виграші",
   "Includes your original position and your winnings, minus the %fee% fee.": "Включає вашу початкову позицію та ваші виграші за виключенням комісії в розмірі %fee%.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Біржова діаграма",
   "Folder with cake token": "Папка з токеном KLAY",
   "KLAY makes our world go round.": "Навколо KLAY обертається світ",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Токен KLAY – це серце екосистеми SweepStakes. Купляйте його, вигравайте його, добувайте його, вносьте його… Ним можна навіть голосувати!",
+
   "Small 3d pancake": "Невеличка тривимірна оладка",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% у призах KLAY за цей раунд",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Купляйте білети за KLAY, вигравайте, якщо номери KLAY збігаються",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Старі ферми",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Зверніть увагу, що це старий токен BTT, який було обміняно на нові токени BTT в такому співвідношенні:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Пул налаштовано неправильно. Виведіть із нього токени. Буде використано метод emergencyWithdraw. Токени повернуться у ваш гаманець, а винагороди зібрано не буде.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "У випадку приватного продажу кожен учасник, що відповідає вимогам, зможе виділити будь-яку кількість KLAY у межах максимальної суми, опублікованої разом із пропозицією голосування IFO.",
+
   "Meet any one of the following requirements to be eligible.": "Право на участь мають ті, хто відповідає будь-якій із наведених вимог.",
   "You are eligible to participate in this Private Sale!": "Ви маєте право на участь у цьому приватному продажу!",
   "Meet any one of the requirements to join:": "Право на участь мають ті, хто відповідає будь-якій із наведених вимог:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Як конвертувати wBETH назад в ETH?",
   "You can convert wBETH to ETH through": "Конвертувати wBETH в ETH можна на",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes також працює над підтримкою контракту на конверсію на сторінці стейкінгу ліквідності, що забезпечить зручну конвертацію wBETH назад в ETH.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "У поточному форматі IFO з’явився новий приватний продаж. Щоб узяти в ньому участь, потрібно відповідати певним вимогам, наведеним на картці IFO. Кожен учасник, що відповідає вимогам, зможе виділити будь-яку кількість KLAY у межах максимальної суми, опублікованої разом із пропозицією голосування IFO. За участь у приватному продажу комісія не стягується.",
+
   "You can choose one or both at the same time!": "Ви можете вибрати як один варіант, так і обидва одночасно!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Радимо спочатку перевірити, чи ви можете брати участь у приватному продажу. Якщо виділена сума замала, ви можете не отримати значущу кількість токенів IFO.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Не забувайте: для участі вам потрібен активний профіль SweepStakes.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Поточна ринкова ціна",
   "Limit Price": "Лімітна ціна",
   "Error Tracking Id": "Ідентифікатор відстеження помилок",
-  "Your voting power at block": "Вплив на голосування в блоці",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Не вдалося надіслати транзакцію, тому що минув її термін. Перевірте, чи він не занадто короткий.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Цю транзакцію не вдасться виконати або через рух ціни, або через комісію за переказ. Спробуйте збільшити допуск прослизання.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Не вдається передати вхідний токен. Можливо, з ним виникла проблема.",
@@ -1613,7 +1605,7 @@
   "Limit": "Лімітний",
   "at market price": "за ринковою ціною",
   "Error occurred, please try again later": "Сталася помилка. Спробуйте ще раз пізніше.",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Щоб отримати право голосу в майбутніх пропозиціях, зберігайте KLAY у гаманці або в SweepStakes у блоці знімків.",
+
   "Preparing": "Підготовка",
   "Perpetual": "Безстрокові",
   "Stake KLAY": "Внести KLAY",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Виділяти кошти KLAY під публічний продаж може будь-хто з активним профілем SweepStakes. Однак максимальна кількість KLAY, яку користувач може виділити, дорівнює кількості iCAKE у них.",
   "And there’s a fee for participation: see below.": "За участь є комісія: див. нижче.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Комісія за участь зменшується поетапно залежно від відсотка надлишків від публічної частини IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Примітка. Комісія залежить від конкретного IFO. Дізнатися більше про комісію за участь можна в пропозиції конкретного IFO (голосування), у якому ви хочете взяти участь.",
+
   "You have successfully claimed your rewards.": "Ви отримали свої винагороди.",
   "Pottery (BETA)": "Потерея (БЕТА)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "У цьому IFO використовується довірення токенів. Придбані токени розблоковуються з плином часу.",
-  "Learn more in the vote proposal": "Дізнайтеся більше в пропозиції голосування",
+
   "What is the difference between an IFO and a cIFO?": "У чому відмінність між cIFO та IFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Якщо не виділити достатньо KLAY, ви можете не отримати значущої кількості токенів IFO або токенів IFO взагалі.",
   "~%num% available to claim at sales end": "~%num% доступно для отримання після завершення продажу",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Максимум внесення коштів",
   "Fixed Term KLAY Staking": "Стейкінг KLAY з фіксованим строком",
   "Flexible KLAY Staking": "Гнучкий стейкінг KLAY",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Вплив на голосування розраховується за сумою стейкінгу й залишковою тривалістю позиції стейкінгу KLAY з фіксованим терміном у блоці.",
+
   "KLAY locked:": "Заблоковано KLAY:",
   "Go to Pools": "Перейти до пулів",
   "KLAY Emission Projection": "Прогноз емісії KLAY",
   "Boosted by vCAKE": "Застосовано буст через vCAKE",
   "Boosting Expired": "Термін дії бусту завершився",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Термін дії бусту vCAKE у блоці знімка завершився. Щоб активувати буст для майбутніх пропозицій щодо голосування, поновіть позицію стейкінгу з фіксованим терміном.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% придбаних токенів перейдуть у довірене користування. Їх розблокування відбуватиметься в лінійній пропорції протягом певного проміжку часу. %percentageTgeRelease%% придбаних токенів буде розблоковано одразу після завершення IFO, і вони стануть доступні для отримання.",
   "The vested tokens will be released linearly over a period of %days% days.": "Довірені токени розблоковуватимуться в лінійній пропорції протягом %days% д.",
   "Yield Booster": "Бустер виручки",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Щоб приєднатися, потрібно виконати наведені далі умови:",
   "Order cancellation": "Скасування ордера",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Скасування ордера: %inputAmount% %inputTokenSymbol% – %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Поновіть свою позицію стейкінгу, щоб користуватися перевагами збільшення виручки ферм, участі в IFO, підвищенні ваги голосу тощо!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Період блокування завершився. Щоб не згоріли інші нагороди, поновіть свою позицію стейкінгу та продовжуйте користуватися перевагами стейкінгу з блокуванням.",
   "Default": "За замовчуванням",
   "Shows username of wallet instead of bunnies": "Показує ім’я користувача гаманця замість кроликів",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (включно з винагородами) заблоковано в пулі KLAY до %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE дає змогу брати участь у публічних продажах IFO та виділяти до %iCake% KLAY.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE дає змогу збільшувати виручку на фермах SweepStakes максимум у два рази.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE збільшує вагу вашого голосу до %totalScore% в управлінських голосуваннях SweepStakes.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Заблокуйте KLAY, щоб користуватися перевагами збільшення виручки ферм, участі в IFO, підвищенні ваги голосу тощо!",
+
   "KLAY staking expired": "Термін дії стейкінгу KLAY завершився",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Недостатній допуск токена. Клацніть «Увімкнути», щоб схвалити.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "У випадку публічного продажу кожен учасник, що відповідає вимогам, зможе виділити будь-яку кількість KLAY у межах максимальної суми, опублікованої разом із пропозицією голосування IFO.",
+
   "Unable to supply": "Не вдалося внести",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Додавши ліквідність, ви почнете заробляти 50% комісій від усіх торгових операцій пропорційно вашій частці в цій торговій парі. Комісії додаються в пару й накопичуються в реальному часі, і їх можна отримати, вивівши вашу ліквідність. Щоб переглянути докладні відомості про Stableswap, клацніть",
   "For each stableswap trade, refer to the fee table": "Комісію за кожну торгову операцію stableswap наведено в цій таблиці",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "Як розраховується РВС для SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "РВС для SnBNB коливається в межах 0,5–3%. РВС, яку заробляють валідатори в BNB Chain, залежить від двох факторів:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Ставка комісії: валідатор Synclub стягує 10% комісії.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Сила голосу: сума, внесена валідатором, визначає РВС, яку він отримує.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Валідатор Synclub використовує MEV (максимальну вартість, яку можна видобути), щоб підвищити РВС. SnBNB оцінюється щодо BNB згідно з РВС стейкінгу BNB.",
   "How can I use SnBNB?": "Як використовувати SnBNB?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Ви зможете використовувати SnBNB для проведення в BnbChain обміну, кредитування та запозичення, отримання виторгу на фармінгу тощо. Разом із",

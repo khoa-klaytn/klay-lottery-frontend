@@ -2,7 +2,7 @@
   "Farm": "Tarım",
   "Exchange": "Al-Sat",
   "Docs": "Dökümanlar",
-  "Voting": "Oylama",
+
   "Lottery": "Çekiliş",
   "Connect Wallet": "Cüzdanı Bağla",
   "Blog": "Blog",
@@ -596,7 +596,7 @@
   "Starts %date%": "%date% tarihinde başlıyor",
   "Ends %date%": "%date% tarihinde sona eriyor",
   "Closed": "Kapandı",
-  "Vote Now": "Şimdi Oy Ver",
+
   "Soon": "Yakında",
   "No proposals found": "Teklif bulunamadı",
   "Creator": "Yaratıcı",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "SweepStakes Ekosisteminin geleceği konusunda sözünüzü söyleyin",
   "Got a suggestion?": "Herhangi bir öneriniz var mı?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Topluluk teklifleri, topluluğun fikirleriniz konusunda ne düşündüğünü öğrenmenin harika bir yoludur.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Topluluğun lehte oy vermesi illa uygulanacakları anlamına gelmez ancak çok fazla topluluk desteğine sahip öneriler Core tekliflere aktarılabilir.",
+
   "%field% is required": "%field% gerekli",
   "Please create a minimum of %num% choices": "Lütfen minimum %num% seçim oluşturun",
   "Choices must not be empty": "Seçimler boş olamaz",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Bitiş tarihi başlangıç tarihinden sonra olmalıdır",
   "Invalid snapshot": "Geçersiz anlık görüntü",
   "Proposal created!": "Teklif oluşturuldu!",
-  "Voted": "Oylandı",
+
   "Time": "Zaman",
   "Input choice text": "Giriş seçimi metni",
   "Start Time": "Başlangıç Zamanı",
-  "Back to Vote Overview": "Oylama Görünümüne Geri Dönün",
-  "Voting For": "Oylanıyor",
-  "Your Voting Power": "Oy Gücünüz",
-  "Confirm Vote": "Oyu Doğrulayın",
+
   "Add Choice": "Tercih Ekleyin",
   "Title": "Başlık",
   "Content": "İçerik",
@@ -630,27 +627,22 @@
   "Actions": "Eylemler",
   "End Time": "Sona Erme Zamanı",
   "Publish": "Yayınla",
-  "No votes found": "Oy bulunamadı",
-  "Votes (%count%)": "(%count%) Oy",
+
   "Snapshot": "Anlık Görüntü",
   "Choices": "Tercihler",
   "Identifier": "Belirleyici",
   "Current Results": "Mevcut Sonuçlar",
-  "Vote cast!": "Oy verin!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Yukarıdaki seçeneğe oy vermek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+
   "Tip: write in Markdown!": "İpucu: Markdown ile yazın!",
-  "Cast your vote": "Oyunuzu verin",
+
   "Preview": "Önizleme",
-  "%total% Votes": "Toplam %total% Oy",
-  "Cast Vote": "Oy Verin",
+
   "See All": "Tümünü Görüntüle",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Verdiğiniz oyun gücü, elinizde bulunan KLAY miktarına ve aşağıda ayrıntıları verilen blokta (varsa) sabit vadeli staking pozisyonunda kalan süreye göre belirlenir. Başka platformlar üzerinde tuttuğunuz KLAY, oy gücünüze katkı sağlamaz.",
+
   "Wallet": "Cüzdan",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Diğer Syrup Havuzları",
-  "Voting Power": "Oy Gücü",
-  "You need at least %count% voting power to publish a proposal.": "Bir teklif yayınlamak için en az %count% oy hakkınız olmalıdır.",
-  "Check voting power": "Oy Gücünüzü Kontrol Edin",
+
   "Amount to collect": "Toplanacak miktar",
   "Your winnings": "Kazançlarınız",
   "Includes your original position and your winnings, minus the %fee% fee.": "İlk pozisyonunuz ile kazançlarınızın toplamından %fee% ücretin düşülmesi ile hesaplanır.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Hisse senedi grafiği",
   "Folder with cake token": "KLAY token'lı klasör",
   "KLAY makes our world go round.": "KLAY, dünyamızı döndürüyor.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY token'ı, SweepStakes ekosisteminin kalbinde yer alır. Satın al, kazan, tarım yap, harca, yatır... Yok artık, onunla oy bile verebiliyorsun!",
+
   "Small 3d pancake": "Küçük 3b pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "Bu tur %cakePrizeInUsd% KLAY ödülü var",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Biletini KLAY ile satın al, sayıların eşleşirse KLAY kazan",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Eski Farm'lar",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Lütfen bunun aşağıdaki oranda yeni BTT token'larıyla değiştirilen eski BTT token'ı olduğunu unutmayın:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Bu havuz yanlış yapılandırılmış. Lütfen token'larını bu havuzdan geri al. Acil para çekme yöntemi kullanılacaktır. Token'larınız, cüzdanınıza iade edilecektir ancak ödüller toplanmayacaktır.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Özel satışta her uygun katılımcı, IFO oylama teklifi ile birlikte yayınlanan maksimum taahhüt limitine kadar herhangi bir miktarda KLAY taahhüt edebilecektir.",
+
   "Meet any one of the following requirements to be eligible.": "Katılmaya uygun olmak için aşağıdaki gereksinimlerden birini karşılayın.",
   "You are eligible to participate in this Private Sale!": "Bu Özel Satışa katılabilirsiniz!",
   "Meet any one of the requirements to join:": "Katılmak için gereksinimlerden birini karşılayın:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "wBETH'yi tekrar ETH'ye nasıl dönüştürürüm?",
   "You can convert wBETH to ETH through": "wBETH'yi ETH'ye dönüştürmek için",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes, ayrıca wBETH'nin sorunsuz bir şekilde ETH'ye dönüştürülmesi için likit staking sayfamızda yer alacak bir dönüştürme sözleşmesini desteklemek üzere çalışıyor.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "Mevcut IFO formatında. Yepyeni bir Özel Satış var. Katılmak için katılımcılar, IFO kartında belirtilen belirli gereksinimleri karşılamalıdır. Her uygun katılımcı, IFO oylama teklifi ile birlikte yayınlanan maksimum taahhüt limitine kadar herhangi bir miktarda KLAY taahhüt edebilecektir. Özel Satışta katılım ücreti yoktur.",
+
   "You can choose one or both at the same time!": "Aynı anda birini veya ikisini birden seçebilirsiniz!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Öncelikle Özel Satışa katılmaya uygun olup olmadığınızı kontrol etmenizi öneririz. Halka Açık Satışta taahhüt ettiğiniz miktar çok küçükse anlamlı miktarda IFO token'ı alamayabilirsiniz.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Katılmak için aktif bir SweepStakes Profiline ihtiyacınız olduğunu unutmayın.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Mevcut Piyasa Fiyatı",
   "Limit Price": "Limit Fiyatı",
   "Error Tracking Id": "Kimlik İzlenirken Hata",
-  "Your voting power at block": "Bloktaki oy gücünüz",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Son işlem tarihi geçtiği için işlem gönderilemedi. Lütfen işlem sürenizin çok düşük olup olmadığını kontrol edin.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Bu işlem, fiyat hareketi veya transfer ücreti nedeniyle başarılı olmayacaktır. Sapma toleransınızı artırmayı deneyin.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Giriş token'ı aktarılamaz. Giriş token'ıyla ilgili bir sorun olabilir.",
@@ -1613,7 +1605,7 @@
   "Limit": "Sınır",
   "at market price": "piyasa fiyatında",
   "Error occurred, please try again later": "Hata meydana geldi, lütfen daha sonra tekrar deneyin",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Gelecekteki tekliflerde oylama gücü elde etmek için cüzdanınızda veya anlık görüntü blokundaki SweepStakes'ta bir miktar KLAY tutun.",
+
   "Preparing": "Hazırlanıyor",
   "Perpetual": "Daimi",
   "Stake KLAY": "KLAY stake edin",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Herkese Açık Satışta aktif bir SweepStakes profili olan herkes taahhüt edebilir. Ancak kullanıcıların taahhüt edebileceği maksimum KLAY miktarı, sahip oldukları iCAKE sayısına eşittir.",
   "And there’s a fee for participation: see below.": "Ayrıca bir katılım ücreti vardır: Aşağıya bakın.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Katılım ücreti, IFO'nun \"Herkese Açık Satış\" kısmından gelen yüksek akış miktarının yüzdesine dayalı olarak aşamalı şekilde azalır.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Not: Ücretler, farklı IFO'lar arasında değişiklik gösterebilir. Katılım ücretleri hakkında daha fazla bilgi edinmek için lütfen katılmak istediğiniz IFO'nun ayrıntılarına ilişkin IFO teklifine (oylama) danışın.",
+
   "You have successfully claimed your rewards.": "Ödüllerinizi başarıyla aldınız.",
   "Pottery (BETA)": "Pottery (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "Bu IFO'nun, token hak ediş süreci vardır. Satın alınan token'lar, belirli bir zaman diliminde serbest bırakılır.",
-  "Learn more in the vote proposal": "Daha fazla bilgi için oylama teklifine bakın",
+
   "What is the difference between an IFO and a cIFO?": "Bir IFO ve bir cIFO arasındaki fark nedir?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Yeterince KLAY taahhüt etmezseniz anlamlı miktarda veya hiç IFO token'ı almayabilirsiniz.",
   "~%num% available to claim at sales end": "Satış bitişinde ~%num% alınabilir",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Maks. yatırma sınırı",
   "Fixed Term KLAY Staking": "Sabit Vadeli KLAY Staking",
   "Flexible KLAY Staking": "Esnek KLAY Staking",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Oylama gücü, bloktaki sabit vadeli KLAY staking pozisyonunun staking miktarı ve kalan staking süresi kullanılarak hesaplanır.",
+
   "KLAY locked:": "Kilitli KLAY:",
   "Go to Pools": "Havuzlara git",
   "KLAY Emission Projection": "KLAY Emisyon Projeksiyonu",
   "Boosted by vCAKE": "vCAKE artışı desteklidir",
   "Boosting Expired": "Artış Sona Erdi",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "vCAKE artışınızın süresi anlık görüntü blokunda sona erdi. Gelecekteki oylama teklifleri için artış desteğini etkinleştirmek üzere sabit vadeli staking pozisyonunuzu yenileyin.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "Satın alınan token'ın %%percentageVested% kadarı hak edilir ve belirli bir zaman diliminde lineer olarak serbest bırakılır. Satın alınan token'ın %%percentageTgeRelease% kadarı hemen serbest bırakılır ve IFO sona erdiğinde alınabilir.",
   "The vested tokens will be released linearly over a period of %days% days.": "Hak edilen token'lar, %days% günlük bir zaman diliminde lineer olarak serbest bırakılır.",
   "Yield Booster": "Fayda Artışı",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Katılmak için aşağıdaki gereksinimi karşılayın:",
   "Order cancellation": "Emir iptali",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Emir iptali: %outputAmount% %outputTokenSymbol% karşılığında %inputAmount% %inputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Farm verimini artırmanın, IFO'lara katılmanın, oylama gücünü artırmanın ve çok daha fazlasının avantajlarından yararlanmaya devam etmek için fon pozisyonunuzu yenileyin!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Kilit dönemi sona erdi. Daha fazla ödülün yakılmasını önlemek üzere kilitli fonlardan yararlanmaya devam etmek için fon pozisyonunuzu yenileyin.",
   "Default": "Varsayılan",
   "Shows username of wallet instead of bunnies": "Tavşanlar yerine cüzdanın kullanıcı adını gösterir",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (ödüller dahil), %lockedEndTime% tarihine kadar KLAY Havuzunda kilitlenir",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE, IFO herkese açık satışlarına katılıp %iCake% tutarına kadar KLAY yatırmanıza olanak tanır.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE, SweepStakes Farm'larındaki kazancınızı 2 kata kadar artırmanıza olanak tanır.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE, SweepStakes oylama yönetiminde oylama gücünüzü %totalScore% değerine yükseltir.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Farm verimini artırmanın, IFO'lara katılmanın, oylama gücünü artırmanın ve çok daha fazlasının avantajlarından yararlanmaya devam etmek için KLAY kilitleyin!",
+
   "KLAY staking expired": "KLAY fon yatırması sona erdi",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Yetersiz token ödeneği. Onaylamak için \"Etkinleştir\" seçeneğine tıkla.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Herkese açık satışta her uygun katılımcı, IFO oylama teklifi ile birlikte yayınlanan maksimum taahhüt limitine kadar herhangi bir miktarda KLAY taahhüt edebilecektir.",
+
   "Unable to supply": "Arz sağlanamıyor",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Likidite ekleyerek işlem çiftindeki payınla orantılı olarak bu çiftteki tüm işlemlerin %50'sini kazanacaksın. Ücretler çifte eklenir, gerçek zamanlı olarak tahakkuk eder ve likiditeni çekerek alınabilir. Stableswap ücretleri hakkında daha fazla bilgi için tıkla:",
   "For each stableswap trade, refer to the fee table": "Her bir stableswap işleminde ücret tablosuna göz at",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "SnBNB için APR nasıl hesaplanır?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNB için APR %0,5-%3 arasında değişmektedir. BNB Chain'de doğrulayıcılar tarafından kazanılan APR iki faktöre bağlıdır:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Komisyon Oranı: Synclub doğrulayıcısı %10 komisyon ücreti alır.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Oylama Gücü: Doğrulayıcının yatırdığı miktar, aldığı APR'yi belirler.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub doğrulayıcısı, APR'sini artırmak için MEV (Madenci Çıkarılabilir Değeri) kullanır. SnBNB, BNB'nin stake APR'sine paralel olarak BNB'ye karşı değer kazanır.",
   "How can I use SnBNB?": "SnBNB'yi nasıl kullanabilirim?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "SnBNB'yi BnbChain üzerinde takas, borç verme/borç alma ve farm faydası gibi diğer kullanım durumlarını keşfetmek için kullanabilirsiniz. Ayrıca",

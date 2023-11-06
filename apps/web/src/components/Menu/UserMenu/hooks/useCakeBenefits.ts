@@ -4,13 +4,9 @@ import useSWR from 'swr'
 import { ChainId } from '@sweepstakes/chains'
 import { useTranslation } from '@sweepstakes/localization'
 import { useChainCurrentBlock } from 'state/block/hooks'
-import { getVaultPosition, VaultPosition } from 'utils/cakePool'
+import { getVaultPosition } from 'utils/cakePool'
 import { getCakeVaultAddress } from 'utils/addressHelpers'
-import { getActivePools } from 'utils/calls'
 import { cakeVaultV2ABI } from '@sweepstakes/pools'
-import { getScores } from 'views/Voting/getScores'
-import { PANCAKE_SPACE } from 'views/Voting/config'
-import { cakePoolBalanceStrategy, createTotalStrategy } from 'views/Voting/strategies'
 
 const useCakeBenefits = () => {
   const publicClient = usePublicClient()
@@ -70,26 +66,6 @@ const useCakeBenefits = () => {
       lockEndTime: userContractResponse.lockEndTime.toString(),
     })
 
-    let vCake = { vaultScore: '0', totalScore: '0' }
-    if (lockPosition === VaultPosition.Locked) {
-      const eligiblePools = await getActivePools(ChainId.BSC, currentBscBlock)
-      const poolAddresses = eligiblePools.map(({ contractAddress }) => contractAddress)
-
-      const [cakeVaultBalance, total] = await getScores(
-        PANCAKE_SPACE,
-        [cakePoolBalanceStrategy('v1'), createTotalStrategy(poolAddresses, 'v1')],
-        ChainId.BSC.toString(),
-        [account],
-        Number(currentBscBlock),
-      )
-      vCake = {
-        vaultScore: cakeVaultBalance[account]
-          ? cakeVaultBalance[account].toLocaleString('en', { maximumFractionDigits: 3 })
-          : '0',
-        totalScore: total[account] ? total[account].toLocaleString('en', { maximumFractionDigits: 3 }) : '0',
-      }
-    }
-
     return {
       lockPosition,
       lockedEndTime: new Date(parseInt(userContractResponse.lockEndTime.toString()) * 1000).toLocaleString(locale, {
@@ -97,7 +73,6 @@ const useCakeBenefits = () => {
         year: 'numeric',
         day: 'numeric',
       }),
-      vCake,
     }
   })
 

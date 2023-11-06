@@ -1191,14 +1191,6 @@ const finishedPools = [
     tokenPerBlock: '0.217',
   },
   {
-    sousId: 216,
-    stakingToken: bscTokens.cake,
-    earningToken: bscTokens.cvp,
-    contractAddress: '0xC4b15117BC0be030c20754FF36197641477af5d1',
-    poolCategory: PoolCategory.CORE,
-    tokenPerBlock: '0.14',
-  },
-  {
     sousId: 215,
     stakingToken: bscTokens.cake,
     earningToken: bscTokens.qbt,

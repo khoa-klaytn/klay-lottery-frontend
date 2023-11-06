@@ -2,7 +2,7 @@
   "Farm": "Farm",
   "Exchange": "Beurs",
   "Docs": "Documenten",
-  "Voting": "Stemmen",
+
   "Lottery": "Loterij",
   "Connect Wallet": "Wallet verbinden",
   "Blog": "Blog",
@@ -596,7 +596,7 @@
   "Starts %date%": "Begint %date%",
   "Ends %date%": "Eindigt %date%",
   "Closed": "Gesloten",
-  "Vote Now": "Nu stemmen",
+
   "Soon": "Binnenkort",
   "No proposals found": "Geen voorstellen gevonden",
   "Creator": "Maker",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Geef je mening over de toekomst van het SweepStakes-ecosysteem",
   "Got a suggestion?": "Heb je een suggestie?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Communityvoorstellen zijn een goede manier om te zien wat de community vindt van je ideeën.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Ze worden niet noodzakelijkerwijs uitgevoerd als de community er positief over stemt, maar suggesties met veel steun van de community kunnen kernvoorstellen worden.",
+
   "%field% is required": "%field% is verplicht",
   "Please create a minimum of %num% choices": "Maak minimaal %num% keuzes",
   "Choices must not be empty": "Keuzes mogen niet leeg zijn",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Einddatum moet na de begindatum zijn",
   "Invalid snapshot": "Ongeldige snapshot",
   "Proposal created!": "Voorstel aangemaakt!",
-  "Voted": "Gestemd",
+
   "Time": "Tijd",
   "Input choice text": "Voer keuzetekst in",
   "Start Time": "Begintijd",
-  "Back to Vote Overview": "Terug naar stemmenoverzicht",
-  "Voting For": "Stemmen voor",
-  "Your Voting Power": "Je stemkracht",
-  "Confirm Vote": "Stem bevestigen",
+
   "Add Choice": "Keuze toevoegen",
   "Title": "Titel",
   "Content": "Inhoud",
@@ -630,27 +627,22 @@
   "Actions": "Acties",
   "End Time": "Eindtijd",
   "Publish": "Publiceren",
-  "No votes found": "Geen stemmen gevonden",
-  "Votes (%count%)": "Stemmen (%count%)",
+
   "Snapshot": "Snapshot",
   "Choices": "Keuzes",
   "Identifier": "Identificator",
   "Current Results": "Huidige resultaten",
-  "Vote cast!": "Stem uitgebracht!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Weet je zeker dat je voor de bovenstaande keuze wilt stemmen? Deze actie kan niet ongedaan worden gemaakt.",
+
   "Tip: write in Markdown!": "Tip: schrijf in Markdown!",
-  "Cast your vote": "Breng je stem uit",
+
   "Preview": "Voorbeeld",
-  "%total% Votes": "%total% stemmen",
-  "Cast Vote": "Stem uitbrengen",
+
   "See All": "Alles weergeven",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Je stemrecht wordt bepaald door de hoeveelheid KLAY die je bezit en door de resterende looptijd van de stakingpositie met vaste termijn (als je die hebt) voor het onderstaande blok. KLAY op andere plaatsen draagt niet bij aan je stemrecht.",
+
   "Wallet": "Wallet",
   "KLAY BNB LP": "LP KLAY BNB",
   "Other Syrup Pools": "Andere syruppools",
-  "Voting Power": "Stemkracht",
-  "You need at least %count% voting power to publish a proposal.": "Je moet minimaal %count% stemkracht hebben om een voorstel te publiceren.",
-  "Check voting power": "Stemkracht bekijken",
+
   "Amount to collect": "Te verzamelen hoeveelheid",
   "Your winnings": "Je winst",
   "Includes your original position and your winnings, minus the %fee% fee.": "Omvat je oorspronkelijke positie en je winst, min %fee% vergoeding.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Aandelengrafiek",
   "Folder with cake token": "Map met cake-token",
   "KLAY makes our world go round.": "KLAY doet onze wereld draaien.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Het KLAY-token staat centraal in het ecosysteem van SweepStakes. Je kunt het kopen, winnen, farmen, uitgeven, staken ... Je kunt er zelfs mee stemmen!",
+
   "Small 3d pancake": "Kleine 3D-pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% aan KLAY-prijzen in deze ronde",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Koop tickets met KLAY en win KLAY als je nummers overeenstemmen",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Oude farms",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Merk op dat dit het oude BTT-token is, wat is geswapt voor de nieuwe BTT-tokens in de volgende verhouding:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Deze pool is verkeerd geconfigureerd. Unstake je tokens eruit, de noodopnamemethode wordt gebruikt. Je tokens worden geretourneerd naar je wallet, maar beloningen worden niet geoogst.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Voor de private verkoop kan elke in aanmerking komende deelnemer een bedrag aan KLAY inleggen tot de maximale inleglimiet, die samen met het IFO-stemvoorstel wordt gepubliceerd.",
+
   "Meet any one of the following requirements to be eligible.": "Voldoe aan een van de volgende vereisten om in aanmerking te komen.",
   "You are eligible to participate in this Private Sale!": "Je kunt deelnemen aan deze private verkoop!",
   "Meet any one of the requirements to join:": "Voldoe aan een van de vereisten om deel te nemen:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Hoe kan ik wBETH weer omzetten naar ETH?",
   "You can convert wBETH to ETH through": "Je kunt wBETH omzetten naar ETH met",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes werkt ook aan de ondersteuning van een omzettingscontract op onze pagina voor liquide staking om wBETH naadloos weer om te zetten naar ETH.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "In het huidige IFO -format is er een gloednieuwe private verkoop. Om deel te nemen, moeten deelnemers voldoen aan bepaalde eisen die op de IFO kaart staan. Elke in aanmerking komende deelnemer kan een KLAY-bedrag inleggen tot de maximale inleglimiet, die samen met het IFO-stemvoorstel wordt gepubliceerd. Aan de private verkoop zijn geen deelnamekosten verbonden.",
+
   "You can choose one or both at the same time!": "Je kiest een of beide tegelijk!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "We raden je aan eerst te controleren of je in aanmerking komt voor deelname aan de private verkoop. In de publieke verkoop is het mogelijk dat je geen betekenisvolle hoeveelheid IFO-tokens ontvangt als het bedrag dat je inlegt te klein is.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Denk eraan dat je een actief SweepStakes-profiel moet hebben om deel te nemen.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Huidige marktprijs",
   "Limit Price": "Limietprijs",
   "Error Tracking Id": "Fout bij tracken van ID",
-  "Your voting power at block": "Je stemrecht voor het blok",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "De transactie kon niet verzonden worden omdat de deadline verstreken is. Controleer of de deadline voor je transactie niet te laag is.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Deze transactie zal niet lukken vanwege koersbeweging of vanwege kosten bij overdracht. Probeer je slippagetolerantie te verhogen.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Het inputtoken kan niet overgedragen worden. Mogelijk is er een probleem met het inputtoken.",
@@ -1613,7 +1605,7 @@
   "Limit": "Limiet",
   "at market price": "bij marktprijs",
   "Error occurred, please try again later": "Er is een fout opgetreden, probeer het later opnieuw",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Houd wat KLAY in je wallet of op SweepStakes in het snapshotblok om stemrecht te krijgen voor toekomstige voorstellen.",
+
   "Preparing": "Voorbereiden",
   "Perpetual": "Voortdurend",
   "Stake KLAY": "KLAY staken",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Bij de publieke verkoop kan iedereen met een actief SweepStakes-profiel inleggen. De maximale hoeveelheid KLAY die een gebruiker kan inleggen, is echter gelijk aan de hoeveelheid iCAKE die men heeft.",
   "And there’s a fee for participation: see below.": "En er is een vergoeding voor deelname: zie hieronder.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "De deelnamevergoeding neemt af in stappen, op basis van het percentage overloop van het \"publieke\" deel van de IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Opmerking: de vergoedingen kunnen verschillen per IFO. Zie de details in het IFO-voorstel (stemming) voor meer informatie over de vergoedingen van de IFO waaraan je wilt deelnemen.",
+
   "You have successfully claimed your rewards.": "Je hebt succesvol je beloningen geclaimd.",
   "Pottery (BETA)": "Stakingloterij (BÈTA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "Deze IFO heeft tokenvesting. Gekochte tokens worden vrijgegeven over een bepaalde periode.",
-  "Learn more in the vote proposal": "Lees meer in het stemmingsvoorstel",
+
   "What is the difference between an IFO and a cIFO?": "Wat is het verschil tussen een IFO en een cIFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Als je niet genoeg KLAY inlegt, ontvang je misschien geen betekenisvolle hoeveelheid IFO-tokens of ontvang je mogelijk helemaal geen IFO-tokens.",
   "~%num% available to claim at sales end": "~%num% beschikbaar om te claimen na afloop van de verkoop",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Inleglimiet",
   "Fixed Term KLAY Staking": "KLAY-staking met vaste termijn",
   "Flexible KLAY Staking": "Flexibele KLAY-staking",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Stemrecht wordt berekend aan de hand van het gestakete bedrag en de resterende stakingduur van de KLAY-stakingpositie met vaste termijn voor het blok.",
+
   "KLAY locked:": "Vergrendelde KLAY:",
   "Go to Pools": "Ga naar de pools",
   "KLAY Emission Projection": "Raming KLAY-uitgifte",
   "Boosted by vCAKE": "Geboost door vCAKE",
   "Boosting Expired": "Boost verlopen",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Je vCAKE-boost is verlopen voor het snapshotblok. Vernieuw je stakingpositie met vaste termijn om de boost te activeren voor toekomstige stemvoorstellen.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% van het gekochte token wordt gevest en lineair vrijgegeven over een bepaalde periode. %percentageTgeRelease%% van het gekochte token wordt onmiddellijk vrijgegeven en kan worden geclaimd vanneer de IFO eindigt.",
   "The vested tokens will be released linearly over a period of %days% days.": "Geveste tokens worden lineair vrijgegeven over een periode van %days% dagen.",
   "Yield Booster": "Opbrengstbooster",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Voldoe aan de volgende vereiste om deel te nemen:",
   "Order cancellation": "Oderannulering",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Orderannulering: %inputAmount% %inputTokenSymbol% voor %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Vernieuw je stakingpositie om te blijven genieten van de voordelen van opbrengstboosting, deelname aan IFO's, stemkrachtverhoging en nog veel meer!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "De vergrendelingsperiode is afgelopen. Om te voorkomen dat meer beloningen worden verbrand, moet je je stakingpositie vernieuwen om te blijven genieten van de voordelen van vergrendelde staking.",
   "Default": "Standaard",
   "Shows username of wallet instead of bunnies": "Geeft de gebruikersnaam van de wallet weer in plaats van konijntjes",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (inclusief beloningen) is vergrendeld in de KLAY-pool tot %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "Met iCAKE kun je deelnemen aan de publieke IFO-verkoop en tot %iCake% aan KLAY inleggen.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Met bCAKE kun je je opbrengst in SweepStakes-farms tot 2x verhogen.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE verhoogt je stemkracht tot %totalScore% in het SweepStakes-stemsysteem.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Vergrendel KLAY om te profiteren van de voordelen van het verhogen van de farmopbrengst, deelname aan IFO's, stemkrachtverhoging en nog veel meer!",
+
   "KLAY staking expired": "KLAY-staking verlopen",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Onvoldoende tokenvergoeding. Klik op \"Inschakelen\" om goed te keuren.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Voor de publieke verkoop kan elke in aanmerking komende deelnemer een bedrag aan KLAY inleggen tot de maximale inleglimiet, die samen met het IFO-stemvoorstel wordt gepubliceerd.",
+
   "Unable to supply": "Kan niet aanbieden",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Door liquiditeit toe te voegen, verdien je 50% van de vergoedingen voor alle transacties voor dit paar evenredig met je aandeel in het handelspaar. Vergoedingen worden toegevoegd aan het paar, nemen toe in realtime en kunnen worden geclaimd door je liquiditeit op te nemen. Voor meer informatie over StableSwap-vergoedingen, klik",
   "For each stableswap trade, refer to the fee table": "Zie de vergoedingentabel voor elke StableSwap-transactie",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "Hoe wordt de APR berekend voor SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "De APR voor SnBNB ligt tussen 0.5%-3%. De APR die validators verdienen op de BNB Chain is afhankelijk van twee factoren:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Commissietarief: de synclub-validator rekent 10% commissievergoeding.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Stemrecht: het gestakete bedrag voor een validator bepaalt de ontvangen APR.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "De Synclub-validator maakt gebruik van MEV (Miner Extractable Value) om zijn APR te verhogen.SnBNB stijgt ten opzichte van BNB in lijn met de APR voor het staken van BNB.",
   "How can I use SnBNB?": "Hoe kan ik SnBNB gebruiken?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Je kunt SnBNB gebruiken om andere usecases te verkennen, zoals swappen, lenen/uitlenen en opbrengstfarming op de BnbChain. Naast",

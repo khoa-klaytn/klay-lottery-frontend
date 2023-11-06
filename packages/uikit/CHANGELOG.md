@@ -498,7 +498,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **uikit:** Bubblegum card header variant ([#114](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/issues/114)) ([95ca7a0](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/commit/95ca7a071305a840cf8582df2a812b819624c8a7))
 - **uikit:** Proposal icon ([#108](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/issues/108)) ([6ca7995](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/commit/6ca7995c3e7acfaf9e7309e86b953a11b25305b8))
-- **uikit:** Vote icon ([#111](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/issues/111)) ([1399814](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/commit/1399814b123ea6232c16aff231965112b63f3fa0))
 - **uikit/tag:** Warning variant ([#110](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/issues/110)) ([f4b9d87](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/commit/f4b9d87100c4d493728277d566fdf581d0fca6bd))
 
 ## [0.32.3](https://github.com/sweepstakes/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@sweepstakes/uikit@0.32.2...@sweepstakes/uikit@0.32.3) (2021-05-11)

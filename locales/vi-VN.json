@@ -2,7 +2,7 @@
   "Farm": "Canh tác",
   "Exchange": "Giao dịch",
   "Docs": "Tài liệu",
-  "Voting": "Bỏ phiếu",
+
   "Lottery": "Xổ số",
   "Connect Wallet": "Kết nối Ví",
   "Blog": "Tin tức",
@@ -596,7 +596,7 @@
   "Starts %date%": "Bắt đầu %date%",
   "Ends %date%": "Kết thúc %date%",
   "Closed": "Đã đóng",
-  "Vote Now": "Bình chọn ngay",
+
   "Soon": "Sắp có",
   "No proposals found": "Không tìm thấy đề xuất nào",
   "Creator": "Tác giả",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Nêu ý kiến về tương lai của Hệ sinh thái SweepStakes",
   "Got a suggestion?": "Bạn có một yêu cầu?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Các đề xuất cộng đồng là một cách tuyệt vời để biết cộng đồng nghĩ gì về các ý tưởng của bạn.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Chúng không nhất thiết được triển khai nếu cuộc bình chọn cộng đồng đạt kết quả thành công, nhưng các yêu cầu được cộng đồng ủng hộ có thể sẽ được đưa vào đề xuất Cốt lõi.",
+
   "%field% is required": "Cần %field%",
   "Please create a minimum of %num% choices": "Vui lòng tạo tối thiểu %num% lựa chọn",
   "Choices must not be empty": "Các lựa chọn không được bỏ trống",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Ngày kết thúc phải có sau ngày bắt đầu",
   "Invalid snapshot": "Ảnh chụp nhanh không hợp lệ",
   "Proposal created!": "Đề xuất đã được tạo!",
-  "Voted": "Đã bình chọn",
+
   "Time": "Thời gian",
   "Input choice text": "Nhập văn bản lựa chọn",
   "Start Time": "Thời gian bắt đầu",
-  "Back to Vote Overview": "Quay lại Tổng quan về bình chọn",
-  "Voting For": "Bình chọn cho",
-  "Your Voting Power": "Quyền bình chọn của bạn",
-  "Confirm Vote": "Xác nhận bình chọn",
+
   "Add Choice": "Thêm lựa chọn",
   "Title": "Tiêu đề",
   "Content": "Nội dung",
@@ -630,27 +627,22 @@
   "Actions": "Hành động",
   "End Time": "Thời gian kết thúc",
   "Publish": "Phát hành",
-  "No votes found": "Không tìm thấy bình chọn nào",
-  "Votes (%count%)": "Phiếu bình chọn (%count%)",
+
   "Snapshot": "Ảnh chụp nhanh",
   "Choices": "Lựa chọn",
   "Identifier": "Mã định danh",
   "Current Results": "Kết quả hiện tại",
-  "Vote cast!": "Đã bình chọn!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Bạn có chắc bạn muốn bình chọn cho lựa chọn ở trên? Hành động này không thể được hoàn tác.",
+
   "Tip: write in Markdown!": "Mẹo: Viết bằng Markdown!",
-  "Cast your vote": "Đưa ra bình chọn của bạn",
+
   "Preview": "Xem trước",
-  "%total% Votes": "%total% Phiếu",
-  "Cast Vote": "Bình chọn",
+
   "See All": "Xem tất cả",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Quyền bỏ phiếu của bạn được xác định bởi lượng KLAY bạn nắm giữ và thời lượng còn lại trên vị thế đặt cọc có thời hạn cố định (nếu có) tại khối có thông tin chi tiết dưới đây. KLAY được nắm giữ ở các nơi khác không đóng góp vào quyền bỏ phiếu của bạn.",
+
   "Wallet": "Ví",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Các nhóm Syrup khác",
-  "Voting Power": "Quyền bình chọn",
-  "You need at least %count% voting power to publish a proposal.": "Bạn cần tối thiểu %count% quyền bình chọn để đăng một đề xuất.",
-  "Check voting power": "Kiểm tra quyền bình chọn",
+
   "Amount to collect": "Số để thu thập",
   "Your winnings": "Khoản thắng của bạn",
   "Includes your original position and your winnings, minus the %fee% fee.": "Bao gồm vị thế ban đầu và khoản thắng của bạn, trừ phí %fee%.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Biểu đồ cổ phiếu",
   "Folder with cake token": "Thư mục với token cake",
   "KLAY makes our world go round.": "KLAY giúp Trái Đất quay.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Token KLAY nằm ở trung tâm của hệ sinh thái SweepStakes. Mua, thắng giải, khai thác, chi tiêu, đặt cọc... chà, bạn thậm chí còn có thể bỏ phiếu bằng KLAY!",
+
   "Small 3d pancake": "SweepStakes 3d nhỏ",
   "%cakePrizeInUsd% in KLAY prizes this round": "Giải thưởng %cakePrizeInUsd% tính theo KLAY trong vòng này",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Mua vé bằng KLAY, thắng KLAY nếu các số của bạn khớp",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Trang trại cũ",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Xin lưu ý rằng đây là token BTT cũ, vốn đã được hoán đổi sang token BTT mới theo tỷ lệ sau:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Quỹ này đã bị cấu hình sai. Vui lòng bỏ đặt cọc các token của bạn ra khỏi quỹ này, phương thức Rút tiền khẩn cấp sẽ được sử dụng. Các token của bạn sẽ được hoàn trả về ví của bạn, tuy nhiên, phần thưởng sẽ không được thu hoạch.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Đối với đợt chào bán riêng lẻ, mỗi người tham gia đủ tiêu chuẩn sẽ có thể cam kết một lượng KLAY bất kỳ lên đến giới hạn cam kết tối đa, thông tin này được đăng cùng với đề xuất bỏ phiếu IFO.",
+
   "Meet any one of the following requirements to be eligible.": "Đáp ứng bất kỳ yêu cầu nào sau đây để đủ tiêu chuẩn.",
   "You are eligible to participate in this Private Sale!": "Bạn đủ tiêu chuẩn tham gia đợt Chào bán riêng lẻ này!",
   "Meet any one of the requirements to join:": "Đáp ứng một điều kiện bất kỳ để tham gia:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Làm thế nào để tôi chuyển đổi wBETH về lại ETH?",
   "You can convert wBETH to ETH through": "Bạn có thể chuyển đổi wBETH sang ETH thông qua",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes cũng đang làm việc để hỗ trợ một hợp đồng chuyển đổi trên trang đặt cọc thanh khoản của chúng tôi để chuyển đổi wBETH về lại ETH một cách liền mạch.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "Trong định dạng IFO hiện tại. Có một đợt Chào bán riêng lẻ hoàn toàn mới. Người tham gia sẽ phải đáp ứng các yêu cầu nhất định trong thẻ IFO để tham gia. Mỗi người tham gia đủ tiêu chuẩn sẽ có thể cam kết một lượng KLAY bất kỳ lên đến giới hạn cam kết tối đa, thông tin này được đăng cùng với đề xuất bỏ phiếu IFO. Đợt Chào bán riêng lẻ không có phí tham gia.",
+
   "You can choose one or both at the same time!": "Bạn có thể chọn một hoặc cả hai đợt chào bán cùng lúc!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Trước hết, bạn nên kiểm tra xem mình có đủ tiêu chuẩn tham gia vào đợt Chào bán riêng lẻ hay không. Trong đợt Chào bán công khai, nếu số tiền bạn cam kết quá thấp, bạn có thể không nhận được một lượng token IFO có ý nghĩa.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Hãy nhớ rằng bạn cần một Hồ sơ SweepStakes đang hoạt động để tham gia.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Giá thị trường hiện tại",
   "Limit Price": "Giá giới hạn",
   "Error Tracking Id": "Lỗi theo dõi ID",
-  "Your voting power at block": "Quyền bỏ phiếu của bạn tại khối",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Giao dịch này không thể được gửi đi bởi đã quá hạn chót. Vui lòng xác nhận rằng hạn chót giao dịch của bạn không quá thấp.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Giao dịch này sẽ không thành công do biến động giá hoặc phí chuyển khoản. Hãy thử tăng mức dung sai trượt giá đặt lệnh của bạn.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Token đầu vào không thể được chuyển khoản. Có thể có vấn đề với token đầu vào.",
@@ -1613,7 +1605,7 @@
   "Limit": "Giới hạn",
   "at market price": "tại giá thị trường",
   "Error occurred, please try again later": "Đã có lỗi xảy ra, vui lòng thử lại sau",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Giữ một lượng KLAY trong ví của bạn hoặc trên SweepStakes ở khối ảnh chụp nhanh để nhận quyền bỏ phiếu cho các đề xuất trong tương lai.",
+
   "Preparing": "Đang chuẩn bị",
   "Perpetual": "Vĩnh viễn",
   "Stake KLAY": "Đặt cọc KLAY",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Trong đợt Chào bán công khai, tất cả mọi người với một hồ sơ SweepStakes đang hoạt động đều có thể cam kết. Tuy nhiên, số tiền tối đa mà người dùng KLAY có thể cam kết sẽ bằng với lượng iCAKE mà họ có.",
   "And there’s a fee for participation: see below.": "Và sẽ có một mức phí để tham gia: xem dưới đây.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Mức phí tham gia sẽ giảm theo thang dựa trên phần trăm tràn từ phần “Chào bán công khai” của IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Lưu ý: Mức phí có thể htay đổi giữa các đợt IFO khác nhau. Để tìm hiểu thêm về phí tham gia, hãy xem chi tiết của đề xuất IFO (bỏ phiếu) cho các đợt IFO cụ thể mà bạn muốn tham gia.",
+
   "You have successfully claimed your rewards.": "Bạn đã nhận thành công phần thưởng của mình.",
   "Pottery (BETA)": "Hũ (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "IFO này có đầu tư token. Các token đã mua sẽ được giải ngân trong một khoảng thời gian.",
-  "Learn more in the vote proposal": "Tìm hiểu thêm trong phần đề xuất bỏ phiếu",
+
   "What is the difference between an IFO and a cIFO?": "Sự khác biệt giữa IFO và cIFO là gì?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Nếu bạn không cam kết đủ KLAY, bạn có thể không nhận được lượng token IFO có ý nghĩa, hay thậm chí không nhận được token IFO nào.",
   "~%num% available to claim at sales end": "~%num% có thể nhận khi kết thúc chào bán",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Giới hạn tiền gửi tối đa",
   "Fixed Term KLAY Staking": "Đặt cọc KLAY có thời hạn cố định",
   "Flexible KLAY Staking": "Đặt cọc KLAY linh hoạt",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Quyền bỏ phiếu được tính bằng số tiền đặt cọc và thời lượng đặt cọc còn lại của vị thế đặt cọc KLAY có thời hạn cố định tại khối.",
+
   "KLAY locked:": "KLAY đã khóa:",
   "Go to Pools": "Vào Quỹ",
   "KLAY Emission Projection": "Dự tính phát xạ KLAY",
   "Boosted by vCAKE": "Được tăng cường bởi vCAKE",
   "Boosting Expired": "Tăng cường đã hết hạn",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Tăng cường vCAKE đã hết hạn tại khối ảnh chụp nhanh. Hãy gia hạn vị thế đặt cọc thời hạn cố định của bạn để kích hoạt tăng cường cho các đề xuất bỏ phiếu trong tương lai.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% token đã mua sẽ được đầu tư và giải ngân theo mức tuyến tính trong một khoảng thời gian nhất định. %percentageTgeRelease%% của token đã mua sẽ được giải ngân ngay lập tức và có thể được nhận khi IFO kết thúc.",
   "The vested tokens will be released linearly over a period of %days% days.": "Các token đã đầu tư sẽ được giải ngân theo mức tuyến tính trong khoảng thời gian %days% ngày.",
   "Yield Booster": "Tăng cường lợi nhuận",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Đáp ứng yêu cầu sau để tham gia:",
   "Order cancellation": "Hủy đơn hàng",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Hủy đơn hàng: %inputAmount% %inputTokenSymbol% cho %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Gia hạn vị thế đặt cọc của bạn để tiếp tục tận hưởng lợi ích của việc tăng cường lợi nhuận trang trại, tham gia các IFO, tăng quyền lực bình chọn, v.v.!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Khoảng thời gian khóa đã kết thúc. Để tránh các phần thưởng khác bị đốt, hãy gia hạn vị thế đặt cọc của bạn để tiếp tục tận hưởng các lợi ích của việc khóa cọc.",
   "Default": "Mặc định",
   "Shows username of wallet instead of bunnies": "Hiển thị tên người dùng của ví thay vì các con thỏ",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (bao gồm phần thưởng) được khóa trong Quỹ KLAY cho đến %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE cho phép bạn tham gia các chương trình chào bán công khai IFO và cam kết đến %iCake% giá trị KLAY.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE cho phép bạn tăng lợi nhuận của mình trong các Trang trại SweepStakes đến gấp 2 lần.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE tăng quyền lực bình chọn của bạn lên %totalScore% trong bình chọn quản trị SweepStakes.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Khóa KLAY để tận hưởng lợi ích của việc tăng lợi nhuận trang trại, tham gia vào các đợt IFO, tăng quyền lực bình chọn, v.v.!",
+
   "KLAY staking expired": "Đặt cọc KLAY đã hết hạn",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Không đủ định mức cho phép token. Nhấn \"Bật\" để phê duyệt.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Đối với đợt chào bán công khai, mỗi người tham gia đủ tiêu chuẩn sẽ có thể cam kết một lượng KLAY bất kỳ lên đến giới hạn cam kết tối đa, thông tin này được đăng cùng với đề xuất bỏ phiếu IFO.",
+
   "Unable to supply": "Không thể cung ứng",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Thông qua việc bổ sung thanh khoản, bạn sẽ kiếm được 50% từ phí của tất cả các giao dịch trong cặp tiền tệ này, tỷ lệ với cổ phần của bạn trong cặp giao dịch. Các khoản phí sẽ được thêm vào cặp, được tích lũy trong thời gian thực và có thể được nhận bằng cách rút lại thanh khoản của bạn. Để biết thêm thông tin về phí Stableswap, hãy nhấn",
   "For each stableswap trade, refer to the fee table": "Đối với mỗi giao dịch stableswap, hãy tham khảo bảng phí",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "APR được tính thế nào cho SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "APR cho SnBNB dao động từ 0,5%-3%. Mức APR được nhận bởi các đơn vị xác thực trên BNB Chain tùy thuộc vào hai yếu tố:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Hệ số hoa hồng: đơn vị xác thực synclub lấy 10% phí hoa hồng.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Quyền bỏ phiếu: Số tiền đặt cọc cho một đơn vị xác thực xác định APR mà họ nhận được.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Đơn vị xác thực Synclub sử dụng MEV (Giá trị được tạo bởi thợ mỏ) để tăng APR của họ. SnBNB tăng giá đối với BNB để tương ứng với APR đặt cọc của BNB.",
   "How can I use SnBNB?": "Tôi có thể sử dụng SnBNB bằng cách nào?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Bạn có thể sử dụng SnBNB để khám phá các trường hợp sử dụng khác, chẳng hạn như hoán đổi, cho vay/vay và canh tác lợi nhuận trên BnbChain. Cùng với",

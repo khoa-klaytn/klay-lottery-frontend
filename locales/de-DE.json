@@ -2,7 +2,7 @@
   "Farm": "Ernten (Farm)",
   "Exchange": "Börse",
   "Docs": "Dokumente",
-  "Voting": "Abstimmung",
+
   "Lottery": "Lotterie",
   "Connect Wallet": "Wallet verbinden",
   "Blog": "Blog",
@@ -596,7 +596,7 @@
   "Starts %date%": "Startet am %date%",
   "Ends %date%": "Endet am %date%",
   "Closed": "Geschlossen",
-  "Vote Now": "Jetzt abstimmen",
+
   "Soon": "In Kürze",
   "No proposals found": "Keine Vorschläge gefunden",
   "Creator": "Ersteller",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Verschaffen Sie sich Mitspracherecht bei der Zukunft des SweepStakes-Ökosystems",
   "Got a suggestion?": "Haben Sie einen Vorschlag?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Community-Vorschläge sind eine gute Möglichkeit, um herauszufinden, wie die Community über Ihre Ideen denkt.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Sie werden nicht unbedingt implementiert, wenn die Community erfolgreich abstimmt, aber Vorschläge mit viel Unterstützung der Community können zu Kern-Vorschlägen werden.",
+
   "%field% is required": "%field% erforderlich",
   "Please create a minimum of %num% choices": "Bitte erstellen Sie mindestens %num% Auswahlmöglichkeiten",
   "Choices must not be empty": "Auswahlmöglichkeiten dürfen nicht leer sein",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Das Enddatum muss nach dem Startdatum liegen",
   "Invalid snapshot": "Ungültiger Snapshot",
   "Proposal created!": "Angebot erstellt!",
-  "Voted": "Abgestimmt",
+
   "Time": "Zeit",
   "Input choice text": "Auswahltext eingeben",
   "Start Time": "Startzeit",
-  "Back to Vote Overview": "Zurück zur Abstimmungsübersicht",
-  "Voting For": "Abstimmen für",
-  "Your Voting Power": "Ihr Stimmrecht",
-  "Confirm Vote": "Abstimmung bestätigen",
+
   "Add Choice": "Auswahl hinzufügen",
   "Title": "Titel",
   "Content": "Inhalt",
@@ -630,27 +627,22 @@
   "Actions": "Aktionen",
   "End Time": "Endzeit",
   "Publish": "Veröffentlichen",
-  "No votes found": "Keine Abstimmungen gefunden",
-  "Votes (%count%)": "Stimmen (%count%)",
+
   "Snapshot": "Snapshot",
   "Choices": "Wahlmöglichkeiten",
   "Identifier": "Bezeichner",
   "Current Results": "Aktuelle Ergebnisse",
-  "Vote cast!": "Stimme abgegeben!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Sind Sie sicher, dass Sie für die obige Wahl stimmen wollen? Diese Aktion kann nicht rückgängig gemacht werden.",
+
   "Tip: write in Markdown!": "Tipp: Schreiben Sie in Markdown!",
-  "Cast your vote": "Geben Sie Ihre Stimme ab",
+
   "Preview": "Vorschau",
-  "%total% Votes": "%total% Stimmen",
-  "Cast Vote": "Stimme abgeben",
+
   "See All": "Alle anzeigen",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Ihre Stimmkraft wird durch die Menge an KLAY, die Sie halten, und die verbleibende Dauer der befristeten Staking-Position (falls Sie eine haben) in dem unten angegebenen Block bestimmt. KLAY, das Sie an anderen Orten halten, trägt nicht zu Ihrer Stimmkraft bei.",
+
   "Wallet": "Wallet",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Andere Syrup-Pools",
-  "Voting Power": "Stimmrecht",
-  "You need at least %count% voting power to publish a proposal.": "Sie benötigen mindestens %count% Stimmrecht, um ein Angebot zu veröffentlichen.",
-  "Check voting power": "Stimmrecht prüfen",
+
   "Amount to collect": " zu sammelnder Betrag",
   "Your winnings": "Ihre Gewinne",
   "Includes your original position and your winnings, minus the %fee% fee.": "beinhaltet Ihre uprsprüngliche Position und Gewinne, abzüglich der %fee%-Gebühr.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Aktien-Chart",
   "Folder with cake token": "Ordner mit Cake-Tokens",
   "KLAY makes our world go round.": "KLAY bewegt unsere Welt.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Der KLAY-Token ist das Herzstück des SweepStakes-Ökosystems. Kaufen Sie ihn, gewinnen Sie ihn, farmen Sie ihn, geben Sie ihn aus, setzen Sie ihn ein ... Sie können sogar mit ihm abstimmen!",
+
   "Small 3d pancake": "Kleiner 3. SweepStakes",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% an KLAY-Preisen diese Runde",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Kaufen Sie Lose mit KLAY, und gewinnen Sie KLAY, wenn Ihre Zahlen übereinstimmen",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Alte Farms",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Bitte beachten Sie, dass es sich hierbei um den alten BTT-Token handelt, der im folgenden Verhältnis gegen den neuen BTT-Token ausgetauscht wurde:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Dieser Pool wurde falsch konfiguriert. Bitte nehmen Sie Ihre Token aus diesem Pool zurück. Es wird die Methode emergencyWithdraw verwendet. Ihre Token werden in Ihr Wallet  zurückgegeben, aber die Belohnungen werden nicht geerntet.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Für den Privatverkauf kann jeder berechtigte Teilnehmer einen beliebigen Betrag an KLAY bis zum maximalen Commit-Limit, das zusammen mit dem IFO-Abstimmungsvorschlag veröffentlicht wird, festlegen.",
+
   "Meet any one of the following requirements to be eligible.": "Erfüllen Sie eine der folgenden Voraussetzungen, um teilnahmeberechtigt zu sein.",
   "You are eligible to participate in this Private Sale!": "Sie sind berechtigt, an diesem Privatverkauf teilzunehmen!",
   "Meet any one of the requirements to join:": "Erfüllen Sie eine der Voraussetzungen für die Teilnahme:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Wie konvertiere ich wBETH zurück zu ETH?",
   "You can convert wBETH to ETH through": "Sie können wBETH in ETH umwandeln über",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes arbeitet auch daran, einen Konvertierungsvertrag auf unserer Seite für liquide Einsätze zu unterstützen, um wBETH nahtlos zurück in ETH zu konvertieren.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "Im aktuellen IFO-Format gibt es einen brandneuen Privatverkauf. Um daran teilzunehmen, müssen die Teilnehmer bestimmte Anforderungen erfüllen, die auf der IFO-Karte aufgeführt sind. Jeder teilnahmeberechtigte Teilnehmer kann einen beliebigen KLAY-Betrag bis zum maximalen Commit-Limit einsetzen, das zusammen mit dem IFO-Abstimmungsvorschlag veröffentlicht wird. Für den Privatverkauf fällt keine Teilnahmegebühr an.",
+
   "You can choose one or both at the same time!": "Sie können eine oder beide gleichzeitig wählen!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Wir empfehlen Ihnen, zunächst zu prüfen, ob Sie für die Teilnahme am Private Sale berechtigt sind. Wenn der Betrag, den Sie im öffentlichen Verkauf einsetzen, zu gering ist, erhalten Sie möglicherweise keine sinnvolle Menge an IFO-Tokens.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Denken Sie nur daran, dass Sie ein aktives SweepStakes-Profil benötigen, um teilnehmen zu können.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Aktueller Marktpreis",
   "Limit Price": "Limit Preis",
   "Error Tracking Id": "Fehlerverfolgungsnummer",
-  "Your voting power at block": "Ihre Stimmkraft bei Block",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Die Transaktion konnte nicht gesendet werden, weil die Frist überschritten wurde. Bitte überprüfen Sie, ob Ihre Transaktionsfrist nicht zu niedrig ist.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Diese Transaktion wird nicht erfolgreich sein, entweder aufgrund von Kursbewegungen oder aufgrund von Gebühren bei der Übertragung. Versuchen Sie, Ihre Toleranz für Kursabweichungen zu erhöhen.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Das Eingabe-Token kann nicht übertragen werden. Möglicherweise gibt es ein Problem mit dem Eingabe-Token.",
@@ -1613,7 +1605,7 @@
   "Limit": "Limit",
   "at market price": "zum Marktpreis",
   "Error occurred, please try again later": "Fehler aufgetreten, bitte versuchen Sie es später noch einmal",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Halten Sie etwas KLAY in Ihrem Wallet oder auf SweepStakes am Schnappschussblock, um Stimmrecht für zukünftige Vorschläge zu erhalten.",
+
   "Preparing": "Vorbereiten",
   "Perpetual": "Unbefristet",
   "Stake KLAY": "KLAY einsetzen",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Am öffentlichen Verkauf kann jeder mit einem aktiven SweepStakes-Profil teilnehmen. Die maximale Anzahl von KLAY, die Benutzer einsetzen können, entspricht jedoch der Anzahl von iCAKE, die sie besitzen.",
   "And there’s a fee for participation: see below.": "Und es gibt eine Beteiligungsgebühr: siehe unten.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Die Beteiligungsgebühr sinkt in Stufen, basierend auf dem Prozentsatz des Überlaufs aus dem „Public Sale“ (öffentlichen Verkauf) des IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Hinweis: Die Gebühren können von IFO zu IFO variieren. Um mehr über die Beteiligungsgebühren des IFO zu erfahren, an dem Sie teilnehmen könnten, lesen Sie sich bitte die Details im IFO-Vorschlag (Abstimmung) durch.",
+
   "You have successfully claimed your rewards.": "Sie haben Ihre Belohnungen erfolgreich in Anspruch genommen.",
   "Pottery (BETA)": "Pottery (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "Dieser IFO hat eine Token-Vesting-Funktion. Gekaufte Token werden über einen bestimmten Zeitraum hinweg freigegeben.",
-  "Learn more in the vote proposal": "Erfahren Sie mehr im Abstimmungsvorschlag",
+
   "What is the difference between an IFO and a cIFO?": "Was ist der Unterschied zwischen einem IFO und einem cIFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Wenn Sie nicht genügend KLAY einsetzen, erhalten Sie möglicherweise keine sinnvolle Menge an IFO-Token oder Sie erhalten überhaupt keine IFO-Token.",
   "~%num% available to claim at sales end": "~%num% bei Verkaufsende zu beanspruchen",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Max. Einzahlungsgrenze",
   "Fixed Term KLAY Staking": "Befristeter KLAY-Einsatz",
   "Flexible KLAY Staking": "Flexibler KLAY-Einsatz",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Die Stimmkraft wird anhand der Höhe des Einsatzes und der verbleibenden Einsatzdauer der befristeten KLAY-Einsatzposition im Block berechnet.",
+
   "KLAY locked:": "KLAY gesperrt:",
   "Go to Pools": "Zu den Pools",
   "KLAY Emission Projection": "KLAY-Emissionsprojektion",
   "Boosted by vCAKE": "Erhöht durch vCAKE",
   "Boosting Expired": "Erhöhung abgelaufen",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Ihre vCAKE-Erhöhungist zum Zeitpunkt des Snapshot-Blocks abgelaufen. Erneuern Sie Ihren befristeten Einsatz, um die Erhöhung für zukünftige Abstimmungsvorschläge zu aktivieren.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested% % des gekauften Tokens werden vested (beiseite gelegt) und linear über einen bestimmten Zeitraum freigegeben. %percentageTgeRelease% % des gekauften Tokens wird sofort freigegeben und kann nach Ablauf des IFO eingefordert werden.",
   "The vested tokens will be released linearly over a period of %days% days.": "Die beiseite gelegten Token werden linear über einen Zeitraum von %days% Tagen freigegeben.",
   "Yield Booster": "Ertragserhöhung",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Erfüllen Sie die folgenden Voraussetzungen für die Teilnahme:",
   "Order cancellation": "Stornierung des Auftrags",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Stornierung des Auftrags: %inputAmount% %inputTokenSymbol% für %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Erneuern Sie Ihre Einsatz-Position, um weiterhin von den Vorteilen der Renditesteigerung auf der Farm, der Teilnahme an IFOs, der wertvolleren Stimme bei Abstimmungen und vielem mehr zu profitieren!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Die Sperrfrist ist abgelaufen. Um zu verhindern, dass weitere Belohnungen verbrannt werden, erneuern Sie Ihre Einsatz-Position, um weiterhin die Vorteile des gesperrten Einsatzes zu genießen.",
   "Default": "Standard",
   "Shows username of wallet instead of bunnies": "Benutzernamen der Wallet anstelle von Häschen anzeigen",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (inklusive Belohnungen) sind bis %lockedEndTime% im KLAY-Pool gesperrt",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "Mit iCAKE können Sie an den öffentlichen IFO-Verkäufen teilnehmen und bis zu %iCake% KLAY erwerben.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Mit bCAKE können Sie Ihren Ertrag in SweepStakes-Farms bis zu 2x steigern.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE erhöht bei SweepStakes-Abstimmungen Ihre Stimmkraft auf %totalScore%.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Sperren Sie KLAY, um von den Vorteilen der Ertragserhöhung, der Teilnahme an IFOs, der Erhöhung der Stimmkraft und vielem mehr zu profitieren!",
+
   "KLAY staking expired": "KLAY-Einsatz abgelaufen",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Unzureichende Token-Erlaubnis. Klicken Sie zum Genehmigen auf \"Aktivieren\".",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Für den öffentlichen Verkauf kann jeder berechtigte Teilnehmer einen beliebigen Betrag an KLAY bis zum maximalen Commit-Limit, das zusammen mit dem IFO-Abstimmungsvorschlag veröffentlicht wird, festlegen.",
+
   "Unable to supply": "Angebot nicht möglich",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Indem Sie Liquidität hinzufügen, verdienen Sie 50 % an den Gebühren aller Geschäfte mit diesem Paar, proportional zu Ihrem Anteil an dem Handelspaar. Die Gebühren werden dem Paar hinzugefügt, fallen in Echtzeit an und können durch Abheben Ihrer Liquidität eingefordert werden. Für weitere Informationen zu den Stableswap-Gebühren klicken Sie auf",
   "For each stableswap trade, refer to the fee table": "Siehe die Gebührentabelle für jeden Stableswap-Handel",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "Wie wird der effektive Jahreszins bei SnBNB berechnet?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "Der effektive Jahreszins für SnBNB variiert zwischen 0,5–3 %. Der effektive Jahreszins, den die Validatoren auf BNB Chain erhalten, hängt von zwei Faktoren ab:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Provisionssatz: Der Synclub-Validator berechnet eine Provision von 10 %.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Stimmrecht: Die Höhe des Einsatzes für einen Validator bestimmt den effektiven Jahreszins, den er erhält.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Der Synclub-Validator verwendet MEV (Miner Extractable Value), um seinen effektiven Jahreszins zu verbessern. SnBNB wertet gegenüber BNB im Einklang mit dem effektiven Jahreszins (Staking) von BNB auf.",
   "How can I use SnBNB?": "Wie kann ich SnBNB verwenden?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Sie können SnBNB nutzen, um andere Anwendungsfälle zu erforschen, wie z. B. Tauschen, Leihen/Borgen und Yield Farming auf BNB Chain. Neben",

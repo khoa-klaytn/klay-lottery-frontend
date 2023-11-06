@@ -153,64 +153,7 @@ export interface Achievement {
   points: number
 }
 
-// Voting
-
-/* eslint-disable camelcase */
-/**
- * @see https://hub.snapshot.page/graphql
- */
-export interface VoteWhere {
-  id?: string
-  id_in?: string[]
-  voter?: string
-  voter_in?: string[]
-  proposal?: string
-  proposal_in?: string[]
-}
-
-export enum SnapshotCommand {
-  PROPOSAL = 'proposal',
-  VOTE = 'vote',
-}
-
-export enum ProposalType {
-  ALL = 'all',
-  CORE = 'core',
-  COMMUNITY = 'community',
-}
-
-export enum ProposalState {
-  ACTIVE = 'active',
-  PENDING = 'pending',
-  CLOSED = 'closed',
-}
-
-export interface Proposal {
-  author: string
-  body: string
-  choices: string[]
-  end: number
-  id: string
-  snapshot: string
-  votes: number
-  start: number
-  state: ProposalState
-  title: string
-}
-
-export interface Vote {
-  id: string
-  voter: string
-  created: number
-  proposal: {
-    choices: Proposal['choices']
-  }
-  choice: number
-  metadata?: {
-    votingPower: string
-  }
-  vp: number
-}
+// Lottery
 
 export interface LotteryRoundUserTickets {
   isLoading?: boolean

@@ -2,7 +2,7 @@
   "Farm": "農場",
   "Exchange": "兌換",
   "Docs": "文件",
-  "Voting": "投票",
+
   "Lottery": "彩券",
   "Connect Wallet": "連接錢包",
   "Blog": "網誌",
@@ -596,7 +596,7 @@
   "Starts %date%": "%date% 開始",
   "Ends %date%": "%date% 結束",
   "Closed": "清空",
-  "Vote Now": "立即投票",
+
   "Soon": "即將開始",
   "No proposals found": "找不到提案",
   "Creator": "創作者",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "對 SweepStakes 生態系統的未來發表看法",
   "Got a suggestion?": "有建議嗎？",
   "Community proposals are a great way to see how the community feels about your ideas.": "透過社群提案，您比較能夠知道社群對你的想法有何感受。",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "通過社群投票的建議，未必會獲得實施。但只要有了夠多的社區支持，便更有機會成為核心提案。",
+
   "%field% is required": "需要 %field%",
   "Please create a minimum of %num% choices": "請至少建立 %num% 個選項",
   "Choices must not be empty": "選項不能為空",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "結束日期必須晚於開始日期",
   "Invalid snapshot": "快照無效",
   "Proposal created!": "已建立提案！",
-  "Voted": "已投票",
+
   "Time": "時間",
   "Input choice text": "輸入選項文字",
   "Start Time": "開始時間",
-  "Back to Vote Overview": "返回到投票概覽",
-  "Voting For": "投票給",
-  "Your Voting Power": "您的投票權",
-  "Confirm Vote": "確認投票",
+
   "Add Choice": "新增選項",
   "Title": "標題",
   "Content": "內容",
@@ -630,27 +627,22 @@
   "Actions": "動作",
   "End Time": "結束時間",
   "Publish": "發佈",
-  "No votes found": "找不到投票",
-  "Votes (%count%)": "票數 (%count%)",
+
   "Snapshot": "快照",
   "Choices": "選項",
   "Identifier": "識別項",
   "Current Results": "目前結果",
-  "Vote cast!": "投票！",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "確定要投給這個選項嗎？此動作無法撤消。",
+
   "Tip: write in Markdown!": "提示：用 Markdown 填寫！",
-  "Cast your vote": "投出您的票",
+
   "Preview": "預覽",
-  "%total% Votes": "%total% 張票",
-  "Cast Vote": "投票",
+
   "See All": "檢查全部",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "在下文所詳述的區塊中，您的投票權將取決於您所持有的 KLAY 數量和定期質押部位 (如果您有的話) 的剩餘期限。您在他處所持有的 KLAY，將不會對您的投票權產生貢獻。",
+
   "Wallet": "錢包",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "其他糖漿池",
-  "Voting Power": "投票權",
-  "You need at least %count% voting power to publish a proposal.": "您至少需要 %count% 的投票權才能發佈提案。",
-  "Check voting power": "檢查投票權",
+
   "Amount to collect": "要收集的金額",
   "Your winnings": "您的彩金",
   "Includes your original position and your winnings, minus the %fee% fee.": "包括您的原始部位和您的彩金，減去 %fee% 費用。",
@@ -926,7 +918,7 @@
   "Stocks chart": "股票圖表",
   "Folder with cake token": "具有 KLAY 代幣的資料夾",
   "KLAY makes our world go round.": "KLAY 讓世界運轉起來。",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY 代幣是 SweepStakes 生態系統的核心。購買、贏取、挖礦、消費、質押…甚至可以用來進行投票！",
+
   "Small 3d pancake": "小型 3D SweepStakes",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% 本回合 KLAY 獎金",
   "Buy tickets with KLAY, win KLAY if your numbers match": "用 KLAY 購買彩券，號碼相符即可贏取 KLAY 獎金",
@@ -1499,7 +1491,7 @@
   "Old Farms": "舊農場",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "請注意，這是舊的 BTT 代幣，已按以下比例交換成新的 BTT 代幣：",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "此糖漿池設定錯誤，請使用緊急提取功能取出您質押的代幣。此功能會將您的代幣退回您的錢包，但不會收割獎勵。",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "對於私有銷售，符合條件的參與者都能提交0-最大限額之間任意數量的CAKE。限額於每回 IFO 投票提案揭露。",
+
   "Meet any one of the following requirements to be eligible.": "滿足以下任何一項要求即可獲得資格。",
   "You are eligible to participate in this Private Sale!": "資格符合！您可以參與此次私有銷售！",
   "Meet any one of the requirements to join:": "滿足任何一項要求即可加入：",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "如何將 wBETH 轉換回 ETH？",
   "You can convert wBETH to ETH through": "可透過以下方式將 wBETH 轉換為 ETH：",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes 正致力於在我們的流動權益質押頁面上支援轉換合約，以期未來能協助持有者將 wBETH 無縫轉換回 ETH。",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "目前的 IFO 模式除了保留公開銷售，還推出了一個全新的私有銷售。如要參加，參與者必須滿足 IFO 卡上的某些要求。每個符合條件的參與者，都將能夠提交零至最大參與限額之間任意數量的 KLAY。該限額將與 IFO 投票提案一起發佈。私有銷售不收取參與費。",
+
   "You can choose one or both at the same time!": "您可以同時參加兩種銷售！",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "我們建議您先檢查看看您是否具備參與私有銷售的資格。而在公開銷售中，如果您參與的金額太小，購得的代幣數量極少，這可能會讓您入不敷出。",
   "Just remember you need an active SweepStakes Profile in order to participate.": "您需要啟用 SweepStakes 的個人檔案才能參與。",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "目前市價",
   "Limit Price": "限價",
   "Error Tracking Id": "追蹤 ID 錯誤",
-  "Your voting power at block": "您在快照區塊時的投票權",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "由於截止日期已過，無法傳送交易。請檢查您的交易截止日期是否太短。",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "由於價格變動或代幣具備轉帳費用（抽稅），此鏈上交易將不會成功。請試著提高您的滑點上限。",
   "The input token cannot be transferred. There may be an issue with the input token.": "輸入代幣無法轉移。輸入代幣可能存在問題。",
@@ -1613,7 +1605,7 @@
   "Limit": "限價",
   "at market price": "以市價",
   "Error occurred, please try again later": "發生錯誤，請稍後再試",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "如您希望在未來的提案中擁有投票權，需要您在快照區塊當時，在錢包中或 SweepStakes 上持有一些 KLAY。",
+
   "Preparing": "正在準備",
   "Perpetual": "永續合約",
   "Stake KLAY": "質押 KLAY",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "在公開銷售中，擁有有效 SweepStakes 個人檔案的每個人都可以提交。不過，KLAY 使用者可以提交的最大數量等於他們擁有的 iCAKE 數量。",
   "And there’s a fee for participation: see below.": "並且存在超募手續費：見下文。",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "超募手續費呈階梯式下降，具體取決於 IFO 的「公開銷售」部分中溢出的百分比。",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "注意：不同場次 IFO 的超募手續費用可能會有所不同。如需詳細瞭解超募手續費，請參閱 IFO 提案 (投票) 中的詳細資料，瞭解您想參與的 IFO 的具體情況。",
+
   "You have successfully claimed your rewards.": "您已成功領取獎勵。",
   "Pottery (BETA)": "糖漿彩券 (測試版)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "此次 IFO 有線性釋放機制，因此，您購買的代幣將會在一段時間內逐漸釋放。",
-  "Learn more in the vote proposal": "在投票提案中瞭解詳情",
+
   "What is the difference between an IFO and a cIFO?": "IFO 和 CIFO 之間有什麼區別？",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "如果您沒有提交足夠的 KLAY，您可能不會收到有意義數量的 IFO 代幣，或者您可能根本不會收到任何 IFO 代幣。",
   "~%num% available to claim at sales end": "銷售結束時大約可以領取 %num%",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "儲值上限",
   "Fixed Term KLAY Staking": "定期 KLAY 質押",
   "Flexible KLAY Staking": "靈活 KLAY 質押",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "區塊中的投票權將取決於定期 KLAY 質押部位的質押數量和剩餘時間。",
+
   "KLAY locked:": "已鎖倉 KLAY:",
   "Go to Pools": "前往糖漿池",
   "KLAY Emission Projection": "KLAY 產出量預測",
   "Boosted by vCAKE": "已由 vCAKE 助推",
   "Boosting Expired": "助推已到期",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "在快照區塊時您的 vCAKE 加權已到期結束。延長定期倉位時長，以獲得您在未來的投票提案中的加權。",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% 的購買代幣將在一段時間內線性釋放，之後可以在線性釋放頁面查看及領取。\n%percentageTgeRelease%% 的購買代幣立即釋放，在 IFO 結束時可馬上領取。",
   "The vested tokens will be released linearly over a period of %days% days.": "授權代幣將在 %days% 天的期間內線性釋放。",
   "Yield Booster": "收益助推器",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "滿足以下需求即可加入：",
   "Order cancellation": "訂單取消",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "訂單取消：%inputAmount% %inputTokenSymbol% 兌換為 %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "更新您的質押部位以便繼續享受農場收益助推、參與 IFO、投票權助推等權益！",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "您的鎖倉期已到期結束。請更新您的鎖倉倉位，以避免更多的獎勵被銷毀，並繼續享受鎖倉帶來的收益。",
   "Default": "預設",
   "Shows username of wallet instead of bunnies": "顯示錢包的使用者名稱而非兔子",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (包括獎勵) 已鎖倉在 KLAY 糖漿池中，直到 %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE 允許您參與 IFO 公開銷售並提交最多 %iCake% KLAY。",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE 允許您將 SweepStakes 農場的收益助推最多 2 倍。",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE 在 SweepStakes 投票治理中將您的投票權助推至 %totalScore%。",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "將 KLAY 鎖倉以享受農場收益助推、參與 IFO、投票權助推等權益！",
+
   "KLAY staking expired": "KLAY 質押已過期",
   "Insufficient token allowance. Click \"Enable\" to approve.": "代幣授權額度不足。按一下「啟用」以更新授權額度。",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "對於公開銷售，符合條件的參與者都能提交 0 至最大限額之間任意數量的 KLAY。限額於每回 IFO 投票提案揭露。",
+
   "Unable to supply": "無法添加",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "增加流動性將為您賺取該幣對所有交易費用的 50%，與您在交易對中的持份成正比。賺取的費用會加進幣對中，即時累積且可以透過解除流動性來領取。有關 Stableswap 費用的更多資訊，請按一下",
   "For each stableswap trade, refer to the fee table": "對於每筆穩定幣兌換交易，請參閱費用表",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "SnBNB 的 APR 是如何計算的呢？",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNB 的 APR 介於 0.5%-3% 之間。BNB 鏈上驗證者賺取的 APR 取決於兩個因素：",
   "Commission Rate: synclub validator charges 10% commission fee.": "佣金率：synclub 驗證者收取 10% 的佣金費用。",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "投票權：驗證者權益質押的代幣數量影響獲得的 APR。",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub 驗證者採用 MEV (礦工可提取價值) 來提高 APR。SnBNB 價格相對於 BNB 的升值幅度，與將 BNB 進行權益質押所獲得的 APR，兩者一致。",
   "How can I use SnBNB?": "該怎麼使用 SnBNB 呢？",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "您可以使用 SnBNB 來探索 BNB 鏈上的其他用例，例如交換、借貸和收益耕種。除了",

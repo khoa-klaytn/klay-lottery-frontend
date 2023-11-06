@@ -71,14 +71,6 @@ export const bscTokens = {
     'Qubit Token',
     'https://qbt.fi/',
   ),
-  cvp: new ERC20Token(
-    ChainId.BSC,
-    '0x5Ec3AdBDae549Dce842e24480Eb2434769e22B2E',
-    18,
-    'CVP',
-    'Concentrated Voting Power Token',
-    'https://powerpool.finance/',
-  ),
   bscdefi: new ERC20Token(
     ChainId.BSC,
     '0x40E46dE174dfB776BB89E04dF1C47d8a66855EB3',

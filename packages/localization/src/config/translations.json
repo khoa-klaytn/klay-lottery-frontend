@@ -2,7 +2,7 @@
   "Farm": "Farm",
   "Exchange": "Exchange",
   "Docs": "Docs",
-  "Voting": "Voting",
+
   "Lottery": "Lottery",
   "Connect Wallet": "Connect Wallet",
   "Blog": "Blog",
@@ -596,7 +596,7 @@
   "Starts %date%": "Starts %date%",
   "Ends %date%": "Ends %date%",
   "Closed": "Closed",
-  "Vote Now": "Vote Now",
+
   "Soon": "Soon",
   "No proposals found": "No proposals found",
   "Creator": "Creator",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Have your say in the future of the SweepStakes Ecosystem",
   "Got a suggestion?": "Got a suggestion?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Community proposals are a great way to see how the community feels about your ideas.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.",
+
   "%field% is required": "%field% is required",
   "Please create a minimum of %num% choices": "Please create a minimum of %num% choices",
   "Choices must not be empty": "Choices must not be empty",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "End date must be after the start date",
   "Invalid snapshot": "Invalid snapshot",
   "Proposal created!": "Proposal created!",
-  "Voted": "Voted",
+
   "Time": "Time",
   "Input choice text": "Input choice text",
   "Start Time": "Start Time",
-  "Back to Vote Overview": "Back to Vote Overview",
-  "Voting For": "Voting For",
-  "Your Voting Power": "Your Voting Power",
-  "Confirm Vote": "Confirm Vote",
+
   "Add Choice": "Add Choice",
   "Title": "Title",
   "Content": "Content",
@@ -630,27 +627,22 @@
   "Actions": "Actions",
   "End Time": "End Time",
   "Publish": "Publish",
-  "No votes found": "No votes found",
-  "Votes (%count%)": "Votes (%count%)",
+
   "Snapshot": "Snapshot",
   "Choices": "Choices",
   "Identifier": "Identifier",
   "Current Results": "Current Results",
-  "Vote cast!": "Vote cast!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Are you sure you want to vote for the above choice? This action cannot be undone.",
+
   "Tip: write in Markdown!": "Tip: write in Markdown!",
-  "Cast your vote": "Cast your vote",
+
   "Preview": "Preview",
-  "%total% Votes": "%total% Votes",
-  "Cast Vote": "Cast Vote",
+
   "See All": "See All",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.",
+
   "Wallet": "Wallet",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Other Syrup Pools",
-  "Voting Power": "Voting Power",
-  "You need at least %count% voting power to publish a proposal.": "You need at least %count% voting power to publish a proposal.",
-  "Check voting power": "Check voting power",
+
   "Amount to collect": "Amount to collect",
   "Your winnings": "Your winnings",
   "Includes your original position and your winnings, minus the %fee% fee.": "Includes your original position and your winnings, minus the %fee% fee.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Stocks chart",
   "Folder with cake token": "Folder with cake token",
   "KLAY makes our world go round.": "KLAY makes our world go round.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!",
+
   "Small 3d pancake": "Small 3d pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% in KLAY prizes this round",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Buy tickets with KLAY, win KLAY if your numbers match",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Old Farms",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.",
+
   "Meet any one of the following requirements to be eligible.": "Meet any one of the following requirements to be eligible.",
   "You are eligible to participate in this Private Sale!": "You are eligible to participate in this Private Sale!",
   "Meet any one of the requirements to join:": "Meet any one of the requirements to join:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "How do I convert wBETH back to ETH?",
   "You can convert wBETH to ETH through": "You can convert wBETH to ETH through",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.",
+
   "You can choose one or both at the same time!": "You can choose one or both at the same time!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Just remember you need an active SweepStakes Profile in order to participate.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Current Market Price",
   "Limit Price": "Limit Price",
   "Error Tracking Id": "Error Tracking Id",
-  "Your voting power at block": "Your voting power at block",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.",
   "The input token cannot be transferred. There may be an issue with the input token.": "The input token cannot be transferred. There may be an issue with the input token.",
@@ -1613,7 +1605,7 @@
   "Limit": "Limit",
   "at market price": "at market price",
   "Error occurred, please try again later": "Error occurred, please try again later",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.",
+
   "Preparing": "Preparing",
   "Perpetual": "Perpetual",
   "Stake KLAY": "Stake KLAY",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.",
   "And there’s a fee for participation: see below.": "And there’s a fee for participation: see below.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.",
+
   "You have successfully claimed your rewards.": "You have successfully claimed your rewards.",
   "Pottery (BETA)": "Pottery (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "This IFO has token vesting. Purchased tokens are released over a period of time.",
-  "Learn more in the vote proposal": "Learn more in the vote proposal",
+
   "What is the difference between an IFO and a cIFO?": "What is the difference between an IFO and a cIFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.",
   "~%num% available to claim at sales end": "~%num% available to claim at sales end",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Max. deposit cap",
   "Fixed Term KLAY Staking": "Fixed Term KLAY Staking",
   "Flexible KLAY Staking": "Flexible KLAY Staking",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.",
+
   "KLAY locked:": "KLAY locked:",
   "Go to Pools": "Go to Pools",
   "KLAY Emission Projection": "KLAY Emission Projection",
   "Boosted by vCAKE": "Boosted by vCAKE",
   "Boosting Expired": "Boosting Expired",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.",
   "The vested tokens will be released linearly over a period of %days% days.": "The vested tokens will be released linearly over a period of %days% days.",
   "Yield Booster": "Yield Booster",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Meet the following requirement to join:",
   "Order cancellation": "Order cancellation",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.",
   "Default": "Default",
   "Shows username of wallet instead of bunnies": "Shows username of wallet instead of bunnies",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!",
+
   "KLAY staking expired": "KLAY staking expired",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Insufficient token allowance. Click \"Enable\" to approve.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.",
+
   "Unable to supply": "Unable to supply",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click",
   "For each stableswap trade, refer to the fee table": "For each stableswap trade, refer to the fee table",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "How is the APR calculated for SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Commission Rate: synclub validator charges 10% commission fee.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Voting Power: The staked amount for a validator determines the APR it receives.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.",
   "How can I use SnBNB?": "How can I use SnBNB?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside",

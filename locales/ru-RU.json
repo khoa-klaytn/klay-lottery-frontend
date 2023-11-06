@@ -2,7 +2,7 @@
   "Farm": "Фарминг",
   "Exchange": "Обмен",
   "Docs": "Документы",
-  "Voting": "Голосование",
+
   "Lottery": "Лотерея",
   "Connect Wallet": "Подключить кошелек",
   "Blog": "Блог",
@@ -596,7 +596,7 @@
   "Starts %date%": "Начинается %date%",
   "Ends %date%": "Завершается %date%",
   "Closed": "Закрыто",
-  "Vote Now": "Идет голосование",
+
   "Soon": "Скоро",
   "No proposals found": "Предложения не найдены",
   "Creator": "Автор",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Выразите свое мнение о будущем экосистемы SweepStakes",
   "Got a suggestion?": "Есть предложение?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Предложения сообщества — это отличный способ узнать, что люди думают о ваших идеях.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Такие идеи необязательно будут реализованы, если сообщество за них проголосует, но предложения со значительной поддержкой могут стать \"основными\".",
+
   "%field% is required": "%field% — обязательное поле",
   "Please create a minimum of %num% choices": "Минимум вариантов выбора: %num%",
   "Choices must not be empty": "Необходимо заполнить варианты выбора",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "Дата завершения должна быть после даты начала",
   "Invalid snapshot": "Недействительный снимок",
   "Proposal created!": "Предложение создано!",
-  "Voted": "Завершено",
+
   "Time": "Время",
   "Input choice text": "Введите текст выбора",
   "Start Time": "Время начала",
-  "Back to Vote Overview": "Назад к обзору голосования",
-  "Voting For": "Голосование за",
-  "Your Voting Power": "Ваше влияние в голосовании",
-  "Confirm Vote": "Подтвердить голос",
+
   "Add Choice": "Добавить выбор",
   "Title": "Название",
   "Content": "Содержание",
@@ -630,27 +627,22 @@
   "Actions": "Действия",
   "End Time": "Время завершения",
   "Publish": "Опубликовать",
-  "No votes found": "Голоса не найдены",
-  "Votes (%count%)": "Голоса (%count%)",
+
   "Snapshot": "Снимок",
   "Choices": "Варианты выбора",
   "Identifier": "Идентификатор",
   "Current Results": "Текущие результаты",
-  "Vote cast!": "Голос подан!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Действительно проголосовать за указанный выше вариант? Это действие нельзя отменить.",
+
   "Tip: write in Markdown!": "Совет: используйте разметку Markdown!",
-  "Cast your vote": "Проголосуйте",
+
   "Preview": "Предпросмотр",
-  "%total% Votes": "Всего голосов: %total%",
-  "Cast Vote": "Отдать голос",
+
   "See All": "Показать все",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Ваше влияние в голосовании определяется количеством KLAY, удерживаемых вами, и оставшейся продолжительностью позиции вложения с фиксированным сроком (если она у вас есть) в блоке, указанном ниже. KLAY, удерживаемые в других местах, не учитываются.",
+
   "Wallet": "Кошелек",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Другие пулы Syrup",
-  "Voting Power": "Влияние в голосовании",
-  "You need at least %count% voting power to publish a proposal.": "Необходимый минимум влияния в голосовании для публикации предложения: %count%.",
-  "Check voting power": "Проверить влияние в голосовании",
+
   "Amount to collect": "Сумма для сбора",
   "Your winnings": "Ваши выигрыши",
   "Includes your original position and your winnings, minus the %fee% fee.": "Включает в себя начальную позицию и выигрыши за вычетом комиссии %fee%.",
@@ -926,7 +918,7 @@
   "Stocks chart": "Диаграмма акций",
   "Folder with cake token": "Папка с токеном KLAY",
   "KLAY makes our world go round.": "Нашим миром движет KLAY.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Токен KLAY находится в сердце экосистемы SweepStakes. Покупайте, выигрывайте, фармите, тратьте, вкладывайте его… Да что там, вы можете им даже голосовать!",
+
   "Small 3d pancake": "Маленький объемный панкейк",
   "%cakePrizeInUsd% in KLAY prizes this round": "В этом раунде %cakePrizeInUsd% в призах KLAY",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Покупайте билеты за KLAY и выигрывайте KLAY, если номера совпадут",
@@ -1499,7 +1491,7 @@
   "Old Farms": "Старые фармы",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Обратите внимание: это старый токен BTT, который был обменен на новые токены BTT в следующем соотношении:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Пул был неправильно настроен. Заберите из него токены. Будет использован метод emergencyWithdraw. Токены вернутся в кошелек, но вознаграждение не будет получено.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "При закрытой продаже каждый соответствующий требованиям участник сможет выделить любое количество KLAY, но не более максимальной суммы, которая сообщается вместе с предложением голосования по IFO.",
+
   "Meet any one of the following requirements to be eligible.": "Чтобы иметь право на участие, выполните любое из следующих требований.",
   "You are eligible to participate in this Private Sale!": "Вы можете участвовать в этой закрытой продаже!",
   "Meet any one of the requirements to join:": "Для участия выполните одно из условий:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "Как перевести wBETH обратно в ETH?",
   "You can convert wBETH to ETH through": "Перевести wBETH в ETH можно через",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes также работает над поддержкой контракта на конверсию на странице вложения ликвидности, чтобы обеспечить удобный перевод wBETH обратно в ETH.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "В текущем формате IFO есть новая закрытая продажа. Для участия необходимо соответствовать требованиям, представленным на карте IFO. Соответствующий требованиям участник сможет выделить любое количество KLAY, но не более максимальной суммы, которая сообщается вместе с предложением голосования по IFO. За участие в закрытой продаже комиссия не взимается.",
+
   "You can choose one or both at the same time!": "Вы можете выбрать один или оба вида одновременно!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Рекомендуем сначала проверить, имеете ли вы право участвовать в закрытой распродаже. Если выделенная вами в публичной продаже сумма слишком мала, вы можете не получить существенного количества токенов IFO.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Не забудьте, что для участия понадобится активный профиль SweepStakes.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "Текущая рыночная цена",
   "Limit Price": "Лимитная цена",
   "Error Tracking Id": "Идентификатор отслеживания ошибок",
-  "Your voting power at block": "Влияние в голосовании в блоке",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Срок транзакции истек, поэтому отправить ее не удалось. Проверьте, не слишком ли короткий срок транзакции.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Эта транзакция не пройдет из-за движения цены или комиссии за перевод. Попробуйте повысить допустимый слипедж.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Не удается передать входной токен: возможно, с этим токеном проблема.",
@@ -1613,7 +1605,7 @@
   "Limit": "Лимит",
   "at market price": "по рыночной цене",
   "Error occurred, please try again later": "Произошла ошибка, попробуйте позже",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Чтобы получить право голоса для будущих предложений, храните KLAY в кошельке или на SweepStakes в блоке снимков.",
+
   "Preparing": "Подготовка",
   "Perpetual": "Бессрочные",
   "Stake KLAY": "Вложить KLAY",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "В публичной продаже могут участвовать все активные профили SweepStakes. Однако максимальное количество KLAY, которое можно выделить, равно сумме iCAKE на профиле.",
   "And there’s a fee for participation: see below.": "Также за участие взимается комиссия (см. ниже).",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Комиссия за участие уменьшается на пиках согласно процентному количеству избытка от публичной части IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Примечание. Комиссия зависит от конкретного IFO. Подробнее о комиссии за участие смотрите в сведениях о конкретном предложении IFO (на голосование), в котором вы хотите участвовать.",
+
   "You have successfully claimed your rewards.": "Вы получили вознаграждения.",
   "Pottery (BETA)": "Лотерея вложений (БЕТА)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "У этого IFO есть вестирование токенов. Купленные токены выпускаются в течение определенного времени.",
-  "Learn more in the vote proposal": "Подробнее — в предложении для голосования",
+
   "What is the difference between an IFO and a cIFO?": "В чем разница между IFO и cIFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Если не выделить достаточно KLAY, вы можете не получить приемлемое количество токенов IFO или вообще не получить их.",
   "~%num% available to claim at sales end": "В конце продаж можно получить примерно %num%",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "Максимум внесения средств",
   "Fixed Term KLAY Staking": "Вложения KLAY с фиксированным сроком",
   "Flexible KLAY Staking": "Гибкое вложение KLAY",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Влияние в голосовании рассчитывается по сумме вложения и оставшейся продолжительности позиции вложения KLAY с фиксированным сроком в блоке.",
+
   "KLAY locked:": "KLAY заблокированы:",
   "Go to Pools": "Перейти к пулам",
   "KLAY Emission Projection": "Прогноз эмиссии KLAY",
   "Boosted by vCAKE": "Усилено через vCAKE",
   "Boosting Expired": "Срок усиления истек",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Срок усиления vCAKE в блоке снимка истек. Чтобы активировать усиление для будущих предложений по голосованию, возобновите позицию вложения с фиксированным сроком.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "Часть в %percentageVested%% купленных токенов будет вестирована и выпущена линейно в течение определенного периода. Часть в %percentageTgeRelease%% купленных токенов будет выпущена немедленно и доступна для получения по окончании IFO.",
   "The vested tokens will be released linearly over a period of %days% days.": "Вестированные токены будут выпускаться линейно в течение %days% сут.",
   "Yield Booster": "Бустер выручки",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "Чтобы присоединиться, выполните следующие требования:",
   "Order cancellation": "Отмена ордера",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Отмена ордера: %inputAmount% %inputTokenSymbol% на %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Возобновите позицию вложения и продолжайте пользоваться преимуществами: повышением выручки фарма, участием в IFO, увеличенным влиянием в голосовании и т. д.!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Период блокировки закончился. Чтобы избежать дальнейшего сожжения вознаграждений, возобновите позицию вложения или продолжайте пользоваться преимуществами вложения с блокировкой.",
   "Default": "По умолчанию",
   "Shows username of wallet instead of bunnies": "Показывает имя пользователя кошелька вместо зайчиков",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (включая награды) в блокировке в пуле KLAY до %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "Токен iCAKE позволяет участвовать в публичных продажах IFO и вносить до %iCake% от KLAY.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Токен bCAKE позволяет увеличивать выручку на фармах SweepStakes максимум вдвое.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "Токен vCAKE повышает влияние в голосовании в системе управления SweepStakes максимум до %totalScore%.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Заблокировав KLAY, вы сможете пользоваться следующими преимуществами: повышение выручки фарма, участие в IFO, увеличенное влияние в голосовании и т. д.!",
+
   "KLAY staking expired": "Срок действия вложения KLAY истек",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Недостаточное количество токенов. Чтобы подтвердить, нажмите «Включить».",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "При публичной продаже каждый соответствующий требованиям участник сможет выделить любое количество KLAY в рамках максимальной суммы, оглашаемой вместе с предложением голосования по IFO.",
+
   "Unable to supply": "Не удается выдвинуть предложение",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Добавляя ликвидность, вы получите 50% от комиссий по всем сделкам в этой паре пропорционально вашей доле в торговой паре. Комиссии добавляются в пару, накапливаются в режиме реального времени и могут быть получены посредством вывода ликвидности. Подробнее о комиссиях StableSwap —",
   "For each stableswap trade, refer to the fee table": "По сделкам StableSwap см. таблицу комиссий",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "Как рассчитывается APR для SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "APR для SnBNB варьируется от 0,5% до 3%. APR, заработанная валидаторами на BNB Chain, зависит от двух факторов:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Размер комиссии: валидатор synclub взимает комиссию в размере 10%.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Право голоса: вложенная сумма определяет для валидатора получаемую APR.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Валидатор Synclub использует извлекаемую стоимость майнера (MEV) для усовершенствования своей APR. SnBNB растет относительно BNB в соответствии с вложенной APR BNB.",
   "How can I use SnBNB?": "Как использовать SnBNB?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Вы можете использовать SnBNB, чтобы изучить другие возможности использования, такие как обмен, предоставление и взятие займов и фарминг на BnbChain. Помимо этого",

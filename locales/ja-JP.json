@@ -2,7 +2,7 @@
   "Farm": "ファーム",
   "Exchange": "通貨の交換",
   "Docs": "資料",
-  "Voting": "投票",
+
   "Lottery": "宝くじ",
   "Connect Wallet": "ウォレットを接続",
   "Blog": "ブログ",
@@ -596,7 +596,7 @@
   "Starts %date%": "開始日: %date%",
   "Ends %date%": "終了予定日: %date%",
   "Closed": "終了",
-  "Vote Now": "今すぐ投票",
+
   "Soon": "まもなく",
   "No proposals found": "提案が見つかりません",
   "Creator": "作成者",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "SweepStakesエコシステムの将来についてご意見をお聞かせください",
   "Got a suggestion?": "ご提案をお聞かせください。",
   "Community proposals are a great way to see how the community feels about your ideas.": "コミュニティの提案は、コミュニティがあなたのアイデアについてどう感じているかを確認するのに最適な方法です。",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "コミュニティの投票が得られたとしても必ずしも実装されるわけではありませんが、コミュニティから多くの支援がある提案は、コア提案になることがあります。",
+
   "%field% is required": "%field%が必要です",
   "Please create a minimum of %num% choices": "少なくとも%num%つの選択項目を作成してください",
   "Choices must not be empty": "選択項目を空することはできません",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "終了日は開始日より後にする必要があります",
   "Invalid snapshot": "スナップショットが無効です",
   "Proposal created!": "提案を作成しました！",
-  "Voted": "投票済み",
+
   "Time": "時間",
   "Input choice text": "選択のテキストを入力",
   "Start Time": "開始時間",
-  "Back to Vote Overview": "投票の概要に戻る",
-  "Voting For": "投票先",
-  "Your Voting Power": "投票権",
-  "Confirm Vote": "投票を確定",
+
   "Add Choice": "選択の追加",
   "Title": "タイトル",
   "Content": "コンテンツ",
@@ -630,27 +627,22 @@
   "Actions": "アクション",
   "End Time": "終了時間",
   "Publish": "公開",
-  "No votes found": "投票が見つかりません",
-  "Votes (%count%)": "投票数（%count%）",
+
   "Snapshot": "スナップショット",
   "Choices": "選択項目",
   "Identifier": "ID",
   "Current Results": "現在の結果",
-  "Vote cast!": "投票総数！",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "上記の選択に投票しますか？このアクションを元に戻すことはできません。",
+
   "Tip: write in Markdown!": "ヒント: Markdownで書いてください！",
-  "Cast your vote": "投票",
+
   "Preview": "プレビュー",
-  "%total% Votes": "投票総数: %total%",
-  "Cast Vote": "投票",
+
   "See All": "すべてを表示",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "あなたの投票パワーは保有しているCAKEの量と以下に説明されるブロックでの定期ステーキングポジション（ある場合）の残りの期間で決まります。他の場所で保有しているCAKEは投票パワーに考慮されません。",
+
   "Wallet": "ウォレット",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "他のSYRUPプール",
-  "Voting Power": "投票権",
-  "You need at least %count% voting power to publish a proposal.": "提案を公開するには、少なくとも%count%の投票権が必要です。",
-  "Check voting power": "投票権を確認",
+
   "Amount to collect": "回収額",
   "Your winnings": "賞金",
   "Includes your original position and your winnings, minus the %fee% fee.": "%fee%手数料を差し引いた、元のポジションと賞金を含む。",
@@ -926,7 +918,7 @@
   "Stocks chart": "株価チャート",
   "Folder with cake token": "CAKEトークンのフォルダー",
   "KLAY makes our world go round.": "CAKEで世界が広がる。",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "CAKEトークンはSweepStakesエコシステムの中核的な役割を果たします。購入したり、勝ち取ったり、ファーミングしたり、消費したり、ステーキングしたり... ぴょんと、投票にも使えちゃいます！",
+
   "Small 3d pancake": "小さい3DのSweepStakes",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd%相当のCAKEが現ラウンドの賞金",
   "Buy tickets with KLAY, win KLAY if your numbers match": "CAKEでロトチケットを購入し、数字を一致させて賞金CAKEを入手しよう",
@@ -1499,7 +1491,7 @@
   "Old Farms": "古いファーム",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "これは古いBTTトークンであることに注意してください。次の比率で新しいBTTトークンにスワップされています:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "このプールの構成は誤っています。プールからトークンをステーク解除してください。emergencyWithdraw手法が使用されます。トークンはウォレットに戻されますが、報酬は収穫されません。",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "非公開販売においては、参加資格のあるユーザーはそれぞれ、最大投資制限まで任意のCAKEを投資できます。これは、IFO投票提案とともに公開されます。",
+
   "Meet any one of the following requirements to be eligible.": "資格を得るには、次の要件のいずれかを満たします。",
   "You are eligible to participate in this Private Sale!": "この非公開販売に参加する資格があります！",
   "Meet any one of the requirements to join:": "参加するには要件のいずれかを満たします:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "wBETHをETHに変換し直すには？",
   "You can convert wBETH to ETH through": "次の方法で、wBETHをETHに変換できます。",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakesでは、リキッドステーキングページでwBETHからETHにシームレスに変換できるように、変換コントラクトのサポートにも取り組んでいます。",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "現在のIFO 形式です。最新の非公開販売があります。参加するには、IFOカードに提示された特定の要件を満たす必要があります。参加資格のあるユーザーはそれぞれ、最大投資制限まで任意のCAKEを投資できます。これは、IFO投票提案とともに公開されます。非公開販売には参加手数料は不要です。",
+
   "You can choose one or both at the same time!": "1つまたは両方を同時に選択できます！",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "まず、非公開販売への参加資格を満たすかどうかをチェックすることをお勧めします。公開販売では、投資する量が少なすぎる場合、意味のあるIFOトークンを受け取れない可能性があります。",
   "Just remember you need an active SweepStakes Profile in order to participate.": "参加するにはアクティブなSweepStakesプロファイルが必要なことを忘れないでください。",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "現在の市場価格",
   "Limit Price": "リミット価格",
   "Error Tracking Id": "IDの追跡エラー",
-  "Your voting power at block": "ブロックの投票パワー",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "期限が過ぎたため、取引を送信できませんでした。取引期限が低すぎないことを確認してください。",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "価格変動または送金にかかる手数料により、この取引は完了しません。スリッページ許容度を高めてみてください。",
   "The input token cannot be transferred. There may be an issue with the input token.": "インプットトークンを転送できません。インプットトークンに問題がある可能性があります。",
@@ -1613,7 +1605,7 @@
   "Limit": "リミット",
   "at market price": "市場価格",
   "Error occurred, please try again later": "エラーが発生しました。後でもう一度お試しください",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "今後の提案に対する投票権を取得するには、スナップショットブロックでウォレットまたはSweepStakesにCAKEを少し保持します。",
+
   "Preparing": "準備中",
   "Perpetual": "パーペチュアル",
   "Stake KLAY": "CAKEをステーキング",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "公開販売では、アクティブなSweepStakesプロファイルを持つすべてのユーザーが投資できます。ユーザーが投資できるCAKE最大額は、ユーザーが持つiCAKEの数です。",
   "And there’s a fee for participation: see below.": "また、参加手数料があります: 以下をご覧ください。",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "参加手数料は、IFOの「公開販売」部分からのオーバーフローの割合によって段階的に減っていきます。",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "注意: 手数料はIFOによって異なります。参加手数料について詳しくは、参加するIFOの特徴に関するIFO提案（投票）の詳細をご覧ください。",
+
   "You have successfully claimed your rewards.": "報酬を正常に請求しました。",
   "Pottery (BETA)": "ポタリー（Beta）",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "このIFOにはトークンべスティングがあります。購入したトークンは、一定期間公開されます。",
-  "Learn more in the vote proposal": "投票提案で詳細を見る",
+
   "What is the difference between an IFO and a cIFO?": "IFOとcIFOの違いは？",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "十分なCAKEを投資しない場合、意味のあるIFOトークン量を受け取れないか、IFOトークンをまったく受け取れない可能性があります。",
   "~%num% available to claim at sales end": "販売終了時に約%num%を請求可能",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "最大入金上限",
   "Fixed Term KLAY Staking": "定期CAKEステーキング",
   "Flexible KLAY Staking": "フレキシブルCAKEステーキング",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "投票パワーは、ステーキング量とブロックの定期CAKEステーキングポジションの残りのステーキング期間を使用して計算されます。",
+
   "KLAY locked:": "ロック中のCAKE:",
   "Go to Pools": "プールに移動",
   "KLAY Emission Projection": "CAKE排出量の予測",
   "Boosted by vCAKE": "vCAKEで強化",
   "Boosting Expired": "強化が期限切れになりました",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "vCAKE強化はスナップショットブロックで期限切れになりました。定期ステーキングポジションを更新して、今後の投票提案の強化を有効にしてください。",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "購入したトークンの%percentageVested%%がべスティングされ、一定期間、直線的にリリースされます。購入したトークンの%percentageTgeRelease%%が直ちにリリースされ、IFO終了時に回収できるようになります。",
   "The vested tokens will be released linearly over a period of %days% days.": "べスティングされたトークンは%days%日間、直線的にリリースされます。",
   "Yield Booster": "利回りブースター",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "参加要件は以下のとおりです。",
   "Order cancellation": "注文のキャンセル",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "注文のキャンセル: %inputAmount% %inputTokenSymbol%を%outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "ステーキングポジションを更新して、ファーム利回り強化、IFOへの参加、投票権強化などを引き続き利用しましょう！",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "ロック期間が終了しました。さらに多くの報酬がバーンされないように、ステーキングポジションを更新して、ロックステーキングのメリットをさらに楽しみましょう。",
   "Default": "デフォルト",
   "Shows username of wallet instead of bunnies": "バニーの代わりにウォレットのユーザー名を表示します",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY（報酬を含む）は%lockedEndTime%までCAKEプールにロックされます",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKEを使うと、IFO公開販売に参加し、最大%iCake% CAKEをコミットできます。",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKEを使うと、SweepStakesファームの利回りを最大2xに強化できます。",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKEは、SweepStakes投票ガバナンスの投票権を%totalScore%に強化します。",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "CAKEをロックして、ファーム利回り強化、IFOへの参加、投票権強化などを利用しましょう！",
+
   "KLAY staking expired": "CAKEステーキングが期限切れになりました",
   "Insufficient token allowance. Click \"Enable\" to approve.": "トークン引当金が不足しています。承認するには「有効化」をクリックしてください。",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "公開販売においては、参加資格のあるユーザーはそれぞれ、最大投資制限まで任意のCAKEを投資できます。これは、IFO投票提案とともに公開されます。",
+
   "Unable to supply": "供給できません",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "流動性を追加することで、トレードペアのシェアに比例して、このペアのすべてのトレードの手数料から50%を獲得します。手数料はペアに追加されてリアルタイムで計上され、流動性を引き出すことで請求できます。Stableswap手数料についての詳細は、次をクリック:",
   "For each stableswap trade, refer to the fee table": "各Stableswapトレードについては、手数料表をご覧ください",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "SnBNBの年率はどのように計算されますか？",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNBの年率は0.5%～3%で変動します。BNBチェーンのバリデーターが獲得する年率は、次の2つの要因に応じて異なります。",
   "Commission Rate: synclub validator charges 10% commission fee.": "コミッションレート: Synclubバリデーターは10%のコミッション手数料を請求します。",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "投票権: バリデーターのステーキング額によって受け取る年率が決まります。",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclubバリデーターは年率を強化するためにMEV（最大抽出可能価値）を採用しています。SnBNBはBNBのステーキング年率に合わせてBNBに対して増価します。",
   "How can I use SnBNB?": "SnBNBを使用するには？",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "SnBNBを使用して、BnbChainでのスワップ、貸し出し/借り入れ、イールドファーミングなどの他のユースケースを探索できます。",

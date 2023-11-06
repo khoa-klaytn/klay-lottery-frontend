@@ -2,7 +2,7 @@
   "Farm": "ஃபார்ம்",
   "Exchange": "சந்தை",
   "Docs": "ஆவணங்கள்",
-  "Voting": "வாக்களித்தல்",
+
   "Lottery": "லாட்டரி",
   "Connect Wallet": "வாலெட்டை இணை",
   "Blog": "வலைப்பூ",
@@ -596,7 +596,7 @@
   "Starts %date%": "தொடங்குவது %date%",
   "Ends %date%": "முடிவது %date%",
   "Closed": "மூடியது",
-  "Vote Now": "இப்போது வாக்களி",
+
   "Soon": "விரைவில்",
   "No proposals found": "முன்மொழிவுகள் எவையுமில்லை",
   "Creator": "உருவாக்குநர்",
@@ -605,7 +605,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "SweepStakes ஈகோசிஸ்டமின் எதிர்காலத்திற்கு உங்கள் கருத்தைப் பதிவுசெய்திடுங்கள்",
   "Got a suggestion?": "பரிந்துரை உள்ளதா?",
   "Community proposals are a great way to see how the community feels about your ideas.": "உங்கள் யோசனைகள் பற்றி சமூகம் என்ன நினைக்கிறது என்பதைக் காண, சமூக முன்மொழிவுகள் ஒரு சிறந்த வழியாகும்.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "சமூகம் வெற்றிகரமாக வாக்களித்தால் அவை செயல்படுத்தப்பட வேண்டிய அவசியமில்லை, ஆனால் ஏராளமான சமூக ஆதரவைக் கொண்ட பரிந்துரைகள் பிரதான முன்மொழிவுகளாகச் செய்யப்படலாம்.",
+
   "%field% is required": "%field% தேவை",
   "Please create a minimum of %num% choices": "குறைந்தபட்சம் %num% தெரிவுகளைச் செய்திடுங்கள்",
   "Choices must not be empty": "தெரிவுகள் காலியாக இருக்கக்கூடாது",
@@ -614,14 +614,11 @@
   "End date must be after the start date": "இறுதித் தேதி, தொடக்கத் தேதிக்குப் பிந்தையதாக இருக்க வேண்டும்",
   "Invalid snapshot": "தவறான ஸ்னேப்ஷாட்",
   "Proposal created!": "முன்மொழிவு உருவாக்கப்பட்டது!",
-  "Voted": "வாக்களிதது",
+
   "Time": "நேரம்",
   "Input choice text": "தேர்வு உரையை உள்ளிடு",
   "Start Time": "தொடக்க நேரம்",
-  "Back to Vote Overview": "வாக்களிப்பு கண்ணோட்டத்திற்குத் திரும்பு",
-  "Voting For": "வாக்களிப்பது",
-  "Your Voting Power": "உங்கள் வாக்களிப்புச் சக்தி",
-  "Confirm Vote": "வாக்கை உறுதிசெய்க",
+
   "Add Choice": "தேர்வைச் சேர்",
   "Title": "தலைப்பு",
   "Content": "உள்ளடக்கம்",
@@ -630,27 +627,22 @@
   "Actions": "செயல்கள்",
   "End Time": "இறுதி நேரம்",
   "Publish": "பிரசுரி",
-  "No votes found": "வாக்குகள் எவையுமில்லை",
-  "Votes (%count%)": "வாக்குகள் (%count%)",
+
   "Snapshot": "ஸ்னேப்ஷாட்",
   "Choices": "தேர்வுகள்",
   "Identifier": "அடையாளங்காட்டி",
   "Current Results": "நடப்பு முடிவுகள்",
-  "Vote cast!": "வாக்களித்திடுக!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "மேற்கூறிய தேர்வுக்கு நிச்சயம் வாக்களிக்க விரும்புகிறீர்களா? இதைச் செயல்தவிர்க்க முடியாது.",
+
   "Tip: write in Markdown!": "குறிப்பு: மார்க்டவுனில் எழுதுக!",
-  "Cast your vote": "உங்கள் வாக்கை அளித்திடுக",
+
   "Preview": "முற்காட்சி",
-  "%total% Votes": "%total% வாக்குகள்",
-  "Cast Vote": "வாக்களி",
+
   "See All": "எல்லாம் காட்டு",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "நீங்கள் வைத்திருக்கும் CAKEன் அளவாலும், கீழே விவரிக்கப்பட்டுள்ள ப்ளாக்கில் (உங்களிடம் இருந்தால்) நிலையான-கால ஸ்டேக்கிங் நிலையில் மீதமுள்ள கால அளவாலும் உங்கள் வாக்களிப்புத் திறன் தீர்மானிக்கப்படுகிறது. மற்ற இடங்களில் இருக்கும் KLAY, உங்கள் வாக்களிப்புத் திறனுக்குப் பங்களிப்பதில்லை.",
+
   "Wallet": "வாலெட்",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "பிற SYRUP பூல்கள்",
-  "Voting Power": "வாக்களிப்புச் சக்தி",
-  "You need at least %count% voting power to publish a proposal.": "முன்மொழிவைப் பிரசுரிக்க குறைந்தபட்சம் %count% வாக்களிப்புச் சக்தி தேவை.",
-  "Check voting power": "வாக்களிப்புச் சக்தியைச் சோதித்திடுக",
+
   "Amount to collect": "சேகரிப்பதற்கான தொகை",
   "Your winnings": "உங்கள் வெற்றிகள்",
   "Includes your original position and your winnings, minus the %fee% fee.": "உங்கள் அசல் நிலை மற்றும் உங்கள் வெற்றிகள், கழிப்பு %fee% கட்டணம் என்பது உள்ளடங்குகிறது.",
@@ -926,7 +918,7 @@
   "Stocks chart": "பங்குகள் நிரல்படம்",
   "Folder with cake token": "KLAY டோக்கன் உள்ள கோப்புறை",
   "KLAY makes our world go round.": "KLAY நமது உலகை சுழலச் செய்கிறது.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY டோக்கன், SweepStakes ஈக்கோசிஸ்டத்தின் இதயத்தில் உள்ளது. அதை வாங்குக, வெல்க, ஃபார்ம் செய்க, செலவழித்திடுக, ஸ்டேக் செய்க... ஆம், இதைக் கொண்டு நீங்கள் வாக்களிக்கவும் செய்யலாம்!",
+
   "Small 3d pancake": "சிறிய 3d pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "இந்தச் சுற்றில் KLAY பரிசுகளில் %cakePrizeInUsd%",
   "Buy tickets with KLAY, win KLAY if your numbers match": "CAKEஉடன் டிக்கெட்களை வாங்கி, உங்கள் எண்கள் பொருந்தினால் KLAY வெல்லுங்கள்",
@@ -1499,7 +1491,7 @@
   "Old Farms": "பழைய ஃபார்ம்கள்",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "இது பழைய BTT டோக்கன் என்பதை நினைவில் கொள்ளவும், இது பின்வரும் விகிதத்தில் புதிய BTT டோக்கன்களுக்கு ஸ்வாப் செய்யப்பட்டுள்ளது:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "இந்த பூல் தவறாக உள்ளமைக்கப்பட்டது. தயவுசெய்து உங்கள் டோக்கன்களை அதிலிருந்து அன்ஸ்டேக் செய்யவும், எமர்ஜென்சி வித்ட்ரா முறை பயன்படுத்தப்படும். உங்கள் டோக்கன்கள் உங்கள் வாலெட்டில் திருப்பித் தரப்படும், இருப்பினும் வெகுமதிகள் அறுவடை செய்யப்படாது.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "தனிப்பட்ட விற்பனைக்கு, ஒவ்வொரு தகுதியுடைய பங்கேற்பாளரும் அதிகபட்ச கமிட் வரம்பு வரை KLAY-இன் எத்தொகைக்கும் கமிட் செய்ய முடியும், இது IFO வாக்களிப்பு முன்மொழிவுடன் வெளியிடப்படுகிறது.",
+
   "Meet any one of the following requirements to be eligible.": "தகுதிபெற பின்வரும் தேவைகளில் ஏதேனும் ஒன்றைப் பூர்த்தி செய்யவும்.",
   "You are eligible to participate in this Private Sale!": "இந்த தனியார் விற்பனையில் பங்கேற்க நீங்கள் தகுதி பெற்றுள்ளீர்கள்!",
   "Meet any one of the requirements to join:": "சேர்வதற்கு, தேவைகளின் ஏதேனும் ஒன்றைப் பூர்த்தி செய்யுங்கள்:",
@@ -1525,7 +1517,7 @@
   "How do I convert wBETH back to ETH?": "wBETHஐ எப்படி மீண்டும் ETHக்கு உருமாற்றுவது?",
   "You can convert wBETH to ETH through": "நீங்கள் wBETHஐ இவ்வழியில் ETHக்கு உருமாற்றலாம்:",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "wBETHஐ ETHக்குத் தடையின்றி உருமாற்ற, எங்கள் லிக்விட் ஸ்டேக்கிங் பக்கத்தில் ஓர் உருமாற்றல் ஒப்பந்தத்தை ஆதரிப்பதற்கும் SweepStakes செயல்படுகிறது.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "நடப்பு IFO வடிவத்தில், ஒரு புத்தம் புதிய தனியார் விற்பனை உள்ளது. பங்கேற்க, பங்கேற்பாளர்கள் IFO அட்டையில் வழங்கப்பட்ட குறிப்பிட்ட சில தேவைகளைப் பூர்த்தி செய்ய வேண்டும். ஒவ்வொரு தகுதியுடைய பங்கேற்பாளரும் அதிகபட்ச கமிட் வரம்பு வரை CAKEன் எந்தத் தொகையையும் கமிட் செய்ய முடியும், இது IFO வாக்களிப்பு முன்மொழிவுடன் வெளியிடப்படுகிறது. தனியார் விற்பனையில் பங்கேற்பு கட்டணம் இல்லை.",
+
   "You can choose one or both at the same time!": "நீங்கள் ஒன்று அல்லது இரண்டையும் ஒரே நேரத்தில் தேர்வு செய்யலாம்!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "நீங்கள் முதலில் தனியார் விற்பனையில் பங்கேற்கத் தகுதியுள்ளவரா என்பதைச் சரிபார்க்குமாறு பரிந்துரைக்கிறோம். பொது விற்பனையில், நீங்கள் கமிட் செய்யும் தொகை மிகவும் சிறியதாக இருந்தால், IFO டோக்கன்களின் அர்த்தமுள்ள தொகையை நீங்கள் பெறாமல் போகலாம்.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "பங்கேற்க, செயலிலுள்ள SweepStakes சுயவிவரம் தேவை என்பதை நினைவில் கொள்ளுங்கள்.",
@@ -1545,7 +1537,7 @@
   "Current Market Price": "நடப்பு மார்க்கெட் விலை",
   "Limit Price": "லிமிட் விலை",
   "Error Tracking Id": "பிழை கண்காணிப்பு ஐடி",
-  "Your voting power at block": "ப்ளாக்கில் உங்கள் வாக்களிப்புத் திறன்",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "காலக்கெடு முடிந்துவிட்டதால் பரிவர்த்தனையை அனுப்ப முடியவில்லை. உங்கள் பரிவர்த்தனைக் காலக்கெடு மிகக் குறைவாக இல்லை என்பதைச் சரிபார்த்திடுங்கள்.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "இந்தப் பரிவர்த்தனை, விலை நகர்வு காரணமாகவோ இடமாற்றத்திற்கான கட்டணம் காரணமாகவோ வெற்றிபெறாது. உங்கள் ஸ்லிப்பேஜ் டாலெரன்ஸை அதிகரிக்க முயற்சிக்கவும்.",
   "The input token cannot be transferred. There may be an issue with the input token.": "உள்ளீட்டு டோக்கனை இடமாற்ற முடியாது. உள்ளீட்டு டோக்கனில் சிக்கல் இருக்கக்கூடும்.",
@@ -1613,7 +1605,7 @@
   "Limit": "லிமிட்",
   "at market price": "மார்க்கெட் விலையில்",
   "Error occurred, please try again later": "பிழை ஏற்பட்டது, பின்னர் மீண்டும் முயற்சித்திடுக",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "எதிர்கால முன்மொழிவுகளுக்கான வாக்களிக்கும் சக்தியைப் பெற, உங்கள் வாலெட்டில் அல்லது ஸ்னாப்ஷாட் பிளாக்கில் உள்ள SweepStakes-இல் சிறிது KLAY வைத்திருங்கள்.",
+
   "Preparing": "தயார்செய்கிறது",
   "Perpetual": "நிரந்தரமானது",
   "Stake KLAY": "KLAY ஸ்டேக் செய்",
@@ -1844,11 +1836,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "பொது விற்பனையில், செயலில் உள்ள SweepStakes சுயவிவரத்தைக் கொண்ட எவரும் கமிட் செய்யலாம். இருப்பினும், KLAY பயனர்கள் கமிட் செய்யத்தக்க அதிகபட்ச தொகை, அவர்கள் வைத்திருக்கும் iCakeன் எண்ணிக்கைக்கு சமமாகும்.",
   "And there’s a fee for participation: see below.": "பங்கேற்பதற்குக் கட்டணம் உள்ளது: கீழே பார்க்கவும்.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "IFOவின் ”பொது விற்பனை” பகுதியிலிருந்து மிகுந்தோடும் சதவீதத்தின் அடிப்படையில், க்ளிஃப்களில் பங்கேற்புக் கட்டணம் குறைகிறது.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "குறிப்பு: கட்டணங்கள் வெவ்வேறு IFOக்களுக்கு இடையில் வேறுபடலாம். பங்கேற்புக் கட்டணங்களைப் பற்றி மேலும் அறிய, நீங்கள் பங்கேற்க விரும்பும் IFOன் பிரத்தியேகங்களுக்கு IFO முன்மொழிவில் (வாக்களிப்பு) உள்ள விவரங்களைப் பாருங்கள்.",
+
   "You have successfully claimed your rewards.": "உங்கள் வெகுமதிகளை வெற்றிகரமாக கிளைம் செய்துள்ளீர்கள்.",
   "Pottery (BETA)": "பாட்டரி (பீட்டா)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "இந்த IFOல் டோக்கன் வெஸ்டிங் உள்ளது. வாங்கிய டோக்கன்கள் காலப்போக்கில் விடுவிக்கப்படுகின்றன.",
-  "Learn more in the vote proposal": "வாக்களிப்பு முன்மொழிவில் மேலும் அறிக",
+
   "What is the difference between an IFO and a cIFO?": "ஒரு IFOக்கும் cIFOக்கும் உள்ள வேறுபாடு என்ன?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "நீங்கள் போதுமான KLAY-ஐ கமிட் செய்யவில்லை என்றால், IFO டோக்கன்களின் அர்த்தமுள்ள தொகை உங்களுக்குக் கிடைக்காமல் போகலாம், அல்லது IFO டோக்கன்கள் எதையும் நீங்கள் பெறாமலேயே போகலாம்.",
   "~%num% available to claim at sales end": "~%num%, விற்பனையின் முடிவில் கிளைம் செய்யக் கிடைக்கிறது",
@@ -1874,13 +1866,13 @@
   "Max. deposit cap": "அதிகபட்ச டெபாசிட் வரம்பு",
   "Fixed Term KLAY Staking": "நிலையான-கால KLAY ஸ்டேக்கிங்",
   "Flexible KLAY Staking": "நெகிழ்வான KLAY ஸ்டேக்கிங்",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "ப்ளாக்கில் நிலையான-கால KLAY ஸ்டேக்கிங் நிலையின் ஸ்டேக்கிங் தொகையையும், மீதமுள்ள ஸ்டேக்கிங் காலத்தையும் பயன்படுத்தி வாக்களிப்புத் திறன் கணக்கிடப்படுகிறது.",
+
   "KLAY locked:": "KLAY பூட்டியது:",
   "Go to Pools": "பூல்களுக்குச் செல்க",
   "KLAY Emission Projection": "KLAY உமிழ்வுத் திட்டம்",
   "Boosted by vCAKE": "vCAKE ஆல் பூஸ்ட் செய்யப்பட்டது",
   "Boosting Expired": "பூஸ்டிங் காலாவதியானது",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "உங்கள் vCAKE பூஸ்டிங், ஸ்னாப்ஷாட் ப்ளாக்கில் காலாவதியானது. எதிர்கால வாக்களிப்பு முன்மொழிவுகளுக்கான பூஸ்டைச் செயல்படுத்த உங்கள் நிலையான-கால ஸ்டேக்கிங் நிலையைப் புதுப்பிக்கவும்.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "வாங்கிய டோக்கனில் %percentageVested% ஒரு குறிப்பிட்ட காலத்தில் வெஸ்ட் செய்யப்பட்டு, லீனியர் முறையில் வெளியிடப்படும். வாங்கிய டோக்கனில் %percentageTgeRelease% உடனடியாக வெளியிடப்படும் மற்றும் IFO முடியும்போது கிளைம் செய்யக் கிடைக்கும்.",
   "The vested tokens will be released linearly over a period of %days% days.": "வெஸ்டட் டோக்கன்கள் %days% நாட்களில் நேரியல் முறையில் வெளியிடப்படும்.",
   "Yield Booster": "மகசூல் பூஸ்டர்",
@@ -2073,7 +2065,7 @@
   "Meet the following requirement to join:": "சேர பின்வரும் தேவையைப் பூர்த்தி செய்யவும்:",
   "Order cancellation": "ஆர்டர் ரத்து",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "ஆர்டர் ரத்து: %outputAmount% %outputTokenSymbol% -க்கான %inputAmount% %inputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "பண்ணை விளைச்சலை அதிகரிப்பது, IFOகளில் பங்கேற்பது, வாக்களிப்பு ஆற்றலை அதிகரிப்பது மற்றும் பலவற்றின் பலன்களைத் தொடர்ந்து அனுபவிக்க உங்கள் ஸ்டேக்கிங் நிலையைப் புதுப்பிக்கவும்!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "பூட்டுக் காலம் முடிந்துவிட்டது. அதிக வெகுமதிகள் செலவழிக்கப்படுவதைத் தவிர்க்க, பூட்டிய ஸ்டேக்கிங்கின் பலன்களைத் தொடர்ந்து அனுபவிக்க உங்கள் ஸ்டேக்கிங் நிலையைப் புதுப்பிக்கவும்.",
   "Default": "இயல்புநிலை",
   "Shows username of wallet instead of bunnies": "முயல்களுக்குப் பதிலாக வாலட்டின் பயனர்பெயரைக் காட்டுகிறது",
@@ -2087,11 +2079,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (வெகுமதிகள் உட்பட) %lockedEndTime% வரை KLAY பூலில் பூட்டப்படுகின்றன",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE, நீங்கள் IFO பொது விற்பனையில் பங்கேற்பதற்கும், CAKEன் %iCake% தொகை வரை கமிட் செய்வதற்கும் அனுமதிக்கிறது.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE, நீங்கள் SweepStakes ஃபார்ம்களில் உங்கள் மகசூலை 2x வரை அதிகரிக்க அனுமதிக்கிறது.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE, உங்கள் வாக்களிக்கும் ஆற்றலை SweepStakes வாக்களிப்பு நிர்வாகத்தில் %totalScore% க்கு அதிகரிக்கிறது.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "ஃபார்ம் மகசூல் அதிகரிப்பு, IFOக்களில் பங்கேற்பது, வாக்களிக்கும் ஆற்றல் அதிகரிப்புகள் மற்றும் பலவற்றின் நன்மைகளை அனுபவிக்க KLAY-ஐப் பூட்டுங்கள்!",
+
   "KLAY staking expired": "KLAY ஸ்டேக்கிங் காலாவதியானது",
   "Insufficient token allowance. Click \"Enable\" to approve.": "போதிய டோக்கன் அலவன்ஸ் இல்லை. அங்கீகரிக்க ”இயக்கு” என்பதைக் கிளிக் செய்யவும்.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "பொது விற்பனைக்கு, ஒவ்வொரு தகுதியுடைய பங்கேற்பாளரும் அதிகபட்ச கமிட் வரம்பு வரை KLAY-இன் எத்தொகைக்கும் கமிட் செய்ய முடியும், இது IFO வாக்களிப்பு முன்மொழிவுடன் வெளியிடப்படுகிறது.",
+
   "Unable to supply": "வழங்க முடியவில்லை",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "லிக்விடிட்டியைச் சேர்ப்பதன் மூலம், டிரேடிங் ஜோடியில் உங்கள் பங்கிற்கு சரிவிகிதமாக இந்த ஜோடியிலுள்ள எல்லா டிரேடுகளின் கட்டணங்களில் இருந்து 50% ஈட்டுவீர்கள். கட்டணம் ஜோடியில் சேர்க்கப்பட்டு, நிகழ்நேரத்தில் பெருகுகின்றன மற்றும் உங்கள் லிக்விடிட்டியை வித்டிரா செய்வதன் மூலம் கிளைம் செய்யலாம். ஸ்டேபிள்ஸ்வாப் கட்டணங்கள் பற்றிய கூடுதல் தகவலுக்கு கிளிக் செய்யவும்",
   "For each stableswap trade, refer to the fee table": "ஒவ்வொரு stableswap டிரேடிங்கிற்கும், கட்டண அட்டவணையைப் பார்க்கவும்",
@@ -2669,7 +2660,7 @@
   "How is the APR calculated for SnBNB?": "SnBNBக்கு APR எப்படிக் கணக்கிடப்படுகிறது?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNBக்கான APR, 0.5%-3% வரை வேறுபடுகிறது. BNB செயினில் வேலிடேட்டர்களால் ஈட்டப்படுகிற APR, இரண்டு காரணிகளைப் பொறுத்தது:",
   "Commission Rate: synclub validator charges 10% commission fee.": "கமிஷன் விகிதம்: synclub வேலிடேட்டர், 10% கமிஷன் கட்டணம் விதிக்கிறது.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "வாக்களிப்புச் சக்தி: ஒரு வேலிடேட்டருக்கான ஸ்டேக் செய்த தொகையானது அது பெறும் APR-ஐத் தீர்மானிக்கிறது.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub வேலிடேட்டர் அதன் APR-ஐ மேம்படுத்த MEV (மைனர் எக்ஸ்ட்ராக்டபிள் மதிப்பு)-ஐ ஈடுபடுத்துகிறது. BNBன் ஸ்டேக்கிங் APRக்கு ஏற்ப BNBக்கு எதிராக SnBNB மதிப்பேறுகிறது.",
   "How can I use SnBNB?": "SnBNB நான் எப்படிப் பயன்படுத்தலாம்?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "BnbChainல் ஸ்வாப் செய்தல், இரவல்/கடன் வாங்குதல், ஈல்ட் ஃபார்மிங் போன்ற பிற பயன்பாட்டு நிகழ்வுகளை ஆராய நீங்கள் SnBNB-ஐப் பயன்படுத்தலாம். அத்துடன்",

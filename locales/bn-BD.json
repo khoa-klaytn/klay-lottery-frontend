@@ -2,7 +2,7 @@
   "Farm": "খামার",
   "Exchange": "বিনিময়",
   "Docs": "নথি",
-  "Voting": "ভোটিং",
+
   "Lottery": "লটারি",
   "Connect Wallet": "ওয়ালেট সংযুক্ত করুন",
   "Blog": "ব্লগ",
@@ -593,7 +593,7 @@
   "Starts %date%": "শুরু হওয়ার তারিখ: %date%",
   "Ends %date%": "সমাপ্ত হওয়ার তারিখ: %date%",
   "Closed": "বন্ধ",
-  "Vote Now": "এখনই ভোট দিন",
+
   "Soon": "শীঘ্রই",
   "No proposals found": "কোনো প্রস্তাব পাওয়া যায়নি",
   "Creator": "স্রষ্টা",
@@ -602,7 +602,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "SweepStakes ইকোসিস্টেম এর ভবিষ্যত সম্পর্কে আপনার বক্তব্য রাখুন",
   "Got a suggestion?": "কোনো পরামর্শ পেয়েছেন কি?",
   "Community proposals are a great way to see how the community feels about your ideas.": "কমিউনিটি আপনার ধারণা সম্পর্কে কী ভাবে সেটা জানার চমৎকার উপায় হলো কমিউনিটির প্রস্তাব।",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "কমিউনিটি সফলভাবে ভোট দিলেই এগুলো নিশ্চিতভাবে কার্যকর হবে না, তবে পর্যাপ্ত কমিউনিটি সমর্থনযুক্ত পরামর্শ মূল প্রস্তাবে অন্তর্ভুক্ত করা যেতে পারে।",
+
   "%field% is required": "%field% আবশ্যক",
   "Please create a minimum of %num% choices": "অনুগ্রহ করে কমপক্ষে % num% টি পছন্দ করুন ",
   "Choices must not be empty": "পছন্দ খালি রাখা যাবে না",
@@ -611,14 +611,11 @@
   "End date must be after the start date": "সমাপ্তির তারিখ অবশ্যই শুরুর তারিখের পরে হবে ",
   "Invalid snapshot": "অকার্যকর স্ন্যাপশট",
   "Proposal created!": "প্রস্তাব তৈরি করা হয়েছে!",
-  "Voted": "ভোট দেওয়া হয়েছে",
+
   "Time": "সময়",
   "Input choice text": "ইনপুট পছন্দের টেক্সট",
   "Start Time": "শুরুর সময়",
-  "Back to Vote Overview": "ভোট পর্যালোচনায় ফিরে যান",
-  "Voting For": "যাকে ভোট দেওয়া হচ্ছে",
-  "Your Voting Power": "আপনার ভোট দেওয়ার ক্ষমতা",
-  "Confirm Vote": "ভোট নিশ্চিত করুন",
+
   "Add Choice": "পছন্দ যুক্ত করুন",
   "Title": "শিরোনাম",
   "Content": "বিষয়বস্তু",
@@ -627,27 +624,22 @@
   "Actions": "পদক্ষেপসমূহ",
   "End Time": "সমাপ্তির সময়",
   "Publish": "প্রকাশ করুন",
-  "No votes found": "কোনো ভোট পাওয়া যায়নি",
-  "Votes (%count%)": "ভোট (%count%)",
+
   "Snapshot": "স্ন্যাপশট",
   "Choices": "পছন্দসমূহ",
   "Identifier": "শনাক্তকারী",
   "Current Results": "বর্তমান ফলাফল",
-  "Vote cast!": "ভোট দান!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "আপনি কি নিশ্চিত যে আপনি উপরের পছন্দটিতে ভোট দিতে চান? এই ক্রিয়া পূর্বাবস্থায় ফেরানো যাবে না।",
+
   "Tip: write in Markdown!": "পরামর্শ: মার্কডাউনে লিখুন! ",
-  "Cast your vote": "আপনার ভোট দিন।",
+
   "Preview": "প্রাক-দর্শন",
-  "%total% Votes": "%total% ভোট",
-  "Cast Vote": "ভোট দিন",
+
   "See All": "সবগুলো দেখুন",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "আপনার ভোট দেওয়ার ক্ষমতা আপনার ধারণকৃত KLAY-এর পরিমাণ এবং নিচে বর্ণিত ব্লকে নির্দিষ্ট-মেয়াদি স্টেকিং অবস্থানে (যদি আপনার থাকে) অবশিষ্ট মেয়াদ দ্বারা নির্ধারিত হয়। অন্য স্থানে রাখা KLAY আপনার ভোটের ক্ষমতায় অবদান রাখে না।",
+
   "Wallet": "ওয়ালেট",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "অন্যান্য সিরাপ পুল",
-  "Voting Power": "ভোটদান ক্ষমতা",
-  "You need at least %count% voting power to publish a proposal.": "কোনো প্রস্তাব প্রকাশের জন্য আপনার কমপক্ষে %count%% ভোটদান ক্ষমতা প্রয়োজন। ",
-  "Check voting power": "ভোটদান ক্ষমতা পরীক্ষা করুন",
+
   "Amount to collect": " যে পরিমাণ সংগ্রহ করতে হবে",
   "Your winnings": "আপনার বিজয়সমূহ",
   "Includes your original position and your winnings, minus the %fee% fee.": "আপনার আসল অবস্থান এবং আপনার বিজয়সমূহ অন্তর্ভুক্ত করে, তা থেকে %fee% বিয়োগ করে। ",
@@ -923,7 +915,7 @@
   "Stocks chart": "স্টক চার্ট",
   "Folder with cake token": "KLAY টোকেন এর ফোল্ডার",
   "KLAY makes our world go round.": "KLAY আমাদের পৃথিবী সচল রাখে।",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "SweepStakes ইকোসিস্টেমের কেন্দ্রস্থলে রয়েছে KLAY টোকেন। এটি কিনুন, জিতুন, আবাদ করুন, ব্যয় করুন, এতে ঝুঁকি নিন... আহ্‌, আপনি এমনকি এটি দিয়ে ভোট দিতে পারেন!",
+
   "Small 3d pancake": "ছোট 3ডি pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "এই রাউন্ডে কেক পুরস্কারে %cakePrizeInUsd%",
   "Buy tickets with KLAY, win KLAY if your numbers match": "KLAY দিয়ে টিকিট কিনুন, আপনার নম্বর মিললে KLAY জিতুন",
@@ -1496,7 +1488,7 @@
   "Old Farms": "পুরানো খামার",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "অনুগ্রহ করে মনে রাখবেন যে এটি পুরানো BTT টোকেন, যা নিম্নলিখিত অনুপাতে নতুন BTT টোকেনে সোয়াপ করা হয়েছে:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "এই পুল ভুলভাবে কনফিগার করা হয়েছে। এটি থেকে আপনার টোকেন আনস্টেক করুন, জরুরি প্রত্যাহার পদ্ধতি ব্যবহার করা হবে। আপনার টোকেন আপনার ওয়ালেটে ফেরত দেওয়া হবে, তবে পুরষ্কার সংগ্রহ করা হবে না।",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "প্রাইভেট সেল এর জন্য প্রত্যেক যোগ্য অংশগ্রহণকারী সর্বোচ্চ সীমা পর্যন্ত যেকনো পরিমাণ KLAY সমর্পণ করতে সক্ষম হবেন, যা IFO ভোটিং প্রস্তাবের সাথে প্রকাশিত হয়।",
+
   "Meet any one of the following requirements to be eligible.": "যোগ্য হতে নিম্নলিখিত আবশ্যকতার যেকোনো একটি পূরণ করুন।",
   "You are eligible to participate in this Private Sale!": "আপনি এই প্রাইভেট সেল-এ অংশগ্রহণের জন্য যোগ্য!",
   "Meet any one of the requirements to join:": "যোগ্য হতে আবশ্যকতার যেকোনো একটি পূরণ করুন:",
@@ -1522,7 +1514,7 @@
   "How do I convert wBETH back to ETH?": "আমি কিভাবে wBETH-কে ETH-এ রূপান্তর করব?",
   "You can convert wBETH to ETH through": "আপনি এর মাধ্যমে wBETH-কে ETH-এ রূপান্তর করতে পারেন",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "wBETH-কে নির্বিঘ্নে ETH-এ রূপান্তর করার সুবিধার্থে SweepStakes আমাদের লিকুইড স্টেকিং পৃষ্ঠায় একটি রূপান্তর চুক্তিকে সহায়তা করার জন্যও কাজ করছে।",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "বর্তমান IFO বিন্যাসে। একটি নতুন ব্যক্তিগত বিক্রয় আছে। অংশগ্রহণের জন্য অংশগ্রহণকারীদের IFO কার্ডে উপস্থাপিত কিছু শর্ত পূরণ করতে হবে। প্রত্যেক যোগ্য অংশগ্রহণকারী সর্বোচ্চ সমর্পণ সীমা পর্যন্ত যেকোনো পরিমাণ KLAY সমর্পণ করতে পারবেন, যা IFO ভোটিং প্রস্তাবের সাথে প্রকাশিত হয়েছে। ব্যক্তিগত বিক্রয় এর ক্ষেত্রে কোনো অংশগ্রহণ ফি নাই।",
+
   "You can choose one or both at the same time!": "আপনি একই সময়ে একটি বা উভয়ই নির্বাচন করতে পারেন!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "আমরা আপনাকে প্রথমে আপনি প্রাইভেট সেল-এ অংশগ্রহণ করার যোগ্য কিনা তা পরীক্ষা করার পরামর্শ দেই। পাবলিক সেল-এ আপনি যে পরিমাণ সমর্পণ করেছেন তা খুব কম হলে আপনি অর্থবহ পরিমাণে IFO টোকেন নাও পেতে পারেন।",
   "Just remember you need an active SweepStakes Profile in order to participate.": "শুধু মনে রাখবেন, অংশগ্রহণ করার জন্য আপনার একটি সক্রিয় SweepStakes প্রোফাইল প্রয়োজন।",
@@ -1542,7 +1534,7 @@
   "Current Market Price": "বর্তমান বাজার মূল্য",
   "Limit Price": "সীমা মূল্য",
   "Error Tracking Id": "ত্রুটি ট্র্যাকিং আইডি",
-  "Your voting power at block": "ব্লকে আপনার ভোট প্রদানের ক্ষমতা",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "লেনদেন পাঠানো যায়নি, কারণ সময়সীমা পেরিয়ে গেছে। অনুগ্রহ করে পরীক্ষা করুন যে, আপনার লেনদেনের সময়সীমা খুব কম নয়।",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "লেনদেন পাঠানো যায়নি, কারণ সময়সীমা পেরিয়ে গেছে। অনুগ্রহ করে পরীক্ষা করুন যে, আপনার লেনদেনের সময়সীমা খুব কম নয়।",
   "The input token cannot be transferred. There may be an issue with the input token.": "ইনপুট টোকেন স্থানান্তর করা যাবে না। ইনপুট টোকেন নিয়ে কোনো সমস্যা দেখা দিতে পারে।",
@@ -1610,7 +1602,7 @@
   "Limit": "সীমা",
   "at market price": "বাজার মূল্যে",
   "Error occurred, please try again later": "ত্রুটি ঘটেছে, অনুগ্রহ করে পরে আবার চেষ্টা করুন",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "ভবিষ্যত প্রস্তাবের জন্য ভোট দেওয়ার ক্ষমতা পেতে আপনার ওয়ালেটে বা স্ন্যাপশট ব্লকে SweepStakes-এ কিছু KLAY রাখুন।",
+
   "Preparing": "প্রস্তুত করা হচ্ছে",
   "Perpetual": "নিয়ত",
   "Stake KLAY": "KLAY স্টেক করুন",
@@ -1841,11 +1833,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "সর্বজনীন বিক্রয়ে সক্রিয় sweepstakes প্রোফাইল থাকলে প্রত্যেকে সমর্পণ করতে পারে। তবে KLAY ব্যবহারকারীরা সর্বাধিক যে পরিমাণ সমর্পণ করতে পারে তা তাদের কাছে বিদ্যমান iCAKE সংখ্যার সমান।",
   "And there’s a fee for participation: see below.": "এবং অংশগ্রহণের জন্য ফি রয়েছে: নিচে দেখুন।",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "IFO এর \"পাবলিক সেল\" শেয়ার থেকে ওভারফ্লোয়ের শতকরা হারের ভিত্তিতে ক্লিফে এন্ট্রি ফি কমে।",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "দ্রষ্টব্য: বিভিন্ন IFO-এর মধ্যে ফি পরিবর্তিত হতে পারে। অংশগ্রহণের ফি সম্পর্কে আরও জানতে আপনি যে IFO-এ অংশ নিতে চান সেটার নির্দিষ্ট বিবরণের জন্য অনুগ্রহ করে IFO প্রস্তাবে (ভোট) বিবরণ দেখুন।",
+
   "You have successfully claimed your rewards.": "আপনি সফলভাবে আপনার পুরস্কার দাবি করেছেন।",
   "Pottery (BETA)": "পটারি (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "এই IFO এর টোকেন ভেস্টিং রয়েছে। ক্রয়কৃত টোকেন নির্দিষ্ট সময় মেয়াদে মুক্ত করা হয়।",
-  "Learn more in the vote proposal": "ভোটের প্রস্তাবে আরও জানুন",
+
   "What is the difference between an IFO and a cIFO?": "IFO এবং cIFO-এর মধ্যে পার্থক্য কী?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "পর্যাপ্ত KLAY সমর্পণ না করলে আপনি অর্থপূর্ণ পরিমাণে IFO টোকেন নাও পেতে পারেন, অথবা আপনি কোনো IFO টোকেন নাও পেতে পারেন।",
   "~%num% available to claim at sales end": "বিক্রয় প্রান্তে দাবি করার জন্য ~%num% বিদ্যমান",
@@ -1871,13 +1863,13 @@
   "Max. deposit cap": "সর্বোচ্চ জমা সীমা",
   "Fixed Term KLAY Staking": "নির্দিষ্ট-মেয়াদি KLAY স্টেকিং",
   "Flexible KLAY Staking": "নমনীয় KLAY স্টেকিং",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "ব্লকে নির্দিষ্ট-মেয়াদি KLAY স্টেকিং অবস্থানে স্টেকিং-এর পরিমাণ এবং অবশিষ্ট স্টেকিং-এর মেয়াদ ব্যবহার করে ভোটের ক্ষমতা নির্ধারণ করা হয়।",
+
   "KLAY locked:": "লক করা KLAY:",
   "Go to Pools": "পুল-এ যান",
   "KLAY Emission Projection": "KLAY নির্গমন প্রজেকশন",
   "Boosted by vCAKE": "vCAKE দ্বারা বুস্ট করা হয়েছে",
   "Boosting Expired": "বুস্টিং মেয়াদ শেষ",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "স্ন্যাপশট ব্লকে আপনার vCAKE বুস্টিং-এর মেয়াদ শেষ হয়ে গেছে। ভবিষ্যৎ ভোটের প্রস্তাবের জন্য বুস্ট সক্রিয় করতে আপনার নির্দিষ্ট-মেয়াদি স্টেকিং অবস্থান নবায়ন করুন।",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "ক্রয়কৃত টোকেনের %percentageVested%% ভেস্টিং করা হবে এবং নির্দিষ্ট সময়ের মধ্যে লিনিয়ারভাবে মুক্ত করা হবে। ক্রয়কৃত টোকেনের %percentageTgeRelease%% অবিলম্বে মুক্ত করা হবে এবং IFO শেষ হলে তা দাবি করা যাবে।",
   "The vested tokens will be released linearly over a period of %days% days.": "বরাদ্দকৃত টোকেন %days% দিন ধরে ধাপে ধাপে অবমুক্ত করা হবে।",
   "Yield Booster": "ইল্ড বুস্টার",
@@ -2070,7 +2062,7 @@
   "Meet the following requirement to join:": "যোগদান করতে নিচের শর্ত পূরণ করুন:",
   "Order cancellation": "অর্ডার বাতিলকরণ",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "অর্ডার বাতিলকরণ:  %outputAmount% %outputTokenSymbol%-এর জন্য %inputAmount% %inputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "খামারের ইল্ড বুস্টিং, IFO-এ অংশগ্রহণ, ভোটিং পাওয়ার বুস্ট এবং আরো অনেক সুবিধা উপভোগ করা চালিয়ে যেতে আপনার স্টেকিং অবস্থান নবায়ন করুন",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "লক করা সময় শেষ হয়েছে। আরো পুরষ্কার বার্ন হওয়া এড়াতে, লক করা স্টেকিং থেকে সুবিধাদি উপভোগ করা চালিয়ে যেতে আপনার স্টেকিং অবস্থান নবায়ন করুন।",
   "Default": "ডিফল্ট",
   "Shows username of wallet instead of bunnies": "খরগোশের পরিবর্তে ওয়ালেট ব্যবহারকারীর নাম দেখায়",
@@ -2084,11 +2076,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (পুরস্কারসহ) KLAY পুলে %lockedEndTime% পর্যন্ত লক করা আছে",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE আপনাকে IFO সর্বজনীন বিক্রয়ে অংশগ্রহণ করতে দেয় এবং %iCake% পরিমাণ পর্যন্ত KLAY-এর প্রতিশ্রুতি দেয়।",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE আপনাকে SweepStakes খামারে আপনার ফলন 2x পর্যন্ত বাড়াতে দেয়।",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "SweepStakes ভোটিং গভর্নেন্সে আপনার ভোটিং পাওয়ারকে %totalScore%-এ বাড়িয়ে দেয় vCAKE।",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "খামারের ইল্ড বুস্টিং, IFO-এ অংশগ্রহণ, ভোটিং পাওয়ার বৃদ্ধি এবং আরো সুবিধা উপভোগ করতে KLAY লক করুন!",
+
   "KLAY staking expired": "KLAY স্টকিং-এর মেয়াদ শেষ",
   "Insufficient token allowance. Click \"Enable\" to approve.": "অপর্যাপ্ত টোকেন ভাতা। অনুমোদন করতে \"সক্রিয় করুন\"-এ ক্লিক করুন।",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "পাবলিক সেল এর জন্য প্রত্যেক যোগ্য অংশগ্রহণকারী সর্বোচ্চ সীমা পর্যন্ত যেকনো পরিমাণ KLAY সমর্পণ করতে সক্ষম হবেন, যা IFO ভোটিং প্রস্তাবের সাথে প্রকাশিত হয়।",
+
   "Unable to supply": "সরবরাহ করতে অক্ষম",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "লিকুইডিটি যোগ করার মাধ্যমে আপনি এই পেয়ারের সমস্ত ট্রেডের ফি থেকে 50% উপার্জন করবেন, যা ট্রেডিং পেয়ারে আপনার শেয়ারের সমানুপাতিক। পেয়ারে ফি যোগ করা হয়, তাৎক্ষণিকভাবে জমা হয় এবং আপনার লিকুইডিটি প্রত্যাহার করে দাবি করা যেতে পারে। স্টেবলসোয়াপ ফি সম্পর্কে আরো তথ্যের জন্য ক্লিক করুন",
   "For each stableswap trade, refer to the fee table": "প্রতিটি স্টেবলসোয়াপ ট্রেডের জন্য ফি-এর তালিকা দেখুন",
@@ -2666,7 +2657,7 @@
   "How is the APR calculated for SnBNB?": "SnBNB এর জন্য APR কিভাবে গণনা করা হয়?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNB-এর জন্য APR পরিবর্তিত হয় 0.5%-3% এর মধ্যবর্তী মানে। BNB চেইনে যাচাইকারীদের দ্বারা অর্জিত APR দু'টি বিষয়ের উপর নির্ভর করে:",
   "Commission Rate: synclub validator charges 10% commission fee.": "কমিশন হার: SnBNB-এর synclub যাচাইকারী 10% কমিশন ফি ধার্য করে।",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "ভোট প্রদানের ক্ষমতা: কোনো যাচাইকারীর জন্য স্টেক করা পরিমাণ এটির প্রাপ্ত APR নির্ধারণ করে থাকে।",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub যাচাইকারী তার APR বাড়ানোর জন্য MEV (মাইনার এক্সট্র্যাক্টেবল ভ্যালু) নিয়োগ করে। BNB এর APR স্টেকিং-এর সাথে সামঞ্জস্য রেখে BNB এর বিপরীতে SnBNB এর মূল্য ক্রমেই বাড়ে।",
   "How can I use SnBNB?": "আমি কিভাবে SnBNB ব্যবহার করতে পারি?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "BnbChain-এ সোয়াপ করা, ধার গ্রহণ এবং ইল্ড ফার্মিং-এর মতো  অন্যান্য ব্যবহার অন্বেষণের ক্ষেত্রে আপনি SnBNB ব্যবহার করতে পারেন। এর পাশাপাশি",

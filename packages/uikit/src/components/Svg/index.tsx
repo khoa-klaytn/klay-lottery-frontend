@@ -146,7 +146,6 @@ export { default as VisibilityOff } from "./Icons/VisibilityOff";
 export { default as VisibilityOn } from "./Icons/VisibilityOn";
 export { default as VolumeOffIcon } from "./Icons/VolumeOff";
 export { default as VolumeUpIcon } from "./Icons/VolumeUp";
-export { default as VoteIcon } from "./Icons/Vote";
 export { default as WaitIcon } from "./Icons/Wait";
 export { default as WalletConnectIcon } from "./Icons/WalletConnect";
 export { default as WalletRegisterIcon } from "./Icons/WalletRegister";
