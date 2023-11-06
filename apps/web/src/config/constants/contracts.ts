@@ -60,22 +60,6 @@ export default {
     [ChainId.BSC]: '0xFee8A195570a18461146F401d6033f5ab3380849',
     [ChainId.BSC_TESTNET]: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
   },
-  tradingCompetitionEaster: {
-    [ChainId.BSC]: '0xd718baa0B1F4f70dcC8458154042120FFE0DEFFA',
-    [ChainId.BSC_TESTNET]: '0xC787F45B833721ED3aC46E99b703B3E1E01abb97',
-  },
-  tradingCompetitionFanToken: {
-    [ChainId.BSC]: '0xA8FECf847e28aa1Df39E995a45b7FCfb91b676d4',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  tradingCompetitionMobox: {
-    [ChainId.BSC]: '0x1C5161CdB145dE35a8961F82b065fd1F75C3BaDf',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  tradingCompetitionMoD: {
-    [ChainId.BSC]: '0xbDd9a61c67ee16c10f5E37b1D0c907a9EC959f33',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
   easterNft: {
     [ChainId.BSC]: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
     [ChainId.BSC_TESTNET]: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',

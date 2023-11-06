@@ -11,10 +11,6 @@ import {
   getSweepStakesProfileAddress,
   getPointCenterIfoAddress,
   getStableSwapNativeHelperAddress,
-  getTradingCompetitionAddressEaster,
-  getTradingCompetitionAddressFanToken,
-  getTradingCompetitionAddressMoD,
-  getTradingCompetitionAddressMobox,
   getTradingRewardAddress,
   getV3AirdropAddress,
   getTradingRewardTopTradesAddress,
@@ -39,10 +35,6 @@ import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
 import { nftMarketABI } from 'config/abi/nftMarket'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
-import { tradingCompetitionEasterABI } from 'config/abi/tradingCompetitionEaster'
-import { tradingCompetitionFanTokenABI } from 'config/abi/tradingCompetitionFanToken'
-import { tradingCompetitionMoDABI } from 'config/abi/tradingCompetitionMoD'
-import { tradingCompetitionMoboxABI } from 'config/abi/tradingCompetitionMobox'
 import { tradingRewardABI } from 'config/abi/tradingReward'
 import { v3AirdropABI } from 'config/abi/v3Airdrop'
 import { vCakeABI } from 'config/abi/vCake'
@@ -113,37 +105,6 @@ export const getBunnyFactoryContract = (signer?: WalletClient) => {
 }
 export const getKlayLotteryContract = (address: Address, signer?: WalletClient) => {
   return getContract({ abi: klayLotteryABI, address, signer })
-}
-
-export const getTradingCompetitionContractEaster = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionEasterABI,
-    address: getTradingCompetitionAddressEaster(),
-    signer,
-  })
-}
-
-export const getTradingCompetitionContractFanToken = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionFanTokenABI,
-    address: getTradingCompetitionAddressFanToken(),
-    signer,
-  })
-}
-export const getTradingCompetitionContractMobox = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionMoboxABI,
-    address: getTradingCompetitionAddressMobox(),
-    signer,
-  })
-}
-
-export const getTradingCompetitionContractMoD = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionMoDABI,
-    address: getTradingCompetitionAddressMoD(),
-    signer,
-  })
 }
 
 export const getCakeVaultV2Contract = (signer?: WalletClient, chainId?: number) => {

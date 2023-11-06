@@ -29,9 +29,6 @@ export const STABLESWAP_SUBGRAPH_CLIENT = 'https://api.thegraph.com/subgraphs/na
 export const GRAPH_API_NFTMARKET = 'https://api.thegraph.com/subgraphs/name/sweepstakes/nft-market'
 export const GRAPH_HEALTH = 'https://api.thegraph.com/index-node/graphql'
 
-export const TC_MOBOX_SUBGRAPH = 'https://api.thegraph.com/subgraphs/name/sweepstakes/trading-competition-v3'
-export const TC_MOD_SUBGRAPH = 'https://api.thegraph.com/subgraphs/name/sweepstakes/trading-competition-v4'
-
 export const BIT_QUERY = 'https://graphql.bitquery.io'
 
 export const ACCESS_RISK_API = 'https://red.alert.sweepstakes.com/red-api'

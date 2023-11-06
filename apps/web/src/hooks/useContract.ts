@@ -22,10 +22,6 @@ import {
   getProfileContract,
   getSidContract,
   getStableSwapNativeHelperContract,
-  getTradingCompetitionContractEaster,
-  getTradingCompetitionContractFanToken,
-  getTradingCompetitionContractMoD,
-  getTradingCompetitionContractMobox,
   getTradingRewardContract,
   getUnsContract,
   getV3AirdropContract,
@@ -90,26 +86,6 @@ export const useSousChef = (id) => {
 export const usePointCenterIfoContract = () => {
   const { data: signer } = useWalletClient()
   return useMemo(() => getPointCenterIfoContract(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractEaster = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractEaster(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractFanToken = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractFanToken(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractMobox = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractMobox(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractMoD = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractMoD(signer ?? undefined), [signer])
 }
 
 export const useVaultPoolContract = <T extends VaultKey>(

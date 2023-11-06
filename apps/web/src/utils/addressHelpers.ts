@@ -40,21 +40,6 @@ export const getBunnyFactoryAddress = () => {
 export const getPointCenterIfoAddress = () => {
   return getAddressFromMap(addresses.pointCenterIfo)
 }
-export const getTradingCompetitionAddressEaster = () => {
-  return getAddressFromMap(addresses.tradingCompetitionEaster)
-}
-export const getTradingCompetitionAddressFanToken = () => {
-  return getAddressFromMap(addresses.tradingCompetitionFanToken)
-}
-
-export const getTradingCompetitionAddressMobox = () => {
-  return getAddressFromMap(addresses.tradingCompetitionMobox)
-}
-
-export const getTradingCompetitionAddressMoD = () => {
-  return getAddressFromMap(addresses.tradingCompetitionMoD)
-}
-
 export const getVaultPoolAddress = (vaultKey: VaultKey) => {
   if (!vaultKey) {
     return null
