@@ -10,7 +10,7 @@ import {
   PairDataTimeWindowEnum,
   Box,
   Text,
-  BunnyKnownPlaceholder,
+  KnownPlaceholderIcon,
 } from "@sweepstakes/uikit";
 import { PriceData } from "./types";
 import { FullWidthButtonMenu } from "./FullWidthButtonMenu";
@@ -74,7 +74,7 @@ export const PriceChart = memo(function PriceChart({
       </Box>
     ) : (
       <Flex mt="0.5em" width="100%" flexDirection="column" alignItems="center" height="200px" justifyContent="center">
-        <BunnyKnownPlaceholder />
+        <KnownPlaceholderIcon />
         <Text mt="1em" bold>
           {t("Price will appear here")}
         </Text>

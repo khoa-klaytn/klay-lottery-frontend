@@ -317,15 +317,6 @@ const tokens = {
     decimals: 18,
     projectLink: "https://www.helmet.insure/",
   },
-  btcst: {
-    symbol: "BTCST",
-    address: {
-      56: "0x78650B139471520656b9E7aA7A5e9276814a38e9",
-      97: "",
-    },
-    decimals: 17,
-    projectLink: "https://www.1-b.tc/",
-  },
   bscx: {
     symbol: "BSCX",
     address: {

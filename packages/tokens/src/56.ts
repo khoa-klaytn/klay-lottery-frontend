@@ -601,14 +601,6 @@ export const bscTokens = {
     'Frontier Token',
     'https://frontier.xyz/',
   ),
-  btcst: new ERC20Token(
-    ChainId.BSC,
-    '0x78650B139471520656b9E7aA7A5e9276814a38e9',
-    17,
-    'BTCST',
-    'StandardBTCHashrate Token',
-    'https://www.1-b.tc/',
-  ),
   bscx: new ERC20Token(
     ChainId.BSC,
     '0x5Ac52EE5b2a633895292Ff6d8A89bB9190451587',
@@ -2706,13 +2698,5 @@ export const bscTokens = {
     'MIXOLD',
     'MixMarvel Token(Deprecated)',
     'https://www.mixmarvel.com/',
-  ),
-  mbx: new ERC20Token(
-    ChainId.BSC,
-    '0xF95a5532D67C944dfa7EDDD2f8c358Fe0dc7FAc2',
-    18,
-    'MBX',
-    'MARBLEX on BNB',
-    'https://www.marblex.io/tc',
   ),
 }

@@ -1,7 +1,7 @@
 import { useTheme } from "styled-components";
 import { Svg, SvgProps } from "../Svg";
 
-const BunnyKnownPlaceholder: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
+const KnownPlaceholderIcon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   const theme = useTheme();
   const primaryColor = theme.isDark ? "#3C3742" : "#e9eaeb";
   const secondaryColor = theme.isDark ? "#666171" : "#bdc2c4";
@@ -42,4 +42,4 @@ const BunnyKnownPlaceholder: React.FC<React.PropsWithChildren<SvgProps>> = (prop
   );
 };
 
-export default BunnyKnownPlaceholder;
+export default KnownPlaceholderIcon;
