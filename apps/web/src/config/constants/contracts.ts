@@ -4,6 +4,10 @@ import { V3_QUOTER_ADDRESSES } from '@sweepstakes/smart-router/evm'
 import type { Address } from 'viem'
 
 export default {
+  accessControl: {
+    [ChainId.KLAYTN_TESTNET]: '0x0650786d6458342d308Bc8cca668B487bcFf0881',
+    [ChainId.KLAYTN]: '0x',
+  },
   masterChef: {
     [ChainId.BSC_TESTNET]: '0xB4A466911556e39210a6bB2FaECBB59E4eB7E43d',
     [ChainId.BSC]: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',

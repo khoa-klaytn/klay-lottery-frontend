@@ -19,6 +19,10 @@ export const getAddressFromMapNoFallback = (address: Addresses, chainId?: number
   return address[chainId]
 }
 
+export const getAccessControlAddress = (chainId?: number) => {
+  return getAddressFromMap(addresses.accessControl, chainId)
+}
+
 export const getMasterChefV2Address = (chainId?: number) => {
   return getAddressFromMap(addresses.masterChef, chainId)
 }

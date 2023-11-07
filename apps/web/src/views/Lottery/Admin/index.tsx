@@ -1,10 +1,10 @@
-import { ssLotteryABI } from 'config/abi/ssLottery'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { Button, useToast } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
+import { accessControlABI } from 'config/abi/accessControl'
+import useAccessControlAddress from 'hooks/useAccessControl'
 import Modal from './Modal'
-import useLotteryAddress from '../hooks/useLotteryAddress'
 
 const ShowAdminBtn = styled(Button)`
   position: fixed;
@@ -13,9 +13,18 @@ const ShowAdminBtn = styled(Button)`
   z-index: 10;
 `
 
+function Enum<T extends ReadonlyArray<string>>(...arr: T): { [K in T[number]]: number } {
+  return arr.reduce((acc, key, idx) => {
+    // eslint-disable-next-line no-param-reassign
+    acc[key] = idx
+    return acc
+  }, Object.create(null))
+}
+const RoleName = Enum('Operator', 'Injector', 'Querier')
+
 export default function Admin() {
   const publicClient = usePublicClient()
-  const lotteryAddress = useLotteryAddress()
+  const accessControlAddress = useAccessControlAddress()
   const { address: account } = useAccount()
   const [isOperator, setIsOperator] = useState(false)
   const [isOwner, setIsOwner] = useState(false)
@@ -24,35 +33,39 @@ export default function Admin() {
   const [showModal, setShowModal] = useState(false)
   const { toastError } = useToast()
 
-  const readRole = useCallback(
-    async (roleName: 'operatorAddress' | 'owner' | 'injectorAddress'): Promise<string | null> =>
-      publicClient
-        .readContract({
-          abi: ssLotteryABI,
-          address: lotteryAddress,
-          functionName: roleName,
-        })
-        .catch(() => {
-          throw Error(`Failed to read ${roleName} from contract`)
-        }),
-    [lotteryAddress, publicClient],
-  )
-
   useEffect(() => {
     if (account && publicClient) {
       ;(async () => {
-        const operatorAddress = await readRole('operatorAddress')
-        setIsOperator(operatorAddress === account)
-        const ownerAddress = await readRole('owner')
-        setIsOwner(ownerAddress === account)
-        const injectorAddress = await readRole('injectorAddress')
-        setIsInjector([injectorAddress, ownerAddress].includes(account))
+        const isOwner_ = await publicClient.readContract({
+          abi: accessControlABI,
+          address: accessControlAddress,
+          functionName: 'isOwnerMember',
+          args: [account],
+        })
+        setIsOwner(isOwner_)
+
+        const hasRole = async (roleName: number): Promise<boolean | null> =>
+          publicClient
+            .readContract({
+              abi: accessControlABI,
+              address: accessControlAddress,
+              functionName: 'hasRole',
+              args: [roleName, account],
+            })
+            .catch(() => {
+              throw Error(`Failed to read ${roleName} from contract`)
+            })
+
+        const isOperator_ = await hasRole(RoleName.Operator)
+        setIsOperator(isOperator_)
+        const isInjector_ = await hasRole(RoleName.Injector)
+        setIsInjector(isOwner_ || isInjector_)
       })().catch((e) => {
         console.error(e)
         toastError('Failed to read admin roles from contract')
       })
     }
-  }, [publicClient, lotteryAddress, account, readRole, toastError])
+  }, [publicClient, account, toastError, accessControlAddress])
 
   return isAdmin ? (
     <>
