@@ -5,7 +5,7 @@ import Image from 'next/legacy/image'
 import { memo } from 'react'
 import { styled } from 'styled-components'
 import * as S from './Styled'
-import { baseBunny, baseBgMobile, baseTree, baseBg, baseMoon } from './images'
+import { baseBgMobile, baseTree, baseBg, baseMoon } from './images'
 import { flyingAnim } from './animations'
 
 const pancakeSwapLogo = `${ASSET_CDN}/web/banners/ethXsweepstakes.png`
@@ -160,12 +160,9 @@ const BaseBanner = () => {
         <RightWrapper>
           {isDesktop ? (
             <>
-              <Image src={baseBunny} alt="baseBunny" width={218} height={203} placeholder="blur" />
               <Image src={baseMoon} alt="baseMoon" width={123} height={94} placeholder="blur" />
             </>
-          ) : (
-            <Image src={baseBunny} alt="baseBunny" width={196} height={182} placeholder="blur" />
-          )}
+          ) : null}
           <BgWrapper>
             {isDesktop ? (
               <>

@@ -5,8 +5,7 @@ import { ASSET_CDN } from './endpoints'
 
 export const DEFAULT_META: PageMeta = {
   title: 'SweepStakes',
-  description:
-    'The most popular AMM on BSC by user count! Win it in the Lottery, then stake it in Syrup Pools to earn more tokens! NFTs and more on a platform you can trust.',
+  description: 'The most popular AMM on BSC by user count! Win it in the Lottery, on a platform you can trust.',
   image: `${ASSET_CDN}/web/og/hero.jpg`,
 }
 

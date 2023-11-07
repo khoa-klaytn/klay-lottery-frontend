@@ -9,26 +9,18 @@ import addresses from 'config/constants/contracts'
 import { useMemo } from 'react'
 import { getMulticallAddress, getZapAddress } from 'utils/addressHelpers'
 import {
-  getBunnyFactoryContract,
   getCakeFlexibleSideVaultV2Contract,
   getCakeVaultV2Contract,
   getChainlinkOracleContract,
   getContract,
   getKlayLotteryContract,
-  getNftMarketContract,
-  getNftSaleContract,
   getNonBscVaultContract,
   getPointCenterIfoContract,
   getProfileContract,
   getSidContract,
   getStableSwapNativeHelperContract,
-  getTradingCompetitionContractEaster,
-  getTradingCompetitionContractFanToken,
-  getTradingCompetitionContractMoD,
-  getTradingCompetitionContractMobox,
   getTradingRewardContract,
   getUnsContract,
-  getAffiliateProgramContract,
   getV3AirdropContract,
   getTradingRewardTopTradesContract,
   getVCakeContract,
@@ -38,7 +30,6 @@ import {
 
 import { WNATIVE, pancakePairV2ABI } from '@sweepstakes/sdk'
 import { ChainId } from '@sweepstakes/chains'
-import { KLAY } from '@sweepstakes/tokens'
 import { nonfungiblePositionManagerABI } from '@sweepstakes/v3-sdk'
 import { multicallABI } from 'config/abi/Multicall'
 import { erc20Bytes32ABI } from 'config/abi/erc20_bytes32'
@@ -55,17 +46,6 @@ import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 
 export const useERC20 = (address: Address) => {
   return useContract(address, erc20ABI)
-}
-
-export const useCake = () => {
-  const { chainId } = useActiveChainId()
-
-  return useContract((chainId && KLAY[chainId]?.address) ?? KLAY[ChainId.BSC].address, erc20ABI)
-}
-
-export const useBunnyFactory = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getBunnyFactoryContract(signer ?? undefined), [signer])
 }
 
 export const useProfileContract = () => {
@@ -100,26 +80,6 @@ export const usePointCenterIfoContract = () => {
   return useMemo(() => getPointCenterIfoContract(signer ?? undefined), [signer])
 }
 
-export const useTradingCompetitionContractEaster = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractEaster(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractFanToken = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractFanToken(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractMobox = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractMobox(signer ?? undefined), [signer])
-}
-
-export const useTradingCompetitionContractMoD = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getTradingCompetitionContractMoD(signer ?? undefined), [signer])
-}
-
 export const useVaultPoolContract = <T extends VaultKey>(
   vaultKey: T,
 ):
@@ -149,16 +109,6 @@ export const useCakeVaultContract = () => {
 export const useChainlinkOracleContract = (address) => {
   const { data: signer } = useWalletClient()
   return useMemo(() => getChainlinkOracleContract(address, signer ?? undefined), [signer, address])
-}
-
-export const useNftSaleContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getNftSaleContract(signer ?? undefined), [signer])
-}
-
-export const useNftMarketContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getNftMarketContract(signer ?? undefined), [signer])
 }
 
 export const useErc721CollectionContract = (collectionAddress: Address) => {
@@ -259,15 +209,6 @@ export const useV3AirdropContract = () => {
 
 export const useInfoStableSwapContract = (infoAddress?: Address) => {
   return useContract(infoAddress, infoStableSwapABI)
-}
-
-export const useAffiliateProgramContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(
-    () => getAffiliateProgramContract(signer ?? undefined, chainId_ ?? chainId),
-    [signer, chainId_, chainId],
-  )
 }
 
 export const useTradingRewardTopTraderContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {

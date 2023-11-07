@@ -3,14 +3,11 @@ import { styled } from 'styled-components'
 import { useAccount } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import { Button, Flex, InjectedModalProps, Message, MessageText } from '@sweepstakes/uikit'
-import { getSweepStakesProfileAddress } from 'utils/addressHelpers'
-import { useCake } from 'hooks/useContract'
 import { useBSCCakeBalance } from 'hooks/useTokenBalance'
 import { useCakeEnable } from 'hooks/useCakeEnable'
 import { useTranslation } from '@sweepstakes/localization'
 import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
 import { FetchStatus } from 'config/constants/types'
-import { requiresApproval } from 'utils/requiresApproval'
 import { useProfile } from 'state/profile/hooks'
 import ProfileAvatarWithTeam from 'components/ProfileAvatarWithTeam'
 import ApproveConfirmButtons from 'components/ApproveConfirmButtons'
@@ -46,7 +43,6 @@ const AvatarWrapper = styled.div`
 const StartPage: React.FC<React.PropsWithChildren<StartPageProps>> = ({ goToApprove, goToChange, goToRemove }) => {
   const { t } = useTranslation()
   const { address: account } = useAccount()
-  const cakeContract = useCake()
   const { profile } = useProfile()
   const { balance: cakeBalance, fetchStatus } = useBSCCakeBalance()
   const {
@@ -71,19 +67,13 @@ const StartPage: React.FC<React.PropsWithChildren<StartPageProps>> = ({ goToAppr
    */
   useEffect(() => {
     const checkApprovalStatus = async () => {
-      const approvalNeeded = await requiresApproval(
-        cakeContract,
-        account,
-        getSweepStakesProfileAddress(),
-        minimumCakeRequired,
-      )
-      setNeedsApproval(approvalNeeded)
+      setNeedsApproval(false)
     }
 
     if (account && !isProfileCostsLoading) {
       checkApprovalStatus()
     }
-  }, [account, minimumCakeRequired, setNeedsApproval, cakeContract, isProfileCostsLoading])
+  }, [account, minimumCakeRequired, setNeedsApproval, isProfileCostsLoading])
 
   if (!profile) {
     return null

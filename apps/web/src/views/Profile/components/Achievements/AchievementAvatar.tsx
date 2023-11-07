@@ -1,12 +1,12 @@
 import { ImgHTMLAttributes } from 'react'
 import { styled } from 'styled-components'
-import { BunnyPlaceholderIcon } from '@sweepstakes/uikit'
+import { PlaceholderIcon } from '@sweepstakes/uikit'
 
 interface AchievementAvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
   badge?: string
 }
 
-const NoBadgePlaceholder = styled(BunnyPlaceholderIcon)`
+const NoBadgePlaceholderIcon = styled(PlaceholderIcon)`
   height: 48px;
   width: 48px;
 
@@ -28,7 +28,7 @@ const StyledAchievementAvatar = styled.img`
 
 const AchievementAvatar: React.FC<React.PropsWithChildren<AchievementAvatarProps>> = ({ badge, ...props }) => {
   if (!badge) {
-    return <NoBadgePlaceholder />
+    return <NoBadgePlaceholderIcon />
   }
 
   return <StyledAchievementAvatar src={`/images/achievements/${badge}`} alt="achievement badge" {...props} />

@@ -2,23 +2,14 @@ import { KLAY } from '@sweepstakes/tokens'
 
 // Addresses
 import {
-  getBunnyFactoryAddress,
   getCakeFlexibleSideVaultAddress,
   getCakeVaultAddress,
-  getNftMarketAddress,
-  getNftSaleAddress,
   getNonBscVaultAddress,
   getSweepStakesProfileAddress,
-  getSweepStakesSquadAddress,
   getPointCenterIfoAddress,
   getStableSwapNativeHelperAddress,
-  getTradingCompetitionAddressEaster,
-  getTradingCompetitionAddressFanToken,
-  getTradingCompetitionAddressMoD,
-  getTradingCompetitionAddressMobox,
   getTradingRewardAddress,
   getV3AirdropAddress,
-  getAffiliateProgramAddress,
   getTradingRewardTopTradesAddress,
   getVCakeAddress,
   getRevenueSharingPoolAddress,
@@ -26,7 +17,6 @@ import {
 } from 'utils/addressHelpers'
 
 // ABI
-import { nftSaleABI } from 'config/abi/nftSale'
 import { nonBscVaultABI } from 'config/abi/nonBscVault'
 import { pointCenterIfoABI } from 'config/abi/pointCenterIfo'
 import { stableSwapNativeHelperABI } from 'config/abi/stableSwapNativeHelper'
@@ -35,18 +25,10 @@ import { cakeFlexibleSideVaultV2ABI, cakeVaultV2ABI } from '@sweepstakes/pools'
 import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
-import { affiliateProgramABI } from 'config/abi/affiliateProgram'
-import { bunnyFactoryABI } from 'config/abi/bunnyFactory'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
 import { klayLotteryABI } from 'config/abi/klayLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
-import { nftMarketABI } from 'config/abi/nftMarket'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
-import { pancakeSquadABI } from 'config/abi/pancakeSquad'
-import { tradingCompetitionEasterABI } from 'config/abi/tradingCompetitionEaster'
-import { tradingCompetitionFanTokenABI } from 'config/abi/tradingCompetitionFanToken'
-import { tradingCompetitionMoDABI } from 'config/abi/tradingCompetitionMoD'
-import { tradingCompetitionMoboxABI } from 'config/abi/tradingCompetitionMobox'
 import { tradingRewardABI } from 'config/abi/tradingReward'
 import { v3AirdropABI } from 'config/abi/v3Airdrop'
 import { vCakeABI } from 'config/abi/vCake'
@@ -112,42 +94,8 @@ export const getProfileContract = (signer?: WalletClient) => {
   return getContract({ abi: pancakeProfileABI, address: getSweepStakesProfileAddress(), signer })
 }
 
-export const getBunnyFactoryContract = (signer?: WalletClient) => {
-  return getContract({ abi: bunnyFactoryABI, address: getBunnyFactoryAddress(), signer })
-}
 export const getKlayLotteryContract = (address: Address, signer?: WalletClient) => {
   return getContract({ abi: klayLotteryABI, address, signer })
-}
-
-export const getTradingCompetitionContractEaster = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionEasterABI,
-    address: getTradingCompetitionAddressEaster(),
-    signer,
-  })
-}
-
-export const getTradingCompetitionContractFanToken = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionFanTokenABI,
-    address: getTradingCompetitionAddressFanToken(),
-    signer,
-  })
-}
-export const getTradingCompetitionContractMobox = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionMoboxABI,
-    address: getTradingCompetitionAddressMobox(),
-    signer,
-  })
-}
-
-export const getTradingCompetitionContractMoD = (signer?: WalletClient) => {
-  return getContract({
-    abi: tradingCompetitionMoDABI,
-    address: getTradingCompetitionAddressMoD(),
-    signer,
-  })
 }
 
 export const getCakeVaultV2Contract = (signer?: WalletClient, chainId?: number) => {
@@ -165,16 +113,6 @@ export const getCakeFlexibleSideVaultV2Contract = (signer?: WalletClient, chainI
 
 export const getChainlinkOracleContract = (address: Address, signer?: WalletClient, chainId?: number) => {
   return getContract({ abi: chainlinkOracleABI, address, signer, chainId })
-}
-
-export const getNftMarketContract = (signer?: WalletClient) => {
-  return getContract({ abi: nftMarketABI, address: getNftMarketAddress(), signer })
-}
-export const getNftSaleContract = (signer?: WalletClient) => {
-  return getContract({ abi: nftSaleABI, address: getNftSaleAddress(), signer })
-}
-export const getSweepStakesSquadContract = (signer?: WalletClient) => {
-  return getContract({ abi: pancakeSquadABI, address: getSweepStakesSquadAddress(), signer })
 }
 
 export const getNonBscVaultContract = (signer?: WalletClient, chainId?: number) => {
@@ -241,13 +179,6 @@ export const getV3AirdropContract = (walletClient?: WalletClient) => {
     abi: v3AirdropABI,
     address: getV3AirdropAddress(),
     signer: walletClient,
-  })
-}
-
-export const getAffiliateProgramContract = (signer?: WalletClient, chainId?: number) => {
-  return getContract({
-    abi: affiliateProgramABI,
-    address: getAffiliateProgramAddress(chainId),
   })
 }
 

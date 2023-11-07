@@ -40,8 +40,6 @@ export const useMenuItems = (onUsCitizenModalPresent?: () => void): ConfigMenuIt
               itemMenuStatus = <DropdownMenuItems['status']>{ text: t('Soon'), color: 'warning' }
             } else if (itemStatus === 'live') {
               itemMenuStatus = <DropdownMenuItems['status']>{ text: t('Live'), color: 'failure' }
-            } else if (itemStatus === 'vote_now') {
-              itemMenuStatus = <DropdownMenuItems['status']>{ text: t('Vote Now'), color: 'success' }
             } else if (itemStatus === 'pot_open') {
               itemMenuStatus = <DropdownMenuItems['status']>{ text: t('Pot Open'), color: 'success' }
             } else if (itemStatus === 'lock_end') {

@@ -71,14 +71,6 @@ export const bscTokens = {
     'Qubit Token',
     'https://qbt.fi/',
   ),
-  cvp: new ERC20Token(
-    ChainId.BSC,
-    '0x5Ec3AdBDae549Dce842e24480Eb2434769e22B2E',
-    18,
-    'CVP',
-    'Concentrated Voting Power Token',
-    'https://powerpool.finance/',
-  ),
   bscdefi: new ERC20Token(
     ChainId.BSC,
     '0x40E46dE174dfB776BB89E04dF1C47d8a66855EB3',
@@ -401,14 +393,6 @@ export const bscTokens = {
     'Contentos Token',
     'https://www.contentos.io/',
   ),
-  bunny: new ERC20Token(
-    ChainId.BSC,
-    '0xC9849E6fdB743d08fAeE3E34dd2D1bc69EA11a51',
-    18,
-    'BUNNY',
-    'SweepStakesbunny Token',
-    'https://pancakebunny.finance/',
-  ),
   alice: new ERC20Token(
     ChainId.BSC,
     '0xAC51066d7bEC65Dc4589368da368b212745d63E8',
@@ -616,14 +600,6 @@ export const bscTokens = {
     'FRONT',
     'Frontier Token',
     'https://frontier.xyz/',
-  ),
-  btcst: new ERC20Token(
-    ChainId.BSC,
-    '0x78650B139471520656b9E7aA7A5e9276814a38e9',
-    17,
-    'BTCST',
-    'StandardBTCHashrate Token',
-    'https://www.1-b.tc/',
   ),
   bscx: new ERC20Token(
     ChainId.BSC,
@@ -1697,14 +1673,6 @@ export const bscTokens = {
     'rUSD Token',
     'https://appv2.rampdefi.com/#/',
   ),
-  bp: new ERC20Token(
-    ChainId.BSC,
-    '0xACB8f52DC63BB752a51186D1c55868ADbFfEe9C1',
-    18,
-    'BP',
-    'BunnyPark Token',
-    'https://www.bunnypark.com/',
-  ),
   sfund: new ERC20Token(
     ChainId.BSC,
     '0x477bC8d23c634C154061869478bce96BE6045D12',
@@ -2730,13 +2698,5 @@ export const bscTokens = {
     'MIXOLD',
     'MixMarvel Token(Deprecated)',
     'https://www.mixmarvel.com/',
-  ),
-  mbx: new ERC20Token(
-    ChainId.BSC,
-    '0xF95a5532D67C944dfa7EDDD2f8c358Fe0dc7FAc2',
-    18,
-    'MBX',
-    'MARBLEX on BNB',
-    'https://www.marblex.io/tc',
   ),
 }

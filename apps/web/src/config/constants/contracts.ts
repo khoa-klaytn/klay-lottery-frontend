@@ -17,7 +17,7 @@ export default {
     [ChainId.BSC]: '0x6Ab8463a4185b80905E05A9ff80A2d6b714B9e95',
   },
   klayLottery: {
-    [ChainId.KLAYTN_TESTNET]: '0xa670cBDCea52d444cD39B0aC0Aa682539660db8E',
+    [ChainId.KLAYTN_TESTNET]: '0x31C7E1DF0d4be713eb005595D88dA094b282a132',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {
@@ -44,10 +44,6 @@ export default {
     [ChainId.BSC]: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
     [ChainId.BSC_TESTNET]: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
   },
-  bunnyFactory: {
-    [ChainId.BSC]: '0xfa249Caa1D16f75fa159F7DFBAc0cC5EaB48CeFf',
-    [ChainId.BSC_TESTNET]: '0x707CBF373175fdB601D34eeBF2Cf665d08f01148',
-  },
   claimRefund: {
     [ChainId.BSC]: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',
     [ChainId.BSC_TESTNET]: '0x',
@@ -55,30 +51,6 @@ export default {
   pointCenterIfo: {
     [ChainId.BSC]: '0x3C6919b132462C1FEc572c6300E83191f4F0012a',
     [ChainId.BSC_TESTNET]: '0xd2Ac1B1728Bb1C11ae02AB6e75B76Ae41A2997e3',
-  },
-  bunnySpecial: {
-    [ChainId.BSC]: '0xFee8A195570a18461146F401d6033f5ab3380849',
-    [ChainId.BSC_TESTNET]: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
-  },
-  tradingCompetitionEaster: {
-    [ChainId.BSC]: '0xd718baa0B1F4f70dcC8458154042120FFE0DEFFA',
-    [ChainId.BSC_TESTNET]: '0xC787F45B833721ED3aC46E99b703B3E1E01abb97',
-  },
-  tradingCompetitionFanToken: {
-    [ChainId.BSC]: '0xA8FECf847e28aa1Df39E995a45b7FCfb91b676d4',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  tradingCompetitionMobox: {
-    [ChainId.BSC]: '0x1C5161CdB145dE35a8961F82b065fd1F75C3BaDf',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  tradingCompetitionMoD: {
-    [ChainId.BSC]: '0xbDd9a61c67ee16c10f5E37b1D0c907a9EC959f33',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  easterNft: {
-    [ChainId.BSC]: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
-    [ChainId.BSC_TESTNET]: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
   },
   cakeVault: {
     [ChainId.BSC]: '0x45c54210128a065de780C4B0Df3d16664f7f859e',
@@ -95,30 +67,6 @@ export default {
   oraklKlayUsd: {
     [ChainId.KLAYTN]: '0x33D6ee12D4ADE244100F09b280e159659fe0ACE0',
     [ChainId.KLAYTN_TESTNET]: '0xC874f389A3F49C5331490145f77c4eFE202d72E1',
-  },
-  bunnySpecialCakeVault: {
-    [ChainId.BSC]: '0x5B4a770Abe7Eafb2601CA4dF9d73EA99363E60a4',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  bunnySpecialLottery: {
-    [ChainId.BSC]: '0x24ED31d31C5868e5a96aA77fdcB890f3511fa0b2',
-    [ChainId.BSC_TESTNET]: '0x382cB497110F398F0f152cae82821476AE51c9cF',
-  },
-  bunnySpecialXmas: {
-    [ChainId.BSC]: '0x59EdDF3c21509dA3b0aCCd7c5ccc596d930f4783',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  nftMarket: {
-    [ChainId.BSC]: '0x17539cCa21C7933Df5c980172d22659B8C345C5A',
-    [ChainId.BSC_TESTNET]: '0x7F9F37Ddcaa33893F9bEB3D8748c8D6BfbDE6AB2',
-  },
-  nftSale: {
-    [ChainId.BSC]: '0x29fE7148636b7Ae0b1E53777b28dfbaA9327af8E',
-    [ChainId.BSC_TESTNET]: '0xe486De509c5381cbdBF3e71F57D7F1f7570f5c46',
-  },
-  pancakeSquad: {
-    [ChainId.BSC]: '0x0a8901b0E25DEb55A87524f0cC164E9644020EBA',
-    [ChainId.BSC_TESTNET]: '0xfC0c3F11fDA72Cb9A56F28Ec8D44C0ae4B3ABF86',
   },
   zap: {
     [ChainId.BSC]: '0xD4c4a7C55c9f7B3c48bafb6E8643Ba79F42418dF',
@@ -171,11 +119,6 @@ export default {
     [ChainId.ETHEREUM]: '0x',
     [ChainId.BSC]: '0xe934d2C5bE5db0295A4de3177762A9E8c74Ae4f4',
     [ChainId.BSC_TESTNET]: '0x',
-  },
-  affiliateProgram: {
-    [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0x92C73D90F709DFf7e5E7307e8F2EE20e39396b12',
-    [ChainId.BSC_TESTNET]: '0x1B8a475B5E5De05fB3Ac2D9ec3C2809fBF24e51c',
   },
   tradingRewardTopTrades: {
     [ChainId.ETHEREUM]: '0x',

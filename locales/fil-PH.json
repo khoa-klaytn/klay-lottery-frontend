@@ -2,7 +2,7 @@
   "Farm": "Farm",
   "Exchange": "Palitan",
   "Docs": "Mga doc",
-  "Voting": "Pagboto",
+
   "Lottery": "Loterya",
   "Connect Wallet": "I-connect ang Wallet",
   "Blog": "Blog",
@@ -151,7 +151,7 @@
   "Only approved SweepStakes Collectibles can be used.": "Tanging mga naaprubahang SweepStakes Collectibles lamang ang maaaring magamit.",
   "Allow collectible to be locked": "Payagan ang collectible na ma-lock",
   "Join a Team": "Sumali sa Team",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "Ipapakita ang pangalang ito sa mga leaderboard ng team at mga resulta sa pag-search hangga't aktibo ang iyong profile.",
+
   "Complete Profile": "Kumpletuhin ang Profile",
   "Oops!": "Naku!",
   "ROI Calculator": "Calculator ng ROI",
@@ -486,7 +486,7 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "Kailangan mong muling i-reactivate ang iyong profile sa pamamagitan ng pagpapalit ng iyong larawan sa profile, upang sumali sa kumpetisyon.",
   "Go to my profile": "Pumunta sa aking profile",
   "You have registered for the competition!": "Nagrehistro ka para sa kumpetisyon!",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "Ang pagrehistro para sa kumpetisyon ay gagawing nakikita sa publiko ang iyong wallet address sa leaderboard.",
+
   "This decision cannot be reversed.": "Ang desisyon na ito ay hindi maaaring baligtarin.",
   "I understand that my address may be displayed publicly throughout the competition.": "Nauunawaan ko na ang aking address ay maaaring ipakita sa publiko sa buong kompetisyon.",
   "Eligible trading pairs": "Karapat-dapat na mga pares sa trading",
@@ -539,23 +539,19 @@
   "%symbol% to receive": "%symbol% na matatanggap",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "Hindi magtatagumpay ang transaksyong ito dahil sa paggalaw ng presyo o bayarin sa paglipat. Subukang pataasin ang iyong",
   "slippage tolerance.": "slippage tolerance.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "Eggscellent! Ipinagdiriwang ang Syrup Storm na nanalo sa Easter Battle!",
-  "Melting Easter eggs and melting hearts!": "Tinutunaw ang mga Easter egg at tinutunaw ang mga puso!",
+
   "Watch out for Flipsie’s spatula smash!": "Abangan ang spatula smash ni Flipsie!",
   "Do you like chocolate with your syrup? Go long!": "Gusto mo ba ng tsokolate sa iyong syrup? Sige lang!",
-  "Happy Niu Year! This bunny’s excited for the year of the bull (market!)": "Maligayang Bagong Taon! Ang bunny na ito ay nasasabik para sa taon ng toro (merkado!)",
+
   "Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.": "Oopsie daisy! Si Hiccup ay medyo naaksidente. Kawawang nilalang.",
   "Sunny is always cheerful when there are pancakes around. Smile!": "Si Sunny ay palaging masayahin kapag may mga pancake sa paligid. Ngumiti ka!",
   "Don't let that dopey smile deceive you... Churro's a master KLAY chef!": "Huwag hayaang linlangin ka ng ngiting iyon na tila malamya... Si Churro ay isang master KLAY chef!",
   "Nommm... Oh hi, I'm just meditating on the meaning of KLAY.": "Nommm... Oh hi, pinagninilayan ko lang ang kahulugan ng KLAY.",
   "Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)": "Tatlong mga paghula kung ano ang naglagay ng kislap sa mga mata na iyon! (Pahiwatig: ito ay isang KLAY)",
   "These bunnies love nothing more than swapping pancakes. Especially on BSC.": "Ang mga bunnies na ito ay hindi nagmamahal ng higit pa sa pagpapalit ng mga pancake. Lalo na sa BSC.",
-  "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?": "Umuulan ng syrup sa bunny na ito, ngunit tila wala siyang pakialam. Masisisi mo ba siya?",
-  "These bunnies like their pancakes with blueberries. What's your favorite topping?": "Ang mga bunny na ito ay tulad ng kanilang mga pancake na may mga blueberry. Ano ang iyong paboritong topping?",
-  "Love makes the world go 'round... but so do pancakes. And these bunnies know it.": "Ang pag-ibig ang nagpapaikot sa mundo... ngunit gayun din ang mga pancake. At alam ito ng mga bunny.",
-  "It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.": "Ang makislap na syrup, mga pancake, at kahit na mga ticket sa lotto! Mahal talaga ito ng bunny.",
+
   "The storm's a-comin! Watch out! These bulls are stampeding in a syrupy surge!": "Paparating ang bagyo! Tingnan mo! Ang mga toro na ito ay tumatakbo sa isang mala-arnibal na daluyong!",
-  "The flippening is coming. Don't get in these bunnies' way, or you'll get flipped, too!": "Darating ang flippening. Huwag harangan ang daraanan ng mga bunny na ito, o baka ma-flip ka din!",
+
   "Can you stand the heat? Stay out of the kitchen or you might get burned to a crisp!": "Kaya mo bang tiisin ang init? Manatili sa labas ng kusina o baka masunog ka ng mala-tustado!",
   "%ratio%% of total sale": "%ratio%% ng kabuuang benta",
   "Your %symbol% earnings have been sent to your wallet!": "Ang iyong %symbol% ng mga kinita ay na-harvest din sa iyong wallet!",
@@ -566,7 +562,7 @@
   "Volume": "Dami",
   "Prediction (BETA)": "Pagtataya (BETA)",
   "You can now start prediction": "Puwede mo na ngayong simulan ang paghula",
-  "Leaderboard": "Leaderboard",
+
   "Tokens": "Mga token",
   "Contact": "Kontak",
   "The higher your team’s rank, the better your prizes!": "Kung mas mataas ang ranggo ng iyong team, mas mahusay ang iyong mga premyo!",
@@ -596,7 +592,7 @@
   "Starts %date%": "Nagsisimula sa %date%",
   "Ends %date%": "Magtatapos sa %date%",
   "Closed": "Sarado",
-  "Vote Now": "Iboto Ngayon",
+
   "Soon": "Parating",
   "No proposals found": "Walang natagpuang mga mungkahi",
   "Creator": "Creator",
@@ -605,7 +601,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "Gawin mo ang iyong saloobin sa hinaharap ng SweepStakes Ecosystem",
   "Got a suggestion?": "May mungkahi?",
   "Community proposals are a great way to see how the community feels about your ideas.": "Ang mga panukala sa komunidad ay isang mahusay na paraan upang makita kung ano ang pakiramdam ng komunidad tungkol sa iyong mga ideya.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "Hindi kinakailangang ipatupad ang mga ito kung matagumpay na bumoto ang komunidad, ngunit ang mga mungkahi na may maraming suporta sa komunidad ay maaaring gawin bilang mga panukalang Core.",
+
   "%field% is required": "%field% ay kinakailangan",
   "Please create a minimum of %num% choices": "Mangyaring lumikha ng isang minimum na %num% mga pagpipilian",
   "Choices must not be empty": "Ang mga pagpipilian ay hindi dapat walang laman",
@@ -614,14 +610,11 @@
   "End date must be after the start date": "Ang petsa ng pagtatapos ay dapat na pagkatapos ng petsa ng pagsisimula",
   "Invalid snapshot": "Walang bisang snapshot",
   "Proposal created!": "Nalikhang mungkahi!",
-  "Voted": "Bumoto",
+
   "Time": "Oras",
   "Input choice text": "Ilagay ang napiling text",
   "Start Time": "Oras ng Pag-umpisa",
-  "Back to Vote Overview": "Bumalik sa Overview ng Boto",
-  "Voting For": "Bumuboto Para kay",
-  "Your Voting Power": "Ang Lakas ng iyong Pagboto",
-  "Confirm Vote": "Kumpirmahin ang Boto",
+
   "Add Choice": "Idagdag ang Pagpipilian",
   "Title": "Pamagat",
   "Content": "Nilalaman",
@@ -630,27 +623,22 @@
   "Actions": "Mga Aksyon",
   "End Time": "Oras ng Pagtatapos",
   "Publish": "I-publish",
-  "No votes found": "Walang nahanap ng mga boto",
-  "Votes (%count%)": "Mga Boto (%count%)",
+
   "Snapshot": "Snapshot",
   "Choices": "Mga pagpipilian",
   "Identifier": "Identifier",
   "Current Results": "Mga Kasalukuyang Resulta",
-  "Vote cast!": "Narehistrong boto!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "Sigurado ka bang nais mong bumoto para sa pagpipilian sa itaas? Ang aksyon na ito ay hindi pwedeng baguhin.",
+
   "Tip: write in Markdown!": "Tip: isulat sa Markdown!",
-  "Cast your vote": "I-cast ang iyong boto",
+
   "Preview": "Preview",
-  "%total% Votes": "%total% Mga boto",
-  "Cast Vote": "Mag-cast ng Boto",
+
   "See All": "Tingnan Lahat",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "Natutukoy ang iyong kakayahan sa pagboto ayon sa halaga ng KLAY na mayroon ka at ang natitirang tagal ng fixed-term na posisyon sa pag-stake (kung mayroon ka nito) sa block na nakadetalye sa ibaba. Hindi nakakadagdag sa iyong kakayahan sa pagboto ang KLAY na mayroon ka sa ibang lugar.",
+
   "Wallet": "Wallet",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "Iba pang mga Pool ng Syrup",
-  "Voting Power": "Kapangyarihan ng Pagboto",
-  "You need at least %count% voting power to publish a proposal.": "Kailangan mo ng kahit na %count% ng kapangyarihan sa pagboto upang mag-publish ng isang panukala.",
-  "Check voting power": "I-check ang kapangyarihan sa pagboto",
+
   "Amount to collect": "Halagang makukulekta",
   "Your winnings": "Ang iyong pagkapanalo",
   "Includes your original position and your winnings, minus the %fee% fee.": "Kasama ang iyong orihinal na posisyon at ang iyong mga panalo, na ibinawas ang %fee% na fee.",
@@ -926,7 +914,7 @@
   "Stocks chart": "Chart ng mga stock",
   "Folder with cake token": "Folder na may token ng cake",
   "KLAY makes our world go round.": "Pinapaikot ng KLAY ang ating daigdig.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "Ang token ng KLAY ay ang pinaka-puso ng SweepStakes ecosystem. Bilhin ito, mapanalunan ito, i-farm ito, gamitin ito, i-stake ito... kahit anupaman, maaari ka ring bumoto gamit ito!",
+
   "Small 3d pancake": "Maliit na 3d pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% sa mga premyo ng KLAY sa round na ito",
   "Buy tickets with KLAY, win KLAY if your numbers match": "Bumili ng mga ticket gamit ang KLAY, manalo ng KLAY kung tutugma ang iyong mga numero",
@@ -1006,7 +994,7 @@
   "If you’re not a whitelisted project, you won’t be able to participate, but you can still view what’s going on!": "Kung hindi ka isang whitelisted na proyekto, hindi ka makakasali, ngunit maaari mo pa ring tingnan kung ano ang nangyayari!",
   "through community auctions so far!": "sa pamamagitan ng mga auction ng komunidad sa ngayon!",
   "Farm Auctions": "Mga auction ng Farm",
-  "auction bunny": "bunny ng auction",
+
   "Burnt KLAY": "Na-burn na KLAY",
   "Stake %stakingSymbol% - Earn %earningSymbol%": "I-stake %stakingSymbol% - Kumita %earningSymbol%",
   "Top Farms": "Mga Top Farm",
@@ -1295,14 +1283,14 @@
   "Not eligible": "Hindi karapat-dapat",
   "Out of the 10,000 total NFTs in the squad,": "Sa 10,000 kabuuang mga NFT sa squad,",
   "You’ll need an active SweepStakes Profile to buy Minting Tickets and mint a SweepStakes Squad NFT!": "Kakailanganin mo ng aktibong SweepStakes Profile para makabili ng mga Minting Ticket at mag-mint ng SweepStakes Squad NFT!",
-  "The minting period is now over: all 10,000 bunnies have now been minted.": "Tapos na ang panahon ng pagmimint: lahat ng 10,000 na mga bunny ay nai-mint na ngayon.",
+
   "All 10,000 SweepStakes Squad NFTs have now been minted!": "Lahat ng mga 10,000 SweepStakes Squad na NFT ay nai-mint na!",
   "Mint Cost: %minCost% KLAY each": "Halaga ng Mint: %minCost% kada KLAY",
   "Cost per Ticket": "Gastos sa bawat Ticket",
   "Follow on Instagram": "Sundan sa Instagram",
   "Please enable KLAY spending in your wallet": "Mangyaring i-enable ang KLAY na ginugugol sa iyong wallet",
   "Mint NFTs (%tickets%)": "Mag-mint ng mga NFT (%tickets%)",
-  "490 are available in the pre-sale for owners of Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)": "Available ang 490 sa pre-sale para sa mga may-ari ng Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)",
+
   "Hold KLAY": "I-hold ang KLAY",
   "Head to the NFT Marketplace to buy!": "Magtungo sa NFT Marketplace para bumili!",
   "Max per wallet: %maxPerWallet%": "Max kada wallet: %maxPerWallet%",
@@ -1326,9 +1314,7 @@
   "Claim Phase": "Yugto ng Pag-claim",
   "During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a SweepStakes Squad NFT.": "Sa yugtong ito, maaaring kunin ng anumang wallet na may hawak na Squad Ticket ang kanilang ticket para makakuha ng SweepStakes Squad NFT.",
   "Wait for the Reveal": "Maghintay para sa Pagbubunyag",
-  "It’ll take a few days before your bunny’s image is revealed. Just hold tight and wait for the final image!": "Aabutin ng ilang araw bago maipakita ang larawan ng iyong bunny. Mag-antabay at hintayin ang huling larawan!",
-  "Trading will open before the images are live, but you’ll still be able to check the bunnies’ stats.": "Magbubukas ang trading bago maging live ang mga larawan, ngunit masusuri mo pa rin ang mga istatistika ng mga bunny.",
-  "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.": "Pre-sale: Ang mga wallet na may hawak na \"Gen 0\" SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) sa isang snapshot na kinuha ilang oras sa pagitan ng 12 at 2 oras bago magsimula ang presale ay makakabili ng isang Squad Ticket bawat Gen 0 NFT.",
+
   "Transaction has succeeded!": "Nagtagumpay ang transaksyon!",
   "The birthplace of Cecy is truly unknown": "Ang lugar ng kapanganakan ni Cecy ay talagang hindi alam",
   "But legend tells us, she was sailing alone": "Ngunit sinasabi sa atin ng alamat, naglalayag siyang mag-isa",
@@ -1336,10 +1322,10 @@
   "When she found an island, said “this is for me!”": "Nang makahanap siya ng isang isla, sinabi niyang \"para sa akin ito!\"",
   "‘Twas full of rabbits, who caught her attention": "Ito ay puno ng mga kuneho, na nakakuha ng kanyang pansin",
   "Making neat stuff beyond her comprehension": "Paggawa ng maayos na bagay na lampas sa kanyang pang-unawa",
-  "The bunnies were working in a big ol’ kitchen": "Ang mga bunny ay nagtatrabaho sa isang malaking kusina",
+
   "Cooking hot pancakes for their big ol’ mission:": "Pagluluto ng mainit na mga pancake para sa kanilang malaking misyon:",
   "To drizzle in syrup and hand them out soon": "Upang ibuhos ang syrup at ibigay ang mga ito sa lalong madaling panahon",
-  "So that bunnies worldwide may fly to the moon.": "Upang ang mga bunny sa buong mundo ay maaaring lumipad sa buwan.",
+
   "All SweepStakes Squad NFTs are allocated to Squad Ticket holders through a provably-fair system based on ChainLink at the time of minting.": "Ang lahat ng SweepStakes Squad NFT ay inilalaan sa mga may hawak ng Squad Ticket sa pamamagitan ng isang provably-fair na sistema batay sa ChainLink sa oras ng pag-minting.",
   "Presale:": "Presale:",
   "Public Sale:": "Sale na Pangpubliko:",
@@ -1354,12 +1340,11 @@
   "end in": "magtatapos sa",
   "Insufficient Balance": "Hindi sapat na Balanse",
   "Highest price": "Pinakamataas na presyo",
-  "10,000 bunnies.": "10,000 na mga bunny.",
+
   "ZERO duplicates.": "ZERO na mga duplicate.",
-  "Every SweepStakes Squad bunny is different.": "Ang bawat bunny ng SweepStakes Squad ay naiiba.",
-  "On top of that, there are a very small number of ultra-rare special unique bunnies as well...!": "Higit pa rito, mayroong napakaliit na bilang ng mga napakabihirang espesyal na natatanging bunny din...!",
+
   "View in Market": "Tingnan sa Market",
-  "They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.": "Ang mga ito ay random na na-generate mula sa higit sa 200 iba't ibang mga tampok, na may higit sa walong BILYON na posibleng mga kumbinasyon, upang walang bunny na magkapareho.",
+
   "View Documentation": "Tingnan ang Dokumentasyon",
   "What’s the Smart Contract?": "Ano ang Smart na Kontrata?",
   "Redeem Tickets to claim NFTs": "Mag-redeem ng mga Ticket para mag-claim ng mga NFT",
@@ -1382,12 +1367,10 @@
   "How are the NFTs randomly distributed?": "Paano random na ipinamamahagi ang mga NFT?",
   "What’s the value of each NFT?": "Ano ang halaga ng bawat NFT?",
   "Wait for the reveal! After all 10,000 members of the SweepStakes Squad have been minted, their images will remain hidden for a few days. Just be patient :)": "Maghintay para sa pagbubunyag! Matapos ma-mint ang lahat ng 10,000 na mga miyembro ng SweepStakes Squad, mananatiling nakatago ang kanilang mga larawan sa loob ng ilang araw. Pasensya na lang :)",
-  "Users holding Gen 0 SweepStakes Bunny NFTs at the snapshot may also purchase one additional SweepStakes Squad NFT in the presale for each SweepStakes Bunny they hold.": "Ang mga user na may hawak ng Gen 0 na SweepStakes Bunny NFT sa snapshot ay maaari ding bumili ng isang karagdagang SweepStakes Squad NFT sa presale para sa bawat SweepStakes Bunny na hawak nila.",
-  "For example, if you have 5 Gen 0 bunnies, you can buy 5 minting tickets in the presale, then max. 10 in the public sale.": "Halimbawa, kung mayroon kang 5 Gen 0 na bunny, maaari kang bumili ng 5 minting ticket sa presale, pagkatapos ay max. na 10 sa pampublikong pagbebenta.",
+
   "Once all 10,000 Squad Tickets have been bought, Chainlink VRF will be used to randomly allocate the pre-generated NFTs to the purchased Tickets. Squad Tickets are allocated IDs numbered in order of their purchase.": "Kapag nabili na ang lahat ng mga 10,000 na Squad Ticket, gagamitin ang Chainlink VRF upang random na ilaan ang mga paunang nabuong NFT sa mga biniling Ticket. Ang mga Squad Ticket ay ang mga inilalaan na ID na may numero na may pagkakasunod-sunod ng kanilang pagbili.",
   "Once all 10,000 have been sold, VRF will pick numbers from 0 to 9999, which will be used to shift the Squad Ticket ID. This will ensure that the distribution of rare NFTs will be randomized, and prevents “sniping” of specific NFTs during the pre-sale or public sale phases.": "Kapag naibenta na ang lahat ng 10,000, pipili ang VRF ng mga numero mula 0 hanggang 9999, na gagamitin para ilipat ang Squad Ticket ID. Titiyakin nito na ang pamamahagi ng mga bihirang NFT ay magiging random, at mapipigilan ang \"pag-sniping\" ng mga partikular na NFT sa panahon ng mga yugto ng pre-sale o pampublikong pagbebenta.",
-  "Value is subjective, but since different traits have different levels of rarity, you can expect bunnies with rarer traits to trade for higher prices than others. If you’re planning to sell, check the NFT market for the price of bunnies with a similarly rare traits to yours.": "Ang halaga ay indibidwal, ngunit dahil ang iba't ibang mga katangian ay may iba't ibang antas ng pagka-pambihira, maaari mong asahan na ang mga bunny na may mas bihirang mga katangian ay mag-trade para sa mas mataas na presyo kaysa sa iba. Kung nagpaplano kang magbenta, tingnan ang NFT market para sa presyo ng mga bunny na may katulad na bihirang mga katangian sa iyo.",
-  "Bunny Id": "Id ng Bunny",
+
   "Filter by": "I-filter sa",
   "On Sale": "Naka sale",
   "Results": "Mga resulta",
@@ -1499,7 +1482,7 @@
   "Old Farms": "Mga Dating Farm",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "Pakitandaan na ito ang dating BTT token, na na-swap sa mga bagong BTT token sa sumusunod na ratio:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "Mali ang pagkaka-configure sa pool na ito. Paki-unstake ang iyong mga token mula rito, gagamitin ang emergencyWithdraw na paraan. Ibabalik ang iyong mga token sa wallet mo, pero hindi maha-harvest ang mga reward.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Para sa pribadong pagbebenta, magagawa ng mga bawat kwalipikadong kasali na mag-commit anumang halaga ng KLAY hanggang sa maximum na limitasyon sa pag-commit, na na-publish kasama ng mungkahi sa pagboto ng IFO.",
+
   "Meet any one of the following requirements to be eligible.": "Tugunan ang alinmang isa sa mga sumusunod na kinakailangan para maging kwalipikado.",
   "You are eligible to participate in this Private Sale!": "Kwalipikado kang sumali sa Pribadong Pagbebenta na ito!",
   "Meet any one of the requirements to join:": "Tugunan ang alinmang isa sa mga kinakailangan para sumali:",
@@ -1525,7 +1508,7 @@
   "How do I convert wBETH back to ETH?": "Paano ko iko-convert ang wBETH pabalik sa ETH?",
   "You can convert wBETH to ETH through": "Puwede kang mag-convert sa wBETH sa ETH sa pamamagitan ng",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "Nagsisikap din ang SweepStakes na suportahan ang isang kontrata ng pag-convert sa aming liquid staking page para i-convert ang wBETH pabalik sa ETH nang walang kahirap-hirap.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "Sa kasalukuyang format ng IFO, may bagong Pribadong Pagbebenta. Para sumali, dapat matugunan ng mga kasali ang ilang partikular na kinakailangan na ipinakita sa IFO card. Magagawa ng bawat kwalipikadong kasali na mag-commit ng anumang halaga ng KLAY nang hanggang sa maximum na limitasyon sa pag-commit, na ipina-publish kasama ng mungkahi sa pagboto sa IFO. Walang bayarin sa pagsali sa Pribadong Pagbebenta.",
+
   "You can choose one or both at the same time!": "Puwede kang pumili ng isa o pareho nang sabay!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "Inirerekomenda naming sa iyong tingnan muna kung kwalipikado kang sumali sa Pribadong Pagbebenta. Sa Pampublikong Pagbebenta, kung masyadong maliit ang halagang maiko-commit mo, posibleng hindi ka makatanggap ng malaki-laking halaga ng mga IFO token.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "Tandaan lang na kailangan mong aktibong Profile sa SweepStakes para makasali.",
@@ -1545,7 +1528,7 @@
   "Current Market Price": "Kasalukuyang Market Price",
   "Limit Price": "Limit Price",
   "Error Tracking Id": "Tracking Id ng Error",
-  "Your voting power at block": "Ang kakayahan mong bumoto sa block",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "Hindi maipadala ang transaksyong ito dahil lumipas na ang deadline. Tiyakign hindi masyadong maikli ang deadline ng iyong transaksyon.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "Hindi magtatagumpay ang transaksyong ito dahil sa paggalaw ng presyo o bayarin sa paglipat. Subukang pataasin ang iyong slippage tolerance.",
   "The input token cannot be transferred. There may be an issue with the input token.": "Hindi mailipat ang input token. Posibleng may isyu sa input token.",
@@ -1613,7 +1596,7 @@
   "Limit": "Limitahan",
   "at market price": "sa market price",
   "Error occurred, please try again later": "Nagkaroon ng error, pakisubukan ulit sa ibang pagkakataon",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "Mag-hold nang ilang KLAY sa iyong wallet o sa SweepStakes sa block ng snapshot para magkaroon ng kakayahang bumoto para sa mga mungkahi sa hinaharap.",
+
   "Preparing": "Inihahanda",
   "Perpetual": "Perpetual",
   "Stake KLAY": "Mag-stake ng KLAY",
@@ -1672,7 +1655,7 @@
   "Extend Lock": "I-extend ang Lock",
   "Unlocked": "Na-unlock",
   "Binance Fan token Trading Competition": "Kumpetisyon sa Pag-trade ng Fan token sa Binance",
-  "Easter Trading Competition": "Kumpetisyon sa Pag-trade sa Easter",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 NFT ng mga Avatar ng Mobox + 300 bagong disenyong NFT ng SweepStakes sa nangungunang 100 trader sa bawat isa sa tatlong team.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 mystery box sa Mobox sa nangungunang 500 trader na ni-rank ayon sa volume ng pag-trade sa MBOX.",
   "Added by user": "Idinagdag ng user",
@@ -1711,7 +1694,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "Ang bilang ng iCAKE ay katumbas ng naka-lock na halaga ng pag-stake kung mas mahaba sa %weeks% (na) linggo ang panahon ng pag-stake. Kung wala pang %weeks% (na) linggo ang panahon ng pag-stake, mababawasan ito batay sa haba ng pag-stake.",
   "Go to KLAY pool": "Pumunta sa KLAY pool",
   "April": "Abril",
-  "Easter Battle": "Labanan sa Easter",
+
   "$200,000 in Prizes!": "$200,000 sa mga Papremyo!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "Makipagkumpitensya sa iba pang team para manalo ng KLAY, mga collectible na NFT, mga achievement at higit pa!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "Ang mga papremyo ay ipapamahagi bilang KLAY at paghahatian ng lahat ng miyembro ng isang tier. Malalaman sa araw ng pamamahagi ang presyo ng KLAY sa USD. Nasa ibaba ang mga detalye.",
@@ -1754,9 +1737,7 @@
   "Circulating Supply": "Supply na Nasa Sirkulasyon",
   "Prizes will be announced and available for claiming at ~": "Iaanunsyo ang mga premyo at magiging available na i-claim sa ~",
   "Follow Update": "Sundin ang Update",
-  "Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.": "Ie-airdrop sa iyong wallet ang Mines of Dalarnia - Bunny Helmet NFT mo bago ang 00:00 UTC sa Hunyo 2.",
-  "Bunny Helmet NFT": "Bunny Helmet NFT",
-  "Bunny Helmet": "Bunny Helmet",
+
   "SweepStakes NFT": "SweepStakes NFT",
   "Pottery": "Pottery",
   "Stake to WIN!": "Mag-stake para MANALO!",
@@ -1844,11 +1825,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "Sa Pampublikong Pagbebenta, lahat ng may aktibong profile sa SweepStakes ay puwedeng mag-commit. Gayunpaman, ang maximum na halaga ng KLAY na maiko-commit ng mga user ay katumbas ng bilang ng iCAKE na mayroon sila.",
   "And there’s a fee for participation: see below.": "At may bayarin para sa pagsali: tingnan sa ibaba.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "Unti-unting bumababa ang bayarin sa pagsali, batay sa porsyento ng overflow mula sa bahaging “Pampublikong Pagbebenta” ng IFO.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "Tandaan: Posibleng magkakaiba ang bayarin sa iba't ibang IFO. Para matuto pa tungkol sa mga bayarin sa pagsali, sumangguni sa mga detalye sa mungkahi (pagboto) ng IFO para sa mga detalye ng IFO na gusto mong salihan.",
+
   "You have successfully claimed your rewards.": "Matagumpay mong naangkin ang iyong mga gantimpala.",
   "Pottery (BETA)": "Pottery (BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "May pag-vest ng token ang IFO na ito. Ire-release ang mga nabiling token sa loob ng isang yugto ng panahon.",
-  "Learn more in the vote proposal": "Matuto pa tungkol sa mungkahi sa pagboto",
+
   "What is the difference between an IFO and a cIFO?": "Ano ang pagkakaiba ng IFO at cIFO?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "Kung hindi ka magko-commit ng sapat na KLAY, posibleng hindi ka makatanggap ng makabuluhang halaga ng mga IFO token, o posibleng wala ka talagang matanggap na anumang IFO token.",
   "~%num% available to claim at sales end": "~%num% ang available na i-claim sa pagtatapos ng pagbebenta",
@@ -1874,13 +1855,13 @@
   "Max. deposit cap": "Max. na cap ng deposito",
   "Fixed Term KLAY Staking": "Fixed Term na Pag-stake ng KLAY",
   "Flexible KLAY Staking": "Flexible na Pag-stake ng KLAY",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "Kinakalkula ang kakayahan sa pagboto gamit ang halaga ng pag-stake at ang natitirang tagal ng pag-stake ng fixed-term na posisyon sa pag-stake ng KLAY sa block.",
+
   "KLAY locked:": "Naka-lock na KLAY:",
   "Go to Pools": "Pumunta sa Mga Pool",
   "KLAY Emission Projection": "Hula sa KLAY Emission",
   "Boosted by vCAKE": "Na-boost ng vCAKE",
   "Boosting Expired": "Nag-expire na ang Pag-boost",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "Nag-expire ang pag-boost ng vCAKE mo sa snapshot block. I-renew ang iyong fixed-term na posisyon sa pag-stake para i-activate ang pag-boost para sa mga mungkahi sa pagboto sa hinaharap.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% ng nabiling token ay itatago at ilalabas nang unti-unti sa loob ng isang yugto ng panahon. %percentageTgeRelease%% ng nabiling token ay agad na ilalabas at magiging available para i-claim kapag natapos ang IFO.",
   "The vested tokens will be released linearly over a period of %days% days.": "Linear na ire-release ang mga na-vest na token sa loob ng %days% (na) araw na yugto ng panahon.",
   "Yield Booster": "Booster ng Yield",
@@ -2073,10 +2054,10 @@
   "Meet the following requirement to join:": "Tugunan ang sumusunod na kinakailangan para makasali:",
   "Order cancellation": "Pagkansela ng order",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "Pagkansela ng order: %inputAmount% %inputTokenSymbol% para sa %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "I-renew ang posisyon mo sa pag-stake para patuloy na ma-enjoy ang mga benepisyo ng pag-boost ng yield sa farm, pagsali sa mga IFO, mga pag-boost sa kapangyarihang bumoto, at marami pang iba!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "Natapos na ang panahon ng pag-lock. Para maiwasang dumami pa ang mga reward na mabe-burn, i-renew ang iyong posisyon sa pag-stake para patuloy na ma-enjoy ang mga benepisyo mula sa mga na-lock na pag-stake.",
   "Default": "Default",
-  "Shows username of wallet instead of bunnies": "Ipinapakita ang username ng wallet sa halip na mga bunny",
+
   "Show username": "Ipakita ang username",
   "For more info, please see pGALA’s twitter.": "Para sa higit pang impormasyon, pakitingnan ang twiiter ng pGALA.",
   "Discovered from registered coins": "Natuklasan mula sa mga nakarehistrong coin",
@@ -2087,11 +2068,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (kasama ang mga reward) ang naka-lock sa KLAY Pool hanggang %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "Nagbibigay-daan sa iyo ang iCAKE na sumali sa mga pampublikong bentahan ng IFO at mag-commit ng hanggang %iCake% halaga ng KLAY.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Nagbibigay-daan sa iyo ang bCAKE na i-boost ang yield mo sa Mga SweepStakes Farm nang hanggang 2x.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "Binu-boost ng vCAKE ang iyong kapangyarihang bumoto sa %totalScore% sa pagboto para sa pamamahala sa SweepStakes.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "Mag-lock ng KLAY para ma-enjoy ang mga benepisyo ng pag-boost ng farm yield, pagsali sa mga IFO, pag-boost sa kapangyarihang bumoto, at higit pa!",
+
   "KLAY staking expired": "Nag-expire na ang pag-stake ng KLAY",
   "Insufficient token allowance. Click \"Enable\" to approve.": "Hindi sapat ang allowance ng token. I-click ang \"I-enable\" para aprubahan.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "Para sa pampublikong pagbebenta, magagawa ng mga bawat kwalipikadong kasali na mag-commit ng anumang halaga ng KLAY hanggang sa maximum na limitasyon sa pag-commit, na na-publish kasama ng mungkahi sa pagboto ng IFO.",
+
   "Unable to supply": "Hindi makapag-supply",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Sa pamamagitan ng pagdaragdag ng liquidity, kikita ka ng 50% mula sa mga bayarin sa lahat ng pag-trade sa pair na ito, na katumbas ng iyong bahagi sa trading pair. Idinaragdag ang mga bayarin sa pair, iniipon nang real time, at puwedeng i-claim sa pamamagitan ng pag-withdraw sa iyong liquidity. Para sa higit pang impormasyon sa mga bayarin sa Stableswap, i-click ang",
   "For each stableswap trade, refer to the fee table": "Para sa bawat pag-trade sa stableswap, sumangguni sa talahanayan ng bayarin",
@@ -2524,7 +2504,7 @@
   "APR (with farming)": "APR (nang may farming)",
   "Include farming rewards": "Isama ang mga farming reward",
   "Join SweepStakes Protectors": "Sumali sa Mga Protector ng SweepStakes",
-  "Exclusive Perks for SweepStakes Bunnies and Squads": "Mga Eksklusibong Perk para sa Mga Bunny at Squad ng SweepStakes",
+
   "Game": "Game",
   "Get your custom branded subdomains .pancake.crypto for just $9.99": "Magkaroon ng mga custom na na-brand na subdomain na .pancake.crypto sa halagang $9.99 lang",
   "rate": "rate",
@@ -2669,7 +2649,7 @@
   "How is the APR calculated for SnBNB?": "Paano kinakalkula ang APR para sa SnBNB?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "Ang APR para sa SnBNB ay nag-iiba-iba sa pagitan ng 0.5%-3%. Nakadepende ang APR na kikitain ng mga validator sa BNB Chain sa dalawang salik:",
   "Commission Rate: synclub validator charges 10% commission fee.": "Rate ng Komisyon: naniningil ang validator ng synclub ng 10% bayad sa komisyon.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "Kakayahang Bumoto: Ang halagang na-stake para sa validator ang tutukoy sa APR na matatanggap niya.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Gumagamit ang validator ng Synclub ng MEV (Miner Extractable Value) para mapahusay nito ang APR. Tataas ang SnBNB laban sa BNB alinsunod sa APR ng pag-stake ng BNB.",
   "How can I use SnBNB?": "Paano ko magagamit ang SnBNB?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "Puwede mong gamitin ang SnBNB para i-explore ang iba pang paggagamitan tulad ng pag-swap, pagpapautang/panghihiram, at yield farming sa BnbChain. Kasama ng",
@@ -2808,6 +2788,6 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
+
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

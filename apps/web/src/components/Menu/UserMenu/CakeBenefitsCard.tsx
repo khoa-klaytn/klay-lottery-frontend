@@ -81,24 +81,10 @@ const CakeBenefitsCard: React.FC<React.PropsWithChildren<CakeBenefitsCardProps>>
     targetRef: vCakeTargetRef,
     tooltip: vCakeTooltip,
     tooltipVisible: vCakeTooltipVisible,
-  } = useTooltip(
-    <>
-      <Text>
-        {t(`vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.`, {
-          totalScore: cakeBenefits?.vCake?.totalScore,
-        })}
-      </Text>
-      <NextLinkFromReactRouter to="/voting" onClick={onDismiss}>
-        <Text bold color="primary">
-          {t('Learn More')}
-        </Text>
-      </NextLinkFromReactRouter>
-    </>,
-    {
-      placement: 'bottom',
-      ...(isMobile && { hideTimeout: 2000 }),
-    },
-  )
+  } = useTooltip(<></>, {
+    placement: 'bottom',
+    ...(isMobile && { hideTimeout: 2000 }),
+  })
 
   return cakeBenefitsFetchStatus === FetchStatus.Fetched ? (
     <>
@@ -148,7 +134,6 @@ const CakeBenefitsCard: React.FC<React.PropsWithChildren<CakeBenefitsCardProps>>
                 vCAKE
               </TooltipText>
               {vCakeTooltipVisible && vCakeTooltip}
-              {cakeBenefits?.vCake?.vaultScore}
             </Flex>
           </CakeBenefitsCardInner>
         </CakeBenefitsCardWrapper>

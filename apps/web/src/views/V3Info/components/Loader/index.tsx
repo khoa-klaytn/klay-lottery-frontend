@@ -43,12 +43,6 @@ export default function Loader({
   )
 }
 
-const pulse = keyframes`
-  0% { transform: scale(1); }
-  60% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-`
-
 const Wrapper = styled.div<{ fill: number; height?: string }>`
   pointer-events: none;
   display: flex;
@@ -67,21 +61,8 @@ const Wrapper = styled.div<{ fill: number; height?: string }>`
         `}
 `
 
-const AnimatedImg = styled.div`
-  animation: ${pulse} 800ms linear infinite;
-  & > * {
-    width: 72px;
-  }
-`
-
 export const LocalLoader = ({ fill }: { fill: boolean }) => {
-  return (
-    <Wrapper fill={fill ? 1 : 0}>
-      <AnimatedImg>
-        <img src="https://assets.sweepstakes.finance/web/pancake-3d-spinner-v2.gif" alt="loading-icon" />
-      </AnimatedImg>
-    </Wrapper>
-  )
+  return <Wrapper fill={fill ? 1 : 0}>Loading...</Wrapper>
 }
 
 const loadingAnimation = keyframes`

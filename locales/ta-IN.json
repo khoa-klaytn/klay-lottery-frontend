@@ -2,7 +2,7 @@
   "Farm": "ஃபார்ம்",
   "Exchange": "சந்தை",
   "Docs": "ஆவணங்கள்",
-  "Voting": "வாக்களித்தல்",
+
   "Lottery": "லாட்டரி",
   "Connect Wallet": "வாலெட்டை இணை",
   "Blog": "வலைப்பூ",
@@ -151,7 +151,7 @@
   "Only approved SweepStakes Collectibles can be used.": "அங்கீகரிக்கப்பட்ட SweepStakes கலெக்டிபிள்களை மட்டுமே பயன்படுத்த முடியும்.",
   "Allow collectible to be locked": "பூட்டப்பட கலெக்டிபிளை அனுமதிக்கவும்",
   "Join a Team": "ஒரு குழுவில் சேர்",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "உங்கள் சுயவிவரம் செயலில் இருக்கும் வரை இந்தப் பெயர், குழு லீடர்போர்டுகளிலும் தேடல் முடிவுகளிலும் காண்பிக்கப்படும்.",
+
   "Complete Profile": "சுயவிவரத்தை நிறைவுசெய்",
   "Oops!": "அடடே!",
   "ROI Calculator": "ROI கால்குலேட்டர்",
@@ -486,7 +486,7 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "போட்டியில் சேர, உங்கள் சுயவிவரப் படத்தை மாற்றுவதன் மூலம் உங்கள் சுயவிவரத்தை மீண்டும் செயற்படுத்த வேண்டும்.",
   "Go to my profile": "எனது சுயவிவரத்திற்குச் செல்க",
   "You have registered for the competition!": "நீங்கள் போட்டிக்குப் பதிவு செய்துள்ளீர்கள்!",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "போட்டிக்குப் பதிவுசெய்வதானது உங்கள் வாலெட் முகவரியை லீடர்போர்டில் பொதுவில் தெரியும்படி செய்யும்.",
+
   "This decision cannot be reversed.": "இந்த முடிவை பழைய நிலைக்கு மாற்ற முடியாது.",
   "I understand that my address may be displayed publicly throughout the competition.": "எனது முகவரி, போட்டி முழுவதும் பொதுவில் காட்டப்படலாம் என்பதை நான் புரிந்துகொள்கிறேன்.",
   "Eligible trading pairs": "தகுதியான டிரேடிங் ஜோடிகள்",
@@ -539,21 +539,20 @@
   "%symbol% to receive": "பெறுவதற்கான %symbol%",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "இந்தப் பரிவர்த்தனை, விலை நகர்வு காரணமாகவோ இடமாற்றத்திற்கான கட்டணம் காரணமாகவோ வெற்றிபெறாது. உங்கள் ஸ்லிப்பேஜ் டாலெரன்ஸை",
   "slippage tolerance.": "அதிகரிக்க முயற்சிக்கவும்.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "அற்புதம்! ஈஸ்டர் போரில் வென்ற சிரப் புயலைக் கொண்டாடுவோம்!",
-  "Melting Easter eggs and melting hearts!": "ஈஸ்டர் முட்டைகளை உருக்கி, இதயங்களை உருக்குகிறது!",
+
   "Watch out for Flipsie’s spatula smash!": "ஃபிளிப்சியின் ஸ்பேட்டுலா ஸ்மாஷைப் பாருங்கள்!",
   "Do you like chocolate with your syrup? Go long!": "உங்கள் சிரப்புடனான சாக்லேட் பிடிக்குமா? நீண்டு செல்க!",
-  "Happy Niu Year! This bunny’s excited for the year of the bull (market!)": "இனிய நியு ஆண்டு வாழ்த்துக்கள்! இந்த முயல், காளை ஆண்டுக்கு உற்சாகமாக இருக்கிறது (சந்தை!)",
+
   "Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.": "அடடே டெய்ஸி! ஹிக்கப்பிற்கு ஒரு சிறிய விபத்து ஏற்பட்டது. பாவம் லிட்டில் ஃபெல்லா.",
   "Sunny is always cheerful when there are pancakes around. Smile!": "சுற்றிலும் pancake இருக்கும்போது சன்னி எப்போதும் மகிழ்ச்சியாக இருக்கிறார். புன்னகை!",
   "Don't let that dopey smile deceive you... Churro's a master KLAY chef!": "அந்த டோப்பி புன்னகை உங்களை ஏமாற்ற விடாதீர்கள்... சுர்ரோ ஒரு மாஸ்டர் KLAY செஃப்!",
   "Nommm... Oh hi, I'm just meditating on the meaning of KLAY.": "நோம்ம்... ஓஹ் ஹாய், நான் CAKEன் அர்த்தத்தில் தியானிக்கிறேன்.",
   "Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)": "அந்தக் கண்களில் சிமிட்டலுக்கான காரணத்திற்கு மூன்று யூகங்கள்! (குறிப்பு: இது ஒரு KLAY)",
   "These bunnies love nothing more than swapping pancakes. Especially on BSC.": "இந்த முயல்கள், pancakeகளை ஸ்வாப் செய்வதைத் தவிர வேறு எதையும் விரும்புவதில்லை. குறிப்பாக BSCல்.",
-  "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?": "இந்த முயல் மீது syrup மழை பொழிகிறது, ஆனால் அவன் அதைப் பொருட்படுத்துவதாகத் தெரியவில்லை. அவனைக் குறை கூற முடியுமா?",
+
   "These bunnies like their pancakes with blueberries. What's your favorite topping?": "இந்த முயல்கள் புளூபெர்ரிகளுடன் அவற்றின் pancakeக்குகளை விரும்புகின்றன. உங்களுக்குப் பிடித்த டாப்பிங் எது?",
   "Love makes the world go 'round... but so do pancakes. And these bunnies know it.": "அன்பு, உலகத்தைச் சுற்றச் செய்கிறது... ஆனால் pancakeக்குகளும். இந்த முயல்களுக்கு அது தெரியும்.",
-  "It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.": "இது பிரகாசமான syrup, pancakeக்குகள் மற்றும் லாட்டரி டிக்கெட்டுகள் கூட! இந்த முயல் உண்மையிலேயே அதை நேசிக்கிறது.",
+
   "The storm's a-comin! Watch out! These bulls are stampeding in a syrupy surge!": "புயல் வந்து கொண்டிருக்கிறது! ஜாக்கிரதை! இந்தக் காளைகள் ஒரு சிரப் எழுச்சியில் முத்திரை குத்தப்படுகின்றன!",
   "The flippening is coming. Don't get in these bunnies' way, or you'll get flipped, too!": "புரட்டல் வந்து கொண்டுள்ளது. இந்த முயல்களின் வழியில் செல்ல வேண்டாம், இல்லையெனில் நீங்களும் புரட்டப்படுவீர்கள்!",
   "Can you stand the heat? Stay out of the kitchen or you might get burned to a crisp!": "உங்களால் வெப்பத்தைத் தாங்க முடியுமா? சமையலறைக்கு வெளியே இருங்கள் அல்லது நீங்கள் மிருதுவாக எரிக்கப்படலாம்!",
@@ -566,7 +565,7 @@
   "Volume": "அளவு",
   "Prediction (BETA)": "கணிப்பு (பீட்டா)",
   "You can now start prediction": "நீங்கள் இப்போது கணிப்பைத் தொடங்கலாம்",
-  "Leaderboard": "லீடர்போர்டு",
+
   "Tokens": "டோக்கன்கள்",
   "Contact": "தொடர்பு",
   "The higher your team’s rank, the better your prizes!": "உங்கள் அணியின் தரவரிசை எந்தளவு உயர்கிறதோ, உங்கள் பரிசுகள் அந்தளவு சிறப்பாயிருக்கும்!",
@@ -596,7 +595,7 @@
   "Starts %date%": "தொடங்குவது %date%",
   "Ends %date%": "முடிவது %date%",
   "Closed": "மூடியது",
-  "Vote Now": "இப்போது வாக்களி",
+
   "Soon": "விரைவில்",
   "No proposals found": "முன்மொழிவுகள் எவையுமில்லை",
   "Creator": "உருவாக்குநர்",
@@ -605,7 +604,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "SweepStakes ஈகோசிஸ்டமின் எதிர்காலத்திற்கு உங்கள் கருத்தைப் பதிவுசெய்திடுங்கள்",
   "Got a suggestion?": "பரிந்துரை உள்ளதா?",
   "Community proposals are a great way to see how the community feels about your ideas.": "உங்கள் யோசனைகள் பற்றி சமூகம் என்ன நினைக்கிறது என்பதைக் காண, சமூக முன்மொழிவுகள் ஒரு சிறந்த வழியாகும்.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "சமூகம் வெற்றிகரமாக வாக்களித்தால் அவை செயல்படுத்தப்பட வேண்டிய அவசியமில்லை, ஆனால் ஏராளமான சமூக ஆதரவைக் கொண்ட பரிந்துரைகள் பிரதான முன்மொழிவுகளாகச் செய்யப்படலாம்.",
+
   "%field% is required": "%field% தேவை",
   "Please create a minimum of %num% choices": "குறைந்தபட்சம் %num% தெரிவுகளைச் செய்திடுங்கள்",
   "Choices must not be empty": "தெரிவுகள் காலியாக இருக்கக்கூடாது",
@@ -614,14 +613,11 @@
   "End date must be after the start date": "இறுதித் தேதி, தொடக்கத் தேதிக்குப் பிந்தையதாக இருக்க வேண்டும்",
   "Invalid snapshot": "தவறான ஸ்னேப்ஷாட்",
   "Proposal created!": "முன்மொழிவு உருவாக்கப்பட்டது!",
-  "Voted": "வாக்களிதது",
+
   "Time": "நேரம்",
   "Input choice text": "தேர்வு உரையை உள்ளிடு",
   "Start Time": "தொடக்க நேரம்",
-  "Back to Vote Overview": "வாக்களிப்பு கண்ணோட்டத்திற்குத் திரும்பு",
-  "Voting For": "வாக்களிப்பது",
-  "Your Voting Power": "உங்கள் வாக்களிப்புச் சக்தி",
-  "Confirm Vote": "வாக்கை உறுதிசெய்க",
+
   "Add Choice": "தேர்வைச் சேர்",
   "Title": "தலைப்பு",
   "Content": "உள்ளடக்கம்",
@@ -630,27 +626,22 @@
   "Actions": "செயல்கள்",
   "End Time": "இறுதி நேரம்",
   "Publish": "பிரசுரி",
-  "No votes found": "வாக்குகள் எவையுமில்லை",
-  "Votes (%count%)": "வாக்குகள் (%count%)",
+
   "Snapshot": "ஸ்னேப்ஷாட்",
   "Choices": "தேர்வுகள்",
   "Identifier": "அடையாளங்காட்டி",
   "Current Results": "நடப்பு முடிவுகள்",
-  "Vote cast!": "வாக்களித்திடுக!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "மேற்கூறிய தேர்வுக்கு நிச்சயம் வாக்களிக்க விரும்புகிறீர்களா? இதைச் செயல்தவிர்க்க முடியாது.",
+
   "Tip: write in Markdown!": "குறிப்பு: மார்க்டவுனில் எழுதுக!",
-  "Cast your vote": "உங்கள் வாக்கை அளித்திடுக",
+
   "Preview": "முற்காட்சி",
-  "%total% Votes": "%total% வாக்குகள்",
-  "Cast Vote": "வாக்களி",
+
   "See All": "எல்லாம் காட்டு",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "நீங்கள் வைத்திருக்கும் CAKEன் அளவாலும், கீழே விவரிக்கப்பட்டுள்ள ப்ளாக்கில் (உங்களிடம் இருந்தால்) நிலையான-கால ஸ்டேக்கிங் நிலையில் மீதமுள்ள கால அளவாலும் உங்கள் வாக்களிப்புத் திறன் தீர்மானிக்கப்படுகிறது. மற்ற இடங்களில் இருக்கும் KLAY, உங்கள் வாக்களிப்புத் திறனுக்குப் பங்களிப்பதில்லை.",
+
   "Wallet": "வாலெட்",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "பிற SYRUP பூல்கள்",
-  "Voting Power": "வாக்களிப்புச் சக்தி",
-  "You need at least %count% voting power to publish a proposal.": "முன்மொழிவைப் பிரசுரிக்க குறைந்தபட்சம் %count% வாக்களிப்புச் சக்தி தேவை.",
-  "Check voting power": "வாக்களிப்புச் சக்தியைச் சோதித்திடுக",
+
   "Amount to collect": "சேகரிப்பதற்கான தொகை",
   "Your winnings": "உங்கள் வெற்றிகள்",
   "Includes your original position and your winnings, minus the %fee% fee.": "உங்கள் அசல் நிலை மற்றும் உங்கள் வெற்றிகள், கழிப்பு %fee% கட்டணம் என்பது உள்ளடங்குகிறது.",
@@ -926,7 +917,7 @@
   "Stocks chart": "பங்குகள் நிரல்படம்",
   "Folder with cake token": "KLAY டோக்கன் உள்ள கோப்புறை",
   "KLAY makes our world go round.": "KLAY நமது உலகை சுழலச் செய்கிறது.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY டோக்கன், SweepStakes ஈக்கோசிஸ்டத்தின் இதயத்தில் உள்ளது. அதை வாங்குக, வெல்க, ஃபார்ம் செய்க, செலவழித்திடுக, ஸ்டேக் செய்க... ஆம், இதைக் கொண்டு நீங்கள் வாக்களிக்கவும் செய்யலாம்!",
+
   "Small 3d pancake": "சிறிய 3d pancake",
   "%cakePrizeInUsd% in KLAY prizes this round": "இந்தச் சுற்றில் KLAY பரிசுகளில் %cakePrizeInUsd%",
   "Buy tickets with KLAY, win KLAY if your numbers match": "CAKEஉடன் டிக்கெட்களை வாங்கி, உங்கள் எண்கள் பொருந்தினால் KLAY வெல்லுங்கள்",
@@ -1006,7 +997,7 @@
   "If you’re not a whitelisted project, you won’t be able to participate, but you can still view what’s going on!": "நீங்கள் ஏற்புப்பட்டியலில் சேர்த்த செயல்திட்டத்தில் இல்லை எனில், உங்களால் பங்கேற்க முடியாது, ஆனால் நிகழ்வது என்னவென்பதை உங்களால் தொடர்ந்து பார்க்க முடியும்!",
   "through community auctions so far!": "இதுவரை சமூக ஏலங்கள் மூலம்!",
   "Farm Auctions": "ஃபார்ம் ஏலங்கள்",
-  "auction bunny": "ஏல முயல்",
+
   "Burnt KLAY": "செலவழித்த KLAY",
   "Stake %stakingSymbol% - Earn %earningSymbol%": "ஸ்டேக் %stakingSymbol% - ஈட்டு %earningSymbol%",
   "Top Farms": "முதன்மை ஃபார்ம்கள்",
@@ -1302,7 +1293,7 @@
   "Follow on Instagram": "இன்ஸ்டாகிராமில் பின்தொடர்க",
   "Please enable KLAY spending in your wallet": "உங்கள் வாலெட்டில் KLAY செலவிடலை இயக்கவும்",
   "Mint NFTs (%tickets%)": "NFTகளை அச்சிடுக (%tickets%)",
-  "490 are available in the pre-sale for owners of Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)": "ஜென் 0 SweepStakes முயல்களின் (முயல் ஐடி 0, 1, 2, 3, 4) உரிமையாளர்களுக்கு முன்விற்பனையில் 490 கிடைக்கிறது",
+
   "Hold KLAY": "CAKEஐ தக்கவை",
   "Head to the NFT Marketplace to buy!": "வாங்க NFT சந்தைக்குச் செல்லுங்கள்!",
   "Max per wallet: %maxPerWallet%": "ஒரு வாலெட்டுக்கு அதிகபட்சம்: %maxPerWallet%",
@@ -1326,9 +1317,9 @@
   "Claim Phase": "கிளைம் கட்டம்",
   "During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a SweepStakes Squad NFT.": "இந்தக் கட்டத்தில், ஸ்குவாட் டிக்கெட்டை வைத்திருக்கும் எந்தவொரு வாலெட்டும், ஒரு SweepStakes ஸ்குவாட் NFTயை கிளைம் செய்ய தங்கள் டிக்கெட்டை ரிடீம் செய்யலாம்.",
   "Wait for the Reveal": "வெளியிடலுக்குக் காத்திருக்கவும்",
-  "It’ll take a few days before your bunny’s image is revealed. Just hold tight and wait for the final image!": "உங்கள் முயலின் படம் வெளிவருவதற்கு சில நாட்கள் ஆகும். இணைப்பிலேயே இருந்து, இறுதிப் படத்திற்காகக் காத்திருங்கள்!",
+
   "Trading will open before the images are live, but you’ll still be able to check the bunnies’ stats.": "படங்கள் நேரலைக்கு வருவதற்கு முன் வர்த்தகம் தொடங்கும், ஆனால் முயல்களின் புள்ளிவிவரங்களை உங்களால் இன்னும் சரிபார்க்க முடியும்.",
-  "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.": "முன் விற்பனை: முன்விற்பனை தொடங்குவதற்கு முன் 12 முதல் 2 மணிநேரங்களுக்கு இடையில் எடுக்கப்பட்ட ஸ்னாப்ஷாட்டில் “ஜென் 0” SweepStakes முயல்கள் (முயல் ஐடி 0,1,2,3,4) வைத்திருக்கும் வாலெட்கள், ஒரு ஜென் 0 NFTக்கு ஒரு ஸ்குவாட் டிக்கெட்டை வாங்கலாம்.",
+
   "Transaction has succeeded!": "பரிவர்த்தனை வெற்றியடைந்தது!",
   "The birthplace of Cecy is truly unknown": "செசி பிறந்த இடம் உண்மையில் தெரியவில்லை",
   "But legend tells us, she was sailing alone": "ஆனால் அவள் தனியாக பயணம் செய்தாள் என புராணக்கதை நமக்கு சொல்கிறது",
@@ -1356,10 +1347,10 @@
   "Highest price": "அதிகபட்ச விலை",
   "10,000 bunnies.": "10,000 முயல்கள்.",
   "ZERO duplicates.": "பூஜ்ஜிய போலிகள்.",
-  "Every SweepStakes Squad bunny is different.": "ஒவ்வொரு pancake ஸ்குவாட் முயலும் வித்தியாசமானது.",
+
   "On top of that, there are a very small number of ultra-rare special unique bunnies as well...!": "அதுமட்டுமல்லாமல், மிகக் குறைந்த எண்ணிக்கையிலான அதி-அபூர்வ சிறப்புத் தனித்துவ முயல்களும் உள்ளன...!",
   "View in Market": "சந்தையில் காண்க",
-  "They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.": "அவை அனைத்தும் எட்டு பில்லியன்களுக்கு மேல் சாத்தியமான சேர்க்கைகளுடன் 200 க்கும் மேற்பட்ட வெவ்வேறு அம்சங்களிலிருந்து தற்போக்காக உருவாக்கப்படுகின்றன, இதனால் எந்த முயலும் எப்போதும் ஒரே மாதிரியாக இருக்காது.",
+
   "View Documentation": "ஆவணமாக்கலைக் காண்க",
   "What’s the Smart Contract?": "ஸ்மார்ட் ஒப்பந்தம் என்றால் என்ன?",
   "Redeem Tickets to claim NFTs": "NFTகளை கிளைம் செய்ய, டிக்கெட்டுகளை ரிடீம் செய்க",
@@ -1382,12 +1373,12 @@
   "How are the NFTs randomly distributed?": "NFTகள் எவ்வாறு தற்போக்காக விநியோகிக்கப்படுகின்றன?",
   "What’s the value of each NFT?": "ஒவ்வொரு NFTயின் மதிப்பு என்ன?",
   "Wait for the reveal! After all 10,000 members of the SweepStakes Squad have been minted, their images will remain hidden for a few days. Just be patient :)": "வெளியாகும் வரை காத்திருங்கள்! SweepStakes ஸ்குவாடில் உள்ள 10,000 உறுப்பினர்களும் அச்சிடப்பட்ட பிறகு, அவர்களின் படங்கள் சில நாட்களுக்கு தொடர்ந்து மறைக்கப்பட்டிருக்கும். பொறுமையாக இருங்கள் :)",
-  "Users holding Gen 0 SweepStakes Bunny NFTs at the snapshot may also purchase one additional SweepStakes Squad NFT in the presale for each SweepStakes Bunny they hold.": "ஸ்னேப்ஷாட்டில் ஜென் 0 SweepStakes முயல் NFTகளை வைத்திருக்கும் பயனர்கள், தாங்கள் வைத்திருக்கும் ஒவ்வொரு SweepStakes முயலுக்கும் ஒரு கூடுதல் SweepStakes ஸ்குவாட் NFTயை முன்விற்பனையில் வாங்கலாம்.",
+
   "For example, if you have 5 Gen 0 bunnies, you can buy 5 minting tickets in the presale, then max. 10 in the public sale.": "எடுத்துக்காட்டாக, உங்களிடம் 5 ஜென் 0 முயல்கள் இருந்தால், நீங்கள் முன்விற்பனையில் 5 அச்சிடல் டிக்கெட்டுகளையும், பிறகு பொது விற்பனையில் அதிகபட்சம் 10 டிக்கெட்டுகளையும் வாங்கலாம்.",
   "Once all 10,000 Squad Tickets have been bought, Chainlink VRF will be used to randomly allocate the pre-generated NFTs to the purchased Tickets. Squad Tickets are allocated IDs numbered in order of their purchase.": "அனைத்து 10,000 ஸ்குவாட் டிக்கெட்டுகளும் வாங்கப்பட்டவுடன், வாங்கிய டிக்கெட்டுகளுக்கு முன்-உருவாக்கப்பட்ட NFTகளை தற்போக்காக ஒதுக்குவதற்கு செயின்லிங் VRF பயன்படுத்தப்படும். ஸ்குவாட் டிக்கெட்டுகள், அவை வாங்கப்பட்ட வரிசையில் எண்ணிடப்பட்ட ஐடிகள் ஒதுக்கப்படுகின்றன.",
   "Once all 10,000 have been sold, VRF will pick numbers from 0 to 9999, which will be used to shift the Squad Ticket ID. This will ensure that the distribution of rare NFTs will be randomized, and prevents “sniping” of specific NFTs during the pre-sale or public sale phases.": "10,000 முழுமையாக விற்கப்பட்டதும், VRF ஆனது 0 முதல் 9999 வரையிலான எண்களைத் தேர்ந்தெடுக்கும், இது ஸ்குவாட் டிக்கெட் ஐடியை மாற்றப் பயன்படுத்தப்படும். இது அரிதான NFTகளின் விநியோகம் தற்போக்கு ஆக்கப்படுவதை உறுதி செய்யும், மேலும் முன்விற்பனை அல்லது பொது விற்பனை கட்டங்களில் குறிப்பிட்ட NFTகளின் 'ஸ்னைப்பிங்'கைத் தடுக்கும்.",
   "Value is subjective, but since different traits have different levels of rarity, you can expect bunnies with rarer traits to trade for higher prices than others. If you’re planning to sell, check the NFT market for the price of bunnies with a similarly rare traits to yours.": "மதிப்பு அகநிலையானது, ஆனால் வெவ்வேறு குணாதிசயங்கள் வெவ்வேறு நிலைகளில் அரிதான தன்மையைக் கொண்டிருப்பதால், அரிதான குணாதிசயங்களைக் கொண்ட முயல்கள் மற்றவர்களை விட அதிக விலைக்கு வர்த்தகம் செய்யும் என்று நீங்கள் எதிர்பார்க்கலாம். நீங்கள் விற்கத் திட்டமிட்டால், உங்களின் இதே போன்ற அரிய பண்புகளைக் கொண்ட முயல்களின் விலைக்கு NFT சந்தையைப் பார்க்கவும்.",
-  "Bunny Id": "முயல் ஐடி",
+
   "Filter by": "இதாக வடிகட்டு",
   "On Sale": "விற்பனையில்",
   "Results": "முடிவுகள்",
@@ -1499,7 +1490,7 @@
   "Old Farms": "பழைய ஃபார்ம்கள்",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "இது பழைய BTT டோக்கன் என்பதை நினைவில் கொள்ளவும், இது பின்வரும் விகிதத்தில் புதிய BTT டோக்கன்களுக்கு ஸ்வாப் செய்யப்பட்டுள்ளது:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "இந்த பூல் தவறாக உள்ளமைக்கப்பட்டது. தயவுசெய்து உங்கள் டோக்கன்களை அதிலிருந்து அன்ஸ்டேக் செய்யவும், எமர்ஜென்சி வித்ட்ரா முறை பயன்படுத்தப்படும். உங்கள் டோக்கன்கள் உங்கள் வாலெட்டில் திருப்பித் தரப்படும், இருப்பினும் வெகுமதிகள் அறுவடை செய்யப்படாது.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "தனிப்பட்ட விற்பனைக்கு, ஒவ்வொரு தகுதியுடைய பங்கேற்பாளரும் அதிகபட்ச கமிட் வரம்பு வரை KLAY-இன் எத்தொகைக்கும் கமிட் செய்ய முடியும், இது IFO வாக்களிப்பு முன்மொழிவுடன் வெளியிடப்படுகிறது.",
+
   "Meet any one of the following requirements to be eligible.": "தகுதிபெற பின்வரும் தேவைகளில் ஏதேனும் ஒன்றைப் பூர்த்தி செய்யவும்.",
   "You are eligible to participate in this Private Sale!": "இந்த தனியார் விற்பனையில் பங்கேற்க நீங்கள் தகுதி பெற்றுள்ளீர்கள்!",
   "Meet any one of the requirements to join:": "சேர்வதற்கு, தேவைகளின் ஏதேனும் ஒன்றைப் பூர்த்தி செய்யுங்கள்:",
@@ -1525,7 +1516,7 @@
   "How do I convert wBETH back to ETH?": "wBETHஐ எப்படி மீண்டும் ETHக்கு உருமாற்றுவது?",
   "You can convert wBETH to ETH through": "நீங்கள் wBETHஐ இவ்வழியில் ETHக்கு உருமாற்றலாம்:",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "wBETHஐ ETHக்குத் தடையின்றி உருமாற்ற, எங்கள் லிக்விட் ஸ்டேக்கிங் பக்கத்தில் ஓர் உருமாற்றல் ஒப்பந்தத்தை ஆதரிப்பதற்கும் SweepStakes செயல்படுகிறது.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "நடப்பு IFO வடிவத்தில், ஒரு புத்தம் புதிய தனியார் விற்பனை உள்ளது. பங்கேற்க, பங்கேற்பாளர்கள் IFO அட்டையில் வழங்கப்பட்ட குறிப்பிட்ட சில தேவைகளைப் பூர்த்தி செய்ய வேண்டும். ஒவ்வொரு தகுதியுடைய பங்கேற்பாளரும் அதிகபட்ச கமிட் வரம்பு வரை CAKEன் எந்தத் தொகையையும் கமிட் செய்ய முடியும், இது IFO வாக்களிப்பு முன்மொழிவுடன் வெளியிடப்படுகிறது. தனியார் விற்பனையில் பங்கேற்பு கட்டணம் இல்லை.",
+
   "You can choose one or both at the same time!": "நீங்கள் ஒன்று அல்லது இரண்டையும் ஒரே நேரத்தில் தேர்வு செய்யலாம்!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "நீங்கள் முதலில் தனியார் விற்பனையில் பங்கேற்கத் தகுதியுள்ளவரா என்பதைச் சரிபார்க்குமாறு பரிந்துரைக்கிறோம். பொது விற்பனையில், நீங்கள் கமிட் செய்யும் தொகை மிகவும் சிறியதாக இருந்தால், IFO டோக்கன்களின் அர்த்தமுள்ள தொகையை நீங்கள் பெறாமல் போகலாம்.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "பங்கேற்க, செயலிலுள்ள SweepStakes சுயவிவரம் தேவை என்பதை நினைவில் கொள்ளுங்கள்.",
@@ -1545,7 +1536,7 @@
   "Current Market Price": "நடப்பு மார்க்கெட் விலை",
   "Limit Price": "லிமிட் விலை",
   "Error Tracking Id": "பிழை கண்காணிப்பு ஐடி",
-  "Your voting power at block": "ப்ளாக்கில் உங்கள் வாக்களிப்புத் திறன்",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "காலக்கெடு முடிந்துவிட்டதால் பரிவர்த்தனையை அனுப்ப முடியவில்லை. உங்கள் பரிவர்த்தனைக் காலக்கெடு மிகக் குறைவாக இல்லை என்பதைச் சரிபார்த்திடுங்கள்.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "இந்தப் பரிவர்த்தனை, விலை நகர்வு காரணமாகவோ இடமாற்றத்திற்கான கட்டணம் காரணமாகவோ வெற்றிபெறாது. உங்கள் ஸ்லிப்பேஜ் டாலெரன்ஸை அதிகரிக்க முயற்சிக்கவும்.",
   "The input token cannot be transferred. There may be an issue with the input token.": "உள்ளீட்டு டோக்கனை இடமாற்ற முடியாது. உள்ளீட்டு டோக்கனில் சிக்கல் இருக்கக்கூடும்.",
@@ -1613,7 +1604,7 @@
   "Limit": "லிமிட்",
   "at market price": "மார்க்கெட் விலையில்",
   "Error occurred, please try again later": "பிழை ஏற்பட்டது, பின்னர் மீண்டும் முயற்சித்திடுக",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "எதிர்கால முன்மொழிவுகளுக்கான வாக்களிக்கும் சக்தியைப் பெற, உங்கள் வாலெட்டில் அல்லது ஸ்னாப்ஷாட் பிளாக்கில் உள்ள SweepStakes-இல் சிறிது KLAY வைத்திருங்கள்.",
+
   "Preparing": "தயார்செய்கிறது",
   "Perpetual": "நிரந்தரமானது",
   "Stake KLAY": "KLAY ஸ்டேக் செய்",
@@ -1672,7 +1663,7 @@
   "Extend Lock": "லாக்கை நீட்டித்திடு",
   "Unlocked": "அன்லாக் செய்தது",
   "Binance Fan token Trading Competition": "Binance ஃபேன் டோக்கன் டிரேடிங் போட்டி",
-  "Easter Trading Competition": "ஈஸ்டர் டிரேடிங் போட்டி",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "மூன்று அணிகளிலும் உள்ள முதல் 100 டிரேடர்களுக்கு, 300 Mobox அவதாரங்கள் NFT + 300 SweepStakes புதிதாக வடிவமைக்கப்பட்ட NFT.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "MBOX டிரேடிங் அளவின்படி தரவரிசைப்படுத்தப்பட்ட முதல் 500 டிரேடர்களுக்கு 500 Mobox புதிர் பெட்டிகள்.",
   "Added by user": "பயனரால் சேர்க்கப்பட்டது",
@@ -1711,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "ஸ்டேக்கிங் காலம் %weeks% வாரங்களை விட நீண்டதாக இருந்தால் iCAKEன் எண்ணிக்கையானது பூட்டப்பட்ட ஸ்டேக்கிங் தொகைக்குச் சமமானது. ஸ்டேக்கிங் கால அளவு %weeks% வாரங்களுக்குக்கும் குறைவாக இருந்தால், அது நேரிடையாக ஸ்டேக்கிங் கால அளவைப் பொறுத்து குறையும்.",
   "Go to KLAY pool": "KLAY பூலிற்குச் செல்லவும்",
   "April": "ஏப்ரல்",
-  "Easter Battle": "ஈஸ்டர் போர்",
+
   "$200,000 in Prizes!": "பரிசுகளில் $200,000!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "KLAY, கலெக்டிபிள் NFTகள், சாதனைகள் மற்றும் பலவற்றை வெல்ல மற்ற அணிகளுடன் போட்டியிடுங்கள்!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "பரிசுகள் CAKEல் விநியோகிக்கப்பட்டு, ஓர் அடுக்கின் எல்லா உறுப்பினர்களாலும் பகிரப்பட வேண்டும். விநியோக நாளில் USDல் KLAY விலை தீர்மானிக்கப்பட வேண்டும். விவரங்கள் கீழே.",
@@ -1754,9 +1745,7 @@
   "Circulating Supply": "சுழற்சி வழங்கல்",
   "Prizes will be announced and available for claiming at ~": "பரிசுகள் அறிவிக்கப்படும், கிளைம் செய்ய இதில் கிடைக்கும் ~",
   "Follow Update": "புதுப்பிப்பை பின்தொடரவும்",
-  "Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.": "உங்கள் மைன்ஸ் ஆஃப் டலார்னியா - பன்னி ஹெல்மெட் NFT, ஜூன் 2 ஆம் தேதி 00:00 UTC க்கு முன் உங்கள் வாலெட்டில் ஏர்ட்ராப் செய்யப்படும்.",
-  "Bunny Helmet NFT": "பன்னி ஹெல்மெட் NFT",
-  "Bunny Helmet": "பன்னி ஹெல்மெட்",
+
   "SweepStakes NFT": "SweepStakes NFT",
   "Pottery": "பாட்டரி",
   "Stake to WIN!": "வெல்வதற்கு ஸ்டேக் செய்க!",
@@ -1844,11 +1833,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "பொது விற்பனையில், செயலில் உள்ள SweepStakes சுயவிவரத்தைக் கொண்ட எவரும் கமிட் செய்யலாம். இருப்பினும், KLAY பயனர்கள் கமிட் செய்யத்தக்க அதிகபட்ச தொகை, அவர்கள் வைத்திருக்கும் iCakeன் எண்ணிக்கைக்கு சமமாகும்.",
   "And there’s a fee for participation: see below.": "பங்கேற்பதற்குக் கட்டணம் உள்ளது: கீழே பார்க்கவும்.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "IFOவின் ”பொது விற்பனை” பகுதியிலிருந்து மிகுந்தோடும் சதவீதத்தின் அடிப்படையில், க்ளிஃப்களில் பங்கேற்புக் கட்டணம் குறைகிறது.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "குறிப்பு: கட்டணங்கள் வெவ்வேறு IFOக்களுக்கு இடையில் வேறுபடலாம். பங்கேற்புக் கட்டணங்களைப் பற்றி மேலும் அறிய, நீங்கள் பங்கேற்க விரும்பும் IFOன் பிரத்தியேகங்களுக்கு IFO முன்மொழிவில் (வாக்களிப்பு) உள்ள விவரங்களைப் பாருங்கள்.",
+
   "You have successfully claimed your rewards.": "உங்கள் வெகுமதிகளை வெற்றிகரமாக கிளைம் செய்துள்ளீர்கள்.",
   "Pottery (BETA)": "பாட்டரி (பீட்டா)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "இந்த IFOல் டோக்கன் வெஸ்டிங் உள்ளது. வாங்கிய டோக்கன்கள் காலப்போக்கில் விடுவிக்கப்படுகின்றன.",
-  "Learn more in the vote proposal": "வாக்களிப்பு முன்மொழிவில் மேலும் அறிக",
+
   "What is the difference between an IFO and a cIFO?": "ஒரு IFOக்கும் cIFOக்கும் உள்ள வேறுபாடு என்ன?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "நீங்கள் போதுமான KLAY-ஐ கமிட் செய்யவில்லை என்றால், IFO டோக்கன்களின் அர்த்தமுள்ள தொகை உங்களுக்குக் கிடைக்காமல் போகலாம், அல்லது IFO டோக்கன்கள் எதையும் நீங்கள் பெறாமலேயே போகலாம்.",
   "~%num% available to claim at sales end": "~%num%, விற்பனையின் முடிவில் கிளைம் செய்யக் கிடைக்கிறது",
@@ -1874,13 +1863,13 @@
   "Max. deposit cap": "அதிகபட்ச டெபாசிட் வரம்பு",
   "Fixed Term KLAY Staking": "நிலையான-கால KLAY ஸ்டேக்கிங்",
   "Flexible KLAY Staking": "நெகிழ்வான KLAY ஸ்டேக்கிங்",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "ப்ளாக்கில் நிலையான-கால KLAY ஸ்டேக்கிங் நிலையின் ஸ்டேக்கிங் தொகையையும், மீதமுள்ள ஸ்டேக்கிங் காலத்தையும் பயன்படுத்தி வாக்களிப்புத் திறன் கணக்கிடப்படுகிறது.",
+
   "KLAY locked:": "KLAY பூட்டியது:",
   "Go to Pools": "பூல்களுக்குச் செல்க",
   "KLAY Emission Projection": "KLAY உமிழ்வுத் திட்டம்",
   "Boosted by vCAKE": "vCAKE ஆல் பூஸ்ட் செய்யப்பட்டது",
   "Boosting Expired": "பூஸ்டிங் காலாவதியானது",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "உங்கள் vCAKE பூஸ்டிங், ஸ்னாப்ஷாட் ப்ளாக்கில் காலாவதியானது. எதிர்கால வாக்களிப்பு முன்மொழிவுகளுக்கான பூஸ்டைச் செயல்படுத்த உங்கள் நிலையான-கால ஸ்டேக்கிங் நிலையைப் புதுப்பிக்கவும்.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "வாங்கிய டோக்கனில் %percentageVested% ஒரு குறிப்பிட்ட காலத்தில் வெஸ்ட் செய்யப்பட்டு, லீனியர் முறையில் வெளியிடப்படும். வாங்கிய டோக்கனில் %percentageTgeRelease% உடனடியாக வெளியிடப்படும் மற்றும் IFO முடியும்போது கிளைம் செய்யக் கிடைக்கும்.",
   "The vested tokens will be released linearly over a period of %days% days.": "வெஸ்டட் டோக்கன்கள் %days% நாட்களில் நேரியல் முறையில் வெளியிடப்படும்.",
   "Yield Booster": "மகசூல் பூஸ்டர்",
@@ -2073,7 +2062,7 @@
   "Meet the following requirement to join:": "சேர பின்வரும் தேவையைப் பூர்த்தி செய்யவும்:",
   "Order cancellation": "ஆர்டர் ரத்து",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "ஆர்டர் ரத்து: %outputAmount% %outputTokenSymbol% -க்கான %inputAmount% %inputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "பண்ணை விளைச்சலை அதிகரிப்பது, IFOகளில் பங்கேற்பது, வாக்களிப்பு ஆற்றலை அதிகரிப்பது மற்றும் பலவற்றின் பலன்களைத் தொடர்ந்து அனுபவிக்க உங்கள் ஸ்டேக்கிங் நிலையைப் புதுப்பிக்கவும்!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "பூட்டுக் காலம் முடிந்துவிட்டது. அதிக வெகுமதிகள் செலவழிக்கப்படுவதைத் தவிர்க்க, பூட்டிய ஸ்டேக்கிங்கின் பலன்களைத் தொடர்ந்து அனுபவிக்க உங்கள் ஸ்டேக்கிங் நிலையைப் புதுப்பிக்கவும்.",
   "Default": "இயல்புநிலை",
   "Shows username of wallet instead of bunnies": "முயல்களுக்குப் பதிலாக வாலட்டின் பயனர்பெயரைக் காட்டுகிறது",
@@ -2087,11 +2076,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (வெகுமதிகள் உட்பட) %lockedEndTime% வரை KLAY பூலில் பூட்டப்படுகின்றன",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE, நீங்கள் IFO பொது விற்பனையில் பங்கேற்பதற்கும், CAKEன் %iCake% தொகை வரை கமிட் செய்வதற்கும் அனுமதிக்கிறது.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE, நீங்கள் SweepStakes ஃபார்ம்களில் உங்கள் மகசூலை 2x வரை அதிகரிக்க அனுமதிக்கிறது.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE, உங்கள் வாக்களிக்கும் ஆற்றலை SweepStakes வாக்களிப்பு நிர்வாகத்தில் %totalScore% க்கு அதிகரிக்கிறது.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "ஃபார்ம் மகசூல் அதிகரிப்பு, IFOக்களில் பங்கேற்பது, வாக்களிக்கும் ஆற்றல் அதிகரிப்புகள் மற்றும் பலவற்றின் நன்மைகளை அனுபவிக்க KLAY-ஐப் பூட்டுங்கள்!",
+
   "KLAY staking expired": "KLAY ஸ்டேக்கிங் காலாவதியானது",
   "Insufficient token allowance. Click \"Enable\" to approve.": "போதிய டோக்கன் அலவன்ஸ் இல்லை. அங்கீகரிக்க ”இயக்கு” என்பதைக் கிளிக் செய்யவும்.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "பொது விற்பனைக்கு, ஒவ்வொரு தகுதியுடைய பங்கேற்பாளரும் அதிகபட்ச கமிட் வரம்பு வரை KLAY-இன் எத்தொகைக்கும் கமிட் செய்ய முடியும், இது IFO வாக்களிப்பு முன்மொழிவுடன் வெளியிடப்படுகிறது.",
+
   "Unable to supply": "வழங்க முடியவில்லை",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "லிக்விடிட்டியைச் சேர்ப்பதன் மூலம், டிரேடிங் ஜோடியில் உங்கள் பங்கிற்கு சரிவிகிதமாக இந்த ஜோடியிலுள்ள எல்லா டிரேடுகளின் கட்டணங்களில் இருந்து 50% ஈட்டுவீர்கள். கட்டணம் ஜோடியில் சேர்க்கப்பட்டு, நிகழ்நேரத்தில் பெருகுகின்றன மற்றும் உங்கள் லிக்விடிட்டியை வித்டிரா செய்வதன் மூலம் கிளைம் செய்யலாம். ஸ்டேபிள்ஸ்வாப் கட்டணங்கள் பற்றிய கூடுதல் தகவலுக்கு கிளிக் செய்யவும்",
   "For each stableswap trade, refer to the fee table": "ஒவ்வொரு stableswap டிரேடிங்கிற்கும், கட்டண அட்டவணையைப் பார்க்கவும்",
@@ -2669,7 +2657,7 @@
   "How is the APR calculated for SnBNB?": "SnBNBக்கு APR எப்படிக் கணக்கிடப்படுகிறது?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNBக்கான APR, 0.5%-3% வரை வேறுபடுகிறது. BNB செயினில் வேலிடேட்டர்களால் ஈட்டப்படுகிற APR, இரண்டு காரணிகளைப் பொறுத்தது:",
   "Commission Rate: synclub validator charges 10% commission fee.": "கமிஷன் விகிதம்: synclub வேலிடேட்டர், 10% கமிஷன் கட்டணம் விதிக்கிறது.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "வாக்களிப்புச் சக்தி: ஒரு வேலிடேட்டருக்கான ஸ்டேக் செய்த தொகையானது அது பெறும் APR-ஐத் தீர்மானிக்கிறது.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub வேலிடேட்டர் அதன் APR-ஐ மேம்படுத்த MEV (மைனர் எக்ஸ்ட்ராக்டபிள் மதிப்பு)-ஐ ஈடுபடுத்துகிறது. BNBன் ஸ்டேக்கிங் APRக்கு ஏற்ப BNBக்கு எதிராக SnBNB மதிப்பேறுகிறது.",
   "How can I use SnBNB?": "SnBNB நான் எப்படிப் பயன்படுத்தலாம்?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "BnbChainல் ஸ்வாப் செய்தல், இரவல்/கடன் வாங்குதல், ஈல்ட் ஃபார்மிங் போன்ற பிற பயன்பாட்டு நிகழ்வுகளை ஆராய நீங்கள் SnBNB-ஐப் பயன்படுத்தலாம். அத்துடன்",
@@ -2808,6 +2796,6 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
+
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

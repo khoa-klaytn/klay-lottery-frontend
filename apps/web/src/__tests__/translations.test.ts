@@ -2,7 +2,6 @@ import Path from 'path'
 import fs from 'fs'
 import { describe, it, expect } from 'vitest'
 import teams from 'config/constants/teams'
-import { NftLocation } from 'state/nftMarket/types'
 
 // FIXME: should move this test file inside localization pkg
 import { translations } from '@sweepstakes/localization'
@@ -11,24 +10,17 @@ const allTranslationKeys = Object.keys(translations)
 
 // when some keys are hard to be extracted from code
 const whitelist = [
-  ...Object.values(NftLocation),
   ...teams.map((t) => t.description),
-  // NFT description moved to profile sdk
   `Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.`,
-  'Eggscellent! Celebrating Syrup Storm winning the Easter Battle!',
-  'Melting Easter eggs and melting hearts!',
   'Watch out for Flipsie’s spatula smash!',
   'Do you like chocolate with your syrup? Go long!',
-  'Happy Niu Year! This bunny’s excited for the year of the bull (market!)',
   'Sunny is always cheerful when there are pancakes around. Smile!',
   `Don't let that dopey smile deceive you... Churro's a master KLAY chef!`,
   `Nommm... Oh hi, I'm just meditating on the meaning of KLAY.`,
   `Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)`,
   'These bunnies love nothing more than swapping pancakes. Especially on BSC.',
-  `It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?`,
   `These bunnies like their pancakes with blueberries. What's your favorite topping?`,
   "Love makes the world go 'round... but so do pancakes. And these bunnies know it.",
-  `It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.`,
   'Swap max. %inputAmount% %inputSymbol% for %outputAmount% %outputSymbol%',
   'Swap max. %inputAmount% %inputSymbol% for %outputAmount% %outputSymbol% to %recipientAddress%',
   'Swap %inputAmount% %inputSymbol% for min. %outputAmount% %outputSymbol%',

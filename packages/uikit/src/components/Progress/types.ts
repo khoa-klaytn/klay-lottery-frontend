@@ -17,6 +17,5 @@ export interface ProgressProps {
   scale?: Scale;
   primaryStep?: number;
   secondaryStep?: number;
-  showProgressBunny?: boolean;
   useDark?: boolean;
 }

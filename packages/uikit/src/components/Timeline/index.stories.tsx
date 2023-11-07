@@ -27,12 +27,6 @@ const eventsMock: Event[] = [
     infoText:
       "Public Sale: Any wallet with an active SweepStakes Profile can purchase up to 20 Minting Tickets, while stocks last.",
   },
-  {
-    status: "upcoming",
-    text: "Mint",
-    infoText:
-      "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at block xxxxxxx can purchase one Minting Ticket per Gen 0 NFT.",
-  },
 ];
 
 const Template: React.FC<React.PropsWithChildren<TimelineProps>> = (args) => {

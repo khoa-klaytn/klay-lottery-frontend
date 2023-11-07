@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Text, WalletIcon } from '@sweepstakes/uikit'
+import { Flex, Box, Text, WalletIcon, LogoWithTextIcon } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import useTheme from 'hooks/useTheme'
@@ -7,10 +7,6 @@ import useAuth from 'hooks/useAuth'
 import { useActiveHandle } from 'hooks/useEagerConnect.bmp'
 import { useEffect } from 'react'
 
-const title = {
-  dark: '/images/nav-title-dark.png',
-  light: '/images/nav-title-light.png',
-}
 const StyledWallet = styled(Flex)<{ isActive: boolean }>`
   padding: 6px 11px;
   position: absolute;
@@ -47,7 +43,7 @@ const Wallet = () => {
 }
 
 const Navbar = ({ height = 44 }) => {
-  const { theme, isDark } = useTheme()
+  const { theme } = useTheme()
   const systemInfo = useSystemInfo()
   const top = systemInfo?.statusBarHeight ?? 0
   return (
@@ -71,7 +67,7 @@ const Navbar = ({ height = 44 }) => {
         }}
       >
         <Wallet />
-        <Image height={20} width={130} src={isDark ? title.dark : title.light} />
+        <LogoWithTextIcon />
       </Box>
       <Box style={{ height: `${height + top}px` }} />
     </Box>

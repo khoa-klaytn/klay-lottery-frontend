@@ -53,14 +53,16 @@ const getRewardBracketByNumber = (ticketNumber: string, finalNumber: string): nu
   const parsedFinalNum = parseRetrievedNumber(finalNumber)
 
   const numBrackets = parsedFinalNum.length
+  let index = numBrackets
   // The number at index 6 in all tickets is 1 and will always match, so finish at index 5
-  for (let index = 0; index < numBrackets; index++) {
-    if (parsedTicketNum[index] === parsedFinalNum[index]) {
-      const rewardBracket = numBrackets - index
-      return rewardBracket
+  for (; index--; ) {
+    const ticketDigit = parsedTicketNum[index]
+    const finalDigit = parsedFinalNum[index]
+    if (ticketDigit !== finalDigit) {
+      break
     }
   }
-  return 0
+  return numBrackets - index - 1
 }
 
 export const getWinningTickets = async (

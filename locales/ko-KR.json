@@ -2,7 +2,7 @@
   "Farm": "파밍",
   "Exchange": "교환",
   "Docs": "문서",
-  "Voting": "투표",
+
   "Lottery": "로터리",
   "Connect Wallet": "지갑 연결",
   "Blog": "블로그",
@@ -151,7 +151,7 @@
   "Only approved SweepStakes Collectibles can be used.": "승인된 SweepStakes 수집품만 사용 가능합니다.",
   "Allow collectible to be locked": "수집품 잠금 허용",
   "Join a Team": "팀에 가입",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "프로필이 활성화된 상태에서는 팀 리더보드 및 검색 결과에 이 이름이 표시됩니다.",
+
   "Complete Profile": "프로필 작성",
   "Oops!": "죄송합니다!",
   "ROI Calculator": "ROI 계산기",
@@ -486,7 +486,7 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "대회에 참가하려면 프로필 사진을 교체하여 프로필을 다시 활성화해야 합니다.",
   "Go to my profile": "내 프로필로 이동",
   "You have registered for the competition!": "대회에 등록했습니다!",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "대회에 등록하면 리더보드에 지갑 주소가 공개됩니다.",
+
   "This decision cannot be reversed.": "이 결정은 취소할 수 없습니다.",
   "I understand that my address may be displayed publicly throughout the competition.": "나는 대회 기간 동안 내 주소가 공개적으로 표시될 수 있음을 이해합니다.",
   "Eligible trading pairs": "적격 거래 쌍",
@@ -539,21 +539,20 @@
   "%symbol% to receive": "수령할 %symbol%",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "이 트랜잭션은 가격 변동이나 송금 수수료로 인해 실패하게 됩니다.",
   "slippage tolerance.": "슬리피지 허용치를 높여보세요.",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "에그셀런트! 이스터 배틀에서 승리하는 Syrup Storm을 축하하세요!",
-  "Melting Easter eggs and melting hearts!": "녹는 부활절 달걀과 녹는 마음!",
+
   "Watch out for Flipsie’s spatula smash!": "Flipsie의 주걱 스매시를 조심하세요!",
   "Do you like chocolate with your syrup? Go long!": "시럽이 들어간 초콜릿을 좋아하시나요? 계속하세요!",
-  "Happy Niu Year! This bunny’s excited for the year of the bull (market!)": "해피 니우 이어! 이 버니는 황소의 해를 고대하고 있습니다(마켓!)",
+
   "Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.": "웁시 데이지! Hiccup이 약간의 사고를 당했습니다. 불쌍한 작은 녀석.",
   "Sunny is always cheerful when there are pancakes around. Smile!": "Sunny는 주변에 팬케익이 있을 때 항상 행복합니다. 스마일!",
   "Don't let that dopey smile deceive you... Churro's a master KLAY chef!": "그 혼란한 미소에 속지 마세요... Churro는 마스터 KLAY 셰프입니다!",
   "Nommm... Oh hi, I'm just meditating on the meaning of KLAY.": "음... 안녕하세요, CAKE의 의미를 생각하고 있어요.",
   "Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)": "눈이 반짝거리는 이유를 세 번 맞춰보세요! (힌트: CAKE입니다)",
   "These bunnies love nothing more than swapping pancakes. Especially on BSC.": "이 버니들은 팬케익 스왑을 가장 좋아합니다. 특히 BSC에서요.",
-  "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?": "이 토끼에게 Syrup 비가 내리고 있지만 별로 신경 쓰지 않는 것 같습니다. 그를 비난할 수 있을까요?",
+
   "These bunnies like their pancakes with blueberries. What's your favorite topping?": "이 버니들은 블루베리가 있는 팬케익을 좋아합니다. 여러분이 좋아하는 토핑은 무엇인가요?",
   "Love makes the world go 'round... but so do pancakes. And these bunnies know it.": "사랑은 세상을 움직입니다... 팬케익도 그러합니다. 그리고 이 버니들은 그것을 알고 있습니다.",
-  "It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.": "스파클링 시럽, 팬케익, 그리고 심지어 복권입니다! 이 버니가 아주 좋아합니다.",
+
   "The storm's a-comin! Watch out! These bulls are stampeding in a syrupy surge!": "폭풍이 오고 있습니다! 조심하세요! 이 황소들은 거대한 시럽 물결 속에서 격렬하게 달리고 있습니다!",
   "The flippening is coming. Don't get in these bunnies' way, or you'll get flipped, too!": "큰 반전이 다가오고 있습니다. 이 버니들을 방해하지 마세요. 방해하면 여러분도 반전될 것입니다!",
   "Can you stand the heat? Stay out of the kitchen or you might get burned to a crisp!": "열을 견딜 수 있나요? 부엌에서 멀어지지 않으면 화상을 입을 수 있습니다!",
@@ -566,7 +565,7 @@
   "Volume": "거래량",
   "Prediction (BETA)": "예측(베타)",
   "You can now start prediction": "이제 예측을 시작할 수 있습니다",
-  "Leaderboard": "리더보드",
+
   "Tokens": "토큰",
   "Contact": "연락처",
   "The higher your team’s rank, the better your prizes!": "팀의 순위가 높을수록, 상금이 더 많습니다!",
@@ -596,7 +595,7 @@
   "Starts %date%": "%date% 시작",
   "Ends %date%": "%date% 종료",
   "Closed": "마감됨",
-  "Vote Now": "지금 투표",
+
   "Soon": "곧",
   "No proposals found": "제안을 찾지 못함",
   "Creator": "생성자",
@@ -605,7 +604,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "SweepStakes 에코시스템의 미래에 대한 의견 전하기",
   "Got a suggestion?": "제안이 있으십니까?",
   "Community proposals are a great way to see how the community feels about your ideas.": "커뮤니티 제안은 커뮤니티가 회원님의 아이디어에 대해 어떻게 생각하는지 이해하기에 좋은 방법입니다.",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "커뮤니티가 성공적으로 투표하는 경우 반드시 실행되는 것은 아니지만, 많은 커뮤니티 지원을 받는 제안이 코어 제안이 될 수 있습니다.",
+
   "%field% is required": "%field% 필드는 필수입니다",
   "Please create a minimum of %num% choices": "최소 %num%개의 선택 항목을 만드세요",
   "Choices must not be empty": "선택 항목은 비워둘 수 없습니다",
@@ -614,14 +613,11 @@
   "End date must be after the start date": "종료일은 시작일 이후여야 합니다",
   "Invalid snapshot": "잘못된 스냅숏",
   "Proposal created!": "제안 생성됨!",
-  "Voted": "투표함",
+
   "Time": "시간",
   "Input choice text": "선택 텍스트 입력",
   "Start Time": "시작 시간",
-  "Back to Vote Overview": "투표 개요로 돌아가기",
-  "Voting For": "투표:",
-  "Your Voting Power": "내 투표권",
-  "Confirm Vote": "투표 확인",
+
   "Add Choice": "선택 추가",
   "Title": "제목",
   "Content": "콘텐츠",
@@ -630,27 +626,22 @@
   "Actions": "작업",
   "End Time": "종료 시간",
   "Publish": "게시",
-  "No votes found": "투표를 찾지 못함",
-  "Votes (%count%)": "투표(%count%)",
+
   "Snapshot": "스냅숏",
   "Choices": "선택 항목",
   "Identifier": "ID",
   "Current Results": "현재 결과",
-  "Vote cast!": "투표 캐스트!",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "위의 선택에 투표하시겠습니까? 이 작업은 실행 취소할 수 없습니다.",
+
   "Tip: write in Markdown!": "팁: 마크다운으로 작성하세요!",
-  "Cast your vote": "투표하기",
+
   "Preview": "미리 보기",
-  "%total% Votes": "투표 수: %total%",
-  "Cast Vote": "투표하기",
+
   "See All": "모두 보기",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "귀하의 투표권은 귀하가 보유하고 있는 KLAY 금액과 아래에 설명된 블록에서 고정 기간 스테이킹 포지션의 남은 기간(있는 경우)에 의해 결정됩니다. 다른 곳에서 보유한 CAKE는 귀하의 투표권에 도움이 되지 않습니다.",
+
   "Wallet": "지갑",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "기타 Syrup 풀",
-  "Voting Power": "투표권",
-  "You need at least %count% voting power to publish a proposal.": "제안을 게시하려면 %count%개 이상의 투표권이 필요합니다.",
-  "Check voting power": "투표권 확인",
+
   "Amount to collect": "수집할 액수",
   "Your winnings": "내 당첨",
   "Includes your original position and your winnings, minus the %fee% fee.": "원래 포지션과 당첨액을 포함하고 %fee% 수수료를 뺍니다.",
@@ -926,7 +917,7 @@
   "Stocks chart": "주식 차트",
   "Folder with cake token": "KLAY 토큰 폴더",
   "KLAY makes our world go round.": "KLAY 세계가 펼쳐집니다.",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY 토큰은 SweepStakes 에코시스템의 중추입니다. KLAY 토큰을 구입하고, 획득하고, 파밍하고, 사용하고, 스테이킹하고... 투표도 할 수 있습니다!",
+
   "Small 3d pancake": "소형 3D SweepStakes",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% 이 라운드의 KLAY 상금",
   "Buy tickets with KLAY, win KLAY if your numbers match": "CAKE로 티켓을 구입하고, 숫자가 일치하면 KLAY 획득",
@@ -1006,7 +997,7 @@
   "If you’re not a whitelisted project, you won’t be able to participate, but you can still view what’s going on!": "화이트리스트에 있는 프로젝트가 아닌 경우 참여할 수 없지만 진행 내용을 볼 수는 있습니다!",
   "through community auctions so far!": "지금까지의 커뮤니티 경매!",
   "Farm Auctions": "팜 경매",
-  "auction bunny": "경매 버니",
+
   "Burnt KLAY": "소각한 KLAY",
   "Stake %stakingSymbol% - Earn %earningSymbol%": "%stakingSymbol% 스테이킹 - %earningSymbol% 획득",
   "Top Farms": "상위 팜",
@@ -1302,7 +1293,7 @@
   "Follow on Instagram": "Instagram 팔로우",
   "Please enable KLAY spending in your wallet": "지갑에서 KLAY 사용을 활성화하세요",
   "Mint NFTs (%tickets%)": "NFT 주조(%tickets%)",
-  "490 are available in the pre-sale for owners of Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)": "Gen 0 SweepStakes 버니(버니 ID 0, 1, 2, 3, 4) 소유자를 위해 490개 사전 판매 가능",
+
   "Hold KLAY": "KLAY 유지",
   "Head to the NFT Marketplace to buy!": "NFT 마켓으로 이동하여 구입하세요!",
   "Max per wallet: %maxPerWallet%": "지갑당 최대값: %maxPerWallet%",
@@ -1326,9 +1317,9 @@
   "Claim Phase": "클레임 단계",
   "During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a SweepStakes Squad NFT.": "이 단계에서 스쿼드 티켓이 있는 지갑은 티켓을 사용하여 SweepStakes 스쿼드 NFT를 클레임할 수 있습니다.",
   "Wait for the Reveal": "공개 대기",
-  "It’ll take a few days before your bunny’s image is revealed. Just hold tight and wait for the final image!": "버니의 이미지가 공개되는 데 며칠이 걸립니다. 잠시만 최종 이미지를 기다려주세요!",
+
   "Trading will open before the images are live, but you’ll still be able to check the bunnies’ stats.": "이미지가 라이브 상태가 되기 전에 거래가 열리지만, 버니 통계는 계속 확인할 수 있습니다.",
-  "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.": "사전 판매: 사전 판매 시작 12~2시간 전에 찍은 스냅숏의 \"Gen 0\" SweepStakes 버니 NFT(버니 ID 0,1,2,3,4)가 있는 지갑은 Gen 0 NFT당 하나의 스쿼드 티켓을 구매할 수 있습니다.",
+
   "Transaction has succeeded!": "트랜잭션이 성공했습니다!",
   "The birthplace of Cecy is truly unknown": "Cecy의 출생지는 실제로 알려지지 않았습니다",
   "But legend tells us, she was sailing alone": "하지만 전설에 따르면 그녀는 혼자 항해하고 있었다고 합니다",
@@ -1356,10 +1347,10 @@
   "Highest price": "최고가",
   "10,000 bunnies.": "10,000 버니.",
   "ZERO duplicates.": "제로 중복.",
-  "Every SweepStakes Squad bunny is different.": "각 SweepStakes 스쿼드 버니는 서로 다릅니다.",
+
   "On top of that, there are a very small number of ultra-rare special unique bunnies as well...!": "뿐만 아니라, 완전 희귀하고 독특한 극소수의 버니이기도 합니다...!",
   "View in Market": "마켓에서 보기",
-  "They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.": "모두 200가지 이상의 다양한 기능을 기반으로 무작위로 생성되며 80억 개 이상의 조합이 가능하므로, 완전히 똑같은 버니는 없습니다.",
+
   "View Documentation": "문서 보기",
   "What’s the Smart Contract?": "스마트 계약이란?",
   "Redeem Tickets to claim NFTs": "티켓을 사용하여 NFT 클레임",
@@ -1382,12 +1373,12 @@
   "How are the NFTs randomly distributed?": "NFT는 어떻게 무작위로 배포되나요?",
   "What’s the value of each NFT?": "각 NFT의 가치는 어떻게 되나요?",
   "Wait for the reveal! After all 10,000 members of the SweepStakes Squad have been minted, their images will remain hidden for a few days. Just be patient :)": "공개되길 기다려주세요! SweepStakes 스쿼드 멤버 10,000명 모두가 주조된 후에도 이들의 이미지는 며칠 동안 숨겨져 있습니다. 인내심을 가져주세요 :)",
-  "Users holding Gen 0 SweepStakes Bunny NFTs at the snapshot may also purchase one additional SweepStakes Squad NFT in the presale for each SweepStakes Bunny they hold.": "스냅숏의 Gen 0 SweepStakes 버니 NFT를 소유한 사용자는 자신이 소유한 각각의 SweepStakes 버니에 대해 사전 판매에서 추가 SweepStakes 스쿼드 NFT 하나를 구매할 수도 있습니다.",
+
   "For example, if you have 5 Gen 0 bunnies, you can buy 5 minting tickets in the presale, then max. 10 in the public sale.": "예를 들어 Gen 0 버니가 5개 있는 경우 주조 티켓 5개를 사전 판매에서 구입할 수 있으며 공개 판매에서는 최대 10개까지 구입할 수 있습니다.",
   "Once all 10,000 Squad Tickets have been bought, Chainlink VRF will be used to randomly allocate the pre-generated NFTs to the purchased Tickets. Squad Tickets are allocated IDs numbered in order of their purchase.": "10,000개의 스쿼드 티켓이 모두 구매되면 Chainlink VRF를 사용하여 사전 생성된 NFT를 구매한 티켓에 무작위로 할당합니다. 스쿼드 티켓에는 구매한 순서대로 번호가 매겨진 ID가 할당됩니다.",
   "Once all 10,000 have been sold, VRF will pick numbers from 0 to 9999, which will be used to shift the Squad Ticket ID. This will ensure that the distribution of rare NFTs will be randomized, and prevents “sniping” of specific NFTs during the pre-sale or public sale phases.": "10,000개가 모두 판매되면, VRF는 0에서 9999 사이의 숫자를 선택하며, 이 숫자는 스쿼드 티켓 ID를 전환하는 데 사용됩니다. 이는 희귀 NFT 배포의 무작위성을 보장하고 사전 판매 또는 공개 판매 단계에서 특정 NFT의 \"스나이핑\"을 방지합니다.",
   "Value is subjective, but since different traits have different levels of rarity, you can expect bunnies with rarer traits to trade for higher prices than others. If you’re planning to sell, check the NFT market for the price of bunnies with a similarly rare traits to yours.": "가치는 주관적이지만 특성에 따라 희귀성이 다르기 때문에 특성이 더 희귀한 버니는 다른 버니보다 더 높은 가격에 거래될 것이라고 예상할 수 있습니다. 판매할 계획이라면 NFT 마켓에서 귀하의 버니와 유사한 희귀 특성을 가진 버니의 가격을 확인하세요.",
-  "Bunny Id": "버니 ID",
+
   "Filter by": "필터링 기준",
   "On Sale": "판매 중",
   "Results": "결과",
@@ -1499,7 +1490,7 @@
   "Old Farms": "이전 팜",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "이는 다음 비율로 새로운 BTT 토큰으로 스왑된 이전 BTT 토큰입니다:",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "이 풀은 잘못 구성되었습니다. 이 풀에서 토큰을 언스테이킹하세요. emergencyWithdraw 방법이 사용됩니다. 토큰이 지갑으로 반환되지만 리워드는 수확되지 않습니다.",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "비공개 판매의 경우 자격을 갖춘 각 참가자는 IFO 투표 제안과 함께 게시되는 최대 커밋 한도까지 CAKE를 얼마든지 커밋할 수 있습니다.",
+
   "Meet any one of the following requirements to be eligible.": "자격을 갖추려면 다음 요구 사항 중 하나를 충족해야 합니다.",
   "You are eligible to participate in this Private Sale!": "이 비공개 판매에 참여할 자격이 있습니다!",
   "Meet any one of the requirements to join:": "참여하려면 요구 사항 중 하나를 충족해야 합니다:",
@@ -1525,7 +1516,7 @@
   "How do I convert wBETH back to ETH?": "wBETH를 ​​ETH로 어떻게 다시 전환하나요?",
   "You can convert wBETH to ETH through": "다음과 같은 방법으로 wBETH를 ETH로 전환할 수 있습니다:",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "또한 SweepStakes은 wBETH를 ETH로 원활하게 다시 전환하도록 리퀴드 스테이킹 페이지에서 전환 계약을 지원하기 위해 노력하고 있습니다.",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "현재 IFO 형식. 새로운 비공개 판매가 있습니다. 참가하기 위해서는 참가자가 IFO 카드에 표시된 특정 요구 사항을 충족해야 합니다. 각각의 적격 참가자는 IFO 투표 제안과 함께 게시되는 최대 커밋 한도까지 CAKE를 얼마든지 커밋할 수 있습니다. 비공개 판매는 참가비가 없습니다.",
+
   "You can choose one or both at the same time!": "하나 또는 동시에 둘 다를 선택할 수 있습니다!",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "먼저 비공개 판매에 참여할 수 있는 자격이 있는지 확인하는 것이 좋습니다. 공개 판매에서 커밋하는 금액이 너무 적으면 의미 있는 금액의 IFO 토큰을 받지 못할 수 있습니다.",
   "Just remember you need an active SweepStakes Profile in order to participate.": "참여하려면 활성 SweepStakes 프로필이 필요합니다.",
@@ -1545,7 +1536,7 @@
   "Current Market Price": "현재 시장가",
   "Limit Price": "지정가",
   "Error Tracking Id": "오류 추적 ID",
-  "Your voting power at block": "블록의 내 투표권",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "기한이 지났기 때문에 트랜잭션을 보낼 수 없습니다. 트랜잭션 기한이 너무 짧지 않은지 확인하세요.",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "이 트랜잭션은 가격 변동이나 송금 수수료로 인해 성공하지 못합니다. 슬리피지 허용치를 높여보세요.",
   "The input token cannot be transferred. There may be an issue with the input token.": "입력 토큰을 전송할 수 없습니다. 입력 토큰에 문제가 있을 수 있습니다.",
@@ -1613,7 +1604,7 @@
   "Limit": "한도",
   "at market price": "시장가",
   "Error occurred, please try again later": "오류가 발생했습니다. 나중에 다시 시도하세요",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "향후 제안에 대한 투표권을 얻으려면 스냅샷 블록에서 지갑이나 SweepStakes에 약간의 CAKE를 보관하세요.",
+
   "Preparing": "준비 중",
   "Perpetual": "무기한",
   "Stake KLAY": "KLAY 스테이킹",
@@ -1672,7 +1663,7 @@
   "Extend Lock": "잠금 연장",
   "Unlocked": "잠금 해제됨",
   "Binance Fan token Trading Competition": "Binance Fan 토큰 거래 대회",
-  "Easter Trading Competition": "이스터 거래 대회",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 Mobox Avatars NFT + 300 SweepStakes의 새롭게 디자인된 NFT가 세 팀 각각의 상위 100명의 트레이더에게 제공됩니다.",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 Mobox 미스터리 박스가 MBOX 거래량 상위 500명의 트레이더에게 제공됩니다.",
   "Added by user": "사용자가 추가함",
@@ -1711,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "예치 기간이 %weeks%주를 초과하는 경우 iCAKE 수는 잠긴 예치 금액과 같습니다. 예치 기간이 %weeks%주 미만인 경우 iCAKE 수는 예치 기간에 따라 선형적으로 감소합니다.",
   "Go to KLAY pool": "KLAY 풀로 이동",
   "April": "4월",
-  "Easter Battle": "이스터 배틀",
+
   "$200,000 in Prizes!": "상금 $200,000!",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "다른 팀과 겨루고 KLAY, 수집 가능 NFT, 성과 등을 올리세요!",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "상금은 CAKE로 배분되며 티어의 모든 멤버가 공유합니다. KLAY 가격(USD)은 배분일에 결정됩니다. 세부 정보는 다음과 같습니다.",
@@ -1754,9 +1745,7 @@
   "Circulating Supply": "유통량",
   "Prizes will be announced and available for claiming at ~": "상금이 발표되고 ~에서 클레임할 수 있습니다",
   "Follow Update": "업데이트 팔로우",
-  "Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.": "Mines of Dalarnia - Bunny Helmet NFT는 6월 2일 00:00 UTC 이전에 지갑에 에어드랍됩니다.",
-  "Bunny Helmet NFT": "Bunny Helmet NFT",
-  "Bunny Helmet": "Bunny Helmet",
+
   "SweepStakes NFT": "SweepStakes NFT",
   "Pottery": "Pottery",
   "Stake to WIN!": "당첨을 위해 스테이킹하세요!",
@@ -1844,11 +1833,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "공개 판매에서는 활성 SweepStakes 프로필이 있는 누구나 커밋할 수 있습니다. 그러나 KLAY 사용자가 커밋할 수 있는 최대 금액은 이들이 가지고 있는 iCAKE 수와 같습니다.",
   "And there’s a fee for participation: see below.": "그리고 참가비가 있습니다. 아래를 참조하세요.",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "참가비는 IFO의 \"공개 판매\" 부분에서 오버플로 비율에 따라 클리프에서 감소합니다.",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "참고: 수수료는 IFO마다 다를 수 있습니다. 참가비에 대해 자세히 알아보려면 참가할 IFO의 세부 사항에 대한 IFO 제안(투표)에 나오는 세부 정보를 참조하세요.",
+
   "You have successfully claimed your rewards.": "리워드 클레임에 성공했습니다.",
   "Pottery (BETA)": "Pottery(BETA)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "이 IFO에는 토큰 베스팅이 있습니다. 구매한 토큰은 일정 기간 동안 릴리스됩니다.",
-  "Learn more in the vote proposal": "투표 제안에서 자세히 알아보기",
+
   "What is the difference between an IFO and a cIFO?": "IFO와 cIFO의 차이점은 무엇입니까?",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "CAKE를 충분히 커밋하지 않으면 의미 있는 IFO 토큰 금액을 받지 못하거나 IFO 토큰을 전혀 받지 못할 수 있습니다.",
   "~%num% available to claim at sales end": "~%num%: 판매 종료 시 클레임 가능",
@@ -1874,13 +1863,13 @@
   "Max. deposit cap": "최대 예치 캡",
   "Fixed Term KLAY Staking": "고정 기간 KLAY 스테이킹",
   "Flexible KLAY Staking": "유연한 KLAY 스테이킹",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "투표권은 블록에서 고정 기간 KLAY 스테이킹 포지션의 스테이킹 금액과 남은 스테이킹 기간을 사용하여 계산됩니다.",
+
   "KLAY locked:": "잠긴 KLAY:",
   "Go to Pools": "풀로 이동",
   "KLAY Emission Projection": "KLAY 생성 예측",
   "Boosted by vCAKE": "vCAKE에 의해 부스팅됨",
   "Boosting Expired": "부스팅 만료됨",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "스냅숏 블록에서 vCAKE 부스팅이 만료되었습니다. 고정 기간 스테이킹 포지션을 갱신하여 향후 투표 제안에 대한 부스트를 활성화하세요.",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "구매한 토큰의 %percentageVested%%는 일정 기간 동안 선형적으로 베스팅되고 릴리스됩니다. 구매한 토큰의 %percentageTgeRelease%%는 즉시 릴리스되며 IFO가 종료되면 클레임할 수 있습니다.",
   "The vested tokens will be released linearly over a period of %days% days.": "베스팅된 토큰은 %days%일 기간 동안 선형적으로 릴리스됩니다.",
   "Yield Booster": "일드 부스터",
@@ -2073,7 +2062,7 @@
   "Meet the following requirement to join:": "가입하려면 다음 요구 사항을 충족하세요:",
   "Order cancellation": "주문 취소",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "주문 취소: %outputAmount% %outputTokenSymbol%에 대한 %inputAmount% %inputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "스테이킹 포지션을 갱신하여 팜 일드 부스팅, IFO 참여, 투표권 강화 등의 혜택을 계속 이용하세요!",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "잠금 기간이 종료되었습니다. 더 많은 리워드가 소각되지 않도록 스테이킹 포지션을 갱신하여 잠긴 스테이킹의 혜택을 누리세요.",
   "Default": "기본값",
   "Shows username of wallet instead of bunnies": "버니 대신 지갑의 사용자 이름을 표시합니다.",
@@ -2087,11 +2076,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY(리워드 포함)은 %lockedEndTime%까지 KLAY 풀에 잠겨 있습니다.",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE을 사용하면 IFO 공개 판매에 참여하고 최대 %iCake% CAKE을 커밋할 수 있습니다.",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE을 사용하면 SweepStakes 팜의 일드를 최대 2x까지 높일 수 있습니다.",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE은 SweepStakes 투표 거버넌스에서 투표권을 %totalScore%(으)로 강화합니다.",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "CAKE을 잠그고 팜 일드 부스팅, IFO 참여, 투표권 강화 등의 혜택을 이용하세요!",
+
   "KLAY staking expired": "KLAY 스테이킹 만료됨",
   "Insufficient token allowance. Click \"Enable\" to approve.": "토큰 할당량이 부족합니다. 승인하려면 \"활성화\"를 클릭하세요.",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "공개 판매의 경우 자격을 갖춘 각 참가자는 IFO 투표 제안과 함께 게시되는 최대 커밋 한도까지 CAKE을 얼마든지 커밋할 수 있습니다.",
+
   "Unable to supply": "공급할 수 없음",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "유동성을 추가하면 거래 쌍의 점유율에 비례하여 이 쌍과 관련한 모든 거래의 수수료에서 50%를 획득하게 됩니다. 수수료는 쌍에 추가되어 실시간으로 축적되고 유동성을 인출하여 클레임할 수 있습니다. Stableswap 수수료에 대한 자세한 내용을 보려면 다음을 클릭하세요:",
   "For each stableswap trade, refer to the fee table": "각 StableSwap 거래는 수수료 테이블을 참조하세요",
@@ -2669,7 +2657,7 @@
   "How is the APR calculated for SnBNB?": "SnBNB의 APR은 어떻게 계산되나요?",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNB의 APR은 0.5%~3% 사이입니다. BNB 체인의 밸리데이터가 획득하는 APR은 두 가지 요소에 따라 달라집니다.",
   "Commission Rate: synclub validator charges 10% commission fee.": "커미션 비율: synclub 밸리데이터는 커미션 수수료 10%를 부과합니다.",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "투표권: 밸리데이터의 스테이킹된 금액에 따라 받는 APR이 결정됩니다.",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub 밸리데이터는 MEV(채굴자 추출 가능 가치)를 채택하여 APR을 개선합니다. SnBNB는 BNB의 스테이킹 APR에 따라 BNB에 대해 가치를 높입니다.",
   "How can I use SnBNB?": "SnBNB는 어떻게 사용하나요?",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "SnBNB를 사용하여 BnbChain에서 스왑, 대출/차용, 일드 파밍 등의 다른 사용 사례를 탐색할 수 있습니다. 다음과 함께:",
@@ -2808,6 +2796,6 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
+
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

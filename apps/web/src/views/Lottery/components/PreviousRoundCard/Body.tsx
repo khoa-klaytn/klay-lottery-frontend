@@ -9,7 +9,7 @@ import {
   Button,
   useModal,
   CardRibbon,
-  BunnyPlaceholderIcon,
+  PlaceholderIcon,
   useMatchBreakpoints,
 } from '@sweepstakes/uikit'
 import { LotteryRound } from 'state/types'
@@ -104,7 +104,7 @@ const PreviousRoundCardBody: React.FC<
             <>
               <Flex flexDirection="column" alignItems="center" width={['240px', null, null, '480px']}>
                 <Text mb="8px">{t('Please specify Round')}</Text>
-                <BunnyPlaceholderIcon height="64px" width="64px" />
+                <PlaceholderIcon height="64px" width="64px" />
               </Flex>
             </>
           )}

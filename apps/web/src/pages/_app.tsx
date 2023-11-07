@@ -2,7 +2,6 @@ import { ResetCSS, ScrollToTopButtonV2, ToastListener } from '@sweepstakes/uikit
 import BigNumber from 'bignumber.js'
 import GlobalCheckClaimStatus from 'components/GlobalCheckClaimStatus'
 import { NetworkModal } from 'components/NetworkModal'
-import { FixedSubgraphHealthIndicator } from 'components/SubgraphHealthIndicator/FixedSubgraphHealthIndicator'
 import { useAccountEventListener } from 'hooks/useAccountEventListener'
 import useEagerConnect from 'hooks/useEagerConnect'
 import useEagerConnectMP from 'hooks/useEagerConnect.bmp'
@@ -12,7 +11,6 @@ import useThemeCookie from 'hooks/useThemeCookie'
 import useUserAgent from 'hooks/useUserAgent'
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Script from 'next/script'
 import { Fragment } from 'react'
@@ -27,9 +25,6 @@ import { SentryErrorBoundary } from '../components/ErrorBoundary'
 import Menu from '../components/Menu'
 import Providers from '../Providers'
 import GlobalStyle from '../style/Global'
-import { ThirdYearBirthdayCake } from '../views/Home/components/ThirdYearBirthdayCake'
-
-const EasterEgg = dynamic(() => import('components/EasterEgg'), { ssr: false })
 
 // This config is required for number formatting
 BigNumber.config({
@@ -161,7 +156,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const Layout = Component.Layout || Fragment
   const ShowMenu = Component.mp ? Fragment : Menu
   const isShowScrollToTopButton = Component.isShowScrollToTopButton || true
-  const isShowThirdYearButton = Component.isShowThirdYearButton || false
 
   return (
     <ProductionErrorBoundary>
@@ -170,12 +164,9 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
           <Component {...pageProps} />
         </Layout>
       </ShowMenu>
-      <EasterEgg iterations={2} />
       <ToastListener />
-      <FixedSubgraphHealthIndicator />
       <NetworkModal pageSupportedChains={Component.chains} />
       {isShowScrollToTopButton && <ScrollToTopButtonV2 />}
-      {isShowThirdYearButton && <ThirdYearBirthdayCake />}
     </ProductionErrorBoundary>
   )
 }

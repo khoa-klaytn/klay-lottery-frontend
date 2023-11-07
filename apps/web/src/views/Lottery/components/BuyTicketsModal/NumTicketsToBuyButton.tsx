@@ -16,7 +16,7 @@ const NumTicketsToBuyButton: React.FC<React.PropsWithChildren<NumTicketsToBuyBut
   disabled = false,
 }) => {
   return (
-    <StyledButton disabled={disabled} scale="xs" mx="2px" p="4px 16px" variant="tertiary" onClick={onClick}>
+    <StyledButton disabled={disabled} scale="xs" mx="2px" p="4px 16px" variant="subtle" onClick={onClick}>
       {children}
     </StyledButton>
   )

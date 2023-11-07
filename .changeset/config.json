@@ -7,13 +7,5 @@
   "access": "public",
   "baseBranch": "develop",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "@sweepstakes/eslint-config-pancake",
-    "@sweepstakes/ui-wallets",
-    "aptos-web",
-    "blog",
-    "bridge",
-    "e2e",
-    "web"
-  ]
+  "ignore": ["@sweepstakes/eslint-config-pancake", "@sweepstakes/ui-wallets", "e2e", "web"]
 }

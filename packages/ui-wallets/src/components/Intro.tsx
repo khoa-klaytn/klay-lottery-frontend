@@ -12,9 +12,7 @@ const IntroSteps = [
     title: <Trans>Your first step in the DeFi world</Trans>,
     icon: 'https://cdn.sweepstakes.com/wallets/wallet_intro.png',
     description: (
-      <Trans>
-        A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.
-      </Trans>
+      <Trans>A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, and much more.</Trans>
     ),
   },
   {

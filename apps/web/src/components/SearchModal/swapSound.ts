@@ -1,6 +1,8 @@
+import { CDN_CDN } from 'config/constants/endpoints'
+
 let swapSound: HTMLAudioElement
 
-const swapSoundURL = 'https://cdn.sweepstakes.com/swap.mp3'
+const swapSoundURL = `${CDN_CDN}/swap.mp3`
 
 export const getSwapSound = () => {
   if (!swapSound) {

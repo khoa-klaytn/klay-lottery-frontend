@@ -5,13 +5,10 @@ import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
 import { useMemo } from 'react'
 import Image, { StaticImageData } from 'next/image'
-import gameNftBunny from '../../images/game-nft-bunny.png'
 import gameLottery from '../../images/game-lottery.png'
-import nftMarketplace from '../../images/nft-marketplace.png'
 import GradientLogo from '../GradientLogoSvg'
 
 import gameLotteryPurple from '../../images/game-lottery-purple.png'
-import nftMarketplacePurple from '../../images/nft-marketplace-purple.png'
 
 export const CardWrapper = styled.div`
   border-radius: 24px;
@@ -146,14 +143,6 @@ const useNftGameBlockData = () => {
         defaultImage: gameLotteryPurple,
         path: '/lottery',
       },
-      {
-        title: t('NFT Marketplace'),
-        description: t('Trade unique NFTs on BNB Chain'),
-        ctaTitle: t('Trade Now'),
-        image: nftMarketplace,
-        defaultImage: nftMarketplacePurple,
-        path: '/nfts',
-      },
     ]
   }, [t])
 }
@@ -235,14 +224,6 @@ const EcoSystemSection: React.FC = () => {
           flexDirection={isMobile || isMd ? 'column' : 'row'}
           alignItems={isMobile || isMd ? undefined : 'center'}
         >
-          <Image
-            style={{ marginLeft: isMobile ? -32 : -72 }}
-            src={gameNftBunny}
-            alt="gameNftBunny"
-            width={344}
-            height={360}
-            placeholder="blur"
-          />
           <Flex flexDirection="column">
             <Title>{t('Game & NFT')}</Title>
             <FeatureBoxesWrapper>

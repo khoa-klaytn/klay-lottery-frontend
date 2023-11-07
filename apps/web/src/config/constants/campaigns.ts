@@ -11,145 +11,6 @@ import { Campaign } from './types'
 
 const campaigns: Campaign[] = [
   {
-    id: '512010001',
-    type: 'teambattle',
-    title: 'Easter Champion: Gold',
-    badge: 'easter-champion-gold.svg',
-  },
-  {
-    id: '512010002',
-    type: 'teambattle',
-    title: 'Easter Top 500: Gold',
-    badge: 'easter-top-500-gold.svg',
-  },
-  {
-    id: '512010003',
-    type: 'teambattle',
-    title: 'Easter Top 500: Gold',
-    badge: 'easter-top-500-gold.svg',
-  },
-  {
-    id: '512010004',
-    type: 'teambattle',
-    title: 'Easter Top 500: Gold',
-    badge: 'easter-top-500-gold.svg',
-  },
-  {
-    id: '512010005',
-    type: 'teambattle',
-    title: 'Easter Participant: Gold',
-    badge: 'easter-participant-gold.svg',
-  },
-  {
-    id: '512010006',
-    type: 'teambattle',
-    title: 'Easter Champion: Silver',
-    badge: 'easter-champion-silver.svg',
-  },
-  {
-    id: '512010007',
-    type: 'teambattle',
-    title: 'Easter Top 500: Silver',
-    badge: 'easter-top-500-silver.svg',
-  },
-  {
-    id: '512010008',
-    type: 'teambattle',
-    title: 'Easter Top 500: Silver',
-    badge: 'easter-top-500-silver.svg',
-  },
-  {
-    id: '512010009',
-    type: 'teambattle',
-    title: 'Easter Top 500: Silver',
-    badge: 'easter-top-500-silver.svg',
-  },
-  {
-    id: '512010010',
-    type: 'teambattle',
-    title: 'Easter Participant: Silver',
-    badge: 'easter-participant-silver.svg',
-  },
-  {
-    id: '512010011',
-    type: 'teambattle',
-    title: 'Easter Champion: Bronze',
-    badge: 'easter-champion-bronze.svg',
-  },
-  {
-    id: '512010012',
-    type: 'teambattle',
-    title: 'Easter Top 500: Bronze',
-    badge: 'easter-top-500-bronze.svg',
-  },
-  {
-    id: '512010013',
-    type: 'teambattle',
-    title: 'Easter Top 500: Bronze',
-    badge: 'easter-top-500-bronze.svg',
-  },
-  {
-    id: '512010014',
-    type: 'teambattle',
-    title: 'Easter Top 500: Bronze',
-    badge: 'easter-top-500-bronze.svg',
-  },
-  {
-    id: '512010015',
-    type: 'teambattle',
-    title: 'Easter Participant: Bronze',
-    badge: 'easter-participant-bronze.svg',
-  },
-  {
-    id: '513010001',
-    type: 'participation',
-    title: 'Syrup Soaker',
-    description: 'Took a dip in the early days of the Auto KLAY Pool',
-    badge: 'syrup-soaker.svg',
-  },
-  {
-    id: '515010001',
-    type: 'participation',
-    title: 'Lottie',
-    description: 'Joined a round in the early days of Lottery V2',
-    badge: 'lottie.svg',
-  },
-  {
-    id: '515020001',
-    type: 'participation',
-    title: 'Lucky',
-    description: 'Won a round in the early days of Lottery V2',
-    badge: 'lucky.svg',
-  },
-  {
-    id: '515030001',
-    type: 'participation',
-    title: 'Baller',
-    description: 'Top 100 ticket buyer in the early days of Lottery V2',
-    badge: 'baller.svg',
-  },
-  {
-    id: '516010001',
-    type: 'participation',
-    title: '1 Year',
-    description: 'Joined SweepStakes during the first year of our journey!',
-    badge: '1-year.svg',
-  },
-  {
-    id: '516020001',
-    type: 'participation',
-    title: '2 Year',
-    description: 'Celebrate our 2nd birthday with us',
-    badge: '2-year.svg',
-  },
-  {
-    id: '516030001',
-    type: 'participation',
-    title: '3 Years',
-    description: 'Celebrate our 3rd birthday with us',
-    badge: '3-year.svg',
-  },
-  {
     id: '512020001',
     type: 'teambattle',
     title: 'Fan Token Champion: Gold',
@@ -172,12 +33,6 @@ const campaigns: Campaign[] = [
     type: 'teambattle',
     title: 'Fan Token Top 500: Gold',
     badge: 'fan-token-top-500-gold.svg',
-  },
-  {
-    id: '512020005',
-    type: 'teambattle',
-    title: 'Fan Token Participant: Gold',
-    badge: 'fan-token-participant-gold.svg',
   },
   {
     id: '512020006',
@@ -204,12 +59,6 @@ const campaigns: Campaign[] = [
     badge: 'fan-token-top-500-silver.svg',
   },
   {
-    id: '512020010',
-    type: 'teambattle',
-    title: 'Fan Token Participant: Silver',
-    badge: 'fan-token-participant-silver.svg',
-  },
-  {
     id: '512020011',
     type: 'teambattle',
     title: 'Fan Token Champion: Bronze',
@@ -232,12 +81,6 @@ const campaigns: Campaign[] = [
     type: 'teambattle',
     title: 'Fan Token Top 500: Bronze',
     badge: 'fan-token-top-500-bronze.svg',
-  },
-  {
-    id: '512020015',
-    type: 'teambattle',
-    title: 'Fan Token Participant: Bronze',
-    badge: 'fan-token-participant-bronze.svg',
   },
   {
     id: '512030001',
@@ -264,12 +107,6 @@ const campaigns: Campaign[] = [
     badge: 'MBOX-top-500-gold.svg',
   },
   {
-    id: '512030005',
-    type: 'teambattle',
-    title: 'Mobox Participant: Gold',
-    badge: 'MBOX-participant-gold.svg',
-  },
-  {
     id: '512030006',
     type: 'teambattle',
     title: 'Mobox Champion: Silver',
@@ -292,12 +129,6 @@ const campaigns: Campaign[] = [
     type: 'teambattle',
     title: 'Mobox Top 500: Silver',
     badge: 'MBOX-top-500-silver.svg',
-  },
-  {
-    id: '512030010',
-    type: 'teambattle',
-    title: 'Mobox Participant: Silver',
-    badge: 'MBOX-participant-silver.svg',
   },
   {
     id: '512030011',
@@ -324,12 +155,6 @@ const campaigns: Campaign[] = [
     badge: 'MBOX-top-500-bronze.svg',
   },
   {
-    id: '512030015',
-    type: 'teambattle',
-    title: 'Mobox Participant: Bronze',
-    badge: 'MBOX-participant-bronze.svg',
-  },
-  {
     id: '512040001',
     type: 'teambattle',
     title: 'MoD Champion: Gold',
@@ -352,12 +177,6 @@ const campaigns: Campaign[] = [
     type: 'teambattle',
     title: 'MoD Top 500: Gold',
     badge: 'MoD-top-500-gold.svg',
-  },
-  {
-    id: '512040005',
-    type: 'teambattle',
-    title: 'MoD Participant: Gold',
-    badge: 'MoD-participant-gold.svg',
   },
   {
     id: '512040006',
@@ -384,12 +203,6 @@ const campaigns: Campaign[] = [
     badge: 'MoD-top-500-silver.svg',
   },
   {
-    id: '512040010',
-    type: 'teambattle',
-    title: 'MoD Participant: Silver',
-    badge: 'MoD-participant-silver.svg',
-  },
-  {
     id: '512040011',
     type: 'teambattle',
     title: 'MoD Champion: Bronze',
@@ -412,12 +225,6 @@ const campaigns: Campaign[] = [
     type: 'teambattle',
     title: 'MoD Top 500: Bronze',
     badge: 'MoD-top-500-bronze.svg',
-  },
-  {
-    id: '512040015',
-    type: 'teambattle',
-    title: 'MoD Participant: Bronze',
-    badge: 'MoD-participant-bronze.svg',
   },
 ]
 

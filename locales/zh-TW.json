@@ -2,7 +2,7 @@
   "Farm": "農場",
   "Exchange": "兌換",
   "Docs": "文件",
-  "Voting": "投票",
+
   "Lottery": "彩券",
   "Connect Wallet": "連接錢包",
   "Blog": "網誌",
@@ -151,7 +151,7 @@
   "Only approved SweepStakes Collectibles can be used.": "僅可使用獲得批准的 SweepStakes 收藏品。",
   "Allow collectible to be locked": "允許鎖定收藏品",
   "Join a Team": "加入團隊",
-  "This name will be shown in team leaderboards and search results as long as your profile is active.": "只要您的個人檔案已啟動，此名稱就會顯示在團隊排行榜和搜尋結果中。",
+
   "Complete Profile": "完成個人檔案",
   "Oops!": "糟糕！",
   "ROI Calculator": "ROI 計算機",
@@ -486,7 +486,7 @@
   "You need to reactivate your profile by replacing your profile picture in order to join the competition.": "您需先設置好頭像，並重新啟用個人檔案，才能參加比賽。",
   "Go to my profile": "前往個人檔案",
   "You have registered for the competition!": "您已報名參加比賽！",
-  "Registering for the competition will make your wallet address publicly visible on the leaderboard.": "報名參加比賽將使您的錢包位址在排行榜上公開可見。",
+
   "This decision cannot be reversed.": "此決定無法撤消。",
   "I understand that my address may be displayed publicly throughout the competition.": "我瞭解我的位址可能會在整個比賽期間公開顯示。",
   "Eligible trading pairs": "符合條件的交易對",
@@ -539,21 +539,20 @@
   "%symbol% to receive": "%symbol% 待接收",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your": "由於價格變動或代幣具備轉帳費用（抽稅），此鏈上交易將不會成功。請試著提高您的",
   "slippage tolerance.": "滑點上限。",
-  "Eggscellent! Celebrating Syrup Storm winning the Easter Battle!": "蛋得漂亮！贏得復活節戰爭、慶祝糖漿風暴！",
-  "Melting Easter eggs and melting hearts!": "融化復活節彩蛋，感化心靈！",
+
   "Watch out for Flipsie’s spatula smash!": "注意 Flipsie 的鍋鏟亂砸！",
   "Do you like chocolate with your syrup? Go long!": "喜歡巧克力加糖漿嗎？都買都買！",
-  "Happy Niu Year! This bunny’s excited for the year of the bull (market!)": "牛年快樂！小兔子最喜歡牛年牛市了！",
+
   "Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.": "糟糕！Hiccup 發生了小小的意外。可憐哪。",
   "Sunny is always cheerful when there are pancakes around. Smile!": "有煎餅，Sunny 就開心。笑一個！",
   "Don't let that dopey smile deceive you... Churro's a master KLAY chef!": "不要相信那憨厚的微笑… Churro 可是蛋糕大師！",
   "Nommm... Oh hi, I'm just meditating on the meaning of KLAY.": "嗯嗯…哦，嗨，我正在思考蛋糕的意義。",
   "Three guesses what's put that twinkle in those eyes! (Hint: it's KLAY)": "猜猜看，是什麼讓你的眼睛閃閃發光！三次機會。(提示：這是蛋糕)",
   "These bunnies love nothing more than swapping pancakes. Especially on BSC.": "兔子們最喜歡交換煎餅了。特別是在 BSC 上。",
-  "It's raining syrup on this bunny, but he doesn't seem to mind. Can you blame him?": "這隻兔子好像不太在意糖漿滴到他。但這也難怪了。",
+
   "These bunnies like their pancakes with blueberries. What's your favorite topping?": "兔子們都喜歡藍莓煎餅。你最喜歡煎餅配什麼料？",
   "Love makes the world go 'round... but so do pancakes. And these bunnies know it.": "愛能讓世界不停的轉動…煎餅也可以。兔子們都知道。",
-  "It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.": "這些是閃閃發光的糖漿、煎餅，甚至是彩券！這隻兔子真的很喜歡。",
+
   "The storm's a-comin! Watch out! These bulls are stampeding in a syrupy surge!": "風暴要來了！小心！這些公牛正在糖漿巨浪中狂奔！",
   "The flippening is coming. Don't get in these bunnies' way, or you'll get flipped, too!": "翻面的時機就要到了。不要擋住兔子的路，當心遭到翻面！",
   "Can you stand the heat? Stay out of the kitchen or you might get burned to a crisp!": "你不怕燙嗎？離廚房遠點，不然會被烤焦的！",
@@ -566,7 +565,7 @@
   "Volume": "交易量",
   "Prediction (BETA)": "預測 (測試版)",
   "You can now start prediction": "您現在可以開始預測了",
-  "Leaderboard": "排行榜",
+
   "Tokens": "代幣",
   "Contact": "聯絡",
   "The higher your team’s rank, the better your prizes!": "團隊排名越高，獎金就越多！",
@@ -596,7 +595,7 @@
   "Starts %date%": "%date% 開始",
   "Ends %date%": "%date% 結束",
   "Closed": "清空",
-  "Vote Now": "立即投票",
+
   "Soon": "即將開始",
   "No proposals found": "找不到提案",
   "Creator": "創作者",
@@ -605,7 +604,7 @@
   "Have your say in the future of the SweepStakes Ecosystem": "對 SweepStakes 生態系統的未來發表看法",
   "Got a suggestion?": "有建議嗎？",
   "Community proposals are a great way to see how the community feels about your ideas.": "透過社群提案，您比較能夠知道社群對你的想法有何感受。",
-  "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.": "通過社群投票的建議，未必會獲得實施。但只要有了夠多的社區支持，便更有機會成為核心提案。",
+
   "%field% is required": "需要 %field%",
   "Please create a minimum of %num% choices": "請至少建立 %num% 個選項",
   "Choices must not be empty": "選項不能為空",
@@ -614,14 +613,11 @@
   "End date must be after the start date": "結束日期必須晚於開始日期",
   "Invalid snapshot": "快照無效",
   "Proposal created!": "已建立提案！",
-  "Voted": "已投票",
+
   "Time": "時間",
   "Input choice text": "輸入選項文字",
   "Start Time": "開始時間",
-  "Back to Vote Overview": "返回到投票概覽",
-  "Voting For": "投票給",
-  "Your Voting Power": "您的投票權",
-  "Confirm Vote": "確認投票",
+
   "Add Choice": "新增選項",
   "Title": "標題",
   "Content": "內容",
@@ -630,27 +626,22 @@
   "Actions": "動作",
   "End Time": "結束時間",
   "Publish": "發佈",
-  "No votes found": "找不到投票",
-  "Votes (%count%)": "票數 (%count%)",
+
   "Snapshot": "快照",
   "Choices": "選項",
   "Identifier": "識別項",
   "Current Results": "目前結果",
-  "Vote cast!": "投票！",
-  "Are you sure you want to vote for the above choice? This action cannot be undone.": "確定要投給這個選項嗎？此動作無法撤消。",
+
   "Tip: write in Markdown!": "提示：用 Markdown 填寫！",
-  "Cast your vote": "投出您的票",
+
   "Preview": "預覽",
-  "%total% Votes": "%total% 張票",
-  "Cast Vote": "投票",
+
   "See All": "檢查全部",
-  "Your voting power is determined by the amount of KLAY you held and the remaining duration on the fixed-term staking position (if you have one) at the block detailed below. KLAY held in other places does not contribute to your voting power.": "在下文所詳述的區塊中，您的投票權將取決於您所持有的 KLAY 數量和定期質押部位 (如果您有的話) 的剩餘期限。您在他處所持有的 KLAY，將不會對您的投票權產生貢獻。",
+
   "Wallet": "錢包",
   "KLAY BNB LP": "KLAY BNB LP",
   "Other Syrup Pools": "其他糖漿池",
-  "Voting Power": "投票權",
-  "You need at least %count% voting power to publish a proposal.": "您至少需要 %count% 的投票權才能發佈提案。",
-  "Check voting power": "檢查投票權",
+
   "Amount to collect": "要收集的金額",
   "Your winnings": "您的彩金",
   "Includes your original position and your winnings, minus the %fee% fee.": "包括您的原始部位和您的彩金，減去 %fee% 費用。",
@@ -926,7 +917,7 @@
   "Stocks chart": "股票圖表",
   "Folder with cake token": "具有 KLAY 代幣的資料夾",
   "KLAY makes our world go round.": "KLAY 讓世界運轉起來。",
-  "KLAY token is at the heart of the SweepStakes ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!": "KLAY 代幣是 SweepStakes 生態系統的核心。購買、贏取、挖礦、消費、質押…甚至可以用來進行投票！",
+
   "Small 3d pancake": "小型 3D SweepStakes",
   "%cakePrizeInUsd% in KLAY prizes this round": "%cakePrizeInUsd% 本回合 KLAY 獎金",
   "Buy tickets with KLAY, win KLAY if your numbers match": "用 KLAY 購買彩券，號碼相符即可贏取 KLAY 獎金",
@@ -1006,7 +997,7 @@
   "If you’re not a whitelisted project, you won’t be able to participate, but you can still view what’s going on!": "如果您並非列入允許清單的專案，您將無法參與，但您仍然可以檢視其動態！",
   "through community auctions so far!": "到目前為止透過社群拍賣！",
   "Farm Auctions": "農場競拍",
-  "auction bunny": "拍賣兔子",
+
   "Burnt KLAY": "銷毀的 KLAY",
   "Stake %stakingSymbol% - Earn %earningSymbol%": "質押 %stakingSymbol% - 賺取 %earningSymbol%",
   "Top Farms": "排名前列的農場",
@@ -1302,7 +1293,7 @@
   "Follow on Instagram": "在 Instagram 上關注",
   "Please enable KLAY spending in your wallet": "請在錢包中確認 KLAY 的授權",
   "Mint NFTs (%tickets%)": "打造 NFT (%tickets%)",
-  "490 are available in the pre-sale for owners of Gen 0 SweepStakes Bunnies (bunnyID 0, 1, 2, 3, 4)": "預售時為第 0 代 SweepStakes 兔子 (兔子 ID 0、1、2、3、4) 所有人提供 490 張",
+
   "Hold KLAY": "持有 KLAY",
   "Head to the NFT Marketplace to buy!": "前往 NFT 市場購買！",
   "Max per wallet: %maxPerWallet%": "每個錢包的最大金額：%maxPerWallet%",
@@ -1326,9 +1317,9 @@
   "Claim Phase": "領取階段",
   "During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a SweepStakes Squad NFT.": "在此階段，任何持有小隊彩券的錢包都可以兌換他們的彩券以領取 SweepStakes 小隊 NFT。",
   "Wait for the Reveal": "等待揭曉",
-  "It’ll take a few days before your bunny’s image is revealed. Just hold tight and wait for the final image!": "您的兔子圖像需要幾天的時間才能揭曉。靜靜等待最終圖像吧！",
+
   "Trading will open before the images are live, but you’ll still be able to check the bunnies’ stats.": "交易將會在圖像上線前開放，但您仍然可以檢查兔子的統計資料。",
-  "Pre-sale: Wallets which held “Gen 0” SweepStakes Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.": "預售：在預售開始前 12 到 2 小時內拍攝的快照中持有「第 0 代」SweepStakes 兔子 NFT (兔子 ID 0、1、2、3、4) 的錢包可以為每枚第 0 代 NFT 購買一張小隊彩券。",
+
   "Transaction has succeeded!": "交易成功！",
   "The birthplace of Cecy is truly unknown": "Cecy 的出生地完全不為人知",
   "But legend tells us, she was sailing alone": "但傳說她獨自航行",
@@ -1356,10 +1347,10 @@
   "Highest price": "最高價格",
   "10,000 bunnies.": "10,000 隻兔子。",
   "ZERO duplicates.": "無重複。",
-  "Every SweepStakes Squad bunny is different.": "SweepStakes 小隊兔子各不相同。",
+
   "On top of that, there are a very small number of ultra-rare special unique bunnies as well...!": "最重要的是，還有極少數超級稀有的獨特而罕見的兔子！",
   "View in Market": "在市場中檢視",
-  "They’re all randomly generated from over 200 different features, with over eight BILLION possible combinations, so that no bunny is ever exactly alike.": "牠們均由 200 多個不同特徵隨機產生，具有超過 80 億種可能的組合，因此不會有完全一樣的兔子。",
+
   "View Documentation": "檢視文件",
   "What’s the Smart Contract?": "什麼是智慧型合約？",
   "Redeem Tickets to claim NFTs": "兌換彩券以領取 NFT",
@@ -1382,12 +1373,12 @@
   "How are the NFTs randomly distributed?": "NFT 是如何隨機分發的？",
   "What’s the value of each NFT?": "每枚 NFT 的價值是多少？",
   "Wait for the reveal! After all 10,000 members of the SweepStakes Squad have been minted, their images will remain hidden for a few days. Just be patient :)": "等待揭曉！當 SweepStakes 小隊的 10,000 名成員全部打造完成後，他們的圖像將隱藏幾天。請耐心等候 :)",
-  "Users holding Gen 0 SweepStakes Bunny NFTs at the snapshot may also purchase one additional SweepStakes Squad NFT in the presale for each SweepStakes Bunny they hold.": "快照中持有第 0 代 SweepStakes 兔子 NFT 的使用者還可以在預售時為他們持有的每隻 SweepStakes 兔子額外購買一枚 SweepStakes 小隊 NFT。",
+
   "For example, if you have 5 Gen 0 bunnies, you can buy 5 minting tickets in the presale, then max. 10 in the public sale.": "例如，如果您有 5 隻第 0 代兔子，那麼您可以在預售時購買 5 張打造彩券，然後在公開銷售時購買最多 10 張。",
   "Once all 10,000 Squad Tickets have been bought, Chainlink VRF will be used to randomly allocate the pre-generated NFTs to the purchased Tickets. Squad Tickets are allocated IDs numbered in order of their purchase.": "在 10,000 張小隊彩券全數獲得購買後，將使用 Chainlink VRF 來將預先產生的 NFT 隨機分發給購買的彩券。系統會為小隊彩券分配 ID，而這些 ID 將以購買順序作為編號。",
   "Once all 10,000 have been sold, VRF will pick numbers from 0 to 9999, which will be used to shift the Squad Ticket ID. This will ensure that the distribution of rare NFTs will be randomized, and prevents “sniping” of specific NFTs during the pre-sale or public sale phases.": "在 10,000 張全部售出後，VRF 將選擇 0 到 9999 的數字，用於轉換小隊彩券 ID。這將確保隨機分發稀有 NFT，並防止在預售或公開銷售階段對特定 NFT 進行「狙擊」。",
   "Value is subjective, but since different traits have different levels of rarity, you can expect bunnies with rarer traits to trade for higher prices than others. If you’re planning to sell, check the NFT market for the price of bunnies with a similarly rare traits to yours.": "價值是主觀的，但由於不同特徵的稀有程度各異，您可以預期具有稀有特徵的兔子的交易價格高於其他兔子。如果您打算銷售，請在 NFT 市場上檢查與您的兔子具有類似稀有特徵的兔子的價格。",
-  "Bunny Id": "兔子 ID",
+
   "Filter by": "篩選依據",
   "On Sale": "銷售中",
   "Results": "結果",
@@ -1499,7 +1490,7 @@
   "Old Farms": "舊農場",
   "Please note that this is the old BTT token, which has been swapped to the new BTT tokens in the following ratio:": "請注意，這是舊的 BTT 代幣，已按以下比例交換成新的 BTT 代幣：",
   "This pool was misconfigured. Please unstake your tokens from it, emergencyWithdraw method will be used. Your tokens will be returned to your wallet, however rewards will not be harvested.": "此糖漿池設定錯誤，請使用緊急提取功能取出您質押的代幣。此功能會將您的代幣退回您的錢包，但不會收割獎勵。",
-  "For the private sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "對於私有銷售，符合條件的參與者都能提交0-最大限額之間任意數量的CAKE。限額於每回 IFO 投票提案揭露。",
+
   "Meet any one of the following requirements to be eligible.": "滿足以下任何一項要求即可獲得資格。",
   "You are eligible to participate in this Private Sale!": "資格符合！您可以參與此次私有銷售！",
   "Meet any one of the requirements to join:": "滿足任何一項要求即可加入：",
@@ -1525,7 +1516,7 @@
   "How do I convert wBETH back to ETH?": "如何將 wBETH 轉換回 ETH？",
   "You can convert wBETH to ETH through": "可透過以下方式將 wBETH 轉換為 ETH：",
   "SweepStakes is also working to support a conversion contract on our liquid staking page to convert wBETH back to ETH seamlessly.": "SweepStakes 正致力於在我們的流動權益質押頁面上支援轉換合約，以期未來能協助持有者將 wBETH 無縫轉換回 ETH。",
-  "In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.": "目前的 IFO 模式除了保留公開銷售，還推出了一個全新的私有銷售。如要參加，參與者必須滿足 IFO 卡上的某些要求。每個符合條件的參與者，都將能夠提交零至最大參與限額之間任意數量的 KLAY。該限額將與 IFO 投票提案一起發佈。私有銷售不收取參與費。",
+
   "You can choose one or both at the same time!": "您可以同時參加兩種銷售！",
   "We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens.": "我們建議您先檢查看看您是否具備參與私有銷售的資格。而在公開銷售中，如果您參與的金額太小，購得的代幣數量極少，這可能會讓您入不敷出。",
   "Just remember you need an active SweepStakes Profile in order to participate.": "您需要啟用 SweepStakes 的個人檔案才能參與。",
@@ -1545,7 +1536,7 @@
   "Current Market Price": "目前市價",
   "Limit Price": "限價",
   "Error Tracking Id": "追蹤 ID 錯誤",
-  "Your voting power at block": "您在快照區塊時的投票權",
+
   "The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.": "由於截止日期已過，無法傳送交易。請檢查您的交易截止日期是否太短。",
   "This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.": "由於價格變動或代幣具備轉帳費用（抽稅），此鏈上交易將不會成功。請試著提高您的滑點上限。",
   "The input token cannot be transferred. There may be an issue with the input token.": "輸入代幣無法轉移。輸入代幣可能存在問題。",
@@ -1613,7 +1604,7 @@
   "Limit": "限價",
   "at market price": "以市價",
   "Error occurred, please try again later": "發生錯誤，請稍後再試",
-  "Hold some KLAY in your wallet or on SweepStakes at the snapshot block to get voting power for future proposals.": "如您希望在未來的提案中擁有投票權，需要您在快照區塊當時，在錢包中或 SweepStakes 上持有一些 KLAY。",
+
   "Preparing": "正在準備",
   "Perpetual": "永續合約",
   "Stake KLAY": "質押 KLAY",
@@ -1672,7 +1663,7 @@
   "Extend Lock": "延長鎖定",
   "Unlocked": "已解鎖",
   "Binance Fan token Trading Competition": "幣安粉絲代幣交易大賽",
-  "Easter Trading Competition": "復活節交易大賽",
+
   "300 Mobox Avatars NFT + 300 SweepStakes newly designed NFT to the top 100 traders in each of the three teams.": "300 個 Mobox 頭像 NFT + 300 個 SweepStakes 新設計的 NFT，分配給三個團隊中的前 100 名交易者。",
   "500 Mobox mystery boxes to the top 500 traders ranked by the MBOX trading volume.": "500 個 Mobox 神秘盒子，分配 MBOX 交易量排名前 500 的交易者。",
   "Added by user": "由使用者新增",
@@ -1711,7 +1702,7 @@
   "The number of iCAKE equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.": "如果質押持續時間超過 %weeks% 周，則 iCAKE 的數量等於鎖倉數量。如果質押持續時間小於 %weeks% 周，iCAKE 的數量將根據質押持續時間線性減少。",
   "Go to KLAY pool": "前往 KLAY 糖漿池",
   "April": "4 月",
-  "Easter Battle": "復活節戰爭",
+
   "$200,000 in Prizes!": "200,000 美元獎金！",
   "Compete with other teams to win KLAY, collectible NFTs, achievements & more!": "與其他團隊競爭，贏取 KLAY、收藏品 NFT、成就等！",
   "Prizes to be distributed in KLAY and shared by all members of a tier. KLAY price in USD to be determined on the day of distribution. Details below.": "獎金將以 KLAY 分發，並由各級別的所有成員共享。KLAY 價格（美元）將在分發當天確定。詳情如下。",
@@ -1754,9 +1745,7 @@
   "Circulating Supply": "流通供應",
   "Prizes will be announced and available for claiming at ~": "獎金將在大約以下時間公佈和開放領取：",
   "Follow Update": "關注動態",
-  "Your Mines of Dalarnia - Bunny Helmet NFT will be airdropped to your wallet before 00:00 UTC on 2nd June.": "您的 Mines of Dalarnia - Bunny Helmet NFT 將於世界協調時間 6 月 2 日 00:00 之前空投到您的錢包。",
-  "Bunny Helmet NFT": "Bunny Helmet NFT",
-  "Bunny Helmet": "Bunny Helmet",
+
   "SweepStakes NFT": "SweepStakes NFT",
   "Pottery": "糖漿彩券",
   "Stake to WIN!": "質押以中獎！",
@@ -1844,11 +1833,11 @@
   "In the Public Sale, everyone with an active SweepStakes profile can commit. However the maximum amount of KLAY users can commit, is equal to the number of iCAKE they have.": "在公開銷售中，擁有有效 SweepStakes 個人檔案的每個人都可以提交。不過，KLAY 使用者可以提交的最大數量等於他們擁有的 iCAKE 數量。",
   "And there’s a fee for participation: see below.": "並且存在超募手續費：見下文。",
   "The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO.": "超募手續費呈階梯式下降，具體取決於 IFO 的「公開銷售」部分中溢出的百分比。",
-  "Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.": "注意：不同場次 IFO 的超募手續費用可能會有所不同。如需詳細瞭解超募手續費，請參閱 IFO 提案 (投票) 中的詳細資料，瞭解您想參與的 IFO 的具體情況。",
+
   "You have successfully claimed your rewards.": "您已成功領取獎勵。",
   "Pottery (BETA)": "糖漿彩券 (測試版)",
   "This IFO has token vesting. Purchased tokens are released over a period of time.": "此次 IFO 有線性釋放機制，因此，您購買的代幣將會在一段時間內逐漸釋放。",
-  "Learn more in the vote proposal": "在投票提案中瞭解詳情",
+
   "What is the difference between an IFO and a cIFO?": "IFO 和 CIFO 之間有什麼區別？",
   "If you don’t commit enough KLAY, you may not receive a meaningful amount of IFO tokens, or you may not receive any IFO tokens at all.": "如果您沒有提交足夠的 KLAY，您可能不會收到有意義數量的 IFO 代幣，或者您可能根本不會收到任何 IFO 代幣。",
   "~%num% available to claim at sales end": "銷售結束時大約可以領取 %num%",
@@ -1874,13 +1863,13 @@
   "Max. deposit cap": "儲值上限",
   "Fixed Term KLAY Staking": "定期 KLAY 質押",
   "Flexible KLAY Staking": "靈活 KLAY 質押",
-  "Voting power is calculated using the staking amount and remaining staking duration of the fixed-term KLAY staking position at the block.": "區塊中的投票權將取決於定期 KLAY 質押部位的質押數量和剩餘時間。",
+
   "KLAY locked:": "已鎖倉 KLAY:",
   "Go to Pools": "前往糖漿池",
   "KLAY Emission Projection": "KLAY 產出量預測",
   "Boosted by vCAKE": "已由 vCAKE 助推",
   "Boosting Expired": "助推已到期",
-  "Your vCAKE boosting was expired at the snapshot block. Renew your fixed-term staking position to activate the boost for future voting proposals.": "在快照區塊時您的 vCAKE 加權已到期結束。延長定期倉位時長，以獲得您在未來的投票提案中的加權。",
+
   "%percentageVested%% of the purchased token will get vested and released linearly over a period of time. %percentageTgeRelease%% of the purchased token will be released immediately and available for claiming when IFO ends.": "%percentageVested%% 的購買代幣將在一段時間內線性釋放，之後可以在線性釋放頁面查看及領取。\n%percentageTgeRelease%% 的購買代幣立即釋放，在 IFO 結束時可馬上領取。",
   "The vested tokens will be released linearly over a period of %days% days.": "授權代幣將在 %days% 天的期間內線性釋放。",
   "Yield Booster": "收益助推器",
@@ -2073,7 +2062,7 @@
   "Meet the following requirement to join:": "滿足以下需求即可加入：",
   "Order cancellation": "訂單取消",
   "Order cancellation: %inputAmount% %inputTokenSymbol% for %outputAmount% %outputTokenSymbol%": "訂單取消：%inputAmount% %inputTokenSymbol% 兌換為 %outputAmount% %outputTokenSymbol%",
-  "Renew your staking position to continue enjoying the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "更新您的質押部位以便繼續享受農場收益助推、參與 IFO、投票權助推等權益！",
+
   "The lock period has ended. To avoid more rewards being burned, renew your staking position to continue enjoying the benefits from locked staking.": "您的鎖倉期已到期結束。請更新您的鎖倉倉位，以避免更多的獎勵被銷毀，並繼續享受鎖倉帶來的收益。",
   "Default": "預設",
   "Shows username of wallet instead of bunnies": "顯示錢包的使用者名稱而非兔子",
@@ -2087,11 +2076,10 @@
   "%lockedCake% KLAY (including rewards) are locked in the KLAY Pool until %lockedEndTime%": "%lockedCake% KLAY (包括獎勵) 已鎖倉在 KLAY 糖漿池中，直到 %lockedEndTime%",
   "iCAKE allows you to participate in the IFO public sales and commit up to %iCake% amount of KLAY.": "iCAKE 允許您參與 IFO 公開銷售並提交最多 %iCake% KLAY。",
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE 允許您將 SweepStakes 農場的收益助推最多 2 倍。",
-  "vCAKE boosts your voting power to %totalScore% in the SweepStakes voting governance.": "vCAKE 在 SweepStakes 投票治理中將您的投票權助推至 %totalScore%。",
-  "Lock KLAY to enjoy the benefits of farm yield boosting, participating in IFOs, voting power boosts, and so much more!": "將 KLAY 鎖倉以享受農場收益助推、參與 IFO、投票權助推等權益！",
+
   "KLAY staking expired": "KLAY 質押已過期",
   "Insufficient token allowance. Click \"Enable\" to approve.": "代幣授權額度不足。按一下「啟用」以更新授權額度。",
-  "For the public sale, each eligible participant will be able to commit any amount of KLAY up to the maximum commit limit, which is published along with the IFO voting proposal.": "對於公開銷售，符合條件的參與者都能提交 0 至最大限額之間任意數量的 KLAY。限額於每回 IFO 投票提案揭露。",
+
   "Unable to supply": "無法添加",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "增加流動性將為您賺取該幣對所有交易費用的 50%，與您在交易對中的持份成正比。賺取的費用會加進幣對中，即時累積且可以透過解除流動性來領取。有關 Stableswap 費用的更多資訊，請按一下",
   "For each stableswap trade, refer to the fee table": "對於每筆穩定幣兌換交易，請參閱費用表",
@@ -2669,7 +2657,7 @@
   "How is the APR calculated for SnBNB?": "SnBNB 的 APR 是如何計算的呢？",
   "The APR for SnBNB varies between 0.5%-3%. The APR earned by validators on BNB Chain depends on two factors:": "SnBNB 的 APR 介於 0.5%-3% 之間。BNB 鏈上驗證者賺取的 APR 取決於兩個因素：",
   "Commission Rate: synclub validator charges 10% commission fee.": "佣金率：synclub 驗證者收取 10% 的佣金費用。",
-  "Voting Power: The staked amount for a validator determines the APR it receives.": "投票權：驗證者權益質押的代幣數量影響獲得的 APR。",
+
   "The Synclub validator employs MEV (Miner Extractable Value) to enhance its APR.SnBNB appreciates against BNB in line with BNB’s staking APR.": "Synclub 驗證者採用 MEV (礦工可提取價值) 來提高 APR。SnBNB 價格相對於 BNB 的升值幅度，與將 BNB 進行權益質押所獲得的 APR，兩者一致。",
   "How can I use SnBNB?": "該怎麼使用 SnBNB 呢？",
   "You can use SnBNB to explore other use cases such as swapping, lending/borrowing and yield farming on BnbChain. Alongside": "您可以使用 SnBNB 來探索 BNB 鏈上的其他用例，例如交換、借貸和收益耕種。除了",
@@ -2808,6 +2796,6 @@
   "Share $10,000": "Share $10,000",
   "Predict now": "Predict now",
   "Trade now": "Trade now",
-  "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard": "Saturn Syndicate: Trade perpetuals and share $10,000 rewards Daily reward for new users and to top the leaderboard",
+
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
 }

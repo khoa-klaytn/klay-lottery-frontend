@@ -34,27 +34,9 @@ export const getSweepStakesProfileAddress = () => {
 export const getSweepStakesBunniesAddress = () => {
   return getAddressFromMap(addresses.pancakeBunnies)
 }
-export const getBunnyFactoryAddress = () => {
-  return getAddressFromMap(addresses.bunnyFactory)
-}
 export const getPointCenterIfoAddress = () => {
   return getAddressFromMap(addresses.pointCenterIfo)
 }
-export const getTradingCompetitionAddressEaster = () => {
-  return getAddressFromMap(addresses.tradingCompetitionEaster)
-}
-export const getTradingCompetitionAddressFanToken = () => {
-  return getAddressFromMap(addresses.tradingCompetitionFanToken)
-}
-
-export const getTradingCompetitionAddressMobox = () => {
-  return getAddressFromMap(addresses.tradingCompetitionMobox)
-}
-
-export const getTradingCompetitionAddressMoD = () => {
-  return getAddressFromMap(addresses.tradingCompetitionMoD)
-}
-
 export const getVaultPoolAddress = (vaultKey: VaultKey) => {
   if (!vaultKey) {
     return null
@@ -68,16 +50,6 @@ export const getCakeVaultAddress = (chainId?: number) => {
 
 export const getCakeFlexibleSideVaultAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.cakeFlexibleSideVault, chainId)
-}
-
-export const getNftMarketAddress = () => {
-  return getAddressFromMap(addresses.nftMarket)
-}
-export const getNftSaleAddress = () => {
-  return getAddressFromMap(addresses.nftSale)
-}
-export const getSweepStakesSquadAddress = () => {
-  return getAddressFromMap(addresses.pancakeSquad)
 }
 
 export const getZapAddress = (chainId?: number) => {
@@ -98,10 +70,6 @@ export const getTradingRewardAddress = (chainId?: number) => {
 
 export const getV3AirdropAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.v3Airdrop, chainId)
-}
-
-export const getAffiliateProgramAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.affiliateProgram, chainId)
 }
 
 export const getTradingRewardTopTradesAddress = (chainId?: number) => {
