@@ -1,12 +1,12 @@
 import { LotteryStatus, LotteryTicket } from 'config/constants/types'
-import { klayLotteryABI } from 'config/abi/klayLottery'
+import { ssLotteryABI } from 'config/abi/ssLottery'
 import { LotteryResponse } from 'state/types'
 import { bigIntToSerializedBigNumber } from '@sweepstakes/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
 import { type Address, ContractFunctionResult, PublicClient } from 'viem'
 
 const processViewLotterySuccessResponse = (
-  response: ContractFunctionResult<typeof klayLotteryABI, 'viewLottery'>,
+  response: ContractFunctionResult<typeof ssLotteryABI, 'viewLottery'>,
   lotteryId: string,
 ): LotteryResponse => {
   const {
@@ -80,7 +80,7 @@ export const fetchLottery = async (
 ): Promise<LotteryResponse> => {
   try {
     const lotteryData = await client.readContract({
-      abi: klayLotteryABI,
+      abi: ssLotteryABI,
       functionName: 'viewLottery',
       address: lotteryAddress,
       args: [BigInt(lotteryId)],
@@ -100,7 +100,7 @@ export const fetchMultipleLotteries = async (
   const calls = lotteryIds.map(
     (id) =>
       ({
-        abi: klayLotteryABI,
+        abi: ssLotteryABI,
         functionName: 'viewLottery',
         address: lotteryAddress,
         args: [BigInt(id)],
@@ -118,7 +118,7 @@ export const fetchMultipleLotteries = async (
 
 export const fetchCurrentLotteryId = async (client: PublicClient, lotteryAddress: `0x${string}`): Promise<bigint> => {
   return client.readContract({
-    abi: klayLotteryABI,
+    abi: ssLotteryABI,
     address: lotteryAddress,
     functionName: 'currentLotteryId',
   })
@@ -129,7 +129,7 @@ export const fetchCurrentLotteryIdAndMaxBuy = async (client: PublicClient, lotte
     const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
       (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
         client.readContract({
-          abi: klayLotteryABI,
+          abi: ssLotteryABI,
           address: lotteryAddress,
           functionName: method,
         }),

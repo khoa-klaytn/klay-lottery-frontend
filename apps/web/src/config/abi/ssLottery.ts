@@ -1,14 +1,9 @@
-export const klayLotteryABI = [
+export const ssLotteryABI = [
   {
     inputs: [
       {
         internalType: 'address',
-        name: '_randomGeneratorAddress',
-        type: 'address',
-      },
-      {
-        internalType: 'address',
-        name: '_dataFeedConsumerAddress',
+        name: '_accessControlAddress',
         type: 'address',
       },
       {
@@ -80,6 +75,16 @@ export const klayLotteryABI = [
   {
     inputs: [],
     name: 'LotteryOver',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'NotAccessControl',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'OwnerMismatch',
     type: 'error',
   },
   {
@@ -287,28 +292,9 @@ export const klayLotteryABI = [
     anonymous: false,
     inputs: [
       {
-        indexed: false,
-        internalType: 'address',
-        name: 'operator',
-        type: 'address',
-      },
-      {
-        indexed: false,
-        internalType: 'address',
-        name: 'injector',
-        type: 'address',
-      },
-    ],
-    name: 'NewOperatorAndInjectorAddresses',
-    type: 'event',
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
         indexed: true,
         internalType: 'address',
-        name: 'randomGenerator',
+        name: 'vrfConsumer',
         type: 'address',
       },
     ],
@@ -503,7 +489,7 @@ export const klayLotteryABI = [
     inputs: [
       {
         internalType: 'address',
-        name: '_randomGeneratorAddress',
+        name: '_vrfConsumerAddress',
         type: 'address',
       },
     ],
@@ -615,19 +601,6 @@ export const klayLotteryABI = [
   },
   {
     inputs: [],
-    name: 'injectorAddress',
-    outputs: [
-      {
-        internalType: 'address payable',
-        name: '',
-        type: 'address',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'maxNumberTicketsPerBuyOrClaim',
     outputs: [
       {
@@ -641,15 +614,27 @@ export const klayLotteryABI = [
   },
   {
     inputs: [],
-    name: 'operatorAddress',
-    outputs: [
+    name: 'onContractAddressChange',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
       {
-        internalType: 'address payable',
-        name: '',
+        internalType: 'enum ContractName',
+        name: 'contractName',
+        type: 'uint8',
+      },
+      {
+        internalType: 'address',
+        name: 'contractAddress',
         type: 'address',
       },
     ],
-    stateMutability: 'view',
+    name: 'onContractAddressChange',
+    outputs: [],
+    stateMutability: 'nonpayable',
     type: 'function',
   },
   {
@@ -713,6 +698,19 @@ export const klayLotteryABI = [
   {
     inputs: [
       {
+        internalType: 'address',
+        name: '_accessControlAddress',
+        type: 'address',
+      },
+    ],
+    name: 'setAccessControl',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
         internalType: 'uint256',
         name: '_lotteryId',
         type: 'uint256',
@@ -742,24 +740,6 @@ export const klayLotteryABI = [
       },
     ],
     name: 'setMaxNumberTicketsPerBuy',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [
-      {
-        internalType: 'address',
-        name: '_operatorAddress',
-        type: 'address',
-      },
-      {
-        internalType: 'address',
-        name: '_injectorAddress',
-        type: 'address',
-      },
-    ],
-    name: 'setOperatorAndInjectorAddresses',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -822,7 +802,7 @@ export const klayLotteryABI = [
       {
         components: [
           {
-            internalType: 'enum IndexedKlayLottery.Status',
+            internalType: 'enum IndexedSSLottery.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -897,7 +877,7 @@ export const klayLotteryABI = [
             type: 'uint32',
           },
         ],
-        internalType: 'struct IndexedKlayLottery.Lottery[]',
+        internalType: 'struct IndexedSSLottery.Lottery[]',
         name: 'lotteries',
         type: 'tuple[]',
       },
@@ -918,7 +898,7 @@ export const klayLotteryABI = [
       {
         components: [
           {
-            internalType: 'enum IndexedKlayLottery.Status',
+            internalType: 'enum IndexedSSLottery.Status',
             name: 'status',
             type: 'uint8',
           },
@@ -993,7 +973,7 @@ export const klayLotteryABI = [
             type: 'uint32',
           },
         ],
-        internalType: 'struct IndexedKlayLottery.Lottery',
+        internalType: 'struct IndexedSSLottery.Lottery',
         name: '',
         type: 'tuple',
       },
@@ -1090,7 +1070,7 @@ export const klayLotteryABI = [
             type: 'address',
           },
         ],
-        internalType: 'struct IndexedKlayLottery.Ticket[]',
+        internalType: 'struct IndexedSSLottery.Ticket[]',
         name: 'tickets',
         type: 'tuple[]',
       },

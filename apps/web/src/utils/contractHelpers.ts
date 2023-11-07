@@ -26,7 +26,7 @@ import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
 import { chainlinkOracleABI } from 'config/abi/chainlinkOracle'
-import { klayLotteryABI } from 'config/abi/klayLottery'
+import { ssLotteryABI } from 'config/abi/ssLottery'
 import { lpTokenABI } from 'config/abi/lpTokenAbi'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { tradingRewardABI } from 'config/abi/tradingReward'
@@ -95,7 +95,7 @@ export const getProfileContract = (signer?: WalletClient) => {
 }
 
 export const getKlayLotteryContract = (address: Address, signer?: WalletClient) => {
-  return getContract({ abi: klayLotteryABI, address, signer })
+  return getContract({ abi: ssLotteryABI, address, signer })
 }
 
 export const getCakeVaultV2Contract = (signer?: WalletClient, chainId?: number) => {

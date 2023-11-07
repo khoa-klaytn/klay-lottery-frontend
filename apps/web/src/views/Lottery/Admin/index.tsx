@@ -1,4 +1,4 @@
-import { klayLotteryABI } from 'config/abi/klayLottery'
+import { ssLotteryABI } from 'config/abi/ssLottery'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { Button, useToast } from '@sweepstakes/uikit'
@@ -28,7 +28,7 @@ export default function Admin() {
     async (roleName: 'operatorAddress' | 'owner' | 'injectorAddress'): Promise<string | null> =>
       publicClient
         .readContract({
-          abi: klayLotteryABI,
+          abi: ssLotteryABI,
           address: lotteryAddress,
           functionName: roleName,
         })

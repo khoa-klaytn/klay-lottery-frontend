@@ -1,10 +1,10 @@
-import { klayLotteryABI } from 'config/abi/klayLottery'
+import { ssLotteryABI } from 'config/abi/ssLottery'
 import { TICKET_LIMIT_PER_REQUEST } from 'config/constants/lottery'
 import { LotteryTicket } from 'config/constants/types'
 import { ContractFunctionResult, type Address, PublicClient } from 'viem'
 
 export const processRawTicketsResponse = (
-  ticketsResponse: ContractFunctionResult<typeof klayLotteryABI, 'viewUserInfoForLotteryId'>,
+  ticketsResponse: ContractFunctionResult<typeof ssLotteryABI, 'viewUserInfoForLotteryId'>,
 ): LotteryTicket[] => {
   const [ticketIds, ticketNumbers, ticketStatuses] = ticketsResponse
 
@@ -30,7 +30,7 @@ export const viewUserInfoForLotteryId = async (
 ): Promise<LotteryTicket[]> => {
   try {
     const data = await client.readContract({
-      abi: klayLotteryABI,
+      abi: ssLotteryABI,
       address: lotteryAddress,
       functionName: 'viewUserInfoForLotteryId',
       args: [account as Address, BigInt(lotteryId), BigInt(cursor), BigInt(perRequestLimit)],

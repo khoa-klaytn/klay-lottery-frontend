@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import { LotteryStatus, LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import { LotteryUserGraphEntity, LotteryRoundGraphEntity } from 'state/types'
-import { klayLotteryABI } from 'config/abi/klayLottery'
+import { ssLotteryABI } from 'config/abi/ssLottery'
 import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
 import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import { type Address, PublicClient } from 'viem'
@@ -24,7 +24,7 @@ const fetchCakeRewardsForTickets = async (
     const rewards = await Promise.all(
       winningTickets.map((ticket) =>
         client.readContract({
-          abi: klayLotteryABI,
+          abi: ssLotteryABI,
           address: lotteryAddress,
           functionName: 'viewRewardsForTicketId',
           args: [BigInt(ticket.roundId), BigInt(ticket.id)],
