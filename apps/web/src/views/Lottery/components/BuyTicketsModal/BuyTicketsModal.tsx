@@ -17,7 +17,7 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { useKlayLotteryContract } from 'hooks/useContract'
+import { useSSLotteryContract } from 'hooks/useContract'
 import useTheme from 'hooks/useTheme'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAppDispatch } from 'state'
@@ -85,7 +85,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const [maxPossibleTicketPurchase, setMaxPossibleTicketPurchase] = useState(BIG_ZERO)
   const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
   const [insufficientBalance, setInsufficientBalance] = useState(false)
-  const lotteryContract = useKlayLotteryContract()
+  const lotteryContract = useSSLotteryContract()
   const { toastSuccess, toastError } = useToast()
   const [balance, setBalance] = useState(0n)
   const bnBalance = useMemo(() => new BigNumber(balance.toString()), [balance])

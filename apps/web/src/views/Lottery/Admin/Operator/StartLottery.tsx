@@ -1,7 +1,7 @@
 import { Button, Input } from '@sweepstakes/uikit'
 import { LotteryStatus } from 'config/constants/types'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { useKlayLotteryContract } from 'hooks/useContract'
+import { useSSLotteryContract } from 'hooks/useContract'
 import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
 import { HasSetCustomValidity, setRefCustomValidity } from 'utils/customValidity'
 import { handleCustomError } from 'utils/viem'
@@ -12,7 +12,7 @@ import EndTime from './EndTime'
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
   const { callWithGasPrice } = useCallWithGasPrice()
-  const lotteryContract = useKlayLotteryContract()
+  const lotteryContract = useSSLotteryContract()
   const endTimeRef = useRef<HasSetCustomValidity>(null)
   const [endTime, setEndTime] = useState(() => {
     const now = new Date()

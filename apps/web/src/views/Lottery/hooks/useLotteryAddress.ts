@@ -1,9 +1,9 @@
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { getKlayLotteryAddress } from 'utils/addressHelpers'
+import { getSSLotteryAddress } from 'utils/addressHelpers'
 
 const useLotteryAddress = () => {
   const { chainId } = useActiveChainId()
-  const lotteryAddress = getKlayLotteryAddress(chainId)
+  const lotteryAddress = getSSLotteryAddress(chainId)
   return lotteryAddress
 }
 

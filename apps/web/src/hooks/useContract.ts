@@ -13,7 +13,7 @@ import {
   getCakeVaultV2Contract,
   getChainlinkOracleContract,
   getContract,
-  getKlayLotteryContract,
+  getSSLotteryContract,
   getNonBscVaultContract,
   getPointCenterIfoContract,
   getProfileContract,
@@ -53,10 +53,10 @@ export const useProfileContract = () => {
   return useMemo(() => getProfileContract(signer ?? undefined), [signer])
 }
 
-export const useKlayLotteryContract = () => {
+export const useSSLotteryContract = () => {
   const address = useLotteryAddress()
   const { data: signer } = useWalletClient()
-  return useMemo(() => getKlayLotteryContract(address, signer ?? undefined), [address, signer])
+  return useMemo(() => getSSLotteryContract(address, signer ?? undefined), [address, signer])
 }
 
 export const useSousChef = (id) => {

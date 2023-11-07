@@ -94,7 +94,7 @@ export const getProfileContract = (signer?: WalletClient) => {
   return getContract({ abi: pancakeProfileABI, address: getSweepStakesProfileAddress(), signer })
 }
 
-export const getKlayLotteryContract = (address: Address, signer?: WalletClient) => {
+export const getSSLotteryContract = (address: Address, signer?: WalletClient) => {
   return getContract({ abi: ssLotteryABI, address, signer })
 }
 

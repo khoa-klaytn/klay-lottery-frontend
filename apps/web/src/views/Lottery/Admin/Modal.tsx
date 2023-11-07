@@ -1,5 +1,5 @@
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
-import { useKlayLotteryContract } from 'hooks/useContract'
+import { useSSLotteryContract } from 'hooks/useContract'
 import { useLottery } from 'state/lottery/hooks'
 import { styled } from 'styled-components'
 import { Button } from '@sweepstakes/uikit'
@@ -27,7 +27,7 @@ const CloseBtn = styled(Button)`
 
 export default function Modal({ isOperator, isOwner, isInjector, hideModal }) {
   const { callWithGasPrice } = useCallWithGasPrice()
-  const lotteryContract = useKlayLotteryContract()
+  const lotteryContract = useSSLotteryContract()
   const {
     currentRound: { lotteryId, status },
   } = useLottery()

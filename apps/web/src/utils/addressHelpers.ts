@@ -25,7 +25,7 @@ export const getMasterChefV2Address = (chainId?: number) => {
 export const getMulticallAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.multiCall, chainId)
 }
-export const getKlayLotteryAddress = (chainId: number) => {
+export const getSSLotteryAddress = (chainId: number) => {
   return getAddressFromMap(addresses.ssLottery, chainId)
 }
 export const getSweepStakesProfileAddress = () => {

@@ -44,21 +44,21 @@ export const getViemClients = ({ chainId }: { chainId?: ChainId }) => {
 
 type AbiError = Extract<AbiItem, { type: 'error' }>
 
-type KlayLotteryABI = (typeof ssLotteryABI)[number]
-type KlayLotteryError = Extract<KlayLotteryABI, AbiError>
-type KlayLotteryErrorName = KlayLotteryError['name']
+type SSLotteryABI = (typeof ssLotteryABI)[number]
+type SSLotteryError = Extract<SSLotteryABI, AbiError>
+type SSLotteryErrorName = SSLotteryError['name']
 type AbiItemInput2Param<T extends AbiError['inputs'][number]> = T extends { type: 'uint256' } ? bigint : string
 type AbiItemInputs2Params<T extends AbiError['inputs']> = {
   [K in keyof T]: AbiItemInput2Param<T[K]>
 }
-type KlayLotteryErrorHandlerRecord = {
-  [K in KlayLotteryErrorName]?: (
-    inputs: AbiItemInputs2Params<Extract<KlayLotteryError, { name: K }>['inputs']>,
+type SSLotteryErrorHandlerRecord = {
+  [K in SSLotteryErrorName]?: (
+    inputs: AbiItemInputs2Params<Extract<SSLotteryError, { name: K }>['inputs']>,
     msg: string,
   ) => void
 }
 
-export function handleCustomError(e: BaseError, handlers: KlayLotteryErrorHandlerRecord) {
+export function handleCustomError(e: BaseError, handlers: SSLotteryErrorHandlerRecord) {
   const revertError = e.walk((walkE) => walkE instanceof ContractFunctionRevertedError)
   if (revertError instanceof ContractFunctionRevertedError) {
     const { data } = revertError
