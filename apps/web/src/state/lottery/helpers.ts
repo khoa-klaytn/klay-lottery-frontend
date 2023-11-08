@@ -4,6 +4,7 @@ import { LotteryResponse } from 'state/types'
 import { bigIntToSerializedBigNumber } from '@sweepstakes/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
 import { type Address, ContractFunctionResult, PublicClient } from 'viem'
+import { parseRetrievedNumber } from 'views/Lottery/helpers'
 
 const processViewLotterySuccessResponse = (
   response: ContractFunctionResult<typeof ssLotteryABI, 'viewLottery'>,
@@ -33,6 +34,7 @@ const processViewLotterySuccessResponse = (
     bigIntToSerializedBigNumber(winnersInBracket),
   )
   const serializedRewardPortions = rewardPortions.map((reward) => bigIntToSerializedBigNumber(BigInt(reward)))
+  const serializedFinalNumber = parseRetrievedNumber(finalNumber.toString())
 
   return {
     isLoading: false,
@@ -46,7 +48,7 @@ const processViewLotterySuccessResponse = (
     burnPortion: burnPortion?.toString(),
     firstTicketId: firstTicketId?.toString(),
     amountCollected: bigIntToSerializedBigNumber(amountCollected),
-    finalNumber,
+    finalNumber: serializedFinalNumber,
     rewardPerUserPerBracket: serializedRewardPerUserPerBracket,
     countWinnersPerBracket: serializedCountWinnersPerBracket,
     rewardPortions: serializedRewardPortions,

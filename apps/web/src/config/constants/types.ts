@@ -84,7 +84,7 @@ export enum LotteryStatus {
 
 export interface LotteryTicket {
   id: string
-  number: string
+  number: string[]
   status: boolean
   rewardBracket?: number
   roundId?: string

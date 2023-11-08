@@ -169,7 +169,7 @@ interface LotteryRoundGenerics {
   winnersPortion: string
   burnPortion: string
   firstTicketId: string
-  finalNumber: number
+  finalNumber: string[]
 }
 
 export interface LotteryRound extends LotteryRoundGenerics {
@@ -206,7 +206,7 @@ export interface LotteryRoundGraphEntity {
   totalTickets: string
   winningTickets: string
   status: LotteryStatus
-  finalNumber: string
+  finalNumber: string[]
   startTime: string
   endTime: string
   ticketPrice: SerializedBigNumber

@@ -2,6 +2,7 @@ import { request, gql } from 'graphql-request'
 import { GRAPH_API_LOTTERY } from 'config/constants/endpoints'
 import { LotteryRoundGraphEntity, LotteryResponse } from 'state/types'
 import { PublicClient } from 'viem'
+import { parseRetrievedNumber } from 'views/Lottery/helpers'
 import { getRoundIdsArray, fetchMultipleLotteries } from './helpers'
 
 export const MAX_LOTTERIES_REQUEST_SIZE = 100
@@ -18,7 +19,7 @@ const applyNodeDataToLotteriesGraphResponse = (
     return nodeData.map((nodeRound) => {
       return {
         endTime: nodeRound.endTime,
-        finalNumber: nodeRound.finalNumber.toString(),
+        finalNumber: nodeRound.finalNumber,
         startTime: nodeRound.startTime,
         status: nodeRound.status,
         id: nodeRound.lotteryId.toString(),
@@ -35,7 +36,7 @@ const applyNodeDataToLotteriesGraphResponse = (
     const graphRoundData = graphResponse.find((graphResponseRound) => graphResponseRound.id === nodeRoundData.lotteryId)
     return {
       endTime: nodeRoundData.endTime,
-      finalNumber: nodeRoundData.finalNumber.toString(),
+      finalNumber: nodeRoundData.finalNumber,
       startTime: nodeRoundData.startTime,
       status: nodeRoundData.status,
       id: nodeRoundData.lotteryId,
@@ -82,7 +83,10 @@ export const getGraphLotteries = async (
       `,
       { skip, first, where },
     )
-    return response.lotteries
+    return response.lotteries.map(({ finalNumber, ...lottery }) => ({
+      finalNumber: parseRetrievedNumber(finalNumber.toString()),
+      ...lottery,
+    }))
   } catch (error) {
     console.error(error)
     return []

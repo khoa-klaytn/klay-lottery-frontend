@@ -115,7 +115,7 @@ const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: str
       const winningTickets = await getWinningTickets(publicClient, lotteryAddress, {
         roundId,
         userTickets,
-        finalNumber: processedLotteryData.finalNumber.toString(),
+        finalNumber: processedLotteryData.finalNumber,
       })
 
       setUserWinningTickets({
@@ -171,7 +171,7 @@ const PreviousRoundTicketsInner: React.FC<React.PropsWithChildren<{ roundId: str
           {t('Winning number')}
         </Text>
         {lotteryInfo?.finalNumber ? (
-          <WinningNumbers number={lotteryInfo.finalNumber.toString()} />
+          <WinningNumbers number={lotteryInfo.finalNumber} />
         ) : (
           <Skeleton width="230px" height="34px" />
         )}

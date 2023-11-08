@@ -5,14 +5,13 @@ import { ssLotteryABI } from 'config/abi/ssLottery'
 import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
 import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import { type Address, PublicClient } from 'viem'
-import { parseRetrievedNumber } from 'views/Lottery/helpers'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
 import { MAX_LOTTERIES_REQUEST_SIZE } from './getLotteriesData'
 
 interface RoundDataAndUserTickets {
   roundId: string
   userTickets: LotteryTicket[]
-  finalNumber: string
+  finalNumber: string[]
 }
 
 const fetchCakeRewardsForTickets = async (
@@ -46,23 +45,17 @@ const fetchCakeRewardsForTickets = async (
   }
 }
 
-const getRewardBracketByNumber = (ticketNumber: string, finalNumber: string): number => {
-  // Winning numbers are evaluated right-to-left in the smart contract, so we reverse their order for validation here:
-  // i.e. '1123456' should be evaluated as '6543211'
-  const parsedTicketNum = parseRetrievedNumber(ticketNumber)
-  const parsedFinalNum = parseRetrievedNumber(finalNumber)
-
-  const numBrackets = parsedFinalNum.length
-  let index = numBrackets
+const getRewardBracketByNumber = (ticketNumber: string[], finalNumber: string[]): number => {
+  const numBrackets = finalNumber.length
   // The number at index 6 in all tickets is 1 and will always match, so finish at index 5
-  for (; index--; ) {
-    const ticketDigit = parsedTicketNum[index]
-    const finalDigit = parsedFinalNum[index]
-    if (ticketDigit !== finalDigit) {
-      break
-    }
+  let index = 0
+  for (; index < numBrackets; ) {
+    const ticketDigit = ticketNumber[index]
+    const finalDigit = finalNumber[index]
+    if (ticketDigit !== finalDigit) break
+    ++index
   }
-  return numBrackets - index - 1
+  return index
 }
 
 export const getWinningTickets = async (
@@ -84,7 +77,7 @@ export const getWinningTickets = async (
 
   // A rewardBracket of -1 means no matches. 0 and above means there has been a match
   const allWinningTickets = ticketsWithRewardBrackets.filter((ticket) => {
-    return ticket.rewardBracket >= 0
+    return ticket.rewardBracket > 0
   })
 
   // If ticket.status is true, the ticket has already been claimed

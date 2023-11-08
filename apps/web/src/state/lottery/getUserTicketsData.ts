@@ -2,6 +2,7 @@ import { ssLotteryABI } from 'config/abi/ssLottery'
 import { TICKET_LIMIT_PER_REQUEST } from 'config/constants/lottery'
 import { LotteryTicket } from 'config/constants/types'
 import { ContractFunctionResult, type Address, PublicClient } from 'viem'
+import { parseRetrievedNumber } from 'views/Lottery/helpers'
 
 export const processRawTicketsResponse = (
   ticketsResponse: ContractFunctionResult<typeof ssLotteryABI, 'viewUserInfoForLotteryId'>,
@@ -12,7 +13,7 @@ export const processRawTicketsResponse = (
     return ticketIds.map((ticketId, index) => {
       return {
         id: ticketId.toString(),
-        number: ticketNumbers[index].toString(),
+        number: parseRetrievedNumber(ticketNumbers[index].toString()),
         status: ticketStatuses[index],
       }
     })

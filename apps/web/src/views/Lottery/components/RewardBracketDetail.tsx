@@ -29,14 +29,17 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
   const klayPriceBusd = useKlayPrice()
 
   const getRewardText = () => {
-    const numberMatch = rewardBracket + 1
     if (isBurn) {
       return t('Burn')
     }
-    if (rewardBracket === 5) {
-      return t('Match all %numberMatch%', { numberMatch })
+    switch (rewardBracket) {
+      case 0:
+        return t('All winners')
+      case 6:
+        return t('Match all %rewardBracket%', { rewardBracket })
+      default:
+        return t('Match first %rewardBracket%', { rewardBracket })
     }
-    return t('Match first %numberMatch%', { numberMatch })
   }
 
   return (

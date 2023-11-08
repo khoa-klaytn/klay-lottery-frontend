@@ -3,7 +3,6 @@ import { Flex, Text } from '@sweepstakes/uikit'
 import { useTranslation } from '@sweepstakes/localization'
 import { styled } from 'styled-components'
 import _uniqueId from 'lodash/uniqueId'
-import { parseRetrievedNumber } from '../helpers'
 
 const StyledNumberWrapper = styled(Flex)`
   position: relative;
@@ -45,7 +44,6 @@ const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({
   numBrackets,
 }) => {
   const { t } = useTranslation()
-  const reversedNumber = parseRetrievedNumber(number)
 
   // TODO: translate "Matches all"
   return (
@@ -62,7 +60,7 @@ const TicketNumber: React.FC<React.PropsWithChildren<TicketNumberProps>> = ({
       </Flex>
       <StyledNumberWrapper>
         {rewardBracket > 0 && <RewardHighlighter rewardBracket={rewardBracket} numBrackets={6} />}
-        {reversedNumber.map((digit) => (
+        {number.map((digit) => (
           <Text key={`${localId || id}-${digit}-${_uniqueId()}`} fontSize="16px">
             {digit}
           </Text>

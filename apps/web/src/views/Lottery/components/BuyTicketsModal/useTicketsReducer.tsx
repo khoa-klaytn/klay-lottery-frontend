@@ -1,6 +1,5 @@
 import { LotteryTicket } from 'config/constants/types'
 import { useCallback, useEffect, useReducer } from 'react'
-import { parseRetrievedNumber } from '../../helpers'
 import generateTicketNumbers from './generateTicketNumbers'
 
 export interface Ticket {
@@ -23,10 +22,9 @@ const getInitialState = ({
   userCurrentTickets: LotteryTicket[]
 }): TicketsState => {
   const randomTickets = generateTicketNumbers(amount, userCurrentTickets)
-  const randomTicketsAsStringArray = randomTickets.map((ticket) => parseRetrievedNumber(ticket.toString()))
   const tickets = Array.from({ length: amount }, (_, i) => i + 1).map((index) => ({
     id: index,
-    numbers: randomTicketsAsStringArray[index - 1],
+    numbers: randomTickets[index - 1],
     duplicateWith: [],
     isComplete: true,
   }))

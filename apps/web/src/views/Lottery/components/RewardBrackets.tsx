@@ -80,8 +80,6 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
 
   const { isLoading, countWinnersPerBracket, amountToBurn } = state
 
-  const rewardBrackets = [0, 1, 2, 3, 4, 5]
-
   return (
     <Wrapper>
       <Text fontSize="14px" mb="24px">
@@ -89,7 +87,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
         {!isHistoricRound && t('Current prizes up for grabs:')}
       </Text>
       <RewardsInner>
-        {rewardBrackets.map((bracketIndex) => (
+        {[0, 1, 2, 3, 4, 5, 6].map((bracketIndex) => (
           <RewardBracketDetail
             key={bracketIndex}
             rewardBracket={bracketIndex}

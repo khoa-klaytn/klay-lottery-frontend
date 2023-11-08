@@ -259,7 +259,9 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
       })
       let res
       try {
-        res = callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], { value })
+        res = await callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], {
+          value,
+        })
         console.log(res)
       } catch (e) {
         console.error(e)
