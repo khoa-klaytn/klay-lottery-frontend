@@ -62,7 +62,6 @@ export default function Admin() {
         setIsInjector(isOwner_ || isInjector_)
       })().catch((e) => {
         console.error(e)
-        toastError('Failed to read admin roles from contract')
       })
     }
   }, [publicClient, account, toastError, accessControlAddress])
