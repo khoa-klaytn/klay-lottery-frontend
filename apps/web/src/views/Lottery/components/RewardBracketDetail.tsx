@@ -5,22 +5,25 @@ import { useKlayPrice } from 'hooks/useKlayPrice'
 import { getBalanceNumber, getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
+import { useMemo } from 'react'
 
 interface RewardBracketDetailProps {
   amount: BigNumber
+  type: 'allwinners' | 'match' | 'matchAll' | 'burn'
   rewardBracket?: number
+  rewardPerUser?: BigNumber
   numberWinners?: string
-  isBurn?: boolean
   isHistoricRound?: boolean
   isLoading?: boolean
 }
 
 const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailProps>> = ({
-  rewardBracket,
   amount,
+  type,
+  rewardBracket,
+  rewardPerUser,
   numberWinners,
   isHistoricRound,
-  isBurn,
   isLoading,
 }) => {
   const { chainId } = useActiveChainId()
@@ -28,27 +31,27 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
   const { t } = useTranslation()
   const klayPriceBusd = useKlayPrice()
 
-  const getRewardText = () => {
-    if (isBurn) {
-      return t('Burn')
-    }
-    switch (rewardBracket) {
-      case 0:
-        return t('All winners')
-      case 6:
-        return t('Match all %rewardBracket%', { rewardBracket })
-      default:
+  const rewardText = useMemo(() => {
+    switch (type) {
+      case 'allwinners':
+        return t('All Winners')
+      case 'match':
         return t('Match first %rewardBracket%', { rewardBracket })
+      case 'matchAll':
+        return t('Match all %rewardBracket%', { rewardBracket })
+      case 'burn':
+      default:
+        return t('Burn')
     }
-  }
+  }, [rewardBracket, t, type])
 
   return (
     <Flex flexDirection="column">
       {isLoading ? (
         <Skeleton mb="4px" mt="8px" height={16} width={80} />
       ) : (
-        <Text bold color={isBurn ? 'failure' : 'secondary'}>
-          {getRewardText()}
+        <Text bold color={type === 'burn' ? 'failure' : 'secondary'}>
+          {rewardText}
         </Text>
       )}
       <>
@@ -74,7 +77,7 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
           <>
             {numberWinners !== '0' && (
               <Text fontSize="12px" color="textSubtle">
-                {getFullDisplayBalance(amount.div(parseInt(numberWinners, 10)), 18, 2)} {symbol} {t('each')}
+                {getFullDisplayBalance(rewardPerUser, 18, 2)} {symbol} {t('each')}
               </Text>
             )}
             <Text fontSize="12px" color="textSubtle">

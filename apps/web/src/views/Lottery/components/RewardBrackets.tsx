@@ -29,9 +29,9 @@ interface RewardMatchesProps {
 
 interface RewardsState {
   isLoading: boolean
-  amountToBurn: BigNumber
-  rewardsLessTreasuryFee: BigNumber
-  rewardPortions: string[]
+  amountBurn: BigNumber
+  rewardsPerBracket: BigNumber[]
+  rewardPerUserPerBracket: BigNumber[]
   countWinnersPerBracket: string[]
 }
 
@@ -42,43 +42,50 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
   const { t } = useTranslation()
   const [state, setState] = useState<RewardsState>({
     isLoading: true,
-    amountToBurn: BIG_ZERO,
-    rewardsLessTreasuryFee: BIG_ZERO,
-    rewardPortions: null,
+    amountBurn: BIG_ZERO,
+    rewardsPerBracket: null,
+    rewardPerUserPerBracket: null,
     countWinnersPerBracket: null,
   })
 
   useEffect(() => {
     if (lotteryNodeData) {
-      const { burnPortion, amountCollected, rewardPortions, countWinnersPerBracket } = lotteryNodeData
+      const {
+        burnPortion,
+        amountCollected,
+        countWinnersPerBracket,
+        rewardPerUserPerBracket: _rewardPerUserPerBracket,
+      } = lotteryNodeData
 
-      const burnPercentage = new BigNumber(burnPortion).div(100)
-      const amountToBurn = burnPercentage.div(100).times(new BigNumber(amountCollected))
-      const amountLessTreasuryFee = new BigNumber(amountCollected).minus(amountToBurn)
+      const amountBurn = amountCollected.times(burnPortion).div(10000)
+      const rewardPerUserPerBracket = []
+      const rewardsPerBracket = []
+      const numBrackets = countWinnersPerBracket.length
+      for (let i = numBrackets; i--; ) {
+        const rewardPerUser = new BigNumber(_rewardPerUserPerBracket[i])
+        rewardPerUserPerBracket[i] = rewardPerUser
+        rewardsPerBracket[i] = rewardPerUser.times(countWinnersPerBracket[i])
+      }
+
       setState({
         isLoading: false,
-        amountToBurn,
-        rewardsLessTreasuryFee: amountLessTreasuryFee,
-        rewardPortions,
+        amountBurn,
+        rewardsPerBracket,
+        rewardPerUserPerBracket,
         countWinnersPerBracket,
       })
     } else {
       setState({
         isLoading: true,
-        amountToBurn: BIG_ZERO,
-        rewardsLessTreasuryFee: BIG_ZERO,
-        rewardPortions: null,
+        amountBurn: BIG_ZERO,
+        rewardsPerBracket: null,
+        rewardPerUserPerBracket: null,
         countWinnersPerBracket: null,
       })
     }
   }, [lotteryNodeData])
 
-  const getRewards = (bracket: number) => {
-    const shareAsPercentage = new BigNumber(state.rewardPortions[bracket]).div(100)
-    return state.rewardsLessTreasuryFee.div(100).times(shareAsPercentage)
-  }
-
-  const { isLoading, countWinnersPerBracket, amountToBurn } = state
+  const { isLoading, amountBurn, rewardsPerBracket, rewardPerUserPerBracket, countWinnersPerBracket } = state
 
   return (
     <Wrapper>
@@ -87,17 +94,37 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
         {!isHistoricRound && t('Current prizes up for grabs:')}
       </Text>
       <RewardsInner>
-        {[0, 1, 2, 3, 4, 5, 6].map((bracketIndex) => (
+        <RewardBracketDetail
+          type="allwinners"
+          rewardBracket={0}
+          amount={!isLoading && rewardsPerBracket[0]}
+          rewardPerUser={!isLoading && rewardPerUserPerBracket[0]}
+          numberWinners={!isLoading && countWinnersPerBracket[0]}
+          isHistoricRound={isHistoricRound}
+          isLoading={isLoading}
+        />
+        {[1, 2, 3, 4, 5].map((bracketIndex) => (
           <RewardBracketDetail
             key={bracketIndex}
+            type="match"
             rewardBracket={bracketIndex}
-            amount={!isLoading && getRewards(bracketIndex)}
+            amount={!isLoading && rewardsPerBracket[bracketIndex]}
+            rewardPerUser={!isLoading && rewardPerUserPerBracket[bracketIndex]}
             numberWinners={!isLoading && countWinnersPerBracket[bracketIndex]}
             isHistoricRound={isHistoricRound}
             isLoading={isLoading}
           />
         ))}
-        <RewardBracketDetail rewardBracket={0} amount={amountToBurn} isBurn isLoading={isLoading} />
+        <RewardBracketDetail
+          type="matchAll"
+          rewardBracket={6}
+          amount={!isLoading && rewardsPerBracket[6]}
+          rewardPerUser={!isLoading && rewardPerUserPerBracket[6]}
+          numberWinners={!isLoading && countWinnersPerBracket[6]}
+          isHistoricRound={isHistoricRound}
+          isLoading={isLoading}
+        />
+        <RewardBracketDetail type="burn" amount={amountBurn} isLoading={isLoading} />
       </RewardsInner>
     </Wrapper>
   )
