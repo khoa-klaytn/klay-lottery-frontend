@@ -1,6 +1,5 @@
 import { WalletConfigV2 } from '@sweepstakes/ui-wallets'
 import { WalletFilledIcon } from '@sweepstakes/uikit'
-import type { ExtendEthereum } from 'global'
 import { walletConnectNoQrCodeConnector } from '../utils/wagmi'
 import { ASSET_CDN } from './constants/endpoints'
 
@@ -57,71 +56,6 @@ const walletsConfig = ({
       deepLink: 'https://metamask.app.link/dapp/sweepstakes.finance/',
       qrCode,
       downloadLink: 'https://metamask.app.link/dapp/sweepstakes.finance/',
-    },
-    {
-      id: 'opera',
-      title: 'Opera Wallet',
-      icon: `${ASSET_CDN}/web/wallets/opera.png`,
-      connectorId: ConnectorNames.Injected,
-      get installed() {
-        return typeof window !== 'undefined' && Boolean(window.ethereum?.isOpera)
-      },
-      downloadLink: 'https://www.opera.com/crypto/next',
-    },
-    {
-      id: 'brave',
-      title: 'Brave Wallet',
-      icon: `${ASSET_CDN}/web/wallets/brave.png`,
-      connectorId: ConnectorNames.Injected,
-      get installed() {
-        return typeof window !== 'undefined' && Boolean(window.ethereum?.isBraveWallet)
-      },
-      downloadLink: 'https://brave.com/wallet/',
-    },
-    {
-      id: 'math',
-      title: 'MathWallet',
-      icon: `${ASSET_CDN}/web/wallets/mathwallet.png`,
-      connectorId: ConnectorNames.Injected,
-      get installed() {
-        return typeof window !== 'undefined' && Boolean(window.ethereum?.isMathWallet)
-      },
-      qrCode,
-    },
-    {
-      id: 'tokenpocket',
-      title: 'TokenPocket',
-      icon: `${ASSET_CDN}/web/wallets/tokenpocket.png`,
-      connectorId: ConnectorNames.Injected,
-      get installed() {
-        return typeof window !== 'undefined' && Boolean(window.ethereum?.isTokenPocket)
-      },
-      qrCode,
-    },
-    {
-      id: 'safepal',
-      title: 'SafePal',
-      icon: `${ASSET_CDN}/web/wallets/safepal.png`,
-      connectorId: ConnectorNames.Injected,
-      get installed() {
-        return typeof window !== 'undefined' && Boolean((window.ethereum as ExtendEthereum)?.isSafePal)
-      },
-      downloadLink:
-        'https://chrome.google.com/webstore/detail/safepal-extension-wallet/lgmpcpglpngdoalbgeoldeajfclnhafa',
-      qrCode,
-    },
-    {
-      id: 'coin98',
-      title: 'Coin98',
-      icon: `${ASSET_CDN}/web/wallets/coin98.png`,
-      connectorId: ConnectorNames.Injected,
-      get installed() {
-        return (
-          typeof window !== 'undefined' &&
-          (Boolean((window.ethereum as ExtendEthereum)?.isCoin98) || Boolean(window.coin98))
-        )
-      },
-      qrCode,
     },
   ]
 }
