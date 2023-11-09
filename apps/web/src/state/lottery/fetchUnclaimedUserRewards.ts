@@ -14,14 +14,14 @@ interface RoundDataAndUserTickets {
   finalNumber: string[]
 }
 
-const fetchCakeRewardsForTickets = async (
+const fetchRewardsForTickets = async (
   lotteryAddress: Address,
   client: PublicClient,
-  winningTickets: LotteryTicket[],
-): Promise<{ ticketsWithUnclaimedRewards: LotteryTicket[]; total: BigNumber }> => {
+  tickets: LotteryTicket[],
+): Promise<{ tickets: LotteryTicket[]; total: BigNumber }> => {
   try {
     const rewards = await Promise.all(
-      winningTickets.map((ticket) =>
+      tickets.map((ticket) =>
         client.readContract({
           abi: ssLotteryABI,
           address: lotteryAddress,
@@ -35,13 +35,10 @@ const fetchCakeRewardsForTickets = async (
       return accum.plus(new BigNumber(reward.toString()))
     }, BIG_ZERO)
 
-    const ticketsWithUnclaimedRewards = winningTickets.map((winningTicket, index) => {
-      return { ...winningTicket, cakeReward: rewards[index].toString() }
-    })
-    return { ticketsWithUnclaimedRewards, total }
+    return { tickets, total }
   } catch (error) {
     console.error(error)
-    return { ticketsWithUnclaimedRewards: null, total: null }
+    return { tickets: null, total: null }
   }
 }
 
@@ -81,17 +78,13 @@ export const getWinningTickets = async (
   })
 
   // If ticket.status is true, the ticket has already been claimed
-  const unclaimedWinningTickets = allWinningTickets.filter((ticket) => {
+  const unclaimedTickets = ticketsWithRewardBrackets.filter((ticket) => {
     return !ticket.status
   })
 
-  if (unclaimedWinningTickets.length > 0) {
-    const { ticketsWithUnclaimedRewards, total } = await fetchCakeRewardsForTickets(
-      lotteryAddress,
-      client,
-      unclaimedWinningTickets,
-    )
-    return { ticketsWithUnclaimedRewards, allWinningTickets, total, roundId }
+  if (unclaimedTickets.length > 0) {
+    const { tickets, total } = await fetchRewardsForTickets(lotteryAddress, client, unclaimedTickets)
+    return { ticketsWithUnclaimedRewards: tickets, allWinningTickets, total, roundId }
   }
 
   if (allWinningTickets.length > 0) {
