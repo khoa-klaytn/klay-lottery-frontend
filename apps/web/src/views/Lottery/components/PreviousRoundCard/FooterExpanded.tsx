@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { styled } from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { Flex, Skeleton, Heading, Box, Text, Balance } from '@sweepstakes/uikit'
@@ -38,13 +38,13 @@ const PreviousRoundCardFooter: React.FC<
     }
   }, [lotteryGraphDataFromState, lotteryId])
 
-  let prizeInBusd = new BigNumber(NaN)
+  let prizeInBusd = useMemo(() => new BigNumber(NaN), [])
   if (lotteryNodeData) {
     const { amountCollected } = lotteryNodeData
     prizeInBusd = amountCollected.times(klayPriceBusd)
   }
 
-  const getTotalUsers = (): string => {
+  const totalUsers = useMemo(() => {
     if (!lotteryGraphDataFromState && fetchedLotteryGraphData) {
       return fetchedLotteryGraphData?.totalUsers
     }
@@ -54,49 +54,38 @@ const PreviousRoundCardFooter: React.FC<
     }
 
     return null
-  }
+  }, [lotteryGraphDataFromState, fetchedLotteryGraphData])
 
-  const getPrizeBalances = () => {
-    return (
-      <>
-        {prizeInBusd.isNaN() ? (
-          <Skeleton my="7px" height={40} width={200} />
-        ) : (
-          <Heading scale="xl" lineHeight="1" color="secondary">
-            ~${formatNumber(getBalanceNumber(prizeInBusd), 0, 0)}
-          </Heading>
-        )}
-        {prizeInBusd.isNaN() ? (
-          <Skeleton my="2px" height={14} width={90} />
-        ) : (
-          <Balance
-            fontSize="14px"
-            color="textSubtle"
-            unit=" KLAY"
-            value={getBalanceNumber(lotteryNodeData?.amountCollected)}
-            decimals={0}
-          />
-        )}
-      </>
-    )
-  }
+  const prizeIsNaN = useMemo(() => prizeInBusd.isNaN(), [prizeInBusd])
 
   return (
     <NextDrawWrapper>
       <Flex mr="24px" flexDirection="column" justifyContent="space-between">
         <Box>
           <Heading>{t('Prize pot')}</Heading>
-          {getPrizeBalances()}
+          {prizeIsNaN ? (
+            <Skeleton my="7px" height={40} width={200} />
+          ) : (
+            <Heading scale="xl" lineHeight="1" color="secondary">
+              ~${formatNumber(getBalanceNumber(prizeInBusd), 0, 0)}
+            </Heading>
+          )}
+          {prizeIsNaN ? (
+            <Skeleton my="2px" height={14} width={90} />
+          ) : (
+            <Balance
+              fontSize="14px"
+              color="textSubtle"
+              unit=" KLAY"
+              value={getBalanceNumber(lotteryNodeData?.amountCollected)}
+              decimals={0}
+            />
+          )}
         </Box>
         <Box mb="24px">
           <Flex>
             <Text fontSize="14px" display="inline">
-              {t('Total players this round')}:{' '}
-              {lotteryNodeData && (lotteryGraphDataFromState || fetchedLotteryGraphData) ? (
-                getTotalUsers()
-              ) : (
-                <Skeleton height={14} width={31} />
-              )}
+              {t('Total players this round')}: {totalUsers || <Skeleton height={14} width={31} />}
             </Text>
           </Flex>
         </Box>
