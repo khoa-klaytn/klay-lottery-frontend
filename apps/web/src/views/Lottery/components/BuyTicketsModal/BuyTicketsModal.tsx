@@ -268,6 +268,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         if (e instanceof BaseError) {
           handleCustomError(e, {
             LotteryNotOpen: (_, msg) => toastError(msg),
+            LotteryOver: (_, msg) => toastError(msg),
             InsufficientFunds: (_, msg) => toastError(msg),
             TicketNumberInvalid: (_, msg) => toastError(msg),
           })
