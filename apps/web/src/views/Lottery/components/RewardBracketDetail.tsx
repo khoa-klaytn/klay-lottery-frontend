@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js'
 import { Flex, Skeleton, Text, Balance } from '@sweepstakes/uikit'
 import { useTranslation } from '@sweepstakes/localization'
 import { useKlayPrice } from 'hooks/useKlayPrice'
-import { getBalanceNumber, getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
+import { getBalanceAmount, getBalanceNumber } from '@sweepstakes/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
 import { useMemo } from 'react'
@@ -71,7 +71,7 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
             color="textSubtle"
             prefix="~$"
             value={getBalanceNumber(amount.times(klayPriceBusd))}
-            decimals={0}
+            decimals={2}
           />
         )
       )}
@@ -79,7 +79,7 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
         <>
           {hasWinners && (
             <Text fontSize="12px" color="textSubtle">
-              {getFullDisplayBalance(rewardPerUser, 18, 2)} {symbol} {t('each')}
+              {getBalanceAmount(rewardPerUser).toPrecision(3, BigNumber.ROUND_DOWN)} {symbol} {t('each')}
             </Text>
           )}
           <Text fontSize="12px" color="textSubtle">
