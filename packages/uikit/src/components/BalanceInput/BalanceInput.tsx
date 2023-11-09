@@ -7,6 +7,7 @@ import { BalanceInputProps } from "./types";
 
 const BalanceInput: React.FC<React.PropsWithChildren<BalanceInputProps>> = ({
   value,
+  min = 0,
   placeholder = "0.0",
   onUserInput,
   currencyValue,
@@ -32,7 +33,7 @@ const BalanceInput: React.FC<React.PropsWithChildren<BalanceInputProps>> = ({
             <StyledInput
               pattern={`^[0-9]*[.,]?[0-9]{0,${decimals}}$`}
               inputMode="decimal"
-              min="0"
+              min={min}
               value={value}
               onChange={handleOnChange}
               placeholder={placeholder}

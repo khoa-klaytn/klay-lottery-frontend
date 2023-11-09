@@ -4,6 +4,7 @@ import { InputProps } from "../Input";
 
 export interface BalanceInputProps extends BoxProps {
   value: string | number;
+  min?: number;
   onUserInput: (input: string) => void;
   inputAlign?: "left" | "right";
   innerRef?: React.RefObject<HTMLInputElement>;

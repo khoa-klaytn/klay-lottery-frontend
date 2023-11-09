@@ -339,6 +339,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         isWarning={account && (insufficientBalance || maxTicketPurchaseExceeded)}
         placeholder="0"
         value={ticketsToBuy}
+        min={1}
         onUserInput={handleInputChange}
         currencyValue={
           klayPriceBusd.gt(0) &&
