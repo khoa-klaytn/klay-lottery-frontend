@@ -99,7 +99,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
           rewardBracket={0}
           amount={!isLoading && rewardsPerBracket[0]}
           rewardPerUser={!isLoading && rewardPerUserPerBracket[0]}
-          numberWinners={!isLoading && countWinnersPerBracket[0]}
+          countWinners={!isLoading && countWinnersPerBracket[0]}
           isHistoricRound={isHistoricRound}
           isLoading={isLoading}
         />
@@ -110,7 +110,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
             rewardBracket={bracketIndex}
             amount={!isLoading && rewardsPerBracket[bracketIndex]}
             rewardPerUser={!isLoading && rewardPerUserPerBracket[bracketIndex]}
-            numberWinners={!isLoading && countWinnersPerBracket[bracketIndex]}
+            countWinners={!isLoading && countWinnersPerBracket[bracketIndex]}
             isHistoricRound={isHistoricRound}
             isLoading={isLoading}
           />
@@ -120,7 +120,7 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
           rewardBracket={6}
           amount={!isLoading && rewardsPerBracket[6]}
           rewardPerUser={!isLoading && rewardPerUserPerBracket[6]}
-          numberWinners={!isLoading && countWinnersPerBracket[6]}
+          countWinners={!isLoading && countWinnersPerBracket[6]}
           isHistoricRound={isHistoricRound}
           isLoading={isLoading}
         />

@@ -12,7 +12,7 @@ interface RewardBracketDetailProps {
   type: 'allwinners' | 'match' | 'matchAll' | 'burn'
   rewardBracket?: number
   rewardPerUser?: BigNumber
-  numberWinners?: string
+  countWinners?: string
   isHistoricRound?: boolean
   isLoading?: boolean
 }
@@ -22,7 +22,7 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
   type,
   rewardBracket,
   rewardPerUser,
-  numberWinners,
+  countWinners,
   isHistoricRound,
   isLoading,
 }) => {
@@ -44,6 +44,7 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
         return t('Burn')
     }
   }, [rewardBracket, t, type])
+  const hasWinners = useMemo(() => countWinners !== '0', [countWinners])
 
   return (
     <Flex flexDirection="column">
@@ -54,17 +55,17 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
           {rewardText}
         </Text>
       )}
-      <>
-        {isLoading || amount.isNaN() ? (
-          <Skeleton my="4px" mr="10px" height={20} width={110} />
-        ) : (
-          <Balance fontSize="20px" bold unit={` ${symbol}`} value={getBalanceNumber(amount)} decimals={0} />
-        )}
-        {isLoading || amount.isNaN() ? (
-          <>
-            <Skeleton mt="4px" mb="16px" height={12} width={70} />
-          </>
-        ) : (
+      {isLoading || amount.isNaN() ? (
+        <Skeleton my="4px" mr="10px" height={20} width={110} />
+      ) : (
+        hasWinners && <Balance fontSize="20px" bold unit={` ${symbol}`} value={getBalanceNumber(amount)} decimals={0} />
+      )}
+      {isLoading || amount.isNaN() ? (
+        <>
+          <Skeleton mt="4px" mb="16px" height={12} width={70} />
+        </>
+      ) : (
+        hasWinners && (
           <Balance
             fontSize="12px"
             color="textSubtle"
@@ -72,20 +73,20 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
             value={getBalanceNumber(amount.times(klayPriceBusd))}
             decimals={0}
           />
-        )}
-        {isHistoricRound && amount && (
-          <>
-            {numberWinners !== '0' && (
-              <Text fontSize="12px" color="textSubtle">
-                {getFullDisplayBalance(rewardPerUser, 18, 2)} {symbol} {t('each')}
-              </Text>
-            )}
+        )
+      )}
+      {isHistoricRound && rewardPerUser && (
+        <>
+          {hasWinners && (
             <Text fontSize="12px" color="textSubtle">
-              {numberWinners} {t('Winning Tickets')}
+              {getFullDisplayBalance(rewardPerUser, 18, 2)} {symbol} {t('each')}
             </Text>
-          </>
-        )}
-      </>
+          )}
+          <Text fontSize="12px" color="textSubtle">
+            {countWinners} {t('Winning Tickets')}
+          </Text>
+        </>
+      )}
     </Flex>
   )
 }
