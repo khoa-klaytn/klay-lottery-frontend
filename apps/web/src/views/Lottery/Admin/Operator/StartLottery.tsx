@@ -23,7 +23,7 @@ export default function StartLottery({ lotteryId, status }) {
     return `${now.getFullYear()}-${month}-${date}T${hours}:${minutes}`
   })
   const ticketPriceInUsdRef = useRef<HTMLInputElement>(null)
-  const [ticketPriceInUsd, setTicketPrice] = useState('1')
+  const [ticketPriceInUsd, setTicketPrice] = useState('0.01')
   const discountDivisorRef = useRef<HTMLInputElement>(null)
   const [discountDivisor, setDiscountDivisor] = useState('2000')
   const [reward1, setReward1] = useState('1000')
