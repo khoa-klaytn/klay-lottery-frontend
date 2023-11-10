@@ -1,12 +1,10 @@
 import memoize from 'lodash/memoize'
 import { ContextApi } from '@sweepstakes/localization'
 import { PageMeta } from './types'
-import { ASSET_CDN } from './endpoints'
 
 export const DEFAULT_META: PageMeta = {
   title: 'SweepStakes',
-  description: 'The most popular AMM on BSC by user count! Win it in the Lottery, on a platform you can trust.',
-  image: `${ASSET_CDN}/web/og/hero.jpg`,
+  description: 'Win it in the Lottery, on a platform you can trust.',
 }
 
 interface PathList {
@@ -18,21 +16,18 @@ const getPathList = (t: ContextApi['t']): PathList => {
   return {
     paths: {
       '/': { title: t('Lottery') }, // TODO: change this back to Home
-      '/lottery': { title: t('Lottery'), image: `${ASSET_CDN}/web/og/lottery.jpg` },
+      '/lottery': { title: t('Lottery') },
       '/info': {
         title: `${t('Overview')} - ${t('Info')}`,
         description: 'View statistics for SweepStakesswap exchanges.',
-        image: `${ASSET_CDN}/web/og/info.jpg`,
       },
       '/info/pairs': {
         title: `${t('Pairs')} - ${t('Info')}`,
         description: 'View statistics for SweepStakesswap exchanges.',
-        image: `${ASSET_CDN}/web/og/info.jpg`,
       },
       '/info/tokens': {
         title: `${t('Tokens')} - ${t('Info')}`,
         description: 'View statistics for SweepStakesswap exchanges.',
-        image: `${ASSET_CDN}/web/og/info.jpg`,
       },
       '/profile': { basePath: true, title: t('Profile') },
     },

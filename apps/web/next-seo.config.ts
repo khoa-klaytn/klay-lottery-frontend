@@ -1,4 +1,3 @@
-import { ASSET_CDN } from 'config/constants/endpoints'
 import { DefaultSeoProps } from 'next-seo'
 
 export const SEO: DefaultSeoProps = {
@@ -13,7 +12,6 @@ export const SEO: DefaultSeoProps = {
   },
   openGraph: {
     title: '🥞 SweepStakes - A next evolution DeFi exchange on BNB Smart Chain (BSC)',
-    description: 'The most popular AMM on BSC by user count! Win it in the Lottery, on a platform you can trust.',
-    images: [{ url: `${ASSET_CDN}/web/og/hero.jpg` }],
+    description: 'Win it in the Lottery, on a platform you can trust.',
   },
 }

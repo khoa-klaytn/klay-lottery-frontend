@@ -1,7 +1,6 @@
 import { WalletConfigV2 } from '@sweepstakes/ui-wallets'
 import { WalletFilledIcon } from '@sweepstakes/uikit'
 import { walletConnectNoQrCodeConnector } from '../utils/wagmi'
-import { ASSET_CDN } from './constants/endpoints'
 
 export enum ConnectorNames {
   MetaMask = 'metaMask',
@@ -47,7 +46,7 @@ const walletsConfig = ({
     {
       id: 'metamask',
       title: 'Metamask',
-      icon: `${ASSET_CDN}/web/wallets/metamask.png`,
+      icon: '/images/wallets/metamask.png',
       get installed() {
         return isMetamaskInstalled()
         // && metaMaskConnector.ready

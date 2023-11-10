@@ -1,14 +1,21 @@
 import { useTranslation } from '@sweepstakes/localization'
-import { Flex, Link, OpenNewIcon, Text, useMatchBreakpoints, Button, Svg, SvgProps } from '@sweepstakes/uikit'
-import { ASSET_CDN } from 'config/constants/endpoints'
+import {
+  Flex,
+  Link,
+  OpenNewIcon,
+  Text,
+  useMatchBreakpoints,
+  Button,
+  Svg,
+  SvgProps,
+  LogoWithTextIcon,
+} from '@sweepstakes/uikit'
 import Image from 'next/legacy/image'
 import { memo } from 'react'
 import { styled } from 'styled-components'
 import * as S from './Styled'
 import { baseBgMobile, baseTree, baseBg, baseMoon } from './images'
 import { flyingAnim } from './animations'
-
-const pancakeSwapLogo = `${ASSET_CDN}/web/banners/ethXsweepstakes.png`
 
 const BaseLogo = (props: SvgProps) => (
   <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 16" fill="none" {...props}>
@@ -132,12 +139,8 @@ const BaseBanner = () => {
       <S.Inner>
         <S.LeftWrapper position="relative" style={{ zIndex: 3, justifyContent: isMobile ? 'flex-start' : 'center' }}>
           <Flex alignItems="center" mb="8px" style={{ gap: isMobile ? 8 : 10 }}>
-            <Image
-              src={pancakeSwapLogo}
-              alt="pancakeSwapLogo"
-              width={isMobile ? 100 : 132}
-              height={isMobile ? 15 : 22}
-              unoptimized
+            <LogoWithTextIcon
+            // width={isMobile ? 100 : 132} height={isMobile ? 15 : 22}
             />
             <Divider />
             <BaseLogo width={60} height={16} />

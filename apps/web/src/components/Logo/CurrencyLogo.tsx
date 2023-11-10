@@ -54,9 +54,7 @@ export default function CurrencyLogo({ currency, size = '24px', style }: LogoPro
     if (currency.chainId === ChainId.BSC) {
       return <BinanceIcon width={size} style={style} />
     }
-    return (
-      <StyledLogo size={size} srcs={[`${ASSET_CDN}/web/native/${currency.chainId}.png`]} width={size} style={style} />
-    )
+    return <StyledLogo size={size} srcs={[`${ASSET_CDN}/native/${currency.chainId}.png`]} width={size} style={style} />
   }
 
   return <StyledLogo size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />

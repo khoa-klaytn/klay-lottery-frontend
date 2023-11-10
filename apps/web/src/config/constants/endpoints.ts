@@ -54,7 +54,7 @@ export const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.OPBNB]: 'https://opbnb-mainnet-graph.nodereal.io/subgraphs/name/sweepstakes/blocks',
 }
 
-export const ASSET_CDN = 'https://assets.pancakeswap.finance'
+export const ASSET_CDN = 'https://assets.pancakeswap.finance/web'
 export const CDN_CDN = 'https://cdn.sweepstakes.com'
 
 export const V3_SUBGRAPH_URLS = {
