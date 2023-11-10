@@ -1,5 +1,4 @@
 export * from './pools'
-export * from './contracts'
 export * from './supportedChains'
 
 export const BSC_BLOCK_TIME = 3
