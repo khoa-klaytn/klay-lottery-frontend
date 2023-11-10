@@ -13,11 +13,9 @@ import {
   getSidContract,
   getUnsContract,
   getV3AirdropContract,
-  getAnniversaryAchievementContract,
 } from 'utils/contractHelpers'
 
 import { WNATIVE } from '@sweepstakes/sdk'
-import { ChainId } from '@sweepstakes/chains'
 import { multicallABI } from 'config/abi/Multicall'
 
 import { wethABI } from 'config/abi/weth'
@@ -102,13 +100,4 @@ export const useUNSContract = (address, chainId, provider) => {
 export const useV3AirdropContract = () => {
   const { data: signer } = useWalletClient()
   return useMemo(() => getV3AirdropContract(signer ?? undefined), [signer])
-}
-
-export const useAnniversaryAchievementContract = ({ chainId: chainId_ }: { chainId?: ChainId } = {}) => {
-  const { chainId } = useActiveChainId()
-  const { data: signer } = useWalletClient()
-  return useMemo(
-    () => getAnniversaryAchievementContract(signer ?? undefined, chainId_ ?? chainId),
-    [signer, chainId_, chainId],
-  )
 }

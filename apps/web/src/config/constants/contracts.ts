@@ -43,8 +43,4 @@ export default {
     [ChainId.BSC]: '0xe934d2C5bE5db0295A4de3177762A9E8c74Ae4f4',
     [ChainId.BSC_TESTNET]: '0x',
   },
-  anniversaryAchievement: {
-    [ChainId.BSC]: '0x0a073aa17275ef839ee77BC6c589D9E661270480',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
 } as const satisfies Record<string, Record<number, Address>>

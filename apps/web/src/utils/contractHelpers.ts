@@ -1,10 +1,5 @@
 // Addresses
-import {
-  getCakeVaultAddress,
-  getSweepStakesProfileAddress,
-  getV3AirdropAddress,
-  getAnniversaryAchievementAddress,
-} from 'utils/addressHelpers'
+import { getCakeVaultAddress, getSweepStakesProfileAddress, getV3AirdropAddress } from 'utils/addressHelpers'
 
 import { cakeVaultV2ABI } from '@sweepstakes/pools'
 import { ChainId } from '@sweepstakes/chains'
@@ -13,7 +8,6 @@ import { SIDResolverABI } from 'config/abi/SIDResolver'
 import { ssLotteryABI } from 'config/abi/ssLottery'
 import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { v3AirdropABI } from 'config/abi/v3Airdrop'
-import { anniversaryAchievementABI } from 'config/abi/anniversaryAchievement'
 import { viemClients } from 'utils/viem'
 import { Abi, PublicClient, WalletClient, getContract as viemGetContract } from 'viem'
 import { Address } from 'wagmi'
@@ -98,12 +92,5 @@ export const getV3AirdropContract = (walletClient?: WalletClient) => {
     abi: v3AirdropABI,
     address: getV3AirdropAddress(),
     signer: walletClient,
-  })
-}
-
-export const getAnniversaryAchievementContract = (signer?: WalletClient, chainId?: number) => {
-  return getContract({
-    abi: anniversaryAchievementABI,
-    address: getAnniversaryAchievementAddress(chainId),
   })
 }

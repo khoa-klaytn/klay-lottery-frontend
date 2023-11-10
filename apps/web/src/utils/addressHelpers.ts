@@ -38,7 +38,3 @@ export const getCakeVaultAddress = (chainId?: number) => {
 export const getV3AirdropAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.v3Airdrop, chainId)
 }
-
-export const getAnniversaryAchievementAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.anniversaryAchievement, chainId)
-}

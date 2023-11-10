@@ -1,21 +1,16 @@
 import { ChainId } from '@sweepstakes/chains'
 import useAccountActiveChain from 'hooks/useAccountActiveChain'
-import AnniversaryAchievementModal from './AnniversaryAchievementModal'
 import V3AirdropModal from './V3AirdropModal'
-
-interface GlobalCheckClaimStatusProps {
-  excludeLocations: string[]
-}
 
 // change it to true if we have events to check claim status
 const enable = true
 
-const GlobalCheckClaimStatus: React.FC<React.PropsWithChildren<GlobalCheckClaimStatusProps>> = (props) => {
+const GlobalCheckClaimStatus: React.FC = () => {
   const { account, chainId } = useAccountActiveChain()
   if (!enable || chainId !== ChainId.BSC || !account) {
     return null
   }
-  return <GlobalCheckClaim key={account} {...props} />
+  return <GlobalCheckClaim key={account} />
 }
 
 /**
@@ -25,10 +20,9 @@ const GlobalCheckClaimStatus: React.FC<React.PropsWithChildren<GlobalCheckClaimS
  * TODO: Put global checks in redux or make a generic area to house global checks
  */
 
-const GlobalCheckClaim: React.FC<React.PropsWithChildren<GlobalCheckClaimStatusProps>> = ({ excludeLocations }) => {
+const GlobalCheckClaim: React.FC = () => {
   return (
     <>
-      <AnniversaryAchievementModal excludeLocations={excludeLocations} />
       <V3AirdropModal />
     </>
   )

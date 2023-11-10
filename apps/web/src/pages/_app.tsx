@@ -85,7 +85,7 @@ function MyApp(props: AppProps<{ initialReduxState: any }>) {
           {(Component as NextPageWithLayout).mp ? <MPGlobalHooks /> : <GlobalHooks />}
           <ResetCSS />
           <GlobalStyle />
-          <GlobalCheckClaimStatus excludeLocations={[]} />
+          <GlobalCheckClaimStatus />
           <PersistGate loading={null} persistor={persistor}>
             <Updaters />
             <App {...props} />
