@@ -191,7 +191,6 @@ export interface DeserializedCakeVault {
 
 export enum VaultKey {
   CakeVault = 'cakeVault',
-  CakeFlexibleSideVault = 'cakeFlexibleSideVault',
 }
 
 interface CorePoolProps {

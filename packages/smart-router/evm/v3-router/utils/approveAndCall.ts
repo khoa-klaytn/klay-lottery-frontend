@@ -1,7 +1,6 @@
 import { Hex, encodeFunctionData, Address } from 'viem'
-import invariant from 'tiny-invariant'
 import { Currency, Percent, Token } from '@sweepstakes/sdk'
-import { MintSpecificOptions, IncreaseSpecificOptions, NonfungiblePositionManager, Position } from '@sweepstakes/v3-sdk'
+import { MintSpecificOptions, IncreaseSpecificOptions, Position } from '@sweepstakes/v3-sdk'
 
 import { approveAndCallAbi } from '../../abis/IApproveAndCall'
 
@@ -59,28 +58,6 @@ export abstract class ApproveAndCall {
       abi: ApproveAndCall.ABI,
       functionName: 'approveZeroThenMaxMinusOne',
       args: [token.address],
-    })
-  }
-
-  public static encodeCallPositionManager(calldatas: Hex[]): Hex {
-    invariant(calldatas.length > 0, 'NULL_CALLDATA')
-
-    if (calldatas.length === 1) {
-      return encodeFunctionData({
-        abi: ApproveAndCall.ABI,
-        functionName: 'callPositionManager',
-        args: calldatas as [Hex],
-      })
-    }
-    const encodedMulticall = encodeFunctionData({
-      abi: NonfungiblePositionManager.ABI,
-      functionName: 'multicall',
-      args: [calldatas],
-    })
-    return encodeFunctionData({
-      abi: ApproveAndCall.ABI,
-      functionName: 'callPositionManager',
-      args: [encodedMulticall],
     })
   }
 

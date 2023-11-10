@@ -31,47 +31,12 @@ export const getSSLotteryAddress = (chainId: number) => {
 export const getSweepStakesProfileAddress = () => {
   return getAddressFromMap(addresses.pancakeProfile)
 }
-export const getPointCenterIfoAddress = () => {
-  return getAddressFromMap(addresses.pointCenterIfo)
-}
 export const getCakeVaultAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.cakeVault, chainId)
 }
 
-export const getCakeFlexibleSideVaultAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.cakeFlexibleSideVault, chainId)
-}
-
-export const getZapAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.zap, chainId)
-}
-
-export const getNonBscVaultAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.nonBscVault, chainId)
-}
-
-export const getStableSwapNativeHelperAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.stableSwapNativeHelper, chainId)
-}
-
-export const getTradingRewardAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.tradingReward, chainId)
-}
-
 export const getV3AirdropAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.v3Airdrop, chainId)
-}
-
-export const getTradingRewardTopTradesAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.tradingRewardTopTrades, chainId)
-}
-
-export const getVCakeAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.vCake, chainId)
-}
-
-export const getRevenueSharingPoolAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.revenueSharingPool, chainId)
 }
 
 export const getAnniversaryAchievementAddress = (chainId?: number) => {

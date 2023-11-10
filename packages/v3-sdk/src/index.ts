@@ -11,7 +11,6 @@ export * from './staker'
 export * from './swapRouter'
 
 // abi
-export * from './abi/NonfungiblePositionManager'
 export * from './abi/PeripheryPaymentsWithFee'
 export * from './abi/Quoter'
 export * from './abi/QuoterV2'

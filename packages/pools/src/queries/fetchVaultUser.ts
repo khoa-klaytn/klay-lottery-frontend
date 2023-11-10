@@ -2,10 +2,9 @@ import BigNumber from 'bignumber.js'
 import { ChainId } from '@sweepstakes/chains'
 import type { Address } from 'viem'
 
-import { OnChainProvider, SerializedLockedVaultUser, SerializedVaultUser } from '../types'
+import { OnChainProvider, SerializedLockedVaultUser } from '../types'
 import { cakeVaultV2ABI } from '../abis/ICakeVaultV2'
-import { getCakeFlexibleSideVaultAddress, getCakeVaultAddress } from './getAddresses'
-import { cakeFlexibleSideVaultV2ABI } from '../abis/ICakeFlexibleSideVaultV2'
+import { getCakeVaultAddress } from './getAddresses'
 
 interface Params {
   account: Address
@@ -71,36 +70,6 @@ export const fetchVaultUser = async ({ account, chainId, provider }: Params): Pr
       lockedAmount: '',
       currentPerformanceFee: '',
       currentOverdueFee: '',
-    }
-  }
-}
-
-export const fetchFlexibleSideVaultUser = async ({
-  account,
-  chainId,
-  provider,
-}: Params): Promise<SerializedVaultUser> => {
-  try {
-    const userContractResponse = await await provider({ chainId }).readContract({
-      abi: cakeFlexibleSideVaultV2ABI,
-      address: getCakeFlexibleSideVaultAddress(chainId),
-      functionName: 'userInfo',
-      args: [account],
-    })
-    return {
-      isLoading: false,
-      userShares: new BigNumber(userContractResponse[0].toString()).toJSON(),
-      lastDepositedTime: userContractResponse[1].toString(),
-      lastUserActionTime: userContractResponse[3].toString(),
-      cakeAtLastUserAction: new BigNumber(userContractResponse[2].toString()).toJSON(),
-    }
-  } catch (error) {
-    return {
-      isLoading: true,
-      userShares: '',
-      lastDepositedTime: '',
-      lastUserActionTime: '',
-      cakeAtLastUserAction: '',
     }
   }
 }

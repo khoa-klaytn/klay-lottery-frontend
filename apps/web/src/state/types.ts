@@ -28,7 +28,6 @@ export type SerializedBigNumber = string
 
 export enum VaultKey {
   CakeVault = 'cakeVault',
-  CakeFlexibleSideVault = 'cakeFlexibleSideVault',
 }
 
 export type SerializedPool = SerializedPoolWithInfo & {

@@ -10,7 +10,6 @@ export * from './router'
 export * from './utils'
 
 export * from './ether'
-export * from './fetcher'
 
 export * from '@sweepstakes/swap-sdk-core'
 
