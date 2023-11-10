@@ -33,6 +33,7 @@ export default function StartLottery({ lotteryId, status }) {
   const [reward5, setReward5] = useState('1625')
   const [reward6, setReward6] = useState('2625')
 
+  const [eMsg, setEMsg] = useState('')
   const [wnbEMsg, setWnbEMsg] = useState('') // [winners & burn] error message
   const [winnersPortion, setWinnersPortion] = useState('8000')
   const [rewardsEMsg, setRewardsEMsg] = useState('') // [rewards] error message
@@ -59,6 +60,7 @@ export default function StartLottery({ lotteryId, status }) {
         console.error(e)
         if (e instanceof BaseError)
           handleCustomError(e, {
+            LotteryNotClaimable: (_, msg) => setEMsg(msg),
             EndTimePast: (_, msg) => endTimeRef.current.setCustomValidity(msg),
             TicketPriceLow: ([min]) =>
               setRefCustomValidity(ticketPriceInUsdRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
@@ -242,6 +244,7 @@ export default function StartLottery({ lotteryId, status }) {
       <Button type="submit" disabled={disabled}>
         Start Lottery
       </Button>
+      {eMsg && <EMsg>{eMsg}</EMsg>}
     </form>
   )
 }
