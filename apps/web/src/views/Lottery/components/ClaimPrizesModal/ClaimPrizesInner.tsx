@@ -32,19 +32,16 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
   const { toastSuccess } = useToast()
   const { fetchWithCatchTxError, loading: pendingTx } = useCatchTxError()
   const [activeClaimIndex, setActiveClaimIndex] = useState(0)
-  const [pendingBatchClaims, setPendingBatchClaims] = useState(
-    Math.ceil(
-      roundsToClaim[activeClaimIndex].ticketsWithUnclaimedRewards.length / maxNumberTicketsPerBuyOrClaim.toNumber(),
-    ),
-  )
-  const lotteryContract = useSSLotteryContract()
-  const { callWithGasPrice } = useCallWithGasPrice()
-  const klayPriceBusd = useKlayPrice()
-
   const { total, ticketsWithUnclaimedRewards, roundId } = useMemo(
     () => roundsToClaim[activeClaimIndex],
     [roundsToClaim, activeClaimIndex],
   )
+  const [pendingBatchClaims, setPendingBatchClaims] = useState(
+    Math.ceil(ticketsWithUnclaimedRewards.length / maxNumberTicketsPerBuyOrClaim.toNumber()),
+  )
+  const lotteryContract = useSSLotteryContract()
+  const { callWithGasPrice } = useCallWithGasPrice()
+  const klayPriceBusd = useKlayPrice()
 
   const dollarRewardAsBalance = useMemo(
     () => getBalanceAmount(total.times(klayPriceBusd)).toNumber(),
@@ -67,39 +64,43 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     return requests
   }, [ticketsWithUnclaimedRewards, maxNumberTicketsPerBuyOrClaim])
 
-  const handleProgressToNextClaim = useCallback(() => {
+  const dispatchUserLotteries = useCallback(() => {
+    return dispatch(fetchUserLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
+  }, [dispatch, publicClient, lotteryAddress, account, currentLotteryId])
+
+  const handleProgressToNextClaim = useCallback(async () => {
     if (roundsToClaim.length > activeClaimIndex + 1) {
       // If there are still rounds to claim, move onto the next claim
       setActiveClaimIndex(activeClaimIndex + 1)
-      dispatch(fetchUserLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
+      await dispatchUserLotteries()
     } else {
       onSuccess()
     }
-  }, [activeClaimIndex, currentLotteryId, dispatch, onSuccess, publicClient, lotteryAddress, roundsToClaim, account])
+  }, [roundsToClaim, activeClaimIndex, onSuccess, dispatchUserLotteries])
 
   const handleBatchClaim = useCallback(async () => {
     const transactionsToFire = ticketBatches.length
-    const receipts = []
     // eslint-disable-next-line no-restricted-syntax
-    for (const ticketBatch of ticketBatches) {
+    let prevBatch = pendingBatchClaims
+    while (prevBatch) {
+      const batch = prevBatch - 1
+      const ticketBatch = ticketBatches[batch]
       /* eslint-disable no-await-in-loop */
       const receipt = await fetchWithCatchTxError(() => {
         return callWithGasPrice(lotteryContract, 'claimTickets', [roundId, ticketBatch])
       })
+      // One transaction within batch has succeeded
       if (receipt?.status) {
-        // One transaction within batch has succeeded
-        receipts.push(receipt)
-        setPendingBatchClaims(transactionsToFire - receipts.length)
-
+        prevBatch = batch
         // More transactions are to be done within the batch. Issue toast to give user feedback.
-        if (receipts.length !== transactionsToFire) {
+        if (prevBatch) {
           toastSuccess(
             t('Prizes Collected!'),
             <ToastDescriptionWithTx txHash={receipt.transactionHash}>
               {t(
                 'Claim %claimNum% of %claimTotal% for round %roundId% was successful. Please confirm the next transaction',
                 {
-                  claimNum: receipts.length,
+                  claimNum: transactionsToFire - prevBatch,
                   claimTotal: transactionsToFire,
                   roundId,
                 },
@@ -111,18 +112,20 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
         break
       }
     }
+    setPendingBatchClaims(prevBatch)
 
     // Batch is finished
-    if (receipts.length === transactionsToFire) {
+    if (prevBatch === 0) {
       toastSuccess(
         t('Prizes Collected!'),
         t('Your %symbol% prizes for round %roundId% have been sent to your wallet', { symbol, roundId }),
       )
-      handleProgressToNextClaim()
+      await handleProgressToNextClaim()
     }
   }, [
     callWithGasPrice,
     ticketBatches,
+    pendingBatchClaims,
     roundId,
     fetchWithCatchTxError,
     handleProgressToNextClaim,
