@@ -1,6 +1,5 @@
 import { ChainId } from '@sweepstakes/chains'
 import addresses from 'config/constants/contracts'
-import { VaultKey } from 'state/types'
 import type { Address } from 'viem'
 
 export interface Addresses {
@@ -23,9 +22,6 @@ export const getAccessControlAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.accessControl, chainId)
 }
 
-export const getMasterChefV2Address = (chainId?: number) => {
-  return getAddressFromMap(addresses.masterChef, chainId)
-}
 export const getMulticallAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.multiCall, chainId)
 }
@@ -35,19 +31,9 @@ export const getSSLotteryAddress = (chainId: number) => {
 export const getSweepStakesProfileAddress = () => {
   return getAddressFromMap(addresses.pancakeProfile)
 }
-export const getSweepStakesBunniesAddress = () => {
-  return getAddressFromMap(addresses.pancakeBunnies)
-}
 export const getPointCenterIfoAddress = () => {
   return getAddressFromMap(addresses.pointCenterIfo)
 }
-export const getVaultPoolAddress = (vaultKey: VaultKey) => {
-  if (!vaultKey) {
-    return null
-  }
-  return getAddressFromMap(addresses[vaultKey])
-}
-
 export const getCakeVaultAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.cakeVault, chainId)
 }

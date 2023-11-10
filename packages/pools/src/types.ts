@@ -190,10 +190,8 @@ export interface DeserializedCakeVault {
 }
 
 export enum VaultKey {
-  CakeVaultV1 = 'cakeVaultV1',
   CakeVault = 'cakeVault',
   CakeFlexibleSideVault = 'cakeFlexibleSideVault',
-  IfoPool = 'ifoPool',
 }
 
 interface CorePoolProps {

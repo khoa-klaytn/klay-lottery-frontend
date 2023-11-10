@@ -1,24 +1,10 @@
 import { ChainId } from '@sweepstakes/chains'
-import { DEPLOYER_ADDRESSES } from '@sweepstakes/v3-sdk'
-import { V3_QUOTER_ADDRESSES } from '@sweepstakes/smart-router/evm'
 import type { Address } from 'viem'
 
 export default {
   accessControl: {
     [ChainId.KLAYTN_TESTNET]: '0x0650786d6458342d308Bc8cca668B487bcFf0881',
     [ChainId.KLAYTN]: '0x',
-  },
-  masterChef: {
-    [ChainId.BSC_TESTNET]: '0xB4A466911556e39210a6bB2FaECBB59E4eB7E43d',
-    [ChainId.BSC]: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
-  },
-  masterChefV1: {
-    [ChainId.BSC_TESTNET]: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
-    [ChainId.BSC]: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
-  },
-  sousChef: {
-    [ChainId.BSC_TESTNET]: '0xD3af5Fe61DBaF8f73149bfcFa9FB653ff096029A',
-    [ChainId.BSC]: '0x6Ab8463a4185b80905E05A9ff80A2d6b714B9e95',
   },
   ssLottery: {
     [ChainId.KLAYTN_TESTNET]: '0xa90310f6842964a4831617222aC68A3d7C91f36C',
@@ -43,14 +29,6 @@ export default {
   pancakeProfile: {
     [ChainId.BSC]: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
     [ChainId.BSC_TESTNET]: '0x4B683C7E13B6d5D7fd1FeA9530F451954c1A7c8A',
-  },
-  pancakeBunnies: {
-    [ChainId.BSC]: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
-    [ChainId.BSC_TESTNET]: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
-  },
-  claimRefund: {
-    [ChainId.BSC]: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',
-    [ChainId.BSC_TESTNET]: '0x',
   },
   pointCenterIfo: {
     [ChainId.BSC]: '0x3C6919b132462C1FEc572c6300E83191f4F0012a',
@@ -80,18 +58,9 @@ export default {
     [ChainId.BSC]: '0x52E5D1e24A4308ef1A221C949cb2F7cbbAFEE090',
     [ChainId.BSC_TESTNET]: '0x6e4B1D7C65E86f1723720a5fE8993f0908108b64',
   },
-  iCake: {
-    [ChainId.BSC]: '0x3C458828D1622F5f4d526eb0d24Da8C4Eb8F07b1',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
   nonBscVault: {
     [ChainId.ETHEREUM]: '0x2e71B2688019ebdFDdE5A45e6921aaebb15b25fb',
     [ChainId.GOERLI]: '0xE6c904424417D03451fADd6E3f5b6c26BcC43841',
-  },
-  mmLinkedPool: {
-    [ChainId.ETHEREUM]: '0x9Ca2A439810524250E543BA8fB6E88578aF242BC',
-    [ChainId.GOERLI]: '0x7bb894Ca487568dD55054193c3238d7B1f46BB92',
-    [ChainId.BSC]: '0xfEACb05b373f1A08E68235bA7FC92636b92ced01',
   },
   tradingReward: {
     [ChainId.ETHEREUM]: '0x',
@@ -117,8 +86,6 @@ export default {
     [ChainId.BASE_TESTNET]: '0x0F81fD8DaC20A21029B496D8F8E08385201B8ca0',
     [ChainId.SCROLL_SEPOLIA]: '0x0F81fD8DaC20A21029B496D8F8E08385201B8ca0',
   },
-  v3PoolDeployer: DEPLOYER_ADDRESSES,
-  quoter: V3_QUOTER_ADDRESSES,
   v3Airdrop: {
     [ChainId.ETHEREUM]: '0x',
     [ChainId.BSC]: '0xe934d2C5bE5db0295A4de3177762A9E8c74Ae4f4',
@@ -141,11 +108,6 @@ export default {
   },
   anniversaryAchievement: {
     [ChainId.BSC]: '0x0a073aa17275ef839ee77BC6c589D9E661270480',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
-  fixedStaking: {
-    [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0xC0E92c9B437734a0c0e0466F76cDf71c5478b0AB',
     [ChainId.BSC_TESTNET]: '0x',
   },
 } as const satisfies Record<string, Record<number, Address>>
