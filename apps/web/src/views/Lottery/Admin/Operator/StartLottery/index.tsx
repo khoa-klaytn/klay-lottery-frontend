@@ -6,8 +6,9 @@ import { FormEvent, useCallback, useMemo, useRef, useState } from 'react'
 import { HasSetCustomValidity, setRefCustomValidity } from 'utils/customValidity'
 import { handleCustomError } from 'utils/viem'
 import { BaseError, formatEther } from 'viem'
-import { EMsg } from '../EMsg'
+import { EMsg } from '../../EMsg'
 import EndTime from './EndTime'
+import RewardsBreakdown, { type RewardsBreakdownRef } from './RewardsBreakdown'
 
 export default function StartLottery({ lotteryId, status }) {
   const disabled = useMemo(() => status !== LotteryStatus.CLAIMABLE && lotteryId !== '0', [status, lotteryId])
@@ -26,17 +27,12 @@ export default function StartLottery({ lotteryId, status }) {
   const [ticketPriceInUsd, setTicketPrice] = useState('0.01')
   const discountDivisorRef = useRef<HTMLInputElement>(null)
   const [discountDivisor, setDiscountDivisor] = useState('2000')
-  const [reward1, setReward1] = useState('1000')
-  const [reward2, setReward2] = useState('1125')
-  const [reward3, setReward3] = useState('1250')
-  const [reward4, setReward4] = useState('1375')
-  const [reward5, setReward5] = useState('1625')
-  const [reward6, setReward6] = useState('2625')
+  const rewardsBreakdownRef = useRef<RewardsBreakdownRef>(null)
+  const [rewardsBreakdown, setRewardsBreakdown] = useState(['1000', '1125', '1250', '1375', '1625', '2625'])
 
   const [eMsg, setEMsg] = useState('')
   const [wnbEMsg, setWnbEMsg] = useState('') // [winners & burn] error message
   const [winnersPortion, setWinnersPortion] = useState('8000')
-  const [rewardsEMsg, setRewardsEMsg] = useState('') // [rewards] error message
   const [burnPortion, setBurnPortion] = useState('1000')
 
   const startLottery = useCallback(
@@ -53,7 +49,7 @@ export default function StartLottery({ lotteryId, status }) {
           BigInt(discountDivisor),
           BigInt(winnersPortion),
           BigInt(burnPortion),
-          [BigInt(reward1), BigInt(reward2), BigInt(reward3), BigInt(reward4), BigInt(reward5), BigInt(reward6)],
+          rewardsBreakdown.map(BigInt),
         ])
         console.log(res)
       } catch (e) {
@@ -65,15 +61,15 @@ export default function StartLottery({ lotteryId, status }) {
             TicketPriceLow: ([min]) =>
               setRefCustomValidity(ticketPriceInUsdRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
             DiscountDivisorLow: (_, msg) => setRefCustomValidity(discountDivisorRef, msg),
-            PortionsInvalidLen: (_, msg) => setRewardsEMsg(msg),
-            PortionDescending: (_, msg) => setRewardsEMsg(msg),
+            PortionsInvalidLen: (_, msg) => rewardsBreakdownRef.current.setEMsg(msg),
+            PortionDescending: (_, msg) => rewardsBreakdownRef.current.setEMsg(msg),
             PortionsExceedMax: ([name], msg) => {
               switch (name) {
                 case 'winners & burn':
                   setWnbEMsg(msg)
                   break
                 case 'rewards':
-                  setRewardsEMsg(msg)
+                  rewardsBreakdownRef.current.setEMsg(msg)
                   break
                 default:
               }
@@ -87,12 +83,7 @@ export default function StartLottery({ lotteryId, status }) {
       endTime,
       ticketPriceInUsd,
       discountDivisor,
-      reward1,
-      reward2,
-      reward3,
-      reward4,
-      reward5,
-      reward6,
+      rewardsBreakdown,
       winnersPortion,
       burnPortion,
     ],
@@ -130,8 +121,8 @@ export default function StartLottery({ lotteryId, status }) {
         />
       </label>
       <fieldset>
-        {wnbEMsg && <EMsg>{wnbEMsg}</EMsg>}
         <header>Winners & Burn Portions</header>
+        {wnbEMsg && <EMsg>{wnbEMsg}</EMsg>}
         <label>
           winnersPortion
           <Input
@@ -159,88 +150,7 @@ export default function StartLottery({ lotteryId, status }) {
           />
         </label>
       </fieldset>
-      <fieldset>
-        {rewardsEMsg && <EMsg>{rewardsEMsg}</EMsg>}
-        <header>Reward Portions</header>
-        <label>
-          1
-          <Input
-            type="number"
-            name="reward1"
-            id="reward1"
-            value={reward1}
-            onInput={(ev) => {
-              setRewardsEMsg('')
-              setReward1(ev.currentTarget.value)
-            }}
-          />
-        </label>
-        <label>
-          2
-          <Input
-            type="number"
-            name="reward2"
-            id="reward2"
-            value={reward2}
-            onInput={(ev) => {
-              setRewardsEMsg('')
-              setReward2(ev.currentTarget.value)
-            }}
-          />
-        </label>
-        <label>
-          3
-          <Input
-            type="number"
-            name="reward3"
-            id="reward3"
-            value={reward3}
-            onInput={(ev) => {
-              setRewardsEMsg('')
-              setReward3(ev.currentTarget.value)
-            }}
-          />
-        </label>
-        <label>
-          4
-          <Input
-            type="number"
-            name="reward4"
-            id="reward4"
-            value={reward4}
-            onInput={(ev) => {
-              setRewardsEMsg('')
-              setReward4(ev.currentTarget.value)
-            }}
-          />
-        </label>
-        <label>
-          5
-          <Input
-            type="number"
-            name="reward5"
-            id="reward5"
-            value={reward5}
-            onInput={(ev) => {
-              setRewardsEMsg('')
-              setReward5(ev.currentTarget.value)
-            }}
-          />
-        </label>
-        <label>
-          6
-          <Input
-            type="number"
-            name="reward6"
-            id="reward6"
-            value={reward6}
-            onInput={(ev) => {
-              setRewardsEMsg('')
-              setReward6(ev.currentTarget.value)
-            }}
-          />
-        </label>
-      </fieldset>
+      <RewardsBreakdown ref={rewardsBreakdownRef} value={rewardsBreakdown} setRewardsBreakdown={setRewardsBreakdown} />
       <Button type="submit" disabled={disabled}>
         Start Lottery
       </Button>
