@@ -3,7 +3,12 @@ export const ssLotteryABI = [
     inputs: [
       {
         internalType: 'address',
-        name: '_accessControlAddress',
+        name: '_roleControlAddress',
+        type: 'address',
+      },
+      {
+        internalType: 'address',
+        name: '_contractControlAddress',
         type: 'address',
       },
       {
@@ -53,6 +58,28 @@ export const ssLotteryABI = [
     type: 'error',
   },
   {
+    inputs: [
+      {
+        internalType: 'address',
+        name: 'key',
+        type: 'address',
+      },
+    ],
+    name: 'KeyAlreadyExists',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: 'key',
+        type: 'address',
+      },
+    ],
+    name: 'KeyNotFound',
+    type: 'error',
+  },
+  {
     inputs: [],
     name: 'LotteryNotClaimable',
     type: 'error',
@@ -79,7 +106,33 @@ export const ssLotteryABI = [
   },
   {
     inputs: [],
-    name: 'NotAccessControl',
+    name: 'NotContractControl',
+    type: 'error',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'enum RoleName',
+        name: 'roleName',
+        type: 'uint8',
+      },
+      {
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+    ],
+    name: 'NotRole',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'NotRoleControl',
+    type: 'error',
+  },
+  {
+    inputs: [],
+    name: 'OwnerMismatch',
     type: 'error',
   },
   {
@@ -101,9 +154,9 @@ export const ssLotteryABI = [
   {
     inputs: [
       {
-        internalType: 'string',
+        internalType: 'bytes32',
         name: 'name',
-        type: 'string',
+        type: 'bytes32',
       },
     ],
     name: 'PortionsExceedMax',
@@ -589,6 +642,30 @@ export const ssLotteryABI = [
   {
     inputs: [
       {
+        internalType: 'enum RoleName',
+        name: 'roleName',
+        type: 'uint8',
+      },
+      {
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+    ],
+    name: 'hasRole',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
         internalType: 'uint256',
         name: '_lotteryId',
         type: 'uint256',
@@ -613,17 +690,10 @@ export const ssLotteryABI = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'onContractAddressChange',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
     inputs: [
       {
         internalType: 'enum ContractName',
-        name: 'contractName',
+        name: '_contractName',
         type: 'uint8',
       },
       {
@@ -633,6 +703,42 @@ export const ssLotteryABI = [
       },
     ],
     name: 'onContractAddressChange',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'enum RoleName',
+        name: 'roleName',
+        type: 'uint8',
+      },
+      {
+        internalType: 'address',
+        name: 'member',
+        type: 'address',
+      },
+    ],
+    name: 'onMemberAdd',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'enum RoleName',
+        name: 'roleName',
+        type: 'uint8',
+      },
+      {
+        internalType: 'address',
+        name: 'member',
+        type: 'address',
+      },
+    ],
+    name: 'onMemberRemove',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -699,11 +805,11 @@ export const ssLotteryABI = [
     inputs: [
       {
         internalType: 'address',
-        name: '_accessControlAddress',
+        name: '_contractControlAddress',
         type: 'address',
       },
     ],
-    name: 'setAccessControl',
+    name: 'setContractControl',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -740,6 +846,19 @@ export const ssLotteryABI = [
       },
     ],
     name: 'setMaxNumberTicketsPerBuy',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '_roleControlAddress',
+        type: 'address',
+      },
+    ],
+    name: 'setRoleControl',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',

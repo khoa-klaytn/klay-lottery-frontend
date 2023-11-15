@@ -2,12 +2,8 @@ import { ChainId } from '@sweepstakes/chains'
 import type { Address } from 'viem'
 
 export default {
-  accessControl: {
-    [ChainId.KLAYTN_TESTNET]: '0x0650786d6458342d308Bc8cca668B487bcFf0881',
-    [ChainId.KLAYTN]: '0x',
-  },
   ssLottery: {
-    [ChainId.KLAYTN_TESTNET]: '0xa90310f6842964a4831617222aC68A3d7C91f36C',
+    [ChainId.KLAYTN_TESTNET]: '0x0cE4bfbA05a56D3df4B1603f311156D6f57fea80',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {

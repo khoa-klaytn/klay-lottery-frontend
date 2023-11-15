@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { Button, useToast } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
-import { accessControlABI } from 'config/abi/accessControl'
-import useAccessControlAddress from 'hooks/useAccessControl'
+import { ssLotteryABI } from 'config/abi/ssLottery'
 import Modal from './Modal'
+import useLotteryAddress from '../hooks/useLotteryAddress'
 
 const ShowAdminBtn = styled(Button)`
   position: fixed;
@@ -20,11 +20,11 @@ function Enum<T extends ReadonlyArray<string>>(...arr: T): { [K in T[number]]: n
     return acc
   }, Object.create(null))
 }
-const RoleName = Enum('Operator', 'Injector', 'Querier')
+const RoleName = Enum('Owner', 'Operator', 'Injector', 'Querier')
 
 export default function Admin() {
   const publicClient = usePublicClient()
-  const accessControlAddress = useAccessControlAddress()
+  const ssLotteryAddress = useLotteryAddress()
   const { address: account } = useAccount()
   const [isOperator, setIsOperator] = useState(false)
   const [isOwner, setIsOwner] = useState(false)
@@ -36,19 +36,11 @@ export default function Admin() {
   useEffect(() => {
     if (account && publicClient) {
       ;(async () => {
-        const isOwner_ = await publicClient.readContract({
-          abi: accessControlABI,
-          address: accessControlAddress,
-          functionName: 'isOwnerMember',
-          args: [account],
-        })
-        setIsOwner(isOwner_)
-
         const hasRole = async (roleName: number): Promise<boolean | null> =>
           publicClient
             .readContract({
-              abi: accessControlABI,
-              address: accessControlAddress,
+              abi: ssLotteryABI,
+              address: ssLotteryAddress,
               functionName: 'hasRole',
               args: [roleName, account],
             })
@@ -56,15 +48,17 @@ export default function Admin() {
               throw Error(`Failed to read ${roleName} from contract`)
             })
 
+        const isOwner_ = await hasRole(RoleName.Owner)
+        setIsOwner(isOwner_)
         const isOperator_ = await hasRole(RoleName.Operator)
         setIsOperator(isOperator_)
         const isInjector_ = await hasRole(RoleName.Injector)
-        setIsInjector(isOwner_ || isInjector_)
+        setIsInjector(isInjector_)
       })().catch((e) => {
         console.error(e)
       })
     }
-  }, [publicClient, account, toastError, accessControlAddress])
+  }, [publicClient, account, toastError, ssLotteryAddress])
 
   return isAdmin ? (
     <>
