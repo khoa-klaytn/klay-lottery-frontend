@@ -51,7 +51,7 @@ function RewardsBreakdown(
       .domain(data.map((d) => d.name))
       .range(d3.quantize((t) => d3.interpolateSpectral(t * 0.8 + 0.1), data.length).reverse())
 
-    const pieData = pie(data)
+    const pieData = pie(data) as (d3.PieArcDatum<Data> & Record<'innerRadius' | 'outerRadius', number>)[]
 
     const _g1Children = []
     const _g2Children = []
