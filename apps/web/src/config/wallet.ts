@@ -1,10 +1,8 @@
 import { WalletConfigV2 } from '@sweepstakes/ui-wallets'
-import { WalletFilledIcon } from '@sweepstakes/uikit'
 import { walletConnectNoQrCodeConnector } from '../utils/wagmi'
 
 export enum ConnectorNames {
   MetaMask = 'metaMask',
-  Injected = 'injected',
 }
 
 const createQrCode = (chainId: number, connect) => async () => {
@@ -60,20 +58,8 @@ const walletsConfig = ({
 }
 
 export const createWallets = (chainId: number, connect: any) => {
-  const hasInjected = typeof window !== 'undefined' && !window.ethereum
   const config = walletsConfig({ chainId, connect })
-  return hasInjected && config.some((c) => c.installed && c.connectorId === ConnectorNames.Injected)
-    ? config // add injected icon if none of injected type wallets installed
-    : [
-        ...config,
-        {
-          id: 'injected',
-          title: 'Injected',
-          icon: WalletFilledIcon,
-          connectorId: ConnectorNames.Injected,
-          installed: typeof window !== 'undefined' && Boolean(window.ethereum),
-        },
-      ]
+  return config
 }
 
 const docLangCodeMapping: Record<string, string> = {
