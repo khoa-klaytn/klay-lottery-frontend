@@ -8,7 +8,7 @@ import { SHORT_SYMBOL } from 'config/chains'
 import { useMemo } from 'react'
 
 interface RewardBracketDetailProps {
-  amount: BigNumber
+  amount: BigNumber | undefined
   type: 'allwinners' | 'match' | 'matchAll' | 'burn'
   rewardBracket?: number
   rewardPerUser?: BigNumber
@@ -55,12 +55,12 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
           {rewardText}
         </Text>
       )}
-      {isLoading || amount.isNaN() ? (
+      {isLoading || amount?.isNaN() ? (
         <Skeleton my="4px" mr="10px" height={20} width={110} />
       ) : (
         hasWinners && <Balance fontSize="20px" bold unit={` ${symbol}`} value={getBalanceNumber(amount)} decimals={0} />
       )}
-      {isLoading || amount.isNaN() ? (
+      {isLoading || amount?.isNaN() ? (
         <>
           <Skeleton mt="4px" mb="16px" height={12} width={70} />
         </>
@@ -70,7 +70,7 @@ const RewardBracketDetail: React.FC<React.PropsWithChildren<RewardBracketDetailP
             fontSize="12px"
             color="textSubtle"
             prefix="~$"
-            value={getBalanceNumber(amount.times(klayPriceBusd))}
+            value={getBalanceNumber(amount?.times(klayPriceBusd))}
             decimals={2}
           />
         )
