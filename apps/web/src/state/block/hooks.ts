@@ -2,11 +2,9 @@ import { FAST_INTERVAL, SLOW_INTERVAL } from 'config/constants'
 // eslint-disable-next-line camelcase
 import useSWR, { useSWRConfig, unstable_serialize } from 'swr'
 import useSWRImmutable from 'swr/immutable'
-import { useBlockNumber, usePublicClient } from 'wagmi'
+import { useBlockNumber } from 'wagmi'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { viemClients } from 'utils/viem'
-
-const REFRESH_BLOCK_INTERVAL = 6000
 
 export const usePollBlockNumber = () => {
   const { cache, mutate } = useSWRConfig()
@@ -71,26 +69,6 @@ export const useCurrentBlock = (): number => {
   const { chainId } = useActiveChainId()
   const { data: currentBlock = 0 } = useSWRImmutable(['blockNumber', chainId])
   return Number(currentBlock)
-}
-
-export const useChainCurrentBlock = (chainId: number): number => {
-  const { chainId: activeChainId } = useActiveChainId()
-  const provider = usePublicClient({ chainId })
-  const { data: currentBlock = 0 } = useSWR(
-    chainId ? (activeChainId === chainId ? ['blockNumber', chainId] : ['chainBlockNumber', chainId]) : null,
-    activeChainId !== chainId
-      ? async () => {
-          const blockNumber = await provider.getBlockNumber()
-          return Number(blockNumber)
-        }
-      : undefined,
-    activeChainId !== chainId
-      ? {
-          refreshInterval: REFRESH_BLOCK_INTERVAL,
-        }
-      : undefined,
-  )
-  return currentBlock
 }
 
 export const useInitialBlock = (): number => {

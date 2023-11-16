@@ -12,27 +12,21 @@ import {
   useTooltip,
   TooltipText,
   InfoFilledIcon,
-  ScanLink,
 } from '@sweepstakes/uikit'
-import { WNATIVE } from '@sweepstakes/sdk'
-import { ChainId } from '@sweepstakes/chains'
-import { FetchStatus } from 'config/constants/types'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import { useTranslation } from '@sweepstakes/localization'
 import useAuth from 'hooks/useAuth'
 import useNativeCurrency from 'hooks/useNativeCurrency'
-import useTokenBalance, { useBSCCakeBalance } from 'hooks/useTokenBalance'
 import { ChainLogo } from 'components/Logo/ChainLogo'
 
 import { getBlockExploreLink, getBlockExploreName } from 'utils'
-import { getFullDisplayBalance, formatBigInt } from '@sweepstakes/utils/formatBalance'
+import { formatBigInt } from '@sweepstakes/utils/formatBalance'
 import { useBalance } from 'wagmi'
 import { useDomainNameForAddress } from 'hooks/useDomain'
 import { isMobile } from 'react-device-detect'
 import { useState } from 'react'
 import InternalLink from 'components/Links'
 import { SUPPORT_BUY_CRYPTO } from 'config/constants/supportChains'
-import CakeBenefitsCard from './CakeBenefitsCard'
 
 const COLORS = {
   ETH: '#627EEA',
@@ -49,15 +43,8 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
   const { t } = useTranslation()
   const { account, chainId, chain } = useActiveWeb3React()
   const { domainName } = useDomainNameForAddress(account)
-  const isBSC = chainId === ChainId.BSC
-  const bnbBalance = useBalance({ address: account, chainId: ChainId.BSC })
-  const nativeBalance = useBalance({ address: account, enabled: !isBSC })
+  const nativeBalance = useBalance({ address: account })
   const native = useNativeCurrency()
-  const wNativeToken = !isBSC ? WNATIVE[chainId] : null
-  const wBNBToken = WNATIVE[ChainId.BSC]
-  const { balance: wNativeBalance, fetchStatus: wNativeFetchStatus } = useTokenBalance(wNativeToken?.address)
-  const { balance: wBNBBalance, fetchStatus: wBNBFetchStatus } = useTokenBalance(wBNBToken?.address, true)
-  const { balance: cakeBalance, fetchStatus: cakeFetchStatus } = useBSCCakeBalance()
   const [mobileTooltipShow, setMobileTooltipShow] = useState(false)
   const { logout } = useAuth()
 
@@ -92,7 +79,6 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
     },
   )
 
-  const showBscEntryPoint = Number(bnbBalance?.data?.value) === 0 && SUPPORT_BUY_CRYPTO.includes(chainId)
   const showNativeEntryPoint = Number(nativeBalance?.data?.value) === 0 && SUPPORT_BUY_CRYPTO.includes(chainId)
 
   return (
@@ -122,7 +108,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
           </Box>
         </Message>
       )}
-      {!isBSC && chain && (
+      {chain && (
         <Box mb="12px">
           <Flex justifyContent="space-between" alignItems="center" mb="8px">
             <Flex bg={COLORS.ETH} borderRadius="16px" pl="4px" pr="8px" py="2px">
@@ -163,83 +149,8 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowNativeBalance, onDismiss 
               </Flex>
             )}
           </Flex>
-          {wNativeBalance && wNativeBalance.gt(0) && (
-            <Flex alignItems="center" justifyContent="space-between">
-              <Text color="textSubtle">
-                {wNativeToken?.symbol} {t('Balance')}
-              </Text>
-              {wNativeFetchStatus !== FetchStatus.Fetched ? (
-                <Skeleton height="22px" width="60px" />
-              ) : (
-                wNativeToken?.decimals && (
-                  <Text>{getFullDisplayBalance(wNativeBalance, wNativeToken?.decimals, 6)}</Text>
-                )
-              )}
-            </Flex>
-          )}
         </Box>
       )}
-
-      <Box mb="24px">
-        <Flex justifyContent="space-between" alignItems="center" mb="8px">
-          <Flex bg={COLORS.BNB} borderRadius="16px" pl="4px" pr="8px" py="2px">
-            <ChainLogo chainId={ChainId.BSC} />
-            <Text color="white" ml="4px">
-              BNB Smart Chain
-            </Text>
-          </Flex>
-          <ScanLink useBscCoinFallback href={getBlockExploreLink(account, 'address', ChainId.BSC)}>
-            {getBlockExploreName(ChainId.BSC)}
-          </ScanLink>
-        </Flex>
-        {chainId === 56 ? (
-          <Flex alignItems="center" justifyContent="space-between">
-            <Text color="textSubtle">BNB {t('Balance')}</Text>
-            {!bnbBalance.isFetched ? (
-              <Skeleton height="22px" width="60px" />
-            ) : (
-              <Flex alignItems="center" justifyContent="center">
-                <Text
-                  fontWeight={showBscEntryPoint ? 'bold' : 'normal'}
-                  color={showBscEntryPoint ? 'warning' : 'normal'}
-                >
-                  {formatBigInt(bnbBalance?.data?.value ?? 0n, 6)}
-                </Text>
-                {showBscEntryPoint ? (
-                  <TooltipText
-                    ref={buyCryptoTargetRef}
-                    onClick={() => setMobileTooltipShow(false)}
-                    display="flex"
-                    style={{ justifyContent: 'center' }}
-                  >
-                    <InfoFilledIcon pl="2px" fill="#000" color="#D67E0A" width="22px" />
-                  </TooltipText>
-                ) : null}
-                {buyCryptoTooltipVisible && (!isMobile || mobileTooltipShow) && buyCryptoTooltip}
-              </Flex>
-            )}
-          </Flex>
-        ) : null}
-        {wBNBBalance.gt(0) && (
-          <Flex alignItems="center" justifyContent="space-between">
-            <Text color="textSubtle">WBNB {t('Balance')}</Text>
-            {wBNBFetchStatus !== FetchStatus.Fetched ? (
-              <Skeleton height="22px" width="60px" />
-            ) : (
-              <Text>{getFullDisplayBalance(wBNBBalance, wBNBToken.decimals, 6)}</Text>
-            )}
-          </Flex>
-        )}
-        <Flex alignItems="center" justifyContent="space-between">
-          <Text color="textSubtle">{t('KLAY Balance')}</Text>
-          {cakeFetchStatus !== FetchStatus.Fetched ? (
-            <Skeleton height="22px" width="60px" />
-          ) : (
-            <Text>{formatBigInt(cakeBalance, 3)}</Text>
-          )}
-        </Flex>
-      </Box>
-      <CakeBenefitsCard onDismiss={onDismiss} />
       <Button variant="secondary" width="100%" minHeight={48} onClick={handleLogout}>
         {t('Disconnect Wallet')}
       </Button>
