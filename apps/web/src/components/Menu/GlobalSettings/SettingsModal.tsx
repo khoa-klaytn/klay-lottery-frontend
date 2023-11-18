@@ -32,8 +32,6 @@ import {
   useUserSingleHopOnly,
   useUserExpertModeAcknowledgement,
 } from '@sweepstakes/utils/user'
-import { useSubgraphHealthIndicatorManager, useUserUsernameVisibility } from 'state/user/hooks'
-import { useUserTokenRisk } from 'state/user/hooks/useUserTokenRisk'
 import {
   useOnlyOneAMMSourceEnabled,
   useUserSplitRouteEnable,
@@ -44,8 +42,6 @@ import {
 } from 'state/user/smartRouter'
 import { useMMLinkedPoolByDefault } from 'state/user/mmLinkedPool'
 import { styled } from 'styled-components'
-import { TOKEN_RISK } from 'components/AccessRisk'
-import AccessRiskTooltips from 'components/AccessRisk/AccessRiskTooltips'
 import GasSettings from './GasSettings'
 import TransactionSettings from './TransactionSettings'
 import { SettingsMode } from './types'
@@ -88,10 +84,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
   const [showExpertModeAcknowledgement, setShowExpertModeAcknowledgement] = useUserExpertModeAcknowledgement()
   const [expertMode, setExpertMode] = useExpertMode()
   const [audioPlay, setAudioMode] = useAudioPlay()
-  const [subgraphHealth, setSubgraphHealth] = useSubgraphHealthIndicatorManager()
-  const [userUsernameVisibility, setUserUsernameVisibility] = useUserUsernameVisibility()
   const { chainId } = useActiveChainId()
-  const [tokenRisk, setTokenRisk] = useUserTokenRisk()
 
   const { t } = useTranslation()
   const { isDark, setTheme } = useTheme()
@@ -126,71 +119,6 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
                 <Text>{t('Dark mode')}</Text>
                 <ThemeSwitcher isDark={isDark} toggleTheme={() => setTheme(isDark ? 'light' : 'dark')} />
               </Flex>
-              <Flex justifyContent="space-between" alignItems="center" mb="24px">
-                <Flex alignItems="center">
-                  <Text>{t('Subgraph Health Indicator')}</Text>
-                  <QuestionHelper
-                    text={t(
-                      'Turn on subgraph health indicator all the time. Default is to show the indicator only when the network is delayed',
-                    )}
-                    placement="top"
-                    ml="4px"
-                  />
-                </Flex>
-                <Toggle
-                  id="toggle-subgraph-health-button"
-                  checked={subgraphHealth}
-                  scale="md"
-                  onChange={() => {
-                    setSubgraphHealth(!subgraphHealth)
-                  }}
-                />
-              </Flex>
-              <Flex justifyContent="space-between" alignItems="center" mb="24px">
-                <Flex alignItems="center">
-                  <Text>{t('Show username')}</Text>
-                  <QuestionHelper text={t('Shows username of wallet instead of bunnies')} placement="top" ml="4px" />
-                </Flex>
-                <Toggle
-                  id="toggle-username-visibility"
-                  checked={userUsernameVisibility}
-                  scale="md"
-                  onChange={() => {
-                    setUserUsernameVisibility(!userUsernameVisibility)
-                  }}
-                />
-              </Flex>
-              {chainId === ChainId.BSC && (
-                <>
-                  <Flex justifyContent="space-between" alignItems="center" mb="24px">
-                    <Flex alignItems="center">
-                      <Text>{t('Token Risk Scanning')}</Text>
-                      <QuestionHelper
-                        text={
-                          <AccessRiskTooltips
-                            hasResult
-                            riskLevel={TOKEN_RISK.SOME_RISK}
-                            riskLevelDescription={t(
-                              'Automatic risk scanning for the selected token. This scanning result is for reference only, and should NOT be taken as investment advice.',
-                            )}
-                          />
-                        }
-                        placement="top"
-                        ml="4px"
-                      />
-                    </Flex>
-                    <Toggle
-                      id="toggle-username-visibility"
-                      checked={tokenRisk}
-                      scale="md"
-                      onChange={() => {
-                        setTokenRisk(!tokenRisk)
-                      }}
-                    />
-                  </Flex>
-                  <GasSettings />
-                </>
-              )}
             </Flex>
           </>
         )}
