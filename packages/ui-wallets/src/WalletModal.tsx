@@ -5,7 +5,6 @@ import {
   Button,
   Heading,
   Image,
-  LinkExternal,
   ModalV2,
   ModalV2Props,
   ModalWrapper,
@@ -56,8 +55,6 @@ export type WalletConfigV2<T = unknown> = {
 interface WalletModalV2Props<T = unknown> extends ModalV2Props {
   wallets: WalletConfigV2<T>[]
   login: (connectorId: T) => Promise<any>
-  docLink: string
-  docText: string
   onWalletConnectCallBack?: () => void
 }
 
@@ -74,7 +71,7 @@ export function useSelectedWallet<T>() {
   return useAtom<WalletConfigV2<T> | null>(selectedWalletAtom)
 }
 
-const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLink: string; docText: string }>) => {
+const TabContainer = ({ children }: PropsWithChildren) => {
   const [index, setIndex] = useState(0)
   const { t } = useTranslation()
 
@@ -101,7 +98,7 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
         {index === 0 && children}
         {index === 1 && (
           <Suspense>
-            <StepIntro docLink={docLink} docText={docText} />
+            <StepIntro />
           </Suspense>
         )}
       </AtomBox>
@@ -114,9 +111,7 @@ const MOBILE_DEFAULT_DISPLAY_COUNT = 8
 function MobileModal<T>({
   wallets,
   connectWallet,
-  docLink,
-  docText,
-}: Pick<WalletModalV2Props<T>, 'wallets' | 'docLink' | 'docText'> & {
+}: Pick<WalletModalV2Props<T>, 'wallets'> & {
   connectWallet: (wallet: WalletConfigV2<T>) => void
 }) {
   const { t } = useTranslation()
@@ -173,9 +168,6 @@ function MobileModal<T>({
             {t('Haven’t got a crypto wallet yet?')}
           </Text>
         </AtomBox>
-        <Button as="a" href={docLink} variant="subtle" width="100%" external>
-          {docText}
-        </Button>
       </AtomBox>
     </AtomBox>
   )
@@ -296,9 +288,7 @@ function sortWallets<T>(wallets: WalletConfigV2<T>[], lastUsedWalletName: string
 function DesktopModal<T>({
   wallets: wallets_,
   connectWallet,
-  docLink,
-  docText,
-}: Pick<WalletModalV2Props<T>, 'wallets' | 'docLink' | 'docText'> & {
+}: Pick<WalletModalV2Props<T>, 'wallets'> & {
   connectWallet: (wallet: WalletConfigV2<T>) => void
 }) {
   const wallets: WalletConfigV2<T>[] = wallets_.filter((w) => {
@@ -365,7 +355,7 @@ function DesktopModal<T>({
         alignItems="center"
       >
         <AtomBox display="flex" flexDirection="column" alignItems="center" style={{ gap: '24px' }} textAlign="center">
-          {!selected && <Intro docLink={docLink} docText={docText} />}
+          {!selected && <Intro />}
           {selected && selected.installed !== false && (
             <>
               {typeof selected.icon === 'string' && <Image src={selected.icon} width={108} height={108} />}
@@ -387,7 +377,7 @@ function DesktopModal<T>({
 }
 
 export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
-  const { wallets: _wallets, login, docLink, docText, onWalletConnectCallBack, ...rest } = props
+  const { wallets: _wallets, login, onWalletConnectCallBack, ...rest } = props
 
   const [lastUsedWalletName] = useAtom(lastUsedWalletNameAtom)
 
@@ -438,11 +428,11 @@ export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
     <ModalV2 closeOnOverlayClick disableOutsidePointerEvents={false} {...rest}>
       <ModalWrapper onDismiss={props.onDismiss} style={{ overflow: 'visible', border: 'none' }}>
         <AtomBox position="relative">
-          <TabContainer docLink={docLink} docText={docText}>
+          <TabContainer>
             {isMobile ? (
-              <MobileModal connectWallet={connectWallet} wallets={wallets} docLink={docLink} docText={docText} />
+              <MobileModal connectWallet={connectWallet} wallets={wallets} />
             ) : (
-              <DesktopModal connectWallet={connectWallet} wallets={wallets} docLink={docLink} docText={docText} />
+              <DesktopModal connectWallet={connectWallet} wallets={wallets} />
             )}
           </TabContainer>
         </AtomBox>
@@ -451,17 +441,14 @@ export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
   )
 }
 
-const Intro = ({ docLink, docText }: { docLink: string; docText: string }) => {
+const Intro = () => {
   const { t } = useTranslation()
   return (
     <>
       <Heading as="h1" fontSize="20px" color="secondary">
         {t('Haven’t got a wallet yet?')}
       </Heading>
-      <Image src="https://cdn.sweepstakes.com/wallets/wallet_intro.png" width={198} height={178} />
-      <Button as={LinkExternal} color="backgroundAlt" variant="subtle" href={docLink}>
-        {docText}
-      </Button>
+      <Image src="/images/wallets/pulsar-wallet.svg" width={198} height={178} />
     </>
   )
 }

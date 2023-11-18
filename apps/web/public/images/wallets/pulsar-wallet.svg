@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+  <path
+    fill="#3D27E6"
+    d="M44,22v18c0,2.209-1.791,4-4,4H15c-1.657,0-3-1.343-3-3V21c0-1.657,1.343-3,3-3h25	C42.209,18,44,19.791,44,22z"
+  />
+  <path
+    fill="none"
+    stroke="#141312"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-miterlimit="10"
+    stroke-width="3"
+    d="M40.5,35.596V37.5c0,1.657-1.343,3-3,3h-27c-1.657,0-3-1.343-3-3V20.085"
+  />
+  <path
+    fill="none"
+    stroke="#141312"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-miterlimit="10"
+    stroke-width="3"
+    d="M10.362,13.5H37.5c1.657,0,3,1.343,3,3v13.181"
+  />
+  <path
+    fill="none"
+    stroke="#141312"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-miterlimit="10"
+    stroke-width="3"
+    d="M24.145,4.114C23.347,3.721,22.449,3.5,21.5,3.5c-3.314,0-6,2.686-6,6c0,1.539,0.584,2.938,1.537,4"
+  />
+  <path
+    fill="none"
+    stroke="#141312"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-miterlimit="10"
+    stroke-width="3"
+    d="M35.895,13.5c0.384-0.751,0.605-1.599,0.605-2.5c0-3.038-2.462-5.5-5.5-5.5s-5.5,2.462-5.5,5.5c0,0.901,0.221,1.749,0.605,2.5"
+  />
+  <circle cx="33.5" cy="26.5" r="2.5" fill="#141312" />
+  <path
+    fill="#141312"
+    d="M10.5,12C9.673,12,9,11.327,9,10.5S9.673,9,10.5,9h1.213c0.721,0,1.326-0.522,1.455-1.232	c0.002-0.01,0.004-0.02,0.006-0.03C13.342,6.831,12.64,6,11.718,6l-1.017,0C8.352,6,6.25,7.712,6.022,10.05	C5.76,12.732,7.871,15,10.5,15V12z"
+  />
+</svg>

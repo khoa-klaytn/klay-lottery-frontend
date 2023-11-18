@@ -1,5 +1,5 @@
 import { Trans } from '@sweepstakes/localization'
-import { AtomBox, Button, Heading, Image, LinkExternal, Text } from '@sweepstakes/uikit'
+import { AtomBox, Heading, Image, Text } from '@sweepstakes/uikit'
 import { useState, useCallback } from 'react'
 import 'swiper/css'
 import 'swiper/css/autoplay'
@@ -10,14 +10,14 @@ import { Autoplay } from 'swiper/modules'
 const IntroSteps = [
   {
     title: <Trans>Your first step in the DeFi world</Trans>,
-    icon: 'https://cdn.sweepstakes.com/wallets/wallet_intro.png',
+    icon: '/images/wallets/pulsar-wallet.svg',
     description: (
       <Trans>A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, and much more.</Trans>
     ),
   },
   {
     title: <Trans>Login using a wallet connection</Trans>,
-    icon: 'https://cdn.sweepstakes.com/wallets/world_lock.png',
+    icon: '/images/wallets/pulsar-world.svg',
     description: (
       <Trans>
         Instead of setting up new accounts and passwords for every website, simply set up your wallet in one go, and
@@ -39,7 +39,7 @@ const StepDot = ({ active, place, onClick }: { active: boolean; place: 'left' | 
   </AtomBox>
 )
 
-const StepIntro = ({ docLink, docText }: { docLink: string; docText: string }) => {
+const StepIntro = () => {
   const [step, setStep] = useState(0)
   const [swiper, setSwiper] = useState<SwiperClass | undefined>(undefined)
 
@@ -65,6 +65,7 @@ const StepIntro = ({ docLink, docText }: { docLink: string; docText: string }) =
       style={{ gap: '24px' }}
       mx="auto"
       my="48px"
+      justifyContent="center"
       textAlign="center"
       alignItems="center"
     >
@@ -98,9 +99,6 @@ const StepIntro = ({ docLink, docText }: { docLink: string; docText: string }) =
         <StepDot place="left" active={step === 0} onClick={handleStepClick(0)} />
         <StepDot place="right" active={step === 1} onClick={handleStepClick(1)} />
       </AtomBox>
-      <Button minHeight={40} variant="subtle" external as={LinkExternal} color="backgroundAlt" href={docLink}>
-        {docText}
-      </Button>
     </AtomBox>
   )
 }

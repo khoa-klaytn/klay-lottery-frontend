@@ -1,7 +1,6 @@
-import { useTranslation } from '@sweepstakes/localization'
 import { WalletModalV2 } from '@sweepstakes/ui-wallets'
 import { Button, ButtonProps } from '@sweepstakes/uikit'
-import { createWallets, getDocLink } from 'config/wallet'
+import { createWallets } from 'config/wallet'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useAuth from 'hooks/useAuth'
 // @ts-ignore
@@ -15,15 +14,9 @@ import Trans from './Trans'
 const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
   const handleActive = useActiveHandle()
   const { login } = useAuth()
-  const {
-    t,
-    currentLanguage: { code },
-  } = useTranslation()
   const { connectAsync } = useConnect()
   const { chainId } = useActiveChainId()
   const [open, setOpen] = useState(false)
-
-  const docLink = useMemo(() => getDocLink(code), [code])
 
   const handleClick = () => {
     if (typeof __NEZHA_BRIDGE__ !== 'undefined' && !window.ethereum) {
@@ -47,8 +40,6 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
         }
       `}</style>
       <WalletModalV2
-        docText={t('Learn How to Connect')}
-        docLink={docLink}
         isOpen={open}
         wallets={wallets}
         login={login}
