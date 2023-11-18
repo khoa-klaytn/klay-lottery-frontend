@@ -85,7 +85,7 @@ const StepIntro = () => {
       >
         {IntroSteps.map((introStep) => (
           <SwiperSlide key={introStep.icon}>
-            <Heading as="h2" color="secondary">
+            <Heading as="h2" color="invertedContrast">
               {introStep.title}
             </Heading>
             <Image m="auto" src={introStep.icon} width={198} height={178} />

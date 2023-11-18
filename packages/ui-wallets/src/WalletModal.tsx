@@ -445,7 +445,7 @@ const Intro = () => {
   const { t } = useTranslation()
   return (
     <>
-      <Heading as="h1" fontSize="20px" color="secondary">
+      <Heading as="h1" fontSize="20px" color="invertedContrast">
         {t('Haven’t got a wallet yet?')}
       </Heading>
       <Image src="/images/wallets/pulsar-wallet.svg" width={198} height={178} />
