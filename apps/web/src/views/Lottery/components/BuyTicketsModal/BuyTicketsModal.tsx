@@ -86,7 +86,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
   const [insufficientBalance, setInsufficientBalance] = useState(false)
   const lotteryContract = useSSLotteryContract()
-  const { toastSuccess, toastError } = useToast()
+  const { toastSuccess } = useToast()
   const [balance, setBalance] = useState(0n)
   const bnBalance = useMemo(() => new BigNumber(balance.toString()), [balance])
   const klayPriceBusd = useKlayPrice()
@@ -267,10 +267,18 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         console.error(e)
         if (e instanceof BaseError) {
           handleCustomError(e, {
-            LotteryNotOpen: (_, msg) => toastError(msg),
-            LotteryOver: (_, msg) => toastError(msg),
-            InsufficientFunds: (_, msg) => toastError(msg),
-            TicketNumberInvalid: (_, msg) => toastError(msg),
+            LotteryNotOpen: (_, msg) => {
+              throw Error(msg)
+            },
+            LotteryOver: (_, msg) => {
+              throw Error(msg)
+            },
+            InsufficientFunds: (_, msg) => {
+              throw Error(msg)
+            },
+            TicketNumberInvalid: (_, msg) => {
+              throw Error(msg)
+            },
           })
         }
       }
