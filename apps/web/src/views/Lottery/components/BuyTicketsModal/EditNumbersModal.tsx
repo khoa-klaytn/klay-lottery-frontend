@@ -32,12 +32,23 @@ const EditNumbersModal: React.FC<
     updateTicket: UpdateTicketAction
     randomize: () => void
     tickets: Ticket[]
+    disableBuying: boolean
     allComplete: boolean
     onConfirm: () => void
     isConfirming: boolean
     onDismiss?: () => void
   }>
-> = ({ totalCost, updateTicket, randomize, tickets, allComplete, onConfirm, isConfirming, onDismiss }) => {
+> = ({
+  totalCost,
+  updateTicket,
+  randomize,
+  tickets,
+  disableBuying,
+  allComplete,
+  onConfirm,
+  isConfirming,
+  onDismiss,
+}) => {
   const chainId = useChainId()
   const symbol = useMemo(() => SHORT_SYMBOL[chainId], [chainId])
   const { theme } = useTheme()
@@ -78,7 +89,7 @@ const EditNumbersModal: React.FC<
       <Flex flexDirection="column" justifyContent="center" m="24px">
         <Button
           id="lotteryBuyEdited"
-          disabled={!allComplete || isConfirming}
+          disabled={disableBuying || !allComplete || isConfirming}
           endIcon={isConfirming ? <AutoRenewIcon spin color="currentColor" /> : undefined}
           onClick={handleOnConfirm}
         >

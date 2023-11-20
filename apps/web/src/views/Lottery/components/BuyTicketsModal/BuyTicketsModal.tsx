@@ -26,7 +26,7 @@ import { fetchUserTicketsAndLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
 import { BaseError, parseEther } from 'viem'
 import { styled } from 'styled-components'
-import { BIG_ZERO, BIG_ONE_HUNDRED } from '@sweepstakes/utils/bigNumber'
+import { BIG_ZERO, BIG_ONE_HUNDRED, BIG_ONE } from '@sweepstakes/utils/bigNumber'
 import { getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
@@ -36,6 +36,7 @@ import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import EditNumbersModal from './EditNumbersModal'
 import NumTicketsToBuyButton from './NumTicketsToBuyButton'
 import { useTicketsReducer } from './useTicketsReducer'
+import TooltipComponent from './Tooltip'
 
 const StyledModal = styled(Modal)`
   ${({ theme }) => theme.mediaQueries.md} {
@@ -77,42 +78,62 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     },
   } = useLottery()
   const { callWithGasPrice } = useCallWithGasPrice()
-  const [ticketsToBuy, setTicketsToBuy] = useState('')
+  const [ticketsToBuy, setTicketsToBuy] = useState(BIG_ZERO)
   const [discountValue, setDiscountValue] = useState('')
+  const [discountPct, setDiscountPct] = useState('')
   const [totalCost, setTotalCost] = useState('')
   const [ticketCostBeforeDiscount, setTicketCostBeforeDiscount] = useState('')
   const [buyingStage, setBuyingStage] = useState<BuyingStage>(BuyingStage.BUY)
-  const [maxPossibleTicketPurchase, setMaxPossibleTicketPurchase] = useState(BIG_ZERO)
-  const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
-  const [insufficientBalance, setInsufficientBalance] = useState(false)
   const lotteryContract = useSSLotteryContract()
   const { toastSuccess } = useToast()
-  const [balance, setBalance] = useState(0n)
-  const bnBalance = useMemo(() => new BigNumber(balance.toString()), [balance])
+  const [balance, setBalance] = useState(BIG_ZERO)
   const klayPriceBusd = useKlayPrice()
   const dispatch = useAppDispatch()
-  const displayBalance = getFullDisplayBalance(bnBalance, 18, 3)
-
-  const TooltipComponent = () => (
-    <>
-      <Text mb="16px">
-        {t(
-          'Buying multiple tickets in a single transaction gives a discount. The discount increases in a linear way, up to the maximum of 100 tickets:',
-        )}
-      </Text>
-      <Text>{t('2 tickets: 0.05%')}</Text>
-      <Text>{t('50 tickets: 2.45%')}</Text>
-      <Text>{t('100 tickets: 4.95%')}</Text>
-    </>
-  )
   const { targetRef, tooltip, tooltipVisible } = useTooltip(<TooltipComponent />, {
     placement: 'bottom-end',
     tooltipOffset: [20, 10],
   })
 
-  const limitNumberByMaxTicketsPerBuy = useCallback(
+  const maxPossibleTicketPurchase = useMemo(() => {
+    // https://www.desmos.com/calculator/uertqqvlui
+    const discountDivisorPlus1 = discountDivisor.plus(1)
+    const b2 = discountDivisorPlus1.pow(2)
+    const fourAC = balance.times(4).times(discountDivisor).div(ticketPrice)
+    const discriminant = b2.minus(fourAC)
+    const max = discountDivisorPlus1.minus(discriminant.sqrt()).div(2)
+    if (max.isNaN()) {
+      return maxNumberTicketsPerBuyOrClaim
+    }
+    return max.integerValue(BigNumber.ROUND_DOWN)
+  }, [discountDivisor, balance, ticketPrice, maxNumberTicketsPerBuyOrClaim])
+
+  const [insufficientBalance, setInsufficientBalance] = useState(false)
+  const [zeroTicketPurchase, setZeroTicketPurchase] = useState(false)
+  const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
+  const eMsg = useMemo(() => {
+    if (insufficientBalance) {
+      return t('Insufficient balance')
+    }
+    if (zeroTicketPurchase) {
+      return t('At least one ticket must be purchased')
+    }
+    if (maxTicketPurchaseExceeded) {
+      return t('The maximum number of tickets you can buy in one transaction is %maxTickets%', {
+        maxTickets: maxNumberTicketsPerBuyOrClaim.toString(),
+      })
+    }
+    return ''
+  }, [t, insufficientBalance, zeroTicketPurchase, maxTicketPurchaseExceeded, maxNumberTicketsPerBuyOrClaim])
+
+  const limitNumberTickets = useCallback(
     (number: BigNumber) => {
-      return number.gt(maxNumberTicketsPerBuyOrClaim) ? maxNumberTicketsPerBuyOrClaim : number
+      let limitedNumber = number
+      if (number.lt(1)) {
+        limitedNumber = BIG_ONE
+      } else if (number.gt(maxNumberTicketsPerBuyOrClaim)) {
+        limitedNumber = maxNumberTicketsPerBuyOrClaim
+      }
+      return limitedNumber
     },
     [maxNumberTicketsPerBuyOrClaim],
   )
@@ -128,121 +149,60 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     [discountDivisor, ticketPrice],
   )
 
-  const getMaxTicketBuyWithDiscount = useCallback(
-    (numberTickets: BigNumber) => {
-      const costAfterDiscount = getTicketCostAfterDiscount(numberTickets)
-      const costBeforeDiscount = ticketPrice.times(numberTickets)
-      const discountAmount = costBeforeDiscount.minus(costAfterDiscount)
-      const ticketsBoughtWithDiscount = discountAmount.div(ticketPrice)
-      const overallTicketBuy = numberTickets.plus(ticketsBoughtWithDiscount)
-      return { overallTicketBuy, ticketsBoughtWithDiscount }
-    },
-    [getTicketCostAfterDiscount, ticketPrice],
-  )
+  type NumTicketsByPercentage = Record<
+    'tenPercentOfBalance' | 'twentyFivePercentOfBalance' | 'fiftyPercentOfBalance' | 'oneHundredPercentOfBalance',
+    BigNumber
+  >
+  const { tenPercentOfBalance, twentyFivePercentOfBalance, fiftyPercentOfBalance, oneHundredPercentOfBalance } =
+    useMemo<NumTicketsByPercentage>(() => {
+      if (maxPossibleTicketPurchase.eq(0)) {
+        return {
+          tenPercentOfBalance: BIG_ZERO,
+          twentyFivePercentOfBalance: BIG_ZERO,
+          fiftyPercentOfBalance: BIG_ZERO,
+          oneHundredPercentOfBalance: BIG_ZERO,
+        }
+      }
+      function getNumTicketsByPercentage(percentage: number) {
+        return maxPossibleTicketPurchase
+          .times(new BigNumber(percentage))
+          .div(BIG_ONE_HUNDRED)
+          .integerValue(BigNumber.ROUND_DOWN)
+      }
+      const numTicketsByPercentage = {} as NumTicketsByPercentage
+      numTicketsByPercentage.tenPercentOfBalance = getNumTicketsByPercentage(10)
+      numTicketsByPercentage.twentyFivePercentOfBalance = getNumTicketsByPercentage(25)
+      numTicketsByPercentage.fiftyPercentOfBalance = getNumTicketsByPercentage(50)
+      numTicketsByPercentage.oneHundredPercentOfBalance = maxPossibleTicketPurchase
+      return numTicketsByPercentage
+    }, [maxPossibleTicketPurchase])
 
-  const validateInput = useCallback(
-    (inputNumber: BigNumber) => {
-      const limitedNumberTickets = limitNumberByMaxTicketsPerBuy(inputNumber)
+  const handleInputChange = useCallback(
+    (input: BigNumber) => {
+      // Force input to integer
+      setZeroTicketPurchase(input.eq(BIG_ZERO))
+      setMaxTicketPurchaseExceeded(input.gt(maxNumberTicketsPerBuyOrClaim))
+
+      const limitedNumberTickets = limitNumberTickets(input)
       const costAfterDiscount = getTicketCostAfterDiscount(limitedNumberTickets)
 
-      if (costAfterDiscount.gt(bnBalance)) {
-        setInsufficientBalance(true)
-      } else if (limitedNumberTickets.eq(maxNumberTicketsPerBuyOrClaim)) {
-        setMaxTicketPurchaseExceeded(true)
-      } else {
-        setInsufficientBalance(false)
-        setMaxTicketPurchaseExceeded(false)
-      }
+      setInsufficientBalance(costAfterDiscount.gt(balance))
+      setTicketsToBuy(limitedNumberTickets)
+
+      const costBeforeDiscount = ticketPrice.times(limitedNumberTickets)
+      const discountBeingApplied = costBeforeDiscount.minus(costAfterDiscount)
+      setTicketCostBeforeDiscount(costBeforeDiscount.gt(0) ? getFullDisplayBalance(costBeforeDiscount) : '0')
+      setTotalCost(costAfterDiscount.gt(0) ? getFullDisplayBalance(costAfterDiscount) : '0')
+      setDiscountValue(discountBeingApplied.gt(0) ? getFullDisplayBalance(discountBeingApplied, 18, 5) : '0')
+      setDiscountPct(
+        discountBeingApplied.gt(0) ? discountBeingApplied.div(costBeforeDiscount).times(100).toFixed(2) : '0',
+      )
     },
-    [bnBalance, limitNumberByMaxTicketsPerBuy, getTicketCostAfterDiscount, maxNumberTicketsPerBuyOrClaim],
+    [limitNumberTickets, getTicketCostAfterDiscount, ticketPrice, balance, maxNumberTicketsPerBuyOrClaim],
   )
 
-  useEffect(() => {
-    const getBalance = async () => {
-      const newBalance = await publicClient.getBalance({ address: account })
-      setBalance(newBalance)
-    }
-    if (account) {
-      getBalance()
-    }
-  }, [account, publicClient])
-
-  useEffect(() => {
-    const getMaxPossiblePurchase = () => {
-      const maxBalancePurchase = bnBalance.div(ticketPrice)
-      const limitedMaxPurchase = limitNumberByMaxTicketsPerBuy(maxBalancePurchase)
-      let maxPurchase = limitedMaxPurchase
-
-      // If the users' max balance purchase is less than the contract limit - factor the discount logic into the max number of tickets they can purchase
-      if (limitedMaxPurchase.lt(maxNumberTicketsPerBuyOrClaim)) {
-        // Get max tickets purchasable with the users' balance, as well as using the discount to buy tickets
-        const { overallTicketBuy: maxPlusDiscountTickets } = getMaxTicketBuyWithDiscount(limitedMaxPurchase)
-
-        // Knowing how many tickets they can buy when counting the discount - plug that total in, and see how much that total will get discounted
-        const { ticketsBoughtWithDiscount: secondTicketDiscountBuy } =
-          getMaxTicketBuyWithDiscount(maxPlusDiscountTickets)
-
-        // Add the additional tickets that can be bought with the discount, to the original max purchase
-        maxPurchase = limitedMaxPurchase.plus(secondTicketDiscountBuy)
-      }
-
-      if (maxPurchase.lt(1)) {
-        setInsufficientBalance(true)
-      } else {
-        setInsufficientBalance(false)
-      }
-
-      setMaxPossibleTicketPurchase(maxPurchase)
-    }
-    getMaxPossiblePurchase()
-  }, [
-    bnBalance,
-    maxNumberTicketsPerBuyOrClaim,
-    ticketPrice,
-    limitNumberByMaxTicketsPerBuy,
-    getTicketCostAfterDiscount,
-    getMaxTicketBuyWithDiscount,
-  ])
-
-  useEffect(() => {
-    const numberOfTicketsToBuy = new BigNumber(ticketsToBuy)
-    const costAfterDiscount = getTicketCostAfterDiscount(numberOfTicketsToBuy)
-    const costBeforeDiscount = ticketPrice.times(numberOfTicketsToBuy)
-    const discountBeingApplied = costBeforeDiscount.minus(costAfterDiscount)
-    setTicketCostBeforeDiscount(costBeforeDiscount.gt(0) ? getFullDisplayBalance(costBeforeDiscount) : '0')
-    setTotalCost(costAfterDiscount.gt(0) ? getFullDisplayBalance(costAfterDiscount) : '0')
-    setDiscountValue(discountBeingApplied.gt(0) ? getFullDisplayBalance(discountBeingApplied, 18, 5) : '0')
-  }, [ticketsToBuy, ticketPrice, discountDivisor, getTicketCostAfterDiscount])
-
-  const getNumTicketsByPercentage = (percentage: number): number => {
-    const percentageOfMaxTickets = maxPossibleTicketPurchase.gt(0)
-      ? maxPossibleTicketPurchase.div(BIG_ONE_HUNDRED).times(new BigNumber(percentage))
-      : BIG_ZERO
-    return Math.floor(percentageOfMaxTickets.toNumber())
-  }
-
-  const tenPercentOfBalance = getNumTicketsByPercentage(10)
-  const twentyFivePercentOfBalance = getNumTicketsByPercentage(25)
-  const fiftyPercentOfBalance = getNumTicketsByPercentage(50)
-  const oneHundredPercentOfBalance = getNumTicketsByPercentage(100)
-
-  const handleInputChange = (input: string) => {
-    // Force input to integer
-    const inputAsInt = parseInt(input, 10)
-    const inputAsBN = new BigNumber(inputAsInt)
-    const limitedNumberTickets = limitNumberByMaxTicketsPerBuy(inputAsBN)
-    validateInput(inputAsBN)
-    setTicketsToBuy(inputAsInt ? limitedNumberTickets.toString() : '')
-  }
-
-  const handleNumberButtonClick = (number: number) => {
-    setTicketsToBuy(number.toFixed())
-    setInsufficientBalance(false)
-    setMaxTicketPurchaseExceeded(false)
-  }
-
   const [updateTicket, randomize, tickets, allComplete, getTicketsForPurchase] = useTicketsReducer(
-    parseInt(ticketsToBuy, 10),
+    ticketsToBuy.toNumber(),
     userCurrentTickets,
   )
 
@@ -291,30 +251,30 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     },
   })
 
-  const getErrorMessage = () => {
-    if (insufficientBalance) return t('Insufficient balance')
-    return t('The maximum number of tickets you can buy in one transaction is %maxTickets%', {
-      maxTickets: maxNumberTicketsPerBuyOrClaim.toString(),
-    })
-  }
-
-  const percentageDiscount = () => {
-    const percentageAsBn = new BigNumber(discountValue).div(new BigNumber(ticketCostBeforeDiscount)).times(100)
-    if (percentageAsBn.isNaN() || percentageAsBn.eq(0)) {
-      return 0
-    }
-    return percentageAsBn.toNumber().toFixed(2)
-  }
-
   const disableBuying = useMemo(
     () =>
       isConfirming ||
       insufficientBalance ||
       !ticketsToBuy ||
       new BigNumber(ticketsToBuy).lte(0) ||
-      getTicketsForPurchase().length !== parseInt(ticketsToBuy, 10),
+      !ticketsToBuy.eq(getTicketsForPurchase().length),
     [isConfirming, insufficientBalance, ticketsToBuy, getTicketsForPurchase],
   )
+
+  const displayBalance = useMemo(() => getFullDisplayBalance(balance, 18, 3), [balance])
+
+  useEffect(() => {
+    if (account) {
+      ;(async () => {
+        const newBalance = await publicClient.getBalance({ address: account })
+        setBalance(new BigNumber(newBalance.toString()))
+      })()
+    }
+  }, [account, publicClient])
+
+  useEffect(() => {
+    handleInputChange(BIG_ONE)
+  }, [handleInputChange])
 
   if (buyingStage === BuyingStage.EDIT) {
     return (
@@ -324,6 +284,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         randomize={randomize}
         tickets={tickets}
         allComplete={allComplete}
+        disableBuying={disableBuying}
         onConfirm={handleConfirm}
         isConfirming={isConfirming}
         onDismiss={() => setBuyingStage(BuyingStage.BUY)}
@@ -344,21 +305,19 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         </Flex>
       </Flex>
       <BalanceInput
-        isWarning={account && (insufficientBalance || maxTicketPurchaseExceeded)}
+        isWarning={account && Boolean(eMsg)}
         placeholder="0"
-        value={ticketsToBuy}
-        min={1}
-        onUserInput={handleInputChange}
-        currencyValue={
-          klayPriceBusd.gt(0) &&
-          `~${ticketsToBuy ? getFullDisplayBalance(ticketPrice.times(new BigNumber(ticketsToBuy))) : '0.00'} ${symbol}`
-        }
+        value={ticketsToBuy.toString()}
+        onUserInput={(input) => {
+          if (input) handleInputChange(new BigNumber(input))
+        }}
+        currencyValue={klayPriceBusd.gt(0) && `~${ticketsToBuy ? ticketCostBeforeDiscount : '0.00'} ${symbol}`}
       />
       <Flex alignItems="center" justifyContent="flex-end" mt="4px" mb="12px">
         <Flex justifyContent="flex-end" flexDirection="column">
-          {account && (insufficientBalance || maxTicketPurchaseExceeded) && (
+          {account && eMsg && (
             <Text fontSize="12px" color="failure">
-              {getErrorMessage()}
+              {eMsg}
             </Text>
           )}
           {account && (
@@ -374,24 +333,24 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         </Flex>
       </Flex>
 
-      <ShortcutButtonsWrapper isVisible={account && oneHundredPercentOfBalance >= 1}>
-        {tenPercentOfBalance >= 1 && (
-          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(tenPercentOfBalance)}>
-            {tenPercentOfBalance}
+      <ShortcutButtonsWrapper isVisible={account && oneHundredPercentOfBalance.gt(0)}>
+        {tenPercentOfBalance.gt(0) && (
+          <NumTicketsToBuyButton onClick={() => handleInputChange(tenPercentOfBalance)}>
+            {tenPercentOfBalance.toString()}
           </NumTicketsToBuyButton>
         )}
-        {twentyFivePercentOfBalance >= 1 && (
-          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(twentyFivePercentOfBalance)}>
-            {twentyFivePercentOfBalance}
+        {twentyFivePercentOfBalance.gt(0) && (
+          <NumTicketsToBuyButton onClick={() => handleInputChange(twentyFivePercentOfBalance)}>
+            {twentyFivePercentOfBalance.toString()}
           </NumTicketsToBuyButton>
         )}
-        {fiftyPercentOfBalance >= 1 && (
-          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(fiftyPercentOfBalance)}>
-            {fiftyPercentOfBalance}
+        {fiftyPercentOfBalance.gt(0) && (
+          <NumTicketsToBuyButton onClick={() => handleInputChange(fiftyPercentOfBalance)}>
+            {fiftyPercentOfBalance.toString()}
           </NumTicketsToBuyButton>
         )}
-        {oneHundredPercentOfBalance >= 1 && (
-          <NumTicketsToBuyButton onClick={() => handleNumberButtonClick(oneHundredPercentOfBalance)}>
+        {oneHundredPercentOfBalance.gt(0) && (
+          <NumTicketsToBuyButton onClick={() => handleInputChange(oneHundredPercentOfBalance)}>
             <Text small color="currentColor" textTransform="uppercase">
               {t('Max')}
             </Text>
@@ -410,7 +369,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         <Flex mb="8px" justifyContent="space-between">
           <Flex>
             <Text display="inline" bold fontSize="14px" mr="4px">
-              {discountValue && totalCost ? percentageDiscount() : 0}%
+              {discountValue && totalCost ? discountPct : 0}%
             </Text>
             <Text display="inline" color="textSubtle" fontSize="14px">
               {t('Bulk discount')}
@@ -434,7 +393,9 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
 
         {account ? (
           <>
-            <Button onClick={handleConfirm}>Buy Instantly</Button>
+            <Button onClick={handleConfirm} disabled={disableBuying}>
+              Buy Instantly
+            </Button>
             <Button
               variant="secondary"
               mt="8px"
