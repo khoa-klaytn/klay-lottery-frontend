@@ -795,13 +795,6 @@ export const ssLotteryABI = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'reset',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
     inputs: [
       {
         internalType: 'address',
@@ -897,6 +890,13 @@ export const ssLotteryABI = [
       },
     ],
     name: 'startLottery',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'step',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
