@@ -95,7 +95,18 @@ export const ssLotteryABI = [
     type: 'error',
   },
   {
-    inputs: [],
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'timestamp',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'endTime',
+        type: 'uint256',
+      },
+    ],
     name: 'LotteryNotOver',
     type: 'error',
   },

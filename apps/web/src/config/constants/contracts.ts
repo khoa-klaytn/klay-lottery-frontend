@@ -3,7 +3,7 @@ import type { Address } from 'viem'
 
 export default {
   ssLottery: {
-    [ChainId.KLAYTN_TESTNET]: '0x2E5CbF213Bb07893a75EC7A2E9d81eb7d1388692',
+    [ChainId.KLAYTN_TESTNET]: '0x18A012991bf7bAa81c2aD0459a2B3b91479801c3',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {
