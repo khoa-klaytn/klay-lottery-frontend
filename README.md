@@ -24,11 +24,11 @@ If you want to contribute, please refer to the [contributing guidelines](./CONTR
 Config
 </summary>
 
-| Config               | Location                                                                                              |
-| -------------------- | ----------------------------------------------------------------------------------------------------- |
-| SSLottery address  | [constants/contracts.ts @default.ssLottery](apps/web/src/config/constants/contracts.ts?plain=1#L5) |
-| SSLottery ABI      | [abi/ssLottery.ts @ssLotteryABI](apps/web/src/config/abi/ssLottery.ts?plain=1#L1)               |
-| Lottery subgraph url | [constants/endpoints.ts @GRAPH_API_LOTTERY](apps/web/src/config/constants/endpoints.ts?plain=1#L5)    |
+| Config               | Location                                                                                           |
+|----------------------|----------------------------------------------------------------------------------------------------|
+| SSLottery address    | [constants/contracts.ts @default.ssLottery](apps/web/src/config/constants/contracts.ts?plain=1#L5) |
+| SSLottery ABI        | [abi/ssLottery.ts @ssLotteryABI](apps/web/src/config/abi/ssLottery.ts?plain=1#L1)                  |
+| Lottery subgraph url | [constants/endpoints.ts @GRAPH_API_LOTTERY](apps/web/src/config/constants/endpoints.ts?plain=1#L5) |
 
 </details>
 
@@ -61,7 +61,7 @@ pnpm start
 ## Packages
 
 | Package                                    | Description                                                                                                 |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | [sdk](/packages/swap-sdk)                  | An SDK for building applications                                                                            |
 | [aptos-swap-sdk](/packages/aptos-swap-sdk) | Aptos version of Swap SDK                                                                                   |
 | [swap-sdk-core](/packages/swap-sdk-core)   | Swap SDK Shared code                                                                                        |
