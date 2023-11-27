@@ -84,7 +84,7 @@ export const getGraphLotteries = async (
       { skip, first, where },
     )
     return response.lotteries.map(({ finalNumber, ...lottery }) => ({
-      finalNumber: parseRetrievedNumber(finalNumber.toString()),
+      finalNumber: finalNumber === null ? finalNumber : parseRetrievedNumber(finalNumber.toString()),
       ...lottery,
     }))
   } catch (error) {
