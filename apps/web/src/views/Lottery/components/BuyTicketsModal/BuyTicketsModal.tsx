@@ -24,7 +24,7 @@ import { useAppDispatch } from 'state'
 import { useKlayPrice } from 'hooks/useKlayPrice'
 import { fetchUserTicketsAndLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
-import { BaseError, parseEther } from 'viem'
+import { parseEther } from 'viem'
 import { styled } from 'styled-components'
 import { BIG_ZERO, BIG_ONE_HUNDRED, BIG_ONE } from '@sweepstakes/utils/bigNumber'
 import { getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
@@ -210,6 +210,8 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     spender: lotteryContract.address,
     minAmount: parseEther(totalCost as `${number}`),
     onConfirm: async () => {
+      if (typeof currentLotteryId !== 'bigint') throw Error('Fetching current lottery...')
+
       const ticketsForPurchase = getTicketsForPurchase()
       const value = await publicClient.readContract({
         abi: ssLotteryABI,
@@ -224,23 +226,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         })
         console.log(res)
       } catch (e) {
-        console.error(e)
-        if (e instanceof BaseError) {
-          handleCustomError(e, {
-            LotteryNotOpen: (_, msg) => {
-              throw Error(msg)
-            },
-            LotteryOver: (_, msg) => {
-              throw Error(msg)
-            },
-            InsufficientFunds: (_, msg) => {
-              throw Error(msg)
-            },
-            TicketNumberInvalid: (_, msg) => {
-              throw Error(msg)
-            },
-          })
-        }
+        handleCustomError(e)
       }
       return res
     },

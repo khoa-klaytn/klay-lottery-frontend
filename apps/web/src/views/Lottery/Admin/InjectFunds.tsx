@@ -16,12 +16,9 @@ export default function InjectFunds({ callWithGasPrice, lotteryContract, status 
         const res = await callWithGasPrice(lotteryContract, 'injectFunds', [BigInt(amount)])
         console.log(res)
       } catch (e) {
-        console.error(e)
-        if (e instanceof BaseError) {
-          handleCustomError(e, {
-            LotteryNotOpen: (_, msg) => setEMsg(msg),
-          })
-        }
+        handleCustomError(e, {
+          LotteryNotOpen: (_, msg) => setEMsg(msg),
+        })
       }
     },
     [amount, callWithGasPrice, lotteryContract],

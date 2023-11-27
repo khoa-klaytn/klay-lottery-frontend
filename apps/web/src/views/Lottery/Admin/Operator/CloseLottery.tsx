@@ -14,13 +14,10 @@ export default function CloseLottery({ callWithGasPrice, lotteryContract, lotter
       setEMsg('')
       console.log(res)
     } catch (e) {
-      console.error(e)
-      if (e instanceof BaseError) {
-        handleCustomError(e, {
-          LotteryNotOpen: (_, msg) => setEMsg(msg),
-          LotteryNotOver: (_, msg) => setEMsg(msg),
-        })
-      }
+      handleCustomError(e, {
+        LotteryNotOpen: (_, msg) => setEMsg(msg),
+        LotteryNotOver: (_, msg) => setEMsg(msg),
+      })
     }
   }, [callWithGasPrice, lotteryContract, lotteryId])
 

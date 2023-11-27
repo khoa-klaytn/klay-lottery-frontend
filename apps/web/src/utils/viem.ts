@@ -58,7 +58,10 @@ type SSLotteryErrorHandlerRecord = {
   ) => void
 }
 
-export function handleCustomError(e: BaseError, handlers: SSLotteryErrorHandlerRecord) {
+export function handleCustomError(e: unknown, handlers: SSLotteryErrorHandlerRecord = {}) {
+  console.error(e)
+  if (!(e instanceof BaseError)) throw e
+
   const revertError = e.walk((walkE) => walkE instanceof ContractFunctionRevertedError)
   if (revertError instanceof ContractFunctionRevertedError) {
     const { data } = revertError
@@ -76,5 +79,6 @@ export function handleCustomError(e: BaseError, handlers: SSLotteryErrorHandlerR
       msg += ']'
     }
     if (name in handlers) handlers[name](args, msg)
+    else throw Error(msg)
   }
 }

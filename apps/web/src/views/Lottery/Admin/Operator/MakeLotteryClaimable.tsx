@@ -36,13 +36,10 @@ export default function MakeLotteryClaimable({ callWithGasPrice, lotteryContract
         setEMsg('')
         console.log(res)
       } catch (e) {
-        console.error(e)
-        if (e instanceof BaseError) {
-          handleCustomError(e, {
-            LotteryNotClose: (_, msg) => setEMsg(msg),
-            FinalNumberNotDrawn: (_, msg) => setEMsg(msg),
-          })
-        }
+        handleCustomError(e, {
+          LotteryNotClose: (_, msg) => setEMsg(msg),
+          FinalNumberNotDrawn: (_, msg) => setEMsg(msg),
+        })
       }
     },
     [chain, callWithGasPrice, lotteryContract, lotteryId, finalNumber],

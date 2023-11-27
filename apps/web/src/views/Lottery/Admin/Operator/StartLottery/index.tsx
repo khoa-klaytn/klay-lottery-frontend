@@ -53,28 +53,26 @@ export default function StartLottery({ lotteryId, status }) {
         ])
         console.log(res)
       } catch (e) {
-        console.error(e)
-        if (e instanceof BaseError)
-          handleCustomError(e, {
-            LotteryNotClaimable: (_, msg) => setEMsg(msg),
-            EndTimePast: (_, msg) => endTimeRef.current.setCustomValidity(msg),
-            TicketPriceLow: ([min]) =>
-              setRefCustomValidity(ticketPriceInUsdRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
-            DiscountDivisorLow: (_, msg) => setRefCustomValidity(discountDivisorRef, msg),
-            PortionsInvalidLen: (_, msg) => rewardsBreakdownRef.current.setEMsg(msg),
-            PortionDescending: (_, msg) => rewardsBreakdownRef.current.setEMsg(msg),
-            PortionsExceedMax: ([name], msg) => {
-              switch (name) {
-                case 'winners & burn':
-                  setWnbEMsg(msg)
-                  break
-                case 'rewards':
-                  rewardsBreakdownRef.current.setEMsg(msg)
-                  break
-                default:
-              }
-            },
-          })
+        handleCustomError(e, {
+          LotteryNotClaimable: (_, msg) => setEMsg(msg),
+          EndTimePast: (_, msg) => endTimeRef.current.setCustomValidity(msg),
+          TicketPriceLow: ([min]) =>
+            setRefCustomValidity(ticketPriceInUsdRef, `TicketPriceLow: [min: ${formatEther(min)}]`),
+          DiscountDivisorLow: (_, msg) => setRefCustomValidity(discountDivisorRef, msg),
+          PortionsInvalidLen: (_, msg) => rewardsBreakdownRef.current.setEMsg(msg),
+          PortionDescending: (_, msg) => rewardsBreakdownRef.current.setEMsg(msg),
+          PortionsExceedMax: ([name], msg) => {
+            switch (name) {
+              case 'winners & burn':
+                setWnbEMsg(msg)
+                break
+              case 'rewards':
+                rewardsBreakdownRef.current.setEMsg(msg)
+                break
+              default:
+            }
+          },
+        })
       }
     },
     [
