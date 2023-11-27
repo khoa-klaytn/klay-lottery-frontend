@@ -206,30 +206,31 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     userCurrentTickets,
   )
 
+  const onConfirm = useCallback(async () => {
+    if (!currentLotteryId) throw Error('Fetching current lottery...')
+
+    const ticketsForPurchase = getTicketsForPurchase()
+    const value = await publicClient.readContract({
+      abi: ssLotteryABI,
+      address: lotteryContract.address,
+      functionName: 'calculateCurrentTotalPriceForBulkTickets',
+      args: [BigInt(ticketsForPurchase.length)],
+    })
+    let res
+    try {
+      res = await callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], {
+        value,
+      })
+      console.log(res)
+    } catch (e) {
+      handleCustomError(e)
+    }
+    return res
+  }, [callWithGasPrice, currentLotteryId, getTicketsForPurchase, lotteryContract, publicClient])
   const { isConfirming, handleConfirm } = useApproveConfirmTransaction({
     spender: lotteryContract.address,
     minAmount: parseEther(totalCost as `${number}`),
-    onConfirm: async () => {
-      if (typeof currentLotteryId !== 'bigint') throw Error('Fetching current lottery...')
-
-      const ticketsForPurchase = getTicketsForPurchase()
-      const value = await publicClient.readContract({
-        abi: ssLotteryABI,
-        address: lotteryContract.address,
-        functionName: 'calculateCurrentTotalPriceForBulkTickets',
-        args: [BigInt(ticketsForPurchase.length)],
-      })
-      let res
-      try {
-        res = await callWithGasPrice(lotteryContract, 'buyTickets', [BigInt(currentLotteryId), ticketsForPurchase], {
-          value,
-        })
-        console.log(res)
-      } catch (e) {
-        handleCustomError(e)
-      }
-      return res
-    },
+    onConfirm,
     onSuccess: async ({ receipt }) => {
       onDismiss?.()
       dispatch(fetchUserTicketsAndLotteries({ publicClient, lotteryAddress, account, currentLotteryId }))
