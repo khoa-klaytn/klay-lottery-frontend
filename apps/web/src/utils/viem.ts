@@ -63,22 +63,22 @@ export function handleCustomError(e: unknown, handlers: SSLotteryErrorHandlerRec
   if (!(e instanceof BaseError)) throw e
 
   const revertError = e.walk((walkE) => walkE instanceof ContractFunctionRevertedError)
-  if (revertError instanceof ContractFunctionRevertedError) {
-    const { data } = revertError
-    console.error('Revert Error Data:', data)
-    if (!data) return
+  if (!(revertError instanceof ContractFunctionRevertedError)) throw e
 
-    const { args, errorName: name } = data
-    let msg = name
-    if (args && args.length) {
-      const { inputs } = data.abiItem
-      msg += ` [${inputs[0].name}: ${args[0]}`
-      for (let i = 1; i < args.length; i++) {
-        msg += `, ${inputs[i].name}: ${args[i]}`
-      }
-      msg += ']'
+  const { data } = revertError
+  console.error('Revert Error Data:', data)
+  if (!data) return
+
+  const { args, errorName: name } = data
+  let msg = name
+  if (args && args.length) {
+    const { inputs } = data.abiItem
+    msg += ` [${inputs[0].name}: ${args[0]}`
+    for (let i = 1; i < args.length; i++) {
+      msg += `, ${inputs[i].name}: ${args[i]}`
     }
-    if (name in handlers) handlers[name](args, msg)
-    else throw Error(msg)
+    msg += ']'
   }
+  if (name in handlers) handlers[name](args, msg)
+  else throw Error(msg)
 }
