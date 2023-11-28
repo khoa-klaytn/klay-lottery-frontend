@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { useSelector, batch } from 'react-redux'
 import { useAppDispatch } from 'state'
-import { useFastRefreshEffect } from 'hooks/useRefreshEffect'
+import { useSlowRefreshEffect } from 'hooks/useRefreshEffect'
 import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import { State } from '../types'
 import { fetchCurrentLotteryId, fetchCurrentLottery, fetchUserTicketsAndLotteries, fetchPublicLotteries } from '.'
@@ -38,7 +38,7 @@ export const useFetchLottery = (fetchPublicDataOnly = false) => {
     dispatch(fetchCurrentLotteryId({ publicClient, lotteryAddress }))
   }, [publicClient, lotteryAddress, dispatch])
 
-  useFastRefreshEffect(() => {
+  useSlowRefreshEffect(() => {
     if (currentLotteryId) {
       batch(() => {
         // Get historical lottery data from nodes +  last 100 subgraph entries

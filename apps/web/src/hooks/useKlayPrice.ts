@@ -5,7 +5,7 @@ import BigNumber from 'bignumber.js'
 // import contracts from 'config/constants/contracts'
 // import { publicClient } from 'utils/wagmi'
 // import { formatUnits } from 'viem'
-import { FAST_INTERVAL } from 'config/constants'
+import { SLOW_INTERVAL } from 'config/constants'
 import { useQuery } from '@tanstack/react-query'
 import { useActiveChainId } from './useActiveChainId'
 
@@ -15,8 +15,8 @@ export const useKlayPrice = () => {
   const { data } = useQuery<BigNumber, Error>({
     queryKey: [`${chainId}Price`],
     queryFn: async () => new BigNumber(await getKlayPriceFromOracle(chainId)),
-    staleTime: FAST_INTERVAL,
-    refetchInterval: FAST_INTERVAL,
+    staleTime: SLOW_INTERVAL,
+    refetchInterval: SLOW_INTERVAL,
   })
   return data ?? BIG_ZERO
 }
