@@ -39,12 +39,9 @@ export const useFetchLottery = (fetchPublicDataOnly = false) => {
   const dispatch = useAppDispatch()
   const currentLotteryId = useGetCurrentLotteryId()
 
-  useEffect(() => {
+  useSlowRefreshEffect(() => {
     dispatch(fetchCurrentLotteryIdThunk({ publicClient, lotteryAddress }))
     dispatch(fetchMaxBuyThunk({ publicClient, lotteryAddress }))
-  }, [publicClient, lotteryAddress, dispatch])
-
-  useSlowRefreshEffect(() => {
     if (currentLotteryId) {
       batch(() => {
         // Get historical lottery data from nodes +  last 100 subgraph entries
