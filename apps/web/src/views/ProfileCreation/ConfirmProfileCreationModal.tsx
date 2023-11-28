@@ -1,10 +1,9 @@
 import { useTranslation } from '@sweepstakes/localization'
 import { Flex, Modal, Text, useToast } from '@sweepstakes/uikit'
-import ApproveConfirmButtons from 'components/ApproveConfirmButtons'
+import ConfirmButtons from 'components/ConfirmButtons'
 import { ToastDescriptionWithTx } from 'components/Toast'
-import { bscTokens } from '@sweepstakes/tokens'
 import { formatUnits } from 'viem'
-import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
+import useConfirmTransaction from 'hooks/useConfirmTransaction'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useProfileContract } from 'hooks/useContract'
 import { useProfile } from 'state/profile/hooks'
@@ -26,24 +25,20 @@ const ConfirmProfileCreationModal: React.FC<React.PropsWithChildren<Props>> = ({
   const { toastSuccess } = useToast()
   const { callWithGasPrice } = useCallWithGasPrice()
 
-  const { isApproving, isApproved, isConfirmed, isConfirming, handleApprove, handleConfirm } =
-    useApproveConfirmTransaction({
-      token: bscTokens.cake,
-      spender: profileContract.address,
-      minAmount: REGISTER_COST,
-      onConfirm: () => {
-        return callWithGasPrice(profileContract, 'createProfile', [
-          BigInt(teamId),
-          selectedNft.collectionAddress,
-          BigInt(selectedNft.tokenId),
-        ])
-      },
-      onSuccess: async ({ receipt }) => {
-        refreshProfile()
-        onDismiss()
-        toastSuccess(t('Profile created!'), <ToastDescriptionWithTx txHash={receipt.transactionHash} />)
-      },
-    })
+  const { isConfirmed, isConfirming, handleConfirm } = useConfirmTransaction({
+    onConfirm: () => {
+      return callWithGasPrice(profileContract, 'createProfile', [
+        BigInt(teamId),
+        selectedNft.collectionAddress,
+        BigInt(selectedNft.tokenId),
+      ])
+    },
+    onSuccess: async ({ receipt }) => {
+      refreshProfile()
+      onDismiss()
+      toastSuccess(t('Profile created!'), <ToastDescriptionWithTx txHash={receipt.transactionHash} />)
+    },
+  })
 
   return (
     <Modal title={t('Complete Profile')} onDismiss={onDismiss}>
@@ -54,14 +49,7 @@ const ConfirmProfileCreationModal: React.FC<React.PropsWithChildren<Props>> = ({
         <Text>{t('Cost')}</Text>
         <Text>{t('%num% KLAY', { num: formatUnits(REGISTER_COST, 18) })}</Text>
       </Flex>
-      <ApproveConfirmButtons
-        isApproveDisabled={isConfirmed || isConfirming || isApproved}
-        isApproving={isApproving}
-        isConfirmDisabled={!isApproved || isConfirmed}
-        isConfirming={isConfirming}
-        onApprove={handleApprove}
-        onConfirm={handleConfirm}
-      />
+      <ConfirmButtons isConfirmDisabled={isConfirmed} isConfirming={isConfirming} onConfirm={handleConfirm} />
     </Modal>
   )
 }

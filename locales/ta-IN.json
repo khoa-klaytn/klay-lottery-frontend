@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "போதுமான KLAY பேலன்ஸ் இல்லை",
   "Choose collectible": "கலெக்டிபிளைத் தேர்ந்தெடு",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "கீழே காட்டியுள்ளவாறு, உங்கள் வாலெட்டில் தகுதியான கலெக்டிபிள்களில் (NFT) இருந்து ஒரு சுயவிவரப் படத்தைத் தேர்ந்தெடுக்கவும்.",
-  "Only approved SweepStakes Collectibles can be used.": "அங்கீகரிக்கப்பட்ட SweepStakes கலெக்டிபிள்களை மட்டுமே பயன்படுத்த முடியும்.",
+
   "Allow collectible to be locked": "பூட்டப்பட கலெக்டிபிளை அனுமதிக்கவும்",
   "Join a Team": "ஒரு குழுவில் சேர்",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "மொத்த செலவு: 1.5 KLAY",
   "Cost: %num% KLAY": "செலவு: %num% KLAY",
   "our swap page": "எங்கள் ஸ்வாப் பக்கம்",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "அங்கீகரிக்கப்பட்ட மற்றொரு SweepStakes கலெக்டிபிளைப் பெற்றால், பின்னர் உங்கள் சுயவிவரப் படத்தை மாற்றிக்கொள்ளலாம்.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "ஒரு \"ஸ்டார்டர்\" கலெக்டிபிளை (NFT) உருவாக்குவதன் மூலம் ஒவ்வொரு சுயவிவரமும் தொடங்குகிறது.",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "உங்கள் வாலெட்டில் SweepStakes கலெக்டிபிள் எவற்றையும் எங்களால் கண்டுபிடிக்க முடியவில்லை.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "உங்கள் சுயவிவரத்தை அமைப்பதை முடிக்க, உங்களுக்கு ஒரு SweepStakes கலெக்டிபிள் வேண்டும். உங்கள் ஸ்டார்ட்டர் கலெக்டிபிளை வேறொரு வாலெட்டிற்கு நீங்கள் விற்றிருந்தால் அல்லது மாற்றியிருந்தால், அதை நீங்கள் திரும்பப் பெற வேண்டியிருக்கும் அல்லது எப்படியாவது புதிய ஒன்றைப் பெற வேண்டியிருக்கும். இந்த வாலெட் முகவரியுடன் புதிய ஸ்டார்ட்டரை உருவாக்க முடியாது.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "வாலெட்டைத் துண்டித்திடுக",
   "Ending in": "இதில் முடிகிறது",
   "Next auction": "அடுத்த ஏலம்",
-  "Contract approved - you can now place your bid!": "ஒப்பந்தம் அங்கீகரிப்பட்டது - நீங்கள் இப்போது பந்தயங்கட்டலாம்!",
-  "Contract approved - you can now reclaim your bid!": "ஒப்பந்தம் அங்கீகரிப்பட்டது - நீங்கள் இப்போது பந்தயத்தை ரீக்ளைம் செய்யலாம்!",
+
   "Bid placed!": "பந்தயங்கட்டப்பட்டது!",
   "Bid reclaimed!": "பந்தயம் ரீக்ளைம் செய்தது!",
   "Reclaim Bid": "பந்தயம் ரீக்ளைம் செய்க",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "உங்கள் வாலெட்டில் WBNB செலவிடலை இயக்கவும்",
   "Please confirm the transaction in your wallet": "உங்கள் வாலெட்டில் பரிவர்த்தனையை உறுதிசெய்க",
   "Your NFTs": "உங்கள் NFTகள்",
-  "Contract approved - you can now buy NFT with WBNB!": "ஒப்பந்தம் அங்கீகரிக்கப்பட்டது - நீங்கள் இப்போது WBNB உடன் NFT ஐ வாங்கலாம்!",
+
   "Your NFT has been sent to your wallet": "உங்கள் NFT உங்கள் வாலெட்டுக்கு அனுப்பப்பட்டது",
   "Transaction Confirmed": "பரிவர்த்தனை உறுதிசெய்யப்பட்டது",
   "Activity": "நடவடிக்கை",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "விற்பனை WBNB இல் உள்ளது. SweepStakes மூலம் நீங்கள் WBNB ஐ BNB 1:1 க்கு இலவசமாக ஸ்வாப் செய்யலாம்.",
   "Enable Listing": "பட்டியலிடலை இயக்கு",
   "Please enable your NFT to be sent to the market": "உங்கள் NFT சந்தைக்கு அனுப்பப்படுவதை இயக்கவும்",
-  "Contract approved - you can now put your NFT for sale!": "ஒப்பந்தம் அங்கீகரிக்கப்பட்டது - நீங்கள் இப்போது உங்கள் NFTயை விற்பனைக்கு வைக்கலாம்!",
+
   "Adjust Sale Price": "விற்பனை விலையைச் சரிசெய்யவும்",
   "Set Price": "விலையை அமை",
   "Input New Sale Price": "புதிய விற்பனை விலையை உள்ளிடுக",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "கேஸை மதிப்பிடுவதில் எதிர்பாராத சிக்கல். மீண்டும் முயற்சித்திடுங்கள்.",
   "Swap failed: %message%": "ஸ்வாப் தோல்வியுற்றது: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "எதிர்பாராத பிழை. ஸ்வாப்பிற்கான கேஸை மதிப்பிட முடியவில்லை.",
-  "Unexpected error. Could not estimate gas for the approve.": "எதிர்பாராத பிழை. அங்கீகரிப்பிற்கான கேஸை மதிப்பிட முடியவில்லை.",
+
   "Farm Auction": "ஃபார்ம் ஏலம்",
   "Farm Auction Winner, add liquidity at your own risk.": "ஃபார்ம் ஏல வெற்றியாளர், உங்கள் சொந்த இடரில் லிக்விடிட்டியைச் சேர்க்கவும்.",
   "Currently showing charts from Chainlink oracle": "தற்போது செயின்லிங்க் ஆரக்கிளில் இருந்து விளக்கப்படங்களைக் காட்டுகிறது",
@@ -1562,16 +1561,16 @@
   "Play Now": "இப்போது விளையாடு",
   "Litepaper": "லைட்பேப்பர்",
   "Win $%prize% in Lottery": "லாட்டரியில் $%prize% வெல்க",
-  "Approve was called unnecessarily": "அங்கீகரிப்பு தேவையில்லாமல் அழைக்கப்பட்டது",
+
   "No token": "டோக்கன் இல்லை",
   "Cannot find contract of the token %tokenAddress%": "%tokenAddress% டோக்கனின் ஒப்பந்தத்தை கண்டுபிடிக்க முடியவில்லை",
-  "Missing amount to approve": "அங்கீகரிக்க தொகை இல்லை",
+
   "No spender": "செலவு செய்பவர் இல்லை",
   "Missing liquidity amount": "லிக்விடிட்டி தொகை இல்லை",
   "Missing currency amounts": "கரன்சி தொகைகள் இல்லை",
   "Missing tokens": "டோக்கன்கள் இல்லை",
   "Could not wrap": "வ்ராப் செய்ய முடியவில்லை",
-  "Attempting to confirm without approval or a signature": "ஒப்புதல் அல்லது கையொப்பம் இல்லாமல் உறுதிப்படுத்த முயற்சிக்கிறது",
+
   "This transaction would fail": "இந்தப் பரிவர்த்தனை தோல்வியடையும்",
   "Place a limit order to trade at a set price": "நிர்ணயிக்கப்பட்ட விலையில் டிரேட் செய்ய, லிமிட் ஆர்டரைச் செய்யவும்",
   "Place an Order": "ஓர் ஆர்டர் செய்யவும்",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "%chain% -க்கு மாற்று",
   "Stay on %chain%": "%chain% -இலேயே இரு",
   "Go to Pool": "பூலுக்குச் செல்",
-  "Approve %symbol%": "%symbol% -ஐ அங்கீகரி",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "%amountA% %symbolA% மற்றும் %amountB% %symbolB% -ஐச் சேர்",
   "Remove %amount% %symbol%": "%amount% %symbol% -ஐ அகற்று",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "%amountA% %symbolA% மற்றும் %amountB% %symbolB% -ஐ அகற்று",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE, நீங்கள் SweepStakes ஃபார்ம்களில் உங்கள் மகசூலை 2x வரை அதிகரிக்க அனுமதிக்கிறது.",
 
   "KLAY staking expired": "KLAY ஸ்டேக்கிங் காலாவதியானது",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "போதிய டோக்கன் அலவன்ஸ் இல்லை. அங்கீகரிக்க ”இயக்கு” என்பதைக் கிளிக் செய்யவும்.",
 
   "Unable to supply": "வழங்க முடியவில்லை",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "லிக்விடிட்டியைச் சேர்ப்பதன் மூலம், டிரேடிங் ஜோடியில் உங்கள் பங்கிற்கு சரிவிகிதமாக இந்த ஜோடியிலுள்ள எல்லா டிரேடுகளின் கட்டணங்களில் இருந்து 50% ஈட்டுவீர்கள். கட்டணம் ஜோடியில் சேர்க்கப்பட்டு, நிகழ்நேரத்தில் பெருகுகின்றன மற்றும் உங்கள் லிக்விடிட்டியை வித்டிரா செய்வதன் மூலம் கிளைம் செய்யலாம். ஸ்டேபிள்ஸ்வாப் கட்டணங்கள் பற்றிய கூடுதல் தகவலுக்கு கிளிக் செய்யவும்",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "உங்கள் வாலெட்டுக்கு நிதி அனுப்பப்பட்டது",
   "Claim Request time": "கிளைம் கோரிக்கை நேரம்",
   "State": "நிலை",
-  "Pending Approval": "நிலுவை ஒப்புதல்",
+
   "Rejected": "நிராகரித்தது",
   "Latest rewards": "சமீபத்திய வெகுமதிகள்",
   "Historical Claim": "வரலாற்றுப்பூர்வக் கிளைம்",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

@@ -3,7 +3,6 @@ import { ChainId } from '@sweepstakes/chains'
 import { Order } from '@gelatonetwork/limit-orders-lib'
 
 export type TransactionType =
-  | 'approve'
   | 'swap'
   | 'wrap'
   | 'add-liquidity'
@@ -70,7 +69,6 @@ export const addTransaction = createAction<{
   chainId: ChainId
   hash: string
   from: string
-  approval?: { tokenAddress: string; spender: string }
   claim?: { recipient: string }
   summary?: string
   translatableSummary?: { text: string; data?: Record<string, string | number> }

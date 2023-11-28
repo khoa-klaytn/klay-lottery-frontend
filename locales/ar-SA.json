@@ -148,7 +148,6 @@
   "Insufficient KLAY balance": "رصيد KLAY غير كافٍ",
   "Choose collectible": "اختيار العنصر القابل للتحصيل",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "اختر صورة ملف تعريفي من العناصر القابلة للتحصيل المؤهلة (NFT) في محفظتك، وترد أدناه.",
-  "Only approved SweepStakes Collectibles can be used.": "وحدها عناصر SweepStakes القابلة للتحصيل المعتمدة يمكن استخدامها.",
   "Allow collectible to be locked": "السماح بتجميد العنصر القابل للتحصيل",
   "Join a Team": "الانضمام لفريق",
   "Complete Profile": "إكمال الملف التعريفي",
@@ -436,7 +435,6 @@
   "Total cost: 1.5 KLAY": "إجمالي التكلفة: 1.5 KLAY",
   "Cost: %num% KLAY": "التكلفة: %num% من KLAY",
   "our swap page": "صفحة المبادلة",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "يمكنك تغيير صورة ملفك التعريفي لاحقًا إذا حصلت على عنصر SweepStakes قابل للتحصيل معتمد.",
   "Every profile starts by making a “starter” collectible (NFT).": "يبدأ كل ملف تعريفي بإنشاء عنصر \"أولي\" قابل للتحصيل (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "لم نتمكن من العثور على أي عناصر SweepStakes قابلة للتحصيل في محفظتك.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "أنت بحاجة إلى عنصر SweepStakes القابل للتحصيل للانتهاء من إعداد ملفك التعريفي. إذا بعت أو حوَّلت العنصر الأولي القابل للتحصيل إلى محفظة أخرى، فستحتاج إلى استعادته أو الحصول على واحد جديد بطريقة ما. لا يمكنك إنشاء عنصر أولي جديد باستخدام عنوان المحفظة هذا.",
@@ -946,8 +944,7 @@
   "Disconnect Wallet": "قطع اتصال المحفظة",
   "Ending in": "ينتهي في",
   "Next auction": "المزاد التالي",
-  "Contract approved - you can now place your bid!": "تم اعتماد العقد - يمكنك الآن تقديم عطاءك!",
-  "Contract approved - you can now reclaim your bid!": "تم اعتماد العقد - يمكنك الآن استرداد عطاءك!",
+
   "Bid placed!": "تم تقديم العطاء!",
   "Bid reclaimed!": "تم استرداد العطاء!",
   "Reclaim Bid": "استرداد العطاء",
@@ -1183,7 +1180,7 @@
   "Please enable WBNB spending in your wallet": "يُرجى تمكين إنفاق WBNB في محفظتك",
   "Please confirm the transaction in your wallet": "يُرجى تأكيد المعاملة في محفظتك",
   "Your NFTs": "رموز NFT الخاصة بك",
-  "Contract approved - you can now buy NFT with WBNB!": "تم اعتماد العقد - يمكنك الآن شراء NFT باستخدام WBNB!",
+
   "Your NFT has been sent to your wallet": "تم إرسال NFT الخاص بك إلى محفظتك",
   "Transaction Confirmed": "تم تأكيد المعاملة",
   "Activity": "النشاط",
@@ -1193,7 +1190,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "ستتم المبيعات بقيمة WBNB. ويمكنك مبادلة WBNB بـ BNB بنسبة 1:1 مجانًا مع sweepstakes.",
   "Enable Listing": "تمكين القوائم",
   "Please enable your NFT to be sent to the market": "يُرجى تمكين NFT الخاص بك ليتم إرساله إلى السوق",
-  "Contract approved - you can now put your NFT for sale!": "تم اعتماد العقد - يمكنك الآن عرض NFT الخاص بك للبيع!",
+
   "Adjust Sale Price": "تعديل سعر البيع",
   "Set Price": "ضبط السعر",
   "Input New Sale Price": "إدخال سعر بيع جديد",
@@ -1543,7 +1540,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "ظهرت مشكلة غير متوقعة في تقدير الوقود. يُرجى إعادة المحاولة.",
   "Swap failed: %message%": "فشلت المبادلة: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "خطأ غير متوقع. لا يمكن تقدير الوقود المطلوب للمبادلة.",
-  "Unexpected error. Could not estimate gas for the approve.": "خطأ غير متوقع. لا يمكن تقدير الوقود المطلوب للموافقة.",
+
   "Farm Auction": "مزاد المزرعة",
   "Farm Auction Winner, add liquidity at your own risk.": "الفائز في مزاد المزرعة، إضافة سيولة على مسؤوليتك الشخصية.",
   "Currently showing charts from Chainlink oracle": "عرض المخططات حاليًا من مقدر التكاليف Chainlink",
@@ -1559,16 +1556,16 @@
   "Play Now": "لعب الآن",
   "Litepaper": "الورقة البيضاء الموجزة",
   "Win $%prize% in Lottery": "اربح %prize% دولار في اليانصيب",
-  "Approve was called unnecessarily": "استدعيت الموافقة بلا داعٍ",
+
   "No token": "لا توجد رموز مميزة",
   "Cannot find contract of the token %tokenAddress%": "لا يمكن العثور على عقد الرمز المميز %tokenAddress%",
-  "Missing amount to approve": "المقدار الناقص اللازم للموافقة",
+
   "No spender": "لا يوجد مشتري",
   "Missing liquidity amount": "مقدار ناقص من السيولة",
   "Missing currency amounts": "مبالغ ناقصة مقومة بالعملات",
   "Missing tokens": "رموز مميزة ناقصة",
   "Could not wrap": "تعذر التغليف",
-  "Attempting to confirm without approval or a signature": "محاولة التأكيد بدون موافقة أو توقيع",
+
   "This transaction would fail": "ستفشل المعاملة",
   "Place a limit order to trade at a set price": "تقدم بطلب محدد السعر لكي تتداول بسعر محدد",
   "Place an Order": "تقدم بطلب",
@@ -1922,7 +1919,7 @@
   "Switch to %chain%": "تبديل إلى %chain%",
   "Stay on %chain%": "البقاء في %chain%",
   "Go to Pool": "ذهاب إلى التجمع",
-  "Approve %symbol%": "اعتماد %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "أضف %amountA% %symbolA% و%amountB% %symbolB%",
   "Remove %amount% %symbol%": "أزل %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "أزل %amountA% %symbolA% و%amountB% %symbolB%",
@@ -2075,7 +2072,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "يسمح لك bCAKE بتعزيز العائد في مزارع SweepStakes بمقدار يصل إلى 2x.",
 
   "KLAY staking expired": "انتهت صلاحية رهن KLAY",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "مخصص الرمز المميز غير كافٍ. انقر فوق \"تمكين\" لاعتماده.",
 
   "Unable to supply": "تعذر التوريد",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "من خلال إضافة سيولة ستكسب 50% من رسوم جميع التداولات على هذا الزوج بما يتناسب مع حصتك من زوج التداول. وتتم إضافة الرسوم إلى الزوج، وتتراكم في الوقت الفعلي ويمكن المطالبة بها من خلال سحب السيولة الخاصة بك. لمزيد من المعلومات حول رسوم Stableswap انقر فوق",
@@ -2550,7 +2546,7 @@
   "Funds sent to your wallet": "تم إرسال الأموال إلى المزرعة",
   "Claim Request time": "وقت طلب المطالبة",
   "State": "الحالة",
-  "Pending Approval": "في انتظار الموافقة",
+
   "Rejected": "مرفوضة",
   "Latest rewards": "المكافآت الأخيرة",
   "Historical Claim": "مطالبة تاريخية",
@@ -2696,7 +2692,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "العائد في المحفظة",
   "Enable spending %symbol%": "تمكين إنفاق %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "إذا كانت المحفظة تتطلب منك إدخال عدد الرموز المميزة التي تريد اعتمادها، فيمكنك إدخال عدد أكبر من أو يساوي مقدار الرموز المميزة التي تقوم بمبادلتها.",
+
   "Why": "لماذا",
   "approving": "جارٍ الاعتماد",
   "this?": "هل هذا؟",
@@ -2704,9 +2700,7 @@
   "Swapping thru:": "مبادلة من خلال:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "لماذا يلزم اعتماد إعادة الضبط",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

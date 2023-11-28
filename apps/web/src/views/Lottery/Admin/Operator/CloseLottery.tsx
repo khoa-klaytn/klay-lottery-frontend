@@ -1,7 +1,6 @@
 import { LotteryStatus } from 'config/constants/types'
 import { useCallback, useState } from 'react'
 import { handleCustomError } from 'utils/viem'
-import { BaseError } from 'viem'
 import { Button } from '@sweepstakes/uikit'
 import { EMsg } from '../EMsg'
 

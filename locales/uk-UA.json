@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Занизький баланс KLAY",
   "Choose collectible": "Вибір колекційного токена",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Виберіть аватар із наведених нижче доступних колекційних (невзаємозамінних) токенів у вашому гаманці.",
-  "Only approved SweepStakes Collectibles can be used.": "Можна використовувати лише схвалені колекційні токени SweepStakes.",
+
   "Allow collectible to be locked": "Дозволити блокування колекційних токенів",
   "Join a Team": "Приєднання до команди",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Загальна вартість: 1,5 KLAY",
   "Cost: %num% KLAY": "Вартість: %num% KLAY",
   "our swap page": "нашій сторінці обміну.",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Змінити аватар можна буде пізніше на інший схвалений колекційний токен SweepStakes.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Кожен профіль починається з особливого колекційного невзаємозамінного токена.",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "У вашому гаманці немає колекційних токенів SweepStakes.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Щоб завершити налаштування профілю, потрібен колекційний токен SweepStakes. Якщо ви продали свій початковий колекційний токен або перевели його в інший гаманець, потрібно його повернути або в якийсь спосіб отримати новий. Створити новий початковий токен із цією адресою гаманця не можна.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Відключити гаманець",
   "Ending in": "Завершується через",
   "Next auction": "Наступний аукціон",
-  "Contract approved - you can now place your bid!": "Контракт схвалено – тепер ви можете розмістити свою ставку!",
-  "Contract approved - you can now reclaim your bid!": "Контракт схвалено – тепер ви можете повернути свою ставку!",
+
   "Bid placed!": "Ставку розміщено!",
   "Bid reclaimed!": "Ставку повернено!",
   "Reclaim Bid": "Повернути ставку",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Активуйте можливість оплати за допомогою WBNB у своєму гаманці",
   "Please confirm the transaction in your wallet": "Підтвердьте транзакцію у своєму гаманці",
   "Your NFTs": "Ваші невзаємозамінні токени",
-  "Contract approved - you can now buy NFT with WBNB!": "Контракт схвалено – тепер ви можете купляти невзаємозамінні токени за допомогою WBNB!",
+
   "Your NFT has been sent to your wallet": "Невзаємозамінний токен надіслано у ваш гаманець",
   "Transaction Confirmed": "Транзакцію підтверджено",
   "Activity": "Дії",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Продажі оплачуються в WBNB. З SweepStakes ви можете обміняти WBNB на BNB безкоштовно за курсом 1:1.",
   "Enable Listing": "Активувати оголошення",
   "Please enable your NFT to be sent to the market": "Активуйте невзаємозамінний токен, який буде надіслано на ринок",
-  "Contract approved - you can now put your NFT for sale!": "Контракт схвалено – тепер ви можете виставити свій невзаємозамінний токен на продаж!",
+
   "Adjust Sale Price": "Змінити ціну продажу",
   "Set Price": "Установити ціну",
   "Input New Sale Price": "Введіть нову ціну продажу",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Виникла неочікувана проблема під час оцінювання обсягу газу. Спробуйте ще раз.",
   "Swap failed: %message%": "Помилка обміну: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Сталася неочікувана помилка. Не вдалось оцінити обсяг газу для обміну.",
-  "Unexpected error. Could not estimate gas for the approve.": "Сталася неочікувана помилка. Не вдалось оцінити обсяг газу для схвалення.",
+
   "Farm Auction": "Аукціон ферм",
   "Farm Auction Winner, add liquidity at your own risk.": "Переможець аукціону ферм, додавайте ліквідність на власний ризик.",
   "Currently showing charts from Chainlink oracle": "Зараз показано діаграми від оракула Chainlink",
@@ -1562,16 +1561,16 @@
   "Play Now": "Грати зараз",
   "Litepaper": "Резюме технічного опису",
   "Win $%prize% in Lottery": "Виграйте %prize% $ у лотереї",
-  "Approve was called unnecessarily": "Підтвердження викликано без необхідності",
+
   "No token": "Токена немає",
   "Cannot find contract of the token %tokenAddress%": "Не вдалося знайти контракт токена %tokenAddress%",
-  "Missing amount to approve": "Відсутня сума на схвалення",
+
   "No spender": "Немає платника",
   "Missing liquidity amount": "Немає суми ліквідності",
   "Missing currency amounts": "Немає сум валют",
   "Missing tokens": "Немає токенів",
   "Could not wrap": "Не вдалось обгорнути",
-  "Attempting to confirm without approval or a signature": "Спроба підтвердити без схвалення чи підпису",
+
   "This transaction would fail": "Цю транзакцію не вдасться виконати",
   "Place a limit order to trade at a set price": "Щоб торгувати за зазначеною ціною, розмістіть лімітний ордер",
   "Place an Order": "Розмістити ордер",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Перемкнути на %chain%",
   "Stay on %chain%": "Залишитися в %chain%",
   "Go to Pool": "Перейти до пулу",
-  "Approve %symbol%": "Схвалити %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Додати %amountA% %symbolA% і %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Вилучити %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Вилучити %amountA% %symbolA% і %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE дає змогу збільшувати виручку на фермах SweepStakes максимум у два рази.",
 
   "KLAY staking expired": "Термін дії стейкінгу KLAY завершився",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Недостатній допуск токена. Клацніть «Увімкнути», щоб схвалити.",
 
   "Unable to supply": "Не вдалося внести",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Додавши ліквідність, ви почнете заробляти 50% комісій від усіх торгових операцій пропорційно вашій частці в цій торговій парі. Комісії додаються в пару й накопичуються в реальному часі, і їх можна отримати, вивівши вашу ліквідність. Щоб переглянути докладні відомості про Stableswap, клацніть",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Кошти надіслані на ваш гаманець",
   "Claim Request time": "Час запиту на отримання",
   "State": "Стан",
-  "Pending Approval": "В очікуванні підтвердження",
+
   "Rejected": "Відхилено",
   "Latest rewards": "Останні винагороди",
   "Historical Claim": "Історія отримань",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

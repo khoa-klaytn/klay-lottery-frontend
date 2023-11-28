@@ -27,7 +27,6 @@ const whitelist = [
   'Swap %inputAmount% %inputSymbol% for min. %outputAmount% %outputSymbol% to %recipientAddress%',
   'Unwrap %amount% %wrap% to %native%',
   'Wrap %amount% %native% to %wrap%',
-  'Approve %symbol%',
   'Add %amountA% %symbolA% and %amountB% %symbolB%',
   'Remove %amount% %symbol%',
   'Remove %amountA% %symbolA% and %amountB% %symbolB%',

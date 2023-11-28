@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Saldo KLAY tidak cukup",
   "Choose collectible": "Pilih kolektibel",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Pilih gambar profil dari kolektibel yang layak (NFT) di dompet Anda, diperlihatkan di bawah ini.",
-  "Only approved SweepStakes Collectibles can be used.": "Hanya Kolektibel SweepStakes yang disetujui yang dapat digunakan.",
+
   "Allow collectible to be locked": "Izinkan kolektibel untuk dikunci",
   "Join a Team": "Bergabung ke Tim",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Total biaya: 1,5 KLAY",
   "Cost: %num% KLAY": "Biaya: %num% KLAY",
   "our swap page": "halaman penukaran kami",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Anda dapat mengganti gambar profil nanti jika mendapatkan Kolektibel SweepStakes yang disetujui lagi.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Setiap profil memulai dengan membuat kolektibel “starter” (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Kami tidak dapat menemukan Kolektibel SweepStakes apa pun di dalam dompet Anda.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Anda memerlukan Kolektibel SweepStakes untuk menyelesaikan pengaturan profil Anda. Jika Anda telah menjual atau mentransfer kolektibel starter Anda ke dompet lain, Anda perlu mengambilnya kembali atau mendapatkan yang baru dengan suatu cara. Anda tidak dapat membuat starter baru dengan alamat dompet ini.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Lepaskan Dompet",
   "Ending in": "Berakhir dalam",
   "Next auction": "Lelang selanjutnya",
-  "Contract approved - you can now place your bid!": "Kontrak disetujui — kini Anda bisa mengajukan tawaran!",
-  "Contract approved - you can now reclaim your bid!": "Kontrak disetujui — kini Anda bisa mengeklaim kembali tawaran Anda!",
+
   "Bid placed!": "Tawaran diajukan!",
   "Bid reclaimed!": "Tawaran diklaim kembali!",
   "Reclaim Bid": "Klaim Kembali Tawaran",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Harap aktifkan pembelanjaan WBNB di dompet Anda",
   "Please confirm the transaction in your wallet": "Silakan konfirmasi transaksi ini di dompet Anda",
   "Your NFTs": "NFT Anda",
-  "Contract approved - you can now buy NFT with WBNB!": "Kontrak disetujui — kini Anda bisa membeli NFT dengan WBNB!",
+
   "Your NFT has been sent to your wallet": "NFT Anda telah dikirimkan ke dompet Anda",
   "Transaction Confirmed": "Transaksi Dikonfirmasi",
   "Activity": "Aktivitas",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Penjualan dalam WBNB. Anda dapat menukar WBNB ke BNB 1:1 secara gratis dengan SweepStakes.",
   "Enable Listing": "Aktifkan Daftar",
   "Please enable your NFT to be sent to the market": "Silakan aktifkan NFT Anda agar dapat dikirimkan ke pasar",
-  "Contract approved - you can now put your NFT for sale!": "Kontrak disetujui — kini Anda bisa memasukkan NFT Anda ke penjualan!",
+
   "Adjust Sale Price": "Sesuaikan Harga Penjualan",
   "Set Price": "Tetapkan Harga",
   "Input New Sale Price": "Masukkan Harga Penjualan Baru",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Ada masalah tak terduga dengan kegiatan estimasi biaya ini. Silakan coba kembali.",
   "Swap failed: %message%": "Pertukaran gagal: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Eror tak terduga. Tidak dapat mengestimasi biaya untuk pertukaran.",
-  "Unexpected error. Could not estimate gas for the approve.": "Eror tak terduga. Tidak dapat mengestimasi biaya untuk persetujuan.",
+
   "Farm Auction": "Lelang Farm",
   "Farm Auction Winner, add liquidity at your own risk.": "Pemenang Lelang Farm, tambahkan likuiditas dengan risiko sendiri.",
   "Currently showing charts from Chainlink oracle": "Saat ini menampilkan bagan dari oracle Chainlink",
@@ -1562,16 +1561,16 @@
   "Play Now": "Main Sekarang",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Rebut $%prize% hadiah Lotre",
-  "Approve was called unnecessarily": "Persetujuan diminta tanpa keperluan",
+
   "No token": "Tidak ada token",
   "Cannot find contract of the token %tokenAddress%": "Tidak dapat menemukan kontrak token %tokenAddress%",
-  "Missing amount to approve": "Tidak ada jumlah untuk disetujui",
+
   "No spender": "Tidak ada pembeli",
   "Missing liquidity amount": "Tidak ada jumlah likuiditas",
   "Missing currency amounts": "Tidak ada jumlah mata uang",
   "Missing tokens": "Tidak ada token",
   "Could not wrap": "Tidak dapat menyelesaikan",
-  "Attempting to confirm without approval or a signature": "Berusaha mengonfirmasi tanpa persetujuan atau tanda tangan",
+
   "This transaction would fail": "Transaksi ini akan gagal",
   "Place a limit order to trade at a set price": "Masukkan order berbatas untuk berdagang pada harga tertentu",
   "Place an Order": "Masukkan Order",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Beralih ke %chain%",
   "Stay on %chain%": "Tetap di %chain%",
   "Go to Pool": "Pergi ke Pool",
-  "Approve %symbol%": "Setujui %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Tambahkan %amountA% %symbolA% dan %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Hapus %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Hapus %amountA% %symbolA% dan %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE memungkinkan Anda meningkatkan hasil di Farm SweepStakes sebesar hingga 2x.",
 
   "KLAY staking expired": "Penumpukan KLAY telah kedaluwarsa",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Izin token tidak memadai. Klik \"Aktifkan\" untuk menyetujui.",
 
   "Unable to supply": "Tidak dapat menyuplai",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Dengan menambahkan likuiditas, Anda akan menghasilkan 50% dari biaya semua perdagangan atas pasangan ini, proporsional dengan bagian Anda dalam pasangan perdagangan ini. Biaya akan ditambahkan ke pasangan ini, akrual dalam waktu nyata, dan dapat diklaim dengan menarik likuiditas Anda. Untuk mendapatkan informasi lebih lanjut tentang biaya StableSwap, klik",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Dana terkirim ke dompet Anda",
   "Claim Request time": "Waktu Permintaan Klaim",
   "State": "Status",
-  "Pending Approval": "Menunggu Persetujuan",
+
   "Rejected": "Ditolak",
   "Latest rewards": "Hadiah terbaru",
   "Historical Claim": "Klaim Historis",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

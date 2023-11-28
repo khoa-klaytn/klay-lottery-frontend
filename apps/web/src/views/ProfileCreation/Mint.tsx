@@ -1,37 +1,29 @@
 import { useTranslation } from '@sweepstakes/localization'
 import { Card, CardBody, Heading, Text, useToast } from '@sweepstakes/uikit'
-import ApproveConfirmButtons from 'components/ApproveConfirmButtons'
+import ConfirmButtons from 'components/ConfirmButtons'
 import { FetchStatus } from 'config/constants/types'
 import { formatUnits } from 'viem'
-import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
+import useConfirmTransaction from 'hooks/useConfirmTransaction'
 import { useBSCCakeBalance } from 'hooks/useTokenBalance'
-import { bscTokens } from '@sweepstakes/tokens'
 import { MINT_COST } from './config'
 import useProfileCreation from './contexts/hook'
 import NextStepButton from './NextStepButton'
 
 const Mint: React.FC<React.PropsWithChildren> = () => {
-  const { actions, allowance } = useProfileCreation()
+  const { actions } = useProfileCreation()
   const { toastSuccess } = useToast()
 
   const { t } = useTranslation()
   const { balance: cakeBalance, fetchStatus } = useBSCCakeBalance()
   const hasMinimumCakeRequired = fetchStatus === FetchStatus.Fetched && cakeBalance >= MINT_COST
 
-  const { isApproving, isApproved, isConfirmed, isConfirming, handleApprove, handleConfirm } =
-    useApproveConfirmTransaction({
-      token: bscTokens.cake,
-      minAmount: MINT_COST,
-      targetAmount: allowance,
-      onConfirm: () => Promise.resolve({} as any),
-      onApproveSuccess: () => {
-        toastSuccess(t('Enabled'), t("Press 'confirm' to mint this NFT"))
-      },
-      onSuccess: () => {
-        toastSuccess(t('Success'), t('You have minted your starter NFT'))
-        actions.nextStep()
-      },
-    })
+  const { isConfirmed, isConfirming, handleConfirm } = useConfirmTransaction({
+    onConfirm: () => Promise.resolve({} as any),
+    onSuccess: () => {
+      toastSuccess(t('Success'), t('You have minted your starter NFT'))
+      actions.nextStep()
+    },
+  })
 
   return (
     <>
@@ -44,7 +36,7 @@ const Mint: React.FC<React.PropsWithChildren> = () => {
       <Text as="p">{t('Every profile starts by making a “starter” collectible (NFT).')}</Text>
       <Text as="p">{t('This starter will also become your first profile picture.')}</Text>
       <Text as="p" mb="24px">
-        {t('You can change your profile pic later if you get another approved SweepStakes Collectible.')}
+        {t('You can change your profile pic later if you get another SweepStakes Collectible.')}
       </Text>
       <Card mb="24px">
         <CardBody>
@@ -62,12 +54,9 @@ const Mint: React.FC<React.PropsWithChildren> = () => {
               {t('A minimum of %num% KLAY is required', { num: formatUnits(MINT_COST, 18) })}
             </Text>
           )}
-          <ApproveConfirmButtons
-            isApproveDisabled={isConfirmed || isConfirming || isApproved}
-            isApproving={isApproving}
-            isConfirmDisabled={!isApproved || isConfirmed || !hasMinimumCakeRequired}
+          <ConfirmButtons
+            isConfirmDisabled={isConfirmed || !hasMinimumCakeRequired}
             isConfirming={isConfirming}
-            onApprove={handleApprove}
             onConfirm={handleConfirm}
           />
         </CardBody>

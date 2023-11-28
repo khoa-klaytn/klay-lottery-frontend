@@ -30,7 +30,6 @@ export function useTransactionAdder(): (
   customData?: {
     summary?: string
     translatableSummary?: { text: string; data?: Record<string, string | number> }
-    approval?: { tokenAddress: string; spender: string }
     claim?: { recipient: string }
     type?: TransactionType
     order?: Order
@@ -58,7 +57,6 @@ export function useTransactionAdder(): (
       {
         summary,
         translatableSummary,
-        approval,
         claim,
         type,
         order,
@@ -67,7 +65,6 @@ export function useTransactionAdder(): (
         summary?: string
         translatableSummary?: { text: string; data?: Record<string, string | number> }
         claim?: { recipient: string }
-        approval?: { tokenAddress: string; spender: string }
         type?: TransactionType
         order?: Order
         nonBscFarm?: NonBscFarmTransactionType
@@ -93,7 +90,6 @@ export function useTransactionAdder(): (
           hash,
           from: account,
           chainId,
-          approval,
           summary,
           translatableSummary,
           claim,
@@ -180,27 +176,6 @@ export function useIsTransactionPending(transactionHash?: string): boolean {
  */
 export function isTransactionRecent(tx: TransactionDetails): boolean {
   return Date.now() - tx.addedTime < 86_400_000
-}
-
-// returns whether a token has a pending approval transaction
-export function useHasPendingApproval(tokenAddress: string | undefined, spender: string | undefined): boolean {
-  const allTransactions = useAllActiveChainTransactions()
-  return useMemo(
-    () =>
-      typeof tokenAddress === 'string' &&
-      typeof spender === 'string' &&
-      Object.keys(allTransactions).some((hash) => {
-        const tx = allTransactions[hash]
-        if (!tx) return false
-        if (tx.receipt) {
-          return false
-        }
-        const { approval } = tx
-        if (!approval) return false
-        return approval.spender === spender && approval.tokenAddress === tokenAddress && isTransactionRecent(tx)
-      }),
-    [allTransactions, spender, tokenAddress],
-  )
 }
 
 // we want the latest one to come first, so return negative if a is after b

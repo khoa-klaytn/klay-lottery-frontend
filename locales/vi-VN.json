@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Số dư KLAY không đủ",
   "Choose collectible": "Chọn ảnh sưu tập",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Chọn một ảnh hồ sơ từ các ảnh sưu tập hợp lệ (NFT) trong ví của bạn, như được thể hiện bên dưới.",
-  "Only approved SweepStakes Collectibles can be used.": "Chỉ sử dụng được Món thu thập SweepStakes đã được phê duyệt.",
+
   "Allow collectible to be locked": "Cho phép khoá ảnh sưu tập",
   "Join a Team": "Gia nhập một nhóm",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Tổng chi phí: 1,5 KLAY",
   "Cost: %num% KLAY": "Chi phí: %num% KLAY",
   "our swap page": "trang hoán đổi của chúng tôi",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Bạn có thể thay đổi ảnh hồ sơ sau đó nếu bạn có được một Ảnh sưu tập SweepStakes được phê duyệt khác.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Mọi hồ sơ đều bắt đầu bằng cách tạo ra một ảnh sưu tập \"khởi điểm\" (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Chúng tôi không thể tìm thấy Ảnh sưu tập SweepStakes nào trong ví của bạn.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Bạn cần một Ảnh sưu tập SweepStakes để hoàn thành việc thiết lập hồ sơ. Nếu bạn đã bán hay chuyển nhượng ảnh sưu tập khởi điểm sang ví khác, bạn sẽ cần lấy nó lại hoặc bằng cách này hay cách khác nhận một ảnh mới. Bạn không thể có ảnh sưu tập khởi điểm mới với địa chỉ ví này.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Ngắt kết nối Ví",
   "Ending in": "Kết thúc bằng số",
   "Next auction": "Lần đấu giá tiếp theo",
-  "Contract approved - you can now place your bid!": "Hợp đồng đã được phê duyệt - bây giờ bạn có thể đặt cọc!",
-  "Contract approved - you can now reclaim your bid!": "Hợp đồng đã được phê duyệt - bây giờ bạn có thể lấy lại cọc!",
+
   "Bid placed!": "Cọc đã được đặt!",
   "Bid reclaimed!": "Cọc đã được lấy lại!",
   "Reclaim Bid": "Lấy lại Cọc",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Vui lòng kích hoạt chi tiêu WBNB trong ví của bạn",
   "Please confirm the transaction in your wallet": "Vui lòng xác nhận giao dịch trong ví của bạn",
   "Your NFTs": "NFT của bạn",
-  "Contract approved - you can now buy NFT with WBNB!": "Hợp đồng đã được phê duyệt - giờ đây bạn có thể mua NFT bằng WBNB!",
+
   "Your NFT has been sent to your wallet": "NFT đã được gửi đến ví của bạn",
   "Transaction Confirmed": "Giao dịch đã được xác nhận",
   "Activity": "Hoạt động",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Việc chào bán được thực hiện bằng WBNB. Bạn có thể hoán đổi 1:1 miễn phí WBNB sang BNB với SweepStakes.",
   "Enable Listing": "Cho phép Niêm yết",
   "Please enable your NFT to be sent to the market": "Vui lòng cho phép NFT của bạn được gửi đến thị trường",
-  "Contract approved - you can now put your NFT for sale!": "Hợp đồng đã được phê duyệt - giờ đây bạn có thể bày bán NFT của mình!",
+
   "Adjust Sale Price": "Điều chỉnh giá bán",
   "Set Price": "Đặt giá",
   "Input New Sale Price": "Nhập giá bán mới",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Có vấn đề ngoài dự kiến khi ước tính phí ga. Vui lòng thử lại.",
   "Swap failed: %message%": "Hoán đổi không thành công: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Lỗi ngoài dự kiến. Không thể ước tính phí ga cho giao dịch hoán đổi.",
-  "Unexpected error. Could not estimate gas for the approve.": "Lỗi ngoài dự kiến. Không thể ước tính phí năng lượng cho việc phê duyệt.",
+
   "Farm Auction": "Đấu giá trang trại",
   "Farm Auction Winner, add liquidity at your own risk.": "Người thắng đấu giá trang trại, bạn tự chịu rủi ro khi bổ sung thanh khoản.",
   "Currently showing charts from Chainlink oracle": "Đang hiển thị biểu đồ từ oracle Chainlink",
@@ -1562,16 +1561,16 @@
   "Play Now": "Hãy chơi ngay",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Thắng %prize% $ trong Bốc thăm",
-  "Approve was called unnecessarily": "Lệnh phê duyệt đã được gọi một cách không cần thiết",
+
   "No token": "Không có token",
   "Cannot find contract of the token %tokenAddress%": "Không tìm thấy hợp đồng của token %tokenAddress%",
-  "Missing amount to approve": "Thiếu số lượng cần phê duyệt",
+
   "No spender": "Không có người chi tiêu",
   "Missing liquidity amount": "Thiếu lượng thanh khoản",
   "Missing currency amounts": "Thiếu số tiền",
   "Missing tokens": "Thiếu token",
   "Could not wrap": "Không thể bọc",
-  "Attempting to confirm without approval or a signature": "Đang cố gắng xác nhận mà không có phê duyệt hay chữ ký",
+
   "This transaction would fail": "Giao dịch này sẽ không thành công",
   "Place a limit order to trade at a set price": "Đặt một lệnh giới hạn để giao dịch ở mức giá đã quy định",
   "Place an Order": "Đặt lệnh",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Chuyển sang %chain%",
   "Stay on %chain%": "Ở lại %chain%",
   "Go to Pool": "Vào Quỹ",
-  "Approve %symbol%": "Phê duyệt %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Thêm %amountA% %symbolA% và %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Xóa %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Xóa %amountA% %symbolA% và %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE cho phép bạn tăng lợi nhuận của mình trong các Trang trại SweepStakes đến gấp 2 lần.",
 
   "KLAY staking expired": "Đặt cọc KLAY đã hết hạn",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Không đủ định mức cho phép token. Nhấn \"Bật\" để phê duyệt.",
 
   "Unable to supply": "Không thể cung ứng",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Thông qua việc bổ sung thanh khoản, bạn sẽ kiếm được 50% từ phí của tất cả các giao dịch trong cặp tiền tệ này, tỷ lệ với cổ phần của bạn trong cặp giao dịch. Các khoản phí sẽ được thêm vào cặp, được tích lũy trong thời gian thực và có thể được nhận bằng cách rút lại thanh khoản của bạn. Để biết thêm thông tin về phí Stableswap, hãy nhấn",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Tiền đã được gửi vào ví của bạn",
   "Claim Request time": "Thời gian yêu cầu nhận",
   "State": "Trạng thái",
-  "Pending Approval": "Đang chờ duyệt",
+
   "Rejected": "Đã từ chối",
   "Latest rewards": "Phần thưởng gần nhất",
   "Historical Claim": "Lịch sử nhận",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

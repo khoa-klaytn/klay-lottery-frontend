@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Yetersiz KLAY bakiyesi",
   "Choose collectible": "Toplanabilir öğe seçin",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Aşağıda gösterilen cüzdanınızdaki uygun toplanabilir öğelerden (NFT) bir profil resmi seçin.",
-  "Only approved SweepStakes Collectibles can be used.": "Sadece onaylı SweepStakes Toplanabilir Öğeleri kullanılabilir.",
+
   "Allow collectible to be locked": "Toplanabilir öğenin kilitlenmesine izin verin",
   "Join a Team": "Bir Takıma Katılın",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Toplam maliyet: 1,5 KLAY",
   "Cost: %num% KLAY": "Maliyet: %num% KLAY",
   "our swap page": "değiştirme sayfamızı kullanabilirsiniz.",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Başka bir onaylı SweepStakes Toplanabilir Öğesi alırsanız daha sonra profil resminiz de değişebilir.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Her profil, bir toplanabilir \"başlangıç\" öğesi (NFT) oluşturarak başlar.",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Cüzdanınızda herhangi bir SweepStakes Toplanabilri Öğesi bulamadık.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Profilinizi oluşturmayı tamamlamak için bir SweepStakes Toplanabilir Öğesine ihtiyacınız var. Toplanabilir başlangıç öğenizi başka bir cüzdana sattıysanız veya aktardıysanız, geri almanız veya bir şekilde yeni bir tane almanız gerekir. Bu cüzdan adresi ile yeni bir başlangıç yapamazsınız.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Cüzdan Bağlantısını Kes",
   "Ending in": "Bitmesine",
   "Next auction": "Sonraki müzayede",
-  "Contract approved - you can now place your bid!": "Sözleşme onaylandı, artık teklif verebilirsin!",
-  "Contract approved - you can now reclaim your bid!": "Sözleşme onaylandı, artık teklifini geri alabilirsin!",
+
   "Bid placed!": "Teklif yapıldı!",
   "Bid reclaimed!": "Teklif geri alındı!",
   "Reclaim Bid": "Teklifi Geri Al",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Lütfen cüzdanınızda WBNB harcamasını etkinleştirin",
   "Please confirm the transaction in your wallet": "Lütfen işlemi cüzdanınızdan doğrulayın",
   "Your NFTs": "NFT'leriniz",
-  "Contract approved - you can now buy NFT with WBNB!": "Sözleşme onaylandı, artık WBNB ile NFT satın alabilirsiniz!",
+
   "Your NFT has been sent to your wallet": "NFT'niz cüzdanınıza gönderildi",
   "Transaction Confirmed": "İşlem Onaylandı",
   "Activity": "Etkinlik",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Satışlar WBNB ile yapılır. SweepStakes ile WBNB'yi 1:1 oranında BNB'ye dönüştürebilirsiniz.",
   "Enable Listing": "Listelemeyi Etkinleştir",
   "Please enable your NFT to be sent to the market": "Lütfen NFT'nizin piyasaya gönderilmesini etkinleştirin",
-  "Contract approved - you can now put your NFT for sale!": "Sözleşme onaylandı, artık NFT'nizi satışa çıkarabilirsiniz!",
+
   "Adjust Sale Price": "Satış Fiyatını Ayarla",
   "Set Price": "Fiyat Belirle",
   "Input New Sale Price": "Yeni Satış Fiyatı Girin",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Gas tahmininde beklenmeyen bir sorun meydana geldi. Lütfen tekrar deneyin.",
   "Swap failed: %message%": "Değiştirme başarısız: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Beklenmeyen hata. Değiştirme işlemi için gas tahmin edilemedi.",
-  "Unexpected error. Could not estimate gas for the approve.": "Beklenmeyen hata. Onaylama işlemi için gas tahmin edilemedi.",
+
   "Farm Auction": "Farm Müzayedesi",
   "Farm Auction Winner, add liquidity at your own risk.": "Farm Müzayedesi Kazananı, riski size ait olmak üzere likidite ekleyin.",
   "Currently showing charts from Chainlink oracle": "Şu anda Chainlink tahmininden çizelgeler gösteriliyor",
@@ -1562,16 +1561,16 @@
   "Play Now": "Şimdi Oyna",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Çekilişte %prize% dolar kazanın",
-  "Approve was called unnecessarily": "Gereksiz yere onay istendi",
+
   "No token": "Token yok",
   "Cannot find contract of the token %tokenAddress%": "%tokenAddress% token'ının sözleşmesi bulunamıyor",
-  "Missing amount to approve": "Onaylamak için tutar yetersiz",
+
   "No spender": "Harcama yapan yok",
   "Missing liquidity amount": "Eksik likidite miktarı",
   "Missing currency amounts": "Eksik para miktarı",
   "Missing tokens": "Eksik token'lar",
   "Could not wrap": "Paketlenemedi",
-  "Attempting to confirm without approval or a signature": "Onay veya imza olmadan onaylamaya çalışılıyor",
+
   "This transaction would fail": "Bu işlem başarısız olabilir",
   "Place a limit order to trade at a set price": "Belirli bir fiyattan işlem yapmak için bir limit emri verin",
   "Place an Order": "Bir Emir Ver",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "%chain% olarak değiştir",
   "Stay on %chain%": "%chain% üzerinde kal",
   "Go to Pool": "Havuza git",
-  "Approve %symbol%": "%symbol% onayı verin",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "%amountA% %symbolA% ve %amountB% %symbolB% ekleyin",
   "Remove %amount% %symbol%": "%amount% %symbol% kaldırın",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "%amountA% %symbolA% ve %amountB% %symbolB% kaldırın",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE, SweepStakes Farm'larındaki kazancınızı 2 kata kadar artırmanıza olanak tanır.",
 
   "KLAY staking expired": "KLAY fon yatırması sona erdi",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Yetersiz token ödeneği. Onaylamak için \"Etkinleştir\" seçeneğine tıkla.",
 
   "Unable to supply": "Arz sağlanamıyor",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Likidite ekleyerek işlem çiftindeki payınla orantılı olarak bu çiftteki tüm işlemlerin %50'sini kazanacaksın. Ücretler çifte eklenir, gerçek zamanlı olarak tahakkuk eder ve likiditeni çekerek alınabilir. Stableswap ücretleri hakkında daha fazla bilgi için tıkla:",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Fonlar cüzdanınıza gönderildi",
   "Claim Request time": "Alım Talep Süresi",
   "State": "Durum",
-  "Pending Approval": "Onay Bekliyor",
+
   "Rejected": "Reddedildi",
   "Latest rewards": "Son ödüller",
   "Historical Claim": "Geçmiş Alım",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

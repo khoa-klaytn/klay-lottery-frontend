@@ -24,7 +24,6 @@ describe('transaction reducer', () => {
           chainId: ChainId.BSC,
           summary: 'hello world',
           hash: '0x0',
-          approval: { tokenAddress: 'abc', spender: 'def' },
           from: 'abc',
         }),
       )
@@ -35,7 +34,6 @@ describe('transaction reducer', () => {
       expect(tx).toBeTruthy()
       expect(tx?.hash).toEqual('0x0')
       expect(tx?.summary).toEqual('hello world')
-      expect(tx?.approval).toEqual({ tokenAddress: 'abc', spender: 'def' })
       expect(tx?.from).toEqual('abc')
       expect(tx?.addedTime).toBeGreaterThanOrEqual(beforeTime)
     })
@@ -66,7 +64,6 @@ describe('transaction reducer', () => {
         addTransaction({
           hash: '0x0',
           chainId: ChainId.BSC_TESTNET,
-          approval: { spender: '0x0', tokenAddress: '0x0' },
           summary: 'hello world',
           from: '0x0',
         }),
@@ -120,7 +117,6 @@ describe('transaction reducer', () => {
         addTransaction({
           hash: '0x0',
           chainId: ChainId.BSC_TESTNET,
-          approval: { spender: '0x0', tokenAddress: '0x0' },
           summary: 'hello world',
           from: '0x0',
         }),
@@ -140,7 +136,6 @@ describe('transaction reducer', () => {
         addTransaction({
           hash: '0x0',
           chainId: ChainId.BSC_TESTNET,
-          approval: { spender: '0x0', tokenAddress: '0x0' },
           summary: 'hello world',
           from: '0x0',
         }),
@@ -171,7 +166,6 @@ describe('transaction reducer', () => {
           chainId: ChainId.BSC,
           summary: 'hello world',
           hash: '0x0',
-          approval: { tokenAddress: 'abc', spender: 'def' },
           from: 'abc',
         }),
       )
@@ -180,7 +174,6 @@ describe('transaction reducer', () => {
           chainId: ChainId.BSC_TESTNET,
           summary: 'hello world',
           hash: '0x1',
-          approval: { tokenAddress: 'abc', spender: 'def' },
           from: 'abc',
         }),
       )
@@ -203,7 +196,6 @@ describe('transaction reducer', () => {
           chainId: ChainId.BSC,
           summary: 'hello world',
           hash: '0x0',
-          approval: { tokenAddress: 'abc', spender: 'def' },
           from: 'abc',
         }),
       )
@@ -212,7 +204,6 @@ describe('transaction reducer', () => {
           chainId: ChainId.BSC_TESTNET,
           summary: 'hello world',
           hash: '0x1',
-          approval: { tokenAddress: 'abc', spender: 'def' },
           from: 'abc',
         }),
       )

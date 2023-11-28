@@ -1,11 +1,10 @@
 import { useTranslation } from '@sweepstakes/localization'
-import { Button, Card, CardBody, Heading, Text, useToast } from '@sweepstakes/uikit'
+import { Card, CardBody, Heading, Text } from '@sweepstakes/uikit'
 import { useEffect, useState } from 'react'
 import { usePublicClient } from 'wagmi'
 
 const ProfilePicture: React.FC = () => {
   const publicClient = usePublicClient()
-  const [isApproved, setIsApproved] = useState(false)
   const [isProfileNftsLoading, setIsProfileNftsLoading] = useState(true)
   const [userProfileCreationNfts, setUserProfileCreationNfts] = useState(null)
 
@@ -25,12 +24,6 @@ const ProfilePicture: React.FC = () => {
   }, [publicClient, setIsProfileNftsLoading, setUserProfileCreationNfts])
 
   const { t } = useTranslation()
-  const { toastSuccess } = useToast()
-
-  const handleApprove = async () => {
-    toastSuccess(t('Enabled'), t('Please progress to the next step.'))
-    setIsApproved(true)
-  }
 
   if (!userProfileCreationNfts?.length && !isProfileNftsLoading) {
     return (
@@ -74,9 +67,6 @@ const ProfilePicture: React.FC = () => {
               "The collectible you've chosen will be locked in a smart contract while it’s being used as your profile picture. Don't worry - you'll be able to get it back at any time.",
             )}
           </Text>
-          <Button disabled={isApproved} onClick={handleApprove} endIcon={undefined} id="approveStarterCollectible">
-            {t('Enable')}
-          </Button>
         </CardBody>
       </Card>
     </>

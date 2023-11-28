@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "KLAY 餘額不足",
   "Choose collectible": "選擇收藏品",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "從錢包中選擇一個符合條件的收藏品 (NFT) 當作頭像，如下所示。",
-  "Only approved SweepStakes Collectibles can be used.": "僅可使用獲得批准的 SweepStakes 收藏品。",
+
   "Allow collectible to be locked": "允許鎖定收藏品",
   "Join a Team": "加入團隊",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "總費用：1.5 KLAY",
   "Cost: %num% KLAY": "費用：%num% KLAY",
   "our swap page": "我們的交換頁面。",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "如果您獲得另一個獲批准的 SweepStakes 收藏品，則可以稍後變更頭像。",
+
   "Every profile starts by making a “starter” collectible (NFT).": "將「初始代幣」納為收藏品 (NFT)，正是每份個人檔案的起點。",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "我們無法在您的錢包中找到任何 SweepStakes 收藏品。",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "您需要 SweepStakes 收藏品才能完成個人檔案的設定。如果您已將初始代幣收藏品出售或轉移到另一個錢包，則需要將其取回，或者以某種方式取得新的初始代幣。您無法透過此錢包位址取得新的初始代幣。",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "中斷與錢包的連線",
   "Ending in": "結束倒數計時",
   "Next auction": "下次拍賣",
-  "Contract approved - you can now place your bid!": "合約已批准 - 您現在可以出價！",
-  "Contract approved - you can now reclaim your bid!": "合約已批准 - 您現在收回出價！",
+
   "Bid placed!": "已出價！",
   "Bid reclaimed!": "已收回出價！",
   "Reclaim Bid": "收回出價",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "請在您的錢包同意 WBNB 的授權",
   "Please confirm the transaction in your wallet": "請在您的錢包中確認交易",
   "Your NFTs": "您的 NFT",
-  "Contract approved - you can now buy NFT with WBNB!": "合約已批准 - 您現在可以使用 WBNB 購買 NFT！",
+
   "Your NFT has been sent to your wallet": "您的 NFT 已傳送到您的錢包",
   "Transaction Confirmed": "已提交上鏈",
   "Activity": "活動",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "交易將使用 WBNB 進行。您可以在 SweepStakes 免費將 WBNB 以 1:1 交換為 BNB。",
   "Enable Listing": "授權並上架",
   "Please enable your NFT to be sent to the market": "請允許將您的 NFT 傳送到市場",
-  "Contract approved - you can now put your NFT for sale!": "合約已批准 - 您現在可以銷售您的 NFT 了！",
+
   "Adjust Sale Price": "調整銷售價格",
   "Set Price": "設定價格",
   "Input New Sale Price": "輸入新的銷售價格",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "估算 gas 時出現意外問題。請再試一次。",
   "Swap failed: %message%": "交換失敗：%message%",
   "Unexpected error. Could not estimate gas for the swap.": "意外錯誤。無法估算交換的 gas。",
-  "Unexpected error. Could not estimate gas for the approve.": "發生錯誤。無法估算批准的 gas。",
+
   "Farm Auction": "農場競拍",
   "Farm Auction Winner, add liquidity at your own risk.": "農場競拍得標者，請確保明白風險後再添加流動性。",
   "Currently showing charts from Chainlink oracle": "目前正在顯示來自 Chainlink 預言機的圖表",
@@ -1562,16 +1561,16 @@
   "Play Now": "立即參與",
   "Litepaper": "簡易白皮書",
   "Win $%prize% in Lottery": "在彩券中贏得 %prize% 美元",
-  "Approve was called unnecessarily": "批准被認為不必要",
+
   "No token": "無代幣",
   "Cannot find contract of the token %tokenAddress%": "找不到代幣 %tokenAddress% 的合約",
-  "Missing amount to approve": "缺少要批准的金額",
+
   "No spender": "無支出者",
   "Missing liquidity amount": "缺少流動性金額",
   "Missing currency amounts": "缺少貨幣金額",
   "Missing tokens": "缺少代幣",
   "Could not wrap": "無法包裝",
-  "Attempting to confirm without approval or a signature": "試圖在未批准或簽名的情況下確認",
+
   "This transaction would fail": "此交易將失敗",
   "Place a limit order to trade at a set price": "提交限價訂單以便用所設定的價格完成交易",
   "Place an Order": "下單",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "切換至 %chain%",
   "Stay on %chain%": "留在 %chain%",
   "Go to Pool": "前往糖漿池",
-  "Approve %symbol%": "授權 %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "新增 Zap %amountA% %symbolA% 和 %amountB% %symbolB%",
   "Remove %amount% %symbol%": "移除 %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "移除 %amountA% %symbolA% 和 %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE 允許您將 SweepStakes 農場的收益助推最多 2 倍。",
 
   "KLAY staking expired": "KLAY 質押已過期",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "代幣授權額度不足。按一下「啟用」以更新授權額度。",
 
   "Unable to supply": "無法添加",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "增加流動性將為您賺取該幣對所有交易費用的 50%，與您在交易對中的持份成正比。賺取的費用會加進幣對中，即時累積且可以透過解除流動性來領取。有關 Stableswap 費用的更多資訊，請按一下",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "資金已傳送至您的錢包",
   "Claim Request time": "領取要求時間",
   "State": "狀態",
-  "Pending Approval": "待批准",
+
   "Rejected": "已拒絕",
   "Latest rewards": "最新獎勵",
   "Historical Claim": "領取記錄",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

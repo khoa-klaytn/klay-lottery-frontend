@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Onvoldoende KLAY-saldo",
   "Choose collectible": "Collectible selecteren",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Kies een profielfoto uit de in aanmerking komende collectibles (NFT) in je wallet zoals hieronder weergegeven.",
-  "Only approved SweepStakes Collectibles can be used.": "Alleen goedgekeurde SweepStakes-collectibles kunnen gebruikt worden.",
+
   "Allow collectible to be locked": "Toestaan dat een collectible vergrendeld kan worden",
   "Join a Team": "Aansluiten bij een team",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Totale kosten: 1,5 KLAY",
   "Cost: %num% KLAY": "Kosten: %num% KLAY",
   "our swap page": "onze swap-pagina",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Je kunt je profielfoto later wijzigen als je een andere goedgekeurde SweepStakes-collectible ontvangt.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Elk profiel begint met het maken van een \"startercollectible\" (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "We konden geen SweepStakes-collectibles in je wallet vinden.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Je hebt een SweepStakes-collectible nodig om je profiel verder in te richten. Als je je startercollectible verkocht of overgedragen hebt naar een andere wallet, zul je hem terug moeten krijgen of een nieuwe zien te krijgen op de een of andere manier. Je kunt geen nieuwe starter maken met dit walletadres.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Wallet ontkoppelen",
   "Ending in": "Eindigt over",
   "Next auction": "Volgende veiling",
-  "Contract approved - you can now place your bid!": "Contract goedgekeurd: je kunt nu bieden!",
-  "Contract approved - you can now reclaim your bid!": "Contract goedgekeurd: je kunt nu je bod terugclaimen!",
+
   "Bid placed!": "Bod geplaatst!",
   "Bid reclaimed!": "Bod teruggeclaimd!",
   "Reclaim Bid": "Bod terugclaimen",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Schakel WBNB-uitgaven in je wallet in",
   "Please confirm the transaction in your wallet": "Bevestig de transactie in je wallet",
   "Your NFTs": "Je NFT's",
-  "Contract approved - you can now buy NFT with WBNB!": "Contract goedgekeurd: je kunt nu NFT kopen met WBNB!",
+
   "Your NFT has been sent to your wallet": "Je NFT is naar je wallet gestuurd",
   "Transaction Confirmed": "Transactie bevestigd",
   "Activity": "Activiteit",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Verkopen zijn in WBNB. Je kunt WBNB gratis 1:1 swappen voor BNB met SweepStakes.",
   "Enable Listing": "Te koop aanbieden inschakelen",
   "Please enable your NFT to be sent to the market": "Schakel in dat je NFT naar de markt gestuurd kan worden",
-  "Contract approved - you can now put your NFT for sale!": "Contract goedgekeurd: je kunt nu NFT te koop aanbieden!",
+
   "Adjust Sale Price": "Verkoopprijs aanpassen",
   "Set Price": "Prijs instellen",
   "Input New Sale Price": "Nieuwe verkoopprijs instellen",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Onverwacht probleem met schatten van het gas. Probeer het opnieuw.",
   "Swap failed: %message%": "Swap mislukt: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Onverwachte fout. Kon gas voor de swap niet schatten.",
-  "Unexpected error. Could not estimate gas for the approve.": "Onverwachte fout. Kon gas voor de goedkeuring niet schatten.",
+
   "Farm Auction": "Farmveiling",
   "Farm Auction Winner, add liquidity at your own risk.": "Winnaar van farmveiling, voeg liquiditeit toe op eigen risico.",
   "Currently showing charts from Chainlink oracle": "Grafieken van Chainlink-orakel worden weergegeven",
@@ -1562,16 +1561,16 @@
   "Play Now": "Nu spelen",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Win $ %prize% in de loterij",
-  "Approve was called unnecessarily": "Goedkeuring onnodig verzocht",
+
   "No token": "Geen token",
   "Cannot find contract of the token %tokenAddress%": "Kan contract van het token %tokenAddress% niet vinden",
-  "Missing amount to approve": "Goed te keuren bedrag ontbreekt",
+
   "No spender": "Geen besteder",
   "Missing liquidity amount": "Liquiditeitsbedrag ontbreekt",
   "Missing currency amounts": "Valutabedrage ontbreken",
   "Missing tokens": "Tokens ontbreken",
   "Could not wrap": "Kon niet verpakken",
-  "Attempting to confirm without approval or a signature": "Poging tot bevestigen zonder goedkeuring of handtekening",
+
   "This transaction would fail": "Deze transactie zou mislukken",
   "Place a limit order to trade at a set price": "Plaats een limietorder om te handelen op een bepaalde prijs",
   "Place an Order": "Order plaatsen",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Overschakelen naar %chain%",
   "Stay on %chain%": "Op %chain% blijven",
   "Go to Pool": "Naar pool",
-  "Approve %symbol%": "%symbol% goedkeuren",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Voeg %amountA% %symbolA% en %amountB% %symbolB% toe",
   "Remove %amount% %symbol%": "Verwijder %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Verwijder %amountA% %symbolA% en %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Met bCAKE kun je je opbrengst in SweepStakes-farms tot 2x verhogen.",
 
   "KLAY staking expired": "KLAY-staking verlopen",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Onvoldoende tokenvergoeding. Klik op \"Inschakelen\" om goed te keuren.",
 
   "Unable to supply": "Kan niet aanbieden",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Door liquiditeit toe te voegen, verdien je 50% van de vergoedingen voor alle transacties voor dit paar evenredig met je aandeel in het handelspaar. Vergoedingen worden toegevoegd aan het paar, nemen toe in realtime en kunnen worden geclaimd door je liquiditeit op te nemen. Voor meer informatie over StableSwap-vergoedingen, klik",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Het geld is naar je wallet gestuurd",
   "Claim Request time": "Tijd claimverzoek",
   "State": "Status",
-  "Pending Approval": "In afwachting van goedkeuring",
+
   "Rejected": "Geweigerd",
   "Latest rewards": "Meest recente beloningen",
   "Historical Claim": "Claimgeschiedenis",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

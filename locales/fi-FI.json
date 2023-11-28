@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "KLAY-saldo ei riitä",
   "Choose collectible": "Valitse keräilykohde",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Valitse profiilikuva kelvollisista lompakossasi olevista keräilykohteista (NFT), jotka näkyvät alla.",
-  "Only approved SweepStakes Collectibles can be used.": "Vain hyväksyttyjä SweepStakes-keräilykohteita voi käyttää.",
+
   "Allow collectible to be locked": "Salli keräilykohteen lukitseminen",
   "Join a Team": "Liity tiimiin",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Kokonaiskustannus: 1.5 CAKEa",
   "Cost: %num% KLAY": "Kustannus: %num% CAKEa",
   "our swap page": "vaihtosivullamme",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Voit vaihtaa profiilikuvasi myöhemmin, jos saat toisen hyväksytyn SweepStakes-keräilykohteen.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Jokainen profiili aloittaa tekemällä aloituskeräilykohteen (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Lompakostasi ei löydy SweepStakes-keräilykohteita.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Tarvitset SweepStakes-keräilykohteen, jotta voit viimeistellä profiilisi määrittämisen. Jos myit tai siirsit aloituskeräilykohteesi toiseen lompakkoon, sinun täytyy saada se takaisin tai hankkia uusi jollakin tavalla. Et voit tehdä uutta aloituskohdetta tällä lompakon osoitteella.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Katkaise lompakon yhteys",
   "Ending in": "Päättymiseen",
   "Next auction": "Seuraava huutokauppa",
-  "Contract approved - you can now place your bid!": "Sopimus hyväksytty – voit nyt tehdä tarjouksesi!",
-  "Contract approved - you can now reclaim your bid!": "Sopimus hyväksytty – voit nyt lunastaa tarjouksesi!",
+
   "Bid placed!": "Tarjous tehty!",
   "Bid reclaimed!": "Tarjous lunastettu!",
   "Reclaim Bid": "Lunasta tarjous",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Ota WBNB:n käyttö käyttöön lompakossasi",
   "Please confirm the transaction in your wallet": "Vahvista transaktio lompakossasi",
   "Your NFTs": "NFT:si",
-  "Contract approved - you can now buy NFT with WBNB!": "Sopimus hyväksytty – voit nyt ostaa NFT:n WBNB:llä!",
+
   "Your NFT has been sent to your wallet": "NFT:si on lähetetty lompakkoosi",
   "Transaction Confirmed": "Transaktio vahvistettu",
   "Activity": "Toiminta",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Myynnit ovat WBNB:inä. Voit vaihtaa WBNB:itä BNB:iksi yksi yhteen ilmaiseksi SweepStakesilla.",
   "Enable Listing": "Ota listaus käyttöön",
   "Please enable your NFT to be sent to the market": "Ota NFT:si käyttöön lähetettäväksi markkinoille",
-  "Contract approved - you can now put your NFT for sale!": "Sopimus hyväksytty – voit nyt laittaa NFT:si myyntiin!",
+
   "Adjust Sale Price": "Muuta myyntihintaa",
   "Set Price": "Aseta hinta",
   "Input New Sale Price": "Syötä uusi myyntihinta",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Kaasun arvioimisessa on odottamaton ongelma. Yritä uudelleen.",
   "Swap failed: %message%": "Vaihto epäonnistui: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Odottamaton virhe. Kaasun arvioiminen vaihtoa varten ei onnistunut.",
-  "Unexpected error. Could not estimate gas for the approve.": "Odottamaton virhe. Kaasun arvioiminen hyväksyntää varten ei onnistunut.",
+
   "Farm Auction": "Viljelmähuutokauppa",
   "Farm Auction Winner, add liquidity at your own risk.": "Viljelmähuutokaupan voittaja, lisää likviditeettiä omalla riskilläsi.",
   "Currently showing charts from Chainlink oracle": "Tällä hetkellä näytetään kaavioita Chainlink-oraakkelista",
@@ -1562,16 +1561,16 @@
   "Play Now": "Pelaa nyt",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Voita %prize% $ arvonnassa",
-  "Approve was called unnecessarily": "Hyväksyntä kutsuttiin tarpeettomasti",
+
   "No token": "Ei polettia",
   "Cannot find contract of the token %tokenAddress%": "Poletin %tokenAddress% sopimusta ei löydy",
-  "Missing amount to approve": "Hyväksyttävä summa puuttuu",
+
   "No spender": "Ei käyttäjää",
   "Missing liquidity amount": "Likviditeettisumma puuttuu",
   "Missing currency amounts": "Valuuttasummat puuttuu",
   "Missing tokens": "Poletteja puuttuu",
   "Could not wrap": "Paketointi ei onnistu",
-  "Attempting to confirm without approval or a signature": "Yritetään vahvistaa ilman hyväksyntää tai allekirjoitusta",
+
   "This transaction would fail": "Tämä transaktio epäonnistuisi",
   "Place a limit order to trade at a set price": "Tee rajahintatilaus käydäksesi kauppaa määrätyllä hinnalla",
   "Place an Order": "Tee tilaus",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Vaihda kohteeseen %chain%",
   "Stay on %chain%": "Pysy kohteessa %chain%",
   "Go to Pool": "Siirry pooliin",
-  "Approve %symbol%": "Hyväksy %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Lisää %amountA% %symbolA% ja %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Poista %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Poista %amountA% %symbolA% ja %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKEn avulla voit parantaa tuottoasi SweepStakes-viljelmissä enintään kaksinkertaisesti.",
 
   "KLAY staking expired": "CAKEn panostaminen on erääntynyt",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Polettikiintiö ei riitä. Hyväksy napsauttamalla \"Ota käyttöön\".",
 
   "Unable to supply": "Tarjoaminen ei onnistu",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Lisäämällä likviditeettiä ansaitset 50 % kaikkien tämän parin kauppojen maksuista suhteessa osuuteesi kaupankäyntiparista. Maksut lisätään pariin, kertyvät reaaliajassa ja voidaan lunastaa nostamalla likviditeettisi. Lisätietoja Stableswapin maksuista saat napsauttamalla",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Varat lähetettiin lompakkoosi",
   "Claim Request time": "Lunastuksen pyyntöaika",
   "State": "Tila",
-  "Pending Approval": "Odottaa hyväksyntää",
+
   "Rejected": "Hylätty",
   "Latest rewards": "Viimeisimmät palkkiot",
   "Historical Claim": "Historiallinen lunastus",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Jatka lompakossasi",
   "Enable spending %symbol%": "Ota poletin %symbol% käyttäminen käyttöön",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "Jos lompakko edellyttää, että syötät polettien määrän, jonka haluat hyväksyä, voit antaa luvun, joka on suurempi tai yhtä suuri kuin vaihtamiesi polettien määrä.",
+
   "Why": "Miksi",
   "approving": "hyväksytään",
   "this?": "tämä?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Vaihto:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Miksi hyväksynnän nollaaminen",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

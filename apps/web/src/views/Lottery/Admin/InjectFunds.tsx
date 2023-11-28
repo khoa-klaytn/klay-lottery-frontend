@@ -1,7 +1,6 @@
 import { LotteryStatus } from 'config/constants/types'
 import { FormEvent, useCallback, useMemo, useState } from 'react'
 import { handleCustomError } from 'utils/viem'
-import { BaseError } from 'viem'
 import { EMsg } from './EMsg'
 
 export default function InjectFunds({ callWithGasPrice, lotteryContract, status }) {

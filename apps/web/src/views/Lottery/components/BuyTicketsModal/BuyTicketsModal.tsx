@@ -15,7 +15,7 @@ import { useAccount, usePublicClient } from 'wagmi'
 import BigNumber from 'bignumber.js'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { ToastDescriptionWithTx } from 'components/Toast'
-import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
+import useConfirmTransaction from 'hooks/useConfirmTransaction'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { useSSLotteryContract } from 'hooks/useContract'
 import useTheme from 'hooks/useTheme'
@@ -24,7 +24,6 @@ import { useAppDispatch } from 'state'
 import { useKlayPrice } from 'hooks/useKlayPrice'
 import { fetchUserTicketsAndLotteries } from 'state/lottery'
 import { useLottery } from 'state/lottery/hooks'
-import { parseEther } from 'viem'
 import { styled } from 'styled-components'
 import { BIG_ZERO, BIG_ONE_HUNDRED, BIG_ONE } from '@sweepstakes/utils/bigNumber'
 import { getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
@@ -227,9 +226,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     }
     return res
   }, [callWithGasPrice, currentLotteryId, getTicketsForPurchase, lotteryContract, publicClient])
-  const { isConfirming, handleConfirm } = useApproveConfirmTransaction({
-    spender: lotteryContract.address,
-    minAmount: parseEther(totalCost as `${number}`),
+  const { isConfirming, handleConfirm } = useConfirmTransaction({
     onConfirm,
     onSuccess: async ({ receipt }) => {
       onDismiss?.()

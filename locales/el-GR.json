@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Ανεπαρκές υπόλοιπο KLAY",
   "Choose collectible": "Επιλέξτε συλλεκτικό",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Επιλέξτε μια εικόνα προφίλ από τα επιλέξιμα συλλεκτικά αντικείμενα (NFT) στο πορτοφόλι σας, που φαίνεται παρακάτω.",
-  "Only approved SweepStakes Collectibles can be used.": "Μπορούν να χρησιμοποιηθούν μόνο εγκεκριμένα συλλεκτικά SweepStakes.",
+
   "Allow collectible to be locked": "Να επιτρέπεται το κλείδωμα των συλλεκτικών",
   "Join a Team": "Συμμετέχετε σε μια ομάδα",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Συνολικό κόστος: 1,5 KLAY",
   "Cost: %num% KLAY": "Κόστος: %num% KLAY",
   "our swap page": "η σελίδας μας ανταλλαγής",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Μπορείτε να αλλάξετε την εικόνα του προφίλ σας αργότερα εάν λάβετε άλλο εγκεκριμένο συλλεκτικό SweepStakes.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Κάθε προφίλ ξεκινά δημιουργώντας ένα \"αρχικό\" συλλεκτικό (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Δεν βρήκαμε συλλεκτικά SweepStakes στο πορτοφόλι σας.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Χρειάζεστε ένα Συλλεκτικό SweepStakes για να ολοκληρώσετε τη ρύθμιση του προφίλ σας. Εάν πουλήσατε ή μεταφέρατε το αρχικό σας συλλεκτικό σε άλλο πορτοφόλι, θα πρέπει να το επιστρέψετε ή να αποκτήσετε ένα νέο με κάποιο τρόπο. Δεν μπορείτε να δημιουργήσετε νέο αρχικό συλλεκτικό με αυτήν τη διεύθυνση πορτοφολιού.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Αποσύνδεση πορτοφολιού",
   "Ending in": "Λήγει σε",
   "Next auction": "Επόμενη δημοπρασία",
-  "Contract approved - you can now place your bid!": "Η σύμβαση εγκρίθηκε - μπορείτε τώρα να υποβάλετε την προσφορά σας!",
-  "Contract approved - you can now reclaim your bid!": "Η σύμβαση εγκρίθηκε - μπορείτε τώρα να διεκδικήσετε ξανά την προσφορά σας!",
+
   "Bid placed!": "Υποβλήθηκε προσφορά!",
   "Bid reclaimed!": "Η προσφορά διεκδικήθηκε ξανά!",
   "Reclaim Bid": "Διεκδίκηση προσφοράς ξανά",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Ενεργοποιήστε τη δαπάνη WBNB στο πορτοφόλι σας",
   "Please confirm the transaction in your wallet": "Επιβεβαιώστε τη συναλλαγή στο πορτοφόλι σας",
   "Your NFTs": "Τα NFT σας",
-  "Contract approved - you can now buy NFT with WBNB!": "Η σύμβαση εγκρίθηκε - μπορείτε τώρα να αγοράσετε NFT με WBNB!",
+
   "Your NFT has been sent to your wallet": "Το NFT σας έχει αποσταλεί στο πορτοφόλι σας",
   "Transaction Confirmed": "Η συναλλαγή επιβεβαιώθηκε",
   "Activity": "Δραστηριότητα",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Οι πωλήσεις γίνονται σε WBNB. Μπορείτε να ανταλλάξετε WBNB σε BNB 1:1 δωρεάν με το SweepStakes.",
   "Enable Listing": "Ενεργοποίηση καταχώρησης",
   "Please enable your NFT to be sent to the market": "Ενεργοποιήστε την αποστολή του NFT στην αγορά",
-  "Contract approved - you can now put your NFT for sale!": "Εγκρίθηκε το συμβόλαιο - τώρα μπορείτε να βάλετε το NFT σας για πώληση!",
+
   "Adjust Sale Price": "Ρύθμιση τιμής πώλησης",
   "Set Price": "Ορισμός τιμής",
   "Input New Sale Price": "Εισαγωγή νέας τιμής πώλησης",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Απροσδόκητο πρόβλημα με την εκτίμηση της βενζίνης. Δοκιμάστε ξανά.",
   "Swap failed: %message%": "Η ανταλλαγή απέτυχε: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Απροσδόκητο σφάλμα. Δεν ήταν δυνατός ο υπολογισμός της βενζίνης για την ανταλλαγή.",
-  "Unexpected error. Could not estimate gas for the approve.": "Απροσδόκητο σφάλμα. Δεν ήταν δυνατός ο υπολογισμός της βενζίνης για την έγκριση.",
+
   "Farm Auction": "Δημοπρασία Farm",
   "Farm Auction Winner, add liquidity at your own risk.": "Νικητή δημοπρασίας farm, προσθέστε ρευστότητα με δική σας ευθύνη.",
   "Currently showing charts from Chainlink oracle": "Αυτή τη στιγμή εμφανίζονται διαγράμματα από το Chainlink oracle",
@@ -1562,16 +1561,16 @@
   "Play Now": "Παίξτε τώρα",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Κερδίστε $%prize% στη Λοταρία",
-  "Approve was called unnecessarily": "Η έγκριση κλήθηκε άσκοπα",
+
   "No token": "Δεν υπάρχει νόμισμα",
   "Cannot find contract of the token %tokenAddress%": "Δεν βρέθηκε το συμβόλαιο του νομίσματος %tokenAddress%",
-  "Missing amount to approve": "Λείπει το ποσό για έγκριση",
+
   "No spender": "Κανένας δεν έχει ξοδέψει",
   "Missing liquidity amount": "Το ποσό ρευστότητας λείπει",
   "Missing currency amounts": "Τα ποσά νομίσματος λείπουν",
   "Missing tokens": "Λείπουν νομίσματα",
   "Could not wrap": "Δεν ήταν δυνατή η περιτύλιξη",
-  "Attempting to confirm without approval or a signature": "Προσπάθεια επαλήθευσης χωρίς έγκριση ή υπογραφή",
+
   "This transaction would fail": "Αυτή η συναλλαγή θα αποτύχει",
   "Place a limit order to trade at a set price": "Τοποθετήστε μια εντολή ορίου για διαπραγμάτευση σε μια καθορισμένη τιμή",
   "Place an Order": "Τοποθέτηση εντολής",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Αλλαγή στο %chain%",
   "Stay on %chain%": "Παραμονή στο %chain%",
   "Go to Pool": "Μετάβαση στη δεξαμενή",
-  "Approve %symbol%": "Έγκριση %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Προσθήκη %amountA% %symbolA% και %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Αφαίρεση %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Αφαίρεση %amountA% %symbolA% και %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Το bCAKE σας επιτρέπει να αυξήσετε την απόδοσή σας στις SweepStakes Farms έως και 2x.",
 
   "KLAY staking expired": "Το staking KLAY έχει λήξει",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Ανεπαρκές υπόλοιπο νομίσματος. Κάντε κλικ στο \"Ενεργοποίηση\" για έγκριση.",
 
   "Unable to supply": "Δε μπορεί να δημιουργηθεί προσφορά",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Προσθέτοντας ρευστότητα, κερδίζετε 50% από τα τέλη όλων των συναλλαγών σε αυτό το ζευγάρι, ανάλογα με το μερίδιό σας στο ζευγάρι διαπραγμάτευσης. Τα τέλη προστίθενται στο ζευγάρι, συγκεντρώνονται σε πραγματικό χρόνο και μπορείτε να τα λάβετε με ανάληψη της ρευστότητάς σας. Για περισσότερες πληροφορίες σχετικά με τα τέλη του Stableswap κάντε κλικ",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Τα χρήματα εστάλησαν στο πορτοφόλι σας",
   "Claim Request time": "Ώρα αιτήματος συλλογής",
   "State": "Κατάσταση",
-  "Pending Approval": "Εκκρεμεί έγκριση",
+
   "Rejected": "Απορρίφθηκε",
   "Latest rewards": "Τελευταίες ανταμοιβές",
   "Historical Claim": "Ιστορικό διεκδικήσεων",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Συνεχίστε στο πορτοφόλι σας",
   "Enable spending %symbol%": "Ενεργοποίηση δαπάνης %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "Εάν το πορτοφόλι απαιτεί να εισαγάγετε τον αριθμό των νομισμάτων που θέλετε να εγκρίνετε, μπορείτε να εισαγάγετε έναν αριθμό που είναι μεγαλύτερος ή ίσος με το ποσό των νομισμάτων που ανταλλάσσετε.",
+
   "Why": "Γιατί",
   "approving": "πρέπέι να εγκριθεί",
   "this?": "αυτό;",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Ανταλλαγή μέσω:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Γιατί χρειάζεται επαναφορά της έγκρισης",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

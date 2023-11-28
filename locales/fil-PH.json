@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Hindi sapat na balanse ng KLAY",
   "Choose collectible": "Pumili ng collectible",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Pumili ng isang larawan sa profile mula sa mga napiling collectible (NFT) sa iyong wallet, ipinakita sa ibaba.",
-  "Only approved SweepStakes Collectibles can be used.": "Tanging mga naaprubahang SweepStakes Collectibles lamang ang maaaring magamit.",
+
   "Allow collectible to be locked": "Payagan ang collectible na ma-lock",
   "Join a Team": "Sumali sa Team",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Kabuuang gastos: 1.5 KLAY",
   "Cost: %num% KLAY": "Gastos: %num% KLAY",
   "our swap page": "aming page sa pag-swap",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Maaari mong baguhin ang iyong profile na larawan sa ibang pagkakataon kung nakakakuha ka ng isa pang naaprubahang SweepStakes Collectible.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Nagsisimula ang bawat profile sa pamamagitan ng paggawa ng isang \"starter\" na collectible (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Wala kaming nahanap na mga SweepStakes Collectible sa iyong wallet.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Kailangan mo ng isang SweepStakes Collectible upang matapos ang pag-set up ng iyong profile. Kung naibenta o na-transfer mo ang iyong starter collectible sa ibang wallet, kakailanganin mong maibalik ito o kumuha ng bago kahit papaano. Hindi ka makakagawa ng isang bagong starter sa address ng wallet na ito.",
@@ -946,8 +946,7 @@
   "Disconnect Wallet": "I-disconnect ang Wallet",
   "Ending in": "Magtatapos na",
   "Next auction": "Susunod na auction",
-  "Contract approved - you can now place your bid!": "Naaprubahan ang kontrata - maaari ka nang maglagay ng iyong bid!",
-  "Contract approved - you can now reclaim your bid!": "Naaprubahan ang kontrata - maaari mo nang muling makuha ang iyong bid!",
+
   "Bid placed!": "Nailagay na ang bid!",
   "Bid reclaimed!": "Muling nakuha ang bid!",
   "Reclaim Bid": "Muling kuhanin ang Bid",
@@ -1183,7 +1182,7 @@
   "Please enable WBNB spending in your wallet": "Mangyaring i-enable ang WBNB na ginugugol sa iyong wallet",
   "Please confirm the transaction in your wallet": "Mangyaring kumpirmahin ang transaksyon sa iyong wallet",
   "Your NFTs": "Ang iyong mga NFT",
-  "Contract approved - you can now buy NFT with WBNB!": "Naaprubahan ang kontrata - maaari ka nang bumili ng NFT gamit ang WBNB!",
+
   "Your NFT has been sent to your wallet": "Naipadala na ang iyong NFT sa iyong wallet",
   "Transaction Confirmed": "Nakumpirma ang Transaksyon",
   "Activity": "Aktibidad",
@@ -1193,7 +1192,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Ang mga sales ay nasa WBNB. Maaari mong palitan ang WBNB sa BNB 1:1 nang libre gamit ang SweepStakes.",
   "Enable Listing": "I-enable ang Listahan",
   "Please enable your NFT to be sent to the market": "Mangyaring i-enable ang iyong NFT na ipapadala sa merkado",
-  "Contract approved - you can now put your NFT for sale!": "Naaprubahan ang kontrata - maaari mo na ngayong ibenta ang iyong NFT!",
+
   "Adjust Sale Price": "Ayusin ang Presyo ng Sale",
   "Set Price": "Itakda ang Presyo",
   "Input New Sale Price": "Ipasok ang Bagong Presyo ng Sale",
@@ -1538,7 +1537,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "May hindi inaasahang isyu sa pagtatantya ng gas. Pakisubukan ulit.",
   "Swap failed: %message%": "Hindi nakapag-swap: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Hindi inaasahang error. Hindi matantya ang gas para sa pag-swap.",
-  "Unexpected error. Could not estimate gas for the approve.": "Hindi inaasahang error. Hindi matantya ang gas para maaprubahan.",
+
   "Farm Auction": "Auction sa Farm",
   "Farm Auction Winner, add liquidity at your own risk.": "Panalo sa Auction sa Farm, magdagdag ng liquidity sa sarili mong panganib.",
   "Currently showing charts from Chainlink oracle": "Kasalukuyang nagpapakita ng mga chart mula sa Chainlink oracle",
@@ -1554,16 +1553,16 @@
   "Play Now": "Maglaro Na",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Manalo ng $%prize% sa Loterya",
-  "Approve was called unnecessarily": "Hindi kinakailangang maaprubahan",
+
   "No token": "Walang token",
   "Cannot find contract of the token %tokenAddress%": "Hindi mahanap ang kontrata ng token %tokenAddress%",
-  "Missing amount to approve": "Walang halagang aaprubahan",
+
   "No spender": "Walang gumagastos",
   "Missing liquidity amount": "Wala ang halaga ng liquidity",
   "Missing currency amounts": "Wala ang halaga ng currency",
   "Missing tokens": "Walang token",
   "Could not wrap": "Hindi ma-wrap",
-  "Attempting to confirm without approval or a signature": "Sinusubukang kumpirmahin nang walang pag-apruba o lagda",
+
   "This transaction would fail": "Hindi maisasagawa ang transaksyong ito",
   "Place a limit order to trade at a set price": "Maglagay ng limit order para mag-trade sa isang nakatakdang presyo",
   "Place an Order": "Maglagay ng Order",
@@ -1917,7 +1916,7 @@
   "Switch to %chain%": "Lumipat sa %chain%",
   "Stay on %chain%": "Manatili sa %chain%",
   "Go to Pool": "Pumunta sa Pool",
-  "Approve %symbol%": "Aprubahan ang %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Magdagdag ng %amountA% %symbolA% at %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Mag-alis ng %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Mag-alis ng %amountA% %symbolA% at %amountB% %symbolB%",
@@ -2070,7 +2069,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "Nagbibigay-daan sa iyo ang bCAKE na i-boost ang yield mo sa Mga SweepStakes Farm nang hanggang 2x.",
 
   "KLAY staking expired": "Nag-expire na ang pag-stake ng KLAY",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Hindi sapat ang allowance ng token. I-click ang \"I-enable\" para aprubahan.",
 
   "Unable to supply": "Hindi makapag-supply",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Sa pamamagitan ng pagdaragdag ng liquidity, kikita ka ng 50% mula sa mga bayarin sa lahat ng pag-trade sa pair na ito, na katumbas ng iyong bahagi sa trading pair. Idinaragdag ang mga bayarin sa pair, iniipon nang real time, at puwedeng i-claim sa pamamagitan ng pag-withdraw sa iyong liquidity. Para sa higit pang impormasyon sa mga bayarin sa Stableswap, i-click ang",
@@ -2545,7 +2543,7 @@
   "Funds sent to your wallet": "Ipinadala ang mga pondo sa iyong wallet",
   "Claim Request time": "I-claim ang Oras ng kahilingan",
   "State": "State",
-  "Pending Approval": "Nakabinbing Pag-apruba",
+
   "Rejected": "Tinanggihan",
   "Latest rewards": "Mga pinakabagong reward",
   "Historical Claim": "Dating Claim",
@@ -2691,7 +2689,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2699,9 +2697,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

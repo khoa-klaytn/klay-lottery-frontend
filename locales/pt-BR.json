@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Saldo de KLAY insuficiente",
   "Choose collectible": "Escolher colecionável",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Escolha uma imagem para seu perfil dos colecionáveis elegíveis (NFT) em sua carteira, mostrados abaixo.",
-  "Only approved SweepStakes Collectibles can be used.": "Apenas Colecionáveis SweepStakes aprovados podem ser utilizados.",
+
   "Allow collectible to be locked": "Permitir que o colecionável seja bloqueado",
   "Join a Team": "Entre para uma equipe",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Valor total: 1,5 KLAY",
   "Cost: %num% KLAY": "Valor: %num% KLAY",
   "our swap page": "nossa página de swap",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Você pode alterar sua imagem de perfil posteriormente se receber outro Colecionável SweepStakes aprovado.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Todo perfil começa com a criação de um colecionável \"inicial\" (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Não encontramos nenhum Colecionável SweepStakes em sua carteira.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Você precisa de um Colecionável SweepStakes para concluir as configurações de seu perfil. Se você vender ou transferir seu colecionável inicial para outra carteira, você precisará recuperá-lo ou obter um novo de alguma forma. Você não pode criar mais um inicial com este endereço de carteira.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Desconectar carteira",
   "Ending in": "Acaba em",
   "Next auction": "Próximo leilão",
-  "Contract approved - you can now place your bid!": "Contrato aprovado - agora você pode dar seus lances!",
-  "Contract approved - you can now reclaim your bid!": "Contrato aprovado - agora você pode reivindicar seus lances!",
+
   "Bid placed!": "Lance dado!",
   "Bid reclaimed!": "Lance reign dicado!",
   "Reclaim Bid": "Reivindicar lance",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Ative a venda de WBNB em sua carteira",
   "Please confirm the transaction in your wallet": "Confirme a transação em sua carteira",
   "Your NFTs": "Seus NFTs",
-  "Contract approved - you can now buy NFT with WBNB!": "Contrato aprovado - agora você pode comprar NFT com WBNB!",
+
   "Your NFT has been sent to your wallet": "Seu NFT foi enviado para sua carteira",
   "Transaction Confirmed": "Transação confirmada",
   "Activity": "Atividade",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "As vendas ocorrem em WBNB. Você pode trocar WBNB por BNB 1:1 gratuitamente com sweepstakes.",
   "Enable Listing": "Ativar listagem",
   "Please enable your NFT to be sent to the market": "Ative seu NFT para que ele seja enviado para o mercado",
-  "Contract approved - you can now put your NFT for sale!": "Contrato aprovado - agora você pode colocar seu NFT à venda!",
+
   "Adjust Sale Price": "Ajustar preço de venda",
   "Set Price": "Definir preço",
   "Input New Sale Price": "Insira o novo preço de venda",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Ocorreu um problema inesperado com a estimativa do gás. Tente novamente.",
   "Swap failed: %message%": "O swap falhou: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Erro inesperado. Não foi possível estimar o gás para o swap.",
-  "Unexpected error. Could not estimate gas for the approve.": "Erro inesperado. Não foi possível estimar o gás para a aprovação.",
+
   "Farm Auction": "Leilão de farm",
   "Farm Auction Winner, add liquidity at your own risk.": "Vencedor do Leilão da Farm, adicione liquidez por sua conta e risco.",
   "Currently showing charts from Chainlink oracle": "Atualmente exibindo gráficos do oráculo Chainlink",
@@ -1562,16 +1561,16 @@
   "Play Now": "Jogar agora",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Ganhe $%prize% na Lotaria",
-  "Approve was called unnecessarily": "Aprovar foi chamado desnecessariamente",
+
   "No token": "Sem token",
   "Cannot find contract of the token %tokenAddress%": "Não foi possível encontrar o contrato do token %tokenAddress%",
-  "Missing amount to approve": "O valor não está presente para aprovar",
+
   "No spender": "Nenhum gastador",
   "Missing liquidity amount": "Valor de liquidez ausente",
   "Missing currency amounts": "Valores de moeda ausentes",
   "Missing tokens": "Tokens ausentes",
   "Could not wrap": "Não foi possível empacotar",
-  "Attempting to confirm without approval or a signature": "Tentando confirmar sem aprovação ou assinatura",
+
   "This transaction would fail": "Esta transação falharia",
   "Place a limit order to trade at a set price": "Realize uma ordem limitada para trade a um preço definido",
   "Place an Order": "Realizar uma ordem",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Trocar para %chain%",
   "Stay on %chain%": "Permanecer em %chain%",
   "Go to Pool": "Vá para Pool",
-  "Approve %symbol%": "Aprovar %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Adicionar %amountA% %symbolA% e %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Remover %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Remover %amountA% %symbolA% e %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE permite que você aumente seu rendimento nas Farms do SweepStakes em até 2x.",
 
   "KLAY staking expired": "Stake de KLAY expirado",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Concessão de token insuficiente. Clique em \"Ativar\" para aprovar.",
 
   "Unable to supply": "Não foi possível fornecer",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Ao adicionar liquidez, você ganhará 50% das taxas de todas as negociações neste par, proporcionalmente à sua participação no par de negociação. As taxas são adicionadas ao par, acumuladas em tempo real, e podem ser reivindicadas através da retirar de sua liquidez. Para obter mais informações sobre as taxas da Stableswap clique em",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Fundos enviados para sua carteira",
   "Claim Request time": "Reivindique o tempo de solicitação",
   "State": "Estado",
-  "Pending Approval": "Aprovação pendente",
+
   "Rejected": "Rejeitado",
   "Latest rewards": "Últimas recompensas",
   "Historical Claim": "Reivindicação histórica",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

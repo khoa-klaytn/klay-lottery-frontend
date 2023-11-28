@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Saldo de KLAY insuficiente",
   "Choose collectible": "Selecciona el coleccionable",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Selecciona una foto de perfil de los coleccionables elegibles (NFT) en tu monedero, los cuales se muestran a continuación.",
-  "Only approved SweepStakes Collectibles can be used.": "Solo pueden utilizarse los coleccionables aprobados por SweepStakes.",
+
   "Allow collectible to be locked": "Permitir que los coleccionables estén asegurados",
   "Join a Team": "Únete a un equipo",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Costo total: 1.5 KLAY",
   "Cost: %num% KLAY": "Costo: %num% KLAY",
   "our swap page": "de inversión líquida",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Puedes cambiar tu foto de perfil más tarde si obtienes otro coleccionable de SweepStakes aprobado.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Cada perfil comienza haciendo un coleccionable de \"inicio\" (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "No pudimos encontrar ningún coleccionable de SweepStakes en tu monedero.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Necesitas un coleccionable de SweepStakes para terminar la configuración de tu perfil. Si vendiste o transferiste tu coleccionable de inicio a otro monedero, tendrás que recuperarlo o adquirir uno nuevo de alguna manera. No puedes crear un nuevo coleccionable de inicio con esta dirección para el monedero.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Desconectar el monedero",
   "Ending in": "Termina en",
   "Next auction": "Siguiente subasta",
-  "Contract approved - you can now place your bid!": "Contrato aprobado: ¡ahora puedes realizar tu oferta!",
-  "Contract approved - you can now reclaim your bid!": "Contrato aprobado: ¡ahora puedes recuperar tu oferta!",
+
   "Bid placed!": "¡Oferta realizada!",
   "Bid reclaimed!": "¡Oferta recuperada!",
   "Reclaim Bid": "Recuperar oferta",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Habilita la opción para gastar WBNB en tu monedero",
   "Please confirm the transaction in your wallet": "Confirma la transacción en tu monedero",
   "Your NFTs": "Tus NFT",
-  "Contract approved - you can now buy NFT with WBNB!": "Contrato aprobado: ¡ahora puedes comprar NFT con WBNB!",
+
   "Your NFT has been sent to your wallet": "Tu NFT se envió a tu monedero",
   "Transaction Confirmed": "Transacción confirmada",
   "Activity": "Actividad",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Las ventas se realizan en WBNB. Con SweepStakes, puedes intercambiar WBNB a BNB en una proporción 1:1 de forma gratuita.",
   "Enable Listing": "Habilitar el listado",
   "Please enable your NFT to be sent to the market": "Habilita tus NFT para que podamos enviarlos al mercado",
-  "Contract approved - you can now put your NFT for sale!": "Contrato aprobado: ¡ahora puedes poner tus NFT en venta!",
+
   "Adjust Sale Price": "Ajustar el precio de venta",
   "Set Price": "Establecer el precio",
   "Input New Sale Price": "Introduce el nuevo precio de venta",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "Problema inesperado con la estimación de la gasolina. Intenta de nuevo.",
   "Swap failed: %message%": "El intercambio falló: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Error inesperado. No se pudo estimar la gasolina para realizar el intercambio.",
-  "Unexpected error. Could not estimate gas for the approve.": "Error inesperado. No se pudo estimar la gasolina para realizar la aprobación.",
+
   "Farm Auction": "Subasta en la granja",
   "Farm Auction Winner, add liquidity at your own risk.": "El ganador de la subasta en la granja, agrega liquidez a tu propio riesgo.",
   "Currently showing charts from Chainlink oracle": "Actualmente se muestran las gráficas de Chainlink oracle",
@@ -1562,16 +1561,16 @@
   "Play Now": "Jugar ahora",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Gana $%prize% en la lotería",
-  "Approve was called unnecessarily": "La aprobación que se hizo fue innecesaria",
+
   "No token": "Ningún token",
   "Cannot find contract of the token %tokenAddress%": "No es posible encontrar un contrato del token %tokenAddress%",
-  "Missing amount to approve": "Cantidad que falta por aprobar",
+
   "No spender": "Ningún gastador",
   "Missing liquidity amount": "Cantidad de liquidez faltante",
   "Missing currency amounts": "Cantidades en moneda que faltan",
   "Missing tokens": "Tokens que faltan",
   "Could not wrap": "No se pudo envolver",
-  "Attempting to confirm without approval or a signature": "Intentar confirmar sin aprobación ni firma",
+
   "This transaction would fail": "Esta transacción podría fallar",
   "Place a limit order to trade at a set price": "Colocar una orden limitada para negociar a un precio determinado",
   "Place an Order": "Realizar una orden",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Cambia a %chain%",
   "Stay on %chain%": "Permanece en %chain%",
   "Go to Pool": "Ve al Pool",
-  "Approve %symbol%": "Aprobar %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Agregar %amountA% %symbolA% y %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Eliminar %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Eliminar %amountA% %symbolA% y %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE le permite aumentar su rendimiento en las granjas de SweepStakes hasta 2 veces.",
 
   "KLAY staking expired": "La inversión de KLAY venció",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Asignación de tokens insuficiente. Haz clic en \"Habilitar\" para aprobar.",
 
   "Unable to supply": "No se puede suministrar",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Al agregar liquidez, ganarás el 50% de las tarifas por todas las operaciones en este par de manera proporcional a tu participación en el pool. Las comisiones se agregaron al pool, son acumulables en tiempo real y pueden cobrarse retirando tu liquidez. Para obtener más información sobre las tarifas de Stableswap, haz clic en",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Fondos enviados a su monedero",
   "Claim Request time": "Duración de la solicitud de cobro",
   "State": "Estado",
-  "Pending Approval": "Aprobación pendiente",
+
   "Rejected": "Rechazado",
   "Latest rewards": "Últimas recompensas",
   "Historical Claim": "Historial de cobros",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",

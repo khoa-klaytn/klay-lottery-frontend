@@ -148,7 +148,7 @@
   "Insufficient KLAY balance": "Sold KLAY insuficient",
   "Choose collectible": "Alege colectibilul",
   "Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.": "Alege o fotografie de profil din colectibilele eligibile (NFT) din portofelul tău afișate mai jos.",
-  "Only approved SweepStakes Collectibles can be used.": "Se pot utiliza doar colectibile SweepStakes aprobate.",
+
   "Allow collectible to be locked": "Permite blocarea colectibilelor",
   "Join a Team": "Intră într-o echipă",
 
@@ -437,7 +437,7 @@
   "Total cost: 1.5 KLAY": "Cost total: 1,5 KLAY",
   "Cost: %num% KLAY": "Cost: %num% KLAY",
   "our swap page": "pagina noastră de swap",
-  "You can change your profile pic later if you get another approved SweepStakes Collectible.": "Îți poți schimba fotografia de profil mai târziu dacă obții un alt colectibil SweepStakes aprobat.",
+
   "Every profile starts by making a “starter” collectible (NFT).": "Fiecare profil începe cu un colectibil „starter” (NFT).",
   "We couldn’t find any SweepStakes Collectibles in your wallet.": "Nu am putut găsi niciun colectibil SweepStakes în portofelul tău.",
   "You need a SweepStakes Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.": "Ai nevoie de un colectibil SweepStakes pentru a finaliza configurarea profilului tău. Dacă ai vândut sau transferat colectibilul starter către un alt portofel, va trebui să îl recuperezi sau să achiziționezi altul într-un mod oarecare. Nu poți obține un colectibil starter nou cu această adresă de portofel.",
@@ -949,8 +949,7 @@
   "Disconnect Wallet": "Deconectează portofelul",
   "Ending in": "Se termină în",
   "Next auction": "Următoarea licitație",
-  "Contract approved - you can now place your bid!": "Contract aprobat - acum îți poți plasa oferta!",
-  "Contract approved - you can now reclaim your bid!": "Contract aprobat - acum îți poți revendica oferta!",
+
   "Bid placed!": "Ofertă plasată!",
   "Bid reclaimed!": "Ofertă revendicată!",
   "Reclaim Bid": "Revendică oferta",
@@ -1186,7 +1185,7 @@
   "Please enable WBNB spending in your wallet": "Permite cheltuielile WBNB în portofelul tău",
   "Please confirm the transaction in your wallet": "Confirmă tranzacția din portofelul tău",
   "Your NFTs": "NFT-urile tale",
-  "Contract approved - you can now buy NFT with WBNB!": "Contract aprobat - acum poți cumpăra NFT cu WBNB!",
+
   "Your NFT has been sent to your wallet": "NFT-ul tău a fost trimis către portofelul tău",
   "Transaction Confirmed": "Tranzacție confirmată",
   "Activity": "Activitate",
@@ -1196,7 +1195,7 @@
   "Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with SweepStakes.": "Vânzările sunt în WBNB. Poți schimba WBNB cu BNB 1:1 pe gratis cu SweepStakes.",
   "Enable Listing": "Permite listarea",
   "Please enable your NFT to be sent to the market": "Permite NFT-ului tău să fie pus pe piață",
-  "Contract approved - you can now put your NFT for sale!": "Contract aprobat - acum îți poți scoate NFT-ul la vânzare!",
+
   "Adjust Sale Price": "Modifică prețul vânzării",
   "Set Price": "Setează prețul",
   "Input New Sale Price": "Introdu noul preț de vânzare",
@@ -1546,7 +1545,7 @@
   "Unexpected issue with estimating the gas. Please try again.": "S-a produs o eroare neașteptată la estimarea cheltuielilor cu tranzacția. Încearcă din nou.",
   "Swap failed: %message%": "Schimbare eșuată: %message%",
   "Unexpected error. Could not estimate gas for the swap.": "Eroare neașteptată. Nu s-au putut estima cheltuielile cu tranzacția pentru schimbare.",
-  "Unexpected error. Could not estimate gas for the approve.": "Eroare neașteptată. Nu s-au putut estima cheltuielile cu tranzacția pentru aprobare.",
+
   "Farm Auction": "Licitație fermă",
   "Farm Auction Winner, add liquidity at your own risk.": "Câștigătorul licitației de fermă, adaugă lichidități pe riscul tău.",
   "Currently showing charts from Chainlink oracle": "În prezent se afișează graficele pentru oracolul Chainlink",
@@ -1562,16 +1561,16 @@
   "Play Now": "Joacă acum",
   "Litepaper": "Litepaper",
   "Win $%prize% in Lottery": "Câștigă %prize% $ la loterie",
-  "Approve was called unnecessarily": "Aprobarea a fost solicitată inutil",
+
   "No token": "Niciun jeton",
   "Cannot find contract of the token %tokenAddress%": "Nu se poate găsi contractul jetonului %tokenAddress%",
-  "Missing amount to approve": "Suma pentru aprobare lipsește",
+
   "No spender": "Niciun cheltuitor",
   "Missing liquidity amount": "Suma de lichidități lipsește",
   "Missing currency amounts": "Sumele în monedă lipsesc",
   "Missing tokens": "Jetoane lipsă",
   "Could not wrap": "Nu s-a putut realiza împachetarea",
-  "Attempting to confirm without approval or a signature": "Se încearcă confirmarea fără aprobare sau semnătură",
+
   "This transaction would fail": "Această tranzacție ar eșua",
   "Place a limit order to trade at a set price": "Plasează un ordin de limită pentru a tranzacționa la un preț definit",
   "Place an Order": "Plasează un ordin",
@@ -1925,7 +1924,7 @@
   "Switch to %chain%": "Treci la %chain%",
   "Stay on %chain%": "Rămâi pe %chain%",
   "Go to Pool": "Accesează portofoliul",
-  "Approve %symbol%": "Aprobă %symbol%",
+
   "Add %amountA% %symbolA% and %amountB% %symbolB%": "Adaugă %amountA% %symbolA% și %amountB% %symbolB%",
   "Remove %amount% %symbol%": "Elimină %amount% %symbol%",
   "Remove %amountA% %symbolA% and %amountB% %symbolB%": "Elimină %amountA% %symbolA% și %amountB% %symbolB%",
@@ -2078,7 +2077,6 @@
   "bCAKE allows you to boost your yield in SweepStakes Farms by up to 2x.": "bCAKE îți permite să amplifici randamentul în Fermele SweepStakes cu până la 2x.",
 
   "KLAY staking expired": "Investițiile KLAY au expirat",
-  "Insufficient token allowance. Click \"Enable\" to approve.": "Permisiune jeton insuficientă. Fă clic pe „Activare” pentru a aproba.",
 
   "Unable to supply": "Nu se poate alimenta",
   "By adding liquidity, you’ll earn 50% from the fees of all trades on this pair, proportional to your share in the trading pair. Fees are added to the pair, accrue in real time, and can be claimed by withdrawing your liquidity. For more information on Stableswap fees click": "Prin adăugarea lichidității, vei câștiga 50% din comisioane la toate tranzacțiile pe această pereche, proporțional cu cota pe care o ai în perechea de tranzacționare. Comisioanele sunt adăugate la pereche, acumulate în timp real și pot fi revendicate prin retragerea lichidității. Pentru informații suplimentare despre comisioanele Stableswap, fă clic",
@@ -2553,7 +2551,7 @@
   "Funds sent to your wallet": "Fondurile au fost trimise în portofelul tău",
   "Claim Request time": "Ora solicitării revendicării",
   "State": "Stare",
-  "Pending Approval": "În curs de aprobare",
+
   "Rejected": "Respins",
   "Latest rewards": "Cele mai recente recompense",
   "Historical Claim": "Revendicare istorică",
@@ -2699,7 +2697,7 @@
   "%chainId% supports limited fiat currencies. USD are not supported": "%chainId% supports limited fiat currencies. USD are not supported",
   "Proceed in your wallet": "Proceed in your wallet",
   "Enable spending %symbol%": "Enable spending %symbol%",
-  "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.": "If wallet require you to enter the number of tokens you want to approve, you could enter a number that is greater than or equal to the amount of tokens you are swapping.",
+
   "Why": "Why",
   "approving": "approving",
   "this?": "this?",
@@ -2707,9 +2705,7 @@
   "Swapping thru:": "Swapping thru:",
   "SweepStakesswap MM": "SweepStakesswap MM",
   "SweepStakesswap AMM": "SweepStakesswap AMM",
-  "Why resetting approval": "Why resetting approval",
-  "Reset Approval on USDT": "Reset Approval on USDT",
-  "USDT on Ethereum requires resetting approval when spending allowances are too low.": "USDT on Ethereum requires resetting approval when spending allowances are too low.",
+
   "Happy Birthday!": "Happy Birthday!",
   "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.": "Let’s celebrate our 3rd Birthday with some juicy profile points and achievements. Check out our social channels for other exciting campaigns and community events.",
   "Birthday": "Birthday",
