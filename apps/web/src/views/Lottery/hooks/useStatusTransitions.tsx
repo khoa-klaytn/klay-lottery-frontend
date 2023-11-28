@@ -4,7 +4,7 @@ import { usePreviousValue } from '@sweepstakes/hooks'
 import { useEffect } from 'react'
 import { useAppDispatch } from 'state'
 import { useLottery } from 'state/lottery/hooks'
-import { fetchPublicLotteries, fetchCurrentLotteryId, fetchUserLotteries } from 'state/lottery'
+import { fetchPublicLotteries, fetchCurrentLotteryIdThunk, fetchUserLotteries } from 'state/lottery'
 import useLotteryAddress from './useLotteryAddress'
 
 const useStatusTransitions = () => {
@@ -42,12 +42,12 @@ const useStatusTransitions = () => {
 
   useEffect(() => {
     // Current lottery is CLAIMABLE and the lottery is transitioning to a NEW round - fetch current lottery ID every 10s.
-    // The isTransitioning condition will no longer be true when fetchCurrentLotteryId returns the next lottery ID
+    // The isTransitioning condition will no longer be true when fetchCurrentLotteryIdThunk returns the next lottery ID
     if (previousStatus === LotteryStatus.CLAIMABLE && status === LotteryStatus.CLAIMABLE && isTransitioning) {
-      dispatch(fetchCurrentLotteryId({ publicClient, lotteryAddress }))
+      dispatch(fetchCurrentLotteryIdThunk({ publicClient, lotteryAddress }))
       dispatch(fetchPublicLotteries({ publicClient, lotteryAddress, currentLotteryId }))
       const interval = setInterval(async () => {
-        dispatch(fetchCurrentLotteryId({ publicClient, lotteryAddress }))
+        dispatch(fetchCurrentLotteryIdThunk({ publicClient, lotteryAddress }))
         dispatch(fetchPublicLotteries({ publicClient, lotteryAddress, currentLotteryId }))
       }, 10000)
       return () => clearInterval(interval)

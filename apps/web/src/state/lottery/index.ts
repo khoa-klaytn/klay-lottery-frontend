@@ -3,15 +3,10 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { LotteryTicket, LotteryStatus } from 'config/constants/types'
 import { LotteryState, LotteryRoundGraphEntity, LotteryUserGraphEntity, LotteryResponse } from 'state/types'
 import { Address, PublicClient } from 'viem'
-import { fetchLottery, fetchCurrentLotteryIdAndMaxBuy } from './helpers'
+import { fetchLottery, fetchCurrentLotteryId, fetchMaxBuy } from './helpers'
 import getLotteriesData from './getLotteriesData'
 import getUserLotteryData, { getGraphLotteryUser } from './getUserLotteryData'
 import { resetUserState } from '../global/actions'
-
-interface PublicLotteryData {
-  currentLotteryId: string
-  maxNumberTicketsPerBuyOrClaim: string
-}
 
 const initialState: LotteryState = {
   currentLotteryId: null,
@@ -50,13 +45,21 @@ export const fetchCurrentLottery = createAsyncThunk<
   return lotteryInfo
 })
 
-export const fetchCurrentLotteryId = createAsyncThunk<
-  PublicLotteryData,
+export const fetchCurrentLotteryIdThunk = createAsyncThunk<
+  string,
   { publicClient: PublicClient; lotteryAddress: Address }
 >('lottery/fetchCurrentLotteryId', async ({ publicClient, lotteryAddress }) => {
-  const currentIdAndMaxBuy = await fetchCurrentLotteryIdAndMaxBuy(publicClient, lotteryAddress)
-  return currentIdAndMaxBuy
+  const currentId = await fetchCurrentLotteryId(publicClient, lotteryAddress)
+  return currentId.toString()
 })
+
+export const fetchMaxBuyThunk = createAsyncThunk<string, { publicClient: PublicClient; lotteryAddress: Address }>(
+  'lottery/fetchMaxBuy',
+  async ({ publicClient, lotteryAddress }) => {
+    const maxNumberTicketsPerBuyOrClaim = await fetchMaxBuy(publicClient, lotteryAddress)
+    return maxNumberTicketsPerBuyOrClaim.toString()
+  },
+)
 
 export const fetchUserTicketsAndLotteries = createAsyncThunk<
   { userTickets: LotteryTicket[]; userLotteries: LotteryUserGraphEntity },
@@ -117,9 +120,11 @@ export const LotterySlice = createSlice({
     builder.addCase(fetchCurrentLottery.fulfilled, (state, action: PayloadAction<LotteryResponse>) => {
       state.currentRound = { ...state.currentRound, ...action.payload }
     })
-    builder.addCase(fetchCurrentLotteryId.fulfilled, (state, action: PayloadAction<PublicLotteryData>) => {
-      state.currentLotteryId = action.payload.currentLotteryId
-      state.maxNumberTicketsPerBuyOrClaim = action.payload.maxNumberTicketsPerBuyOrClaim
+    builder.addCase(fetchCurrentLotteryIdThunk.fulfilled, (state, action: PayloadAction<string>) => {
+      state.currentLotteryId = action.payload
+    })
+    builder.addCase(fetchMaxBuyThunk.fulfilled, (state, action: PayloadAction<string>) => {
+      state.maxNumberTicketsPerBuyOrClaim = action.payload
     })
     builder.addCase(
       fetchUserTicketsAndLotteries.fulfilled,

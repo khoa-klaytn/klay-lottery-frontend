@@ -206,8 +206,6 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   )
 
   const onConfirm = useCallback(async () => {
-    if (!currentLotteryId) throw Error('Fetching current lottery...')
-
     const ticketsForPurchase = getTicketsForPurchase()
     const value = await publicClient.readContract({
       abi: ssLotteryABI,

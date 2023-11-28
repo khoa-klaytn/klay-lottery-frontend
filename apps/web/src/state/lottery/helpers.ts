@@ -119,34 +119,30 @@ export const fetchMultipleLotteries = async (
 }
 
 export const fetchCurrentLotteryId = async (client: PublicClient, lotteryAddress: `0x${string}`): Promise<bigint> => {
-  return client.readContract({
-    abi: ssLotteryABI,
-    address: lotteryAddress,
-    functionName: 'currentLotteryId',
-  })
+  try {
+    const currentLotteryId = await client.readContract({
+      abi: ssLotteryABI,
+      address: lotteryAddress,
+      functionName: 'currentLotteryId',
+    })
+    return currentLotteryId
+  } catch (error) {
+    console.error(error)
+    return null
+  }
 }
 
-export const fetchCurrentLotteryIdAndMaxBuy = async (client: PublicClient, lotteryAddress: `0x${string}`) => {
+export const fetchMaxBuy = async (client: PublicClient, lotteryAddress: `0x${string}`): Promise<bigint> => {
   try {
-    const [currentLotteryId, maxNumberTicketsPerBuyOrClaim] = await Promise.all(
-      (['currentLotteryId', 'maxNumberTicketsPerBuyOrClaim'] as const).map((method) =>
-        client.readContract({
-          abi: ssLotteryABI,
-          address: lotteryAddress,
-          functionName: method,
-        }),
-      ),
-    )
-
-    return {
-      currentLotteryId: typeof currentLotteryId === 'bigint' ? currentLotteryId.toString() : null,
-      maxNumberTicketsPerBuyOrClaim: maxNumberTicketsPerBuyOrClaim ? maxNumberTicketsPerBuyOrClaim.toString() : null,
-    }
+    const maxNumberTicketsPerBuyOrClaim = await client.readContract({
+      abi: ssLotteryABI,
+      address: lotteryAddress,
+      functionName: 'maxNumberTicketsPerBuyOrClaim',
+    })
+    return maxNumberTicketsPerBuyOrClaim
   } catch (error) {
-    return {
-      currentLotteryId: null,
-      maxNumberTicketsPerBuyOrClaim: null,
-    }
+    console.error(error)
+    return null
   }
 }
 

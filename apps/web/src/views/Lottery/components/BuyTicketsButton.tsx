@@ -19,6 +19,8 @@ const BuyTicketsButton: React.FC<React.PropsWithChildren<BuyTicketsButtonProps>>
   const { isDark } = useTheme()
   const [onPresentBuyTicketsModal] = useModal(<BuyTicketsModal />)
   const {
+    currentLotteryId,
+    maxNumberTicketsPerBuyOrClaim,
     currentRound: { status },
   } = useLottery()
 
@@ -36,7 +38,12 @@ const BuyTicketsButton: React.FC<React.PropsWithChildren<BuyTicketsButtonProps>>
   const themeStr = themeMode ?? (isDark ? 'dark' : 'light')
 
   return (
-    <Button data-theme={themeStr} {...props} disabled={disabled} onClick={onPresentBuyTicketsModal}>
+    <Button
+      data-theme={themeStr}
+      {...props}
+      disabled={disabled || !currentLotteryId || maxNumberTicketsPerBuyOrClaim.isNaN()}
+      onClick={onPresentBuyTicketsModal}
+    >
       {getBuyButtonText()}
     </Button>
   )

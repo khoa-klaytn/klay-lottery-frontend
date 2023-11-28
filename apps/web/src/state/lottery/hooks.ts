@@ -5,7 +5,13 @@ import { useAppDispatch } from 'state'
 import { useSlowRefreshEffect } from 'hooks/useRefreshEffect'
 import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import { State } from '../types'
-import { fetchCurrentLotteryId, fetchCurrentLottery, fetchUserTicketsAndLotteries, fetchPublicLotteries } from '.'
+import {
+  fetchCurrentLotteryIdThunk,
+  fetchMaxBuyThunk,
+  fetchCurrentLottery,
+  fetchUserTicketsAndLotteries,
+  fetchPublicLotteries,
+} from '.'
 import { makeLotteryGraphDataByIdSelector, lotterySelector } from './selectors'
 
 // Lottery
@@ -34,8 +40,8 @@ export const useFetchLottery = (fetchPublicDataOnly = false) => {
   const currentLotteryId = useGetCurrentLotteryId()
 
   useEffect(() => {
-    // get current lottery ID & max ticket buy
-    dispatch(fetchCurrentLotteryId({ publicClient, lotteryAddress }))
+    dispatch(fetchCurrentLotteryIdThunk({ publicClient, lotteryAddress }))
+    dispatch(fetchMaxBuyThunk({ publicClient, lotteryAddress }))
   }, [publicClient, lotteryAddress, dispatch])
 
   useSlowRefreshEffect(() => {
