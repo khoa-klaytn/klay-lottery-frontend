@@ -1,4 +1,4 @@
-import { languageList, useTranslation } from '@sweepstakes/localization'
+import { useTranslation } from '@sweepstakes/localization'
 import { footerLinks, Menu as UikitMenu, NextLinkFromReactRouter, useModal } from '@sweepstakes/uikit'
 import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
 import { NetworkSwitcher } from 'components/NetworkSwitcher'
@@ -25,7 +25,7 @@ const Menu = (props) => {
   const { chainId } = useActiveChainId()
   const { isDark, setTheme } = useTheme()
   const klayPrice = useKlayPrice()
-  const { currentLanguage, setLanguage, t } = useTranslation()
+  const { t } = useTranslation()
   const { pathname } = useRouter()
   const [onUSCitizenModalPresent] = useModal(
     <USCitizenConfirmModal title={t('SweepStakes Perpetuals')} id={IdType.PERPETUALS} />,
@@ -49,34 +49,29 @@ const Menu = (props) => {
   }, [t])
 
   return (
-    <>
-      <UikitMenu
-        linkComponent={LinkComponent}
-        rightSide={
-          <>
-            <GlobalSettings mode={SettingsMode.GLOBAL} />
-            <NetworkSwitcher />
-            <UserMenu />
-          </>
-        }
-        chainId={chainId}
-        banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
-        isDark={isDark}
-        toggleTheme={toggleTheme}
-        currentLang={currentLanguage.code}
-        langs={languageList}
-        setLang={setLanguage}
-        klayPriceUsd={klayPrice.eq(BIG_ZERO) ? undefined : klayPrice}
-        links={menuItems}
-        subLinks={activeMenuItem?.hideSubNav || activeSubMenuItem?.hideSubNav ? [] : activeMenuItem?.items}
-        footerLinks={getFooterLinks}
-        activeItem={activeMenuItem?.href}
-        activeSubItem={activeSubMenuItem?.href}
-        buyKlayLabel={t('Buy KLAY')}
-        buyKlayLink="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index"
-        {...props}
-      />
-    </>
+    <UikitMenu
+      linkComponent={LinkComponent}
+      rightSide={
+        <>
+          <GlobalSettings mode={SettingsMode.GLOBAL} />
+          <NetworkSwitcher />
+          <UserMenu />
+        </>
+      }
+      chainId={chainId}
+      banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
+      isDark={isDark}
+      toggleTheme={toggleTheme}
+      klayPriceUsd={klayPrice.eq(BIG_ZERO) ? undefined : klayPrice}
+      links={menuItems}
+      subLinks={activeMenuItem?.hideSubNav || activeSubMenuItem?.hideSubNav ? [] : activeMenuItem?.items}
+      footerLinks={getFooterLinks}
+      activeItem={activeMenuItem?.href}
+      activeSubItem={activeSubMenuItem?.href}
+      buyKlayLabel={t('Buy KLAY')}
+      buyKlayLink="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index"
+      {...props}
+    />
   )
 }
 

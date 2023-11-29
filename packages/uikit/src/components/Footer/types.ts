@@ -13,8 +13,5 @@ export type FooterProps = {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
   klayPriceUsd?: number;
-  currentLang: string;
-  langs: Language[];
   chainId: number;
-  setLang: (lang: Language) => void;
 } & FlexProps;
