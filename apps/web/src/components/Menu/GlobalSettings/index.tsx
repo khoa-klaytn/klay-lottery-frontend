@@ -1,5 +1,5 @@
-import { Flex, IconButton, CogIcon, useModal } from '@sweepstakes/uikit'
-import SettingsModal from './SettingsModal'
+import { Flex /* IconButton, CogIcon, useModal */ } from '@sweepstakes/uikit'
+// import SettingsModal from './SettingsModal'
 
 type Props = {
   color?: string
@@ -7,12 +7,12 @@ type Props = {
   mode?: string
 }
 
-const GlobalSettings = ({ color, mr = '8px', mode }: Props) => {
-  const [onPresentSettingsModal] = useModal(<SettingsModal mode={mode} />)
+const GlobalSettings = (_: Props) => {
+  // const [onPresentSettingsModal] = useModal(<SettingsModal mode={mode} />)
 
   return (
     <Flex>
-      <IconButton
+      {/* <IconButton
         onClick={onPresentSettingsModal}
         variant="text"
         scale="sm"
@@ -20,7 +20,7 @@ const GlobalSettings = ({ color, mr = '8px', mode }: Props) => {
         id={`open-settings-dialog-button-${mode}`}
       >
         <CogIcon height={24} width={24} color={color || 'textSubtle'} />
-      </IconButton>
+      </IconButton> */}
     </Flex>
   )
 }
