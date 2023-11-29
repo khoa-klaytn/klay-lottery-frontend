@@ -1,4 +1,4 @@
-import { useIsMounted } from "@sweepstakes/hooks";
+// import { useIsMounted } from "@sweepstakes/hooks";
 import React from "react";
 import { useMatchBreakpoints } from "../../contexts";
 import { Box, Flex } from "../Box";
@@ -17,20 +17,20 @@ import { vars } from "../../css/vars.css";
 import { Button } from "../Button";
 import KlayPrice from "../KlayPrice/KlayPrice";
 import { ArrowForwardIcon, LogoIcon, LogoWithTextIcon } from "../Svg";
-import { ThemeSwitcher } from "../ThemeSwitcher";
+// import { ThemeSwitcher } from "../ThemeSwitcher";
 import { FooterProps } from "./types";
 
 const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   items,
-  isDark,
-  toggleTheme,
+  // isDark,
+  // toggleTheme,
   klayPriceUsd,
   buyKlayLabel,
   buyKlayLink,
   chainId,
   ...props
 }) => {
-  const isMounted = useIsMounted();
+  // const isMounted = useIsMounted();
   const { isXl } = useMatchBreakpoints();
   return (
     <StyledFooter
@@ -83,9 +83,9 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
         >
-          <Flex order={[2, null, 1]} alignItems="center">
+          {/* <Flex order={[2, null, 1]} alignItems="center">
             {isMounted && <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />}
-          </Flex>
+          </Flex> */}
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
               <KlayPrice chainId={chainId} klayPriceUsd={klayPriceUsd} color="textSubtle" />
