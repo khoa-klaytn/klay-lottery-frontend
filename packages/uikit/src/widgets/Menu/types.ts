@@ -1,4 +1,5 @@
 import { ElementType, ReactElement, ReactNode } from "react";
+import type { Language } from "@sweepstakes/localization";
 import { FooterLinkType } from "../../components/Footer/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
 import { SubMenuItemsType } from "../../components/SubMenuItems/types";
@@ -24,5 +25,7 @@ export interface NavProps {
   currentLang: string;
   buyKlayLabel: string;
   buyKlayLink: string;
+  langs: Language[];
   chainId: number;
+  setLang: (lang: Language) => void;
 }

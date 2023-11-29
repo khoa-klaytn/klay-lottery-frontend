@@ -1,4 +1,5 @@
 import noop from "lodash/noop";
+import type { Language } from "@sweepstakes/localization";
 import { vi } from "vitest";
 import { BrowserRouter } from "react-router-dom";
 import { renderWithProvider } from "../../testHelpers";
@@ -23,6 +24,12 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
+const langs: Language[] = [...Array(20)].map((_, i) => ({
+  code: `en${i}`,
+  language: `English${i}`,
+  locale: `en${i}-locale`,
+}));
+
 it("renders correctly", () => {
   const { asFragment } = renderWithProvider(
     <BrowserRouter>
@@ -30,13 +37,17 @@ it("renders correctly", () => {
         chainId={56}
         isDark={false}
         toggleTheme={noop}
+        langs={langs}
+        setLang={noop}
+        currentLang="en-US"
         klayPriceUsd={0.23158668932877668}
         links={menuConfig}
         subLinks={menuConfig[0].items as SubMenuItemsType[]}
         footerLinks={footerLinks}
         activeItem="Trade"
         activeSubItem="Exchange"
-        buyKlayLink="https://sweepstakes.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+        buyCakeLabel="Buy KLAY"
+        buyCakeLink="https://sweepstakes.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
       >
         body
       </Menu>

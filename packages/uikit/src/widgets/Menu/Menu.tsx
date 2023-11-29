@@ -8,6 +8,7 @@ import Flex from "../../components/Box/Flex";
 import { AtomBox } from "../../components/AtomBox";
 import KlayPrice from "../../components/KlayPrice/KlayPrice";
 import Footer from "../../components/Footer";
+import LangSelector from "../../components/LangSelector/LangSelector";
 import MenuItems from "../../components/MenuItems/MenuItems";
 import { SubMenuItems } from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../contexts";
@@ -75,12 +76,15 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   rightSide,
   isDark,
   toggleTheme,
+  currentLang,
+  setLang,
   klayPriceUsd,
   links,
   subLinks,
   footerLinks,
   activeItem,
   activeSubItem,
+  langs,
   buyKlayLabel,
   buyKlayLink,
   children,
@@ -153,6 +157,16 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                 <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
                   <KlayPrice chainId={chainId} showSkeleton={false} klayPriceUsd={klayPriceUsd} />
                 </AtomBox>
+                <Box mt="4px">
+                  <LangSelector
+                    currentLang={currentLang}
+                    langs={langs}
+                    setLang={setLang}
+                    buttonScale="xs"
+                    color="textSubtle"
+                    hideLanguage
+                  />
+                </Box>
                 {rightSide}
               </Flex>
             </StyledNav>
@@ -187,6 +201,9 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
         items={footerLinks}
         isDark={isDark}
         toggleTheme={toggleTheme}
+        langs={langs}
+        setLang={setLang}
+        currentLang={currentLang}
         klayPriceUsd={klayPriceUsd}
         buyKlayLabel={buyKlayLabel}
         buyKlayLink={buyKlayLink}
