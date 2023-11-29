@@ -6,6 +6,7 @@
   },
   "extends": ["plugin:@next/next/recommended"],
   "rules": {
+    "no-case-declarations": 0,
     "no-empty-function": 0,
     "no-restricted-syntax": 0,
     "import/no-unresolved": 0,
