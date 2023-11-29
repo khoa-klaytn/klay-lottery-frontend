@@ -54,6 +54,16 @@ export const injectedConnector = new InjectedConnector({
   },
 })
 
+export const kaikasConnector = new InjectedConnector({
+  chains: chains.filter((chain) => chain.id === 8217 || chain.id === 1001),
+  options: {
+    name: 'Kaikas',
+    getProvider: () => (typeof window !== 'undefined' ? window.klaytn : undefined),
+    shimDisconnect: false,
+  },
+})
+;(kaikasConnector as any).id = 'kaikas'
+
 export const coinbaseConnector = new CoinbaseWalletConnector({
   chains,
   options: {
@@ -124,6 +134,7 @@ export const wagmiConfig = createConfig({
   autoConnect: false,
   publicClient,
   connectors: [
+    kaikasConnector,
     metaMaskConnector,
     injectedConnector,
     coinbaseConnector,

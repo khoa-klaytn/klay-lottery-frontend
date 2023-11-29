@@ -2,6 +2,7 @@ import { WalletConfigV2 } from '@sweepstakes/ui-wallets'
 import { walletConnectNoQrCodeConnector } from '../utils/wagmi'
 
 export enum ConnectorNames {
+  Kaikas = 'kaikas',
   MetaMask = 'metaMask',
 }
 
@@ -14,6 +15,18 @@ const createQrCode = (chainId: number, connect) => async () => {
       resolve(uri)
     })
   })
+}
+
+const isKaikasInstalled = () => {
+  if (typeof window === 'undefined') {
+    return false
+  }
+
+  if (window.klaytn?.isKaikas) {
+    return true
+  }
+
+  return false
 }
 
 const isMetamaskInstalled = () => {
@@ -41,6 +54,16 @@ const walletsConfig = ({
 }): WalletConfigV2<ConnectorNames>[] => {
   const qrCode = createQrCode(chainId, connect)
   return [
+    {
+      id: 'kaikas',
+      title: 'Kaikas',
+      icon: '/images/wallets/kaikas.svg',
+      get installed() {
+        return isKaikasInstalled()
+      },
+      connectorId: ConnectorNames.Kaikas,
+      downloadLink: 'https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi',
+    },
     {
       id: 'metamask',
       title: 'Metamask',
