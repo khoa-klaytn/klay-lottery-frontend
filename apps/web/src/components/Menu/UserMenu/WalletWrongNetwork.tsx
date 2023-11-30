@@ -1,8 +1,9 @@
 import { styled } from 'styled-components'
 import { useTranslation } from '@sweepstakes/localization'
 import { Button, Text, Link, HelpIcon, Message, MessageText } from '@sweepstakes/uikit'
-import { ChainId } from '@sweepstakes/chains'
 import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
+import useActiveWeb3React from 'hooks/useActiveWeb3React'
+import { useCallback } from 'react'
 
 const StyledLink = styled(Link)`
   width: 100%;
@@ -17,12 +18,14 @@ interface WalletWrongNetworkProps {
 
 const WalletWrongNetwork: React.FC<React.PropsWithChildren<WalletWrongNetworkProps>> = ({ onDismiss }) => {
   const { t } = useTranslation()
+  const { chainId } = useActiveWeb3React()
+
   const { switchNetworkAsync, canSwitch } = useSwitchNetwork()
 
-  const handleSwitchNetwork = async (): Promise<void> => {
-    await switchNetworkAsync(ChainId.BSC)
+  const handleSwitchNetwork = useCallback(async (): Promise<void> => {
+    switchNetworkAsync(chainId)
     onDismiss?.()
-  }
+  }, [chainId, onDismiss, switchNetworkAsync])
 
   return (
     <>
