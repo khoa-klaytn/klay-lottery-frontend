@@ -1,51 +1,17 @@
 import { BinanceWalletConnector } from '@sweepstakes/wagmi/connectors/binanceWallet'
 import { BloctoConnector } from '@sweepstakes/wagmi/connectors/blocto'
 import { TrustWalletConnector } from '@sweepstakes/wagmi/connectors/trustWallet'
-import { CHAINS } from 'config/chains'
-import { PUBLIC_NODES } from 'config/nodes'
 import memoize from 'lodash/memoize'
-import { configureChains, createConfig, createStorage } from 'wagmi'
-import { mainnet } from 'wagmi/chains'
+import { createConfig, createStorage } from 'wagmi'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { LedgerConnector } from 'wagmi/connectors/ledger'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+import KaikasConnector from './kaikas'
+import { chains, publicClient } from './configure'
 
-// get most configs chain nodes length
-const mostNodesConfig = Object.values(PUBLIC_NODES).reduce((prev, cur) => {
-  return cur.length > prev ? cur.length : prev
-}, 0)
-
-export const { publicClient, chains } = configureChains(
-  CHAINS,
-  Array.from({ length: mostNodesConfig })
-    .map((_, i) => i)
-    .map((i) => {
-      return jsonRpcProvider({
-        rpc: (chain) => {
-          if (process.env.NODE_ENV === 'test' && chain.id === mainnet.id && i === 0) {
-            return { http: 'https://eth.llamarpc.com' }
-          }
-          return PUBLIC_NODES[chain.id]?.[i]
-            ? {
-                http: PUBLIC_NODES[chain.id][i],
-              }
-            : null
-        },
-      })
-    }),
-  {
-    batch: {
-      multicall: {
-        batchSize: 1024 * 200,
-        wait: 16,
-      },
-    },
-    pollingInterval: 6_000,
-  },
-)
+export { chains, publicClient }
 
 export const injectedConnector = new InjectedConnector({
   chains,
@@ -54,15 +20,7 @@ export const injectedConnector = new InjectedConnector({
   },
 })
 
-export const kaikasConnector = new InjectedConnector({
-  chains: chains.filter((chain) => chain.id === 8217 || chain.id === 1001),
-  options: {
-    name: 'Kaikas',
-    getProvider: () => (typeof window !== 'undefined' ? window.klaytn : undefined),
-    shimDisconnect: false,
-  },
-})
-;(kaikasConnector as any).id = 'kaikas'
+export const kaikasConnector = new KaikasConnector()
 
 export const coinbaseConnector = new CoinbaseWalletConnector({
   chains,

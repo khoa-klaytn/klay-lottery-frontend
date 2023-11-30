@@ -12,7 +12,7 @@
     "import/no-unresolved": 0,
     "no-console": ["warn", { "allow": ["info", "warn", "error", "debug", "time", "timeLog", "timeEnd"] }],
     "no-plusplus": 0,
-    "prefer-destructuring": ["warn", { "object": true, "array": false }],
+    "prefer-destructuring": 0,
     "no-underscore-dangle": 0,
     "lodash/import-scope": [2, "method"],
     "@next/next/no-img-element": 0,
