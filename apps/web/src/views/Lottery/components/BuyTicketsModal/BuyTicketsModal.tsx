@@ -111,7 +111,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const [maxTicketPurchaseExceeded, setMaxTicketPurchaseExceeded] = useState(false)
   const eMsg = useMemo(() => {
     if (insufficientBalance) {
-      return t('Insufficient balance')
+      return t('Insufficient Balance')
     }
     if (zeroTicketPurchase) {
       return t('At least one ticket must be purchased')
@@ -376,7 +376,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         {account ? (
           <>
             <Button onClick={handleConfirm} disabled={disableBuying}>
-              Buy Instantly
+              {t('Buy Instantly')}
             </Button>
             <Button
               variant="secondary"

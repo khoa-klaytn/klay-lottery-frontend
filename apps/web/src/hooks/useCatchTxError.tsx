@@ -45,7 +45,7 @@ export default function useCatchTxError(): CatchTxErrorReturn {
         toastError(
           t('Error'),
           t('Transaction failed with error: %reason%', {
-            reason: notPreview ? error.shortMessage || error.message : error.message,
+            reason: t(notPreview && error.shortMessage ? error.shortMessage : error.message),
           }),
         )
       } else {

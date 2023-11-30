@@ -669,7 +669,6 @@
   "Your Tickets": "내 티켓",
   "in prizes!": "상금!",
   "Tickets on sale soon": "곧 티켓 판매 예정",
-  "The SweepStakes Lottery": "The SweepStakes Lottery",
   "All History": "모든 기록",
   "Winning Number": "당첨 번호",
   "Prize pot": "상금 포트",
@@ -2038,7 +2037,7 @@
   "Error connecting, please authorize wallet to access.": "연결하는 동안 오류가 발생했습니다. 액세스할 지갑을 승인하세요.",
   "Retry": "다시 시도",
   "Your first step in the DeFi world": "DeFi 세계로의 첫걸음",
-  "A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.": "Web3 지갑을 사용하면 비트코인, BNB, ETH, NFT 등과 같은 암호 화폐 자산을 보내고 받을 수 있습니다.",
+  "A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, and much more.": "Web3 지갑을 사용하면 비트코인, BNB, ETH, NFT 등과 같은 암호 화폐 자산을 보내고 받을 수 있습니다.",
   "Login using a wallet connection": "지갑 연결을 사용하여 로그인",
   "Instead of setting up new accounts and passwords for every website, simply set up your wallet in one go, and connect it to your favorite DApps.": "모든 웹사이트에 대해 새로운 계정과 암호를 설정하는 대신, 한 번에 지갑을 설정하고 즐겨 찾는 DApp에 지갑을 연결하기만 하면 됩니다.",
   "Stake Error": "스테이킹 오류",
@@ -2773,7 +2772,7 @@
   "Liquidity Provision": "Liquidity Provision",
   "Governance": "Governance",
   "Unlock the Full Potential of DeFi with": "Unlock the Full Potential of DeFi with",
-  "Ecosystem": "Ecosystem",
+  "Ecosystem": "에코시스템",
   "Partners": "Partners",
   "Experience the power of community ownership, global governance, and explore infinite use cases within the SweepStakes ecosystem": "Experience the power of community ownership, global governance, and explore infinite use cases within the SweepStakes ecosystem",
   "Fund liquidity pools, earn trading fees": "Fund liquidity pools, earn trading fees",
@@ -2793,5 +2792,11 @@
   "Predict now": "Predict now",
   "Trade now": "Trade now",
 
-  "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking"
+  "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking",
+  "The SweepStakes Lottery": "SweepStakes 복권",
+  "An internal error was received.": "내내부 오류가 발생했습니다.",
+  "All Winners": "모두가 승자다",
+  "Match first %rewardBracket%": "처음 %rewardBracket%개 숫자 일치",
+  "Match all %rewardBracket%": "%rewardBracket%개 숫자 모두 일치",
+  "At least one ticket must be purchased": "최소 1장의 티켓을 구매해야 합니다."
 }
