@@ -1939,7 +1939,7 @@
   "Wrong Network": "गलत नेटवर्क",
   "Check your network": "अपना नेटवर्क चेक करें",
   "Switch to %network%": "%network% में स्विच करें",
-  "You are in wrong network": "आप गलत नेटवर्क में हैं",
+  "You are in the wrong network": "आप गलत नेटवर्क में हैं",
   "This page is located for %network%.": "यह पेज %network% के लिए ढूंढा गया है।",
   "You are under %network% now, please switch the network to continue.": "अभी आप %network% के अंतर्गत हैं, कृपया जारी रखने के लिए नेटवर्क में स्विच करें।",
   "Switch network to continue.": "जारी रखने के लिए नेटवर्क स्विच करें।",

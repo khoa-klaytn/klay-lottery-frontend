@@ -1939,7 +1939,7 @@
   "Wrong Network": "网络错误",
   "Check your network": "检查您的网络",
   "Switch to %network%": "切换至 %network%",
-  "You are in wrong network": "您处于错误的网络",
+  "You are in the wrong network": "您处于错误的网络",
   "This page is located for %network%.": "此页面属于 %network%。",
   "You are under %network% now, please switch the network to continue.": "您现在处于 %network% 下，请切换网络以继续。",
   "Switch network to continue.": "切换网络以继续。",

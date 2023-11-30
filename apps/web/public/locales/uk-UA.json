@@ -1939,7 +1939,7 @@
   "Wrong Network": "Неправильна мережа",
   "Check your network": "Перевірте мережу",
   "Switch to %network%": "Перемкнути на %network%",
-  "You are in wrong network": "Ви в неправильній мережі",
+  "You are in the wrong network": "Ви в неправильній мережі",
   "This page is located for %network%.": "Цю сторінку призначено для %network%.",
   "You are under %network% now, please switch the network to continue.": "Ви зараз у мережі %network%. Щоб продовжити, перемкніть мережу.",
   "Switch network to continue.": "Перемкніть мережу, щоб продовжити.",

@@ -1939,7 +1939,7 @@
   "Wrong Network": "Неправильная сеть",
   "Check your network": "Проверьте сеть",
   "Switch to %network%": "Переключить на %network%",
-  "You are in wrong network": "Вы не в той сети",
+  "You are in the wrong network": "Вы не в той сети",
   "This page is located for %network%.": "Эта страница предназначена для %network%.",
   "You are under %network% now, please switch the network to continue.": "Вы сейчас в сети %network%. Чтобы продолжить, переключите сеть.",
   "Switch network to continue.": "Чтобы продолжить, переключите сеть.",

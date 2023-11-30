@@ -1939,7 +1939,7 @@
   "Wrong Network": "잘못된 네트워크",
   "Check your network": "네트워크 확인",
   "Switch to %network%": "%network%(으)로 전환",
-  "You are in wrong network": "잘못된 네트워크에 있습니다",
+  "You are in the wrong network": "잘못된 네트워크에 있습니다",
   "This page is located for %network%.": "이 페이지는 %network%용입니다.",
   "You are under %network% now, please switch the network to continue.": "현재 %network%을(를) 사용 중입니다. 네트워크를 전환한 후 계속하세요.",
   "Switch network to continue.": "계속하려면 네트워크를 전환하세요.",

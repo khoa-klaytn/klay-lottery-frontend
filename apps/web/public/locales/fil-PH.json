@@ -1931,7 +1931,7 @@
   "Wrong Network": "Maling Network",
   "Check your network": "Tingnan ang network mo",
   "Switch to %network%": "Lumipat sa %network%",
-  "You are in wrong network": "Nasa maling network ka",
+  "You are in the wrong network": "Nasa maling network ka",
   "This page is located for %network%.": "Makikita ang page na ito sa %network%.",
   "You are under %network% now, please switch the network to continue.": "Nasa %network% ka ngayon, lumipat ng network para magpatuloy.",
   "Switch network to continue.": "Lumipat ng network para magpatuloy.",

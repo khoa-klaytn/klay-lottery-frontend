@@ -1939,7 +1939,7 @@
   "Wrong Network": "Jaringan Salah",
   "Check your network": "Periksa jaringan Anda",
   "Switch to %network%": "Beralih ke %network%",
-  "You are in wrong network": "Anda di jaringan yang salah",
+  "You are in the wrong network": "Anda di jaringan yang salah",
   "This page is located for %network%.": "Halaman ini dilokasikan untuk %network%.",
   "You are under %network% now, please switch the network to continue.": "Anda sedang di %network%, silakan beralih jaringan untuk melanjutkan.",
   "Switch network to continue.": "Alihkan jaringan untuk melanjutkan.",

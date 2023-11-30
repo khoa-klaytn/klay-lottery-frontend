@@ -1939,7 +1939,7 @@
   "Wrong Network": "தவறான நெட்வொர்க்",
   "Check your network": "உங்கள் நெட்வொர்க்கைச் சரிபார்க்கவும்",
   "Switch to %network%": "%network% -க்கு மாற்று",
-  "You are in wrong network": "நீங்கள் தவறான நெட்வொர்க்கில் இருக்கிறீர்கள்",
+  "You are in the wrong network": "நீங்கள் தவறான நெட்வொர்க்கில் இருக்கிறீர்கள்",
   "This page is located for %network%.": "இந்தப் பக்கம் %network% -க்காக அமைந்துள்ளது.",
   "You are under %network% now, please switch the network to continue.": "நீங்கள் தற்போது %network% -இல் இருக்கிறீர்கள், தொடர நெட்வொர்க்கை மாற்றவும்.",
   "Switch network to continue.": "தொடர நெட்வொர்க்கை மாற்றவும்.",

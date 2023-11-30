@@ -1936,7 +1936,7 @@
   "Wrong Network": "ভুল নেটওয়ার্ক",
   "Check your network": "আপনার নেটওয়ার্ক পরীক্ষা করুন",
   "Switch to %network%": "%network%-এ পরিবর্তন করুন",
-  "You are in wrong network": "আপনি ভুল নেটওয়ার্কে রয়েছেন",
+  "You are in the wrong network": "আপনি ভুল নেটওয়ার্কে রয়েছেন",
   "This page is located for %network%.": "এই পৃষ্ঠা %network%-এর জন্য রয়েছে।",
   "You are under %network% now, please switch the network to continue.": "আপনি এখন %network%-এর অধীনে রয়েছেন, চালিয়ে যেতে অনুগ্রহ করে নেটওয়ার্ক পরিবর্তন করুন।",
   "Switch network to continue.": "চালিয়ে যেতে নেটওয়ার্ক পরিবর্তন করুন।",

@@ -1939,7 +1939,7 @@
   "Wrong Network": "Zła sieć",
   "Check your network": "Sprawdź swoją sieć",
   "Switch to %network%": "Przełącz na %network%",
-  "You are in wrong network": "Jesteś w niewłaściwej sieci",
+  "You are in the wrong network": "Jesteś w niewłaściwej sieci",
   "This page is located for %network%.": "Ta strona jest umieszczona dla %network%.",
   "You are under %network% now, please switch the network to continue.": "Jesteś teraz w sieci %network%, aby kontynuować, przełącz sieć.",
   "Switch network to continue.": "Przełącz sieć, aby kontynuować.",

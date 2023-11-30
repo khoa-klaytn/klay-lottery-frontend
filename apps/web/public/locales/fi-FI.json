@@ -1939,7 +1939,7 @@
   "Wrong Network": "Väärä verkko",
   "Check your network": "Tarkista verkkosi",
   "Switch to %network%": "Vaihda verkkoon %network%",
-  "You are in wrong network": "Olet väärässä verkossa",
+  "You are in the wrong network": "Olet väärässä verkossa",
   "This page is located for %network%.": "Tämän sivun sijainti on %network%.",
   "You are under %network% now, please switch the network to continue.": "Olet nyt verkossa %network%, vaihda verkkoa jatkaaksesi.",
   "Switch network to continue.": "Vaihda verkkoa jatkaaksesi.",

@@ -1934,7 +1934,7 @@
   "Wrong Network": "شبكة خاطئة",
   "Check your network": "تحقق من الشبكة لديك",
   "Switch to %network%": "تبديل إلى %network%",
-  "You are in wrong network": "أنت تستخدم شبكة خاطئة",
+  "You are in the wrong network": "أنت تستخدم شبكة خاطئة",
   "This page is located for %network%.": "هذه الصفحة موجودة على %network%.",
   "You are under %network% now, please switch the network to continue.": "أنت تعمل ضمن %network% الآن، يرجى تبديل الشبكة للاستمرار.",
   "Switch network to continue.": "تبديل الشبكة للاستمرار.",

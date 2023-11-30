@@ -1939,7 +1939,7 @@
   "Wrong Network": "Yanlış Ağ",
   "Check your network": "Ağınızı kontrol edin",
   "Switch to %network%": "%network% olarak değiştir",
-  "You are in wrong network": "Yanlış ağdasınız",
+  "You are in the wrong network": "Yanlış ağdasınız",
   "This page is located for %network%.": "Bu sayfa %network% ağında yer almaktadır.",
   "You are under %network% now, please switch the network to continue.": "Şu anda %network% ağındasınız, lütfen devam etmek için ağı değiştirin.",
   "Switch network to continue.": "Devam etmek için ağınızı değiştirin.",

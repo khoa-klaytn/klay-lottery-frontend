@@ -1934,7 +1934,7 @@
   "Wrong Network": "Falsches Netzwerk",
   "Check your network": "Prüfen Sie Ihr Netzwerk",
   "Switch to %network%": "Zu %network% wechseln",
-  "You are in wrong network": "Sie sind im falschen Netzwerk",
+  "You are in the wrong network": "Sie sind im falschen Netzwerk",
   "This page is located for %network%.": "Diese Seite befindet sich bei %network%.",
   "You are under %network% now, please switch the network to continue.": "Sie befinden sich jetzt bei %network%, bitte wechseln Sie das Netzwerk, um fortzufahren.",
   "Switch network to continue.": "Wechseln Sie das Netzwerk, um fortzufahren.",

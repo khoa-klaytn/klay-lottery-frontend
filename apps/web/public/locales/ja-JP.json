@@ -1939,7 +1939,7 @@
   "Wrong Network": "不正なネットワーク",
   "Check your network": "ネットワークを確認してください",
   "Switch to %network%": "%network%に切り替える",
-  "You are in wrong network": "ネットワークが誤っています",
+  "You are in the wrong network": "ネットワークが誤っています",
   "This page is located for %network%.": "これは%network%のページです。",
   "You are under %network% now, please switch the network to continue.": "現在、%network%を使用中です。ネットワークを切り替えてから続行してください。",
   "Switch network to continue.": "ネットワークを切り替えて続行してください。",

@@ -1939,7 +1939,7 @@
   "Wrong Network": "Téves hálózat",
   "Check your network": "Ellenőrizze a hálózatát",
   "Switch to %network%": "Váltás a %network% hálózatra",
-  "You are in wrong network": "Ön téves hálózatban van",
+  "You are in the wrong network": "Ön téves hálózatban van",
   "This page is located for %network%.": "Ezt az oldalt a %network% hálózathoz keresi.",
   "You are under %network% now, please switch the network to continue.": "Ön most a %network% hálózat alatt van, a folytatáshoz váltson hálózatot.",
   "Switch network to continue.": "A folytatáshoz váltson hálózatot.",

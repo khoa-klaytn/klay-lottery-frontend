@@ -1939,7 +1939,7 @@
   "Wrong Network": "Fel nätverk",
   "Check your network": "Kontrollera ditt nätverk",
   "Switch to %network%": "Byt till %network%",
-  "You are in wrong network": "Du befinner dig på fel nätverk",
+  "You are in the wrong network": "Du befinner dig på fel nätverk",
   "This page is located for %network%.": "Denna sida är anpassad för %network%.",
   "You are under %network% now, please switch the network to continue.": "För tillfället är du på %network%. Byt nätverk för att fortsätta.",
   "Switch network to continue.": "Byt nätverk för att fortsätta.",
