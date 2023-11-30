@@ -9,12 +9,16 @@ import { ThemeProvider as NextThemeProvider, useTheme as useNextTheme } from 'ne
 import { WagmiConfig } from 'wagmi'
 import { wagmiConfig } from 'utils/wagmi'
 import { HistoryManagerProvider } from 'contexts/HistoryContext'
+import { useEffect } from 'react'
 
 // Create a client
 const queryClient = new QueryClient()
 
 const StyledUIKitProvider: React.FC<React.PropsWithChildren> = ({ children, ...props }) => {
-  const { resolvedTheme } = useNextTheme()
+  const { resolvedTheme, setTheme } = useNextTheme()
+  useEffect(() => {
+    setTheme('dark')
+  }, [setTheme])
   return (
     <UIKitProvider theme={resolvedTheme === 'dark' ? dark : light} {...props}>
       {children}
