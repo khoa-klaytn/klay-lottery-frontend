@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useMemo } from 'react'
 import BigNumber from 'bignumber.js'
 import { Flex, Text } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
@@ -27,65 +27,61 @@ interface RewardMatchesProps {
   isHistoricRound?: boolean
 }
 
-interface RewardsState {
-  isLoading: boolean
-  amountBurn: BigNumber
-  rewardsPerBracket: BigNumber[]
-  rewardPerUserPerBracket: BigNumber[]
-  countWinnersPerBracket: string[]
-}
-
 const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
   lotteryNodeData,
   isHistoricRound,
 }) => {
   const { t } = useTranslation()
-  const [state, setState] = useState<RewardsState>({
-    isLoading: true,
-    amountBurn: BIG_ZERO,
-    rewardsPerBracket: null,
-    rewardPerUserPerBracket: null,
-    countWinnersPerBracket: null,
-  })
-
-  useEffect(() => {
+  const { isLoading, amountBurn, rewardsPerBracket, rewardPerUserPerBracket, countWinnersPerBracket } = useMemo(() => {
     if (lotteryNodeData) {
-      const {
-        burnPortion,
-        amountCollected,
-        countWinnersPerBracket,
-        rewardPerUserPerBracket: _rewardPerUserPerBracket,
-      } = lotteryNodeData
+      const { burnPortion, amountCollected } = lotteryNodeData
+      const _amountBurn = amountCollected.times(burnPortion).div(10000)
+      const _rewardsPerBracket = []
 
-      const amountBurn = amountCollected.times(burnPortion).div(10000)
-      const rewardPerUserPerBracket = []
-      const rewardsPerBracket = []
-      const numBrackets = countWinnersPerBracket.length
-      for (let i = numBrackets; i--; ) {
-        const rewardPerUser = new BigNumber(_rewardPerUserPerBracket[i])
-        rewardPerUserPerBracket[i] = rewardPerUser
-        rewardsPerBracket[i] = rewardPerUser.times(countWinnersPerBracket[i])
+      if (isHistoricRound) {
+        const { countWinnersPerBracket: _countWinnersPerBracket, rewardPerUserPerBracket: __rewardPerUserPerBracket } =
+          lotteryNodeData
+
+        const _rewardPerUserPerBracket = []
+        const numBrackets = _countWinnersPerBracket.length
+        for (let i = numBrackets; i--; ) {
+          const rewardPerUser = new BigNumber(__rewardPerUserPerBracket[i])
+          _rewardPerUserPerBracket[i] = rewardPerUser
+          _rewardsPerBracket[i] = rewardPerUser.times(_countWinnersPerBracket[i])
+        }
+
+        return {
+          isLoading: false,
+          amountBurn: _amountBurn,
+          rewardsPerBracket: _rewardsPerBracket,
+          rewardPerUserPerBracket: _rewardPerUserPerBracket,
+          countWinnersPerBracket: _countWinnersPerBracket,
+        }
       }
 
-      setState({
+      const { rewardPortions } = lotteryNodeData
+
+      const numBrackets = rewardPortions.length
+      for (let i = numBrackets; i--; ) {
+        _rewardsPerBracket[i] = amountCollected.times(rewardPortions[i]).div(10000)
+      }
+
+      return {
         isLoading: false,
-        amountBurn,
-        rewardsPerBracket,
-        rewardPerUserPerBracket,
-        countWinnersPerBracket,
-      })
-    } else {
-      setState({
-        isLoading: true,
-        amountBurn: BIG_ZERO,
-        rewardsPerBracket: null,
+        amountBurn: _amountBurn,
+        rewardsPerBracket: _rewardsPerBracket,
         rewardPerUserPerBracket: null,
         countWinnersPerBracket: null,
-      })
+      }
     }
-  }, [lotteryNodeData])
-
-  const { isLoading, amountBurn, rewardsPerBracket, rewardPerUserPerBracket, countWinnersPerBracket } = state
+    return {
+      isLoading: true,
+      amountBurn: BIG_ZERO,
+      rewardsPerBracket: null,
+      rewardPerUserPerBracket: null,
+      countWinnersPerBracket: null,
+    }
+  }, [lotteryNodeData, isHistoricRound])
 
   return (
     <Wrapper>
@@ -98,8 +94,8 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
           type="allwinners"
           rewardBracket={0}
           amount={!isLoading && rewardsPerBracket[0]}
-          rewardPerUser={!isLoading && rewardPerUserPerBracket[0]}
-          countWinners={!isLoading && countWinnersPerBracket[0]}
+          rewardPerUser={rewardPerUserPerBracket && rewardPerUserPerBracket[0]}
+          countWinners={countWinnersPerBracket && countWinnersPerBracket[0]}
           isHistoricRound={isHistoricRound}
           isLoading={isLoading}
         />
@@ -109,8 +105,8 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
             type="match"
             rewardBracket={bracketIndex}
             amount={!isLoading && rewardsPerBracket[bracketIndex]}
-            rewardPerUser={!isLoading && rewardPerUserPerBracket[bracketIndex]}
-            countWinners={!isLoading && countWinnersPerBracket[bracketIndex]}
+            rewardPerUser={rewardPerUserPerBracket && rewardPerUserPerBracket[bracketIndex]}
+            countWinners={countWinnersPerBracket && countWinnersPerBracket[bracketIndex]}
             isHistoricRound={isHistoricRound}
             isLoading={isLoading}
           />
@@ -119,8 +115,8 @@ const RewardBrackets: React.FC<React.PropsWithChildren<RewardMatchesProps>> = ({
           type="matchAll"
           rewardBracket={6}
           amount={!isLoading && rewardsPerBracket[6]}
-          rewardPerUser={!isLoading && rewardPerUserPerBracket[6]}
-          countWinners={!isLoading && countWinnersPerBracket[6]}
+          rewardPerUser={rewardPerUserPerBracket && rewardPerUserPerBracket[6]}
+          countWinners={countWinnersPerBracket && countWinnersPerBracket[6]}
           isHistoricRound={isHistoricRound}
           isLoading={isLoading}
         />
