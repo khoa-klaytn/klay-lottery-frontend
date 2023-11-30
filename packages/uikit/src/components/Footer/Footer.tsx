@@ -99,7 +99,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
-              <KlayPrice chainId={chainId} klayPriceUsd={klayPriceUsd} color="textSubtle" />
+              <KlayPrice chainId={chainId} klayPriceUsd={klayPriceUsd} href={buyKlayLink} color="textSubtle" />
             </Box>
             <Button
               data-theme="dark"

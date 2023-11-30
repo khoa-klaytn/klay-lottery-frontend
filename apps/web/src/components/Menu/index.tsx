@@ -11,6 +11,7 @@ import { useActiveChainId } from 'hooks/useActiveChainId'
 import { usePhishingBanner } from '@sweepstakes/utils/user'
 import { IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
 import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
+import { useBuyKlay } from 'hooks/useBuyKlay'
 import GlobalSettings from './GlobalSettings'
 import { SettingsMode } from './GlobalSettings/types'
 import { useMenuItems } from './hooks/useMenuItems'
@@ -23,6 +24,7 @@ const LinkComponent = (linkProps) => {
 
 const Menu = (props) => {
   const { chainId } = useActiveChainId()
+  const { label, link } = useBuyKlay()
   const { isDark, setTheme } = useTheme()
   const klayPrice = useKlayPrice()
   const { currentLanguage, setLanguage, t } = useTranslation()
@@ -72,8 +74,8 @@ const Menu = (props) => {
         footerLinks={getFooterLinks}
         activeItem={activeMenuItem?.href}
         activeSubItem={activeSubMenuItem?.href}
-        buyKlayLabel={t('Buy KLAY')}
-        buyKlayLink="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index"
+        buyKlayLabel={label}
+        buyKlayLink={link}
         {...props}
       />
     </>

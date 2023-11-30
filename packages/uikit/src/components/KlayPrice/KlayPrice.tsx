@@ -8,6 +8,7 @@ import { Colors } from "../../theme";
 export interface Props {
   color?: keyof Colors;
   klayPriceUsd?: number;
+  href?: string;
   showSkeleton?: boolean;
   chainId: number;
 }
@@ -27,14 +28,12 @@ const PriceLink = styled.a`
 
 const KlayPrice: React.FC<React.PropsWithChildren<Props>> = ({
   klayPriceUsd,
+  href,
   color = "textSubtle",
   showSkeleton = true,
 }) => {
   return klayPriceUsd ? (
-    <PriceLink
-      href="https://ramp.alchemypay.org/?crypto=KLAY&fiat=USD&amount=299&alpha2=US&network=KLAY&type=officialWebsite#/index"
-      target="_blank"
-    >
+    <PriceLink href={href} target="_blank">
       <LogoRound width="24px" mr="8px" />
       <Text color={color} bold>{`$${klayPriceUsd.toFixed(3)}`}</Text>
     </PriceLink>

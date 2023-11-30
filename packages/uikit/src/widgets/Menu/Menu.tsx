@@ -155,7 +155,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
               </Flex>
               <Flex alignItems="center" height="100%">
                 <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
-                  <KlayPrice chainId={chainId} showSkeleton={false} klayPriceUsd={klayPriceUsd} />
+                  <KlayPrice chainId={chainId} showSkeleton={false} klayPriceUsd={klayPriceUsd} href={buyKlayLink} />
                 </AtomBox>
                 <Box mt="4px">
                   <LangSelector
