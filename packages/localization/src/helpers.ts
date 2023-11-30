@@ -1,11 +1,9 @@
 import { EN } from './config/languages'
 
-const publicUrl = 'https://locales.sweepstakes.finance'
-
 export const LS_KEY = 'sweepstakes_language'
 
 export const fetchLocale = async (locale: string) => {
-  const response = await fetch(`${publicUrl}/${locale}.json`)
+  const response = await fetch(`/locales/${locale}.json`)
   if (response.ok) {
     const data = await response.json()
     return data
