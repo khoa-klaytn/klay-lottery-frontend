@@ -6,7 +6,7 @@ export function useBuyKlay() {
   const { t } = useTranslation()
   if (isBaobab) {
     return {
-      label: t('Testnet KLAY Faucet'),
+      label: t('Baobab Faucet (Free Testnet KLAY)'),
       link: 'https://baobab.wallet.klaytn.foundation/faucet',
     }
   }

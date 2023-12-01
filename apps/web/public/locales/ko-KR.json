@@ -2793,11 +2793,11 @@
   "Trade now": "Trade now",
 
   "Earn rewards hassle-free with single-sided staking": "Earn rewards hassle-free with single-sided staking",
-  "The SweepStakes Lottery": "SweepStakes 복권",
-  "An internal error was received.": "내내부 오류가 발생했습니다.",
-  "All Winners": "모두가 승자다",
-  "Match first %rewardBracket%": "처음 %rewardBracket%개 숫자 일치",
-  "Match all %rewardBracket%": "%rewardBracket%개 숫자 모두 일치",
-  "At least one ticket must be purchased": "최소 1장의 티켓을 구매해야 합니다.",
-  "Testnet KLAY Faucet": "KLAY 테스트넷 수도꼭지"
+  "The SweepStakes Lottery": "SweepStakes 로또",
+  "An internal error was received.": "내부 오류가 발생했습니다.",
+  "All Winners": "모든 승자",
+  "Match first %rewardBracket%": "첫번째 %rewardBracket%과 일치",
+  "Match all %rewardBracket%": "모든 %rewardBracket%과 일치",
+  "At least one ticket must be purchased": "최소한 티켓 한장을 구매해야 합니다",
+  "Baobab Faucet (Free Testnet KLAY)": "Baobab Faucet (무료 테스트넷 KLAY)"
 }
