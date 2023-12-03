@@ -3,7 +3,7 @@ import type { Address } from 'viem'
 
 export default {
   ssLottery: {
-    [ChainId.KLAYTN_TESTNET]: '0x2d0Ec1b2aaaa89b5F0a3EC84eB43532BAabC83B4',
+    [ChainId.KLAYTN_TESTNET]: '0x26304A540aEd8a6c035F8bC8F9C142511AdE5224',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {
@@ -32,7 +32,7 @@ export default {
   },
   oraklKlayUsd: {
     [ChainId.KLAYTN]: '0x33D6ee12D4ADE244100F09b280e159659fe0ACE0',
-    [ChainId.KLAYTN_TESTNET]: '0xC874f389A3F49C5331490145f77c4eFE202d72E1',
+    [ChainId.KLAYTN_TESTNET]: '0x26304A540aEd8a6c035F8bC8F9C142511AdE5224',
   },
   v3Airdrop: {
     [ChainId.ETHEREUM]: '0x',

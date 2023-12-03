@@ -1,4 +1,4 @@
-export const ssLotteryABI = [
+const SSLotteryABI = [
   {
     inputs: [
       {
@@ -1286,3 +1286,5 @@ export const ssLotteryABI = [
     type: 'receive',
   },
 ] as const
+
+export default SSLotteryABI
