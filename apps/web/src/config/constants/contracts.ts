@@ -26,9 +26,4 @@ export default {
     [ChainId.KLAYTN]: '0x33D6ee12D4ADE244100F09b280e159659fe0ACE0',
     [ChainId.KLAYTN_TESTNET]: '0x26304A540aEd8a6c035F8bC8F9C142511AdE5224',
   },
-  v3Airdrop: {
-    [ChainId.ETHEREUM]: '0x',
-    [ChainId.BSC]: '0xe934d2C5bE5db0295A4de3177762A9E8c74Ae4f4',
-    [ChainId.BSC_TESTNET]: '0x',
-  },
 } as const satisfies Record<string, Record<number, Address>>

@@ -5,13 +5,7 @@ import { useActiveChainId } from 'hooks/useActiveChainId'
 
 import { useMemo } from 'react'
 import { getMulticallAddress } from 'utils/addressHelpers'
-import {
-  getContract,
-  getSSLotteryContract,
-  getSidContract,
-  getUnsContract,
-  getV3AirdropContract,
-} from 'utils/contractHelpers'
+import { getContract, getSSLotteryContract, getSidContract, getUnsContract } from 'utils/contractHelpers'
 
 import { WNATIVE } from '@sweepstakes/sdk'
 import { multicallABI } from 'config/abi/Multicall'
@@ -82,9 +76,4 @@ export const useSIDContract = (address, chainId) => {
 
 export const useUNSContract = (address, chainId, provider) => {
   return useMemo(() => getUnsContract(address, chainId, provider), [chainId, address, provider])
-}
-
-export const useV3AirdropContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getV3AirdropContract(signer ?? undefined), [signer])
 }

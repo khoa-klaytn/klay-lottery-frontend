@@ -1,11 +1,8 @@
 // Addresses
-import { getV3AirdropAddress } from 'utils/addressHelpers'
-
 import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
 import SSLotteryABI from 'config/abi/SSLottery'
-import { v3AirdropABI } from 'config/abi/v3Airdrop'
 import { viemClients } from 'utils/viem'
 import { Abi, PublicClient, WalletClient, getContract as viemGetContract } from 'viem'
 import { Address } from 'wagmi'
@@ -75,12 +72,4 @@ export const getUnsContract = (address: Address, chainId?: ChainId, publicClient
 
 export const getSidResolverContract = (address: Address, signer?: WalletClient) => {
   return getContract({ abi: SIDResolverABI, address, signer })
-}
-
-export const getV3AirdropContract = (walletClient?: WalletClient) => {
-  return getContract({
-    abi: v3AirdropABI,
-    address: getV3AirdropAddress(),
-    signer: walletClient,
-  })
 }

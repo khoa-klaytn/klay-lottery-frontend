@@ -1,6 +1,5 @@
 import { ResetCSS, ScrollToTopButtonV2, ToastListener } from '@sweepstakes/uikit'
 import BigNumber from 'bignumber.js'
-import GlobalCheckClaimStatus from 'components/GlobalCheckClaimStatus'
 import { NetworkModal } from 'components/NetworkModal'
 import { useAccountEventListener } from 'hooks/useAccountEventListener'
 import useEagerConnect from 'hooks/useEagerConnect'
@@ -82,7 +81,6 @@ function MyApp(props: AppProps<{ initialReduxState: any }>) {
           {(Component as NextPageWithLayout).mp ? <MPGlobalHooks /> : <GlobalHooks />}
           <ResetCSS />
           <GlobalStyle />
-          <GlobalCheckClaimStatus />
           <PersistGate loading={null} persistor={persistor}>
             <Updaters />
             <App {...props} />
