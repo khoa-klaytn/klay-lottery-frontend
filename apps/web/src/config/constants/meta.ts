@@ -17,18 +17,6 @@ const getPathList = (t: ContextApi['t']): PathList => {
     paths: {
       '/': { title: t('Lottery') }, // TODO: change this back to Home
       '/lottery': { title: t('Lottery') },
-      '/info': {
-        title: `${t('Overview')} - ${t('Info')}`,
-        description: 'View statistics for SweepStakesswap exchanges.',
-      },
-      '/info/pairs': {
-        title: `${t('Pairs')} - ${t('Info')}`,
-        description: 'View statistics for SweepStakesswap exchanges.',
-      },
-      '/info/tokens': {
-        title: `${t('Tokens')} - ${t('Info')}`,
-        description: 'View statistics for SweepStakesswap exchanges.',
-      },
       '/profile': { basePath: true, title: t('Profile') },
     },
     defaultTitleSuffix: t('SweepStakes'),

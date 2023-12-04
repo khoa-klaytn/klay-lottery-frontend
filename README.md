@@ -12,7 +12,6 @@ If you want to contribute, please refer to the [contributing guidelines](./CONTR
 
 ## Documentation
 
-- [Info](doc/Info.md)
 - [Cypress tests](doc/Cypress.md)
 
 > Install dependencies using [pnpm](https://pnpm.io)

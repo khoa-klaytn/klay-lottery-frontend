@@ -32,7 +32,6 @@ export * from "./ThemeSwitcher";
 export * from "./TabMenu";
 export * from "./Tag";
 export * from "./Text";
-export * from "./Timeline";
 export * from "./Toggle";
 export * from "./CoinSwitcher";
 export * from "./CopyButton";

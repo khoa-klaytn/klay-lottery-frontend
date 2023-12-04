@@ -26,17 +26,6 @@ describe('getActiveMenuItem', () => {
     expect(result).toEqual(menuConfig(mockT, false, undefined)[1])
   })
 
-  it('should not return an item that only includes pathname but not starts with', () => {
-    // Given
-    const pathname = '/info/pairs'
-
-    // When
-    const result = getActiveMenuItem({ pathname, menuConfig: menuConfig(mockT, false, undefined) })
-
-    // Then
-    expect(result).toEqual(menuConfig(mockT, false, undefined)[4])
-  })
-
   it('should return undefined if item is not found', () => {
     // Given
     const pathname = '/corgi'

@@ -21,7 +21,6 @@ import { useHover } from 'hooks/useHover'
 import { useSessionChainId } from 'hooks/useSessionChainId'
 import { useSwitchNetwork } from 'hooks/useSwitchNetwork'
 import { useMemo } from 'react'
-import { useRouter } from 'next/router'
 import { chains } from 'utils/wagmi'
 
 import { SHORT_SYMBOL } from 'config/chains'
@@ -119,7 +118,6 @@ export const NetworkSwitcher = () => {
   const { t } = useTranslation()
   const { chainId, isWrongNetwork, isNotMatched } = useActiveChainId()
   const { pendingChainId, isLoading, canSwitch, switchNetworkAsync } = useSwitchNetwork()
-  const router = useRouter()
 
   useNetworkConnectorUpdater()
 
@@ -137,7 +135,7 @@ export const NetworkSwitcher = () => {
 
   const cannotChangeNetwork = !canSwitch
 
-  if (!chainId || router.pathname.includes('/info')) {
+  if (!chainId) {
     return null
   }
 

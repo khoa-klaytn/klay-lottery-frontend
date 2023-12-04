@@ -33,34 +33,6 @@ const config: (
       href: '/lottery',
       items: [],
     },
-    // {
-    //   label: '',
-    //   href: '/info',
-    //   icon: MoreIcon,
-    //   hideSubNav: true,
-    //   items: [
-    //     {
-    //       label: t('Info'),
-    //       href: '/info/v3',
-    //     },
-    //     {
-    //       type: DropdownMenuItemType.DIVIDER,
-    //     },
-    //     {
-    //       type: DropdownMenuItemType.DIVIDER,
-    //     },
-    //     {
-    //       label: t('Blog'),
-    //       href: 'https://blog.sweepstakes.finance',
-    //       type: DropdownMenuItemType.EXTERNAL_LINK,
-    //     },
-    //     {
-    //       label: t('Docs'),
-    //       href: 'https://docs.sweepstakes.finance',
-    //       type: DropdownMenuItemType.EXTERNAL_LINK,
-    //     },
-    //   ].map((item) => addMenuItemSupported(item, chainId)),
-    // },
   ].map((item) => addMenuItemSupported(item, chainId))
 
 export default config

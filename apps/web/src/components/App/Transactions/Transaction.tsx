@@ -2,7 +2,6 @@ import { styled } from 'styled-components'
 import { CheckmarkIcon, CloseIcon, ScanLink } from '@sweepstakes/uikit'
 import { getBlockExploreLink } from 'utils'
 import { TransactionDetails } from 'state/transactions/reducer'
-import { ChainLinkSupportChains } from 'state/info/constant'
 
 import CircleLoader from '../../Loader/CircleLoader'
 
@@ -32,12 +31,7 @@ export default function Transaction({ tx, chainId }: { tx: TransactionDetails; c
 
   return (
     <TransactionState pending={pending} success={success}>
-      <ScanLink
-        useBscCoinFallback={ChainLinkSupportChains.includes(chainId)}
-        href={getBlockExploreLink(tx.hash, 'transaction', chainId)}
-      >
-        {summary ?? tx.hash}
-      </ScanLink>
+      <ScanLink href={getBlockExploreLink(tx.hash, 'transaction', chainId)}>{summary ?? tx.hash}</ScanLink>
       <IconWrapper pending={pending} success={success}>
         {pending ? <CircleLoader /> : success ? <CheckmarkIcon color="success" /> : <CloseIcon color="failure" />}
       </IconWrapper>
