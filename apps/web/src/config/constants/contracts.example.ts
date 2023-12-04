@@ -3,7 +3,7 @@ import type { Address } from 'viem'
 
 export default {
   SSLottery: {
-    [ChainId.KLAYTN_TESTNET]: '0x26304A540aEd8a6c035F8bC8F9C142511AdE5224',
+    [ChainId.KLAYTN_TESTNET]: '0x',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
   multiCall: {

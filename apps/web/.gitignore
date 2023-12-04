@@ -39,3 +39,6 @@ debug.log*
 # turbo
 .turbo
 .vercel
+
+src/config/abi/
+src/config/constants/contracts.ts
