@@ -16,9 +16,6 @@ import v3LaunchBnb from './v3LaunchBnb.png'
 import v3LaunchEth from './v3LaunchEth.png'
 import v3LaunchFlag from './v3LaunchFlag.png'
 import v3LaunchBgMobile from './v3LaunchBgMobile.png'
-import apolloXCampaignBg from './ApolloXCampaignBg.png'
-import apolloXCampaignTitle from './ApolloXCampaignTitle.png'
-import apolloXCampaignBgMobile from './ApolloXCampaignBgMobile.png'
 
 import galxeTraverseBg from './galxe-traverse-bg.png'
 import galxeTraverseBgMobile from './galxe-traverse-bg-mobile.png'
@@ -71,9 +68,6 @@ export {
   v3LaunchBnb,
   v3LaunchEth,
   v3LaunchFlag,
-  apolloXCampaignBg,
-  apolloXCampaignTitle,
-  apolloXCampaignBgMobile,
   galxeTraverseBg,
   galxeTraverseBgMobile,
   galxeTraverseCloud,

@@ -1,11 +1,10 @@
 // Addresses
-import { getSweepStakesProfileAddress, getV3AirdropAddress } from 'utils/addressHelpers'
+import { getV3AirdropAddress } from 'utils/addressHelpers'
 
 import { ChainId } from '@sweepstakes/chains'
 import { sidABI } from 'config/abi/SID'
 import { SIDResolverABI } from 'config/abi/SIDResolver'
 import SSLotteryABI from 'config/abi/SSLottery'
-import { pancakeProfileABI } from 'config/abi/pancakeProfile'
 import { v3AirdropABI } from 'config/abi/v3Airdrop'
 import { viemClients } from 'utils/viem'
 import { Abi, PublicClient, WalletClient, getContract as viemGetContract } from 'viem'
@@ -35,10 +34,6 @@ export const getContract = <TAbi extends Abi | unknown[], TWalletClient extends 
     account: signer?.account,
     chain: signer?.chain,
   }
-}
-
-export const getProfileContract = (signer?: WalletClient) => {
-  return getContract({ abi: pancakeProfileABI, address: getSweepStakesProfileAddress(), signer })
 }
 
 export const getSSLotteryContract = (address: Address, signer?: WalletClient) => {

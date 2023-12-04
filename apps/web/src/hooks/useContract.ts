@@ -8,7 +8,6 @@ import { getMulticallAddress } from 'utils/addressHelpers'
 import {
   getContract,
   getSSLotteryContract,
-  getProfileContract,
   getSidContract,
   getUnsContract,
   getV3AirdropContract,
@@ -25,11 +24,6 @@ import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 
 export const useERC20 = (address: Address) => {
   return useContract(address, erc20ABI)
-}
-
-export const useProfileContract = () => {
-  const { data: signer } = useWalletClient()
-  return useMemo(() => getProfileContract(signer ?? undefined), [signer])
 }
 
 export const useSSLotteryContract = () => {

@@ -2,7 +2,7 @@ import { parseEther } from 'viem'
 import { SerializedPoolWithInfo } from '@sweepstakes/pools'
 import { Address } from 'wagmi'
 import BigNumber from 'bignumber.js'
-import { CampaignType, LotteryStatus, LotteryTicket, Team, TranslatableText } from 'config/constants/types'
+import { LotteryStatus, LotteryTicket } from 'config/constants/types'
 
 export enum GAS_PRICE {
   default = '3',
@@ -33,12 +33,10 @@ export type SerializedPool = SerializedPoolWithInfo & {
 export interface Profile {
   userId: number
   points: number
-  teamId: number
   collectionAddress: Address
   tokenId: number
   isActive: boolean
   username: string
-  team?: Team
   hasRegistered: boolean
 }
 
@@ -100,20 +98,6 @@ export interface DeserializedLockedVaultUser extends DeserializedVaultUser {
 
 export interface PoolsState {
   data: SerializedPool[]
-}
-
-export type TeamsById = {
-  [key: string]: Team
-}
-
-export interface Achievement {
-  id: string
-  type: CampaignType
-  address: string
-  title: TranslatableText
-  description?: TranslatableText
-  badge: string
-  points: number
 }
 
 // Lottery

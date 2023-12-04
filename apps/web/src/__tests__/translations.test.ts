@@ -1,7 +1,6 @@
 import Path from 'path'
 import fs from 'fs'
 import { describe, it, expect } from 'vitest'
-import teams from 'config/constants/teams'
 
 // FIXME: should move this test file inside localization pkg
 import { translations } from '@sweepstakes/localization'
@@ -10,7 +9,6 @@ const allTranslationKeys = Object.keys(translations)
 
 // when some keys are hard to be extracted from code
 const whitelist = [
-  ...teams.map((t) => t.description),
   `Oopsie daisy! Hiccup's had a bit of an accident. Poor little fella.`,
   'Watch out for Flipsie’s spatula smash!',
   'Do you like chocolate with your syrup? Go long!',

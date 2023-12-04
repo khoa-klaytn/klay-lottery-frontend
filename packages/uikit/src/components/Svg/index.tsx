@@ -120,8 +120,6 @@ export { default as StarLineIcon } from "./Icons/StarLine";
 export { default as SunIcon } from "./Icons/Sun";
 export { default as SwapVertIcon } from "./Icons/SwapVert";
 export { default as SyncAltIcon } from "./Icons/SyncAlt";
-export { default as TeamBattleIcon } from "./Icons/TeamBattle";
-export { default as TeamPlayerIcon } from "./Icons/TeamPlayer";
 export { default as TelegramIcon } from "./Icons/Telegram";
 export { default as TestnetIcon } from "./Icons/Testnet";
 export { default as Ticket, default as TicketIcon } from "./Icons/Ticket";

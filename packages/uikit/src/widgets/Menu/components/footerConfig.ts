@@ -60,10 +60,6 @@ export const footerLinks: (t: ContextApi["t"]) => FooterLinkType[] = (t) => [
   //       label: t("Brand Assets"),
   //       href: "https://docs.sweepstakes.finance/ecosystem-and-partnerships/brand",
   //     },
-  //     {
-  //       label: t("Careers"),
-  //       href: "https://docs.sweepstakes.finance/team/become-a-chef",
-  //     },
   //   ],
   // },
 ];

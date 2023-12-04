@@ -1,7 +1,7 @@
 import noop from "lodash/noop";
 import React, { useState } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { BrowserRouter, Link, MemoryRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import { Language } from "@sweepstakes/localization";
 import Box from "../../components/Box/Box";
 import Flex from "../../components/Box/Flex";
@@ -19,7 +19,6 @@ import { Variant, variants } from "./components/UserMenu/types";
 import Menu from "./Menu";
 import { NavProps } from "./types";
 import BottomDrawer from "../../components/BottomDrawer/BottomDrawer";
-import { SubMenuItemsType } from "../../components";
 import { links, userMenulinks } from "./testConfig";
 
 export default {
@@ -188,91 +187,6 @@ ConnectedWithBanner.args = {
       <Button scale="sm">I am button</Button>
     </Flex>
   ),
-};
-
-export const NotConnected: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <BrowserRouter>
-      <Menu
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        links={links}
-        subLinks={links[0].items as SubMenuItemsType[]}
-        footerLinks={footerLinks}
-        activeItem="/swap"
-        activeSubItem="https://exchange.sweepstakes.finance"
-        buyCakeLabel="Buy KLAY"
-      >
-        <div>
-          <h1>Page body</h1>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
-        </div>
-      </Menu>
-    </BrowserRouter>
-  );
-};
-
-export const WithoutConnectButton: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <BrowserRouter>
-      <Menu
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        links={links}
-        footerLinks={footerLinks}
-        subLinks={links[0].items as SubMenuItemsType[]}
-        activeItem="/swap"
-        activeSubItem="https://exchange.sweepstakes.finance"
-        buyKlayLabel="Buy KLAY"
-      >
-        <div>
-          <h1>No connect button on top</h1>
-          This variant is needed for info site
-        </div>
-      </Menu>
-    </BrowserRouter>
-  );
-};
-
-export const WithSubmenuSelected: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <MemoryRouter initialEntries={["/teams"]}>
-      <Menu
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        klayPriceUsd={0.23158668932877668}
-        links={links}
-        subLinks={links[0].items as SubMenuItemsType[]}
-        footerLinks={footerLinks}
-        activeItem="/swap"
-        activeSubItem="https://exchange.sweepstakes.finance"
-        buyKlayLabel="Buy KLAY"
-      >
-        <div>
-          <Heading as="h1" mb="8px">
-            Submenu selected
-          </Heading>
-        </div>
-      </Menu>
-    </MemoryRouter>
-  );
 };
 
 export const UserMenuWithVariants: React.FC<React.PropsWithChildren> = () => {

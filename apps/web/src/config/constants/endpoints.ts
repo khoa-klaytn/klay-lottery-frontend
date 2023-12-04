@@ -1,10 +1,7 @@
 import { ChainId } from '@sweepstakes/chains'
 
-export const GRAPH_API_PROFILE = 'https://api.thegraph.com/subgraphs/name/sweepstakes/profile'
-
 export const GRAPH_API_LOTTERY = 'http://localhost:8000/subgraphs/name/klay-lottery/graph'
 export const SNAPSHOT_BASE_URL = process.env.NEXT_PUBLIC_SNAPSHOT_BASE_URL
-export const API_PROFILE = 'https://profile.sweepstakes.com'
 export const SNAPSHOT_API = `${SNAPSHOT_BASE_URL}/graphql`
 export const SNAPSHOT_HUB_API = `${SNAPSHOT_BASE_URL}/api/message`
 

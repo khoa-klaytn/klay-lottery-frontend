@@ -24,9 +24,6 @@ export const getMulticallAddress = (chainId?: number) => {
 export const getSSLotteryAddress = (chainId: number) => {
   return getAddressFromMap(addresses.SSLottery, chainId)
 }
-export const getSweepStakesProfileAddress = () => {
-  return getAddressFromMap(addresses.pancakeProfile)
-}
 
 export const getV3AirdropAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.v3Airdrop, chainId)

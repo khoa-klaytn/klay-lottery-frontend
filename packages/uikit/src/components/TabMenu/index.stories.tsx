@@ -17,10 +17,8 @@ const Row = styled.div`
 
 export const Default: React.FC<React.PropsWithChildren> = () => {
   const [index, setIndex] = useState(0);
-  const [index2, setIndex2] = useState(0);
   const [index3, setIndex3] = useState(0);
   const handleClick = (newIndex) => setIndex(newIndex);
-  const handleClick2 = (newIndex) => setIndex2(newIndex);
   const handleClick3 = (newIndex) => setIndex3(newIndex);
 
   return (
@@ -31,13 +29,6 @@ export const Default: React.FC<React.PropsWithChildren> = () => {
           <Tab>Cakers</Tab>
           <Tab>Flippers</Tab>
           <Tab>Storm</Tab>
-        </TabMenu>
-      </Row>
-      <Row>
-        <TabMenu activeIndex={index2} onItemClick={handleClick2}>
-          <Tab>#1 Team</Tab>
-          <Tab>#2 Team</Tab>
-          <Tab>#3 Team</Tab>
         </TabMenu>
       </Row>
       <Row>

@@ -43,32 +43,6 @@ export type Images = {
   ipfs?: string
 }
 
-export type TeamImages = {
-  alt: string
-} & Images
-
-export type Team = {
-  id: number
-  name: string
-  description: string
-  isJoinable?: boolean
-  users: number
-  points: number
-  images: TeamImages
-  background: string
-  textColor: string
-}
-
-export type CampaignType = 'teambattle' | 'participation'
-
-export type Campaign = {
-  id: string
-  type: CampaignType
-  title?: TranslatableText
-  description?: TranslatableText
-  badge?: string
-}
-
 export type PageMeta = {
   title: string
   description?: string
