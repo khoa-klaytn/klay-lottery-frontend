@@ -5,7 +5,6 @@ import { NetworkModal } from 'components/NetworkModal'
 import { useAccountEventListener } from 'hooks/useAccountEventListener'
 import useEagerConnect from 'hooks/useEagerConnect'
 import useEagerConnectMP from 'hooks/useEagerConnect.bmp'
-import useLockedEndNotification from 'hooks/useLockedEndNotification'
 import useSentryUser from 'hooks/useSentryUser'
 import useThemeCookie from 'hooks/useThemeCookie'
 import useUserAgent from 'hooks/useUserAgent'
@@ -39,7 +38,6 @@ function GlobalHooks() {
   useAccountEventListener()
   useSentryUser()
   useThemeCookie()
-  useLockedEndNotification()
   return null
 }
 
@@ -49,7 +47,6 @@ function MPGlobalHooks() {
   useUserAgent()
   useAccountEventListener()
   useSentryUser()
-  useLockedEndNotification()
   return null
 }
 

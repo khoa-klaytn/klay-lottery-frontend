@@ -6,7 +6,6 @@ import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useMemo } from 'react'
 import { getMulticallAddress } from 'utils/addressHelpers'
 import {
-  getCakeVaultV2Contract,
   getContract,
   getSSLotteryContract,
   getProfileContract,
@@ -37,12 +36,6 @@ export const useSSLotteryContract = () => {
   const address = useLotteryAddress()
   const { data: signer } = useWalletClient()
   return useMemo(() => getSSLotteryContract(address, signer ?? undefined), [address, signer])
-}
-
-export const useCakeVaultContract = () => {
-  const { data: signer } = useWalletClient()
-  const { chainId } = useActiveChainId()
-  return useMemo(() => getCakeVaultV2Contract(signer ?? undefined, chainId), [signer, chainId])
 }
 
 // Code below migrated from Exchange useContract.ts

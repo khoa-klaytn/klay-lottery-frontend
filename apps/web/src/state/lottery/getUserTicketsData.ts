@@ -1,11 +1,11 @@
-import { ssLotteryABI } from 'config/abi/ssLottery'
+import SSLotteryABI from 'config/abi/SSLottery'
 import { TICKET_LIMIT_PER_REQUEST } from 'config/constants/lottery'
 import { LotteryTicket } from 'config/constants/types'
 import { ContractFunctionResult, type Address, PublicClient } from 'viem'
 import { parseRetrievedNumber } from 'views/Lottery/helpers'
 
 export const processRawTicketsResponse = (
-  ticketsResponse: ContractFunctionResult<typeof ssLotteryABI, 'viewUserInfoForLotteryId'>,
+  ticketsResponse: ContractFunctionResult<typeof SSLotteryABI, 'viewUserInfoForLotteryId'>,
 ): LotteryTicket[] => {
   const [ticketIds, ticketNumbers, ticketStatuses] = ticketsResponse
 
@@ -31,7 +31,7 @@ export const viewUserInfoForLotteryId = async (
 ): Promise<LotteryTicket[]> => {
   try {
     const data = await client.readContract({
-      abi: ssLotteryABI,
+      abi: SSLotteryABI,
       address: lotteryAddress,
       functionName: 'viewUserInfoForLotteryId',
       args: [account as Address, BigInt(lotteryId), BigInt(cursor), BigInt(perRequestLimit)],

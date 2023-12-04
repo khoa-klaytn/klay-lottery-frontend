@@ -29,7 +29,7 @@ import { BIG_ZERO, BIG_ONE_HUNDRED, BIG_ONE } from '@sweepstakes/utils/bigNumber
 import { getFullDisplayBalance } from '@sweepstakes/utils/formatBalance'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { SHORT_SYMBOL } from 'config/chains'
-import { ssLotteryABI } from 'config/abi/ssLottery'
+import SSLotteryABI from 'config/abi/SSLottery'
 import { handleCustomError } from 'utils/viem'
 import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
 import EditNumbersModal from './EditNumbersModal'
@@ -208,7 +208,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const onConfirm = useCallback(async () => {
     const ticketsForPurchase = getTicketsForPurchase()
     const value = await publicClient.readContract({
-      abi: ssLotteryABI,
+      abi: SSLotteryABI,
       address: lotteryContract.address,
       functionName: 'calculateCurrentTotalPriceForBulkTickets',
       args: [BigInt(ticketsForPurchase.length)],

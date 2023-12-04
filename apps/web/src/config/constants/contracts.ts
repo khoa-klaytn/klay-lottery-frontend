@@ -2,7 +2,7 @@ import { ChainId } from '@sweepstakes/chains'
 import type { Address } from 'viem'
 
 export default {
-  ssLottery: {
+  SSLottery: {
     [ChainId.KLAYTN_TESTNET]: '0x26304A540aEd8a6c035F8bC8F9C142511AdE5224',
     [ChainId.KLAYTN]: '0x', // TODO: deploy to mainnet
   },
@@ -25,10 +25,6 @@ export default {
   pancakeProfile: {
     [ChainId.BSC]: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
     [ChainId.BSC_TESTNET]: '0x4B683C7E13B6d5D7fd1FeA9530F451954c1A7c8A',
-  },
-  cakeVault: {
-    [ChainId.BSC]: '0x45c54210128a065de780C4B0Df3d16664f7f859e',
-    [ChainId.BSC_TESTNET]: '0x1088Fb24053F03802F673b84d16AE1A7023E400b',
   },
   oraklKlayUsd: {
     [ChainId.KLAYTN]: '0x33D6ee12D4ADE244100F09b280e159659fe0ACE0',

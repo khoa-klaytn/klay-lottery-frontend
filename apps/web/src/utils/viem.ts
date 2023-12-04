@@ -1,5 +1,5 @@
 import { ChainId } from '@sweepstakes/chains'
-import { ssLotteryABI } from 'config/abi/ssLottery'
+import SSLotteryABI from 'config/abi/SSLottery'
 import { CHAINS } from 'config/chains'
 import { PUBLIC_NODES } from 'config/nodes'
 import {
@@ -44,8 +44,7 @@ export const getViemClients = ({ chainId }: { chainId?: ChainId }) => {
 
 type AbiError = Extract<AbiItem, { type: 'error' }>
 
-type SSLotteryABI = (typeof ssLotteryABI)[number]
-type SSLotteryError = Extract<SSLotteryABI, AbiError>
+type SSLotteryError = Extract<(typeof SSLotteryABI)[number], AbiError>
 type SSLotteryErrorName = SSLotteryError['name']
 type AbiItemInput2Param<T extends AbiError['inputs'][number]> = T extends { type: 'uint256' } ? bigint : string
 type AbiItemInputs2Params<T extends AbiError['inputs']> = {

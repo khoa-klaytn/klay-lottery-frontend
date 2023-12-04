@@ -13,7 +13,6 @@ export * from "./withCardActions";
 export * from "./PoolsTable";
 export * from "./Cells/BaseCell";
 export * from "./Cells/EarningCell";
-export * from "./Cells/NameCell";
 export * from "./Cells/ExpandActionCell";
 export * from "./Cells/TotalStakedCell";
 export * from "./Cells/AprCell";

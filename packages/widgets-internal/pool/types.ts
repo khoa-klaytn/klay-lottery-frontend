@@ -5,32 +5,22 @@ import type {
   SerializedPoolConfig,
   DeserializedPoolConfig,
   DeserializedPool,
-  DeserializedPoolVault,
-  DeserializedPoolLockedVault,
   DeserializedLockedVaultUser,
-  DeserializedLockedCakeVault,
   SerializedVaultFees,
   DeserializedVaultFees,
   DeserializedVaultUser,
-  DeserializedCakeVault,
 } from "@sweepstakes/pools";
-import { VaultKey } from "@sweepstakes/pools";
 
 export {
   PoolCategory,
   PoolConfigBaseProps,
   SerializedPoolConfig,
   DeserializedPoolConfig,
-  DeserializedPoolVault,
-  DeserializedPoolLockedVault,
   DeserializedPool,
   DeserializedLockedVaultUser,
-  DeserializedLockedCakeVault,
   SerializedVaultFees,
   DeserializedVaultFees,
   DeserializedVaultUser,
-  DeserializedCakeVault,
-  VaultKey,
 };
 
 export interface HarvestActionsProps {

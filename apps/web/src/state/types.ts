@@ -26,10 +26,6 @@ export interface BigNumberToJson {
 
 export type SerializedBigNumber = string
 
-export enum VaultKey {
-  CakeVault = 'cakeVault',
-}
-
 export type SerializedPool = SerializedPoolWithInfo & {
   numberSecondsForUserLimit?: number
 }
@@ -102,38 +98,8 @@ export interface DeserializedLockedVaultUser extends DeserializedVaultUser {
   currentOverdueFee: BigNumber
 }
 
-export interface DeserializedCakeVault {
-  totalShares?: BigNumber
-  totalLockedAmount?: BigNumber
-  pricePerFullShare?: BigNumber
-  totalCakeInVault?: BigNumber
-  fees?: DeserializedVaultFees
-  userData?: DeserializedVaultUser
-}
-
-export interface DeserializedLockedCakeVault extends Omit<DeserializedCakeVault, 'userData'> {
-  totalLockedAmount?: BigNumber
-  userData?: DeserializedLockedVaultUser
-}
-
-export interface SerializedLockedCakeVault extends Omit<SerializedCakeVault, 'userData'> {
-  totalLockedAmount?: SerializedBigNumber
-  userData?: SerializedLockedVaultUser
-}
-
-export interface SerializedCakeVault {
-  totalShares?: SerializedBigNumber
-  pricePerFullShare?: SerializedBigNumber
-  totalCakeInVault?: SerializedBigNumber
-  fees?: SerializedVaultFees
-  userData?: SerializedVaultUser
-}
-
 export interface PoolsState {
   data: SerializedPool[]
-  cakeVault: SerializedLockedCakeVault
-  cakeFlexibleSideVault: SerializedCakeVault
-  userDataLoaded: boolean
 }
 
 export type TeamsById = {

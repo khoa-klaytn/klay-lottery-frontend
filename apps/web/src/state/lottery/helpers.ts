@@ -1,5 +1,5 @@
 import { LotteryStatus, LotteryTicket } from 'config/constants/types'
-import { ssLotteryABI } from 'config/abi/ssLottery'
+import SSLotteryABI from 'config/abi/SSLottery'
 import { LotteryResponse } from 'state/types'
 import { bigIntToSerializedBigNumber } from '@sweepstakes/utils/bigNumber'
 import { NUM_ROUNDS_TO_FETCH_FROM_NODES } from 'config/constants/lottery'
@@ -7,7 +7,7 @@ import { type Address, ContractFunctionResult, PublicClient } from 'viem'
 import { parseRetrievedNumber } from 'views/Lottery/helpers'
 
 const processViewLotterySuccessResponse = (
-  response: ContractFunctionResult<typeof ssLotteryABI, 'viewLottery'>,
+  response: ContractFunctionResult<typeof SSLotteryABI, 'viewLottery'>,
   lotteryId: string,
 ): LotteryResponse => {
   const {
@@ -82,7 +82,7 @@ export const fetchLottery = async (
 ): Promise<LotteryResponse> => {
   try {
     const lotteryData = await client.readContract({
-      abi: ssLotteryABI,
+      abi: SSLotteryABI,
       functionName: 'viewLottery',
       address: lotteryAddress,
       args: [BigInt(lotteryId)],
@@ -102,7 +102,7 @@ export const fetchMultipleLotteries = async (
   const calls = lotteryIds.map(
     (id) =>
       ({
-        abi: ssLotteryABI,
+        abi: SSLotteryABI,
         functionName: 'viewLottery',
         address: lotteryAddress,
         args: [BigInt(id)],
@@ -121,7 +121,7 @@ export const fetchMultipleLotteries = async (
 export const fetchCurrentLotteryId = async (client: PublicClient, lotteryAddress: `0x${string}`): Promise<bigint> => {
   try {
     const currentLotteryId = await client.readContract({
-      abi: ssLotteryABI,
+      abi: SSLotteryABI,
       address: lotteryAddress,
       functionName: 'currentLotteryId',
     })
@@ -135,7 +135,7 @@ export const fetchCurrentLotteryId = async (client: PublicClient, lotteryAddress
 export const fetchMaxBuy = async (client: PublicClient, lotteryAddress: `0x${string}`): Promise<bigint> => {
   try {
     const maxNumberTicketsPerBuyOrClaim = await client.readContract({
-      abi: ssLotteryABI,
+      abi: SSLotteryABI,
       address: lotteryAddress,
       functionName: 'maxNumberTicketsPerBuyOrClaim',
     })

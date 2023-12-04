@@ -51,17 +51,7 @@ export function Apr<T>({
   autoCompoundFrequency,
   ...props
 }: AprProps<T>) {
-  const {
-    stakingToken,
-    earningToken,
-    isFinished,
-    earningTokenPrice,
-    stakingTokenPrice,
-    userData,
-    apr,
-    rawApr,
-    vaultKey,
-  } = pool;
+  const { stakingToken, earningToken, isFinished, earningTokenPrice, stakingTokenPrice, userData, apr } = pool;
   const { t } = useTranslation();
 
   const stakingTokenBalance = useMemo(
@@ -81,7 +71,7 @@ export function Apr<T>({
       stakingTokenPrice={stakingTokenPrice || 0}
       stakingTokenBalance={stakedBalance.plus(stakingTokenBalance)}
       stakingTokenDecimals={stakingToken.decimals}
-      apr={vaultKey ? rawApr : apr}
+      apr={apr}
       stakingTokenSymbol={stakingToken?.symbol || ""}
       linkLabel={t("Get %symbol%", { symbol: stakingToken?.symbol || "" })}
       linkHref={apyModalLink}

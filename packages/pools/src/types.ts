@@ -104,7 +104,6 @@ interface SerializedPoolInfo extends CorePoolProps {
     required: boolean
     thresholdPoints: string
   }
-  userDataLoaded?: boolean
   userData?: {
     allowance: string
     stakingTokenBalance: string
@@ -121,7 +120,6 @@ interface PoolInfo extends CorePoolProps {
     required: boolean
     thresholdPoints: BigNumber
   }
-  userDataLoaded?: boolean
   userData?: {
     allowance: BigNumber
     stakingTokenBalance: BigNumber
@@ -136,9 +134,6 @@ export type LegacyDeserializedPool<T> = LegacyDeserializedPoolConfig<T> & PoolIn
 
 export type DeserializedPool<T> = UpgradedDeserializedPool<T> | LegacyDeserializedPool<T>
 
-export type DeserializedPoolVault<T> = DeserializedPool<T> & DeserializedCakeVault
-export type DeserializedPoolLockedVault<T> = DeserializedPool<T> & DeserializedLockedCakeVault
-
 export interface DeserializedLockedVaultUser extends DeserializedVaultUser {
   lastDepositedTime: string
   lastUserActionTime: string
@@ -150,11 +145,6 @@ export interface DeserializedLockedVaultUser extends DeserializedVaultUser {
   lockedAmount: BigNumber
   currentPerformanceFee: BigNumber
   currentOverdueFee: BigNumber
-}
-
-export interface DeserializedLockedCakeVault extends Omit<DeserializedCakeVault, 'userData'> {
-  totalLockedAmount?: BigNumber
-  userData?: DeserializedLockedVaultUser
 }
 
 export interface SerializedVaultFees {
@@ -180,19 +170,6 @@ export interface DeserializedVaultUser {
   }
 }
 
-export interface DeserializedCakeVault {
-  totalShares?: BigNumber
-  totalLockedAmount?: BigNumber
-  pricePerFullShare: BigNumber
-  totalCakeInVault?: BigNumber
-  fees?: DeserializedVaultFees
-  userData?: DeserializedVaultUser
-}
-
-export enum VaultKey {
-  CakeVault = 'cakeVault',
-}
-
 interface CorePoolProps {
   startTimestamp?: number
   endTimestamp?: number
@@ -200,5 +177,4 @@ interface CorePoolProps {
   rawApr?: number
   stakingTokenPrice?: number
   earningTokenPrice?: number
-  vaultKey?: VaultKey
 }

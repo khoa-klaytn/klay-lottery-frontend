@@ -22,13 +22,10 @@ export const getMulticallAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.multiCall, chainId)
 }
 export const getSSLotteryAddress = (chainId: number) => {
-  return getAddressFromMap(addresses.ssLottery, chainId)
+  return getAddressFromMap(addresses.SSLottery, chainId)
 }
 export const getSweepStakesProfileAddress = () => {
   return getAddressFromMap(addresses.pancakeProfile)
-}
-export const getCakeVaultAddress = (chainId?: number) => {
-  return getAddressFromMap(addresses.cakeVault, chainId)
 }
 
 export const getV3AirdropAddress = (chainId?: number) => {

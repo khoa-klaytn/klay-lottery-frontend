@@ -26,8 +26,8 @@ Config
 
 | Config               | Location                                                                                           |
 |----------------------|----------------------------------------------------------------------------------------------------|
-| SSLottery address    | [constants/contracts.ts @default.ssLottery](apps/web/src/config/constants/contracts.ts?plain=1#L5) |
-| SSLottery ABI        | [abi/ssLottery.ts @ssLotteryABI](apps/web/src/config/abi/ssLottery.ts?plain=1#L1)                  |
+| SSLottery address    | [constants/contracts.ts @default.SSLottery](apps/web/src/config/constants/contracts.ts?plain=1#L5) |
+| SSLottery ABI        | [abi/SSLottery.ts @default](apps/web/src/config/abi/SSLottery.ts?plain=1#L1)                       |
 | Lottery subgraph url | [constants/endpoints.ts @GRAPH_API_LOTTERY](apps/web/src/config/constants/endpoints.ts?plain=1#L5) |
 
 </details>

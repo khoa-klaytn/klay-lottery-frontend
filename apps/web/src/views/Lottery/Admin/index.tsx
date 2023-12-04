@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
 import { Button, useToast } from '@sweepstakes/uikit'
 import { styled } from 'styled-components'
-import { ssLotteryABI } from 'config/abi/ssLottery'
+import SSLotteryABI from 'config/abi/SSLottery'
 import Modal from './Modal'
 import useLotteryAddress from '../hooks/useLotteryAddress'
 
@@ -39,7 +39,7 @@ export default function Admin() {
         const hasRole = async (roleName: number): Promise<boolean | null> =>
           publicClient
             .readContract({
-              abi: ssLotteryABI,
+              abi: SSLotteryABI,
               address: ssLotteryAddress,
               functionName: 'hasRole',
               args: [roleName, account],

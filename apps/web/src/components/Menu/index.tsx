@@ -1,6 +1,5 @@
 import { languageList, useTranslation } from '@sweepstakes/localization'
-import { footerLinks, Menu as UikitMenu, NextLinkFromReactRouter, useModal } from '@sweepstakes/uikit'
-import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
+import { footerLinks, Menu as UikitMenu, NextLinkFromReactRouter } from '@sweepstakes/uikit'
 import { NetworkSwitcher } from 'components/NetworkSwitcher'
 import PhishingWarningBanner from 'components/PhishingWarningBanner'
 import { useKlayPrice } from 'hooks/useKlayPrice'
@@ -9,7 +8,6 @@ import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { usePhishingBanner } from '@sweepstakes/utils/user'
-import { IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
 import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import { useBuyKlay } from 'hooks/useBuyKlay'
 import GlobalSettings from './GlobalSettings'
@@ -29,15 +27,9 @@ const Menu = (props) => {
   const klayPrice = useKlayPrice()
   const { currentLanguage, setLanguage, t } = useTranslation()
   const { pathname } = useRouter()
-  const [onUSCitizenModalPresent] = useModal(
-    <USCitizenConfirmModal title={t('SweepStakes Perpetuals')} id={IdType.PERPETUALS} />,
-    false,
-    false,
-    'usCitizenConfirmModal',
-  )
   const [showPhishingWarningBanner] = usePhishingBanner()
 
-  const menuItems = useMenuItems(onUSCitizenModalPresent)
+  const menuItems = useMenuItems()
 
   const activeMenuItem = getActiveMenuItem({ menuConfig: menuItems, pathname })
   const activeSubMenuItem = getActiveSubMenuItem({ menuItem: activeMenuItem, pathname })
