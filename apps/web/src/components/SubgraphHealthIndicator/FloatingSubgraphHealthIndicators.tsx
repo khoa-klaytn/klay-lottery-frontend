@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { createPortal } from 'react-dom'
 
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { V3_SUBGRAPH_URLS, GRAPH_API_LOTTERY } from 'config/constants/endpoints'
+import { GRAPH_API_LOTTERY } from 'config/constants/endpoints'
 
 import { SubgraphHealthIndicator, SubgraphHealthIndicatorProps } from './SubgraphHealthIndicator'
 
@@ -22,15 +22,6 @@ export function subgraphHealthIndicatorFactory({ getSubgraphName }: FactoryParam
     return createPortal(<SubgraphHealthIndicator subgraphName={subgraphName} {...props} />, document.body)
   }
 }
-
-export const V3SubgraphHealthIndicator = subgraphHealthIndicatorFactory({
-  getSubgraphName: (chainId) => {
-    if (V3_SUBGRAPH_URLS[chainId]?.startsWith('https://api.thegraph.com/subgraphs/name/')) {
-      return V3_SUBGRAPH_URLS[chainId].replace('https://api.thegraph.com/subgraphs/name/', '') || ''
-    }
-    return ''
-  },
-})
 
 export const LotterySubgraphHealthIndicator = subgraphHealthIndicatorFactory({
   getSubgraphName: () => GRAPH_API_LOTTERY.replace('https://api.thegraph.com/subgraphs/name/', ''),

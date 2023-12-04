@@ -5,25 +5,19 @@ import { useActiveChainId } from 'hooks/useActiveChainId'
 import useAuth from 'hooks/useAuth'
 // @ts-ignore
 // eslint-disable-next-line import/extensions
-import { useActiveHandle } from 'hooks/useEagerConnect.bmp.ts'
 import { useMemo, useState } from 'react'
 import { useConnect } from 'wagmi'
 import { logGTMWalletConnectEvent } from 'utils/customGTMEventTracking'
 import Trans from './Trans'
 
 const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
-  const handleActive = useActiveHandle()
   const { login } = useAuth()
   const { connectAsync } = useConnect()
   const { chainId } = useActiveChainId()
   const [open, setOpen] = useState(false)
 
   const handleClick = () => {
-    if (typeof __NEZHA_BRIDGE__ !== 'undefined' && !window.ethereum) {
-      handleActive()
-    } else {
-      setOpen(true)
-    }
+    setOpen(true)
   }
 
   const wallets = useMemo(() => createWallets(chainId, connectAsync), [chainId, connectAsync])

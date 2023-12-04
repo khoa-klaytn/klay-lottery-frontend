@@ -3,7 +3,6 @@ import BigNumber from 'bignumber.js'
 import { NetworkModal } from 'components/NetworkModal'
 import { useAccountEventListener } from 'hooks/useAccountEventListener'
 import useEagerConnect from 'hooks/useEagerConnect'
-import useEagerConnectMP from 'hooks/useEagerConnect.bmp'
 import useSentryUser from 'hooks/useSentryUser'
 import useThemeCookie from 'hooks/useThemeCookie'
 import useUserAgent from 'hooks/useUserAgent'
@@ -42,7 +41,6 @@ function GlobalHooks() {
 
 function MPGlobalHooks() {
   usePollBlockNumber()
-  useEagerConnectMP()
   useUserAgent()
   useAccountEventListener()
   useSentryUser()
