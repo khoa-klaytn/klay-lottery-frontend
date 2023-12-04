@@ -7,18 +7,9 @@ import { useMemo } from 'react'
 import { getMulticallAddress } from 'utils/addressHelpers'
 import { getContract, getSSLotteryContract, getSidContract, getUnsContract } from 'utils/contractHelpers'
 
-import { WNATIVE } from '@sweepstakes/sdk'
 import { multicallABI } from 'config/abi/Multicall'
 
-import { wethABI } from 'config/abi/weth'
 import useLotteryAddress from 'views/Lottery/hooks/useLotteryAddress'
-/**
- * Helper hooks to get specific contracts (by ABI)
- */
-
-export const useERC20 = (address: Address) => {
-  return useContract(address, erc20ABI)
-}
 
 export const useSSLotteryContract = () => {
   const address = useLotteryAddress()
@@ -58,11 +49,6 @@ export function useContract<TAbi extends Abi>(
 
 export function useTokenContract(tokenAddress?: Address) {
   return useContract(tokenAddress, erc20ABI)
-}
-
-export function useWNativeContract() {
-  const { chainId } = useActiveChainId()
-  return useContract(chainId ? WNATIVE[chainId]?.address : undefined, wethABI)
 }
 
 export function useMulticallContract() {

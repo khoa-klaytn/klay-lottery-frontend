@@ -41,7 +41,6 @@
     "@sweepstakes/multicall": "workspace:*",
     "@sweepstakes/pools": "workspace:*",
     "@sweepstakes/sdk": "workspace:*",
-    "@sweepstakes/smart-router": "workspace:*",
     "@sweepstakes/swap-sdk-core": "workspace:*",
     "@sweepstakes/token-lists": "workspace:*",
     "@sweepstakes/tokens": "workspace:*",

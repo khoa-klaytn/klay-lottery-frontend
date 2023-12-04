@@ -1,6 +1,5 @@
 import { Currency, CurrencyAmount, Percent, Price, Token, Trade, TradeType } from '@sweepstakes/sdk'
 import { ChainId } from '@sweepstakes/chains'
-import { LegacyTradeWithStableSwap as TradeWithStableSwap } from '@sweepstakes/smart-router/legacy-router'
 import BigNumber from 'bignumber.js'
 import { Address } from 'wagmi'
 // a list of tokens by chain
@@ -82,17 +81,10 @@ export const FetchStatus = {
 export type TFetchStatus = (typeof FetchStatus)[keyof typeof FetchStatus]
 
 export const isStableSwap = (trade: ITrade): trade is StableTrade => {
-  return (
-    Boolean((trade as StableTrade)?.maximumAmountIn) &&
-    !(trade as Trade<Currency, Currency, TradeType> | TradeWithStableSwap<Currency, Currency, TradeType>)?.route
-  )
+  return Boolean((trade as StableTrade)?.maximumAmountIn) && !(trade as Trade<Currency, Currency, TradeType>)?.route
 }
 
-export type ITrade =
-  | Trade<Currency, Currency, TradeType>
-  | StableTrade
-  | TradeWithStableSwap<Currency, Currency, TradeType>
-  | undefined
+export type ITrade = Trade<Currency, Currency, TradeType> | StableTrade | undefined
 
 export type V2TradeAndStableSwap = Trade<Currency, Currency, TradeType> | StableTrade | undefined
 

@@ -1,18 +1,6 @@
-import { SmartRouter } from '@sweepstakes/smart-router/evm'
 import { log } from 'next-axiom'
 import { Call } from 'state/multicall/actions'
 import { fetchChunk } from 'state/multicall/fetchChunk'
-import { getViemClients } from 'utils/viem'
-
-const { parseCurrency, parseCurrencyAmount, parsePool, serializeTrade } = SmartRouter.Transformer
-
-export type WorkerGetBestTradeEvent = [
-  id: number,
-  message: {
-    cmd: 'getBestTrade'
-    params: SmartRouter.APISchema.RouterPostParams
-  },
-]
 
 const fetch_ = fetch
 
@@ -55,7 +43,7 @@ export type WorkerMultiChunkEvent = [
   },
 ]
 
-export type WorkerEvent = WorkerGetBestTradeEvent | WorkerMultiChunkEvent
+export type WorkerEvent = WorkerMultiChunkEvent
 
 // eslint-disable-next-line no-restricted-globals
 addEventListener('message', (event: MessageEvent<WorkerEvent>) => {
@@ -78,70 +66,6 @@ addEventListener('message', (event: MessageEvent<WorkerEvent>) => {
           {
             success: false,
             error: err,
-          },
-        ])
-      })
-  }
-  if (message.cmd === 'getBestTrade') {
-    const parsed = SmartRouter.APISchema.zRouterPostParams.safeParse(message.params)
-    if (parsed.success === false) {
-      postMessage([
-        id,
-        {
-          success: false,
-          error: parsed.error.message,
-        },
-      ])
-      return
-    }
-    const {
-      amount,
-      chainId,
-      currency,
-      tradeType,
-      blockNumber,
-      gasPriceWei,
-      maxHops,
-      maxSplits,
-      poolTypes,
-      candidatePools,
-      onChainQuoterGasLimit: gasLimit,
-    } = parsed.data
-    const onChainQuoteProvider = SmartRouter.createQuoteProvider({ onChainProvider: getViemClients, gasLimit })
-    const currencyAAmount = parseCurrencyAmount(chainId, amount)
-    const currencyB = parseCurrency(chainId, currency)
-
-    const pools = candidatePools.map((pool) => parsePool(chainId, pool as any))
-
-    const gasPrice = gasPriceWei
-      ? BigInt(gasPriceWei)
-      : async () => BigInt(await (await getViemClients({ chainId }).getGasPrice()).toString())
-
-    SmartRouter.getBestTrade(currencyAAmount, currencyB, tradeType, {
-      gasPriceWei: gasPrice,
-      poolProvider: SmartRouter.createStaticPoolProvider(pools),
-      quoteProvider: onChainQuoteProvider,
-      maxHops,
-      maxSplits,
-      blockNumber: blockNumber ? Number(blockNumber) : undefined,
-      allowedPoolTypes: poolTypes,
-      quoterOptimization: false,
-    })
-      .then((res) => {
-        postMessage([
-          id,
-          {
-            success: true,
-            result: res && serializeTrade(res),
-          },
-        ])
-      })
-      .catch((err) => {
-        postMessage([
-          id,
-          {
-            success: false,
-            error: err.message,
           },
         ])
       })

@@ -4,5 +4,4 @@ apps/web/src/config/abi/types
 .next
 cli/aptos-codegen
 dist
-packages/smart-router/evm/abis/types
 packages/pools/src/abis/types

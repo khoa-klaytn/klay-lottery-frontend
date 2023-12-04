@@ -76,12 +76,6 @@ export const klaytn = {
       url: 'https://scope.klaytn.com',
     },
   },
-  // contracts: {
-  //   multicall3: {
-  //     address: '0xcA11bde05977b3631167028862bE2a173976CA11',
-  //     blockCreated: 0,
-  //   }
-  // }
 } as const satisfies Chain
 
 export const klaytnTestnet = {
@@ -106,12 +100,6 @@ export const klaytnTestnet = {
       url: 'https://baobab.scope.klaytn.com',
     },
   },
-  // contracts: {
-  //   multicall3: {
-  //     address: "0xca11bde05977b3631167028862be2a173976ca11",
-  //     blockCreated: 0,
-  //   },
-  // },
   testnet: true,
 } as const satisfies Chain
 
@@ -132,12 +120,6 @@ export const klaytnTestnet = {
 
 // const scrollSepolia = {
 //   ...scrollSepolia_,
-//   contracts: {
-//     multicall3: {
-//       address: '0xcA11bde05977b3631167028862bE2a173976CA11',
-//       blockCreated: 9473,
-//     },
-//   },
 // } as const satisfies Chain
 
 // export const opbnbTestnet = {
@@ -157,12 +139,6 @@ export const klaytnTestnet = {
 //     default: {
 //       name: 'opBNBScan',
 //       url: 'https://testnet.opbnbscan.com',
-//     },
-//   },
-//   contracts: {
-//     multicall3: {
-//       address: '0xcA11bde05977b3631167028862bE2a173976CA11',
-//       blockCreated: 3705108,
 //     },
 //   },
 //   testnet: true,
@@ -185,12 +161,6 @@ export const klaytnTestnet = {
 //     default: {
 //       name: 'opBNBScan',
 //       url: 'https://opbnbscan.com',
-//     },
-//   },
-//   contracts: {
-//     multicall3: {
-//       address: '0xcA11bde05977b3631167028862bE2a173976CA11',
-//       blockCreated: 512881,
 //     },
 //   },
 // } as const satisfies Chain
@@ -226,12 +196,6 @@ export const klaytnTestnet = {
 //     blockscout: {
 //       name: 'Blockscout',
 //       url: 'https://explorer.linea.build',
-//     },
-//   },
-//   contracts: {
-//     multicall3: {
-//       address: '0xcA11bde05977b3631167028862bE2a173976CA11',
-//       blockCreated: 42,
 //     },
 //   },
 //   testnet: false,

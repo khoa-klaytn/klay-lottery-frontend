@@ -23,13 +23,6 @@ import {
 } from '@sweepstakes/tokens'
 import { ChainTokenList } from './types'
 
-export {
-  ADDITIONAL_BASES,
-  V2_ROUTER_ADDRESS,
-  BASES_TO_CHECK_TRADES_AGAINST,
-  CUSTOM_BASES,
-} from '@sweepstakes/smart-router/evm'
-
 export const CHAIN_REFRESH_TIME = {
   [ChainId.ETHEREUM]: 12_000,
   [ChainId.GOERLI]: 12_000,

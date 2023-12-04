@@ -4,7 +4,6 @@
   "dependencies": {
     "@sweepstakes/chains": "workspace:*",
     "@sweepstakes/sdk": "workspace:*",
-    "@sweepstakes/smart-router": "workspace:*",
     "@sweepstakes/v3-sdk": "workspace:*",
     "@sweepstakes/worker-utils": "workspace:*",
     "graphql-request": "^5.0.0",

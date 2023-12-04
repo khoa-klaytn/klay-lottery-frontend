@@ -1,5 +1,4 @@
 import { ChainId } from '@sweepstakes/chains'
-import { OnChainProvider, SubgraphProvider } from '@sweepstakes/smart-router/evm'
 import { createPublicClient, http } from 'viem'
 import { bsc, bscTestnet, goerli, mainnet } from 'viem/chains'
 import { GraphQLClient } from 'graphql-request'
@@ -64,7 +63,3 @@ export const v3SubgraphClients: Record<SupportedChainId, GraphQLClient> = {
   [ChainId.BASE]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.BASE], { fetch }),
   [ChainId.OPBNB]: new GraphQLClient(V3_SUBGRAPH_URLS[ChainId.OPBNB], { fetch }),
 } as const
-
-export const v3SubgraphProvider: SubgraphProvider = ({ chainId = ChainId.BSC }: { chainId?: ChainId }) => {
-  return v3SubgraphClients[chainId as SupportedChainId] || v3SubgraphClients[ChainId.BSC]
-}

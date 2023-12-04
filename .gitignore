@@ -40,7 +40,6 @@ yarn-error.log*
 debug.log*
 
 **/apps/web/config/abi/types
-**/packages/smart-router/evm/abis/types
 **/packages/pools/src/abis/types
 
 # Sentry

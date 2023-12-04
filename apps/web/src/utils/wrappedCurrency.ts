@@ -1,16 +1,8 @@
-import { Currency, CurrencyAmount, Token, WNATIVE } from '@sweepstakes/sdk'
+import { Currency, Token, WNATIVE } from '@sweepstakes/sdk'
 import { ChainId } from '@sweepstakes/chains'
 
 export { unwrappedToken } from '@sweepstakes/tokens'
 
 export function wrappedCurrency(currency: Currency | undefined, chainId: ChainId | undefined): Token | undefined {
   return chainId && currency?.isNative ? WNATIVE[chainId] : currency?.isToken ? currency : undefined
-}
-
-export function wrappedCurrencyAmount(
-  currencyAmount: CurrencyAmount<Currency> | undefined,
-  chainId: ChainId | undefined,
-): CurrencyAmount<Token> | undefined {
-  const token = currencyAmount && chainId ? wrappedCurrency(currencyAmount.currency, chainId) : undefined
-  return token && currencyAmount ? CurrencyAmount.fromRawAmount(token, currencyAmount.quotient) : undefined
 }

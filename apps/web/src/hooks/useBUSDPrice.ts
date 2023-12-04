@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price, WETH9, TradeType } from '@sweepstakes/sdk'
+import { Currency, Price, WETH9 } from '@sweepstakes/sdk'
 import { ChainId } from '@sweepstakes/chains'
 import { KLAY, STABLE_COIN } from '@sweepstakes/tokens'
 import { useMemo } from 'react'
@@ -6,9 +6,7 @@ import useSWRImmutable from 'swr/immutable'
 import { multiplyPriceByAmount } from 'utils/prices'
 import { useKlayPrice } from 'hooks/useKlayPrice'
 import { getFullDecimalMultiplier } from '@sweepstakes/utils/getFullDecimalMultiplier'
-import { SmartRouterTrade } from '@sweepstakes/smart-router/evm'
 import { useActiveChainId } from './useActiveChainId'
-import { useBestAMMTrade } from './useBestAMMTrade'
 
 type UseStablecoinPriceConfig = {
   enabled?: boolean
@@ -25,7 +23,7 @@ export function useStablecoinPrice(
 ): Price<Currency, Currency> | undefined {
   const { chainId: currentChainId } = useActiveChainId()
   const chainId = currency?.chainId
-  const { enabled, hideIfPriceImpactTooHigh } = { ...DEFAULT_CONFIG, ...config }
+  const { enabled } = { ...DEFAULT_CONFIG, ...config }
 
   const klayPrice = useKlayPrice()
   const stableCoin = chainId && chainId in ChainId ? STABLE_COIN[chainId as ChainId] : undefined
@@ -38,7 +36,7 @@ export function useStablecoinPrice(
   const enableLlama = currency?.chainId === ChainId.ETHEREUM && shouldEnabled
 
   // we don't have too many AMM pools on ethereum yet, try to get it from api
-  const { data: priceFromLlama, isLoading } = useSWRImmutable<string>(
+  const { data: priceFromLlama } = useSWRImmutable<string>(
     currency && enableLlama && ['fiat-price-ethereum', currency],
     async () => {
       const address = currency?.isToken ? currency.address : WETH9[ChainId.ETHEREUM]?.address
@@ -53,22 +51,6 @@ export function useStablecoinPrice(
       refreshInterval: 30_000,
     },
   )
-
-  const amountOut = useMemo(
-    () => (stableCoin ? CurrencyAmount.fromRawAmount(stableCoin, 5 * 10 ** stableCoin.decimals) : undefined),
-    [stableCoin],
-  )
-
-  const { trade } = useBestAMMTrade({
-    amount: amountOut,
-    currency: currency ?? undefined,
-    baseCurrency: stableCoin,
-    tradeType: TradeType.EXACT_OUTPUT,
-    maxSplits: 0,
-    enabled: Boolean(enableLlama ? !isLoading && !priceFromLlama : shouldEnabled),
-    autoRevalidate: false,
-    type: 'api',
-  })
 
   const price = useMemo(() => {
     if (!currency || !stableCoin || !enabled) {
@@ -100,30 +82,8 @@ export function useStablecoinPrice(
       )
     }
 
-    if (trade) {
-      const { inputAmount, outputAmount } = trade as unknown as SmartRouterTrade<TradeType>
-
-      // if price impact is too high, don't show price
-      if (hideIfPriceImpactTooHigh) {
-        return undefined
-      }
-
-      return new Price(currency, stableCoin, inputAmount.quotient, outputAmount.quotient)
-    }
-
     return undefined
-  }, [
-    currency,
-    stableCoin,
-    enabled,
-    isCake,
-    klayPrice,
-    isStableCoin,
-    priceFromLlama,
-    enableLlama,
-    trade,
-    hideIfPriceImpactTooHigh,
-  ])
+  }, [currency, stableCoin, enabled, isCake, klayPrice, isStableCoin, priceFromLlama, enableLlama])
 
   return price
 }

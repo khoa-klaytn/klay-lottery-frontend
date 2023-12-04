@@ -16,21 +16,11 @@ const Row = styled.div`
 `;
 
 export const Default: React.FC<React.PropsWithChildren> = () => {
-  const [index, setIndex] = useState(0);
   const [index3, setIndex3] = useState(0);
-  const handleClick = (newIndex) => setIndex(newIndex);
   const handleClick3 = (newIndex) => setIndex3(newIndex);
 
   return (
     <>
-      <Row>
-        <TabMenu activeIndex={index} onItemClick={handleClick}>
-          <Tab>Total</Tab>
-          <Tab>Cakers</Tab>
-          <Tab>Flippers</Tab>
-          <Tab>Storm</Tab>
-        </TabMenu>
-      </Row>
       <Row>
         <TabMenu activeIndex={index3} onItemClick={handleClick3}>
           <Tab>Really long tab name</Tab>

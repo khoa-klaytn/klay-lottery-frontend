@@ -1,4 +1,4 @@
-import type { WorkerGetBestTradeEvent, WorkerMultiChunkEvent } from 'quote-worker'
+import type { WorkerMultiChunkEvent } from 'quote-worker'
 import type { FetchChunkResult } from 'state/multicall/fetchChunk'
 
 class WorkerProxy {
@@ -35,13 +35,6 @@ class WorkerProxy {
   public fetchChunk = async (params: WorkerMultiChunkEvent[1]['params']): FetchChunkResult => {
     return this.postMessage({
       cmd: 'multicallChunk',
-      params,
-    })
-  }
-
-  public getBestTrade = async (params: WorkerGetBestTradeEvent[1]['params']) => {
-    return this.postMessage({
-      cmd: 'getBestTrade',
       params,
     })
   }
