@@ -20,7 +20,7 @@ function Enum<T extends ReadonlyArray<string>>(...arr: T): { [K in T[number]]: n
     return acc
   }, Object.create(null))
 }
-const RoleName = Enum('Owner', 'Operator', 'Injector', 'Querier')
+const RoleName = Enum('Owner', 'Operator', 'Injector')
 
 export default function Admin() {
   const publicClient = usePublicClient()
