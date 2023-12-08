@@ -138,24 +138,43 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
   return (
     <>
       <Flex flexDirection="column">
-        <Text mb="4px" textAlign={['center', null, 'left']}>
+        <Text mb="8px" textAlign={['center', null, 'left']}>
           {t('You won')}
         </Text>
         <Flex
-          alignItems={['flex-start', null, 'center']}
+          alignItems={['center', null, 'flex-start']}
           justifyContent={['flex-start', null, 'space-between']}
           flexDirection={['column', null, 'row']}
         >
-          <Balance
-            textAlign={['center', null, 'left']}
-            lineHeight="1.1"
-            value={rewardAsBalance}
-            fontSize="44px"
-            bold
-            color="secondary"
-            unit={` ${symbol}!`}
-          />
-          <PresentWonIcon ml={['0', null, '12px']} width="64px" />
+          <Flex flexDirection="column" alignItems={['center', null, 'flex-start']}>
+            <Balance
+              textAlign="center"
+              lineHeight="1.2"
+              value={rewardAsBalance}
+              fontSize="44px"
+              bold
+              color="secondary"
+              unit={` ${symbol}!`}
+            />
+            <Text textAlign="center">
+              <Text display="inline" fontSize="19px" marginRight="1.5px">
+                (
+              </Text>
+              <Balance
+                fontSize="20px"
+                display="inline"
+                value={rewardAsBalance}
+                bold
+                color="secondary"
+                unit={` ${symbol}`}
+              />
+              {' from previous rounds'}
+              <Text display="inline" fontSize="19px" marginLeft="1.5px">
+                )
+              </Text>
+            </Text>
+          </Flex>
+          <PresentWonIcon ml={['0', null, '15px']} width="64px" />
         </Flex>
         <Balance
           mt={['12px', null, '0']}
