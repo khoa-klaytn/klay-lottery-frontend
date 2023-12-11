@@ -12,6 +12,7 @@ import { getBalanceAmount } from '@sweepstakes/utils/formatBalance'
 import { SHORT_SYMBOL } from 'config/chains'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'
 import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
+import BigNumber from 'bignumber.js'
 
 interface ClaimInnerProps {
   roundsToClaim: LotteryTicketClaimData[]
@@ -42,7 +43,13 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
         _ticketsWithUnclaimedRewards.push([roundId, ticket])
       }
     }
-    return { previousTotal: _previousTotal, ticketsWithUnclaimedRewards: _ticketsWithUnclaimedRewards, total: _total }
+    return {
+      previousTotal: _previousTotal,
+      ticketsWithUnclaimedRewards: _ticketsWithUnclaimedRewards.sort(
+        ([, { reward: aReward }], [, { reward: bReward }]) => (new BigNumber(aReward).gt(bReward) ? -1 : 1),
+      ),
+      total: _total,
+    }
   }, [currentLotteryId, roundsToClaim])
   const [pendingBatchClaims, setPendingBatchClaims] = useState(
     Math.ceil(ticketsWithUnclaimedRewards.length / maxNumberTicketsPerBuyOrClaim.toNumber()),
@@ -62,15 +69,14 @@ const ClaimInnerContainer: React.FC<React.PropsWithChildren<ClaimInnerProps>> = 
     const requests: [string[], string[]][] = []
     const maxAsNumber = maxNumberTicketsPerBuyOrClaim.toNumber()
 
-    for (let batch = 0; batch < ticketsWithUnclaimedRewards.length; batch += maxAsNumber) {
+    for (let batch = ticketsWithUnclaimedRewards.length; batch > 0; batch -= maxAsNumber) {
       const batchRequests: [string[], string[]] = [[], []]
-      for (const [roundId, { id }] of ticketsWithUnclaimedRewards.slice(batch, maxAsNumber + batch)) {
+      for (const [roundId, { id }] of ticketsWithUnclaimedRewards.slice(Math.max(batch - maxAsNumber, 0), batch)) {
         batchRequests[0].push(roundId)
         batchRequests[1].push(id)
       }
       requests.push(batchRequests)
     }
-    console.log('ticketBatches', requests)
     return requests
   }, [ticketsWithUnclaimedRewards, maxNumberTicketsPerBuyOrClaim])
 

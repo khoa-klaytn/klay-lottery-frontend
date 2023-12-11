@@ -13,28 +13,37 @@ interface RoundDataAndUserTickets {
   finalNumber: string[]
 }
 
+function fetchRewardForTicket(lotteryAddress: Address, client: PublicClient, ticket: LotteryTicket) {
+  return client.readContract({
+    abi: SSLotteryABI,
+    address: lotteryAddress,
+    functionName: 'viewRewardsForTicketId',
+    args: [BigInt(ticket.roundId), BigInt(ticket.id)],
+  })
+}
+
 const fetchRewardsForTickets = async (
   lotteryAddress: Address,
   client: PublicClient,
   tickets: LotteryTicket[],
 ): Promise<{ tickets: LotteryTicket[]; total: BigNumber }> => {
   try {
-    const rewards = await Promise.all(
-      tickets.map((ticket) =>
-        client.readContract({
-          abi: SSLotteryABI,
-          address: lotteryAddress,
-          functionName: 'viewRewardsForTicketId',
-          args: [BigInt(ticket.roundId), BigInt(ticket.id)],
-        }),
-      ),
-    )
+    const ticketPromises = Array<Promise<LotteryTicket>>()
+    for (let i = 0; i < tickets.length; i++) {
+      const ticket = tickets[i]
+      const ticketPromise = fetchRewardForTicket(lotteryAddress, client, ticket).then((reward) => ({
+        ...ticket,
+        reward: reward.toString(),
+      }))
+      ticketPromises.push(ticketPromise)
+    }
+    const _tickets = await Promise.all(ticketPromises)
 
-    const total = rewards.reduce((accum: BigNumber, reward: bigint) => {
-      return accum.plus(new BigNumber(reward.toString()))
+    const total = _tickets.reduce((accum: BigNumber, ticket: LotteryTicket) => {
+      return accum.plus(new BigNumber(ticket.reward))
     }, BIG_ZERO)
 
-    return { tickets, total }
+    return { tickets: _tickets, total }
   } catch (error) {
     console.error(error)
     return { tickets: null, total: null }
@@ -67,10 +76,8 @@ export const getWinningTickets = async (
   for (const ticket of userTickets) {
     const rewardBracket = getRewardBracketByNumber(ticket.number, finalNumber)
     const ticketWithRewardBracket = {
+      ...ticket,
       roundId,
-      id: ticket.id,
-      number: ticket.number,
-      status: ticket.status,
       rewardBracket,
     }
     if (rewardBracket > 0) {
