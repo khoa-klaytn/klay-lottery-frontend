@@ -157,7 +157,15 @@ export const getRoundIdsArray = (currentLotteryId: string): string[] => {
   return roundIds.map((roundId) => roundId?.toString())
 }
 
-export const hasRoundBeenClaimed = (tickets: LotteryTicket[]): boolean => {
-  const claimedTickets = tickets.filter((ticket) => ticket.status)
-  return claimedTickets.length > 0
+export function calculateRoundClaimedAndClaimedTickets(tickets: LotteryTicket[]) {
+  let claimedTickets = 0
+  let claimed = true
+  for (const ticket of tickets) {
+    if (ticket.status) {
+      claimedTickets += 1
+    } else if (claimed) {
+      claimed = false
+    }
+  }
+  return { claimed, claimedTickets: claimedTickets.toString() }
 }

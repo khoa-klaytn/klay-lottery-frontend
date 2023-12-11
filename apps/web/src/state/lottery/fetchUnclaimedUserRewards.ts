@@ -132,9 +132,7 @@ const fetchUnclaimedUserRewards = async (
   })
 
   // Rounds with no tickets claimed OR rounds where a user has over 100 tickets, could have prizes
-  const roundsWithPossibleWinnings = claimableRounds.filter((round) => {
-    return !round.claimed || parseInt(round.totalTickets, 10) > 100
-  })
+  const roundsWithPossibleWinnings = claimableRounds.filter((round) => !round.claimed)
 
   // Check the X  most recent rounds, where X is NUM_ROUNDS_TO_CHECK_FOR_REWARDS
   const roundsToCheck = roundsWithPossibleWinnings.slice(0, NUM_ROUNDS_TO_CHECK_FOR_REWARDS)

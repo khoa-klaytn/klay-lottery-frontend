@@ -3,7 +3,7 @@ import { GRAPH_API_LOTTERY } from 'config/constants/endpoints'
 import { LotteryTicket } from 'config/constants/types'
 import { LotteryUserGraphEntity, LotteryResponse, UserRound } from 'state/types'
 import { type Address, PublicClient } from 'viem'
-import { getRoundIdsArray, fetchMultipleLotteries, hasRoundBeenClaimed } from './helpers'
+import { getRoundIdsArray, fetchMultipleLotteries, calculateRoundClaimedAndClaimedTickets } from './helpers'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
 
 export const MAX_USER_LOTTERIES_REQUEST_SIZE = 100
@@ -20,11 +20,12 @@ const applyNodeDataToUserGraphResponse = (
   if (userGraphData.length === 0) {
     return lotteryNodeData.map((nodeRound) => {
       const ticketDataForRound = userNodeData.find((roundTickets) => roundTickets.roundId === nodeRound.lotteryId)
+
       return {
         endTime: nodeRound.endTime,
         status: nodeRound.status,
         lotteryId: nodeRound.lotteryId.toString(),
-        claimed: hasRoundBeenClaimed(ticketDataForRound.userTickets),
+        ...calculateRoundClaimedAndClaimedTickets(ticketDataForRound.userTickets),
         totalTickets: `${ticketDataForRound.userTickets.length.toString()}`,
         tickets: ticketDataForRound.userTickets,
       }
@@ -37,12 +38,26 @@ const applyNodeDataToUserGraphResponse = (
       (graphResponseRound) => graphResponseRound.lotteryId === userNodeRound.roundId,
     )
     const nodeRoundData = lotteryNodeData.find((nodeRound) => nodeRound.lotteryId === userNodeRound.roundId)
+    let claimed: boolean
+    let claimedTickets: string
+    let totalTickets: string
+    if (userGraphRound) {
+      claimed = userGraphRound.claimed
+      claimedTickets = userGraphRound.claimedTickets
+      totalTickets = userGraphRound.totalTickets
+    } else {
+      const claimedAndClaimedTickets = calculateRoundClaimedAndClaimedTickets(userNodeRound.userTickets)
+      claimed = claimedAndClaimedTickets.claimed
+      claimedTickets = claimedAndClaimedTickets.claimedTickets
+      totalTickets = userNodeRound.userTickets.length.toString()
+    }
     return {
       endTime: nodeRoundData.endTime,
       status: nodeRoundData.status,
       lotteryId: nodeRoundData.lotteryId.toString(),
-      claimed: hasRoundBeenClaimed(userNodeRound.userTickets),
-      totalTickets: userGraphRound?.totalTickets || userNodeRound.userTickets.length.toString(),
+      claimed,
+      claimedTickets,
+      totalTickets,
       tickets: userNodeRound.userTickets,
     }
   })
@@ -85,7 +100,7 @@ export const getGraphLotteryUser = async (
                 endTime
                 status
               }
-              claimed
+              claimedTickets
               totalTickets
             }
           }
@@ -103,11 +118,14 @@ export const getGraphLotteryUser = async (
         account: userRes.id,
         totalTickets: userRes.totalTickets,
         rounds: userRes.rounds.map((round) => {
+          const claimedTickets = round?.claimedTickets
+          const totalTickets = round?.totalTickets
           return {
             lotteryId: round?.lottery?.id,
             endTime: round?.lottery?.endTime,
-            claimed: round?.claimed,
-            totalTickets: round?.totalTickets,
+            claimedTickets,
+            totalTickets,
+            claimed: claimedTickets === totalTickets,
             status: round?.lottery?.status.toLowerCase(),
           }
         }),
