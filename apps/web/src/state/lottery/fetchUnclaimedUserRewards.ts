@@ -61,25 +61,25 @@ export const getWinningTickets = async (
 ): Promise<LotteryTicketClaimData> => {
   const { roundId, userTickets, finalNumber } = roundDataAndUserTickets
 
-  const ticketsWithRewardBrackets = userTickets.map((ticket) => {
-    return {
+  const allWinningTickets = Array<LotteryTicket>()
+  const unclaimedTickets = Array<LotteryTicket>()
+
+  for (const ticket of userTickets) {
+    const rewardBracket = getRewardBracketByNumber(ticket.number, finalNumber)
+    const ticketWithRewardBracket = {
       roundId,
       id: ticket.id,
       number: ticket.number,
       status: ticket.status,
-      rewardBracket: getRewardBracketByNumber(ticket.number, finalNumber),
+      rewardBracket,
     }
-  })
-
-  // A rewardBracket of -1 means no matches. 0 and above means there has been a match
-  const allWinningTickets = ticketsWithRewardBrackets.filter((ticket) => {
-    return ticket.rewardBracket > 0
-  })
-
-  // If ticket.status is true, the ticket has already been claimed
-  const unclaimedTickets = ticketsWithRewardBrackets.filter((ticket) => {
-    return !ticket.status
-  })
+    if (rewardBracket > 0) {
+      allWinningTickets.push(ticketWithRewardBracket)
+    }
+    if (!ticket.status) {
+      unclaimedTickets.push(ticketWithRewardBracket)
+    }
+  }
 
   if (unclaimedTickets.length > 0) {
     const { tickets, total } = await fetchRewardsForTickets(lotteryAddress, client, unclaimedTickets)
