@@ -2798,6 +2798,6 @@
   "Match all %rewardBracket%": "모든 %rewardBracket%과 일치",
   "At least one ticket must be purchased": "최소한 티켓 한장을 구매해야 합니다",
   "Baobab Faucet (Free Testnet KLAY)": "Baobab Faucet (무료 테스트넷 KLAY)",
-  "Your %symbol% prizes have been sent to your wallet": "%symbol% 상금이 지갑으로 전송되었습니다",
-  "Claim %claimNum% of %claimTotal% was successful. Please confirm the next transaction": "대한 %claimNum%/%claimTotal% 클레임에 성공했습니다. 다음 트랜잭션을 확인하세요."
+  "Your %symbol% prizes have been sent to your wallet": "상금으로 %symbol%가 지갑에 전송되었습니다",
+  "Claim %claimNum% of %claimTotal% was successful. Please confirm the next transaction": "전체 %claimTotal%개 중 %claimNum%개에 대한 클레임이 성공했습니다."
 }
