@@ -2,7 +2,6 @@ import BigNumber from 'bignumber.js'
 import { LotteryStatus, LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import { LotteryUserGraphEntity, LotteryRoundGraphEntity } from 'state/types'
 import SSLotteryABI from 'config/abi/SSLottery'
-import { NUM_ROUNDS_TO_CHECK_FOR_REWARDS } from 'config/constants/lottery'
 import { BIG_ZERO } from '@sweepstakes/utils/bigNumber'
 import { type Address, PublicClient } from 'viem'
 import { fetchUserTicketsForMultipleRounds } from './getUserTicketsData'
@@ -119,51 +118,60 @@ const fetchUnclaimedUserRewards = async (
     return []
   }
 
-  // Filter out rounds without subgraph data (i.e. >100 rounds ago)
-  const roundsInRange = rounds.filter((round) => {
-    const lastCheckableRoundId = parseInt(currentLotteryId, 10) - MAX_LOTTERIES_REQUEST_SIZE
-    const roundId = parseInt(round.lotteryId, 10)
-    return roundId >= lastCheckableRoundId
-  })
-
-  // Filter out non-claimable rounds
-  const claimableRounds = roundsInRange.filter((round) => {
-    return round.status.toLowerCase() === LotteryStatus.CLAIMABLE
-  })
-
-  // Rounds with no tickets claimed OR rounds where a user has over 100 tickets, could have prizes
-  const roundsWithPossibleWinnings = claimableRounds.filter((round) => !round.claimed)
-
-  // Check the X  most recent rounds, where X is NUM_ROUNDS_TO_CHECK_FOR_REWARDS
-  const roundsToCheck = roundsWithPossibleWinnings.slice(0, NUM_ROUNDS_TO_CHECK_FOR_REWARDS)
-
-  if (roundsToCheck.length > 0) {
-    const idsToCheck = roundsToCheck.map((round) => round.lotteryId)
-    const userTicketData = await fetchUserTicketsForMultipleRounds(client, lotteryAddress, idsToCheck, account)
-    const roundsWithTickets = userTicketData.filter((roundData) => roundData?.userTickets?.length > 0)
-
-    const roundDataAndWinningTickets = roundsWithTickets.map((roundData) => {
-      return { ...roundData, finalNumber: getWinningNumbersForRound(roundData.roundId, lotteriesData) }
-    })
-
-    const winningTicketsForPastRounds = await Promise.all(
-      roundDataAndWinningTickets.map((roundData) => getWinningTickets(client, lotteryAddress, roundData)),
-    )
-
-    // Filter out null values (returned when no winning tickets found for past round)
-    const roundsWithWinningTickets = winningTicketsForPastRounds.filter(
-      (winningTicketData) => winningTicketData !== null,
-    )
-
-    // Filter to only rounds with unclaimed tickets
-    const roundsWithUnclaimedWinningTickets = roundsWithWinningTickets.filter(
-      (winningTicketData) => winningTicketData.ticketsWithUnclaimedRewards,
-    )
-
-    return roundsWithUnclaimedWinningTickets
+  const idsToCheck = []
+  const roundsToCheck = []
+  const lastCheckableRoundId = parseInt(currentLotteryId, 10) - MAX_LOTTERIES_REQUEST_SIZE
+  for (const round of rounds) {
+    if (+round.lotteryId < lastCheckableRoundId) {
+      continue
+    }
+    if (round.status.toLowerCase() !== LotteryStatus.CLAIMABLE) {
+      continue
+    }
+    if (round.claimed) {
+      continue
+    }
+    idsToCheck.push(round.lotteryId)
+    roundsToCheck.push(round)
   }
-  // All rounds claimed, return empty array
-  return []
+  if (roundsToCheck.length === 0) {
+    // All rounds claimed, return empty array
+    return []
+  }
+
+  const userTicketData = await fetchUserTicketsForMultipleRounds(client, lotteryAddress, idsToCheck, account)
+
+  const winningTicketsForPastRoundPromises = Array<Promise<LotteryTicketClaimData>>()
+  for (const roundData of userTicketData) {
+    if (typeof roundData === 'undefined') {
+      continue
+    }
+    if (typeof roundData.userTickets === 'undefined') {
+      continue
+    }
+    if (roundData.userTickets.length === 0) {
+      continue
+    }
+    const roundDataAndWinningTickets = {
+      ...roundData,
+      finalNumber: getWinningNumbersForRound(roundData.roundId, lotteriesData),
+    }
+    const winningTicketsForPastRoundPromise = getWinningTickets(client, lotteryAddress, roundDataAndWinningTickets)
+    winningTicketsForPastRoundPromises.push(winningTicketsForPastRoundPromise)
+  }
+  const winningTicketsForPastRounds = await Promise.all(winningTicketsForPastRoundPromises)
+
+  const roundsWithUnclaimedWinningTickets = Array<LotteryTicketClaimData>()
+  for (const winningTicketData of winningTicketsForPastRounds) {
+    if (winningTicketData === null) {
+      continue
+    }
+    if (winningTicketData.ticketsWithUnclaimedRewards) {
+      roundsWithUnclaimedWinningTickets.push(winningTicketData)
+    }
+  }
+
+  return roundsWithUnclaimedWinningTickets
 }
 
 export default fetchUnclaimedUserRewards
