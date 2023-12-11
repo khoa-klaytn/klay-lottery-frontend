@@ -127,8 +127,8 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
   const limitNumberTickets = useCallback(
     (number: BigNumber) => {
       let limitedNumber = number
-      if (number.lt(1)) {
-        limitedNumber = BIG_ONE
+      if (number.lt(0)) {
+        limitedNumber = BIG_ZERO
       } else if (number.gt(maxNumberTicketsPerBuyOrClaim)) {
         limitedNumber = maxNumberTicketsPerBuyOrClaim
       }
@@ -238,9 +238,17 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
       isConfirming ||
       insufficientBalance ||
       !ticketsToBuy ||
-      new BigNumber(ticketsToBuy).lte(0) ||
+      zeroTicketPurchase ||
+      maxTicketPurchaseExceeded ||
       !ticketsToBuy.eq(getTicketsForPurchase().length),
-    [isConfirming, insufficientBalance, ticketsToBuy, getTicketsForPurchase],
+    [
+      isConfirming,
+      insufficientBalance,
+      maxTicketPurchaseExceeded,
+      ticketsToBuy,
+      zeroTicketPurchase,
+      getTicketsForPurchase,
+    ],
   )
 
   const displayBalance = useMemo(() => getFullDisplayBalance(balance, 18, 3), [balance])
@@ -291,7 +299,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         placeholder="0"
         value={ticketsToBuy.toString()}
         onUserInput={(input) => {
-          if (input) handleInputChange(new BigNumber(input))
+          handleInputChange(new BigNumber(input || 0))
         }}
         currencyValue={klayPriceBusd.gt(0) && `~${ticketsToBuy ? ticketCostBeforeDiscount : '0.00'} ${symbol}`}
       />
