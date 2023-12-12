@@ -25,6 +25,8 @@ export default function StartLottery({ lotteryId, status }) {
   })
   const ticketPriceInUsdRef = useRef<HTMLInputElement>(null)
   const [ticketPriceInUsd, setTicketPrice] = useState('0.01')
+  const initialFreeRef = useRef<HTMLInputElement>(null)
+  const [initialFree, setInitialFree] = useState('1000')
   const discountDivisorRef = useRef<HTMLInputElement>(null)
   const [discountDivisor, setDiscountDivisor] = useState('2000')
   const rewardsBreakdownRef = useRef<RewardsBreakdownRef>(null)
@@ -46,6 +48,7 @@ export default function StartLottery({ lotteryId, status }) {
         const res = await callWithGasPrice(lotteryContract, 'startLottery', [
           BigInt(parsedEndTime),
           BigInt(parsedTicketPrice),
+          BigInt(initialFree),
           BigInt(discountDivisor),
           BigInt(winnersPortion),
           BigInt(burnPortion),
@@ -80,6 +83,7 @@ export default function StartLottery({ lotteryId, status }) {
       lotteryContract,
       endTime,
       ticketPriceInUsd,
+      initialFree,
       discountDivisor,
       rewardsBreakdown,
       winnersPortion,
@@ -101,6 +105,20 @@ export default function StartLottery({ lotteryId, status }) {
           onInput={(ev) => {
             setRefCustomValidity(ticketPriceInUsdRef, '')
             setTicketPrice(ev.currentTarget.value)
+          }}
+        />
+      </label>
+      <label>
+        Initial Free Tickets
+        <Input
+          type="number"
+          name="initialFree"
+          id="initialFree"
+          value={initialFree}
+          ref={initialFreeRef}
+          onInput={(ev) => {
+            setRefCustomValidity(initialFreeRef, '')
+            setInitialFree(ev.currentTarget.value)
           }}
         />
       </label>
