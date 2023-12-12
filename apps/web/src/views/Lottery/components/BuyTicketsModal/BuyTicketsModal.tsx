@@ -391,13 +391,14 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
           </Text>
         </Flex>
         <Flex borderTop={`1px solid ${theme.colors.cardBorder}`} pt="8px" justifyContent="center">
-          <Text bold fontSize="16px">
-            {numFreeTickets !== '0' &&
-              (numFreeTickets === '1'
+          {numFreeTickets !== '0' && (
+            <Text bold fontSize="16px">
+              {numFreeTickets === '1'
                 ? t('1 Free Ticket')
-                : t('%numTickets% Free Tickets', { numTickets: numFreeTickets }))}
-            !
-          </Text>
+                : t('%numTickets% Free Tickets', { numTickets: numFreeTickets })}
+              !
+            </Text>
+          )}
         </Flex>
         <Flex mb="24px" justifyContent="space-between">
           <Text color="textSubtle" fontSize="16px">
