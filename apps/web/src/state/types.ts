@@ -122,6 +122,7 @@ interface LotteryRoundGenerics {
 export interface LotteryRound extends LotteryRoundGenerics {
   userTickets?: LotteryRoundUserTickets
   ticketPrice: BigNumber
+  remainingFree: BigNumber
   discountDivisor: BigNumber
   amountCollected: BigNumber
   rewardPerUserPerBracket: string[]
@@ -131,6 +132,7 @@ export interface LotteryRound extends LotteryRoundGenerics {
 
 export interface LotteryResponse extends LotteryRoundGenerics {
   ticketPrice: SerializedBigNumber
+  remainingFree: SerializedBigNumber
   discountDivisor: SerializedBigNumber
   amountCollected: SerializedBigNumber
   rewardPerUserPerBracket: SerializedBigNumber[]

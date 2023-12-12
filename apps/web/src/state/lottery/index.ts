@@ -19,6 +19,7 @@ const initialState: LotteryState = {
     startTime: '',
     endTime: '',
     ticketPrice: '',
+    remainingFree: '',
     discountDivisor: '',
     winnersPortion: '',
     burnPortion: '',

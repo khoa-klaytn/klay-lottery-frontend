@@ -72,12 +72,14 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
     currentLotteryId,
     currentRound: {
       ticketPrice,
+      remainingFree,
       discountDivisor,
       userTickets: { tickets: userCurrentTickets },
     },
   } = useLottery()
   const { callWithGasPrice } = useCallWithGasPrice()
   const [ticketsToBuy, setTicketsToBuy] = useState(BIG_ZERO)
+  const [numFreeTickets, setNumFreeTickets] = useState('0')
   const [discountValue, setDiscountValue] = useState('')
   const [discountPct, setDiscountPct] = useState('')
   const [totalCost, setTotalCost] = useState('')
@@ -183,12 +185,21 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
       setMaxTicketPurchaseExceeded(input.gt(maxNumberTicketsPerBuyOrClaim))
 
       const limitedNumberTickets = limitNumberTickets(input)
-      const costAfterDiscount = getTicketCostAfterDiscount(limitedNumberTickets)
+      let numNonFreeTickets
+      if (limitedNumberTickets.gt(remainingFree)) {
+        numNonFreeTickets = limitedNumberTickets.minus(remainingFree)
+        setNumFreeTickets(remainingFree.toString())
+      } else {
+        numNonFreeTickets = BIG_ZERO
+        setNumFreeTickets(limitedNumberTickets.toString())
+      }
+
+      const costAfterDiscount = getTicketCostAfterDiscount(numNonFreeTickets)
 
       setInsufficientBalance(costAfterDiscount.gt(balance))
       setTicketsToBuy(limitedNumberTickets)
 
-      const costBeforeDiscount = ticketPrice.times(limitedNumberTickets)
+      const costBeforeDiscount = ticketPrice.times(numNonFreeTickets)
       const discountBeingApplied = costBeforeDiscount.minus(costAfterDiscount)
       setTicketCostBeforeDiscount(costBeforeDiscount.gt(0) ? getFullDisplayBalance(costBeforeDiscount) : '0')
       setTotalCost(costAfterDiscount.gt(0) ? getFullDisplayBalance(costAfterDiscount) : '0')
@@ -197,7 +208,14 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         discountBeingApplied.gt(0) ? discountBeingApplied.div(costBeforeDiscount).times(100).toFixed(2) : '0',
       )
     },
-    [limitNumberTickets, getTicketCostAfterDiscount, ticketPrice, balance, maxNumberTicketsPerBuyOrClaim],
+    [
+      limitNumberTickets,
+      getTicketCostAfterDiscount,
+      ticketPrice,
+      remainingFree,
+      balance,
+      maxNumberTicketsPerBuyOrClaim,
+    ],
   )
 
   const [updateTicket, randomize, tickets, allComplete, getTicketsForPurchase] = useTicketsReducer(
@@ -348,7 +366,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
         )}
       </ShortcutButtonsWrapper>
       <Flex flexDirection="column">
-        <Flex mb="8px" justifyContent="space-between">
+        <Flex mb="5px" justifyContent="space-between">
           <Text color="textSubtle" fontSize="14px">
             {t('Cost')} {symbol}
           </Text>
@@ -356,7 +374,7 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
             {ticketPrice && getFullDisplayBalance(ticketPrice.times(ticketsToBuy || 0))} {symbol}
           </Text>
         </Flex>
-        <Flex mb="8px" justifyContent="space-between">
+        <Flex mb="11px" justifyContent="space-between">
           <Flex>
             <Text display="inline" bold fontSize="14px" mr="4px">
               {discountValue && totalCost ? discountPct : 0}%
@@ -372,7 +390,15 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
             ~{discountValue} {symbol}
           </Text>
         </Flex>
-        <Flex borderTop={`1px solid ${theme.colors.cardBorder}`} pt="8px" mb="24px" justifyContent="space-between">
+        <Flex borderTop={`1px solid ${theme.colors.cardBorder}`} pt="8px" justifyContent="center">
+          <Text bold fontSize="16px">
+            {numFreeTickets !== '0' &&
+              (numFreeTickets === '1'
+                ? t('%numTickets% Free Ticket!', { numTickets: numFreeTickets })
+                : t('%numTickets% Free Tickets!', { numTickets: numFreeTickets }))}
+          </Text>
+        </Flex>
+        <Flex mb="24px" justifyContent="space-between">
           <Text color="textSubtle" fontSize="16px">
             {t('You pay')}
           </Text>
