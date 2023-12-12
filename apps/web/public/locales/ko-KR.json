@@ -2799,5 +2799,7 @@
   "At least one ticket must be purchased": "최소한 티켓 한장을 구매해야 합니다",
   "Baobab Faucet (Free Testnet KLAY)": "Baobab Faucet (무료 테스트넷 KLAY)",
   "Your %symbol% prizes have been sent to your wallet": "상금으로 %symbol%가 지갑에 전송되었습니다",
-  "Claim %claimNum% of %claimTotal% was successful. Please confirm the next transaction": "전체 %claimTotal%개 중 %claimNum%개에 대한 클레임이 성공했습니다."
+  "Claim %claimNum% of %claimTotal% was successful. Please confirm the next transaction": "전체 %claimTotal%개 중 %claimNum%개에 대한 클레임이 성공했습니다.",
+  "1 Free Ticket": "무료 티켓 1매",
+  "%numTickets% Free Tickets": "무료 티켓 %numTickets%매"
 }

@@ -2799,5 +2799,7 @@
   "At least one ticket must be purchased": "Phải mua ít nhất một vé",
   "Baobab Faucet (Free Testnet KLAY)": "Baobab Faucet (Miễn phí Testnet KLAY)",
   "Your %symbol% prizes have been sent to your wallet": "Giải thưởng %symbol% đã được gửi đến ví của bạn",
-  "Claim %claimNum% of %claimTotal% was successful. Please confirm the next transaction": "Đã nhận %claimNum% / %claimTotal%. Vui lòng xác nhận giao dịch tiếp theo"
+  "Claim %claimNum% of %claimTotal% was successful. Please confirm the next transaction": "Đã nhận %claimNum% / %claimTotal%. Vui lòng xác nhận giao dịch tiếp theo",
+  "1 Free Ticket": "1 vé miễn phí",
+  "%numTickets% Free Tickets": "%numTickets% vé miễn phí"
 }

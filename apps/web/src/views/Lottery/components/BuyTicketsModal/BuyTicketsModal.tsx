@@ -394,8 +394,9 @@ const BuyTicketsModal: React.FC<React.PropsWithChildren<BuyTicketsModalProps>> =
           <Text bold fontSize="16px">
             {numFreeTickets !== '0' &&
               (numFreeTickets === '1'
-                ? t('%numTickets% Free Ticket!', { numTickets: numFreeTickets })
-                : t('%numTickets% Free Tickets!', { numTickets: numFreeTickets }))}
+                ? t('1 Free Ticket')
+                : t('%numTickets% Free Tickets', { numTickets: numFreeTickets }))}
+            !
           </Text>
         </Flex>
         <Flex mb="24px" justifyContent="space-between">
